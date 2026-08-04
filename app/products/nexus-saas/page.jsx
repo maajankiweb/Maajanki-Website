@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterSection from '@/components/FooterWithPopup';
-import '@/app/styles/Products.css';
 
 export const metadata = {
   title: "Nexus SaaS – AI Google Business Profile Reputation System | MaaJanki Web Tech",

@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterSection from '@/components/FooterWithPopup';
-import '@/app/styles/Products.css';
 
 export const metadata = {
   title: "DukanDost Pro – Retail Business Operating System | MaaJanki Web Tech",
