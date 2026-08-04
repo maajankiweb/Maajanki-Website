@@ -10,6 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/react-fontawesome": "^3.2.0",
     "@react-icons/all-files": "^4.1.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "@tanstack/react-table": "^9.0.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
@@ -26,7 +27,8 @@
     "react-leaflet": "^5.0.0",
     "react-toastify": "^11.0.5",
     "recharts": "^3.10.1",
-    "tailwind-merge": "^3.6.0"
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4.3.3"
   },
   "scripts": {
     "dev": "next dev",

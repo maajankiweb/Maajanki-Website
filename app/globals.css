@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
 
 /* =====================================================
    GLOBAL BASE STYLES - MaaJanki Web Tech
@@ -487,13 +488,13 @@ sup.citation {
 /* =====================================================
    GLOBAL HEADING FONT SIZE ADJUSTMENTS (~12% REDUCTION)
    ===================================================== */
-h1,
+h1:not(.admin-layout-root h1),
 .banner-content h1,
 .policy-header h1,
 .terms-header h1 {
   font-size: clamp(1.4rem, 3vw, 2rem) !important;
 }
-h2,
+h2:not(.admin-layout-root h2),
 .inner-heading,
 .location-title,
 .main-heading,
@@ -503,13 +504,13 @@ h2,
 .pricing-objection-section h2 {
   font-size: clamp(1.3rem, 2.5vw, 1.85rem) !important;
 }
-h3,
+h3:not(.admin-layout-root h3),
 .branding-heading,
 .jobready-step p,
 .pricing-objection-section h3 {
   font-size: clamp(1.1rem, 2vw, 1.35rem) !important;
 }
-h4,
+h4:not(.admin-layout-root h4),
 .jobready-heading-small,
 .pricing-objection-section h4 {
   font-size: clamp(0.95rem, 1.6vw, 1.1rem) !important;
