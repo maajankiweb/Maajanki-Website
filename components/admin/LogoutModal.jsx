@@ -10,12 +10,24 @@ export default function LogoutModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   const handleConfirmLogout = async () => {
-    // Clear tokens, session, local storage
+    // Clear all client-side cache, local storage, session storage
     if (typeof window !== 'undefined') {
-      localStorage.clear();
-      sessionStorage.clear();
+      try {
+        localStorage.clear();
+        sessionStorage.clear();
+        if ('caches' in window) {
+          caches.keys().then((names) => {
+            names.forEach((name) => caches.delete(name));
+          });
+        }
+      } catch (e) {
+        console.error('Cache clear error:', e);
+      }
     }
-    await signOut({ redirectUrl: '/' });
+    await signOut({ redirectUrl: '/sign-in' });
+    if (typeof window !== 'undefined') {
+      window.location.href = '/sign-in';
+    }
   };
 
   return (
