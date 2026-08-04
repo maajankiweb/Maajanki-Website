@@ -1,25 +1,39 @@
 export const dynamic = 'force-dynamic';
 
 import { NextResponse } from 'next/server';
-import { auth } from '@clerk/nextjs/server';
+import { auth, currentUser } from '@clerk/nextjs/server';
 import { connectDB } from '@/lib/db';
 import Lead from '@/lib/models/Lead';
 
+const ALLOWED_ADMIN_EMAILS = (process.env.ALLOWED_ADMIN_EMAILS || '')
+  .split(',')
+  .map((e) => e.trim().toLowerCase())
+  .filter(Boolean);
+
 async function isAuthorized(request) {
   try {
-    // Verify via Clerk server-side auth
     const { userId } = await auth();
-    if (userId) return true;
-
-    // Fallback: still support legacy ADMIN_SECRET_KEY for server-to-server calls
-    const authHeader = request.headers.get('authorization');
-    const secretKey = process.env.ADMIN_SECRET_KEY;
-    if (authHeader && secretKey) {
-      const token = authHeader.replace('Bearer ', '').trim();
-      if (token === secretKey) return true;
+    if (!userId) {
+      // Fallback: support legacy ADMIN_SECRET_KEY for programmatic calls
+      const authHeader = request.headers.get('authorization');
+      const secretKey = process.env.ADMIN_SECRET_KEY;
+      if (authHeader && secretKey) {
+        const token = authHeader.replace('Bearer ', '').trim();
+        if (token === secretKey) return true;
+      }
+      return false;
     }
 
-    return false;
+    // Check email restriction if ALLOWED_ADMIN_EMAILS is configured
+    if (ALLOWED_ADMIN_EMAILS.length > 0) {
+      const user = await currentUser();
+      const userEmail = user?.primaryEmailAddress?.emailAddress?.toLowerCase() || '';
+      if (!ALLOWED_ADMIN_EMAILS.includes(userEmail)) {
+        return false;
+      }
+    }
+
+    return true;
   } catch {
     return false;
   }
