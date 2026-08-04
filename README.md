@@ -150,20 +150,39 @@ Add the following in **Vercel Project Settings → Environment Variables**:
 
 ---
 
-### Option 2: Hostinger (VPS / Node.js Deployment)
+### Option 2: Hostinger (GitHub Import / Node.js App Setup)
+
+In **Hostinger hPanel → Node.js Web Applications** (or Web Hosting Node.js manager):
+
+1. **Import Repository**: Connect GitHub and select `https://github.com/maajankiweb/Maajanki-Website.git`
+2. **Node.js Version**: Select `18.x` or `20.x`
+3. **Application Root**: `/`
+4. **Application Startup File**: `server.js` (or `node_modules/next/dist/bin/next`)
+5. **Build Command**: `npm run build` (or `npm run hostinger:build`)
+6. **Environment Variables** (Add in Hostinger hPanel):
+   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` = `pk_live_your_clerk_publishable_key`
+   - `CLERK_SECRET_KEY` = `sk_live_your_clerk_secret_key`
+   - `MONGODB_URI` = `mongodb+srv://<username>:<password>@cluster.mongodb.net/maajanki_db`
+   - `NVIDIA_API_KEY` = `nvapi-your_nvidia_api_key`
+   - `ADMIN_SECRET_KEY` = `your_admin_secret_key`
+   - `NODE_ENV` = `production`
+
+---
+
+#### Manual Command Setup (VPS / SSH)
 
 ```bash
 # 1. Build production bundle
 npm run build
 
 # 2. Start production server
-npm run start
+npm run hostinger:start  # or npm run start
 ```
 
-For Hostinger VPS / PM2 process manager:
+For Hostinger VPS with PM2 process manager:
 ```bash
-# Start with PM2
-pm2 start npm --name "maajanki-frontend" -- start
+# Start with PM2 using custom server.js
+pm2 start server.js --name "maajanki-frontend"
 ```
 
 ---
