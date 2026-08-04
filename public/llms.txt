@@ -1,10 +1,13 @@
 # MaaJanki Web Tech
-> MaaJanki Web Tech is the premier website development and digital marketing agency in Bihar, India, serving clients locally and globally (USA, UK, Canada, Australia). We specialize in high-performance web applications, local SEO, paid media, and brand identity design.
+
+> MaaJanki Web Tech is the premier website development, AI solution, and digital marketing agency in Bihar, India, serving clients locally and globally (USA, UK, Canada, Australia, UAE). We specialize in high-performance web applications, enterprise admin portals, local SEO, performance marketing, and custom billing software.
 
 ## Core Entities & Information
 - **Official Name:** MaaJanki Web Tech
-- **Founder & CEO:** Ashish Kumar
-- **Headquarters:** 412, Supriya Cinema, Bettiah, West Champaran, Bihar - 845438, India
+- **Founder & CEO:** Ashish Kumar (LinkedIn: https://www.linkedin.com/in/ashishkumarji/)
+- **Udyam Registration:** UDYAM-BR-38-0014113 (MSME Registered Enterprise)
+- **Startup India DPIIT:** Recognized Startup
+- **Headquarters:** First Floor, Near Supriya Cinema, Front of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101, India
 - **Contact Number:** +91-9006543913
 - **Email Address:** info@maajankiwebtech.com
 - **Official Website:** https://maajankiwebtech.com
@@ -12,8 +15,9 @@
 - **Robots.txt:** https://maajankiwebtech.com/robots.txt
 
 ## Services & Expertise
-- **Web Development:** High-performance, SEO-optimized, and mobile-responsive websites built using Next.js 14, React, and WordPress. Custom e-commerce storefronts (WooCommerce, Shopify) and custom billing portals.
-- **Search Engine Optimization (SEO):** Technical SEO audits, local SEO, Google Business Profile (GBP) optimization, keyword mapping, and semantic link building.
+- **Web Development:** High-performance, SEO-optimized, and mobile-responsive websites built using Next.js 15, React 18, Tailwind CSS v4, and Node.js.
+- **Enterprise Admin Dashboards:** Custom SaaS admin control panels with multi-page routing, MongoDB lead pipeline management, Recharts analytics, Leaflet geographic maps, and Clerk 2FA.
+- **Search Engine Optimization (SEO):** Technical SEO audits, local SEO, Google Business Profile (GBP) optimization, keyword mapping, IndexNow indexing, and semantic link building.
 - **Performance Marketing & Paid Ads:** Data-driven Google Ads, Meta Ads (Facebook/Instagram), and PPC campaigns.
 - **Social Media Optimization (SMO):** Brand promotion, account management, and audience engagement across Facebook, Instagram, and LinkedIn.
 - **Branding & Visual Identity:** Corporate logo design, brand strategy, visual guidelines, and graphic design.
@@ -25,9 +29,9 @@
 - **InvoBill:** A hybrid, GST-compliant billing and invoicing software designed specifically for Indian retailers and small businesses.
 
 ## Key Pages & URLs
-- **Homepage:** https://maajankiwebtech.com/ (Overview of services, testimonials, FAQ, and core agency information)
-- **About Us:** https://maajankiwebtech.com/about (Agency story, team values, and founder details)
-- **Services Hub:** https://maajankiwebtech.com/services (Full catalog of digital services)
+- **Homepage:** https://maajankiwebtech.com/
+- **About Us:** https://maajankiwebtech.com/about
+- **Services Hub:** https://maajankiwebtech.com/services
   - *Web Development:* https://maajankiwebtech.com/services/web-development
   - *SEO Services:* https://maajankiwebtech.com/services/seo
   - *Branding:* https://maajankiwebtech.com/services/branding
@@ -37,9 +41,9 @@
   - *Product Listing:* https://maajankiwebtech.com/services/products-listing
   - *SMO:* https://maajankiwebtech.com/services/smo
   - *Performance Marketing:* https://maajankiwebtech.com/services/performance-marketing
-- **Portfolio:** https://maajankiwebtech.com/portfolio (Showcase of 10+ web development and marketing projects)
-- **Bettiah Location Page:** https://maajankiwebtech.com/locations/bettiah (Local SEO landing page with office address, map embed, and local service areas)
-- **Contact Page:** https://maajankiwebtech.com/contact (Inquiry form and contact options)
+- **Portfolio:** https://maajankiwebtech.com/portfolio
+- **Admin Dashboard:** https://maajankiwebtech.com/admin
+- **Contact Page:** https://maajankiwebtech.com/contact
 
 ## Detailed Reference
 For a comprehensive, detailed version of this file with full service descriptions, product details, FAQs, and portfolio information, see:

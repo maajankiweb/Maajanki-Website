@@ -230,17 +230,17 @@ export const LogoLoop = memo(
     }, [effectiveHoverSpeed]);
 
     const renderLogoItem = useCallback(
-      (item, key) => {
+      (item, key, isDuplicate = false) => {
         if (renderItem) {
           return (
-            <li className="logoloop__item" key={key}>
+            <li className="logoloop__item" key={key} aria-hidden={isDuplicate}>
               {renderItem(item, key)}
             </li>
           );
         }
         const isNodeItem = 'node' in item;
         const content = isNodeItem ? (
-          <span className="logoloop__node" aria-hidden={!!item.href && !item.ariaLabel}>
+          <span className="logoloop__node" aria-hidden={isDuplicate || (!!item.href && !item.ariaLabel)}>
             {item.node}
           </span>
         ) : (
@@ -250,19 +250,21 @@ export const LogoLoop = memo(
             sizes={item.sizes}
             width={item.width}
             height={item.height}
-            alt={item.alt ?? ''}
-            title={item.title}
+            alt={isDuplicate ? "" : (item.alt ?? '')}
+            title={isDuplicate ? undefined : item.title}
             loading="lazy"
             decoding="async"
             draggable={false}
            />
         );
-        const itemAriaLabel = isNodeItem ? (item.ariaLabel ?? item.title) : (item.alt ?? item.title);
+        const itemAriaLabel = isDuplicate ? undefined : (isNodeItem ? (item.ariaLabel ?? item.title) : (item.alt ?? item.title));
         const itemContent = item.href ? (
           <a
             className="logoloop__link"
             href={item.href}
             aria-label={itemAriaLabel || 'logo link'}
+            aria-hidden={isDuplicate}
+            tabIndex={isDuplicate ? -1 : undefined}
             target="_blank"
             rel="noreferrer noopener"
           >
@@ -272,7 +274,7 @@ export const LogoLoop = memo(
           content
         );
         return (
-          <li className="logoloop__item" key={key}>
+          <li className="logoloop__item" key={key} aria-hidden={isDuplicate}>
             {itemContent}
           </li>
         );
@@ -289,7 +291,7 @@ export const LogoLoop = memo(
             aria-hidden={copyIndex > 0}
             ref={copyIndex === 0 ? seqRef : undefined}
           >
-            {logos.map((item, itemIndex) => renderLogoItem(item, `${copyIndex}-${itemIndex}`))}
+            {logos.map((item, itemIndex) => renderLogoItem(item, `${copyIndex}-${itemIndex}`, copyIndex > 0))}
           </ul>
         )),
       [copyCount, logos, renderLogoItem]
