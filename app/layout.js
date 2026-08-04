@@ -7,6 +7,7 @@ import PromoPopup from '@/components/PromoPopup';
 import ClientProvider from '@/components/ClientProvider';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import ChatbotLoader from '@/components/Chatbot/ChatbotLoader';
+import LayoutContent from '@/components/LayoutContent';
 import { ClerkProvider, Show, UserButton } from '@clerk/nextjs';
 
 
@@ -292,15 +293,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning>
         <ClerkProvider>
           <ClientProvider>
-            <Navbar />
-            <PromoPopup />
-            <ChatbotLoader />
-
-            <main id="main-content" style={{ minHeight: '80vh' }}>
-              <Breadcrumbs />
-              {children}
-            </main>
-            <Footer />
+            <LayoutContent>{children}</LayoutContent>
           </ClientProvider>
 
         <Script
