@@ -1,8 +1,9 @@
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
+import Link from 'next/link';
 
-// Allowed Admin Email Addresses (Add your email here)
-const ALLOWED_ADMIN_EMAILS = (process.env.ALLOWED_ADMIN_EMAILS || '')
+// Allowed Admin Email Addresses or Domains (e.g. maajankiwebtech@gmail.com, info@maajankiwebtech.com, @maajankiwebtech.com)
+const ALLOWED_ADMIN_PATTERNS = (process.env.ALLOWED_ADMIN_EMAILS || '')
   .split(',')
   .map((e) => e.trim().toLowerCase())
   .filter(Boolean);
@@ -18,8 +19,17 @@ export default async function AdminLayout({ children }) {
   const user = await currentUser();
   const userEmail = user?.primaryEmailAddress?.emailAddress?.toLowerCase() || '';
 
+  const isAuthorized =
+    ALLOWED_ADMIN_PATTERNS.length === 0 ||
+    ALLOWED_ADMIN_PATTERNS.some((pattern) => {
+      if (pattern.startsWith('@')) {
+        return userEmail.endsWith(pattern);
+      }
+      return userEmail === pattern || userEmail.includes(pattern);
+    });
+
   // If ALLOWED_ADMIN_EMAILS is configured, enforce email restriction
-  if (ALLOWED_ADMIN_EMAILS.length > 0 && !ALLOWED_ADMIN_EMAILS.includes(userEmail)) {
+  if (!isAuthorized) {
     return (
       <div style={{
         minHeight: '80vh',
@@ -38,7 +48,7 @@ export default async function AdminLayout({ children }) {
         <p style={{ color: '#4a5568', maxWidth: '500px', lineHeight: '1.6' }}>
           Your email address is not authorized to view the MaaJanki Web Tech Lead Dashboard. Please sign in with an authorized admin account.
         </p>
-        <a href="/sign-in" style={{
+        <Link href="/sign-in" style={{
           marginTop: '24px',
           padding: '10px 24px',
           backgroundColor: '#042544',
@@ -48,7 +58,7 @@ export default async function AdminLayout({ children }) {
           fontWeight: '600',
         }}>
           Switch Account / Sign In Again
-        </a>
+        </Link>
       </div>
     );
   }

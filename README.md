@@ -1,200 +1,119 @@
-# 🚀 MaaJanki Web Tech — Web Development & Digital Growth Platform
+# MaaJanki Web Tech Enterprise Admin Dashboard
 
-Official repository for **MaaJanki Web Tech** — a high-performance web agency application built with Next.js (App Router), Clerk Authentication, MongoDB Atlas, and Tailwind/Vanilla CSS styling.
+![MaaJanki Admin Dashboard](https://raw.githubusercontent.com/maajankiweb/Maajanki-Website/main/public/admin-preview.png)
 
-![MaaJanki Web Tech Banner](/public/images/pages/main-services-pages/Home-page-image-Maajanki.webp)
+A production-ready, enterprise-grade Admin Dashboard built for **MaaJanki Web Tech** featuring modern SaaS UI aesthetics (inspired by Linear, Vercel, and Stripe), real-time MongoDB lead analytics, interactive Leaflet map tracking, customizable Recharts analytics, and Clerk authentication guards.
 
 ---
 
-## ✨ Features
+## 🚀 Key Features
 
-- **🌐 Next.js App Router Architecture**: Ultra-fast Server-Side Rendering (SSR), Static Site Generation (SSG), and Dynamic API Routes.
-- **🔐 Secure Clerk Authentication**: Protected Admin Dashboard (`/admin`) backed by Clerk auth guards and allowlist restrictions.
-- **📊 Centralized Lead Management**: Instant lead capture into **MongoDB Atlas** across all entry points:
-  - Homepage Promo Popup (`homepage-promo-popup`)
-  - Footer Project Quote Form (`footer-popup`)
-  - Contact Page (`contact-page`)
-  - Free Website Audit Form (`website-audit`)
-  - Interactive AI Chatbot (`chatbot`)
-  - Service Brochure Downloads (`brochure`)
-- **🤖 Built-in AI Chatbot**: Integrated AI assistant powering instant customer query resolution and automated lead detection.
-- **📍 Dynamic Location & Service Pages**: Over 58 targeted SEO landing pages serving regional and global markets.
-- **📥 CSV Export & Status Workflows**: Export leads directly to CSV and update lead status (`new`, `contacted`, `closed`, `archived`) in real-time.
+- **Enterprise SaaS Aesthetics**: Clean glassmorphism cards, `#FF6B00` brand color, dark/light theme switching, and smooth micro-animations.
+- **Collapsible Responsive Sidebar**: Collapsible navigation with active page highlights, badges, nested menus for Lead Management & Website Forms, and mobile drawer.
+- **Sticky Header**: Live global search, quick actions dropdown (Create Lead, Add User, Export Report), notification bell with unread badge counter, language switcher (`EN` / `HI`), and Clerk UserButton profile menu.
+- **Dashboard Overview**: KPI cards for Total Leads, Today's Leads, Monthly Revenue, Conversion Rate, Active Visitors, and Open Tickets with interactive sparklines and percentage trends.
+- **Recharts Analytics Suite**: Revenue growth area charts, lead source donut charts, weekly traffic stacked bar charts, and visitor-to-deal conversion funnel.
+- **Global Map Analytics**: Interactive Leaflet map displaying offices, client hubs, and geographic lead distribution with custom popups and region summaries.
+- **Advanced Lead Management**: MongoDB Atlas API integration (`/api/admin/leads`), multi-field search, status filtering (`new`, `contacted`, `qualified`, `closed`, `spam`), inline status updating, priority tags, lead deletion, CSV export, and pagination.
+- **Website Forms Analytics**: Form performance breakdown for 8 capture forms (Contact Form, Audit Form, AI Chatbot, Footer Popup, Promo Popup, Brochure Download, Callback Request, Newsletter).
+- **AI Insights & Recommendations**: Smart lead predictions, best contact time window analysis, and automated spam isolation.
+- **Real-time Activity Timeline**: Live operational event stream for leads, payments, and system updates.
+- **Tasks & Kanban Board**: Drag-and-drop workflow board across To Do, In Progress, Under Review, and Completed stages.
+- **Security & Settings**: Role permissions, Clerk 2FA security rules, API webhooks, and a confirmation logout modal.
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **UI & Styling**: React 19, CSS Modules, Bootstrap, Lucide Icons, FontAwesome
-- **Authentication**: [Clerk](https://clerk.com/) (`@clerk/nextjs`)
-- **Database**: [MongoDB Atlas](https://www.mongodb.com/atlas) with [Mongoose](https://mongoosejs.com/)
-- **Deployment**: Node.js / Hostinger VPS / Vercel
+- **Library**: [React 18](https://react.dev/) & [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & Glassmorphism design system
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Charts**: [Recharts](https://recharts.org/)
+- **Data Table**: [TanStack Table](https://tanstack.com/table)
+- **Maps**: [React Leaflet](https://react-leaflet.js.org/) & Leaflet
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Authentication**: [Clerk Auth](https://clerk.com/)
+- **Database**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) with Mongoose
 
 ---
 
-## 🚀 Getting Started
+## 📁 Repository Structure
 
-### 1. Prerequisites
-
-- **Node.js**: `v18.x` or higher
-- **npm**: `v9.x` or higher
-- **MongoDB Atlas Connection URI**
-- **Clerk Account Keys** (`pk_test_...` and `sk_test_...`)
-
----
-
-### 2. Environment Setup
-
-Create a `.env` file in the root directory:
-
-```env
-# Clerk Authentication Keys
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_your_publishable_key
-CLERK_SECRET_KEY=sk_test_your_secret_key
-
-# MongoDB Atlas Connection
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/maajanki_db?retryWrites=true&w=majority
-
-# AI Chat & Admin Fallback Keys
-NEXT_PUBLIC_CHAT_PROXY_URL=/api/chat
-NEXT_PUBLIC_NVIDIA_MODEL=openai/gpt-oss-20b
-NVIDIA_API_KEY=your_nvidia_api_key
-ADMIN_SECRET_KEY=your_admin_secret_key
+```
+├── app/
+│   ├── admin/
+│   │   ├── admin.css          # Custom Design System Tokens & Glassmorphism Styles
+│   │   ├── layout.js          # Clerk Auth & Admin Email Restriction Guard
+│   │   └── page.js            # Main Dashboard Container & State Controller
+│   ├── api/
+│   │   └── admin/leads/       # REST API Endpoint for MongoDB Lead Operations
+├── components/
+│   ├── admin/
+│   │   ├── AdminHeader.jsx          # Top Navigation Bar & Quick Actions
+│   │   ├── AdminSidebar.jsx         # Collapsible Navigation Drawer
+│   │   ├── DashboardOverview.jsx    # Top KPI Cards & Sparklines
+│   │   ├── AnalyticsCharts.jsx      # Recharts Revenue, Traffic, & Funnel Suite
+│   │   ├── LeadMap.jsx              # React Leaflet World Map Component
+│   │   ├── LeadsTable.jsx           # TanStack Data Table & CSV Exporter
+│   │   ├── WebsiteFormsAnalytics.jsx# Form Metric Performance Breakdown
+│   │   ├── AIInsights.jsx           # Lead Intelligence & Predictions
+│   │   ├── ActivityFeed.jsx         # Real-time Activity Timeline
+│   │   ├── NotificationCenter.jsx   # Notification Dropdown
+│   │   ├── TasksKanban.jsx          # Workflow Task Kanban Board
+│   │   ├── AdminSettings.jsx        # Security & API Webhook Settings
+│   │   └── LogoutModal.jsx          # Confirmation Logout Dialog
+├── lib/
+│   ├── db.js                  # MongoDB Atlas Mongoose Connection Helper
+│   └── models/Lead.js         # Mongoose Lead Schema
+├── public/                    # Static Assets
+├── .env.example               # Template Environment Variables
+├── package.json
+└── README.md
 ```
 
 ---
 
-### 3. Installation
+## ⚙️ Installation & Running Locally
 
-```bash
-# Clone the repository
-git clone https://github.com/maajankiweb/Maajanki-Website.git
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/maajankiweb/Maajanki-Website.git
+   cd Maajanki-Website
+   ```
 
-# Navigate to project root
-cd Maajanki-Website
+2. **Install dependencies**:
+   ```bash
+   npm install --legacy-peer-deps
+   ```
 
-# Install dependencies
-npm install
-```
+3. **Configure Environment Variables**:
+   Create a `.env.local` file by copying `.env.example`:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Fill in your Clerk API Keys and MongoDB Atlas connection URI.
 
----
+4. **Start Development Server**:
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:3000/admin` in your browser.
 
-### 4. Running Locally
-
-```bash
-# Start Next.js development server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view the site in your browser.
-
-- **Main Website**: `http://localhost:3000`
-- **Admin Dashboard**: `http://localhost:3000/admin`
-- **Sign In Page**: `http://localhost:3000/sign-in`
-
----
-
-## 📂 Project Structure
-
-```text
-├── app/                      # Next.js App Router pages and API endpoints
-│   ├── admin/                # Protected Lead Management Dashboard
-│   ├── api/                  # Serverless API routes (/api/leads, /api/admin/leads, etc.)
-│   ├── contact/              # Contact Page & Lead Capture Form
-│   ├── locations/            # 58+ Regional & Global SEO Location Landing Pages
-│   ├── services/             # Core Service Pages (SEO, Web Development, SMO, etc.)
-│   ├── sign-in/              # Clerk Authentication Sign-in Route
-│   ├── sign-up/              # Clerk Authentication Sign-up Route
-│   └── layout.js             # Root Layout with Clerk & Client Providers
-├── components/               # Reusable UI components
-│   ├── Chatbot/              # AI Assistant & Chat Form
-│   ├── FooterWithPopup.jsx   # Footer with Project Quote Modal
-│   ├── PromoPopup.jsx        # Homepage Promotional Lead Callback Modal
-│   └── Navbar.jsx            # Responsive Header Navigation
-├── lib/                      # Database & Mongoose Models
-│   ├── db.js                 # MongoDB Atlas connection helper
-│   └── models/               # Mongoose Schemas (Lead.js)
-├── public/                   # Static assets, images, and documents
-└── middleware.js             # Clerk & Route Security Middleware
-```
+5. **Build for Production**:
+   ```bash
+   npm run build
+   npm start
+   ```
 
 ---
 
-## 🚢 Deployment Guide
+## 📄 License
 
-### Option 1: Vercel (Recommended for Next.js)
-
-Vercel provides native zero-config deployment for Next.js App Router.
-
-#### Deploy via Vercel CLI
-
-```bash
-# 1. Install Vercel CLI (if not already installed)
-npm install -g vercel
-
-# 2. Deploy Preview
-npx vercel
-
-# 3. Deploy to Production
-npx vercel --prod
-```
-
-#### Environment Variables on Vercel:
-Add the following in **Vercel Project Settings → Environment Variables**:
-- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` = `pk_live_...`
-- `CLERK_SECRET_KEY` = `sk_live_...`
-- `MONGODB_URI` = `mongodb+srv://...`
-- `NVIDIA_API_KEY` = `nvapi-...`
-- `ADMIN_SECRET_KEY` = `maajanki2026`
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-### Option 2: Hostinger (GitHub Import / Node.js App Setup)
+## 👨‍💻 Author
 
-In **Hostinger hPanel → Node.js Web Applications** (or Web Hosting Node.js manager):
-
-1. **Import Repository**: Connect GitHub and select `https://github.com/maajankiweb/Maajanki-Website.git`
-2. **Node.js Version**: Select `18.x` or `20.x`
-3. **Application Root**: `/`
-4. **Application Startup File**: `server.js` (or `node_modules/next/dist/bin/next`)
-5. **Build Command**: `npm run build` (or `npm run hostinger:build`)
-6. **Environment Variables** (Add in Hostinger hPanel):
-   - `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` = `pk_live_your_clerk_publishable_key`
-   - `CLERK_SECRET_KEY` = `sk_live_your_clerk_secret_key`
-   - `MONGODB_URI` = `mongodb+srv://<username>:<password>@cluster.mongodb.net/maajanki_db`
-   - `NVIDIA_API_KEY` = `nvapi-your_nvidia_api_key`
-   - `ADMIN_SECRET_KEY` = `your_admin_secret_key`
-   - `NODE_ENV` = `production`
-
----
-
-#### Manual Command Setup (VPS / SSH)
-
-```bash
-# 1. Build production bundle
-npm run build
-
-# 2. Start production server
-npm run hostinger:start  # or npm run start
-```
-
-For Hostinger VPS with PM2 process manager:
-```bash
-# Start with PM2 using custom server.js
-pm2 start server.js --name "maajanki-frontend"
-```
-
----
-
-## 🔒 Security & Best Practices
-
-- **Honeypot Spam Protection**: Silent spam filtering on all public lead capture forms.
-- **Route Protection**: Server-side layout guards (`auth()`) enforcing authorization on all `/admin` routes.
-- **Strict Headers**: HSTS, X-Frame-Options (`DENY`), X-Content-Type-Options (`nosniff`), and Referrer-Policy configured in `next.config.js`.
-
----
-
-## 📝 License
-
-Copyright © 2026 **MaaJanki Web Tech**. All rights reserved.
+**MaaJanki Web Tech** - [Official Website](https://maajankiwebtech.com)
