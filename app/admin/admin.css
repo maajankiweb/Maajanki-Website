@@ -27,12 +27,56 @@
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
+/* Ensure admin scope resets any global website / bootstrap conflicts */
 .admin-layout-root {
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   transition: background-color 300ms ease, color 300ms ease;
+  box-sizing: border-box;
+}
+
+.admin-layout-root *,
+.admin-layout-root *::before,
+.admin-layout-root *::after {
+  box-sizing: border-box;
+}
+
+/* Typography Hierarchy */
+.admin-layout-root h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.admin-layout-root h2 {
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.admin-layout-root h3 {
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.admin-layout-root p,
+.admin-layout-root body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.admin-layout-root small,
+.admin-layout-root .caption {
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .glass-card {

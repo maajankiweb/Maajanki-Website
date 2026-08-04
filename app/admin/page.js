@@ -15,6 +15,7 @@ import NotificationCenter from '@/components/admin/NotificationCenter';
 import TasksKanban from '@/components/admin/TasksKanban';
 import AdminSettings from '@/components/admin/AdminSettings';
 import LogoutModal from '@/components/admin/LogoutModal';
+import CompactAdminFooter from '@/components/admin/CompactAdminFooter';
 import './admin.css';
 
 export default function AdminPage() {
@@ -152,7 +153,7 @@ export default function AdminPage() {
       />
 
       {/* Main Container */}
-      <div className={`transition-all duration-300 ${collapsed ? 'lg:pl-20' : 'lg:pl-64'}`}>
+      <div className={`transition-all duration-300 ${collapsed ? 'lg:pl-20' : 'lg:pl-[280px]'}`}>
         {/* Header Bar */}
         <AdminHeader
           darkMode={darkMode}
@@ -239,11 +240,14 @@ export default function AdminPage() {
                 </button>
               </div>
             )}
+
+          {/* Logout Confirmation Modal */}
+          <LogoutModal isOpen={showLogoutModal} onClose={() => setShowLogoutModal(false)} />
+
+          {/* Compact Admin Footer */}
+          <CompactAdminFooter />
         </main>
       </div>
-
-      {/* Logout Confirmation Modal */}
-      <LogoutModal isOpen={showLogoutModal} onClose={() => setShowLogoutModal(false)} />
     </div>
   );
 }
