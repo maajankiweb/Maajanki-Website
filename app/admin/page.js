@@ -166,7 +166,9 @@ export default function AdminPage() {
         />
 
         {/* Notifications Modal Dropdown */}
-        {showNotifications && <NotificationCenter onClose={() => setShowNotifications(false)} />}
+        {showNotifications && (
+          <NotificationCenter leads={leads} onClose={() => setShowNotifications(false)} />
+        )}
 
         {/* Dynamic Page Content */}
         <main className="p-4 md:p-6 max-w-7xl mx-auto space-y-6">
@@ -180,16 +182,16 @@ export default function AdminPage() {
           {activeTab === 'dashboard' && (
             <>
               <DashboardOverview leads={leads} loading={loading} />
-              <AnalyticsCharts />
+              <AnalyticsCharts leads={leads} />
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div className="lg:col-span-2">
-                  <LeadMap />
+                  <LeadMap leads={leads} />
                 </div>
                 <div>
-                  <ActivityFeed />
+                  <ActivityFeed leads={leads} />
                 </div>
               </div>
-              <AIInsights />
+              <AIInsights leads={leads} />
             </>
           )}
 
@@ -206,14 +208,14 @@ export default function AdminPage() {
 
           {/* VIEW: Website Forms Analytics */}
           {(activeTab.startsWith('forms') || activeTab === 'websiteForms') && (
-            <WebsiteFormsAnalytics />
+            <WebsiteFormsAnalytics leads={leads} />
           )}
 
           {/* VIEW: AI Insights */}
-          {activeTab === 'ai-insights' && <AIInsights />}
+          {activeTab === 'ai-insights' && <AIInsights leads={leads} />}
 
           {/* VIEW: Maps Analytics */}
-          {activeTab === 'maps' && <LeadMap />}
+          {activeTab === 'maps' && <LeadMap leads={leads} />}
 
           {/* VIEW: Tasks & Kanban */}
           {activeTab === 'tasks' && <TasksKanban />}

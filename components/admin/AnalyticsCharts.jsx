@@ -25,50 +25,53 @@ import {
 } from 'recharts';
 import { Maximize2, Download, RefreshCw, Filter } from 'lucide-react';
 
-const revenueData = [
-  { month: 'Jan', revenue: 240000, target: 200000 },
-  { month: 'Feb', revenue: 310000, target: 250000 },
-  { month: 'Mar', revenue: 280000, target: 250000 },
-  { month: 'Apr', revenue: 420000, target: 350000 },
-  { month: 'May', revenue: 390000, target: 350000 },
-  { month: 'Jun', revenue: 485000, target: 400000 },
-  { month: 'Jul', revenue: 560000, target: 450000 },
-];
-
-const leadSourcesData = [
-  { name: 'Contact Form', value: 45, color: '#FF6B00' },
-  { name: 'Website Audit', value: 25, color: '#3B82F6' },
-  { name: 'AI Chatbot', value: 15, color: '#10B981' },
-  { name: 'Footer Popup', value: 10, color: '#8B5CF6' },
-  { name: 'Direct/Other', value: 5, color: '#64748B' },
-];
-
-const trafficData = [
-  { day: 'Mon', organic: 1200, paid: 400, referral: 300 },
-  { day: 'Tue', organic: 1500, paid: 600, referral: 450 },
-  { day: 'Wed', organic: 1800, paid: 750, referral: 500 },
-  { day: 'Thu', organic: 1600, paid: 500, referral: 380 },
-  { day: 'Fri', organic: 2100, paid: 900, referral: 620 },
-  { day: 'Sat', organic: 1300, paid: 350, referral: 250 },
-  { day: 'Sun', organic: 1100, paid: 200, referral: 200 },
-];
-
-const funnelData = [
-  { value: 1000, name: 'Visitors', fill: '#3B82F6' },
-  { value: 450, name: 'Form Views', fill: '#8B5CF6' },
-  { value: 184, name: 'Leads Generated', fill: '#FF6B00' },
-  { value: 92, name: 'Sales Contacted', fill: '#F59E0B' },
-  { value: 42, name: 'Deals Closed', fill: '#10B981' },
-];
-
-const deviceData = [
-  { name: 'Mobile', value: 58, fill: '#FF6B00' },
-  { name: 'Desktop', value: 36, fill: '#3B82F6' },
-  { name: 'Tablet', value: 6, fill: '#10B981' },
-];
-
-export default function AnalyticsCharts() {
+export default function AnalyticsCharts({ leads = [] }) {
   const [timeFilter, setTimeFilter] = useState('30 Days');
+
+  // Compute lead sources dynamically from real leads data
+  const sourceCounts = leads.reduce((acc, lead) => {
+    const src = lead.source || 'Website Form';
+    acc[src] = (acc[src] || 0) + 1;
+    return acc;
+  }, {});
+
+  const totalLeads = leads.length;
+
+  const leadSourcesColors = {
+    'Contact Form': '#FF6B00',
+    'Audit Form': '#3B82F6',
+    'AI Chatbot': '#10B981',
+    'Footer Popup': '#8B5CF6',
+    'Brochure Download': '#F59E0B',
+    'Callback Request': '#EC4899',
+    'Website Form': '#64748B',
+  };
+
+  const leadSourcesData = Object.entries(sourceCounts).map(([name, count]) => ({
+    name,
+    value: count,
+    percentage: totalLeads > 0 ? Math.round((count / totalLeads) * 100) : 0,
+    color: leadSourcesColors[name] || '#FF6B00',
+  }));
+
+  // If no leads, show clean empty state
+  if (leadSourcesData.length === 0) {
+    leadSourcesData.push({ name: 'No Leads Yet', value: 1, percentage: 0, color: '#334155' });
+  }
+
+  // Dynamic funnel from actual lead statuses
+  const newCount = leads.filter((l) => l.status === 'new' || !l.status).length;
+  const contactedCount = leads.filter((l) => l.status === 'contacted').length;
+  const qualifiedCount = leads.filter((l) => l.status === 'qualified').length;
+  const closedCount = leads.filter((l) => l.status === 'closed').length;
+
+  const funnelData = [
+    { value: totalLeads, name: 'Total Leads Captured', fill: '#FF6B00' },
+    { value: newCount, name: 'New (Pending Follow-up)', fill: '#3B82F6' },
+    { value: contactedCount, name: 'Contacted / In Outreach', fill: '#F59E0B' },
+    { value: qualifiedCount, name: 'Qualified Prospects', fill: '#8B5CF6' },
+    { value: closedCount, name: 'Deals Closed / Converted', fill: '#10B981' },
+  ];
 
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {

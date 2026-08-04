@@ -4,20 +4,10 @@ import React, { useState } from 'react';
 import { Plus, MoreHorizontal, User, Clock, Paperclip, MessageSquare } from 'lucide-react';
 
 const initialColumns = {
-  todo: [
-    { id: 't1', title: 'Audit SEO strategy for client #402', priority: 'High', date: 'Tomorrow', members: ['VS'] },
-    { id: 't2', title: 'Prepare proposal for UAE Real Estate lead', priority: 'Medium', date: 'Aug 08', members: ['RK'] },
-  ],
-  inProgress: [
-    { id: 't3', title: 'Integrate MongoDB AI chatbot webhooks', priority: 'High', date: 'Today', members: ['MJ', 'VS'] },
-    { id: 't4', title: 'Optimize React Leaflet map clustering', priority: 'Low', date: 'Aug 06', members: ['MJ'] },
-  ],
-  review: [
-    { id: 't5', title: 'QA test lead status inline dropdowns', priority: 'Medium', date: 'Today', members: ['RK'] },
-  ],
-  completed: [
-    { id: 't6', title: 'Deploy production Next.js admin layout', priority: 'High', date: 'Aug 04', members: ['MJ'] },
-  ],
+  todo: [],
+  inProgress: [],
+  review: [],
+  completed: [],
 };
 
 export default function TasksKanban() {
@@ -55,49 +45,55 @@ export default function TasksKanban() {
             </div>
 
             <div className="space-y-3">
-              {columns[colKey].map((task) => (
-                <div
-                  key={task.id}
-                  className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all shadow-sm space-y-2 cursor-grab active:cursor-grabbing"
-                >
-                  <div className="flex items-center justify-between">
-                    <span
-                      className={`px-2 py-0.5 text-[9px] font-bold rounded ${
-                        task.priority === 'High'
-                          ? 'bg-rose-500/20 text-rose-300'
-                          : task.priority === 'Medium'
-                          ? 'bg-amber-500/20 text-amber-300'
-                          : 'bg-slate-800 text-slate-400'
-                      }`}
-                    >
-                      {task.priority}
-                    </span>
-                    <span className="text-[10px] text-slate-500 flex items-center gap-1">
-                      <Clock className="w-3 h-3" /> {task.date}
-                    </span>
-                  </div>
-
-                  <p className="text-xs font-semibold text-slate-200">{task.title}</p>
-
-                  <div className="flex items-center justify-between pt-1 text-[10px] text-slate-500">
-                    <div className="flex items-center gap-2">
-                      <span className="flex items-center gap-0.5"><Paperclip className="w-3 h-3" /> 2</span>
-                      <span className="flex items-center gap-0.5"><MessageSquare className="w-3 h-3" /> 4</span>
-                    </div>
-
-                    <div className="flex -space-x-1">
-                      {task.members.map((m, idx) => (
-                        <div
-                          key={idx}
-                          className="w-5 h-5 rounded-full bg-orange-600 text-white flex items-center justify-center font-bold text-[9px] border border-slate-900"
-                        >
-                          {m}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+              {columns[colKey].length === 0 ? (
+                <div className="p-4 text-center text-xs text-slate-500 rounded-xl bg-slate-900/40 border border-dashed border-slate-800">
+                  No tasks
                 </div>
-              ))}
+              ) : (
+                columns[colKey].map((task) => (
+                  <div
+                    key={task.id}
+                    className="p-3.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all shadow-sm space-y-2 cursor-grab active:cursor-grabbing"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span
+                        className={`px-2 py-0.5 text-[9px] font-bold rounded ${
+                          task.priority === 'High'
+                            ? 'bg-rose-500/20 text-rose-300'
+                            : task.priority === 'Medium'
+                            ? 'bg-amber-500/20 text-amber-300'
+                            : 'bg-slate-800 text-slate-400'
+                        }`}
+                      >
+                        {task.priority}
+                      </span>
+                      <span className="text-[10px] text-slate-500 flex items-center gap-1">
+                        <Clock className="w-3 h-3" /> {task.date}
+                      </span>
+                    </div>
+
+                    <p className="text-xs font-semibold text-slate-200">{task.title}</p>
+
+                    <div className="flex items-center justify-between pt-1 text-[10px] text-slate-500">
+                      <div className="flex items-center gap-2">
+                        <span className="flex items-center gap-0.5"><Paperclip className="w-3 h-3" /> 2</span>
+                        <span className="flex items-center gap-0.5"><MessageSquare className="w-3 h-3" /> 4</span>
+                      </div>
+
+                      <div className="flex -space-x-1">
+                        {task.members.map((m, idx) => (
+                          <div
+                            key={idx}
+                            className="w-5 h-5 rounded-full bg-orange-600 text-white flex items-center justify-center font-bold text-[9px] border border-slate-900"
+                          >
+                            {m}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))
+              )}
             </div>
           </div>
         ))}

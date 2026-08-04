@@ -12,34 +12,51 @@ import {
   Bot
 } from 'lucide-react';
 
-const insights = [
-  {
-    title: 'High Conversion Window Detected',
-    category: 'Optimization',
-    score: '94% Probability',
-    description: 'Leads submitting audit requests between 10:00 AM - 1:00 PM IST convert 3.2x faster. Recommend scheduling automated outreach calls during this window.',
-    action: 'Schedule Auto-Call',
-    color: 'border-orange-500/30 text-orange-400 bg-orange-500/10'
-  },
-  {
-    title: 'Spam Pattern Mitigated',
-    category: 'Security & Spam',
-    score: '99.8% Accuracy',
-    description: 'AI Filter automatically isolated 14 promotional spam submissions matching known SEO spam link backlists without polluting the main CRM.',
-    action: 'View Isolated Leads',
-    color: 'border-blue-500/30 text-blue-400 bg-blue-500/10'
-  },
-  {
-    title: 'Upsell Opportunity: E-Commerce Services',
-    category: 'Revenue Predictor',
-    score: '88% Score',
-    description: '3 leads requesting website redesigns have existing Shopify/WooCommerce stores. Potential cross-sell value: ₹1,80,000.',
-    action: 'View Qualified Leads',
-    color: 'border-emerald-500/30 text-emerald-400 bg-emerald-500/10'
-  },
-];
+export default function AIInsights({ leads = [] }) {
+  const totalLeads = leads.length;
+  const newLeads = leads.filter((l) => l.status === 'new' || !l.status).length;
+  const closedLeads = leads.filter((l) => l.status === 'closed').length;
 
-export default function AIInsights() {
+  const topSource = leads.length > 0
+    ? Object.entries(
+        leads.reduce((acc, l) => {
+          const src = l.source || 'Website Form';
+          acc[src] = (acc[src] || 0) + 1;
+          return acc;
+        }, {})
+      ).sort((a, b) => b[1] - a[1])[0]?.[0] || 'Website Form'
+    : 'None';
+
+  const insights = [
+    {
+      title: 'Top Performing Conversion Source',
+      category: 'Channel Intelligence',
+      score: `${totalLeads} Total Leads`,
+      description: `The highest volume of inbound inquiries originates from ${topSource}. Recommend focusing ad spend and CTA optimization on this channel.`,
+      action: 'Filter Channel Leads',
+      color: 'border-orange-500/30 text-orange-400 bg-orange-500/10'
+    },
+    {
+      title: 'Pending Follow-up Backlog',
+      category: 'Lead Velocity',
+      score: `${newLeads} Pending`,
+      description: newLeads > 0
+        ? `You have ${newLeads} new leads waiting for initial contact. Responding within 15 minutes increases conversion rates by up to 300%.`
+        : 'All incoming leads have been reviewed or contacted. Great job maintaining zero backlog!',
+      action: 'Review Pending Leads',
+      color: 'border-blue-500/30 text-blue-400 bg-blue-500/10'
+    },
+    {
+      title: 'Conversion Pipeline Performance',
+      category: 'Pipeline Health',
+      score: `${closedLeads} Closed`,
+      description: closedLeads > 0
+        ? `Successfully converted ${closedLeads} leads into closed clients. Keep nurturing qualified leads in the outreach queue.`
+        : 'No closed deals recorded yet. Move qualified leads to "Closed" status to track revenue conversions.',
+      action: 'View Closed Deals',
+      color: 'border-emerald-500/30 text-emerald-400 bg-emerald-500/10'
+    },
+  ];
   return (
     <div className="p-5 bg-slate-900 border border-slate-800 rounded-2xl shadow-lg space-y-4">
       <div className="flex items-center justify-between">

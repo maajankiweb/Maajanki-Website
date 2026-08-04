@@ -12,43 +12,18 @@ import {
   X
 } from 'lucide-react';
 
-const initialNotifications = [
-  {
-    id: 1,
-    title: 'High Priority Lead Received',
-    message: 'Rahul Gupta submitted Website Audit form with budget > ₹1,00,000.',
+export default function NotificationCenter({ leads = [], onClose }) {
+  // Generate real notifications from MongoDB leads
+  const realNotifications = leads.slice(0, 6).map((item, idx) => ({
+    id: item._id || idx,
+    title: `New Lead: ${item.name || 'Anonymous User'}`,
+    message: `${item.name || 'User'} requested ${item.service || 'services'} via ${item.source || 'Website Form'}.`,
     category: 'CRM',
     read: false,
-    time: '10m ago'
-  },
-  {
-    id: 2,
-    title: 'Security Alert: New Sign-in',
-    message: 'Admin logged in from new IP address (103.21.124.50).',
-    category: 'Security',
-    read: false,
-    time: '45m ago'
-  },
-  {
-    id: 3,
-    title: 'Milestone Completed',
-    message: 'E-Commerce project milestone #2 marked as completed by team.',
-    category: 'Projects',
-    read: false,
-    time: '2h ago'
-  },
-  {
-    id: 4,
-    title: 'Weekly Report Ready',
-    message: 'SEO & Lead Analytics report for July 2026 is generated.',
-    category: 'Marketing',
-    read: true,
-    time: '1d ago'
-  },
-];
+    time: item.createdAt ? new Date(item.createdAt).toLocaleDateString() : 'Recent',
+  }));
 
-export default function NotificationCenter({ onClose }) {
-  const [items, setItems] = useState(initialNotifications);
+  const [items, setItems] = useState(realNotifications);
 
   const markAllRead = () => {
     setItems((prev) => prev.map((item) => ({ ...item, read: true })));

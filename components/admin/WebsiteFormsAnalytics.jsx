@@ -15,70 +15,41 @@ import {
   MessageSquare
 } from 'lucide-react';
 
-const formMetrics = [
-  {
-    name: 'Contact Page Form',
-    icon: Mail,
-    views: 4850,
-    submissions: 184,
-    conversion: '3.79%',
-    bounce: '42%',
-    status: 'Optimal',
-    color: 'border-orange-500/30 text-orange-400 bg-orange-500/10'
-  },
-  {
-    name: 'Free Website Audit Form',
-    icon: FileSpreadsheet,
-    views: 3120,
-    submissions: 142,
-    conversion: '4.55%',
-    bounce: '38%',
-    status: 'High Performer',
-    color: 'border-blue-500/30 text-blue-400 bg-blue-500/10'
-  },
-  {
-    name: 'AI Chatbot Integration',
-    icon: Bot,
-    views: 6400,
-    submissions: 295,
-    conversion: '4.61%',
-    bounce: '25%',
-    status: 'Top Lead Driver',
-    color: 'border-emerald-500/30 text-emerald-400 bg-emerald-500/10'
-  },
-  {
-    name: 'Footer Quote Popup',
-    icon: MessageSquare,
-    views: 8900,
-    submissions: 98,
-    conversion: '1.10%',
-    bounce: '68%',
-    status: 'Average',
-    color: 'border-purple-500/30 text-purple-400 bg-purple-500/10'
-  },
-  {
-    name: 'Brochure PDF Download',
-    icon: Download,
-    views: 1850,
-    submissions: 124,
-    conversion: '6.70%',
-    bounce: '18%',
-    status: 'Exceptional',
-    color: 'border-amber-500/30 text-amber-400 bg-amber-500/10'
-  },
-  {
-    name: 'Callback Request',
-    icon: PhoneCall,
-    views: 2400,
-    submissions: 65,
-    conversion: '2.70%',
-    bounce: '51%',
-    status: 'Needs A/B Test',
-    color: 'border-rose-500/30 text-rose-400 bg-rose-500/10'
-  },
-];
+export default function WebsiteFormsAnalytics({ leads = [] }) {
+  // Aggregate real lead submissions by form source
+  const sourceCounts = leads.reduce((acc, lead) => {
+    const src = lead.source || 'Contact Form';
+    acc[src] = (acc[src] || 0) + 1;
+    return acc;
+  }, {});
 
-export default function WebsiteFormsAnalytics() {
+  const formsList = [
+    { name: 'Contact Form', sourceKey: 'Contact Form', icon: Mail, color: 'border-orange-500/30 text-orange-400 bg-orange-500/10' },
+    { name: 'Website Audit Form', sourceKey: 'Website Audit', icon: FileSpreadsheet, color: 'border-blue-500/30 text-blue-400 bg-blue-500/10' },
+    { name: 'AI Chatbot', sourceKey: 'AI Chatbot', icon: Bot, color: 'border-emerald-500/30 text-emerald-400 bg-emerald-500/10' },
+    { name: 'Footer Popup', sourceKey: 'Footer Popup', icon: MessageSquare, color: 'border-purple-500/30 text-purple-400 bg-purple-500/10' },
+    { name: 'Brochure PDF Download', sourceKey: 'Brochure Download', icon: Download, color: 'border-amber-500/30 text-amber-400 bg-amber-500/10' },
+    { name: 'Callback Request', sourceKey: 'Callback Request', icon: PhoneCall, color: 'border-rose-500/30 text-rose-400 bg-rose-500/10' },
+  ];
+
+  const totalLeadsCount = leads.length;
+
+  const formMetrics = formsList.map((form) => {
+    const submissions = sourceCounts[form.sourceKey] || 0;
+    const conversion = totalLeadsCount > 0
+      ? `${((submissions / totalLeadsCount) * 100).toFixed(1)}%`
+      : '0%';
+    const status = submissions > 0 ? 'Active' : 'Idle';
+
+    return {
+      name: form.name,
+      icon: form.icon,
+      submissions,
+      conversion,
+      status,
+      color: form.color,
+    };
+  });
   return (
     <div className="space-y-6">
       <div className="p-5 bg-slate-900 border border-slate-800 rounded-2xl shadow-lg space-y-4">
@@ -119,20 +90,12 @@ export default function WebsiteFormsAnalytics() {
 
                 <div className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800/80 text-xs">
                   <div>
-                    <span className="text-slate-400 block text-[10px]">Total Impressions</span>
-                    <strong className="text-slate-200 text-sm font-extrabold">{form.views.toLocaleString()}</strong>
-                  </div>
-                  <div>
                     <span className="text-slate-400 block text-[10px]">Submissions</span>
                     <strong className="text-orange-400 text-sm font-extrabold">{form.submissions}</strong>
                   </div>
                   <div>
-                    <span className="text-slate-400 block text-[10px]">Conversion Rate</span>
+                    <span className="text-slate-400 block text-[10px]">Share of Total</span>
                     <strong className="text-emerald-400 text-sm font-extrabold">{form.conversion}</strong>
-                  </div>
-                  <div>
-                    <span className="text-slate-400 block text-[10px]">Drop-off / Bounce</span>
-                    <strong className="text-slate-400 text-sm font-extrabold">{form.bounce}</strong>
                   </div>
                 </div>
               </div>
