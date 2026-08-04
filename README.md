@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+# 🚀 MaaJanki Web Tech — Web Development & Digital Growth Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Official repository for **MaaJanki Web Tech** — a high-performance web agency application built with Next.js (App Router), Clerk Authentication, MongoDB Atlas, and Tailwind/Vanilla CSS styling.
 
-## Available Scripts
+![MaaJanki Web Tech Banner](/public/images/pages/main-services-pages/Home-page-image-Maajanki.webp)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **🌐 Next.js App Router Architecture**: Ultra-fast Server-Side Rendering (SSR), Static Site Generation (SSG), and Dynamic API Routes.
+- **🔐 Secure Clerk Authentication**: Protected Admin Dashboard (`/admin`) backed by Clerk auth guards and allowlist restrictions.
+- **📊 Centralized Lead Management**: Instant lead capture into **MongoDB Atlas** across all entry points:
+  - Homepage Promo Popup (`homepage-promo-popup`)
+  - Footer Project Quote Form (`footer-popup`)
+  - Contact Page (`contact-page`)
+  - Free Website Audit Form (`website-audit`)
+  - Interactive AI Chatbot (`chatbot`)
+  - Service Brochure Downloads (`brochure`)
+- **🤖 Built-in AI Chatbot**: Integrated AI assistant powering instant customer query resolution and automated lead detection.
+- **📍 Dynamic Location & Service Pages**: Over 58 targeted SEO landing pages serving regional and global markets.
+- **📥 CSV Export & Status Workflows**: Export leads directly to CSV and update lead status (`new`, `contacted`, `closed`, `archived`) in real-time.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **UI & Styling**: React 19, CSS Modules, Bootstrap, Lucide Icons, FontAwesome
+- **Authentication**: [Clerk](https://clerk.com/) (`@clerk/nextjs`)
+- **Database**: [MongoDB Atlas](https://www.mongodb.com/atlas) with [Mongoose](https://mongoosejs.com/)
+- **Deployment**: Node.js / Hostinger VPS / Vercel
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Node.js**: `v18.x` or higher
+- **npm**: `v9.x` or higher
+- **MongoDB Atlas Connection URI**
+- **Clerk Account Keys** (`pk_test_...` and `sk_test_...`)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Environment Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Create a `.env` file in the root directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```env
+# Clerk Authentication Keys
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_your_publishable_key
+CLERK_SECRET_KEY=sk_test_your_secret_key
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# MongoDB Atlas Connection
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/maajanki_db?retryWrites=true&w=majority
 
-## Learn More
+# AI Chat & Admin Fallback Keys
+NEXT_PUBLIC_CHAT_PROXY_URL=/api/chat
+NEXT_PUBLIC_NVIDIA_MODEL=openai/gpt-oss-20b
+NVIDIA_API_KEY=your_nvidia_api_key
+ADMIN_SECRET_KEY=your_admin_secret_key
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 3. Installation
 
-### Code Splitting
+```bash
+# Clone the repository
+git clone https://github.com/maajankiweb/Maajanki-Website.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Navigate to project root
+cd Maajanki-Website
 
-### Analyzing the Bundle Size
+# Install dependencies
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### 4. Running Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# Start Next.js development server
+npm run dev
+```
 
-### Advanced Configuration
+Open [http://localhost:3000](http://localhost:3000) to view the site in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Main Website**: `http://localhost:3000`
+- **Admin Dashboard**: `http://localhost:3000/admin`
+- **Sign In Page**: `http://localhost:3000/sign-in`
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📂 Project Structure
 
-### `npm run build` fails to minify
+```text
+├── app/                      # Next.js App Router pages and API endpoints
+│   ├── admin/                # Protected Lead Management Dashboard
+│   ├── api/                  # Serverless API routes (/api/leads, /api/admin/leads, etc.)
+│   ├── contact/              # Contact Page & Lead Capture Form
+│   ├── locations/            # 58+ Regional & Global SEO Location Landing Pages
+│   ├── services/             # Core Service Pages (SEO, Web Development, SMO, etc.)
+│   ├── sign-in/              # Clerk Authentication Sign-in Route
+│   ├── sign-up/              # Clerk Authentication Sign-up Route
+│   └── layout.js             # Root Layout with Clerk & Client Providers
+├── components/               # Reusable UI components
+│   ├── Chatbot/              # AI Assistant & Chat Form
+│   ├── FooterWithPopup.jsx   # Footer with Project Quote Modal
+│   ├── PromoPopup.jsx        # Homepage Promotional Lead Callback Modal
+│   └── Navbar.jsx            # Responsive Header Navigation
+├── lib/                      # Database & Mongoose Models
+│   ├── db.js                 # MongoDB Atlas connection helper
+│   └── models/               # Mongoose Schemas (Lead.js)
+├── public/                   # Static assets, images, and documents
+└── middleware.js             # Clerk & Route Security Middleware
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🔒 Security & Best Practices
+
+- **Honeypot Spam Protection**: Silent spam filtering on all public lead capture forms.
+- **Route Protection**: Server-side layout guards (`auth()`) enforcing authorization on all `/admin` routes.
+- **Strict Headers**: HSTS, X-Frame-Options (`DENY`), X-Content-Type-Options (`nosniff`), and Referrer-Policy configured in `next.config.js`.
+
+---
+
+## 📝 License
+
+Copyright © 2026 **MaaJanki Web Tech**. All rights reserved.
