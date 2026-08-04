@@ -10,9 +10,9 @@ import ChatbotLoader from '@/components/Chatbot/ChatbotLoader';
 
 export default function LayoutContent({ children }) {
   const pathname = usePathname();
-  const isAdmin = pathname?.startsWith('/admin');
+  const isAdminOrAuth = pathname?.startsWith('/admin') || pathname?.startsWith('/sign-in') || pathname?.startsWith('/sign-up');
 
-  if (isAdmin) {
+  if (isAdminOrAuth) {
     return (
       <main id="main-content" style={{ minHeight: '100vh', margin: 0, padding: 0 }}>
         {children}
