@@ -25,7 +25,9 @@
     "build": "next build",
     "postbuild": "node scripts/submit-indexnow.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "vercel",
+    "deploy:prod": "vercel --prod"
   },
   "eslintConfig": {
     "extends": "next/core-web-vitals",

@@ -121,6 +121,53 @@ Open [http://localhost:3000](http://localhost:3000) to view the site in your bro
 
 ---
 
+## 🚢 Deployment Guide
+
+### Option 1: Vercel (Recommended for Next.js)
+
+Vercel provides native zero-config deployment for Next.js App Router.
+
+#### Deploy via Vercel CLI
+
+```bash
+# 1. Install Vercel CLI (if not already installed)
+npm install -g vercel
+
+# 2. Deploy Preview
+npx vercel
+
+# 3. Deploy to Production
+npx vercel --prod
+```
+
+#### Environment Variables on Vercel:
+Add the following in **Vercel Project Settings → Environment Variables**:
+- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` = `pk_live_...`
+- `CLERK_SECRET_KEY` = `sk_live_...`
+- `MONGODB_URI` = `mongodb+srv://...`
+- `NVIDIA_API_KEY` = `nvapi-...`
+- `ADMIN_SECRET_KEY` = `maajanki2026`
+
+---
+
+### Option 2: Hostinger (VPS / Node.js Deployment)
+
+```bash
+# 1. Build production bundle
+npm run build
+
+# 2. Start production server
+npm run start
+```
+
+For Hostinger VPS / PM2 process manager:
+```bash
+# Start with PM2
+pm2 start npm --name "maajanki-frontend" -- start
+```
+
+---
+
 ## 🔒 Security & Best Practices
 
 - **Honeypot Spam Protection**: Silent spam filtering on all public lead capture forms.
