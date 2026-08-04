@@ -1,0 +1,395 @@
+/* ======================================================
+   PREMIUM REDESIGNED PRE-FOOTER CTA STYLES
+   MaaJanki Web Tech - Desktop, Tablet & Mobile responsive
+   ====================================================== */
+
+.mj-footer {
+  background: linear-gradient(
+    135deg,
+    #fd6a02 30%,
+    #000000 70%
+  ); /* Deep space dark background */
+  padding: 80px 20px;
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(253, 106, 2, 0.1);
+}
+
+/* Background ornament glow */
+.mj-footer::before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: 10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(
+    circle,
+    rgba(253, 106, 2, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.mj-footer::after {
+  content: "";
+  position: absolute;
+  bottom: -150px;
+  right: 10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(4, 37, 68, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Floating Glassmorphic Container */
+.mj-footer-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+  padding: 50px 60px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  position: relative;
+  z-index: 2;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.45),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.mj-footer-left {
+  text-align: left;
+}
+
+.mj-footer-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+  background: linear-gradient(135deg, #ffffff 40%, #fd6a02 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.mj-footer-desc {
+  font-size: 1.05rem;
+  color: #ffffff !important;
+  max-width: 550px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Button with Orange Metallic Gradient */
+.mj-btn-primary {
+  background: linear-gradient(135deg, #fd6a02 0%, #d85200 100%);
+  color: #ffffff;
+  border: none;
+  padding: 15px 36px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 20px rgba(253, 106, 2, 0.3);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  white-space: nowrap;
+}
+
+.mj-btn-primary:hover {
+  background: #ffffff;
+  color: #030712;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.25);
+}
+
+/* ======================================================
+   GLASSMORPHIC MODAL DESIGN
+   ====================================================== */
+
+.mj-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 7, 18, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 99999;
+}
+
+.mj-modal-box {
+  background: #FD6A02;
+  border: 1px solid rgba(253, 106, 2, 0.2);
+  width: 95%;
+  max-width: 650px;
+  padding: 40px;
+  border-radius: 24px;
+  animation: zoomIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.8),
+    0 0 50px rgba(253, 106, 2, 0.1);
+  color: #ffffff;
+}
+
+.mj-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 15px;
+}
+
+.mj-modal-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.mj-modal-close {
+  background: rgba(255, 255, 255, 0.338);
+  border: 1px solid rgb(213, 7, 7);
+  color: #000000;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.mj-modal-close:hover {
+  background: #ef4444;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+/* ======================================================
+   FORM STYLES
+   ====================================================== */
+
+.mj-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mj-form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mj-form-group {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.mj-form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mj-form-group input,
+.mj-form-group select,
+.mj-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: #000000;
+  transition: all 0.3s ease;
+}
+
+.mj-form-group select {
+  background-color: #ffffff;
+}
+
+.mj-form-group input::placeholder,
+.mj-form-group textarea::placeholder {
+  color: #475569;
+}
+
+.mj-form-group input:focus,
+.mj-form-group select:focus,
+.mj-form-group textarea:focus {
+  border-color: #fd6a02;
+  box-shadow: 0 0 10px rgba(253, 106, 2, 0.25);
+  outline: none;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.mj-form-group textarea {
+  height: 110px;
+  resize: none;
+}
+
+.mj-btn-submit {
+  background: linear-gradient(135deg, #fd6a02 0%, #d85200 100%);
+  color: #ffffff;
+  padding: 14px 36px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(253, 106, 2, 0.3);
+  align-self: flex-start;
+}
+
+.mj-btn-submit:hover {
+  background: #ffffff;
+  color: #0b0f17;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.mj-btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Entry Animation */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ======================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ====================================================== */
+
+/* Tablets (<=991px) */
+@media (max-width: 991px) {
+  .mj-footer {
+    padding: 60px 24px;
+  }
+
+  .mj-footer-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 40px 30px;
+  }
+
+  .mj-footer-left {
+    text-align: center;
+  }
+
+  .mj-footer-desc {
+    max-width: 100%;
+  }
+
+  .mj-btn-primary {
+    align-self: center;
+  }
+}
+
+/* Large phones (481px to 767px) */
+@media (max-width: 767px) {
+  .mj-footer {
+    padding: 50px 16px;
+  }
+
+  .mj-footer-wrapper {
+    padding: 35px 24px;
+    border-radius: 18px;
+  }
+
+  .mj-footer-title {
+    font-size: 1.8rem;
+  }
+
+  .mj-footer-desc {
+    font-size: 0.96rem;
+  }
+
+  .mj-modal-box {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .mj-modal-title {
+    font-size: 1.3rem;
+  }
+
+  .mj-form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mj-form-group {
+    min-width: 100%;
+  }
+
+  .mj-btn-submit {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+/* Small phones (<=480px) */
+@media (max-width: 480px) {
+  .mj-footer {
+    padding: 40px 12px;
+  }
+
+  .mj-footer-wrapper {
+    padding: 28px 16px;
+    border-radius: 16px;
+  }
+
+  .mj-footer-title {
+    font-size: 1.5rem;
+  }
+
+  .mj-btn-primary {
+    width: 100%;
+    padding: 12px 24px;
+  }
+
+  .mj-modal-box {
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+
+  .mj-form-group label {
+    font-size: 0.8rem;
+  }
+
+  .mj-form-group input,
+  .mj-form-group select,
+  .mj-form-group textarea {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+}

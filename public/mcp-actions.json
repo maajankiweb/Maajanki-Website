@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "name": "MaaJanki Web Tech",
+  "description": "Digital marketing and web development agency in Bihar, India. We build websites, run SEO campaigns, manage paid ads, and design brands for businesses in India and worldwide.",
+  "url": "https://maajankiwebtech.com",
+  "contact": {
+    "phone": "+91-9006543913",
+    "email": "info@maajankiwebtech.com",
+    "address": "412, Supriya Cinema, Bettiah, West Champaran, Bihar 845438, India"
+  },
+  "actions": [
+    {
+      "id": "send-inquiry",
+      "type": "form-submission",
+      "name": "Send Business Inquiry",
+      "description": "Submit a business inquiry or project request to MaaJanki Web Tech. Provide your name, email, phone, and a description of the project or service you need.",
+      "url": "https://maajankiwebtech.com/contact",
+      "method": "POST",
+      "params": {
+        "required": ["name", "email", "message"],
+        "optional": ["phone", "company", "budget"]
+      },
+      "fields": [
+        { "name": "name", "type": "text", "description": "Full name of the person sending the inquiry" },
+        { "name": "email", "type": "email", "description": "Email address for reply" },
+        { "name": "phone", "type": "tel", "description": "Phone number (optional)" },
+        { "name": "message", "type": "textarea", "description": "Description of the project, service needed, or question" }
+      ]
+    },
+    {
+      "id": "request-service-quote",
+      "type": "navigation",
+      "name": "Request a Service Quote",
+      "description": "Navigate to the contact page with a specific service pre-selected to request a free quote for web development, SEO, branding, or any other service.",
+      "url": "https://maajankiwebtech.com/contact",
+      "params": {
+        "optional": ["service"]
+      }
+    },
+    {
+      "id": "view-portfolio",
+      "type": "navigation",
+      "name": "View Portfolio Projects",
+      "description": "Browse the portfolio of completed projects including SaaS platforms, e-commerce stores, and corporate websites built by MaaJanki Web Tech.",
+      "url": "https://maajankiwebtech.com/portfolio"
+    },
+    {
+      "id": "view-services",
+      "type": "navigation",
+      "name": "Browse All Services",
+      "description": "View the full catalog of digital services offered by MaaJanki Web Tech including web development, SEO, performance marketing, branding, and more.",
+      "url": "https://maajankiwebtech.com/services"
+    },
+    {
+      "id": "call-business",
+      "type": "action",
+      "name": "Call MaaJanki Web Tech",
+      "description": "Call the business directly at +91-9006543913 for immediate assistance or project discussion.",
+      "url": "tel:+919006543913"
+    },
+    {
+      "id": "view-reviews",
+      "type": "navigation",
+      "name": "Read Client Reviews",
+      "description": "Read verified client testimonials and reviews about MaaJanki Web Tech's services and project delivery.",
+      "url": "https://maajankiwebtech.com/reviews"
+    }
+  ]
+}

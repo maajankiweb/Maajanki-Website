@@ -1,0 +1,11 @@
+Really Simple Licensing (RSL) 1.0 Declaration
+Website: https://maajankiwebtech.com/
+License XML: https://maajankiwebtech.com/rsl.xml
+
+Permissions:
+- search: ALLOWED (indexing for traditional search engine results)
+- grounding: ALLOWED (use in generative AI search summaries and direct citations)
+- ai-train: PROHIBITED (crawling for offline AI model training is prohibited without prior written agreement)
+
+Legal Contact: https://maajankiwebtech.com/contact
+Royalty: free (for search and grounding usage)

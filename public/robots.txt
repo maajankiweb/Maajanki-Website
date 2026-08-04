@@ -1,0 +1,51 @@
+User-agent: *
+Allow: /
+
+# --- OpenAI (ChatGPT & GPTBot) ---
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+
+# --- Google (Gemini & Google-Extended) ---
+User-agent: Google-Extended
+Allow: /
+
+# --- Anthropic (Claude & ClaudeBot) ---
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: Anthropic-AI
+Allow: /
+
+# --- Perplexity AI ---
+User-agent: PerplexityBot
+Allow: /
+
+# --- Meta (Meta AI) ---
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Meta-ExternalInteractive
+Allow: /
+
+# --- Apple (Apple Intelligence) ---
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Cohere AI ---
+User-agent: Cohere-ai
+Allow: /
+
+# --- You.com (YouBot) ---
+User-agent: YouBot
+Allow: /
+
+# --- Other AI Scrapers & Crawlers ---
+User-agent: diffbot
+Allow: /
+User-agent: facebookexternalhit
+Allow: /
+
+# --- Sitemap ---
+Sitemap: https://maajankiwebtech.com/sitemap.xml

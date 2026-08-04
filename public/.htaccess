@@ -1,0 +1,94 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 0. Block WordPress probe requests (from browser extensions/scanners)
+  RewriteRule ^wp-json(.*)$ / [R=302,L]
+
+  # 1. 301 Redirects (Preserve GSC History)
+  RewriteRule ^service$ /services [R=301,L]
+  RewriteRule ^service/(.*)$ /services/$1 [R=301,L]
+  # Redirect old blog URLs to subdomain
+  RewriteRule ^blog/?$ https://blog.maajankiwebtech.com [R=301,L]
+  RewriteRule ^blog/(.*)$ https://blog.maajankiwebtech.com/$1 [R=301,L]
+
+  # 2. Next.js Pretty URLs (maps /about to /about.html internally)
+  # If it is not a directory
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # If it is not a file
+  RewriteCond %{REQUEST_FILENAME} !-f
+  # If the file with .html extension exists, rewrite to it
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+
+  # For deeper subfolders (e.g. /services/web-development)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# --- Security Headers ---
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(self)"
+</IfModule>
+
+# --- Gzip Compression ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# --- Browser Caching ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images (1 year)
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Fonts (1 year)
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+
+  # CSS & JS (1 month — Next.js hashes filenames, so safe to cache long)
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+
+  # HTML (10 minutes — allows quick content updates)
+  ExpiresByType text/html "access plus 10 minutes"
+
+  # JSON, XML, TXT (1 day)
+  ExpiresByType application/json "access plus 1 day"
+  ExpiresByType text/xml "access plus 1 day"
+  ExpiresByType text/plain "access plus 1 day"
+</IfModule>
+
+# --- Disable ETags (not needed for static export) ---
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
+
+# --- MIME Types for AI Discovery Files ---
+<IfModule mod_mime.c>
+  AddType text/plain .txt
+  AddType application/json .json
+</IfModule>

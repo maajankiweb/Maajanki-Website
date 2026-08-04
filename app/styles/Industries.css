@@ -1,0 +1,443 @@
+/* Business Size Section End */
+.business-size-section {
+  padding         : 60px 0;
+  background-color: #FD6A02;
+  color           : #fff;
+  text-align      : center;
+}
+
+.section-title {
+  font-size     : 2rem;
+  color         : #000;
+  margin-bottom : 10px;
+  text-transform: uppercase;
+  font-weight   : bold;
+  text-align    : center;
+}
+
+.section-subtitle {
+  color     : #000;
+  font-size : 1rem;
+  max-width : 800px;
+  margin    : 0 auto 50px auto;
+  text-align: center;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin   : 0 auto;
+  padding  : 0 20px;
+}
+
+/* CARDS WRAPPER */
+.business-sizes {
+  display        : flex;
+  flex-wrap      : wrap;
+  gap            : 30px;
+  justify-content: center;
+}
+
+/* INDIVIDUAL CARD */
+.business-card {
+  background-color: #111;
+  border          : 1px solid #FD6A02;
+  border-radius   : 12px;
+  padding         : 30px;
+  width           : 320px;
+  box-shadow      : 0 0 15px rgba(220, 37, 100, 0.2);
+  transition      : all 0.3s ease;
+}
+
+.business-card:hover {
+  transform   : translateY(-10px);
+  box-shadow  : 0 0 25px rgba(220, 37, 100, 0.5);
+  border-color: #fff;
+}
+
+/* ICON CIRCLE */
+.business-icon {
+  width           : 80px;
+  height          : 80px;
+  border-radius   : 50%;
+  background-color: #FD6A02;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  margin          : 0 auto 20px auto;
+  font-size       : 2rem;
+  color           : #fff;
+  transition      : all 0.3s ease;
+}
+
+.business-card:hover .business-icon {
+  background-color: #fff;
+  color           : #FD6A02;
+  transform       : scale(1.1);
+}
+
+/* TITLES & TEXT */
+.business-title {
+  font-size    : 1.3rem;
+  font-weight  : 600;
+  margin-bottom: 10px;
+  color        : #FD6A02;
+}
+
+.business-description {
+  font-size    : 0.95rem;
+  margin-bottom: 15px;
+  color        : #ccc;
+  text-align   : center;
+}
+
+/* FEATURES LIST */
+.business-features {
+  list-style  : none;
+  padding-left: 0;
+  text-align  : left;
+}
+
+.business-features li {
+  font-size    : 0.9rem;
+  margin-bottom: 8px;
+  display      : flex;
+  align-items  : center;
+  color        : #fff;
+}
+
+.business-features i {
+  color       : #FD6A02;
+  margin-right: 8px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .business-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .business-card {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* Services Section */
+.services-alt {
+  background-color: #000;
+  /* black background */
+  padding         : 60px 20px;
+  color           : #fff;
+}
+
+.services-alt-wrapper {
+  display    : flex;
+  flex-wrap  : wrap;
+  align-items: center;
+  gap        : 30px;
+  max-width  : 1200px;
+  margin     : 0 auto;
+}
+
+.services-alt-content {
+  flex: 1 1 500px;
+}
+
+.services-alt-content h2 {
+  margin-bottom: 10px;
+  color        : #FD6A02;
+  /* accent color */
+}
+
+.services-alt-content h3 {
+  margin-bottom: 20px;
+  color        : #fff;
+  font-size    : 40px;
+}
+
+.services-alt-content .justified-text {
+  text-align   : justify;
+  margin-bottom: 20px;
+  line-height  : 1.6;
+  color        : #ccc;
+}
+
+.services-alt-content .cta-button {
+  display         : inline-block;
+  padding         : 12px 25px;
+  background-color: #FD6A02;
+  color           : #fff;
+  border-radius   : 50px;
+  text-decoration : none;
+  transition      : all 0.3s ease;
+}
+
+.services-alt-content .cta-button:hover {
+  background-color: #ff1a75;
+  transform       : translateY(-3px);
+}
+
+/* Image styling */
+.services-alt-image {
+  flex      : 1 1 500px;
+  text-align: center;
+}
+
+.services-alt-image img {
+  width        : 100%;
+  height       : auto;
+  border-radius: 12px;
+  transition   : transform 0.3s ease, opacity 0.5s ease;
+}
+
+.services-alt-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-alt-wrapper {
+    flex-direction: column;
+    text-align    : center;
+  }
+
+  .services-alt-content,
+  .services-alt-image {
+    flex: 1 1 100%;
+  }
+}
+
+/* ---------- mj-Industries Section ---------- */
+.mj-Industries-wrapper {
+  background-color: #FD6A02;
+  padding         : 80px 20px;
+  color           : #fff;
+}
+
+.mj-Industries-title {
+  text-align   : center;
+  margin-bottom: 60px;
+}
+
+.mj-Industries-title h2 {
+  font-size    : 2.8rem;
+  font-weight  : 700;
+  color        : #fff;
+  margin-bottom: 15px;
+}
+
+.mj-Industries-title p {
+  font-size : 1.1rem;
+  max-width : 750px;
+  margin    : 0 auto;
+  color     : #ccc;
+  text-align: center;
+}
+
+/* ---------- Industry Cards ---------- */
+.mj-Industries-section {
+  display        : flex;
+  flex-wrap      : wrap;
+  gap            : 30px;
+  justify-content: center;
+}
+
+.industry-card {
+  background-color: #111;
+  color           : #ddd;
+  border-radius   : 16px;
+  padding         : 40px 30px;
+  flex            : 0 1 calc(33.333% - 20px);
+  box-sizing      : border-box;
+  transition      : all 0.3s ease;
+  border          : 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow      : 0 0 10px rgba(255, 204, 0, 0.05);
+}
+
+.industry-card:hover {
+  transform : translateY(-10px);
+  box-shadow: 0 0 25px rgb(255, 255, 255);
+}
+
+.industry-header {
+  display      : flex;
+  align-items  : center;
+  gap          : 15px;
+  margin-bottom: 20px;
+}
+
+.industry-icon {
+  width           : 60px;
+  height          : 60px;
+  background-color: #FD6A02;
+  color           : #000;
+  font-size       : 1.8rem;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  border-radius   : 14px;
+  transition      : all 0.3s ease;
+}
+
+.industry-card:hover .industry-icon {
+  background-color: #fff;
+  transform       : scale(1.1);
+}
+
+.industry-card h3 {
+  font-size  : 1.5rem;
+  color      : #FD6A02;
+  font-weight: 600;
+  margin     : 0;
+}
+
+.industry-card p {
+  font-size    : 1rem;
+  line-height  : 1.6;
+  margin-bottom: 25px;
+  color        : #fff;
+}
+
+.industry-card ul {
+  list-style  : none;
+  padding-left: 0;
+}
+
+.industry-card ul li {
+  position     : relative;
+  padding-left : 20px;
+  margin-bottom: 10px;
+  color        : #eee;
+  font-size    : 0.95rem;
+}
+
+.industry-card ul li::before {
+  content : "➜";
+  position: absolute;
+  left    : 0;
+  color   : #FD6A02;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .industry-card {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .industry-card {
+    flex: 0 1 100%;
+  }
+
+  .mj-Industries-title h2 {
+    font-size: 2.2rem;
+  }
+}
+
+
+/* ---------- Digital Marketing Services Section ---------- */
+.dm-services-section {
+  background-color: #000;
+  padding         : 60px 20px;
+  color           : #fff;
+}
+
+.dm-section-header {
+  text-align   : center;
+  margin-bottom: 50px;
+}
+
+.dm-section-title {
+  font-size    : 2.5rem;
+  margin-bottom: 15px;
+}
+
+.dm-section-subtitle {
+  font-size : 1.1rem;
+  max-width : 700px;
+  margin    : 0 auto;
+  text-align: center;
+}
+
+/* ---------- Services Grid ---------- */
+.dm-services-grid {
+  display        : flex;
+  flex-wrap      : wrap;
+  gap            : 30px;
+  justify-content: center;
+}
+
+/* ✅ 4 cards per row on large desktop */
+.dm-service-card {
+  background-color: #fff;
+  color           : #111;
+  border-radius   : 12px;
+  padding         : 25px;
+  flex            : 0 1 calc(25% - 30px);
+  /* ensures 4 per row */
+  box-sizing      : border-box;
+  transition      : transform 0.3s ease, box-shadow 0.3s ease;
+  text-align      : center;
+}
+
+.dm-service-card h4 {
+  font-size    : 1.3rem;
+  margin-bottom: 10px;
+  color        : #FD6A02;
+}
+
+.dm-service-card p {
+  font-size  : 0.95rem;
+  line-height: 1.5;
+  color      : #000;
+}
+
+/* Hover effect */
+.dm-service-card:hover {
+  transform : translateY(-8px);
+  box-shadow: 0 8px 20px #FD6A02;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1200px) {
+  .dm-service-card {
+    flex: 0 1 calc(33.333% - 20px);
+    /* 3 cards per row on smaller desktops */
+  }
+}
+
+@media (max-width: 1024px) {
+  .dm-service-card {
+    flex: 0 1 calc(50% - 20px);
+    /* 2 cards per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .dm-service-card {
+    flex: 0 1 100%;
+    /* 1 card per row on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .dm-section-title {
+    font-size: 2rem;
+  }
+
+  .dm-section-subtitle {
+    font-size: 1rem;
+  }
+}

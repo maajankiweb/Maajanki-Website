@@ -1,0 +1,213 @@
+/* ---------- MAIN CONTAINER ---------- */
+.career-container {
+    width        : 100%;
+    /* max-width : 100%; */
+    margin       : 0;
+    /* padding      : 40px; */
+    /* background   : #000; */
+    border-radius: 0;
+}
+
+/* ---------- TITLE ---------- */
+.career-title {
+    text-align    : center;
+    font-size     : 2rem;
+    font-weight   : 700;
+    color         : #000;
+    margin-bottom : 30px;
+    letter-spacing: 0.5px;
+    position      : relative;
+}
+
+.career-title::after {
+    content      : "";
+    display      : block;
+    width        : 80px;
+    height       : 3px;
+    background   : #FD6A02;
+    margin       : 10px auto 0;
+    border-radius: 2px;
+}
+
+/* ---------- TABLE WRAPPER ---------- */
+.career-table-container {
+    overflow-x   : auto;
+    border-radius: 12px;
+    box-shadow   : 0 3px 15px rgba(0, 0, 0, 0.777);
+}
+
+/* ---------- TABLE STYLING ---------- */
+.career-table {
+    width          : 100%;
+    border-collapse: collapse;
+    background     : #fff;
+    border-radius  : 12px;
+    overflow       : hidden;
+}
+
+.career-table thead {
+    position: sticky;
+    top     : 0;
+    z-index : 2;
+}
+
+.career-table th {
+    background    : #FD6A02;
+    color         : #fff;
+    text-align    : left;
+    padding       : 14px 18px;
+    font-weight   : 600;
+    font-size     : 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.career-table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.career-table td {
+    padding       : 14px 18px;
+    color         : #111;
+    border-bottom : 1px solid #e6e6e6;
+    font-size     : 0.95rem;
+    vertical-align: middle;
+    word-break    : break-word;
+}
+
+/* .career-table tr:hover {
+    background-color: #fff2f6;
+    transition      : background 0.3s ease;
+} */
+
+/* ---------- MESSAGE CELL ---------- */
+.message-cell {
+    max-width    : 250px;
+    white-space  : nowrap;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---------- CV LINK ---------- */
+.cv-link {
+    color          : #FD6A02;
+    font-weight    : 600;
+    text-decoration: none;
+    background     : rgba(220, 37, 100, 0.1);
+    padding        : 5px 10px;
+    border-radius  : 6px;
+    transition     : all 0.2s ease;
+}
+
+.cv-link:hover {
+    background: #000;
+    color     : #fff;
+}
+
+/* ---------- EMPTY STATE ---------- */
+.no-data {
+    text-align: center;
+    color     : #999;
+    font-style: italic;
+    margin-top: 30px;
+    font-size : 1rem;
+}
+
+/* ---------- LOADER ---------- */
+.career-loader {
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
+    height         : 60vh;
+    gap            : 12px;
+}
+
+.spinner {
+    width        : 45px;
+    height       : 45px;
+    border       : 4px solid #eee;
+    border-top   : 4px solid #FD6A02;
+    border-radius: 50%;
+    animation    : spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 1024px) {
+    .career-container {
+        margin : 40px 20px;
+        padding: 30px;
+    }
+
+    .career-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .career-container {
+        padding: 20px;
+    }
+
+    .career-title {
+        font-size: 1.5rem;
+    }
+
+    .career-table th,
+    .career-table td {
+        padding  : 10px;
+        font-size: 0.85rem;
+    }
+
+    .message-cell {
+        max-width: 150px;
+    }
+}
+
+/* ---------- MOBILE FRIENDLY (Stacked view) ---------- */
+@media (max-width: 600px) {
+
+    .career-table,
+    .career-table thead,
+    .career-table tbody,
+    .career-table th,
+    .career-table td,
+    .career-table tr {
+        display: block;
+    }
+
+    .career-table thead {
+        display: none;
+    }
+
+    .career-table tr {
+        margin-bottom: 15px;
+        border       : 1px solid #eee;
+        border-radius: 10px;
+        background   : #fff;
+        box-shadow   : 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .career-table td {
+        display        : flex;
+        justify-content: space-between;
+        padding        : 10px 15px;
+        border-bottom  : 1px solid #f1f1f1;
+    }
+
+    .career-table td::before {
+        content    : attr(data-label);
+        font-weight: 600;
+        color      : #555;
+    }
+
+    .career-table td:last-child {
+        border-bottom: none;
+    }
+}

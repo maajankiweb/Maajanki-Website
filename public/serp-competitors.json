@@ -1,0 +1,688 @@
+[
+  {
+    "#debug": {
+      "requestId": "5I23o1prTfqL5Ll",
+      "url": "http://www.google.co.in/search?q=web+development+agency+Bihar&hl=en",
+      "loadedUrl": "http://www.google.co.in/search?q=web+development+agency+Bihar&hl=en",
+      "method": "GET",
+      "retryCount": 0,
+      "errorMessages": [],
+      "statusCode": 200
+    },
+    "#error": false,
+    "searchQuery": {
+      "term": "web development agency Bihar",
+      "url": "http://www.google.co.in/search?q=web+development+agency+Bihar&hl=en",
+      "device": "DESKTOP",
+      "page": 1,
+      "type": "SEARCH",
+      "domain": "google.co.in",
+      "countryCode": "IN",
+      "languageCode": "en",
+      "locationUule": null,
+      "resultsPerPage": 10
+    },
+    "url": "http://www.google.co.in/search?q=web+development+agency+Bihar&hl=en",
+    "hasNextPage": true,
+    "serpProviderCode": "N",
+    "resultsTotal": null,
+    "relatedQueries": [
+      {
+        "title": "Website company in Bihar",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Website+company+in+Bihar&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhBEAE"
+      },
+      {
+        "title": "Best website development company in Patna",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Best+website+development+company+in+Patna&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhhEAE"
+      },
+      {
+        "title": "Best website development company in India",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Best+website+development+company+in+India&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAheEAE"
+      },
+      {
+        "title": "Top 10 digital marketing company in Patna",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Top+10+digital+marketing+company+in+Patna&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhVEAE"
+      },
+      {
+        "title": "App development company in Patna",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=App+development+company+in+Patna&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhNEAE"
+      },
+      {
+        "title": "Software development company in Patna",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Software+development+company+in+Patna&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhMEAE"
+      },
+      {
+        "title": "Digital marketing agency in Bihar",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Digital+marketing+agency+in+Bihar&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhLEAE"
+      },
+      {
+        "title": "Web development company",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Web+development+company&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhCEAE"
+      },
+      {
+        "title": "Website company in Bihar",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Website+company+in+Bihar&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhBEAE"
+      },
+      {
+        "title": "Best website development company in Patna",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Best+website+development+company+in+Patna&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhhEAE"
+      },
+      {
+        "title": "Best website development company in India",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Best+website+development+company+in+India&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAheEAE"
+      },
+      {
+        "title": "Top 10 digital marketing company in Patna",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Top+10+digital+marketing+company+in+Patna&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhVEAE"
+      },
+      {
+        "title": "App development company in Patna",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=App+development+company+in+Patna&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhNEAE"
+      },
+      {
+        "title": "Software development company in Patna",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Software+development+company+in+Patna&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhMEAE"
+      },
+      {
+        "title": "Digital marketing agency in Bihar",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Digital+marketing+agency+in+Bihar&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhLEAE"
+      },
+      {
+        "title": "Web development company",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Web+development+company&sa=X&ved=2ahUKEwjbv8Shie-UAxW7nycCHU5XHzwQ1QJ6BAhCEAE"
+      }
+    ],
+    "paidResults": [],
+    "paidProducts": [],
+    "organicResults": [
+      {
+        "title": "Top Website Design Companies in Patna, Bihar [2026]",
+        "websiteTitle": "HariyaliHub",
+        "url": "https://hariyalihub.com/website-design-companies-in-patna-2026.html#:~:text=CMSH%20Tech,-4.9%20From%20(58&text=CMSH%20Tech%20is%20your%20one,have%20a%20solution%20for%20you.",
+        "displayedUrl": "https://hariyalihub.com › website-design-companies-in-p...",
+        "description": "",
+        "emphasizedKeywords": [],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 1
+      },
+      {
+        "title": "Best Website Design Company in Patna",
+        "websiteTitle": "ssspatna.com",
+        "url": "https://ssspatna.com/website-design-company-in-patna",
+        "displayedUrl": "https://ssspatna.com › website-design-company-in-patna",
+        "description": "Software Services and Solutions stands out as the premier Patna website designer company, delivering customized solutions that exceed client expectations.Read more",
+        "emphasizedKeywords": [
+          "Software Services and Solutions"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 2
+      },
+      {
+        "title": "Website Design, Web & Mobile App Development Company in ...",
+        "websiteTitle": "Webx99.com",
+        "url": "https://www.webx99.com/",
+        "displayedUrl": "https://www.webx99.com",
+        "description": "We are Award winning Website design company in Patna we also offer Cloud Hosting, SEO, Custom Application & Mobile App development Services in Patna Bihar.",
+        "emphasizedKeywords": [
+          "Website design company in Patna"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 3
+      },
+      {
+        "title": "Website Development Company in Patna, Bihar",
+        "websiteTitle": "Vyapar Infotech",
+        "url": "https://www.vyaparinfotech.com/website-development-company-patna-bihar.php",
+        "displayedUrl": "https://www.vyaparinfotech.com › website-development-...",
+        "description": "Vyapar Infotech is a professional PHP web Development Company in Patna, Bihar that aims to deliver high-quality back-end development business solutions, ...Read more",
+        "emphasizedKeywords": [
+          "Vyapar Infotech is a professional PHP web Development Company"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 4
+      },
+      {
+        "title": "Best Website Development & Digital Marketing Agency in Patna",
+        "websiteTitle": "shishtechnology.com",
+        "url": "https://shishtechnology.com/",
+        "displayedUrl": "https://shishtechnology.com",
+        "description": "Shish Technology is a leading website development and digital marketing agency in Patna offering SEO, PPC, SMO, app and web development since 2011.",
+        "emphasizedKeywords": [
+          "Shish Technology is a leading website development and digital marketing agency in Patna"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 5
+      },
+      {
+        "title": "The 10 Best Web Design Agencies in Bihar - 2026 Reviews",
+        "websiteTitle": "Sortlist",
+        "url": "https://www.sortlist.com/web-design/bihar-br-in",
+        "displayedUrl": "https://www.sortlist.com › Web Design › India",
+        "description": "Find & hire the best Web Design Agencies in Bihar. Here are the best ones listed just for you based on verified client reviews.",
+        "emphasizedKeywords": [
+          "best Web Design Agencies in Bihar"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 6
+      },
+      {
+        "title": "best web development company in Patna - Buzz Boosting",
+        "websiteTitle": "buzzboosting.com",
+        "url": "https://buzzboosting.com/web-design-and-development-company-in-patna/",
+        "displayedUrl": "https://buzzboosting.com › web-design-and-developme...",
+        "description": "Looking for a Best Web Development Company in Patna? Buzz Boosting builds high-converting websites that boost leads & sales. Call-9155591693.",
+        "emphasizedKeywords": [
+          "Buzz Boosting"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 7
+      },
+      {
+        "title": "Best Website Development Agency in Bihar",
+        "websiteTitle": "Ficuslot Innovation",
+        "url": "https://ficuslot.com/website-development-agency-in-bihar.php",
+        "displayedUrl": "https://ficuslot.com › website-development-agency-in-b...",
+        "description": "Ficuslot Innovation is a highly versatile website development Agency in Bihar, which build the best quality responsive website at affordable prices.",
+        "emphasizedKeywords": [
+          "Ficuslot Innovation"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 8
+      },
+      {
+        "title": "Popular Internet Website Designers in Patna",
+        "websiteTitle": "Justdial",
+        "url": "https://www.justdial.com/Patna/Internet-Website-Designers/nct-11028380",
+        "displayedUrl": "https://www.justdial.com › ... › 1581+ Listings",
+        "description": "Popular Internet Website Designers in Patna · Givni Pvt. Ltd. · Ghosting · Awesomcart Services India Private Limited · Netmage Tech System Pvt. Ltd. · Snapclick Pvt ...Read more",
+        "emphasizedKeywords": [
+          "Popular Internet Website Designers in Patna"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "averageRating": 4.5,
+        "numberOfReviews": null,
+        "type": "organic",
+        "position": 9
+      },
+      {
+        "title": "Website Developer In Bihar",
+        "websiteTitle": "MyDigital Crown",
+        "url": "https://mydigitalcrown.in/website-development-bihar.html",
+        "displayedUrl": "https://mydigitalcrown.in › website-development-bihar",
+        "description": "MyDigital Crown stands as the premier website developer in Bihar, delivering exceptional web solutions that combine stunning design, robust functionality, and ...Read more",
+        "emphasizedKeywords": [
+          "MyDigital Crown stands as the premier website developer in Bihar"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 10
+      }
+    ],
+    "suggestedResults": [],
+    "peopleAlsoAsk": [],
+    "customData": null,
+    "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/blJXiIBbaoSgHos5g/records/5I23o1prTfqL5Ll-0.html?signature=RGNsYzFlmPLXinm7VyD9"
+  },
+  {
+    "#debug": {
+      "requestId": "wCrNascRvF1vCp0",
+      "url": "http://www.google.co.in/search?q=SEO+services+Bettiah&hl=en",
+      "loadedUrl": "http://www.google.co.in/search?q=SEO+services+Bettiah&hl=en",
+      "method": "GET",
+      "retryCount": 0,
+      "errorMessages": [],
+      "statusCode": 200
+    },
+    "#error": false,
+    "searchQuery": {
+      "term": "SEO services Bettiah",
+      "url": "http://www.google.co.in/search?q=SEO+services+Bettiah&hl=en",
+      "device": "DESKTOP",
+      "page": 1,
+      "type": "SEARCH",
+      "domain": "google.co.in",
+      "countryCode": "IN",
+      "languageCode": "en",
+      "locationUule": null,
+      "resultsPerPage": 10
+    },
+    "url": "http://www.google.co.in/search?q=SEO+services+Bettiah&hl=en",
+    "hasNextPage": true,
+    "serpProviderCode": "N",
+    "resultsTotal": null,
+    "relatedQueries": [],
+    "paidResults": [],
+    "paidProducts": [],
+    "organicResults": [
+      {
+        "title": "SEO Services in Bettiah | Rank #1 on Google",
+        "websiteTitle": "Bihar Innovation",
+        "url": "https://www.biharinnovation.in/seo/seo-services-in-bettiah.html",
+        "displayedUrl": "https://www.biharinnovation.in › seo › seo-services-in-be...",
+        "description": "Best SEO Services in Bettiah. Bihar Innovation offers expert Local SEO, On-Page, Off-Page & Technical SEO to rank your business #1 on Google in Bettiah.",
+        "emphasizedKeywords": [
+          "expert Local SEO, On-Page, Off-Page & Technical SEO"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 1
+      },
+      {
+        "title": "Top Search Engine Optimization Services in Bettiah",
+        "websiteTitle": "Justdial",
+        "url": "https://www.justdial.com/Bettiah/Search-Engine-Optimization-Services/nct-11232028",
+        "displayedUrl": "https://www.justdial.com › ... › 149+ Listings",
+        "description": "149 SEO Services in Bettiah, Bettiah. Elevate your online visibility with Top-notch Search Engine Optimization Companies in Bettiah, Bettiah.",
+        "emphasizedKeywords": [
+          "149 SEO Services in Bettiah"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "averageRating": 4.7,
+        "numberOfReviews": 269,
+        "type": "organic",
+        "position": 2
+      },
+      {
+        "title": "Prashant Pathak - SEO Services in Bettiah",
+        "websiteTitle": "LinkedIn · Prashant Pathak",
+        "url": "https://in.linkedin.com/in/seo-service-in-bettiah",
+        "displayedUrl": "LinkedIn › Prashant Pathak",
+        "description": "Offering all types of digital marketing services like Search Engine Optimization, Social Media Optimization, Google Ads, Facebook Ads, Local SEO etc. Work at ...Read more",
+        "emphasizedKeywords": [
+          "Offering all types of digital marketing services"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "personalInfo": {
+          "location": "Bettiah, Bihar, India",
+          "jobTitle": "Search Engine Optimization Consultant",
+          "companyName": "SEO",
+          "rawText": "Bettiah, Bihar, India · Search Engine Optimization Consultant · SEO"
+        },
+        "followersAmount": "180+ followers",
+        "type": "organic",
+        "position": 3
+      },
+      {
+        "title": "Search Engine Optimization (SEO) Services in Bettiah.",
+        "websiteTitle": "makeMybiz",
+        "url": "https://www.makemybiz.in/seo-services-bettiah",
+        "displayedUrl": "https://www.makemybiz.in › seo-services-bettiah",
+        "description": "Makemybiz is offering SEO Services in Bettiah to Increase your search engine presence, rankings, numbers of visitors and improve the sale of your products.Read more",
+        "emphasizedKeywords": [
+          "SEO Services in Bettiah"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 4
+      },
+      {
+        "title": "Bettiah SEO Services | Vedam Vision",
+        "websiteTitle": "vedamvision.com",
+        "url": "https://vedamvision.com/seo-services-bettiah",
+        "displayedUrl": "https://vedamvision.com › seo-services-bettiah",
+        "description": "Our search engine optimization services in Bettiah include on-page SEO, technical SEO, local SEO, content strategy, link building, and Google Business Profile ...Read more",
+        "emphasizedKeywords": [
+          "on-page SEO, technical SEO, local SEO"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 5
+      },
+      {
+        "title": "Ranked Top 5 Web Designing Companies In Bettiah ...",
+        "websiteTitle": "Webmount Solution Pvt. Ltd.",
+        "url": "http://www.webmountindia.com/bettiah/ranked-top-5-web-designing-companies.html",
+        "displayedUrl": "http://www.webmountindia.com › bettiah › ranked-top-5...",
+        "description": "Webmount is a Ranked Top 5 Web Designing Companies and business promotion and expansion company, located in Bettiah. We work on Ranked Top 5 Web Designing ...",
+        "emphasizedKeywords": [
+          "Webmount is a Ranked Top 5 Web Designing Companies"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "averageRating": 4.9,
+        "numberOfReviews": null,
+        "type": "organic",
+        "position": 6
+      },
+      {
+        "title": "130 Search Engine Optimization (SEO) Work From Home ...",
+        "websiteTitle": "Internshala",
+        "url": "https://internshala.com/internships/work-from-home-search-engine-optimization-seo-internships-in-bettiah/",
+        "displayedUrl": "https://internshala.com › internships › work-from-home-...",
+        "description": "Find 130 work from home search engine optimization (seo) internships in Bettiah. Find the latest search engine optimization (seo) online ...",
+        "date": "2026-05-30T02:40:12.802Z",
+        "emphasizedKeywords": [
+          "130 work from home search engine optimization (seo) internships in Bettiah"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 7
+      },
+      {
+        "title": "Best digital marketing agency in bettiah, website development ...",
+        "websiteTitle": "biharapps.com",
+        "url": "https://biharapps.com/bettiah/",
+        "displayedUrl": "https://biharapps.com › bettiah",
+        "description": "We're Creative SEO & Marketing Expert. We are leading digital marketing company in bettiah providing search engine optimization services, pay per click campaign ...Read more",
+        "emphasizedKeywords": [
+          "search engine optimization services"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 8
+      },
+      {
+        "title": "Digital Marketing Services in Bettiah",
+        "websiteTitle": "Webgany Services",
+        "url": "https://www.webgany.com/bihar/digital-marketing-agency-bettiah.php",
+        "displayedUrl": "https://www.webgany.com › bihar › digital-marketing-ag...",
+        "description": "Webgany Services, a leading digital marketing company in Bettiah, offers SEO, PPC, social media marketing, and more to boost your online presence and drive ...",
+        "emphasizedKeywords": [
+          "offers SEO"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 9
+      }
+    ],
+    "suggestedResults": [],
+    "peopleAlsoAsk": [],
+    "customData": null,
+    "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/blJXiIBbaoSgHos5g/records/wCrNascRvF1vCp0-0.html?signature=hj5XdCYOXcCl9lrvrywc"
+  },
+  {
+    "#debug": {
+      "requestId": "uIODNsy0eT3FrqG",
+      "url": "http://www.google.co.in/search?q=product+listing+services+India&hl=en",
+      "loadedUrl": "http://www.google.co.in/search?q=product+listing+services+India&hl=en",
+      "method": "GET",
+      "retryCount": 0,
+      "errorMessages": [],
+      "statusCode": 200
+    },
+    "#error": false,
+    "searchQuery": {
+      "term": "product listing services India",
+      "url": "http://www.google.co.in/search?q=product+listing+services+India&hl=en",
+      "device": "DESKTOP",
+      "page": 1,
+      "type": "SEARCH",
+      "domain": "google.co.in",
+      "countryCode": "IN",
+      "languageCode": "en",
+      "locationUule": null,
+      "resultsPerPage": 10
+    },
+    "url": "http://www.google.co.in/search?q=product+listing+services+India&hl=en",
+    "hasNextPage": true,
+    "serpProviderCode": "N",
+    "resultsTotal": null,
+    "relatedQueries": [
+      {
+        "title": "Top product listing services india",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Top+product+listing+services+india&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAgpEAE"
+      },
+      {
+        "title": "Amazon product listing services india",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Amazon+product+listing+services+india&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAg4EAE"
+      },
+      {
+        "title": "E Commerce product listing services near me",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=E+Commerce+product+listing+services+near+me&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAg1EAE"
+      },
+      {
+        "title": "Free product listing services india",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Free+product+listing+services+india&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAguEAE"
+      },
+      {
+        "title": "Best product listing services india",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Best+product+listing+services+india&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAgtEAE"
+      },
+      {
+        "title": "Product listing services india reviews",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Product+listing+services+india+reviews&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAgsEAE"
+      },
+      {
+        "title": "Ecommerce product listing services",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Ecommerce+product+listing+services&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAgrEAE"
+      },
+      {
+        "title": "Amazon product listing Services charges",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Amazon+product+listing+Services+charges&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAgqEAE"
+      },
+      {
+        "title": "Top product listing services india",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Top+product+listing+services+india&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAgpEAE"
+      },
+      {
+        "title": "Amazon product listing services india",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Amazon+product+listing+services+india&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAg4EAE"
+      },
+      {
+        "title": "E Commerce product listing services near me",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=E+Commerce+product+listing+services+near+me&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAg1EAE"
+      },
+      {
+        "title": "Free product listing services india",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Free+product+listing+services+india&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAguEAE"
+      },
+      {
+        "title": "Best product listing services india",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Best+product+listing+services+india&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAgtEAE"
+      },
+      {
+        "title": "Product listing services india reviews",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Product+listing+services+india+reviews&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAgsEAE"
+      },
+      {
+        "title": "Ecommerce product listing services",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Ecommerce+product+listing+services&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAgrEAE"
+      },
+      {
+        "title": "Amazon product listing Services charges",
+        "url": "https://www.google.co.in/search?sca_esv=33124d0c9b4b7c6a&gl=IN&hl=en&q=Amazon+product+listing+Services+charges&sa=X&ved=2ahUKEwji8dWhie-UAxWVQPEDHSK0JLoQ1QJ6BAgqEAE"
+      }
+    ],
+    "paidResults": [],
+    "paidProducts": [],
+    "organicResults": [
+      {
+        "title": "E-commerce Product Listing & Optimization Services",
+        "websiteTitle": "Arvian Business Solutions Pvt. Ltd.",
+        "url": "https://arvian.in/ecommerce-product-listing-services.php",
+        "displayedUrl": "https://arvian.in › ecommerce-product-listing-services",
+        "description": "Arvian's offers Amazon, Flipkart, Myntra, & Meesho product listing services with SEO-friendly descriptions, keyword research, image optimization, & more!Read more",
+        "emphasizedKeywords": [
+          "Amazon, Flipkart, Myntra, & Meesho product listing services"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 1
+      },
+      {
+        "title": "Amazon Product Listing Services",
+        "websiteTitle": "Saivion india",
+        "url": "https://www.saivionindia.com/data/amazon-product-listing-services.html",
+        "displayedUrl": "https://www.saivionindia.com › data › amazon-product-li...",
+        "description": "SaivionIndia offers professional Amazon product listing services, leveraging proven SEO strategies to enhance visibility and maximize your Amazon sales.",
+        "emphasizedKeywords": [
+          "professional Amazon product listing services"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "averageRating": 4.8,
+        "numberOfReviews": 567,
+        "type": "organic",
+        "position": 2
+      },
+      {
+        "title": "Top Product Listing Services in Delhi near me",
+        "websiteTitle": "Justdial",
+        "url": "https://www.justdial.com/Delhi/Product-Listing-Services/nct-12298972",
+        "displayedUrl": "https://www.justdial.com › ... › 192+ Listings",
+        "description": "Top Product Listing Services in Delhi. Name, Digicommerce Solutions LLP · Digital Team India · Digibells Esolutions India Private Limited · Ecom Advisors India ...Read more",
+        "emphasizedKeywords": [
+          "Digicommerce Solutions LLP"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "averageRating": 4.4,
+        "numberOfReviews": null,
+        "type": "organic",
+        "position": 3
+      },
+      {
+        "title": "Ecommerce Product Upload and Listing - Amazon, Flipkart ...",
+        "websiteTitle": "digitalprworld.com",
+        "url": "https://digitalprworld.com/services/ecommerce-setup/ecommerce-marketing/ecommerce-product-upload-listing/",
+        "displayedUrl": "https://digitalprworld.com › ecommerce-marketing › ec...",
+        "description": "Ecommerce Product Upload and Listing Services in India. Major listing works done at - Amazon, Flipkart, Nykaa Listing. Call us at 9674975029.",
+        "emphasizedKeywords": [
+          "Ecommerce Product Upload and Listing Services in India"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "averageRating": 4.8,
+        "numberOfReviews": 27,
+        "type": "organic",
+        "position": 4
+      },
+      {
+        "title": "Product Listing Services – Amazon, Flipkart",
+        "websiteTitle": "Legal Window",
+        "url": "https://legalwindow.in/product-listing-services-amazon-flipkart/",
+        "displayedUrl": "https://legalwindow.in › product-listing-services-amazon-...",
+        "description": "Legal Window creates an engaging and SEO-optimized product listing that leads to increased sales. We offer a comprehensive approach to listing the products.Read more",
+        "emphasizedKeywords": [
+          "Legal Window creates an engaging and SEO-optimized product listing"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 5
+      },
+      {
+        "title": "Product Listing Services for E-commerce Platforms",
+        "websiteTitle": "Myperfectpack",
+        "url": "https://www.myperfectpack.com/product-page/product-listing-services-for-e-commerce-platforms?srsltid=AfmBOooDNVWxPN_LVE492iA2XEPVLdpov4f_yZjLuneL9gvllPBY3RFY",
+        "displayedUrl": "https://www.myperfectpack.com › product-page › prod...",
+        "description": "Start selling on India's most popular shopping destinations like Amazon, Flipkart, and Walmart with the expert support of Ekennis Software Service Limited.Read more",
+        "emphasizedKeywords": [
+          "Start selling on India's most popular shopping destinations"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 6
+      },
+      {
+        "title": "Amazon Product Listing Services",
+        "websiteTitle": "SunTec India",
+        "url": "https://www.suntecindia.com/amazon-product-upload-listing-services.html",
+        "displayedUrl": "https://www.suntecindia.com › amazon-product-upload...",
+        "description": "Partner with SunTec India to streamline bulk uploads, listing optimization, and ongoing management. Boost visibility and sales with Amazon listing ...",
+        "emphasizedKeywords": [
+          "Partner with SunTec India"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 7
+      },
+      {
+        "title": "Top 10 Amazon Product Listing Service providers in India",
+        "websiteTitle": "SimpliGo Global Services",
+        "url": "https://simpligo.co.in/amazon-product-listing-service-providers-in-india/",
+        "displayedUrl": "https://simpligo.co.in › amazon-product-listing-service-p...",
+        "description": "1. SimpliGo global service - Amazon Product Listing Service providers in India · 2. eStore Factory - Amazon Product Listing Service providers in India · 3.Read more",
+        "emphasizedKeywords": [
+          "Amazon Product Listing Service providers in India"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 8
+      },
+      {
+        "title": "Product Listing, Cataloging Service in India",
+        "websiteTitle": "IndiaMART",
+        "url": "https://dir.indiamart.com/impcat/product-listing.html",
+        "displayedUrl": "https://dir.indiamart.com › impcat › product-listing",
+        "description": "Product Listing, Cataloging Service Providers in India. Get contact details and address of Product Listing, Cataloging Service firms and companies.",
+        "emphasizedKeywords": [
+          "Product Listing, Cataloging Service Providers in India"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 9
+      },
+      {
+        "title": "eCommerce Product Listing And Optimization Services in Delhi",
+        "websiteTitle": "Amazure Solutions",
+        "url": "https://www.amazuresolutions.com/",
+        "displayedUrl": "https://www.amazuresolutions.com",
+        "description": "We provide you the best ecommerce product listing services that help you gain more sales on online shopping platforms such as Amazon, Flipkart, and 1mg.Read more",
+        "emphasizedKeywords": [
+          "best ecommerce product listing services"
+        ],
+        "siteLinks": [],
+        "productInfo": {},
+        "type": "organic",
+        "position": 10
+      }
+    ],
+    "suggestedResults": [],
+    "peopleAlsoAsk": [],
+    "aiOverview": {
+      "type": "live",
+      "content": "Product listing services in India help e-commerce sellers with cataloging, SEO optimization, and bulk uploads across major platforms. Costs range from ₹25 to ₹35 per product for basic cataloging, and ₹2,000 to ₹10,000+ per monthThese agencies and freelancers typically specialize in onboarding and optimizing listings for India’s top marketplaces:These agencies and freelancers typically specialize in onboarding and optimizing listings for India’s top marketplaces:Amazon India (including Amazon SPN)Flipkart (including Flipkart SPN)MeeshoMyntraAJIOKey Services OfferedCataloguing & Data Entry: Bulk product uploads via CSV templates.SEO & Content: High-intent keyword research, backend search-term optimization, and A+ (Enhanced Brand) content.Image Editing: Product infographics and background adjustments to meet platform quality guidelines.Inventory Management: Regular SKU updates to track stock and prevent cancellations.Leading Service ProvidersSaivion India (New Delhi) - Specializes in Amazon A+ content and bulk product uploads.ROI Hunt - Focused on Amazon SEO and performance-based listing optimization.Digicommerce (Noida) - Provides full-stack listing services for Amazon, Flipkart, and Meesho.Loombiz E-commerce - Offers cataloging and onboarding services across multiple major platforms.Browse reviews and compare agency packages directly on IndiaMART or Justdial.Browse reviews and compare agency packages directly on IndiaMART or Justdial.If you'd like, let me know:If you'd like, let me know:Which e-commerce platforms you want to sell onThe number of products you haveWhether you need product photography or just text/SEO listing servicesI can recommend the most cost-effective provider for your specific needs.I can recommend the most cost-effective provider for your specific needs.",
+      "sources": [
+        {
+          "url": "https://arvian.in/ecommerce-product-listing-services.php",
+          "title": "E-commerce Product Listing & Optimization Services",
+          "description": "Flipkart is India's largest e-commerce platform. We specialise in Flipkart product listing services. Under this service, we help y..."
+        },
+        {
+          "url": "https://www.saivionindia.com/data/amazon-product-listing-services.html",
+          "title": "Amazon Product Listing Services - Saivion india",
+          "description": "13 Apr 2026 — We optimize Amazon listings using A10 insights to boost rankings, visibility, and conversions. * Advanced keyword research with to..."
+        },
+        {
+          "url": "https://www.justdial.com/Delhi/Product-Listing-Services/nct-12298972",
+          "title": "Top Product Listing Services in Delhi near me - Justdial",
+          "description": "Get the List of Top Product Listing Services. Deals. Popular Product Listing Services in Delhi. 11 Yrs in Business. Digicommerce S..."
+        }
+      ]
+    },
+    "customData": null,
+    "htmlSnapshotUrl": "https://api.apify.com/v2/key-value-stores/blJXiIBbaoSgHos5g/records/uIODNsy0eT3FrqG-0.html?signature=1l9yq9DXx3PzUjwLnsWQI"
+  }
+]

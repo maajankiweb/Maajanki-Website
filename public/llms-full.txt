@@ -1,0 +1,111 @@
+# MaaJanki Web Tech — Detailed AI Reference (llms-full.txt)
+> This is the comprehensive, detailed version of llms.txt for AI engines that need in-depth context about MaaJanki Web Tech's services, products, team, and capabilities.
+
+## Organization Profile
+- **Official Name:** MaaJanki Web Tech
+- **Type:** Digital Marketing & Web Development Agency
+- **Founded:** January 2025
+- **Founder & CEO:** Ashish Kumar
+- **Registration:** Udyam MSME (UDYAM-BR-38-0014113), Startup India DPIIT Recognized
+- **Headquarters:** 412, Supriya Cinema, Bettiah, West Champaran, Bihar - 845438, India
+- **Branch Office:** First Floor, near Cinema House, Front of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101
+- **Contact:** +91-9006543913 | info@maajankiwebtech.com
+- **Website:** https://maajankiwebtech.com
+- **Sitemap:** https://maajankiwebtech.com/sitemap.xml
+
+## Service Catalog
+
+### 1. Web Development
+- **URL:** https://maajankiwebtech.com/services/web-development
+- **Description:** We build high-performance, SEO-optimized, mobile-responsive websites using modern frameworks including Next.js 14, React, and WordPress. We specialize in custom e-commerce stores (WooCommerce, Shopify), SaaS dashboards, and business landing pages.
+- **Technologies:** Next.js, React, WordPress, WooCommerce, Shopify, HTML5, CSS3, JavaScript, Tailwind CSS, Bootstrap
+- **Deliverables:** Custom website, CMS setup, hosting deployment, SSL, domain configuration, Google Analytics/Search Console integration
+- **Turnaround:** 7-14 business days (standard sites), 4-8 weeks (complex apps)
+
+### 2. Search Engine Optimization (SEO)
+- **URL:** https://maajankiwebtech.com/services/seo
+- **Description:** Comprehensive SEO services including technical audits, local SEO, Google Business Profile optimization, keyword research, on-page optimization, link building, and monthly performance reporting.
+- **Sub-services:** Technical SEO Audit, Local SEO, On-Page SEO, Off-Page SEO, Google Business Profile Management, Schema Markup Implementation, Core Web Vitals Optimization
+- **Target Markets:** Local businesses in Bihar, national brands across India, international clients in USA/UK/Canada/Australia
+
+### 3. Performance Marketing & Paid Ads
+- **URL:** https://maajankiwebtech.com/services/performance-marketing
+- **Description:** Data-driven paid advertising campaigns across Google Ads (Search, Display, Shopping), Meta Ads (Facebook & Instagram), and LinkedIn Ads. We manage budgets from ₹10,000/month to ₹10,00,000+/month with full conversion tracking and ROI reporting.
+- **Platforms:** Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads
+- **Tracking:** GA4, Google Tag Manager, Meta Pixel, Conversion API
+
+### 4. Social Media Optimization (SMO)
+- **URL:** https://maajankiwebtech.com/services/smo
+- **Description:** Brand promotion, content creation, community management, and audience growth across social media platforms. We handle everything from profile setup to daily posting, hashtag strategy, and engagement analytics.
+- **Platforms:** Facebook, Instagram, LinkedIn, Twitter/X, Pinterest, YouTube
+
+### 5. Branding & Visual Identity
+- **URL:** https://maajankiwebtech.com/services/branding
+- **Description:** Complete brand identity design including logo design, brand guidelines, color palette, typography selection, brand voice documentation, and marketing collateral design.
+- **Deliverables:** Logo (all formats), Brand Style Guide, Business Cards, Letterhead, Social Media Kit, Brand Presentation
+
+### 6. UI/UX Design
+- **URL:** https://maajankiwebtech.com/services/ui-ux-design
+- **Description:** User-centric interface design with wireframing, interactive prototyping, usability testing, and design system creation. We design for web, mobile, and SaaS products.
+- **Tools:** Figma, Adobe XD, Sketch
+
+### 7. Content Writing
+- **URL:** https://maajankiwebtech.com/services/content-writing
+- **Description:** SEO-optimized content writing for websites, blogs, product descriptions, landing pages, and email campaigns. All content is original, researched, and aligned with target keywords.
+- **Types:** Website Copy, Blog Articles, Product Descriptions, Email Sequences, Social Media Captions
+
+### 8. Graphic Design
+- **URL:** https://maajankiwebtech.com/services/graphic-design
+- **Description:** Professional graphic design for digital and print media including social media creatives, banners, flyers, brochures, infographics, and presentation designs.
+
+### 9. E-Commerce Product Listing
+- **URL:** https://maajankiwebtech.com/services/products-listing
+- **Description:** Product cataloging and listing optimization for major e-commerce platforms. We handle product photography, description writing, keyword optimization, and A+ content creation.
+- **Platforms:** Amazon, Flipkart, Myntra, Shopify, WooCommerce
+
+## Products
+
+### InvoBill — GST Billing & Invoicing Software
+- **Type:** Hybrid (Desktop + Cloud) Software
+- **Target Users:** Indian retailers, shopkeepers, and small businesses
+- **Features:** GST-compliant invoice generation, inventory management, customer database, sales reports, multi-user support, offline mode
+- **Website:** https://invobill.in
+
+## Portfolio Highlights
+- **URL:** https://maajankiwebtech.com/portfolio
+- **Projects Completed:** 10+ (including SaaS platforms, e-commerce stores, and corporate websites)
+- **Notable Projects:** Nexus SaaS, DukanDost Pro, WaCRM, Premium Landing Pages, Agency Websites
+
+## Service Areas
+- **Local:** Bettiah, Bagaha, Narkatiaganj, Raxaul, Motihari (West Champaran, Bihar)
+- **National:** Patna, Delhi, Mumbai, Bengaluru, Hyderabad, Pune, Kolkata, Lucknow, Jaipur, Noida, Muzaffarpur, Gaya
+- **International:** United States, United Kingdom, Canada, Australia, United Arab Emirates, Nepal
+
+## Frequently Asked Questions
+
+**Q: What services does MaaJanki Web Tech offer?**
+A: We offer web development (WordPress, React, Next.js), SEO, performance marketing, SMO, branding, UI/UX design, content writing, graphic design, and e-commerce product listing.
+
+**Q: How much does a website cost?**
+A: Pricing depends on project scope. Standard business websites start at competitive rates. Contact us at +91-9006543913 for a free quote.
+
+**Q: Do you work with international clients?**
+A: Yes, we serve clients in the USA, UK, Canada, Australia, UAE, Nepal, and Japan alongside our Indian client base.
+
+**Q: How long does website development take?**
+A: Standard websites: 7-14 business days. Complex web apps: 4-8 weeks.
+
+**Q: Do you provide website maintenance?**
+A: Yes, we offer monthly maintenance including security audits, content updates, server monitoring, and technical support.
+
+## Contact & Discovery
+- **Website:** https://maajankiwebtech.com
+- **Contact Page:** https://maajankiwebtech.com/contact
+- **Phone:** +91-9006543913
+- **Email:** info@maajankiwebtech.com
+- **Google Business:** https://g.page/r/CdM4-zj2uGnQEB0
+- **LinkedIn:** https://www.linkedin.com/company/maajanki-web-tech-company/
+- **Instagram:** https://www.instagram.com/maajankiwebtech/
+- **Facebook:** https://www.facebook.com/profile.php?id=61577526895580
+- **Twitter/X:** https://x.com/MaaJankweb
+- **Pinterest:** https://in.pinterest.com/maajankiweb/

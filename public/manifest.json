@@ -1,0 +1,16 @@
+{
+  "short_name": "Maajanki Web Tech",
+  "name": "Maajanki Web Tech - Web & Digital Agency",
+  "description": "Professional website development and digital marketing agency in Bettiah, Bihar.",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#6A1B9A",
+  "background_color": "#ffffff"
+}

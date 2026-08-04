@@ -1,0 +1,172 @@
+.smo-section {
+  padding         : 60px 20px;
+  background-color: #FD6A02;
+  color           : #fff;
+  font-family     : Arial, sans-serif;
+  text-align      : center;
+}
+
+.smo-title {
+  font-size    : 28px;
+  color        : #fff;
+  /* Pink-red heading */
+  margin-bottom: 15px;
+}
+
+.smo-subtitle {
+  font-size  : 16px;
+  max-width  : 750px;
+  margin     : 0 auto 40px auto;
+  line-height: 1.6;
+  color      : #fff;
+  text-align : center;
+}
+
+/* Grid layout: 3 cards per row on desktop */
+.smo-grid {
+  display              : grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap                  : 25px;
+  justify-items        : center;
+}
+
+/* Individual card */
+.smo-box {
+  background-color: #111;
+  padding         : 25px;
+  border-radius   : 12px;
+  text-align      : center;
+  transition      : transform 0.3s, box-shadow 0.3s;
+}
+
+.smo-box:hover {
+  transform : translateY(-8px);
+  box-shadow: 0 8px 20px rgb(255, 255, 255);
+}
+
+.smo-icon {
+  font-size    : 36px;
+  color        : #FD6A02;
+  margin-bottom: 15px;
+}
+
+.smo-heading {
+  font-size    : 20px;
+  margin-bottom: 10px;
+  color        : #FD6A02;
+}
+
+.smo-box p {
+  font-size  : 14px;
+  line-height: 1.6;
+  color      : #fff;
+  text-align : center;
+}
+
+/* Responsive: 2 cards per row for tablets */
+@media (max-width: 1024px) {
+  .smo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: 1 card per row for mobile */
+@media (max-width: 768px) {
+  .smo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tools Section  */
+.smo-tools-section {
+  padding         : 60px 20px;
+  background-color: #000;
+  color           : #fff;
+  font-family     : Arial, sans-serif;
+  text-align      : center;
+}
+
+.tools-heading-title {
+  text-align   : center;
+  font-size    : 28px;
+  color        : #FD6A02;
+  margin-bottom: 20px;
+  text-align   : center;
+}
+
+/* Grid layout */
+.smo-section-grid {
+  display              : grid;
+  grid-template-columns: repeat(5, 1fr);
+  /* 5 cards per row on desktop */
+  gap                  : 20px;
+  justify-items        : center;
+}
+
+/* Horizontal card */
+.smo-card-box {
+  display         : flex;
+  align-items     : center;
+  background-color: #111;
+  padding         : 15px 20px;
+  border-radius   : 12px;
+  width           : 100%;
+  max-width       : 280px;
+  transition      : transform 0.3s, box-shadow 0.3s;
+  cursor          : pointer;
+}
+
+.smo-card-box:hover {
+  transform : translateY(-6px);
+  box-shadow: 0 6px 20px rgba(220, 37, 100, 0.4);
+}
+
+/* Icon/image left */
+.smo-card-icon {
+  width       : 50px;
+  height      : 50px;
+  object-fit  : contain;
+  margin-right: 15px;
+}
+
+/* Text right */
+.smo-card-text {
+  font-size  : 16px;
+  color      : #fff;
+  font-weight: 500;
+}
+
+/* Responsive: 3 cards per row for tablets */
+@media (max-width: 1024px) {
+  .smo-section-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive: 2 cards per row for small tablets */
+@media (max-width: 768px) {
+  .smo-section-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .smo-card-icon {
+    width       : 40px;
+    height      : 40px;
+    margin-right: 10px;
+  }
+
+  .smo-card-text {
+    font-size: 14px;
+  }
+}
+
+/* Responsive: 1 card per row for mobile */
+@media (max-width: 480px) {
+  .smo-section-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .smo-card-box {
+    max-width: 250px;
+  }
+}

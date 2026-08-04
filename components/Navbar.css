@@ -1,0 +1,318 @@
+/* ---------- Sticky Navbar Wrapper ---------- */
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+/* ---------- Top Bar ---------- */
+.top-bar {
+  background-color: #fd6a02;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 40px;
+  font-size: 14px;
+  flex-wrap: wrap;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  color: #ffffff !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #e1bee7 !important;
+}
+
+.contact-info i {
+  margin-right: 8px;
+}
+
+.divider {
+  margin: 0 10px;
+  color: #ffffff !important;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #042544;
+}
+
+/* ---------- Main Navigation ---------- */
+.main-nav {
+  background-color: #042544;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo img {
+  width: 180px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ---------- Right Menu ---------- */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+  padding-bottom: 4px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fd6a02;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fd6a02;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Mega Dropdown ---------- */
+.dropdown-menu.mega-dropdown {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  width: 900px;
+  background-color: #042544;
+  border-top: 3px solid #fd6a02;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.nav-item.dropdown:hover .mega-dropdown {
+  display: block;
+}
+
+.mega-dropdown .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mega-dropdown .col-md-4 h6 {
+  color: #fd6a02;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.mega-dropdown .dropdown-item {
+  color: #fff;
+  padding: 6px 0;
+  transition: all 0.3s ease;
+}
+
+.mega-dropdown .dropdown-item:hover {
+  color: #fd6a02;
+  background: transparent;
+  transform: translateX(4px);
+}
+
+/* ---------- Mobile Menu Toggle ---------- */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+/* ==============================================
+   RESPONSIVE BREAKPOINTS — NAVBAR
+   ============================================== */
+
+/* Large tablets (992–1199px): shrink mega dropdown */
+@media (max-width: 1199px) {
+  .main-nav {
+    padding: 10px 30px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .dropdown-menu.mega-dropdown {
+    width: 700px;
+    padding: 20px 30px;
+  }
+}
+
+/* Tablets portrait (768–991px): show hamburger, hide nav links */
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-right .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: #042544;
+    padding: 10px 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 998;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-right .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+    padding: 8px 24px;
+  }
+
+  .dropdown-menu.mega-dropdown {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+  }
+
+  .mega-dropdown .row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mega-dropdown .col-md-4 h6 {
+    font-size: 15px;
+  }
+
+  .mega-dropdown .dropdown-item {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Large phones (481–767px): collapse top-bar contact text */
+@media (max-width: 767px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 8px 16px;
+  }
+
+  .contact-info {
+    justify-content: center;
+    margin-bottom: 6px;
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .contact-info .divider {
+    display: none;
+  }
+
+  .social-icons {
+    justify-content: center;
+    display: flex;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .main-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+}
+
+/* Small phones (≤480px): minimal top-bar */
+@media (max-width: 480px) {
+  .top-bar {
+    padding: 6px 12px;
+  }
+
+  .contact-info {
+    font-size: 12px;
+    gap: 3px;
+  }
+
+  .social-icons a {
+    font-size: 14px;
+    margin-left: 8px;
+  }
+
+  .main-nav {
+    padding: 8px 14px;
+  }
+
+  .logo img {
+    width: 110px;
+    height: 22px;
+  }
+
+  .menu-toggle {
+    font-size: 22px;
+  }
+}
