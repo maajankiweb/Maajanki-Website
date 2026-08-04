@@ -2,8 +2,51 @@
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 31536000,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      'framer-motion',
+      'recharts',
+      'aos',
+      '@clerk/nextjs',
+      'react-icons'
+    ],
+  },
   async headers() {
     return [
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/assets/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
       {
         source: '/admin/:path*',
         headers: [
@@ -67,6 +110,24 @@ const nextConfig = {
           },
         ],
       },
+    ];
+  },
+  async redirects() {
+    return [
+      { source: '/all-leads', destination: '/admin/all-leads', permanent: false },
+      { source: '/new-leads', destination: '/admin/new-leads', permanent: false },
+      { source: '/contacted-leads', destination: '/admin/contacted-leads', permanent: false },
+      { source: '/qualified-leads', destination: '/admin/qualified-leads', permanent: false },
+      { source: '/closed-leads', destination: '/admin/closed-leads', permanent: false },
+      { source: '/spam-leads', destination: '/admin/spam-leads', permanent: false },
+      { source: '/ai-insights', destination: '/admin/ai-insights', permanent: false },
+      { source: '/global-map-analytics', destination: '/admin/global-map-analytics', permanent: false },
+      { source: '/customers-crm', destination: '/admin/customers-crm', permanent: false },
+      { source: '/tasks-kanban', destination: '/admin/tasks-kanban', permanent: false },
+      { source: '/calendar-followups', destination: '/admin/calendar-followups', permanent: false },
+      { source: '/reports-exports', destination: '/admin/reports-exports', permanent: false },
+      { source: '/team-performance', destination: '/admin/team-performance', permanent: false },
+      { source: '/settings-security', destination: '/admin/settings-security', permanent: false },
     ];
   },
 };

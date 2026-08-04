@@ -25,11 +25,13 @@ export default function LeadsTable({
   loading = false,
   onUpdateStatus,
   onDeleteLead,
-  onExportCSV
+  onExportCSV,
+  initialStatusFilter = 'all',
+  initialSourceFilter = 'all',
 }) {
   const [searchTerm, setSearchTerm] = useState('');
-  const [statusFilter, setStatusFilter] = useState('all');
-  const [sourceFilter, setSourceFilter] = useState('all');
+  const [statusFilter, setStatusFilter] = useState(initialStatusFilter);
+  const [sourceFilter, setSourceFilter] = useState(initialSourceFilter);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
 

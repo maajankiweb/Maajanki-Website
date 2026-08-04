@@ -2,6 +2,8 @@ import { auth, currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 
+import AdminShell from '@/components/admin/AdminShell';
+
 // Allowed Admin Email Addresses or Domains (e.g. maajankiwebtech@gmail.com, info@maajankiwebtech.com, @maajankiwebtech.com)
 const ALLOWED_ADMIN_PATTERNS = (process.env.ALLOWED_ADMIN_EMAILS || '')
   .split(',')
@@ -63,5 +65,5 @@ export default async function AdminLayout({ children }) {
     );
   }
 
-  return <>{children}</>;
+  return <AdminShell>{children}</AdminShell>;
 }
