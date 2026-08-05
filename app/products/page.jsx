@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterSection from '@/components/FooterWithPopup';
+import '../styles/Products.css';
 
 export const metadata = {
   title: "SaaS Products & Digital Assets | MaaJanki Web Tech",
@@ -87,131 +88,65 @@ export default function ProductsPage() {
   ];
 
   return (
-    <div style={{ background: "#020617", minHeight: "100vh", color: "#f8fafc" }}>
+    <div className="products-page">
       {/* Hero Section */}
-      <section style={{ 
-        background: "radial-gradient(circle at 50% 0%, rgba(253, 106, 2, 0.15) 0%, rgba(4, 37, 68, 0.8) 50%, #020617 100%)", 
-        padding: "100px 20px 80px", 
-        borderBottom: "1px solid #1e293b" 
-      }}>
-        <div className="container text-center" style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <div style={{
-            display: "inline-flex",
-            alignItems: "center",
-            gap: "8px",
-            background: "rgba(253, 106, 2, 0.1)",
-            border: "1px solid rgba(253, 106, 2, 0.3)",
-            padding: "8px 20px",
-            borderRadius: "30px",
-            color: "#FD6A02",
-            fontWeight: "600",
-            fontSize: "14px",
-            marginBottom: "24px"
-          }}>
-            <i className="fas fa-rocket"></i> Proprietary SaaS & Software Suite
+      <section className="products-hero">
+        <div className="products-hero-inner">
+          <div className="products-label-badge">
+            <i className="fas fa-rocket"></i> Proprietary SaaS &amp; Software Suite
           </div>
-          <h1 style={{ 
-            fontSize: "clamp(36px, 5vw, 56px)", 
-            fontWeight: "800", 
-            letterSpacing: "-0.02em", 
-            lineHeight: "1.15", 
-            marginBottom: "20px",
-            color: "#ffffff"
-          }}>
-            Software Built to Scale Your Business
-          </h1>
-          <p style={{ 
-            fontSize: "clamp(16px, 2vw, 19px)", 
-            color: "#94a3b8", 
-            lineHeight: "1.6", 
-            maxWidth: "750px", 
-            margin: "0 auto 36px" 
-          }}>
+          <h1>Software Built to Scale Your Business</h1>
+          <p className="products-hero-desc">
             From automated GST billing and WhatsApp CRMs to AI reputation management—explore production-ready platforms engineered by MaaJanki Web Tech.
           </p>
         </div>
       </section>
 
       {/* Grid Showcase */}
-      <section style={{ padding: "80px 20px" }}>
-        <div className="container" style={{ maxWidth: "1240px", margin: "0 auto" }}>
+      <section className="products-grid-section">
+        <div className="products-grid-inner">
           <div className="row g-4">
             {productsList.map((product, idx) => (
               <div key={idx} className="col-lg-6">
-                <div style={{
-                  background: "rgba(15, 23, 42, 0.75)",
-                  backdropFilter: "blur(16px)",
-                  border: "1px solid #1e293b",
-                  borderRadius: "20px",
-                  padding: "32px",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  boxShadow: "0 20px 40px -15px rgba(0, 0, 0, 0.5)",
-                }}>
+                <div className="product-card">
                   <div>
                     {/* Header Badges */}
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
-                      <span style={{
-                        background: "rgba(30, 41, 59, 0.8)",
-                        border: "1px solid #334155",
-                        color: "#cbd5e1",
-                        fontSize: "13px",
-                        fontWeight: "600",
-                        padding: "4px 14px",
-                        borderRadius: "12px"
-                      }}>
-                        {product.tag}
-                      </span>
-                      <span style={{
-                        background: `${product.badgeColor}20`,
-                        border: `1px solid ${product.badgeColor}50`,
-                        color: product.badgeColor,
-                        fontSize: "12px",
-                        fontWeight: "700",
-                        padding: "4px 12px",
-                        borderRadius: "20px"
-                      }}>
+                    <div className="product-card-header">
+                      <span className="product-tag-badge">{product.tag}</span>
+                      <span
+                        className="product-status-badge"
+                        style={{
+                          background: `${product.badgeColor}20`,
+                          border: `1px solid ${product.badgeColor}50`,
+                          color: product.badgeColor,
+                        }}
+                      >
                         {product.badgeText}
                       </span>
                     </div>
 
                     {/* Preview Image */}
-                    <div style={{ 
-                      borderRadius: "14px", 
-                      overflow: "hidden", 
-                      marginBottom: "24px", 
-                      border: "1px solid #1e293b",
-                      position: "relative",
-                      background: "#020617"
-                    }}>
+                    <div className="product-image-wrap">
                       <Image
                         src={product.image}
                         alt={product.title}
                         width={600}
                         height={350}
-                        style={{ width: "100%", height: "auto", display: "block" }}
+                        style={{ width: '100%', height: 'auto', display: 'block' }}
                       />
                     </div>
 
                     {/* Title & Description */}
-                    <h2 style={{ fontSize: "28px", fontWeight: "700", color: "#ffffff", marginBottom: "12px" }}>
-                      {product.title}
-                    </h2>
-                    <p style={{ color: "#94a3b8", fontSize: "15px", lineHeight: "1.6", marginBottom: "24px" }}>
-                      {product.description}
-                    </p>
+                    <h2>{product.title}</h2>
+                    <p className="product-card-desc">{product.description}</p>
 
                     {/* Key Features List */}
-                    <div style={{ marginBottom: "30px" }}>
-                      <h3 style={{ fontSize: "13px", textTransform: "uppercase", letterSpacing: "0.05em", color: "#FD6A02", fontWeight: "700", marginBottom: "12px" }}>
-                        Key Capabilities:
-                      </h3>
-                      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                    <div className="product-features">
+                      <p className="product-features-label">Key Capabilities:</p>
+                      <ul>
                         {product.features.map((feat, fIdx) => (
-                          <li key={fIdx} style={{ display: "flex", alignItems: "flex-start", gap: "10px", color: "#cbd5e1", fontSize: "14px", marginBottom: "8px", lineHeight: "1.4" }}>
-                            <i className="fas fa-check-circle" style={{ color: "#FD6A02", marginTop: "3px", flexShrink: 0 }}></i>
+                          <li key={fIdx}>
+                            <i className="fas fa-check-circle" aria-hidden="true"></i>
                             <span>{feat}</span>
                           </li>
                         ))}
@@ -220,50 +155,26 @@ export default function ProductsPage() {
                   </div>
 
                   {/* Actions */}
-                  <div style={{ paddingTop: "20px", borderTop: "1px solid #1e293b" }}>
+                  <div className="product-card-actions">
                     {product.external ? (
-                      <a 
-                        href={product.link} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        style={{ 
-                          background: "#FD6A02", 
-                          color: "#ffffff", 
-                          padding: "14px 28px", 
-                          borderRadius: "14px", 
-                          fontWeight: "600", 
-                          display: "inline-flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          gap: "8px",
-                          width: "100%",
-                          textDecoration: "none",
-                          fontSize: "15px"
-                        }}
+                      <a
+                        href={product.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="product-cta-btn"
+                        aria-label={`Launch ${product.title} (opens in new tab)`}
                       >
                         <span>{product.buttonText}</span>
-                        <i className="fas fa-external-link-alt"></i>
+                        <i className="fas fa-external-link-alt" aria-hidden="true"></i>
                       </a>
                     ) : (
-                      <Link 
-                        href={product.link} 
-                        style={{ 
-                          background: "#FD6A02", 
-                          color: "#ffffff", 
-                          padding: "14px 28px", 
-                          borderRadius: "14px", 
-                          fontWeight: "600", 
-                          display: "inline-flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          gap: "8px",
-                          width: "100%",
-                          textDecoration: "none",
-                          fontSize: "15px"
-                        }}
+                      <Link
+                        href={product.link}
+                        className="product-cta-btn"
+                        aria-label={`Learn more about ${product.title}`}
                       >
                         <span>{product.buttonText}</span>
-                        <i className="fas fa-arrow-right"></i>
+                        <i className="fas fa-arrow-right" aria-hidden="true"></i>
                       </Link>
                     )}
                   </div>

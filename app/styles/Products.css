@@ -1,6 +1,246 @@
-/* Products Styles */
-.products-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+/* ==========================================================
+   PRODUCTS PAGE — MaaJanki Web Tech
+   All tokens aligned to global design system
+   ========================================================== */
+
+/* Page wrapper */
+.products-page {
+  background : #020617;
+  min-height : 100vh;
+  color      : #f8fafc;
+}
+
+/* ── Hero Section ── */
+.products-hero {
+  background  : radial-gradient(circle at 50% 0%, rgba(253, 106, 2, 0.15) 0%, rgba(4, 37, 68, 0.8) 50%, #020617 100%);
+  padding     : 80px 20px 64px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.products-hero-inner {
+  max-width : 860px;
+  margin    : 0 auto;
+  text-align: center;
+}
+
+/* Section label badge — reusable pattern */
+.products-label-badge {
+  display      : inline-flex;
+  align-items  : center;
+  gap          : 8px;
+  background   : rgba(253, 106, 2, 0.1);
+  border       : 1px solid rgba(253, 106, 2, 0.3);
+  padding      : 7px 20px;
+  border-radius: 30px;
+  color        : #FD6A02;
+  font-weight  : 600;
+  font-size    : 0.875rem;
+  margin-bottom: 24px;
+}
+
+.products-hero h1 {
+  font-size     : clamp(2rem, 5vw, 3.5rem);
+  font-weight   : 800;
+  letter-spacing: -0.02em;
+  line-height   : 1.15;
+  margin-bottom : 20px;
+  color         : #ffffff;
+  overflow-wrap : break-word;
+}
+
+.products-hero-desc {
+  font-size  : clamp(1rem, 2vw, 1.2rem);
+  color      : #94a3b8;
+  line-height: 1.6;
+  max-width  : 750px;
+  margin     : 0 auto;
+}
+
+/* ── Products Grid Section ── */
+.products-grid-section {
+  padding: 64px 20px;
+}
+
+.products-grid-inner {
+  max-width: 1240px;
+  margin   : 0 auto;
+}
+
+/* ── Product Card ── */
+.product-card {
+  background    : rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border        : 1px solid #1e293b;
+  border-radius : 20px;
+  padding       : 32px;
+  height        : 100%;
+  display       : flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow    : 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  transition    : border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow-wrap : break-word;
+  word-break    : break-word;
+}
+
+.product-card:hover {
+  border-color: rgba(253, 106, 2, 0.35);
+  box-shadow  : 0 24px 48px -12px rgba(0, 0, 0, 0.6), 0 0 20px rgba(253, 106, 2, 0.08);
+}
+
+/* Card header badges */
+.product-card-header {
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
+  margin-bottom  : 20px;
+  flex-wrap      : wrap;
+  gap            : 8px;
+}
+
+.product-tag-badge {
+  background   : rgba(30, 41, 59, 0.8);
+  border       : 1px solid #334155;
+  color        : #cbd5e1;
+  font-size    : 0.8rem;
+  font-weight  : 600;
+  padding      : 4px 14px;
+  border-radius: 12px;
+  white-space  : nowrap;
+}
+
+.product-status-badge {
+  font-size    : 0.75rem;
+  font-weight  : 700;
+  padding      : 4px 12px;
+  border-radius: 20px;
+  white-space  : nowrap;
+}
+
+/* Image container */
+.product-image-wrap {
+  border-radius: 14px;
+  overflow     : hidden;
+  margin-bottom: 24px;
+  border       : 1px solid #1e293b;
+  background   : #020617;
+  aspect-ratio : 600 / 350;
+}
+
+.product-image-wrap img {
+  width  : 100%;
+  height : auto;
+  display: block;
+}
+
+/* Title & description */
+.product-card h2 {
+  font-size    : clamp(1.25rem, 2vw, 1.75rem);
+  font-weight  : 700;
+  color        : #ffffff;
+  margin-bottom: 12px;
+  overflow-wrap: break-word;
+}
+
+.product-card-desc {
+  color        : #94a3b8;
+  font-size    : 0.94rem;
+  line-height  : 1.6;
+  margin-bottom: 24px;
+}
+
+/* Features list */
+.product-features {
+  margin-bottom: 30px;
+}
+
+.product-features-label {
+  font-size     : 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color         : #FD6A02;
+  font-weight   : 700;
+  margin-bottom : 12px;
+}
+
+.product-features ul {
+  list-style: none;
+  padding   : 0;
+  margin    : 0;
+}
+
+.product-features li {
+  display    : flex;
+  align-items: flex-start;
+  gap        : 10px;
+  color      : #cbd5e1;
+  font-size  : 0.875rem;
+  margin-bottom: 8px;
+  line-height  : 1.4;
+  overflow-wrap: break-word;
+}
+
+.product-features li i {
+  color     : #FD6A02;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* CTA action area */
+.product-card-actions {
+  padding-top: 20px;
+  border-top : 1px solid #1e293b;
+}
+
+.product-cta-btn {
+  background     : #FD6A02;
+  color          : #ffffff;
+  padding        : 13px 28px;
+  border-radius  : 14px;
+  font-weight    : 600;
+  display        : inline-flex;
+  align-items    : center;
+  justify-content: center;
+  gap            : 8px;
+  width          : 100%;
+  text-decoration: none;
+  font-size      : 0.94rem;
+  transition     : background 0.3s ease, transform 0.2s ease;
+  border         : none;
+  cursor         : pointer;
+}
+
+.product-cta-btn:hover {
+  background: #e05600;
+  transform : translateY(-2px);
+  color     : #ffffff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .products-hero {
+    padding: 64px 20px 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .products-hero {
+    padding: 48px 16px 40px;
+  }
+
+  .product-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-hero {
+    padding: 40px 16px 32px;
+  }
+
+  .product-card {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
 }

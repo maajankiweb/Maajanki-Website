@@ -1,7 +1,7 @@
 /* ---------------- Contact Promo Section ---------------- */
 .contact-promo-section {
   background : #000;
-  padding    : 100px 0;
+  padding    : 80px 0;
   font-family: "Poppins", sans-serif;
 }
 
@@ -21,18 +21,20 @@
   background     : #fff;
   border-radius  : 20px;
   text-align     : center;
-  height         : 180px;
+  min-height     : 160px;
+  height         : auto;
   display        : flex;
   flex-direction : column;
   justify-content: center;
   align-items    : center;
+  padding        : 20px 16px;
   transition     : all 0.3s ease;
   box-shadow     : 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .contact-promo-card:hover {
   transform : translateY(-5px);
-  box-shadow: 0 8px 25px rgba(220, 37, 100, 0.4);
+  box-shadow: 0 8px 25px rgba(253, 106, 2, 0.3);
 }
 
 .contact-promo-icon {
@@ -44,7 +46,7 @@
 
 .contact-promo-card:hover .contact-promo-icon {
   transform: scale(1.2);
-  color    : #b81c52;
+  color    : #e05600;
 }
 
 .contact-promo-title {
@@ -90,7 +92,8 @@
   }
 
   .contact-promo-card {
-    height: 160px;
+    min-height: 140px;
+    height: auto;
   }
 }
 
@@ -98,6 +101,15 @@
   .contact-promo-grid {
     grid-template-columns: 1fr;
   }
+
+  .contact-promo-section {
+    padding: 48px 0;
+  }
+
+  .contact-promo-card {
+    min-height: 120px;
+  }
+}
 
   .contact-promo-card {
     height       : 150px;
@@ -108,7 +120,7 @@
 /* ---------------- Contact Us Section ---------------- */
 .contact-us-section {
   background-color: #FD6A02;
-  padding         : 100px 0;
+  padding         : 80px 0;
   font-family     : "Poppins", sans-serif;
 }
 
@@ -152,7 +164,7 @@
 
 .form-control:focus {
   border-color: #FD6A02;
-  box-shadow  : 0 0 0 0.2rem rgba(220, 37, 100, 0.25);
+  box-shadow  : 0 0 0 0.2rem rgba(253, 106, 2, 0.25);
   outline     : none;
 }
 
