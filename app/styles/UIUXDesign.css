@@ -1,0 +1,454 @@
+/* ================================
+   UI/UX Section Styling
+================================= */
+.uiux-section {
+  padding         : 100px 0;
+  background-color: #FD6A02;
+  text-align      : center;
+  font-family     : "Poppins", sans-serif;
+}
+
+.uiux-title {
+  font-size     : 2.2rem;
+  font-weight   : 700;
+  color         : #fff;
+  margin-bottom : 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.uiux-subtitle {
+  max-width  : 800px;
+  margin     : 0 auto 60px;
+  font-size  : 1.05rem;
+  line-height: 1.8;
+  color      : #fff;
+  text-align : center;
+}
+
+/* ================================
+   Grid Layout
+================================= */
+.uiux-grid {
+  display              : grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap                  : 15px;
+  padding              : 0 60px;
+}
+
+/* ================================
+   Service Box Styling
+================================= */
+.uiux-service-box {
+  background   : #fff;
+  border-radius: 16px;
+  padding      : 45px 30px;
+  box-shadow   : 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition   : all 0.3s ease;
+  border       : 2px solid transparent;
+  cursor       : pointer;
+}
+
+.uiux-service-box:hover {
+  transform   : translateY(-8px);
+  border-color: #000;
+  box-shadow  : 0 10px 25px rgba(220, 37, 100, 0.15);
+}
+
+/* ================================
+   Icon Styling
+================================= */
+.uiux-icon {
+  font-size    : 2.8rem;
+  color        : #FD6A02;
+  margin-bottom: 20px;
+}
+
+.uiux-heading {
+  font-size    : 1.25rem;
+  font-weight  : 600;
+  color        : #000;
+  margin-bottom: 10px;
+}
+
+.uiux-service-box p {
+  font-size  : 0.95rem;
+  color      : #333;
+  line-height: 1.6;
+  text-align : center;
+}
+
+/* ================================
+   Hover Accent Effect
+================================= */
+.uiux-service-box:hover .uiux-icon {
+  color: #000;
+}
+
+.uiux-service-box:hover .uiux-heading {
+  color: #FD6A02;
+}
+
+/* ================================
+   Responsive Design
+================================= */
+@media (max-width: 1024px) {
+  .uiux-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap                  : 25px;
+    padding              : 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .uiux-grid {
+    grid-template-columns: 1fr;
+    padding              : 0 20px;
+  }
+
+  .uiux-section {
+    padding: 70px 0;
+  }
+
+  .uiux-title {
+    font-size: 1.8rem;
+  }
+
+  .uiux-subtitle {
+    font-size    : 1rem;
+    margin-bottom: 40px;
+  }
+
+  .uiux-service-box {
+    padding: 35px 25px;
+  }
+}
+
+/* ================================
+   UI/UX Tools Section Styling
+================================= */
+.uiux-tools-section {
+  padding         : 100px 0;
+  background-color: #000;
+  text-align      : center;
+  font-family     : "Poppins", sans-serif;
+}
+
+.tools-heading-title {
+  font-size     : 2.2rem;
+  font-weight   : 700;
+  color         : #fff;
+  margin-bottom : 60px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ================================
+   Grid Layout (5 per row)
+================================= */
+.uiux-section-grid {
+  display              : grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap                  : 30px;
+  justify-items        : center;
+  align-items          : center;
+  padding              : 0 60px;
+}
+
+/* ================================
+   Card Styling
+================================= */
+.uiux-card-box {
+  background     : #fff;
+  border         : 2px solid #f0f0f0;
+  border-radius  : 16px;
+  padding        : 20px 25px;
+  display        : flex;
+  align-items    : center;
+  justify-content: flex-start;
+  gap            : 15px;
+  box-shadow     : 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition     : all 0.3s ease;
+  width          : 100%;
+  max-width      : 280px;
+  cursor         : pointer;
+}
+
+.uiux-card-box:hover {
+  border-color: #FD6A02;
+  box-shadow  : 0 10px 25px rgba(220, 37, 100, 0.15);
+  transform   : translateY(-6px);
+}
+
+/* ================================
+   Icon + Label Styling
+================================= */
+.uiux-card-icon {
+  width      : 50px;
+  height     : 50px;
+  flex-shrink: 0;
+  transition : transform 0.3s ease;
+}
+
+.uiux-card-box:hover .uiux-card-icon {
+  transform: scale(1.1);
+}
+
+.uiux-card-label {
+  font-size  : 1rem;
+  font-weight: 600;
+  color      : #000;
+  text-align : left;
+}
+
+.uiux-card-box:hover .uiux-card-label {
+  color: #FD6A02;
+}
+
+/* ================================
+   Responsive Design
+================================= */
+@media (max-width: 1200px) {
+  .uiux-section-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .uiux-section-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding              : 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .uiux-section-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding              : 0 30px;
+  }
+
+  .uiux-card-box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .uiux-section-grid {
+    grid-template-columns: 1fr;
+    padding              : 0 20px;
+  }
+
+  .tools-heading-title {
+    font-size: 1.8rem;
+  }
+
+  .uiux-card-box {
+    flex-direction: column;
+    text-align    : center;
+    gap           : 10px;
+  }
+
+  .uiux-card-label {
+    text-align: center;
+  }
+}
+
+/* ================================
+UI/UX Landing Section
+================================= */
+.uiux-landing-section {
+  padding   : 80px 0;
+  background: #FD6A02;
+  color     : #fff;
+}
+
+.uiux-container {
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: space-between;
+  align-items    : flex-start;
+  gap            : 40px;
+  max-width      : 1200px;
+  margin         : 0 auto;
+  padding        : 0 20px;
+}
+
+.uiux-left {
+  flex: 1 1 45%;
+}
+
+.uiux-right {
+  flex: 1 1 45%;
+}
+
+/* Text Styling */
+.br-uiux-heading {
+  font-size    : 2rem;
+  font-weight  : 700;
+  color        : #fff;
+  margin-bottom: 15px;
+}
+
+.uiux-subtext {
+  font-size    : 1rem;
+  color        : #f1f1f1;
+  margin-bottom: 30px;
+  line-height  : 1.6;
+}
+
+/* Brochure Box */
+.uiux-brochure-box {
+  background   : #fff;
+  color        : #333;
+  border-radius: 14px;
+  padding      : 30px;
+}
+
+.uiux-brochure-title {
+  color        : #000;
+  font-size    : 1.4rem;
+  font-weight  : 700;
+  margin-bottom: 10px;
+}
+
+.uiux-brochure-desc {
+  margin-bottom: 20px;
+  color        : #333;
+}
+
+.uiux-feature {
+  color        : #000;
+  font-weight  : 500;
+  margin-bottom: 8px;
+}
+
+.uiux-feature i {
+  margin-right: 8px;
+}
+
+/* Button */
+.uiux-brochure-btn {
+  background-color: #000;
+  color           : #fff;
+  border          : none;
+  padding         : 12px 24px;
+  border-radius   : 6px;
+  font-weight     : bold;
+  cursor          : pointer;
+  transition      : 0.3s;
+  display         : inline-block;
+}
+
+.uiux-brochure-btn:hover {
+  background-color: #FD6A02;
+}
+
+/* Service Grid */
+.uiux-service-grid {
+  display              : grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap                  : 20px;
+}
+
+.uiux-service-card {
+  background-color: #fff;
+  color           : #000;
+  padding         : 25px;
+  border-radius   : 12px;
+  text-align      : center;
+  font-weight     : 600;
+  transition      : 0.3s;
+}
+
+.uiux-service-card:hover {
+  transform : translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.uiux-service-icon {
+  font-size    : 2rem;
+  margin-bottom: 10px;
+}
+
+/* Popup Styles */
+.brochure-popup-overlay {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  width           : 100%;
+  height          : 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index         : 9999;
+  animation       : fadeIn 0.4s ease forwards;
+}
+
+.brochure-popup {
+  background-color: #000;
+  padding         : 30px;
+  border-radius   : 8px;
+  color           : #000;
+  position        : relative;
+  max-width       : 400px;
+  width           : 90%;
+}
+
+.brochure-close {
+  position : absolute;
+  top      : 10px;
+  right    : 15px;
+  font-size: 24px;
+  cursor   : pointer;
+  color    : #fff;
+}
+
+.brochure-title {
+  color        : white;
+  text-align   : center;
+  margin-bottom: 15px;
+}
+
+.brochure-popup input {
+  width           : 100%;
+  padding         : 10px;
+  background-color: #111;
+  color           : #fff;
+  border          : 1px solid #fff;
+  border-radius   : 4px;
+  margin-bottom   : 10px;
+}
+
+.brochure-submit-btn {
+  width           : 100%;
+  padding         : 12px;
+  background-color: #000;
+  color           : #fff;
+  border          : none;
+  border-radius   : 4px;
+  font-weight     : bold;
+  cursor          : pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .uiux-container {
+    flex-direction: column;
+  }
+
+  .uiux-left,
+  .uiux-right {
+    flex: 1 1 100%;
+  }
+}

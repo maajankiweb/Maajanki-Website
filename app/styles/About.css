@@ -1,0 +1,412 @@
+/* ---------------- Our Vision Section ---------------- */
+
+.our-vision-section {
+    position   : relative;
+    min-height : 100vh;
+    background : #000;
+    display    : flex;
+    align-items: center;
+    overflow   : hidden;
+    padding    : 60px 0;
+}
+
+.our-vision-section::before {
+    content : '';
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    right   : 0;
+    bottom  : 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgb(11, 11, 11) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(8, 8, 8, 0.862) 0%, transparent 50%);
+    pointer-events: none;
+    z-index       : 0;
+}
+
+/* Floating circles */
+.our-vision-floating-elements {
+    position      : absolute;
+    top           : 0;
+    left          : 0;
+    right         : 0;
+    bottom        : 0;
+    pointer-events: none;
+    overflow      : hidden;
+    z-index       : 1;
+}
+
+.our-vision-circle {
+    position     : absolute;
+    border-radius: 50%;
+    background   : rgba(255, 215, 0, 0.1);
+}
+
+.our-vision-circle:nth-child(1) {
+    width : 80px;
+    height: 80px;
+    top   : 10%;
+    left  : 10%;
+}
+
+.our-vision-circle:nth-child(2) {
+    width : 60px;
+    height: 60px;
+    top   : 70%;
+    right : 15%;
+}
+
+.our-vision-circle:nth-child(3) {
+    width : 100px;
+    height: 100px;
+    top   : 40%;
+    left  : 5%;
+}
+
+/* Main container */
+.our-vision-container {
+    max-width: 1400px;
+    margin   : 0 auto;
+    padding  : 0 40px;
+    position : relative;
+    z-index  : 2;
+}
+
+/* Grid layout */
+.our-vision-grid {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    gap                  : 80px;
+    align-items          : center;
+    min-height           : 80vh;
+}
+
+/* Content area */
+.our-vision-content {
+    padding: 60px 0;
+}
+
+.our-vision-badge {
+    display       : inline-block;
+    background    : #FD6A02;
+    color         : #fff;
+    padding       : 8px 20px;
+    border-radius : 25px;
+    font-size     : 0.9rem;
+    font-weight   : 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom : 30px;
+    border        : 1px solid rgba(208, 0, 255, 0.2);
+}
+
+.our-vision-heading {
+    font-size    : 30px;
+    font-weight  : 700;
+    line-height  : 1.2;
+    margin-bottom: 30px;
+    color        : #fff;
+    text-shadow  : 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.our-vision-highlight {
+    background             : #FD6A02;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip        : text;
+    position               : relative;
+}
+
+.our-vision-highlight::after {
+    content      : '';
+    position     : absolute;
+    bottom       : -5px;
+    left         : 0;
+    width        : 100%;
+    height       : 3px;
+    background   : #FD6A02;
+    border-radius: 2px;
+}
+
+/* Text paragraphs */
+.our-vision-text {
+    font-size    : 1.2rem;
+    line-height  : 1.8;
+    color        : #fff;
+    margin-bottom: 25px;
+    text-align   : justify;
+    opacity      : 0.95;
+}
+
+/* Highlighted services box */
+.our-vision-services {
+    background     : rgba(255, 255, 255, 0.1);
+    padding        : 25px;
+    border-radius  : 15px;
+    margin         : 30px 0;
+    border-left    : 4px solid #000;
+    backdrop-filter: blur(10px);
+}
+
+.our-vision-services .our-vision-bold {
+    color      : #FD6A02;
+    font-weight: 700;
+}
+
+/* Visual area */
+.our-vision-visual {
+    position       : relative;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.our-vision-image-container {
+    position : relative;
+    width    : 100%;
+    max-width: 800px;
+    height   : 700px;
+}
+
+.our-vision-main-image {
+    width          : 100%;
+    height         : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    position       : relative;
+}
+
+.our-vision-main-image img {
+    max-width : 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Decorative elements */
+.our-vision-decorative-elements {
+    position     : absolute;
+    top          : -20px;
+    right        : -20px;
+    width        : 100px;
+    height       : 100px;
+    background   : linear-gradient(135deg, #000, #FD6A02);
+    border-radius: 50%;
+    opacity      : 0.7;
+}
+
+.our-vision-decorative-elements::before {
+    content      : '';
+    position     : absolute;
+    top          : -15px;
+    left         : -15px;
+    width        : 130px;
+    height       : 130px;
+    border       : 2px solid rgba(208, 0, 255, 0.2);
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .our-vision-container {
+        padding: 0 30px;
+    }
+
+    .our-vision-grid {
+        gap: 60px;
+    }
+
+    .our-vision-heading {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .our-vision-grid {
+        grid-template-columns: 1fr;
+        gap                  : 50px;
+        text-align           : center;
+    }
+
+    .our-vision-visual {
+        order: -1;
+    }
+
+    .our-vision-image-container {
+        height: 550px;
+    }
+
+    .our-vision-heading {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .our-vision-container {
+        padding: 0 20px;
+    }
+
+    .our-vision-content {
+        padding: 40px 0;
+    }
+
+    .our-vision-heading {
+        font-size: 22px;
+    }
+
+    .our-vision-text {
+        font-size: 1.1rem;
+    }
+
+    .our-vision-image-container {
+        height: 450px;
+    }
+}
+
+@media (max-width: 576px) {
+    .our-vision-heading {
+        font-size: 20px;
+    }
+
+    .our-vision-text {
+        font-size: 1rem;
+    }
+
+    .our-vision-services {
+        padding: 20px;
+        margin : 20px 0;
+    }
+
+    .our-vision-image-container {
+        height: 400px;
+    }
+}
+
+/* ---------------- Why Us Section ---------------- */
+
+.why-us-section {
+    position   : relative;
+    min-height : 80vh;
+    display    : flex;
+    align-items: center;
+    background : #FD6A02;
+    padding    : 100px 0;
+}
+
+.why-us-container {
+    max-width: 1400px;
+    margin   : 0 auto;
+    padding  : 0 40px;
+    z-index  : 2;
+}
+
+.why-us-grid {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
+    gap                  : 80px;
+    align-items          : center;
+}
+
+.why-us-content {
+    padding: 20px 0;
+}
+
+.why-us-badge {
+    display       : inline-block;
+    color         : #fff;
+    background    : #000;
+    padding       : 6px 18px;
+    border-radius : 20px;
+    font-weight   : 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom : 20px;
+}
+
+.why-us-heading {
+    font-size    : 32px;
+    font-weight  : 700;
+    margin-bottom: 20px;
+    color        : #fff;
+}
+
+.why-us-underline {
+    display      : block;
+    width        : 400px;
+    height       : 3px;
+    background   : linear-gradient(90deg, #FD6A02, #fff);
+    margin-bottom: 25px;
+    border-radius: 2px;
+}
+
+.why-us-text {
+    font-size    : 1.1rem;
+    line-height  : 1.8;
+    color        : #fff;
+    margin-bottom: 20px;
+}
+
+.why-us-visual {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+.why-us-image-container {
+    position : relative;
+    width    : 100%;
+    max-width: 600px;
+}
+
+.why-us-image {
+    width        : 100%;
+    height       : auto;
+    display      : block;
+    border-radius: 15px;
+    box-shadow   : 0 10px 30px rgba(206, 204, 204, 0.919);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .why-us-grid {
+        grid-template-columns: 1fr;
+        gap                  : 50px;
+        text-align           : center;
+    }
+
+    .why-us-visual {
+        order: -1;
+    }
+
+    .why-us-heading {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-us-container {
+        padding: 0 20px;
+    }
+
+    .why-us-text {
+        font-size: 1rem;
+    }
+
+    .why-us-heading {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 576px) {
+    .why-us-heading {
+        font-size: 24px;
+    }
+
+    .why-us-text {
+        font-size: 0.95rem;
+    }
+
+    .why-us-image-container {
+        max-width: 100%;
+    }
+}
