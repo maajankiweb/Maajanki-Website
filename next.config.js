@@ -18,6 +18,12 @@ const nextConfig = {
       'react-icons'
     ],
   },
+  webpack: (config) => {
+    config.infrastructureLogging = {
+      level: 'error',
+    };
+    return config;
+  },
   async headers() {
     return [
       {

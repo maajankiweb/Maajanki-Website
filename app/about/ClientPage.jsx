@@ -28,7 +28,8 @@ const About = () => {
               "name": "MaaJanki Web Tech",
               "url": "https://maajankiwebtech.com/",
               "logo": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png",
-              "description": "MaaJanki Web Tech is a professional web development and digital marketing agency in India, specializing in SEO, branding, performance marketing, and custom web solutions.",
+              "description": "MaaJanki Web Tech is a DPIIT Startup India and Udyam MSME recognized website development and digital marketing agency in India, specializing in SEO, AEO, GEO, branding, and custom web development.",
+              "identifier": "UDYAM-BR-38-0014113",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+91-9006543913",
@@ -60,7 +61,7 @@ const About = () => {
                 "https://www.instagram.com/ashishkrweb4/",
                 "https://www.wikidata.org/wiki/Q115783355"
               ],
-              "description": "Ashish Kumar is the founder of MaaJanki Web Tech with expertise in web development and digital marketing."
+              "description": "Ashish Kumar is the founder of MaaJanki Web Tech, an expert in custom web development, SEO strategy, and digital marketing."
             },
             {
               "@id": "https://maajankiwebtech.com/#localbusiness",
@@ -69,7 +70,7 @@ const About = () => {
               "image": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png",
               "url": "https://maajankiwebtech.com/",
               "telephone": "+91-9006543913",
-              "description": "Professional website development and digital marketing agency in Bagaha, Bihar.",
+              "description": "Professional website development and digital marketing agency in Bagaha, Bihar, serving clients across India.",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar",
@@ -83,7 +84,7 @@ const About = () => {
                 "latitude": 27.0984,
                 "longitude": 84.2625
               },
-              "priceRange": "$",
+              "priceRange": "$$",
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "4.9",
@@ -103,6 +104,28 @@ const About = () => {
               "about": {
                 "@id": "https://maajankiwebtech.com/#organization"
               }
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://maajankiwebtech.com/about#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Which is the best digital marketing agency in India?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MaaJanki Web Tech is recognized as one of the best digital marketing agencies in India, delivering result-oriented SEO, AEO, social media marketing, PPC, and custom website development solutions."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What complete digital services does MaaJanki Web Tech offer?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MaaJanki Web Tech offers a full suite of digital services including SEO, Answer Engine Optimization (AEO), Performance Marketing, Web Development, UI/UX Design, Branding, and Social Media Marketing."
+                  }
+                }
+              ]
             }
           ]
         }
@@ -124,13 +147,13 @@ const About = () => {
           className="banner-overlay"
           style={{
             background:
-              "linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(106, 27, 154, 0.4) 100%)",
+              "linear-gradient(135deg, rgba(4, 37, 68, 0.92) 0%, rgba(253, 106, 2, 0.75) 100%)",
           }}
         >
           <div className="banner-content">
+            <span className="about-hero-badge">About MaaJanki Web Tech</span>
             <h1>
-              Grow Your Brand Online with a Trusted Digital Marketing Agency in
-              India
+              Grow Your Brand Online with a Trusted Digital Marketing Agency in India
             </h1>
             <p>
               MaaJanki Web Tech is a results-driven digital marketing and
@@ -152,13 +175,13 @@ const About = () => {
       </section>
       {/* Hero Section End */}
 
-      {/* SEO Content Section */}
+      {/* SEO Content Section - Brand Orange */}
       <section
         className="wow animate__fadeIn"
         style={{
-          backgroundColor: "#042544",
-          padding: "60px 0",
-          color: "#cbd5e1",
+          background: "linear-gradient(135deg, #FD6A02 0%, #e05b00 100%)",
+          padding: "70px 0",
+          color: "#ffffff",
         }}
       >
         <div className="container">
@@ -167,47 +190,41 @@ const About = () => {
               <p
                 className="alt-font"
                 style={{
-                    fontSize: "25px",
-                    lineHeight: "1.4",
-                    fontWeight: "500",
-                    color: "#cbd5e1",
-                    marginBottom: "20px",
-                  }}
-                >
-                  <strong>MaaJanki Web Tech</strong> is a leading digital
-                  marketing and website development agency in India, delivering
-                  SEO, branding, and performance-driven marketing solutions to
-                  help businesses grow online.
-                </p>
+                  fontSize: "25px",
+                  lineHeight: "1.4",
+                  fontWeight: "600",
+                  color: "#ffffff",
+                  marginBottom: "20px",
+                }}
+              >
+                <strong>MaaJanki Web Tech</strong> is a leading digital
+                marketing and custom website development agency in India, delivering
+                technical SEO, Answer Engine Optimization (AEO), branding, and performance-driven marketing solutions to
+                help businesses grow online.
+              </p>
 
-              <p>
+              <p style={{ color: "rgba(255, 255, 255, 0.95)", fontSize: "16px", lineHeight: "1.8" }}>
                 We are <strong>MaaJanki Web Tech</strong>, a results-focused
                 digital marketing agency and website development company
-                dedicated to helping Indian businesses build a strong online
-                presence. Our mission is to improve search visibility, attract
-                the right audience, and convert website visitors into long-term
-                customers through strategic digital solutions.
+                dedicated to helping Indian startups, MSMEs, and enterprises build a commanding online
+                presence. Our mission is to improve search engine rankings, capture high-intent commercial traffic, and convert website visitors into long-term
+                customers through strategic, data-driven digital solutions.
               </p>
 
-              <p>
-                Our expertise spans across website development, on-page and
-                off-page SEO, technical SEO, content marketing, social media
-                marketing, and performance marketing. Every strategy we create
-                is data-driven and aligned with your business goals to ensure
-                measurable growth and sustainable results.
+              <p style={{ color: "rgba(255, 255, 255, 0.95)", fontSize: "16px", lineHeight: "1.8" }}>
+                Our core expertise spans custom web development, on-page and
+                off-page SEO, technical Core Web Vitals optimization, Generative Engine Optimization (GEO), content marketing, social media
+                marketing, and performance advertising. Every strategy we execute
+                is analytics-backed and aligned with your revenue goals to ensure
+                measurable ROI and sustainable digital authority.
               </p>
 
-              <p>
-                At MaaJanki Web Tech, we focus on building people-centric brand
-                identities and high-performing marketing campaigns that generate
-                real leads and sales. By combining keyword research, search
-                engine optimization, creative content, and analytics, we help
-                brands gain visibility across India and establish long-term
-                digital authority. When you partner with MaaJanki Web Tech, you
-                gain a transparent, reliable, and growth-oriented digital
-                partner. We provide clear guidance, strategic planning, and
-                continuous performance tracking to deliver consistent and
-                measurable business growth.
+              <p style={{ color: "rgba(255, 255, 255, 0.95)", fontSize: "16px", lineHeight: "1.8", marginBottom: "0" }}>
+                At MaaJanki Web Tech — a DPIIT Startup India & Udyam MSME recognized agency (Registration No: <strong>UDYAM-BR-38-0014113</strong>) — we focus on building people-centric brand
+                identities and high-converting marketing funnels. By combining target keyword research, search
+                engine optimization, structured schema markup, and conversion tracking, we help
+                brands dominate search results across India and earn citations on AI answer engines like ChatGPT and Perplexity. When you partner with MaaJanki Web Tech, you
+                gain a transparent, reliable, and growth-oriented digital partner dedicated to long-term business success.
               </p>
             </div>
           </div>
@@ -215,7 +232,7 @@ const About = () => {
       </section>
       {/* SEO Content Section End */}
 
-      {/* Promo Section Start */}
+      {/* Promo Section Start - Deep Navy */}
       <section className="promo-section ptb-100">
         <div className="container">
           <div className="row justify-content-center">
@@ -307,46 +324,47 @@ const About = () => {
       </section>
       {/* Promo Section End */}
 
-      {/* About Section */}
+      {/* About Section - Brand Orange */}
       <section
         id="about"
         aria-label="About Our Company"
         className="about-section-container"
         style={{
-          background: "linear-gradient(135deg, #FD6A02, #042544)",
+          background: "linear-gradient(135deg, #FD6A02 0%, #d95400 100%)",
           color: "#fff",
         }}
       >
         <div className="about-inner-container">
-          <h2 className="about-heading-primary">
-            About <span style={{ color: "#fff" }}>Our Company</span>
-          </h2>
-
           <div className="about-grid-layout">
             <div>
-              <p className="about-paragraph">
+              <span className="about-hero-badge" style={{ background: "#042544", color: "#ffffff", border: "none", marginBottom: "8px" }}>WHO WE ARE</span>
+              <h2 className="about-heading-primary" style={{ color: "#ffffff", marginBottom: "14px" }}>
+                About <span style={{ color: "#042544" }}>Our Company</span>
+              </h2>
+
+              <p className="about-paragraph" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
                 <strong>MaaJanki Web Tech</strong> is a trusted website
                 development and digital marketing agency in India, working with
-                businesses to create scalable and future-ready digital
-                experiences. Our focus goes beyond building websites we help
-                brands improve online visibility, website performance, security,
-                and long-term growth through strategic digital solutions.
+                businesses to create scalable, secure, and future-ready digital
+                experiences. Our focus goes beyond building websites — we help
+                brands maximize online visibility, Core Web Vitals speed, data security,
+                and long-term search engine authority through strategic digital solutions.
               </p>
 
-              <p className="about-paragraph">
-                Every project we deliver is custom-built with SEO-friendly
-                structure, optimized content, and performance - driven design.
-                As a professional web development agency, we ensure each website
-                is fast, secure, mobile-responsive, and ready to rank on search
-                engines. We do not use templates or duplicated layouts each
-                solution is crafted to match your business goals.
+              <p className="about-paragraph" style={{ color: "rgba(255, 255, 255, 0.95)" }}>
+                Every project we deliver is 100% custom-built with SEO-friendly
+                architecture, structured schema content, and performance-driven UI/UX design.
+                As a professional web development agency in India, we ensure each website
+                is fast, secure, mobile-responsive, and optimized to rank on search
+                engines like Google and Bing. We do not use generic templates or bloated builders — each
+                solution is crafted to match your target keywords and commercial intent.
               </p>
 
-              <p className="about-paragraph" style={{ marginBottom: "0" }}>
-                By combining website development, SEO, and digital marketing
+              <p className="about-paragraph" style={{ marginBottom: "0", color: "rgba(255, 255, 255, 0.95)" }}>
+                By combining custom web engineering, technical SEO, and Answer Engine Optimization (AEO)
                 strategies, we help businesses generate real impact, stronger
-                brand presence, and measurable results. Our team continuously
-                adapts to new technologies and trends to keep your brand
+                brand authority, and measurable revenue growth. Our team continuously
+                adapts to new search algorithms and AI generative engines to keep your brand
                 competitive, visible, and prepared for the future.
               </p>
             </div>
@@ -377,7 +395,7 @@ const About = () => {
       </section>
       {/* About Section End */}
 
-      {/* EMPOWERED EMPLOYEES */}
+      {/* EMPOWERED EMPLOYEES - Deep Navy */}
       <section
         id="empowered"
         className="about-section-container"
@@ -389,149 +407,85 @@ const About = () => {
         <div className="about-inner-container">
           <div className="empowered-grid-layout">
             <div>
-              <h2 className="about-heading-secondary" style={{ color: "#fff" }}>
-                We empower our team with ownership, transparency, and a
-                growth-first mindset to deliver better digital solutions.
+              <span className="about-hero-badge">OUR CULTURE</span>
+              <h2 className="about-heading-secondary" style={{ color: "#fff", marginTop: "10px" }}>
+                We empower our team with ownership, transparency, and a growth-first mindset.
               </h2>
+              <p className="about-paragraph" style={{ color: "#cbd5e1", marginTop: "15px" }}>
+                At <strong style={{ color: "#FD6A02" }}>MaaJanki Web Tech</strong>,
+                our professionals in India are encouraged to take initiative, question assumptions, and innovate continuous improvements. Whether designing responsive UIs, optimizing backend queries, or running ROI-focused ad campaigns, our team collaborates seamlessly to drive maximum client growth.
+              </p>
             </div>
 
             <div>
               <p className="about-paragraph" style={{ color: "#cbd5e1" }}>
-                At{" "}
-                <strong style={{ color: "#FD6A02" }}>MaaJanki Web Tech</strong>,
-                our team in India is encouraged to take initiative, question
-                assumptions, and improve processes. Whether it’s website
-                development, SEO, or digital marketing strategy, our
-                professionals openly share ideas and implement smarter ways to
-                deliver value to our clients. Learning here is practical,
-                guided, and focused on real-world results.
+                We believe analytical thinking, technical SEO engineering, and creative strategy lead to digital transformations that scale sustainably. Our culture embeds search engine optimization (SEO), answer engine optimization (AEO), and conversion rate optimization (CRO) directly into our core development pipeline.
               </p>
 
-              <p className="about-paragraph" style={{ color: "#cbd5e1" }}>
-                We believe strong collaboration, analytical thinking, and
-                creativity lead to impactful digital experiences. This culture
-                reflects in our work high-performing websites, data-driven
-                marketing campaigns, and scalable growth solutions. Every
-                decision we make is measured by the results it creates for our
-                clients across India, ensuring long-term success and meaningful
-                business transformation.
-              </p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginTop: "20px" }}>
+                <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.08)", padding: "18px", borderRadius: "14px" }}>
+                  <h4 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>⚡ Technical SEO & Speed</h4>
+                  <p style={{ color: "#cbd5e1", fontSize: "13px", margin: "0", lineHeight: "1.6" }}>Building 100% custom Next.js architecture for instant loading, Core Web Vitals compliance, and clean indexability.</p>
+                </div>
+                <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.08)", padding: "18px", borderRadius: "14px" }}>
+                  <h4 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>🎯 High-Intent Keywords</h4>
+                  <p style={{ color: "#cbd5e1", fontSize: "13px", margin: "0", lineHeight: "1.6" }}>Mapping commercial & transactional search queries to build relevant, high-converting service landing pages.</p>
+                </div>
+                <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.08)", padding: "18px", borderRadius: "14px" }}>
+                  <h4 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>🤖 AEO & AI Authority</h4>
+                  <p style={{ color: "#cbd5e1", fontSize: "13px", margin: "0", lineHeight: "1.6" }}>Injecting Schema.org JSON-LD and structured data so brands earn citations across ChatGPT, Perplexity, and Google AI.</p>
+                </div>
+                <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.08)", padding: "18px", borderRadius: "14px" }}>
+                  <h4 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>📊 CRO & Organic ROI</h4>
+                  <p style={{ color: "#cbd5e1", fontSize: "13px", margin: "0", lineHeight: "1.6" }}>Focusing on lead conversion tracking, user experience optimizations, and sustainable long-term revenue growth.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       {/* EMPOWERED EMPLOYEES */}
 
-      {/* VISION & MISSION */}
+      {/* VISION & MISSION - Brand Orange */}
       <section
         id="vision-mission"
         className="about-section-container"
         style={{
-          background: "linear-gradient(135deg, #042544, #FD6A02)",
+          background: "linear-gradient(135deg, #FD6A02 0%, #e05b00 100%)",
           color: "#fff",
         }}
       >
         <div className="about-inner-container">
-          {/* Intro Section */}
-          <div
-            className="empowered-grid-layout"
-            style={{ marginBottom: "50px" }}
-          >
-            <div>
-              <h2
-                className="about-heading-secondary"
-                style={{ color: "#fff", marginBottom: "20px" }}
-              >
-                A team of creative minds focused on building powerful digital
-                solutions for modern businesses.
-              </h2>
-              <p style={{ fontSize: "1.1rem", lineHeight: 1.8 }}>
-                At <strong>MaaJanki Web Tech</strong>, we bring together skilled
-                professionals with strong vision and technical expertise.
-                Whether you are launching a new product or scaling an existing
-                business, our website development and digital marketing
-                solutions are designed to support sustainable growth.
-              </p>
-            </div>
-            <div></div>
+          <div className="text-center mb-5" style={{ maxWidth: "800px", margin: "0 auto 50px auto" }}>
+            <span className="about-hero-badge" style={{ background: "#042544", color: "#ffffff", border: "none" }}>PURPOSE & PURPOSE</span>
+            <h2 className="about-heading-primary" style={{ marginBottom: "16px", color: "#ffffff" }}>
+              Our Vision & Mission
+            </h2>
+            <p style={{ fontSize: "16px", color: "rgba(255, 255, 255, 0.95)", lineHeight: "1.7" }}>
+              Building reliable digital experiences for businesses around the globe.
+            </p>
           </div>
 
           {/* Vision & Mission Cards */}
           <div className="about-grid-layout" style={{ gap: "30px" }}>
             {/* Vision Card */}
-            <div
-              style={{
-                backgroundColor: "rgba(255,255,255,0.1)",
-                padding: "30px",
-                borderRadius: "10px",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "2.5rem",
-                  marginBottom: "15px",
-                  color: "#fbbf24",
-                }}
-              >
-                <i className="fa-solid fa-lightbulb"></i>
-              </div>
-              <h3
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 700,
-                  marginBottom: "15px",
-                }}
-              >
-                Our Vision
-              </h3>
-              <p className="about-paragraph" style={{ marginBottom: "10px" }}>
-                Our vision is to become a trusted website development and
-                digital marketing agency in India that helps businesses turn
-                ideas into scalable, high-performing digital products through
-                expertise, innovation, and reliable support.
+            <div className="vision-mission-card">
+              <div className="vision-card-icon">💡</div>
+              <h3 className="vision-card-title">Our Vision</h3>
+              <p className="about-paragraph" style={{ marginBottom: "12px", color: "#cbd5e1" }}>
+                Our vision is to become a globally trusted web development and digital growth partner in India that helps businesses turn ideas into scalable, high-performing digital products through engineering excellence and strategic innovation.
               </p>
-              <p className="about-paragraph">
-                We aim to make technology simple, transparent, and impactful
-                delivering solutions that are built with care, clarity, and a
-                long-term growth mindset.
+              <p className="about-paragraph" style={{ marginBottom: "0", color: "#94a3b8" }}>
+                We aim to make technology simple, transparent, and impactful — delivering digital solutions built with precision, clarity, and a long-term growth mindset.
               </p>
             </div>
 
             {/* Mission Card */}
-            <div
-              style={{
-                backgroundColor: "rgba(255,255,255,0.1)",
-                padding: "30px",
-                borderRadius: "10px",
-                boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
-              }}
-            >
-              <div
-                style={{
-                  fontSize: "2.5rem",
-                  marginBottom: "15px",
-                  color: "#FD6A02",
-                }}
-              >
-                <i className="fa-solid fa-mountain"></i>
-              </div>
-              <h3
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 700,
-                  marginBottom: "15px",
-                }}
-              >
-                Our Mission
-              </h3>
-              <p className="about-paragraph">
-                Our mission is to deliver ethical, data-driven website
-                development, SEO, and digital marketing services that create
-                measurable business results. We listen carefully, simplify
-                complex challenges, and build user-focused digital experiences
-                that help our clients grow while contributing positively to the
-                communities we serve.
+            <div className="vision-mission-card">
+              <div className="vision-card-icon">🚀</div>
+              <h3 className="vision-card-title">Our Mission</h3>
+              <p className="about-paragraph" style={{ marginBottom: "0", color: "#cbd5e1" }}>
+                Our mission is to deliver ethical, data-driven web development, SEO, and performance marketing services that create measurable revenue growth for our clients. We listen carefully, solve complex challenges, and build user-centric experiences that convert.
               </p>
             </div>
           </div>
@@ -539,42 +493,48 @@ const About = () => {
       </section>
       {/* VISION & MISSION */}
 
-      {/* Why Us Section */}
-      <section className="why-us-section ptb-100">
+      {/* Why Us Section - Deep Navy */}
+      <section className="why-us-section ptb-100" style={{ background: "#091a2b" }}>
         <div className="why-us-container">
           <div className="why-us-grid">
             <div className="why-us-content">
-              <strong className="why-us-badge">Why Us</strong>
+              <strong className="why-us-badge" style={{ background: "#FD6A02" }}>Why Us</strong>
 
               <h3 className="why-us-heading">
                 Your Trusted Partner for Digital Growth
               </h3>
 
-              <span className="why-us-underline mb-4"></span>
+              <span className="why-us-underline mb-4" style={{ background: "#FD6A02" }}></span>
 
               <p className="why-us-text">
                 <strong>MaaJanki Web Tech</strong> is a reliable website
-                development and digital marketing agency focused on driving real
-                online growth. By combining creative design, data-driven
-                strategy, and advanced SEO, we help businesses improve
-                visibility, attract quality traffic, and convert users into
-                customers.
+                development and digital marketing agency in India focused on driving real
+                online growth. By combining custom code architecture, data-driven
+                technical SEO, and advanced Answer Engine Optimization (AEO), we help businesses capture
+                commercial search intent, attract high-quality organic traffic, and convert visitors into
+                loyal customers.
               </p>
 
               <p className="why-us-text">
-                From startups to established brands, we work with businesses of
-                all sizes to strengthen their digital presence. Our expertise in
-                website development, search engine optimization, and performance
-                marketing enables brands to compete effectively and grow
-                consistently in their markets.
+                From emerging startups to established enterprises, we work with businesses of
+                all sizes to strengthen their digital footprint. Our specialized expertise in
+                custom web development, search engine optimization, Generative Engine Optimization (GEO), and performance
+                marketing enables brands to compete effectively and gain market dominance.
               </p>
 
               <p className="why-us-text">
-                Transparency, modern technology, and measurable results are at
-                the core of everything we do. We focus on long-term success
+                Transparency, cutting-edge technology, and verifiable ROI are at
+                the core of everything we do. As a DPIIT Startup India & Udyam MSME recognized agency (Registration No: <strong>UDYAM-BR-38-0014113</strong>), we focus on long-term digital authority —
                 delivering scalable digital solutions that support sustainable
                 business growth across India.
               </p>
+
+              <div className="why-us-chips">
+                <span className="why-us-chip">⚡ 100% Custom Code</span>
+                <span className="why-us-chip">🎯 Data-Driven SEO</span>
+                <span className="why-us-chip">📈 ROI-Focused Ads</span>
+                <span className="why-us-chip">🛡️ 24/7 Monitoring</span>
+              </div>
             </div>
 
             <div className="why-us-visual">
@@ -593,11 +553,11 @@ const About = () => {
       </section>
       {/* Why Us Section End */}
 
-      {/* OUR BUSINESS PHILOSOPHY */}
+      {/* OUR BUSINESS PHILOSOPHY - Brand Orange */}
       <section
         className="about-section-container"
         style={{
-          background: "linear-gradient(180deg, #042544, #FD6A02)",
+          background: "linear-gradient(135deg, #FD6A02 0%, #d95400 100%)",
           color: "#fff",
         }}
       >
@@ -605,11 +565,13 @@ const About = () => {
           <span
             style={{
               display: "inline-block",
-              background: "#fff",
-              color: "#FD6A02",
-              padding: "5px 15px",
-              borderRadius: "5px",
+              background: "#042544",
+              color: "#ffffff",
+              padding: "6px 18px",
+              borderRadius: "20px",
               fontWeight: "bold",
+              fontSize: "13px",
+              letterSpacing: "1.5px",
               marginBottom: "20px",
             }}
           >
@@ -617,7 +579,7 @@ const About = () => {
           </span>
 
           {/* Leadership */}
-          <div className="core-values-row">
+          <div className="core-values-row" style={{ background: "rgba(4, 37, 68, 0.92)", borderColor: "rgba(255, 255, 255, 0.15)" }}>
             <div className="core-values-box">
               <Image
                 src="/images/all-pages-section-image/About-us/about-us-leader-image-Maajanki-Web-Tech.webp"
@@ -660,9 +622,9 @@ const About = () => {
               >
                 Strong leadership is built on clarity, consistency, and
                 confidence. At <strong>MaaJanki Web Tech</strong>, our
-                leadership blends strategic thinking with practical execution
-                balancing technology, people, and business goals to deliver
-                reliable digital solutions.
+                leadership blends strategic web engineering with data-backed digital marketing execution —
+                balancing technology, Core Web Vitals performance, and commercial goals to deliver
+                scalable, high-ranking web solutions.
               </p>
               <p
                 style={{
@@ -672,16 +634,16 @@ const About = () => {
                   color: "#fff",
                 }}
               >
-                Innovation for us is not about chasing trends; it is about
-                solving real business problems through website development, SEO,
-                and digital marketing strategies that create long-term value for
+                Innovation for us is not about chasing temporary trends; it is about
+                solving real business problems through custom web development, technical SEO, AEO,
+                and performance marketing strategies that create long-term enterprise value for
                 our clients.
               </p>
             </div>
           </div>
 
           {/* Team Collaboration */}
-          <div className="core-values-row reverse">
+          <div className="core-values-row reverse" style={{ background: "rgba(4, 37, 68, 0.92)", borderColor: "rgba(255, 255, 255, 0.15)" }}>
             <div className="core-values-box">
               <Image
                 src="/images/all-pages-section-image/About-us/about-us-team-image-Maajanki-Web-Tech.webp"
@@ -724,10 +686,10 @@ const About = () => {
                   color: "#fff",
                 }}
               >
-                Collaboration is our greatest strength. Our teams across design,
-                development, SEO, and digital marketing work together to deliver
-                complete, high-performing digital solutions tailored to each
-                client’s objectives.
+                Collaboration is our greatest strength. Our multidisciplinary teams across UI/UX design,
+                Next.js full-stack development, technical SEO, AEO content engineering, and performance marketing work together to deliver
+                complete, high-converting digital solutions tailored to each
+                client’s growth objectives.
               </p>
 
               <p
@@ -739,14 +701,14 @@ const About = () => {
                 }}
               >
                 Open communication and shared problem-solving allow us to
-                approach challenges from multiple perspectives ensuring results
-                that are both visually impactful and technically sound.
+                approach challenges from multiple perspectives — ensuring results
+                that are visually impactful, search-engine optimized, and technically flawless.
               </p>
             </div>
           </div>
 
           {/* Transparency & Integrity */}
-          <div className="core-values-row">
+          <div className="core-values-row" style={{ background: "rgba(4, 37, 68, 0.92)", borderColor: "rgba(255, 255, 255, 0.15)" }}>
             <div className="core-values-box">
               <Image
                 src="/images/all-pages-section-image/About-us/about-us-Quality-transparency-image-Maajanki-Web-Tech.webp"
@@ -788,8 +750,8 @@ const About = () => {
                 }}
               >
                 Transparency and integrity are the foundation of quality work.
-                We believe trust is built through honest communication, ethical
-                decision-making, and clear expectations at every stage of a
+                As an officially registered DPIIT Startup India & Udyam MSME agency (<strong>UDYAM-BR-38-0014113</strong>),
+                we believe trust is built through honest communication, white-hat SEO practices, and clear milestone expectations at every stage of a
                 project.
               </p>
               <p
@@ -800,10 +762,8 @@ const About = () => {
                   color: "#fff",
                 }}
               >
-                By keeping clients informed with measurable milestones and
-                performance insights, we ensure confidence, accountability, and
-                long-term partnerships making transparency our strongest quality
-                promise.
+                By keeping clients informed with real-time analytics, keyword performance tracking, and conversion insights, we ensure accountability, confidence, and
+                long-term growth partnerships — making transparency our core brand promise.
               </p>
             </div>
           </div>

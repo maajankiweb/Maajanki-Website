@@ -865,7 +865,7 @@ function Home() {
             {services.map((service, index) => {
               const cardContent = (
                 <div className="services-single text-center p-5 rounded h-100">
-                  <div className="service-icon mb-4 text-4xl">
+                  <div className="service-icon mb-4 text-4xl d-flex justify-content-center align-items-center">
                     {service.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2">
