@@ -1,23 +1,53 @@
 import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
-// Silently handle polling requests from browser extensions (e.g. /api/extension/config, /api/extension/jobs)
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS, PATCH, HEAD',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Requested-With',
+};
+
 export async function GET() {
-  return NextResponse.json({ success: true, message: 'Extension API stub' }, { status: 200 });
+  return NextResponse.json(
+    { success: true, status: 'ok', message: 'Extension API ready' },
+    { status: 200, headers: corsHeaders }
+  );
 }
 
 export async function POST() {
-  return NextResponse.json({ success: true, message: 'Extension API stub' }, { status: 200 });
+  return NextResponse.json(
+    { success: true, status: 'ok', message: 'Extension API ready' },
+    { status: 200, headers: corsHeaders }
+  );
+}
+
+export async function PUT() {
+  return NextResponse.json(
+    { success: true, status: 'ok', message: 'Extension API ready' },
+    { status: 200, headers: corsHeaders }
+  );
+}
+
+export async function DELETE() {
+  return NextResponse.json(
+    { success: true, status: 'ok', message: 'Extension API ready' },
+    { status: 200, headers: corsHeaders }
+  );
+}
+
+export async function PATCH() {
+  return NextResponse.json(
+    { success: true, status: 'ok', message: 'Extension API ready' },
+    { status: 200, headers: corsHeaders }
+  );
+}
+
+export async function HEAD() {
+  return new NextResponse(null, { status: 200, headers: corsHeaders });
 }
 
 export async function OPTIONS() {
-  return new NextResponse(null, {
-    status: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    },
-  });
+  return new NextResponse(null, { status: 200, headers: corsHeaders });
 }
