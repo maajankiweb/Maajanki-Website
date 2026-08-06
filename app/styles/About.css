@@ -545,16 +545,25 @@
   padding-top: 16px;
 }
 
-/* ---------- Responsive Adjustments ---------- */
-@media (max-width: 1100px) {
+/* ---------- COMPREHENSIVE RESPONSIVE MEDIA QUERIES ---------- */
+
+/* Desktops & Large Laptops (1200px and down) */
+@media (max-width: 1200px) {
   .faq-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .about-inner-container {
+    padding: 0 24px;
   }
 }
 
+/* Medium Tablets & Small Laptops (992px and down) */
 @media (max-width: 992px) {
   .about-stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .about-grid-layout,
@@ -563,6 +572,11 @@
   .core-values-row {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .about-heading-primary,
@@ -584,37 +598,119 @@
   .core-values-row.reverse > .core-values-box:last-child {
     order: unset;
   }
+
+  .promo-section,
+  .about-section-container {
+    padding: 70px 0;
+  }
 }
 
-@media (max-width: 650px) {
-  .faq-grid {
-    grid-template-columns: 1fr;
+/* Small Tablets & Large Phones (768px and down) */
+@media (max-width: 768px) {
+  .about-heading-primary,
+  .why-us-heading,
+  .faq-header h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .about-stat-number {
+    font-size: 32px;
+  }
+
+  .promo-icon {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 18px;
+  }
+
+  .promo-icon img {
+    width: 40px;
+    height: 40px;
   }
 
   .faq-question {
     min-height: auto;
     padding: 18px 16px;
   }
+
+  .faq-question-text {
+    font-size: 14.5px;
+  }
 }
 
+/* Mobile Devices (576px and down) */
 @media (max-width: 576px) {
   .about-stats-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .about-feature-list {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
 
   .promo-single-wrap {
-    padding: 30px 20px;
+    padding: 26px 18px;
+    border-radius: 16px;
   }
 
   .vision-mission-card {
-    padding: 30px 20px;
+    padding: 26px 18px;
+    border-radius: 16px;
   }
 
   .why-us-chips {
     justify-content: center;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .about-heading-primary,
+  .why-us-heading,
+  .faq-header h2 {
+    font-size: 24px;
+  }
+
+  .about-paragraph {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+
+  .about-inner-container {
+    padding: 0 16px;
+  }
+
+  .promo-section,
+  .about-section-container {
+    padding: 50px 0;
+  }
+}
+
+/* Ultra Small Phones (380px and down) */
+@media (max-width: 380px) {
+  .about-heading-primary,
+  .why-us-heading,
+  .faq-header h2 {
+    font-size: 21px;
+  }
+
+  .about-stat-number {
+    font-size: 28px;
+  }
+
+  .faq-question {
+    padding: 14px 12px;
+  }
+
+  .faq-number {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
   }
 }

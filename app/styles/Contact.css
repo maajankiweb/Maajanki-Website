@@ -408,21 +408,160 @@ textarea.form-control {
   box-shadow: 0 4px 12px rgba(253, 106, 2, 0.4);
 }
 
-/* Responsive Service Areas */
+/* ---------- COMPREHENSIVE RESPONSIVE MEDIA QUERIES ---------- */
+
+/* Desktops & Large Laptops (1200px and down) */
 @media (max-width: 1200px) {
   .service-tiers-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .contact-promo-container,
+  .contact {
+    max-width: 100%;
+    padding: 0 30px;
   }
 }
 
-@media (max-width: 650px) {
+/* Medium Tablets & Small Laptops (992px and down) */
+@media (max-width: 992px) {
+  .contact-promo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .contact-promo-card {
+    min-height: 140px;
+    height: auto;
+    padding: 22px 18px;
+  }
+
+  .contact-us-section {
+    padding: 60px 0;
+  }
+
+  .contact-us-form,
+  .contact-us-content {
+    padding: 30px 24px;
+    margin-bottom: 30px;
+  }
+
+  .service-areas-title {
+    font-size: 2rem;
+  }
+}
+
+/* Small Tablets & Large Phones (768px and down) */
+@media (max-width: 768px) {
+  .google-map-container {
+    height: 380px;
+  }
+
+  .service-areas-section {
+    padding: 60px 18px;
+  }
+
+  .contact-promo-section {
+    padding: 60px 0;
+  }
+
+  .contact-us-content h2 {
+    font-size: 24px;
+  }
+
+  .contact-promo-title {
+    font-size: 18px;
+  }
+}
+
+/* Mobile Devices (576px and down) */
+@media (max-width: 576px) {
+  .contact-promo-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-promo-section {
+    padding: 45px 0;
+  }
+
+  .contact-promo-container,
+  .contact {
+    padding: 0 16px;
+  }
+
+  .contact-promo-card {
+    min-height: 110px;
+    height: auto;
+    border-radius: 16px;
+    padding: 20px 16px;
+  }
+
+  .contact-us-section {
+    padding: 45px 0;
+  }
+
+  .contact-us-form,
+  .contact-us-content {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+
+  .form-control {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .google-map-container {
+    height: 300px;
+  }
+
   .service-tiers-container {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
+
   .service-areas-section {
-    padding: 50px 15px;
+    padding: 45px 16px;
   }
+
   .service-areas-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+
+  .service-areas-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .service-tier-card {
+    padding: 20px 16px;
+  }
+
+  .whatsapp-btn {
+    bottom: 20px;
+    right: 15px;
+    padding: 10px 16px;
+    font-size: 13.5px;
+  }
+}
+
+/* Ultra Small Phones (380px and down) */
+@media (max-width: 380px) {
+  .contact-us-content h2 {
+    font-size: 20px;
+  }
+
+  .service-areas-title {
+    font-size: 1.4rem;
+  }
+
+  .contact-promo-title {
+    font-size: 16px;
+  }
+
+  .google-map-container {
+    height: 260px;
   }
 }

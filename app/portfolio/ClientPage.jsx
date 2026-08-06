@@ -120,12 +120,6 @@ const PortfolioSection = () => {
       ? sampleProjects
       : sampleProjects.filter((p) => p.category === activeFilter);
 
-  const stats = [
-    { number: "50+", label: "Projects Delivered" },
-    { number: "100%", label: "Client Satisfaction" },
-    { number: "5+", label: "Years Experience" },
-    { number: "10+", label: "Industries Served" },
-  ];
 
   const overviewCards = [
     {
@@ -183,61 +177,47 @@ const PortfolioSection = () => {
       </section>
 
       {/* ── INTRO SECTION ── */}
-      <section className="pf-intro-section">
-        {/* Left Column */}
-        <div className="pf-intro-left">
-          <div className="pf-intro-label">
-            <span className="pf-intro-line"></span>
-            <span className="pf-intro-label-text">Our Portfolio</span>
+      <section className="pf-intro-wrapper">
+        <div className="pf-intro-section">
+          {/* Left Column */}
+          <div className="pf-intro-left">
+            <div className="pf-intro-label">
+              <span className="pf-intro-line"></span>
+              <span className="pf-intro-label-text">Our Portfolio</span>
+            </div>
+
+            <h2 className="pf-intro-heading">
+              Work Built on{" "}
+              <span className="pf-intro-highlight">Purpose &amp; Precision</span>
+            </h2>
           </div>
 
-          <h2 className="pf-intro-heading">
-            Work Built on{" "}
-            <span className="pf-intro-highlight">Purpose &amp; Precision</span>
-          </h2>
-
-          {/* Mini Stats */}
-          <div className="pf-intro-stats">
-            <div className="pf-intro-stat">
-              <span className="pf-intro-stat-num">10+</span>
-              <span className="pf-intro-stat-lbl">Projects</span>
-            </div>
-            <div className="pf-intro-stat">
-              <span className="pf-intro-stat-num">10+</span>
-              <span className="pf-intro-stat-lbl">Industries</span>
-            </div>
-            <div className="pf-intro-stat">
-              <span className="pf-intro-stat-num">3x</span>
-              <span className="pf-intro-stat-lbl">Avg. Growth</span>
-            </div>
+          {/* Right Column */}
+          <div className="pf-intro-right">
+            <p>
+              At <strong>MaaJanki Web Tech</strong>, every project in our{" "}
+              <strong>digital marketing portfolio</strong> started with a single
+              commitment to help a business grow in a meaningful, measurable way.
+              We bring{" "}
+              <strong>
+                strategic thinking, sharp design, and performance-driven marketing
+              </strong>{" "}
+              to deliver outcomes that are trackable and lasting.
+            </p>
+            <p>
+              From first-time founders finding their voice to established
+              companies expanding their digital reach, our{" "}
+              <strong>SEO, branding, and web development work</strong> delivers
+              the same level of craft across every engagement whether it’s a
+              startup brand identity or a complex multi-channel campaign.
+            </p>
+            <p>
+              Browse through to see how <strong>ideas become results</strong>, and
+              how MaaJanki Web Tech turns a brief into a brand story worth
+              telling. Each case study reflects our commitment to measurable ROI
+              and long-term client growth.
+            </p>
           </div>
-        </div>
-
-        {/* Right Column */}
-        <div className="pf-intro-right">
-          <p>
-            At <strong>MaaJanki Web Tech</strong>, every project in our{" "}
-            <strong>digital marketing portfolio</strong> started with a single
-            commitment to help a business grow in a meaningful, measurable way.
-            We bring{" "}
-            <strong>
-              strategic thinking, sharp design, and performance-driven marketing
-            </strong>{" "}
-            to deliver outcomes that are trackable and lasting.
-          </p>
-          <p>
-            From first-time founders finding their voice to established
-            companies expanding their digital reach, our{" "}
-            <strong>SEO, branding, and web development work</strong> delivers
-            the same level of craft across every engagement whether it’s a
-            startup brand identity or a complex multi-channel campaign.
-          </p>
-          <p>
-            Browse through to see how <strong>ideas become results</strong>, and
-            how MaaJanki Web Tech turns a brief into a brand story worth
-            telling. Each case study reflects our commitment to measurable ROI
-            and long-term client growth.
-          </p>
         </div>
       </section>
 
@@ -289,7 +269,7 @@ const PortfolioSection = () => {
                   item.featured ? " pf-card-featured" : ""
                 }`}
               >
-                {/* Image */}
+                {/* Image Wrap */}
                 <div className="portfolio-image-wrap">
                   <Image
                     src={item.image}
@@ -300,9 +280,18 @@ const PortfolioSection = () => {
                         : "Portfolio Project by MaaJanki Web Tech"
                     }
                     loading="lazy"
-                   width={600} height={400} />
+                    width={600}
+                    height={400}
+                  />
                   {/* Category Badge */}
                   <span className="pf-category-badge">{item.category}</span>
+
+                  {/* Card Title Footer (Visible before hover) */}
+                  <div className="pf-card-footer">
+                    <h3 className="pf-card-footer-title">{item.title}</h3>
+                    <span className="pf-card-arrow">↗</span>
+                  </div>
+
                   {/* Hover Overlay — title + desc + button */}
                   <div className="pf-img-overlay">
                     <h3 className="pf-overlay-title">{item.title}</h3>
@@ -327,11 +316,10 @@ const PortfolioSection = () => {
 
       {/* ── THE MAAJANKIWEBTECH DIFFERENCE ── */}
       <section className="pf-difference-section">
-        <div className="pf-difference-header">
-          <span className="pf-diff-label">Why Us</span>
+        <div className="pf-diff-header">
+          <span className="pf-diff-badge">Why Us</span>
           <h2 className="pf-diff-title">
-            The <span className="pf-diff-highlight">MaaJanki Web Tech</span>{" "}
-            Difference
+            The MaaJanki Web Tech Difference
           </h2>
           <p className="pf-diff-subtitle">
             We don’t just build websites or run ads we craft complete digital
@@ -405,15 +393,6 @@ const PortfolioSection = () => {
         </div>
       </section>
 
-      {/* ── STATS STRIP ── */}
-      <section className="pf-stats-strip">
-        {stats.map((s, i) => (
-          <div key={i} className="pf-stat-item">
-            <span className="pf-stat-number">{s.number}</span>
-            <span className="pf-stat-label">{s.label}</span>
-          </div>
-        ))}
-      </section>
 
       {/* ── OVERVIEW SECTION ── */}
       <section className="portfolio-overview-section">
