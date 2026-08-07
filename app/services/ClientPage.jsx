@@ -57,25 +57,25 @@ const Services = () => {
 
   const counters = [
     {
-      number: "500+",
+      // number: "500+",
       img: "/images/happy-clients.png",
       title: "Client Happiness",
       alt: "Happy clients served by MaaJanki Web Tech",
     },
     {
-      number: "250+",
+      // number: "250+",
       img: "/images/project-complete.png",
       title: "Top-Rated Projects",
       alt: "Successful digital marketing and web projects",
     },
     {
-      number: "150+",
+      // number: "150+",
       img: "/images/design-complete.png",
       title: "Creative Masterpieces",
       alt: "Creative design and branding projects",
     },
     {
-      number: "10+",
+      // number: "10+",
       img: "/images/experience.png",
       title: "Team of Experts",
       alt: "Experienced digital marketing professionals",
@@ -277,8 +277,8 @@ const Services = () => {
       </section>
       {/* Hero Section End */}
 
-      {/* Services Hero Section */}
-      <section className="services-hero">
+      {/* Services Hero Section 1: About Agency */}
+      <section className="services-hero services-about-agency-section">
         <div className="services-hero-wrapper">
           {/* Left Side Image */}
           <div className="services-hero-image">
@@ -293,7 +293,7 @@ const Services = () => {
           {/* Right Side Content */}
           <div className="services-hero-content">
             <h2 style={{ fontSize: "2rem" }}>
-              Best Digital Marketing & Website Development Agency in Bihar, India — MaaJanki Web Tech
+              Best Digital Marketing &amp; Website Development Agency in Bihar, India — MaaJanki Web Tech
             </h2>
 
             <p className="justified-text">
@@ -312,19 +312,20 @@ const Services = () => {
 
             <div className="button-wrapper">
               <Link href="/about">
-                <button className="cta-button">About Us</button>
+                <button className="cta-button cta-button-navy">About Us</button>
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="services-hero">
+      {/* Services Hero Section 2: Why Choose Us */}
+      <section className="services-hero services-why-choose-section">
         <div className="services-hero-wrapper">
           {/* Left Side Content */}
           <div className="services-hero-content">
             <h2>
-              Why Bihar & India's Growing Businesses Choose MaaJanki Web Tech for Digital Growth
+              Why Bihar &amp; India's Growing Businesses Choose MaaJanki Web Tech for Digital Growth
             </h2>
 
             <p className="justified-text">
@@ -349,7 +350,7 @@ const Services = () => {
 
             <div className="button-wrapper">
               <Link href="/contact">
-                <button className="cta-button">Contact Us</button>
+                <button className="cta-button cta-button-orange">Contact Us</button>
               </Link>
             </div>
           </div>
@@ -382,7 +383,7 @@ const Services = () => {
                 <FontAwesomeIcon icon={faLightbulb} />
               </div>
             </div>
-            <p>Branding & Identity</p>
+            <p>Branding &amp; Identity</p>
           </div>
 
           {/* Step 2 */}
@@ -490,14 +491,14 @@ const Services = () => {
                 <FontAwesomeIcon icon={faRobot} />
               </div>
             </div>
-            <p>AI Automation & Chatbots</p>
+            <p>AI Automation &amp; Chatbots</p>
           </div>
         </div>
       </section>
       {/* service process end */}
 
       {/* Services Section */}
-      <section className="services-section ptb-100 gray-light-bg">
+      <section className="services-section ptb-100 services-grid-main-section">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8">
@@ -566,7 +567,7 @@ const Services = () => {
       {/* Counter and Clients Section */}
       <section className="counters-section wow animate__fadeIn">
         <div className="container">
-          <div className="row row-cols-2 row-cols-md-4">
+          <div className="row row-cols-2 row-cols-md-4 g-4">
             {counters.map((counter, index) => (
               <div
                 key={index}
@@ -574,14 +575,18 @@ const Services = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="counter-box-wrapper">
-                  <Image
-                    loading="lazy"
-                    src={counter.img}
-                    alt={counter.title}
-                    title={counter.title}
-                    className="counter-img"
-                   width={600} height={400} />
-                  {/* <h3 className="counter-number">{counter.number}</h3> */}
+                  <div className="counter-icon-container">
+                    <Image
+                      loading="lazy"
+                      src={counter.img}
+                      alt={counter.title}
+                      title={counter.title}
+                      className="counter-img"
+                      width={80}
+                      height={80}
+                    />
+                  </div>
+                  <h3 className="counter-number">{counter.number}</h3>
                   <h6 className="counter-title">{counter.title}</h6>
                 </div>
               </div>
@@ -590,8 +595,11 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Clients Section */}
       <section className="clients-section">
-        <h5 className="clients-title">Our Clients</h5>
+        <div className="clients-title-wrapper">
+          <h5 className="clients-title">Our Clients</h5>
+        </div>
 
         {/* First Line: Right → Left */}
         <div className="slider-container">
@@ -605,7 +613,9 @@ const Services = () => {
                     title={client.title}
                     className="client-img"
                     loading="lazy"
-                   width={600} height={400} />
+                    width={180}
+                    height={80}
+                  />
                 </div>
               ))}
             </div>
@@ -624,7 +634,9 @@ const Services = () => {
                     title={client.title}
                     className="client-img"
                     loading="lazy"
-                   width={600} height={400} />
+                    width={180}
+                    height={80}
+                  />
                 </div>
               ))}
             </div>
@@ -635,7 +647,9 @@ const Services = () => {
 
       {/* Collaborators Section */}
       <section className="collaborators-section">
-        <h5 className="collaborators-title">Our Collaborators</h5>
+        <div className="collaborators-title-wrapper">
+          <h5 className="collaborators-title">Our Official Collaborators</h5>
+        </div>
 
         <div className="slider-container">
           <div className="slider slide-right">
@@ -648,7 +662,9 @@ const Services = () => {
                     alt={`${col.alt} – Technology & Marketing Partner of MaaJanki Web Tech`}
                     title={`${col.alt} | Official Collaborator of MaaJanki Web Tech`}
                     className="collaborator-img"
-                   width={600} height={400} />
+                    width={180}
+                    height={80}
+                  />
                 </div>
               ))}
             </div>

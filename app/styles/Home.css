@@ -2444,3 +2444,208 @@
     }
 }
 
+/* ========================================================================== */
+/* COUNTERS, CLIENTS & COLLABORATORS UNIFIED BRAND SYSTEM                       */
+/* ========================================================================== */
+
+/* ── Counters Section ── */
+.counters-section {
+  padding: 85px 0 !important;
+  background: #042442 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.counters-section .container {
+  max-width: 1240px !important;
+  margin: 0 auto !important;
+}
+
+.counter-box-wrapper {
+  background: #ffffff !important;
+  border: 2px solid #FD730E !important;
+  border-radius: 20px !important;
+  padding: 30px 18px !important;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3) !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.counter-box-wrapper:hover {
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: 0 22px 45px rgba(253, 115, 14, 0.45) !important;
+  border-color: #ffffff !important;
+}
+
+.counter-icon-container {
+  width: 75px !important;
+  height: 75px !important;
+  margin: 0 auto 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.counter-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+.counter-number {
+  font-size: 2.2rem !important;
+  font-weight: 800 !important;
+  font-family: "Outfit", sans-serif !important;
+  color: #FD730E !important;
+  margin: 8px 0 4px !important;
+  line-height: 1.1 !important;
+}
+
+.counter-title {
+  color: #042442 !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+  font-family: "Outfit", sans-serif !important;
+  margin: 0 !important;
+}
+
+/* ── Clients Section (BRAND ORANGE: #FD730E) ── */
+.clients-section {
+  padding: 85px 0 70px !important;
+  background: #FD730E !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.clients-title-wrapper,
+.collaborators-title-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 35px !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.clients-title {
+  display: inline-block !important;
+  background: #042442 !important;
+  color: #ffffff !important;
+  padding: 12px 38px !important;
+  border-radius: 50px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  font-size: 1.4rem !important;
+  font-family: "Outfit", sans-serif !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 8px 25px rgba(4, 36, 66, 0.4) !important;
+  margin: 0 !important;
+}
+
+.collaborators-title {
+  display: inline-block !important;
+  background: #FD730E !important;
+  color: #ffffff !important;
+  padding: 12px 38px !important;
+  border-radius: 50px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  font-size: 1.4rem !important;
+  font-family: "Outfit", sans-serif !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 8px 25px rgba(253, 115, 14, 0.4) !important;
+  margin: 0 !important;
+}
+
+/* Infinite Marquee Slider Layout */
+.slider-container {
+  overflow: hidden !important;
+  margin: 20px 0 !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+.slider {
+  overflow: hidden !important;
+  width: 100% !important;
+  position: relative !important;
+  display: flex !important;
+}
+
+.slide-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  width: max-content !important;
+  will-change: transform !important;
+}
+
+.slide {
+  flex: 0 0 auto !important;
+  width: 180px !important;
+  max-width: 180px !important;
+  height: 80px !important;
+  margin: 0 14px !important;
+  padding: 10px 24px !important;
+  background: #ffffff !important;
+  border: 2px solid #042442 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18) !important;
+  transition: transform 0.3s ease, border-color 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.slide:hover {
+  transform: translateY(-4px) !important;
+  border-color: #FD730E !important;
+}
+
+.client-img,
+.collaborator-img {
+  width: 130px !important;
+  height: 55px !important;
+  object-fit: contain !important;
+}
+
+.slide-right .slide-track {
+  animation: marquee-scroll-right 28s linear infinite !important;
+}
+
+.slide-left .slide-track {
+  animation: marquee-scroll-left 28s linear infinite !important;
+}
+
+@keyframes marquee-scroll-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-scroll-left {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ── Collaborators Section (BRAND NAVY: #042442) ── */
+.collaborators-section {
+  padding: 85px 0 !important;
+  background: #042442 !important;
+  border-top: 3px solid #FD730E !important;
+}
+
+

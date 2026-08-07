@@ -85,6 +85,40 @@ export default function ProductsPage() {
         "Automated Review Request SMS/Email Campaigns"
       ]
     },
+    {
+      title: "Tailwind Templates",
+      tag: "Developer Bundle",
+      badgeColor: "#06b6d4",
+      badgeText: "50+ Landing Pages",
+      description: "An ultimate bundle of 50+ modern, fully responsive landing page templates built with HTML5 & Tailwind CSS. Engineered for rapid startup deployment and high-converting marketing campaigns.",
+      image: "/images/products/tailwind-templates.webp",
+      link: "/products",
+      external: false,
+      buttonText: "Explore Templates",
+      features: [
+        "50+ Ready-to-Deploy Responsive Landing Templates",
+        "Tailwind CSS v3 + HTML5 Semantic Codebase",
+        "SEO Optimized Layouts with Core Web Vitals < 95+",
+        "Clean Component Architecture & Zero Dependencies"
+      ]
+    },
+    {
+      title: "Elementor Pro",
+      tag: "WordPress Builder",
+      badgeColor: "#ec4899",
+      badgeText: "WordPress Preferred",
+      description: "The world's leading drag-and-drop WordPress website builder. Build premium WooCommerce storefronts, dynamic popups, and custom themes without writing code.",
+      image: "/images/products/elementor-pro.webp",
+      link: "/products",
+      external: false,
+      buttonText: "Explore Elementor Pro",
+      features: [
+        "Intuitive Drag-and-Drop Visual Page Builder",
+        "WooCommerce Custom Builder & Product Page Layouts",
+        "300+ Premium Pro Kits & Section Templates",
+        "Dynamic Motion Effects & Theme Builder Integration"
+      ]
+    }
   ];
 
   return (
@@ -107,7 +141,7 @@ export default function ProductsPage() {
         <div className="products-grid-inner">
           <div className="row g-4">
             {productsList.map((product, idx) => (
-              <div key={idx} className="col-lg-6">
+              <div key={idx} className="col-lg-4 col-md-6 col-12">
                 <div className="product-card">
                   <div>
                     {/* Header Badges */}

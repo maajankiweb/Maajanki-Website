@@ -45,25 +45,25 @@ import { MdDesignServices } from "react-icons/md";
 function Home() {
   const counters = [
     {
-      number: "500+",
+      // number: "500+",
       img: "/images/happy-clients.png",
       title: "Client Happiness",
       alt: "Happy clients served by MaaJanki Web Tech",
     },
     {
-      number: "250+",
+      // number: "250+",
       img: "/images/project-complete.png",
       title: "Top-Rated Projects",
       alt: "Successful digital marketing and web projects",
     },
     {
-      number: "150+",
+      // number: "150+",
       img: "/images/design-complete.png",
       title: "Creative Masterpieces",
       alt: "Creative design and branding projects",
     },
     {
-      number: "10+",
+      // number: "10+",
       img: "/images/experience.png",
       title: "Team of Experts",
       alt: "Experienced digital marketing professionals",
@@ -1735,19 +1735,19 @@ function Home() {
                 className="col text-center counter-item"
               >
                 <div className="counter-box-wrapper">
-                  <Image
-                    loading="lazy"
-                    src={counter.img}
-                    alt={counter.title}
-                    title={counter.title}
-                    className="counter-img"
-                    width="65"
-                    height="65"
-                   />
-                  {/* <h3 className="counter-number">{counter.number}</h3> */}
-                  <p className="counter-title mb-0">
-                    {counter.title}
-                  </p>
+                  <div className="counter-icon-container">
+                    <Image
+                      loading="lazy"
+                      src={counter.img}
+                      alt={counter.title}
+                      title={counter.title}
+                      className="counter-img"
+                      width={80}
+                      height={80}
+                    />
+                  </div>
+                  <h3 className="counter-number">{counter.number}</h3>
+                  <h6 className="counter-title">{counter.title}</h6>
                 </div>
               </div>
             ))}
@@ -1755,9 +1755,10 @@ function Home() {
         </div>
       </section>
 
-      <section className="clients-section text-center">
-        <div className="clients-title-wrapper mb-4">
-          <h2 className="clients-title">Our Clients</h2>
+      {/* Clients Section */}
+      <section className="clients-section">
+        <div className="clients-title-wrapper">
+          <h5 className="clients-title">Our Clients</h5>
         </div>
 
         {/* First Line: Right → Left */}
@@ -1772,9 +1773,9 @@ function Home() {
                     title={client.title}
                     className="client-img"
                     loading="lazy"
-                    width="140"
-                    height="65"
-                   />
+                    width={180}
+                    height={80}
+                  />
                 </div>
               ))}
             </div>
@@ -1793,9 +1794,9 @@ function Home() {
                     title={client.title}
                     className="client-img"
                     loading="lazy"
-                    width="140"
-                    height="65"
-                   />
+                    width={180}
+                    height={80}
+                  />
                 </div>
               ))}
             </div>
@@ -1805,9 +1806,9 @@ function Home() {
       {/* Counter and Clients Section End */}
 
       {/* Collaborators Section */}
-      <section className="collaborators-section text-center">
-        <div className="collaborators-title-wrapper mb-4">
-          <h2 className="collaborators-title">Our Collaborators</h2>
+      <section className="collaborators-section">
+        <div className="collaborators-title-wrapper">
+          <h5 className="collaborators-title">Our Official Collaborators</h5>
         </div>
 
         <div className="slider-container">
@@ -1821,9 +1822,9 @@ function Home() {
                     alt={`${col.alt} – Technology & Marketing Partner of MaaJanki Web Tech`}
                     title={`${col.alt} | Official Collaborator of MaaJanki Web Tech`}
                     className="collaborator-img"
-                    width="150"
-                    height="60"
-                   />
+                    width={180}
+                    height={80}
+                  />
                 </div>
               ))}
             </div>

@@ -1,188 +1,200 @@
 /* ==========================================================
    PRODUCTS PAGE — MaaJanki Web Tech
-   All tokens aligned to global design system
+   Fully Responsive for Mobile, Tablet & Desktop
    ========================================================== */
 
 /* Page wrapper */
 .products-page {
-  background : #020617;
-  min-height : 100vh;
-  color      : #f8fafc;
+  background: #042442;
+  min-height: 100vh;
+  color: #f8fafc;
 }
 
 /* ── Hero Section ── */
 .products-hero {
-  background  : radial-gradient(circle at 50% 0%, rgba(253, 106, 2, 0.15) 0%, rgba(4, 37, 68, 0.8) 50%, #020617 100%);
-  padding     : 80px 20px 64px;
-  border-bottom: 1px solid #1e293b;
+  background: linear-gradient(135deg, #042442 0%, #061826 100%);
+  padding: 85px 20px 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .products-hero-inner {
-  max-width : 860px;
-  margin    : 0 auto;
+  max-width: 860px;
+  margin: 0 auto;
   text-align: center;
 }
 
-/* Section label badge — reusable pattern */
+/* Section label badge */
 .products-label-badge {
-  display      : inline-flex;
-  align-items  : center;
-  gap          : 8px;
-  background   : rgba(253, 106, 2, 0.1);
-  border       : 1px solid rgba(253, 106, 2, 0.3);
-  padding      : 7px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(253, 115, 14, 0.15);
+  border: 1px solid rgba(253, 115, 14, 0.35);
+  padding: 7px 22px;
   border-radius: 30px;
-  color        : #FD6A02;
-  font-weight  : 600;
-  font-size    : 0.875rem;
+  color: #FD730E;
+  font-weight: 700;
+  font-size: 0.875rem;
   margin-bottom: 24px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .products-hero h1 {
-  font-size     : clamp(2rem, 5vw, 3.5rem);
-  font-weight   : 800;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
   letter-spacing: -0.02em;
-  line-height   : 1.15;
-  margin-bottom : 20px;
-  color         : #ffffff;
-  overflow-wrap : break-word;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
 .products-hero-desc {
-  font-size  : clamp(1rem, 2vw, 1.2rem);
-  color      : #94a3b8;
-  line-height: 1.6;
-  max-width  : 750px;
-  margin     : 0 auto;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: #cbd5e1;
+  line-height: 1.65;
+  max-width: 750px;
+  margin: 0 auto;
 }
 
 /* ── Products Grid Section ── */
 .products-grid-section {
-  padding: 64px 20px;
+  padding: 70px 20px 90px;
+  background: #042442;
 }
 
 .products-grid-inner {
-  max-width: 1240px;
-  margin   : 0 auto;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 /* ── Product Card ── */
 .product-card {
-  background    : rgba(15, 23, 42, 0.75);
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border        : 1px solid #1e293b;
-  border-radius : 20px;
-  padding       : 32px;
-  height        : 100%;
-  display       : flex;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 32px 24px;
+  height: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow    : 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-  transition    : border-color 0.3s ease, box-shadow 0.3s ease;
-  overflow-wrap : break-word;
-  word-break    : break-word;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .product-card:hover {
-  border-color: rgba(253, 106, 2, 0.35);
-  box-shadow  : 0 24px 48px -12px rgba(0, 0, 0, 0.6), 0 0 20px rgba(253, 106, 2, 0.08);
+  border-color: rgba(253, 115, 14, 0.7);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 25px rgba(253, 115, 14, 0.3);
 }
 
 /* Card header badges */
 .product-card-header {
-  display        : flex;
+  display: flex;
   justify-content: space-between;
-  align-items    : center;
-  margin-bottom  : 20px;
-  flex-wrap      : wrap;
-  gap            : 8px;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .product-tag-badge {
-  background   : rgba(30, 41, 59, 0.8);
-  border       : 1px solid #334155;
-  color        : #cbd5e1;
-  font-size    : 0.8rem;
-  font-weight  : 600;
-  padding      : 4px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 14px;
   border-radius: 12px;
-  white-space  : nowrap;
+  white-space: nowrap;
 }
 
 .product-status-badge {
-  font-size    : 0.75rem;
-  font-weight  : 700;
-  padding      : 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 12px;
   border-radius: 20px;
-  white-space  : nowrap;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
 }
 
 /* Image container */
 .product-image-wrap {
   border-radius: 14px;
-  overflow     : hidden;
+  overflow: hidden;
   margin-bottom: 24px;
-  border       : 1px solid #1e293b;
-  background   : #020617;
-  aspect-ratio : 600 / 350;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #020617;
+  aspect-ratio: 600 / 350;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-image-wrap img {
+  transform: scale(1.05);
 }
 
 .product-image-wrap img {
-  width  : 100%;
-  height : auto;
+  width: 100%;
+  height: auto;
   display: block;
+  transition: transform 0.4s ease;
 }
 
 /* Title & description */
 .product-card h2 {
-  font-size    : clamp(1.25rem, 2vw, 1.75rem);
-  font-weight  : 700;
-  color        : #ffffff;
+  font-size: 1.45rem;
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  color: #ffffff;
   margin-bottom: 12px;
-  overflow-wrap: break-word;
+  line-height: 1.3;
 }
 
 .product-card-desc {
-  color        : #94a3b8;
-  font-size    : 0.94rem;
-  line-height  : 1.6;
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  line-height: 1.65;
   margin-bottom: 24px;
 }
 
 /* Features list */
 .product-features {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .product-features-label {
-  font-size     : 0.8rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color         : #FD6A02;
-  font-weight   : 700;
-  margin-bottom : 12px;
+  letter-spacing: 0.08em;
+  color: #FD730E;
+  font-weight: 800;
+  margin-bottom: 12px;
 }
 
 .product-features ul {
   list-style: none;
-  padding   : 0;
-  margin    : 0;
+  padding: 0;
+  margin: 0;
 }
 
 .product-features li {
-  display    : flex;
+  display: flex;
   align-items: flex-start;
-  gap        : 10px;
-  color      : #cbd5e1;
-  font-size  : 0.875rem;
-  margin-bottom: 8px;
-  line-height  : 1.4;
-  overflow-wrap: break-word;
+  gap: 10px;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+  line-height: 1.45;
+  font-weight: 500;
 }
 
 .product-features li i {
-  color     : #FD6A02;
+  color: #FD730E;
   margin-top: 3px;
   flex-shrink: 0;
 }
@@ -190,57 +202,344 @@
 /* CTA action area */
 .product-card-actions {
   padding-top: 20px;
-  border-top : 1px solid #1e293b;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .product-cta-btn {
-  background     : #FD6A02;
-  color          : #ffffff;
-  padding        : 13px 28px;
-  border-radius  : 14px;
-  font-weight    : 600;
-  display        : inline-flex;
-  align-items    : center;
+  background: #FD730E;
+  color: #ffffff !important;
+  padding: 13px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap            : 8px;
-  width          : 100%;
+  gap: 10px;
+  width: 100%;
   text-decoration: none;
-  font-size      : 0.94rem;
-  transition     : background 0.3s ease, transform 0.2s ease;
-  border         : none;
-  cursor         : pointer;
+  font-size: 0.94rem;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(253, 115, 14, 0.35);
+  cursor: pointer;
 }
 
 .product-cta-btn:hover {
-  background: #e05600;
-  transform : translateY(-2px);
-  color     : #ffffff;
+  background: #ff8224;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(253, 115, 14, 0.55);
+  color: #ffffff !important;
 }
 
-/* ── Responsive ── */
+.product-cta-btn i {
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+
+.product-cta-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* ========================================================================== */
+/* PRODUCT DETAIL PAGES UNIFIED STYLES SYSTEM                                 */
+/* ========================================================================== */
+.product-detail-page {
+  background: #042442;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.product-detail-section {
+  padding: 85px 0;
+  position: relative;
+}
+
+.bg-orange-alt {
+  background: #FD730E;
+  color: #ffffff;
+}
+
+.bg-navy-alt {
+  background: #042442;
+  color: #ffffff;
+}
+
+.product-detail-section .section-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.bg-orange-alt .section-badge {
+  background: rgba(4, 36, 66, 0.25);
+  color: #042442;
+  border: 1px solid rgba(4, 36, 66, 0.4);
+}
+
+.bg-navy-alt .section-badge {
+  background: rgba(253, 115, 14, 0.15);
+  color: #FD730E;
+  border: 1px solid rgba(253, 115, 14, 0.35);
+}
+
+.product-section-title {
+  font-size: 36px;
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.bg-orange-alt .product-section-title {
+  color: #042442 !important;
+}
+
+.bg-navy-alt .product-section-title {
+  color: #ffffff !important;
+}
+
+.product-section-subtitle {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto 45px auto;
+}
+
+.bg-orange-alt .product-section-subtitle {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.bg-navy-alt .product-section-subtitle {
+  color: #cbd5e1 !important;
+}
+
+/* Feature & Capability Cards */
+.capability-card, .why-better-card, .module-card {
+  border-radius: 20px;
+  padding: 32px 24px;
+  height: 100%;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+}
+
+.bg-orange-alt .capability-card,
+.bg-orange-alt .why-better-card,
+.bg-orange-alt .module-card {
+  background: #042442;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.bg-orange-alt .capability-card:hover,
+.bg-orange-alt .why-better-card:hover,
+.bg-orange-alt .module-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #ffffff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 25px rgba(4, 36, 66, 0.5);
+}
+
+.bg-navy-alt .capability-card,
+.bg-navy-alt .why-better-card,
+.bg-navy-alt .module-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+}
+
+.bg-navy-alt .capability-card:hover,
+.bg-navy-alt .why-better-card:hover,
+.bg-navy-alt .module-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(253, 115, 14, 0.7);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 25px rgba(253, 115, 14, 0.3);
+}
+
+.card-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(253, 115, 14, 0.2);
+  color: #FD730E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(253, 115, 14, 0.35);
+  transition: all 0.3s ease;
+}
+
+.capability-card:hover .card-icon-box,
+.why-better-card:hover .card-icon-box,
+.module-card:hover .card-icon-box {
+  background: #FD730E;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.card-item-title {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 10px;
+  color: #ffffff !important;
+}
+
+.bg-orange-alt .card-item-title {
+  color: #FD730E !important;
+}
+
+.card-item-desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #ffffff !important;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* Process Step Cards */
+.process-step-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 35px 26px;
+  height: 100%;
+  transition: all 0.35s ease;
+}
+
+.bg-orange-alt .process-step-card {
+  background: #042442;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bg-navy-alt .process-step-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.step-badge {
+  position: absolute;
+  top: -16px;
+  left: 24px;
+  background: #FD730E;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(253, 115, 14, 0.4);
+}
+
+.process-step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Comprehensive Device Responsiveness ── */
+
+/* Laptops & Tablets (992px and down) */
 @media (max-width: 992px) {
-  .products-hero {
+  .products-hero,
+  .product-detail-section {
     padding: 64px 20px 48px;
   }
-}
-
-@media (max-width: 767px) {
-  .products-hero {
-    padding: 48px 16px 40px;
+  
+  .products-grid-section {
+    padding: 50px 20px 70px;
   }
 
-  .product-card {
+  .product-card,
+  .capability-card,
+  .why-better-card,
+  .module-card,
+  .process-step-card {
+    padding: 28px 20px;
+  }
+
+  .product-section-title {
+    font-size: 30px;
+  }
+}
+
+/* Tablets (768px and down) */
+@media (max-width: 768px) {
+  .products-hero,
+  .product-detail-section {
+    padding: 50px 16px 40px;
+  }
+
+  .products-grid-section {
+    padding: 40px 16px 60px;
+  }
+
+  .product-card,
+  .capability-card,
+  .why-better-card,
+  .module-card,
+  .process-step-card {
     padding: 24px 20px;
   }
+
+  .product-card h2,
+  .product-section-title {
+    font-size: 26px;
+  }
 }
 
-@media (max-width: 480px) {
-  .products-hero {
+/* Mobile Devices (576px and down) */
+@media (max-width: 576px) {
+  .products-hero,
+  .product-detail-section {
     padding: 40px 16px 32px;
   }
 
-  .product-card {
-    padding: 20px 16px;
+  .products-grid-section {
+    padding: 35px 16px 50px;
+  }
+
+  .product-card,
+  .capability-card,
+  .why-better-card,
+  .module-card,
+  .process-step-card {
+    padding: 22px 18px;
     border-radius: 16px;
+  }
+
+  .product-card-header {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .product-cta-btn {
+    padding: 11px 20px;
+    font-size: 0.88rem;
+  }
+
+  .product-section-title {
+    font-size: 22px;
+  }
+}
+
+/* Ultra Small Phones (380px and down) */
+@media (max-width: 380px) {
+  .product-card,
+  .capability-card,
+  .why-better-card,
+  .module-card,
+  .process-step-card {
+    padding: 18px 14px;
+  }
+
+  .product-card h2,
+  .product-section-title {
+    font-size: 20px;
   }
 }
