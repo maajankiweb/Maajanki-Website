@@ -1,0 +1,253 @@
+/* =====================================================
+   3D & GLASSMORPHISM STYLES - Auth Pages (Sign-In / Sign-Up)
+   MaaJanki Web Tech
+   ===================================================== */
+
+.auth-3d-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 15% 20%, #0d3b66 0%, #042544 50%, #020e1a 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  perspective: 1200px;
+}
+
+/* Dynamic Ambient Floating 3D Orbs */
+.auth-3d-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(65px);
+  opacity: 0.55;
+  pointer-events: none;
+  animation: floatOrb 12s ease-in-out infinite alternate;
+}
+
+.auth-3d-orb-1 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #FD6A02 0%, rgba(253, 106, 2, 0) 70%);
+  top: -80px;
+  left: -80px;
+}
+
+.auth-3d-orb-2 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #00d2ff 0%, rgba(0, 210, 255, 0) 70%);
+  bottom: -120px;
+  right: -100px;
+  animation-delay: -5s;
+}
+
+.auth-3d-orb-3 {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, #7928ca 0%, rgba(121, 40, 202, 0) 70%);
+  top: 40%;
+  right: 15%;
+  animation-delay: -8s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -40px) scale(1.1); }
+  100% { transform: translate(-20px, 30px) scale(0.95); }
+}
+
+/* 3D Grid Overlay */
+.auth-3d-grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: rotateX(60deg) scale(2);
+  transform-origin: center top;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* Stage & Container */
+.auth-3d-stage {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Floating 3D Decorative Badges */
+.auth-3d-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  z-index: 12;
+  animation: floatBadge 6s ease-in-out infinite alternate;
+}
+
+.badge-top-left {
+  top: -25px;
+  left: -40px;
+}
+
+.badge-bottom-right {
+  bottom: -20px;
+  right: -40px;
+  animation-delay: -3s;
+}
+
+@keyframes floatBadge {
+  0% { transform: translateY(0px) rotate(-2deg); }
+  100% { transform: translateY(-14px) rotate(2deg); }
+}
+
+/* Glassmorphism Card Frame */
+.auth-3d-card-frame {
+  width: 100%;
+  background: rgba(4, 37, 68, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  padding: 12px;
+  box-shadow: 
+    0 30px 70px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(253, 106, 2, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.auth-3d-card-frame:hover {
+  transform: translateY(-4px) rotateX(1deg) rotateY(-1deg);
+  box-shadow: 
+    0 35px 80px rgba(0, 0, 0, 0.6),
+    0 0 50px rgba(253, 106, 2, 0.25),
+    inset 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+/* Top Agency Header inside Auth Stage */
+.auth-3d-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.auth-3d-title {
+  font-family: var(--font-outfit, 'Outfit', sans-serif);
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.auth-3d-subtitle {
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.auth-3d-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  background: rgba(253, 106, 2, 0.15);
+  border: 1px solid rgba(253, 106, 2, 0.35);
+  border-radius: 20px;
+  color: #FD6A02;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+/* Responsive Rules */
+@media (max-width: 640px) {
+  .badge-top-left {
+    top: -35px;
+    left: 0;
+  }
+  .badge-bottom-right {
+    bottom: -35px;
+    right: 0;
+  }
+  .auth-3d-card-frame {
+    border-radius: 20px;
+    padding: 6px;
+  }
+}
+
+/* Direct Clerk DOM Overrides for Guaranteed Glassmorphism Render */
+.cl-card,
+.cl-cardBox,
+.cl-signIn-start,
+.cl-signUp-start,
+[class*="cl-card"] {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.cl-headerTitle {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+.cl-headerSubtitle {
+  color: #94a3b8 !important;
+}
+
+.cl-formFieldInput,
+.cl-formFieldInput__identifier {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+}
+
+.cl-formFieldInput:focus {
+  border-color: #FD6A02 !important;
+  box-shadow: 0 0 15px rgba(253, 106, 2, 0.4) !important;
+}
+
+.cl-formButtonPrimary {
+  background: linear-gradient(135deg, #FD6A02 0%, #ff8533 100%) !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 25px rgba(253, 106, 2, 0.4) !important;
+}
+
+.cl-footerActionLink {
+  color: #FD6A02 !important;
+}
+

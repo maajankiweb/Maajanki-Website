@@ -232,6 +232,44 @@ export default function LocationsHubPage() {
           transform: translateY(-2px);
           box-shadow: 0 6px 20px rgba(253, 106, 2, 0.6);
         }
+        @media (max-width: 768px) {
+          .locations-hero {
+            padding: 50px 16px 40px;
+          }
+          .locations-hero h1 {
+            font-size: 2rem;
+          }
+          .locations-hero p {
+            font-size: 0.98rem;
+          }
+          .locations-section {
+            padding: 40px 16px;
+          }
+          .category-header h2 {
+            font-size: 1.4rem;
+          }
+          .location-grid {
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+          }
+          .cta-box {
+            padding: 35px 20px;
+          }
+          .cta-box h3 {
+            font-size: 1.5rem;
+          }
+        }
+        @media (max-width: 480px) {
+          .locations-hero h1 {
+            font-size: 1.6rem;
+          }
+          .location-grid {
+            grid-template-columns: 1fr;
+          }
+          .location-card {
+            padding: 20px 16px;
+          }
+        }
       `}</style>
 
       <section className="locations-hero">
