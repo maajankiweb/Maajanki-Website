@@ -45,25 +45,25 @@ import { MdDesignServices } from "react-icons/md";
 function Home() {
   const counters = [
     {
-      // number: "500+",
+      number: "500+",
       img: "/images/happy-clients.png",
       title: "Client Happiness",
       alt: "Happy clients served by MaaJanki Web Tech",
     },
     {
-      // number: "250+",
+      number: "250+",
       img: "/images/project-complete.png",
       title: "Top-Rated Projects",
       alt: "Successful digital marketing and web projects",
     },
     {
-      // number: "150+",
+      number: "150+",
       img: "/images/design-complete.png",
       title: "Creative Masterpieces",
       alt: "Creative design and branding projects",
     },
     {
-      // number: "10+",
+      number: "10+",
       img: "/images/experience.png",
       title: "Team of Experts",
       alt: "Experienced digital marketing professionals",
@@ -1746,7 +1746,7 @@ function Home() {
                       height={80}
                     />
                   </div>
-                  <h3 className="counter-number">{counter.number}</h3>
+                  {counter.number && <h3 className="counter-number">{counter.number}</h3>}
                   <h6 className="counter-title">{counter.title}</h6>
                 </div>
               </div>
