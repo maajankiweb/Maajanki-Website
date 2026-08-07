@@ -45,13 +45,8 @@ img {
   content-visibility: auto;
 }
 
-/* Defer rendering of heavy below-the-fold sections for instant browser speed */
-.section-pad-lg,
-.section-pad-md,
-section:not(:first-of-type) {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 600px;
-}
+/* Defer rendering of heavy below-the-fold images for instant browser speed */
+
 
 a {
   text-decoration: none;
