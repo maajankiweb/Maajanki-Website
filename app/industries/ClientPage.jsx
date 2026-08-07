@@ -223,9 +223,8 @@ const Industries = () => {
       {/* Business Size Section */}
       <section className="business-size-section-redesign">
         <div className="container">
-
           {/* Top Subsection: 2-Column Overview */}
-          <div className="business-size-grid" style={{ marginBottom: "80px" }}>
+          <div className="business-size-grid">
             {/* Left Column: Image */}
             <div className="business-size-image-container">
               <Image
@@ -291,10 +290,12 @@ const Industries = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="divider" style={{ background: "rgba(255,255,255,0.08)", marginBottom: "80px" }}></div>
-
-          {/* Bottom Subsection: 3-Column Detailed Pricing Cards */}
+      {/* Service Deliverables Plan Section */}
+      <section className="deliverables-section-redesign">
+        <div className="container">
           <div className="section-header-redesign">
             <span className="section-badge center">Service Deliverables</span>
             <h3 className="section-title-redesign" style={{ fontSize: "2.4rem" }}>Detailed Deliverables Plan</h3>

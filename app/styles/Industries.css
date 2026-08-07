@@ -1,71 +1,90 @@
 /* -------------------------------------------------------------------------- */
 /* MAAJANKI WEB TECH - INDUSTRIES PAGE STYLES SYSTEM                         */
+/* Perfect 6-Section Alternating Brand Colors: #FD730E and #042442           */
 /* -------------------------------------------------------------------------- */
 
 /* ---------- Container Base ---------- */
-.container {
+.container,
+.services-hero-container {
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-/* ---------- 1. About Section / Services Hero Redesign ---------- */
+/* ========================================================================== */
+/* SECTION 1: ABOUT MAAJANKI WEB TECH (BACKGROUND: #FD730E - ORANGE)         */
+/* ========================================================================== */
+.services-hero-redesign,
 .services-hero-redesign-wrapper {
-  background: linear-gradient(135deg, #042544 0%, #061826 100%);
-  padding: 90px 0;
+  background: #FD730E;
+  padding: 85px 0;
   color: #ffffff;
   position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .services-hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 50px;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 45px;
   align-items: center;
 }
 
 .services-hero-image-box {
   position: relative;
+  max-width: 440px;
+  width: 90%;
+  margin: 0 auto;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.services-hero-image-box:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
 }
 
 .hero-redesign-img {
   width: 100%;
+  max-height: 380px;
   height: auto;
   object-fit: cover;
   display: block;
-  border-radius: 20px;
+  border-radius: 16px;
   transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .services-hero-image-box:hover .hero-redesign-img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .image-overlay-glow {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(4, 37, 68, 0.8) 100%);
+  background: linear-gradient(180deg, transparent 40%, rgba(4, 36, 66, 0.6) 100%);
   pointer-events: none;
   z-index: 2;
 }
 
 .experience-badge {
   position: absolute;
-  bottom: 24px;
-  left: 24px;
+  bottom: 20px;
+  left: 20px;
   z-index: 5;
-  background: rgba(253, 106, 2, 0.95);
+  background: #042442;
   color: #ffffff;
-  padding: 14px 26px;
+  padding: 12px 24px;
   border-radius: 16px;
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 25px rgba(253, 106, 2, 0.45);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.services-hero-image-box:hover .experience-badge {
+  transform: scale(1.05);
 }
 
 .badge-number {
@@ -74,6 +93,7 @@
   font-family: "Outfit", sans-serif;
   display: block;
   line-height: 1;
+  color: #FD730E;
   margin-bottom: 2px;
 }
 
@@ -84,29 +104,24 @@
   letter-spacing: 1px;
 }
 
-/* Hero Content Box */
 .services-hero-text-box {
   display: flex;
   flex-direction: column;
 }
 
-.section-badge {
+.services-hero-text-box .section-badge {
   display: inline-block;
-  background: rgba(253, 106, 2, 0.15);
-  color: #FD6A02;
-  border: 1px solid rgba(253, 106, 2, 0.35);
+  background: #042442;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 6px 18px;
   border-radius: 30px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 18px;
   width: fit-content;
-}
-
-.section-badge.center {
-  margin: 0 auto 16px auto;
 }
 
 .hero-redesign-title {
@@ -118,16 +133,19 @@
   margin-bottom: 20px;
 }
 
-.highlight-text {
-  color: #FD6A02;
+.services-hero-text-box .highlight-text {
+  color: #ffffff !important;
+  background: #042442;
+  padding: 2px 10px;
+  border-radius: 8px;
 }
 
 .hero-lead-text {
   font-size: 16.5px;
   line-height: 1.75;
-  color: rgba(255, 255, 255, 0.95) !important;
+  color: #ffffff !important;
   margin-bottom: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .hero-description-blocks {
@@ -140,7 +158,7 @@
 .hero-description-blocks p {
   font-size: 14.5px;
   line-height: 1.7;
-  color: #cbd5e1 !important;
+  color: rgba(255, 255, 255, 0.95) !important;
   margin: 0;
 }
 
@@ -155,25 +173,26 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(4, 36, 66, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 12px 18px;
   border-radius: 14px;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 14px;
   backdrop-filter: blur(8px);
-  transition: all 0.3s ease;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .highlight-item:hover {
-  background: rgba(253, 106, 2, 0.12);
-  border-color: rgba(253, 106, 2, 0.4);
-  transform: translateY(-2px);
+  background: #042442;
+  border-color: #042442;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .highlight-item i {
-  color: #FD6A02;
+  color: #FD730E;
   font-size: 16px;
 }
 
@@ -181,41 +200,43 @@
   margin-top: 10px;
 }
 
-.cta-primary-btn {
+.services-hero-text-box .cta-primary-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #FD6A02;
+  background: #042442;
   color: #ffffff !important;
   font-weight: 700;
   font-size: 15px;
-  padding: 14px 32px;
+  padding: 14px 34px;
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 25px rgba(253, 106, 2, 0.4);
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 25px rgba(4, 36, 66, 0.4);
 }
 
-.cta-primary-btn:hover {
-  background: #ff7b1a;
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(253, 106, 2, 0.6);
+.services-hero-text-box .cta-primary-btn:hover {
+  background: #063158;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
-.cta-primary-btn i {
+.services-hero-text-box .cta-primary-btn i {
   font-size: 13px;
   transition: transform 0.3s ease;
 }
 
-.cta-primary-btn:hover i {
-  transform: translateX(4px);
+.services-hero-text-box .cta-primary-btn:hover i {
+  transform: translateX(5px);
 }
 
-/* ---------- 2. Business Size Section Redesign ---------- */
+/* ========================================================================== */
+/* SECTION 2A: WE SERVE BUSINESSES OF EVERY SIZE (BACKGROUND: #042442 - NAVY)*/
+/* ========================================================================== */
 .business-size-section-redesign {
-  background: linear-gradient(180deg, #061826 0%, #042544 100%);
+  background: #042442;
   padding: 90px 0;
   color: #ffffff;
   position: relative;
@@ -228,18 +249,47 @@
   align-items: center;
 }
 
+.business-size-image-container {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
 .business-size-image-container img {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.business-size-image-container:hover img {
+  transform: scale(1.04);
 }
 
 .business-size-content-container {
   display: flex;
   flex-direction: column;
+}
+
+.section-badge {
+  display: inline-block;
+  background: rgba(253, 115, 14, 0.15);
+  color: #FD730E;
+  border: 1px solid rgba(253, 115, 14, 0.35);
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  width: fit-content;
+}
+
+.section-badge.center {
+  margin: 0 auto 16px auto;
 }
 
 .section-title-redesign {
@@ -268,34 +318,41 @@
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-left: 4px solid #FD6A02;
+  border-left: 4px solid #FD730E;
   padding: 24px;
   border-radius: 16px;
   backdrop-filter: blur(10px);
-  transition: all 0.35s ease;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .business-tier-item:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(253, 106, 2, 0.5);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  transform: translateY(-6px) scale(1.01);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(253, 115, 14, 0.6);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
 }
 
 .business-tier-icon {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: rgba(253, 106, 2, 0.15);
-  color: #FD6A02;
+  background: rgba(253, 115, 14, 0.15);
+  color: #FD730E;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
   flex-shrink: 0;
-  border: 1px solid rgba(253, 106, 2, 0.3);
+  border: 1px solid rgba(253, 115, 14, 0.3);
+  transition: all 0.3s ease;
+}
+
+.business-tier-item:hover .business-tier-icon {
+  background: #FD730E;
+  color: #ffffff;
+  transform: scale(1.1);
 }
 
 .business-tier-title {
@@ -313,14 +370,32 @@
   margin: 0;
 }
 
-.divider {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 40px 0;
-  width: 100%;
+/* ========================================================================== */
+/* SECTION 2B: SERVICE DELIVERABLES PLAN (BACKGROUND: #042442 - NAVY)         */
+/* ========================================================================== */
+.deliverables-section-redesign {
+  background: #042442;
+  padding: 90px 0;
+  color: #ffffff;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ---------- 3. Service Deliverables Plan Cards ---------- */
+.deliverables-section-redesign .section-badge.center {
+  background: rgba(253, 115, 14, 0.15);
+  color: #FD730E;
+  border: 1px solid rgba(253, 115, 14, 0.35);
+}
+
+.deliverables-section-redesign .section-title-redesign {
+  color: #ffffff !important;
+}
+
+.deliverables-section-redesign .section-subtitle-redesign {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+}
+
 .section-header-redesign {
   max-width: 850px;
   margin: 0 auto 50px auto;
@@ -343,28 +418,28 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(10px);
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .business-card-redesign:hover {
-  transform: translateY(-8px);
-  border-color: rgba(253, 106, 2, 0.6);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(253, 106, 2, 0.3);
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(253, 115, 14, 0.7);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(253, 115, 14, 0.35);
 }
 
 .business-card-redesign.featured {
-  background: linear-gradient(180deg, rgba(253, 106, 2, 0.14) 0%, rgba(4, 37, 68, 0.7) 100%);
-  border: 2px solid #FD6A02;
-  box-shadow: 0 15px 40px rgba(253, 106, 2, 0.25);
+  background: linear-gradient(180deg, rgba(253, 115, 14, 0.15) 0%, rgba(4, 36, 66, 0.8) 100%);
+  border: 2px solid #FD730E;
+  box-shadow: 0 15px 40px rgba(253, 115, 14, 0.3);
 }
 
 .card-popular-tag {
   position: absolute;
   top: -14px;
   right: 24px;
-  background: #FD6A02;
+  background: #FD730E;
   color: #ffffff;
   font-size: 12px;
   font-weight: 800;
@@ -372,7 +447,7 @@
   letter-spacing: 1px;
   padding: 4px 16px;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(253, 106, 2, 0.45);
+  box-shadow: 0 4px 12px rgba(253, 115, 14, 0.45);
 }
 
 .business-card-header {
@@ -386,14 +461,21 @@
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: rgba(253, 106, 2, 0.15);
-  color: #FD6A02;
+  background: rgba(253, 115, 14, 0.15);
+  color: #FD730E;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 20px;
   flex-shrink: 0;
-  border: 1px solid rgba(253, 106, 2, 0.3);
+  border: 1px solid rgba(253, 115, 14, 0.3);
+  transition: all 0.3s ease;
+}
+
+.business-card-redesign:hover .business-card-icon {
+  background: #FD730E;
+  color: #ffffff;
+  transform: scale(1.1);
 }
 
 .business-card-title {
@@ -409,6 +491,13 @@
   color: #cbd5e1 !important;
   line-height: 1.65;
   margin-bottom: 20px;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 20px 0;
+  width: 100%;
 }
 
 .business-card-features {
@@ -431,7 +520,7 @@
 }
 
 .business-card-features li i {
-  color: #FD6A02;
+  color: #FD730E;
   font-size: 12px;
 }
 
@@ -439,7 +528,7 @@
   display: inline-block;
   width: 100%;
   text-align: center;
-  background: #FD6A02;
+  background: #FD730E;
   color: #ffffff !important;
   padding: 13px 20px;
   border-radius: 30px;
@@ -447,21 +536,24 @@
   font-size: 14px;
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(253, 106, 2, 0.35);
+  box-shadow: 0 6px 20px rgba(253, 115, 14, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .card-cta-btn:hover {
-  background: #ff7b1a;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(253, 106, 2, 0.55);
+  background: #ff8224;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(253, 115, 14, 0.55);
 }
 
-/* ---------- 4. Services Alt / Why Choose Section ---------- */
+/* ========================================================================== */
+/* SECTION 3: WHY CHOOSE MAAJANKI WEB TECH (BACKGROUND: #FD730E - ORANGE)     */
+/* ========================================================================== */
 .services-alt {
-  background: linear-gradient(180deg, #042544 0%, #020617 100%);
+  background: #FD730E;
   padding: 90px 20px;
   color: #ffffff;
+  position: relative;
 }
 
 .services-alt-wrapper {
@@ -479,11 +571,16 @@
 
 .services-alt-content h2 {
   font-size: 14px;
-  font-weight: 700;
-  color: #FD6A02 !important;
+  font-weight: 800;
+  color: #042442 !important;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-bottom: 12px;
+  background: rgba(4, 36, 66, 0.25);
+  border: 1px solid rgba(4, 36, 66, 0.4);
+  padding: 6px 18px;
+  border-radius: 20px;
+  width: fit-content;
 }
 
 .services-alt-content h3 {
@@ -498,55 +595,61 @@
 .services-alt-content .justified-text {
   font-size: 15.5px;
   line-height: 1.75;
-  color: #cbd5e1 !important;
+  color: #ffffff !important;
   margin-bottom: 24px;
+  font-weight: 500;
 }
 
 .services-alt-content .cta-button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 32px;
-  background: #FD6A02;
+  padding: 14px 34px;
+  background: #042442;
   color: #ffffff !important;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
   font-size: 15px;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(253, 106, 2, 0.4);
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 25px rgba(4, 36, 66, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .services-alt-content .cta-button:hover {
-  background: #ff7b1a;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(253, 106, 2, 0.6);
+  background: #063158;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
 }
 
 .services-alt-image {
   flex: 1 1 500px;
   text-align: center;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .services-alt-image img {
   width: 100%;
   height: auto;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  transition: transform 0.4s ease;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  transition: transform 0.5s ease;
 }
 
-.services-alt-image img:hover {
-  transform: scale(1.03);
+.services-alt-image:hover img {
+  transform: scale(1.04);
 }
 
-/* ---------- 5. Industry Grid Section ---------- */
+/* ========================================================================== */
+/* SECTION 4: INDUSTRIES WE SERVE (BACKGROUND: #042442 - NAVY)               */
+/* ========================================================================== */
 .mj-Industries-wrapper {
-  background: linear-gradient(135deg, #042544 0%, #061826 100%);
+  background: #042442;
   padding: 90px 20px;
   color: #ffffff;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
 }
 
 .mj-Industries-title {
@@ -589,9 +692,9 @@
 }
 
 .industry-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(253, 106, 2, 0.6);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(253, 106, 2, 0.25);
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(253, 115, 14, 0.7);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(253, 115, 14, 0.35);
 }
 
 .industry-header {
@@ -604,22 +707,22 @@
 .industry-icon {
   width: 54px;
   height: 54px;
-  background: rgba(253, 106, 2, 0.15);
-  color: #FD6A02;
+  background: rgba(253, 115, 14, 0.15);
+  color: #FD730E;
   font-size: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 14px;
-  border: 1px solid rgba(253, 106, 2, 0.3);
+  border: 1px solid rgba(253, 115, 14, 0.3);
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
 
 .industry-card:hover .industry-icon {
-  background: #FD6A02;
+  background: #FD730E;
   color: #ffffff;
-  transform: scale(1.08);
+  transform: scale(1.1);
 }
 
 .industry-card h3 {
@@ -656,15 +759,18 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #FD6A02;
+  color: #FD730E;
   font-weight: 800;
 }
 
-/* ---------- 6. Digital Marketing Services Section ---------- */
+/* ========================================================================== */
+/* SECTION 5: OUR DIGITAL MARKETING SERVICES (BACKGROUND: #FD730E - ORANGE)   */
+/* ========================================================================== */
 .dm-services-section {
-  background: linear-gradient(180deg, #061826 0%, #042544 100%);
+  background: #FD730E;
   padding: 90px 20px;
   color: #ffffff;
+  position: relative;
 }
 
 .dm-section-header {
@@ -677,15 +783,16 @@
   font-size: 38px;
   font-weight: 800;
   font-family: "Outfit", sans-serif;
-  color: #ffffff !important;
+  color: #042442 !important;
   margin-bottom: 16px;
 }
 
 .dm-section-subtitle {
   font-size: 16px;
-  color: #cbd5e1 !important;
+  color: #ffffff !important;
   line-height: 1.7;
   margin: 0 auto;
+  font-weight: 600;
 }
 
 .dm-services-grid {
@@ -697,14 +804,14 @@
 }
 
 .dm-service-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 4px solid #FD6A02;
-  border-radius: 16px;
-  padding: 28px 20px;
-  transition: all 0.35s ease;
+  background: #042442;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 4px solid #ffffff;
+  border-radius: 18px;
+  padding: 30px 22px;
+  transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
   text-align: center;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 .dm-service-card h4 {
@@ -712,7 +819,7 @@
   font-weight: 700;
   font-family: "Outfit", sans-serif;
   margin-bottom: 12px;
-  color: #ffffff !important;
+  color: #FD730E !important;
 }
 
 .dm-service-card p {
@@ -723,13 +830,15 @@
 }
 
 .dm-service-card:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(253, 106, 2, 0.5);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px) scale(1.03);
+  background: #063158;
+  border-color: #ffffff;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4), 0 0 25px rgba(4, 36, 66, 0.5);
 }
 
-/* ---------- COMPREHENSIVE RESPONSIVE MEDIA QUERIES ---------- */
+/* ========================================================================== */
+/* COMPREHENSIVE RESPONSIVE MEDIA QUERIES                                     */
+/* ========================================================================== */
 
 /* Large Desktops & Laptops (1200px and down) */
 @media (max-width: 1200px) {
@@ -757,8 +866,10 @@
     gap: 40px;
   }
 
+  .services-hero-redesign,
   .services-hero-redesign-wrapper,
   .business-size-section-redesign,
+  .deliverables-section-redesign,
   .services-alt,
   .mj-Industries-wrapper,
   .dm-services-section {
@@ -814,8 +925,10 @@
 
 /* Mobile Devices (576px and down) */
 @media (max-width: 576px) {
+  .services-hero-redesign,
   .services-hero-redesign-wrapper,
   .business-size-section-redesign,
+  .deliverables-section-redesign,
   .services-alt,
   .mj-Industries-wrapper,
   .dm-services-section {
