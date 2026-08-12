@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from 'next/image';
-import FooterSection from '@/components/FooterWithPopup';
 
 import Link from 'next/link';
 import '@/app/styles/Portfolio.css';
@@ -426,8 +425,7 @@ const PortfolioSection = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </>
+          </>
   );
 };
 

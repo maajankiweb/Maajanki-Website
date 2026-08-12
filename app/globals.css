@@ -670,3 +670,44 @@ h4:not(.admin-layout-root h4),
     font-size: clamp(1rem, 4vw, 1.15rem) !important;
   }
 }
+
+/* =====================================================
+   GLOBAL ICON & BADGE ALIGNMENT PROTECTIONS
+   ===================================================== */
+.icon-center,
+.mj-icon-center,
+.service-icon,
+.feature-icon,
+.counter-icon,
+.promo-icon,
+.stat-icon,
+.tech-icon,
+.step-icon,
+.solution-icon,
+.process-icon,
+.mj-wt-tech-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon-center svg,
+.mj-icon-center svg,
+.service-icon svg,
+.feature-icon svg,
+.counter-icon svg,
+.promo-icon svg,
+.stat-icon svg,
+.tech-icon svg,
+.step-icon svg,
+.solution-icon svg,
+.process-icon svg,
+.mj-wt-tech-icon svg {
+  display: block;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+

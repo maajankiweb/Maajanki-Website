@@ -310,10 +310,14 @@ export default function RootLayout({ children }) {
       </head>
 
       <body suppressHydrationWarning>
-        <ClerkProvider telemetry={false}>
+        <ClerkProvider
+          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+          telemetry={false}
+        >
           <ClientProvider>
             <LayoutContent>{children}</LayoutContent>
           </ClientProvider>
+        </ClerkProvider>
 
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CGPN1G03DW"
@@ -337,7 +341,6 @@ export default function RootLayout({ children }) {
             })(window,document,"clarity","script","u4zs398tm0");
           `}
         </Script>
-        </ClerkProvider>
       </body>
     </html>
   );

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import ContactForm from './ContactForm';
 
-import FooterSection from '@/components/FooterWithPopup';
 import '@/app/styles/Contact.css';
 import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle } from "lucide-react";
@@ -369,7 +368,6 @@ export default function Page() {
         </div>
       </section>
 
-      <FooterSection />
     </>
   );
 }

@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Image from 'next/image';
 
 import Link from 'next/link';
-import FooterSection from '@/components/FooterWithPopup';
 import '@/app/styles/Products.css';
 
 const Products = () => {
@@ -232,8 +231,7 @@ const Products = () => {
         </div>
       </section>
 
-      <FooterSection />
-    </>
+          </>
   );
 };
 

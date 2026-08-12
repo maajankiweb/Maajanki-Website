@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import FooterSection from '@/components/FooterWithPopup';
 import '../../styles/Products.css';
 
 export const metadata = {
@@ -294,7 +293,6 @@ export default function InvoBillPage() {
         </div>
       </section>
 
-      <FooterSection />
-    </div>
+          </div>
   );
 }

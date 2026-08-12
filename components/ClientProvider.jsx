@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import dynamic from 'next/dynamic';
+import ErrorBoundary from './ErrorBoundary';
 
 // Dynamically load the heavy WebGL SplashCursor to improve initial page rendering and transition speeds
 const SplashCursor = dynamic(() => import('./SplashCursor/SplashCursor'), {
@@ -40,9 +41,9 @@ export default function ClientProvider({ children }) {
   const isAdminPath = pathname ? (pathname.startsWith('/admin') || pathname.startsWith('/admin-')) : false;
 
   return (
-    <>
+    <ErrorBoundary>
       {!isAdminPath && <SplashCursor />}
       {children}
-    </>
+    </ErrorBoundary>
   );
 }

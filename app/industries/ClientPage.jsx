@@ -4,7 +4,6 @@ import React from "react";
 import Image from 'next/image';
 
 import Link from 'next/link';
-import FooterSection from '@/components/FooterWithPopup';
 import '@/app/styles/Industries.css';
 
 const Industries = () => {
@@ -512,7 +511,6 @@ const Industries = () => {
         </div>
       </section>
 
-      <FooterSection />
     </>
   );
 };

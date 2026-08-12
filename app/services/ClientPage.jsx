@@ -6,7 +6,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import '@/app/styles/Service.css';
 import '@/app/styles/Home.css';
-import FooterSection from '@/components/FooterWithPopup';
 // Import icons from react-icons
 import {
   FaCode,
@@ -804,8 +803,7 @@ const Services = () => {
       </section>
       {/* Faq Section End */}
 
-      <FooterSection />
-    </>
+          </>
   );
 };
 

@@ -3,7 +3,6 @@
 import React from "react";
 
 import { FaStar, FaGoogle, FaQuoteLeft, FaCheckCircle } from "react-icons/fa";
-import FooterSection from '@/components/FooterWithPopup';
 import '@/app/styles/Reviews.css';
 
 const Reviews = () => {
@@ -306,8 +305,7 @@ const Reviews = () => {
       </section>
 
       {/* Start Project Footer Section */}
-      <FooterSection />
-    </>
+          </>
   );
 };
 

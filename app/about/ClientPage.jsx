@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 
 import Link from "next/link";
-import FooterSection from "@/components/FooterWithPopup";
 import FounderSection from "@/components/FounderSection";
 import "@/app/styles/Home.css";
 import "@/app/styles/About.css";
@@ -912,8 +911,6 @@ const About = () => {
       </section>
       {/* Faq Section End */}
 
-      {/* Footer */}
-      <FooterSection />
     </>
   );
 };

@@ -7,7 +7,6 @@ import Link from 'next/link';
 import LogoLoop from '@/components/LogoLoop/LogoLoop';
 import Magnet from '@/components/Magnet/Magnet';
 import '@/app/styles/Home.css';
-import FooterSection from '@/components/FooterWithPopup';
 
 // Import icons from react-icons
 import {
