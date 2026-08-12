@@ -344,7 +344,7 @@ function Home() {
 
       {/* Hero Section */}
       <section className="custom-banner">
-        <Image priority src="/images/pages/main-services-pages/Home-page-image-Maajanki.webp" width="1200" height="675" alt="Maajanki Web Tech – Custom Brand Identity and Design Solutions" title="Maajanki Web Tech – Website Development & Digital Marketing Agency in India" data-no-retina=""/>
+        <Image priority fetchPriority="high" sizes="(max-width: 1200px) 100vw, 1200px" src="/images/pages/main-services-pages/Home-page-image-Maajanki.webp" width={1200} height={675} alt="Maajanki Web Tech – Custom Brand Identity and Design Solutions" title="Maajanki Web Tech – Website Development & Digital Marketing Agency in India" data-no-retina=""/>
 
         <div className="banner-overlay">
           <div className="banner-content">
