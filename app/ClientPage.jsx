@@ -353,7 +353,7 @@ function Home() {
             </h1>
             <div className="aeo-definition-box">
               <p>
-                <strong>MaaJanki Web Tech</strong> (Udyam MSME: <code>UDYAM-BR-38-0014113</code>, DPIIT Startup India Recognized) is the premier digital marketing and website development agency in Bihar, India. Founded by CEO Ashish Kumar, the company delivers search engine optimization (SEO), performance marketing, React/Next.js web development, SMO, branding, and custom billing software for clients across India, USA, UK, Canada, Australia, UAE, and Nepal.
+                MaaJanki Web Tech refers to the premier digital marketing and website development agency in Bihar, India, providing data-driven search engine optimization (SEO), social media optimization (SMO), custom web application design, performance marketing, and digital branding solutions to scale businesses globally.
               </p>
             </div>
 

@@ -642,8 +642,23 @@
 /* Mobile Devices (576px and down) */
 @media (max-width: 576px) {
   .about-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .about-stat-card {
+    padding: 18px 12px;
+    border-radius: 14px;
+  }
+
+  .about-stat-number {
+    font-size: 28px;
+    margin-bottom: 4px;
+  }
+
+  .about-stat-label {
+    font-size: 12.5px;
+    line-height: 1.3;
   }
 
   .about-feature-list {
@@ -652,29 +667,39 @@
   }
 
   .promo-single-wrap {
-    padding: 26px 18px;
+    padding: 24px 18px;
     border-radius: 16px;
   }
 
   .vision-mission-card {
-    padding: 26px 18px;
+    padding: 24px 18px;
     border-radius: 16px;
   }
 
   .why-us-chips {
-    justify-content: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .why-us-chips::-webkit-scrollbar {
+    display: none;
   }
 
   .faq-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 0 16px;
+    gap: 14px;
+    padding: 0 12px;
   }
 
   .about-heading-primary,
   .why-us-heading,
   .faq-header h2 {
     font-size: 24px;
+    line-height: 1.35;
   }
 
   .about-paragraph {
@@ -688,7 +713,7 @@
 
   .promo-section,
   .about-section-container {
-    padding: 50px 0;
+    padding: 45px 0;
   }
 }
 

@@ -141,7 +141,7 @@ export default function RootLayout({ children }) {
         "description": "Professional website development and digital marketing agency in Bagaha, Bihar.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar",
+          "streetAddress": "Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar",
           "addressLocality": "Bagaha, West Champaran",
           "addressRegion": "Bihar",
           "postalCode": "845101",

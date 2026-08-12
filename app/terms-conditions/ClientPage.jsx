@@ -362,9 +362,9 @@ const Terms = () => {
                   <h3>Bagaha Office</h3>
                   {/* FIX 6: Corrected address — "Building of UCO Bank" consistent with Privacy Policy */}
                   <p>
-                    First Floor, Near Cinema House,<br />
-                    Building of UCO Bank, Bagaha Bazar,<br />
-                    West Champaran, Bihar - 845101
+                    Brajmala Complex, First Floor,<br />
+                    Near Cinema House, Building of UCO Bank,<br />
+                    Bagaha Bazar, West Champaran, Bihar - 845101
                   </p>
                 </div>
               </div>

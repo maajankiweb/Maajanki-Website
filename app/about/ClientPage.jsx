@@ -28,7 +28,6 @@ const About = () => {
               "url": "https://maajankiwebtech.com/",
               "logo": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png",
               "description": "MaaJanki Web Tech is a DPIIT Startup India and Udyam MSME recognized website development and digital marketing agency in India, specializing in SEO, AEO, GEO, branding, and custom web development.",
-              "identifier": "UDYAM-BR-38-0014113",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+91-9006543913",

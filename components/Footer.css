@@ -1,1 +1,366 @@
-/* Consolidated into FooterWithPopup.css */
+/* =====================================
+   FOOTER MAIN STYLE (MOBILE FIRST)
+===================================== */
+.footer {
+  background: #000;
+  color     : #fff;
+  width     : 100%;
+}
+
+/* Grid Layout */
+.footer-container {
+  display              : grid;
+  grid-template-columns: 1fr;
+  gap                  : 35px;
+  padding              : 40px 20px;
+}
+
+.footer-col {
+  text-align: left;
+}
+
+/* LOGO */
+.footer-logo {
+  color        : #FD6A02;
+  font-size    : 22px;
+  font-weight  : 700;
+  margin-bottom: 10px;
+  white-space  : nowrap;
+  display      : block;
+}
+
+/* SOCIAL ICONS */
+.footer-social {
+  display   : flex;
+  gap       : 12px;
+  margin-top: 10px;
+}
+
+.footer-social a {
+  color          : #fff;
+  border         : 1px solid #fff;
+  width          : 35px;
+  height         : 35px;
+  border-radius  : 50%;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  transition     : 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #FD6A02;
+  color     : #fff;
+}
+
+/* HEADINGS */
+.footer-col h3 {
+  color        : #FD6A02;
+  font-size    : 16px;
+  margin-bottom: 12px;
+}
+
+/* LISTS */
+.footer-col ul {
+  list-style: none;
+  padding   : 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+  display      : flex;
+  align-items  : flex-start;
+  gap          : 8px;
+}
+
+.footer-col ul li i,
+.footer-col ul li .footer-icon {
+  color         : #FD6A02;
+  font-size     : 1.15rem;
+  flex-shrink   : 0;
+  margin-top    : 3px;
+}
+
+.footer-col:not(:nth-child(4)) ul li a {
+  color          : #ffffff;
+  text-decoration: none;
+  font-size      : 14px;
+  transition     : 0.3s ease;
+  position       : relative;
+  padding-left   : 14px;
+}
+
+.footer-col:not(:nth-child(4)) ul li a::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: #FD6A02;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.footer-col ul li a {
+  color          : #ffffff;
+  text-decoration: none;
+  font-size      : 14px;
+  transition     : 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #FD6A02;
+}
+
+/* =====================================
+   VERIFIED BADGES
+===================================== */
+.footer-badges h3 {
+  color        : #FD6A02;
+  margin-bottom: 12px;
+}
+
+.badge-list {
+  display       : flex;
+  flex-direction: column;
+  gap           : 10px;
+}
+
+.badge-item {
+  display    : flex;
+  align-items: center;
+  gap        : 10px;
+}
+
+.badge-item img {
+  width        : 55px;
+  height       : auto;
+  border-radius: 6px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  background: #FD6A02;
+  color      : #fff;
+  text-align : center;
+  padding    : 10px;
+  font-weight: 500;
+}
+
+.footer-bottom span {
+  font-weight: 700;
+  color: #000000;
+}
+
+/* =====================================
+   FLOATING BUTTONS (WhatsApp + Call - LEFT CORNER)
+===================================== */
+.floating-buttons {
+  position   : fixed;
+  bottom     : 20px;
+  left       : 20px;
+  z-index    : 9999;
+  display    : flex;
+  flex-direction: column;
+  gap        : 12px;
+  align-items: center;
+}
+
+/* Glow Behind */
+.floating-buttons::before {
+  content      : "";
+  position     : absolute;
+  inset        : -16px;
+  border-radius: 999px;
+  background   :
+    radial-gradient(circle at 50% 20%, rgba(37, 211, 102, 0.45), transparent 60%),
+    radial-gradient(circle at 50% 80%, rgba(253, 106, 2, 0.45), transparent 60%);
+  filter : blur(7px);
+  z-index: -1;
+}
+
+/* Circle Buttons */
+.float-btn {
+  width          : 56px;
+  height         : 56px;
+  border-radius  : 50%;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  color          : #fff;
+  font-size      : 24px;
+  cursor         : pointer;
+  border         : none;
+  text-decoration: none;
+  box-shadow     : 0 8px 20px rgba(0, 0, 0, 0.55);
+  transition     : 0.2s ease;
+}
+
+.float-whatsapp {
+  background: #25d366;
+}
+
+.float-call {
+  background: #FD6A02;
+}
+
+.float-btn:hover {
+  transform : translateY(-3px) scale(1.07);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* =====================================
+   SCROLL TO TOP BUTTON (OVER BOTTOM BAR MATCHING SCREENSHOT)
+===================================== */
+.scroll-top {
+  position       : fixed;
+  bottom         : 20px;
+  right          : 80px;
+  width          : 44px;
+  height         : 44px;
+  background     : #040914;
+  color          : #ffffff;
+  border         : 2px solid #ffffff;
+  border-radius  : 50%;
+  cursor         : pointer;
+  font-size      : 18px;
+  z-index        : 99999;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  transition     : 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow     : 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.scroll-top:hover {
+  background: #FD6A02;
+  color     : #ffffff;
+  border-color: #FD6A02;
+  transform : translateY(-3px) scale(1.08);
+}
+
+.scroll-to-target {
+  animation: fadeInScroll 0.35s ease-in-out;
+}
+
+@keyframes fadeInScroll {
+  from {
+    opacity  : 0;
+    transform: scale(0.6);
+  }
+
+  to {
+    opacity  : 1;
+    transform: scale(1);
+  }
+}
+
+/* =====================================
+   RESPONSIVE BREAKPOINTS
+===================================== */
+
+/* TABLETS */
+@media (min-width: 600px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding              : 50px 40px;
+  }
+
+  .badge-list {
+    flex-direction: row;
+    flex-wrap     : wrap;
+  }
+}
+
+/* LAPTOPS */
+@media (min-width: 992px) {
+  .footer-container {
+    grid-template-columns: repeat(4, 1fr) 1.2fr;
+    padding              : 60px 80px;
+  }
+}
+
+/* SMALL DEVICES ADJUSTMENTS */
+@media (max-width: 480px) {
+  .float-btn {
+    width    : 46px;
+    height   : 46px;
+    font-size: 18px;
+  }
+
+  .scroll-top {
+    bottom   : 136px;
+    right    : 20px;
+    width    : 46px;
+    height   : 46px;
+    font-size: 20px;
+  }
+}
+
+/* =====================================
+   Review Badges & Footer Links
+===================================== */
+
+.review-badges {
+  margin-top    : 14px;
+  display       : flex;
+  flex-direction: row;
+  align-items   : center;
+  gap           : 10px;
+  flex-wrap     : nowrap;
+}
+
+.review-badges a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.review-badges img {
+  width        : 130px;
+  height       : auto;
+  max-width    : 100%;
+  object-fit   : contain;
+  border-radius: 6px;
+  transition   : transform 0.3s ease;
+  cursor       : pointer;
+}
+
+.review-badges img:hover {
+  transform: scale(1.05);
+}
+
+/* =====================================
+  Footer Links
+===================================== */
+
+.footer-container-links {
+  width  : 100%;
+  padding: 12px 0;
+}
+
+.footer-links {
+  list-style     : none;
+  display        : flex;
+  flex-direction : row;
+  justify-content: center;
+  align-items    : center;
+  gap            : 30px;
+  margin         : 0;
+  padding        : 0;
+  flex-wrap      : nowrap;
+}
+
+.footer-links li {
+  white-space: nowrap;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color          : #fff;
+  font-size      : 15px;
+  font-weight    : 600;
+  transition     : color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #FD6A02;
+}

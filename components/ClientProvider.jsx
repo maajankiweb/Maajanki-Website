@@ -17,33 +17,54 @@ export default function ClientProvider({ children }) {
   const [showCursor, setShowCursor] = useState(false);
 
   useEffect(() => {
-    // Only initialize SplashCursor on desktop devices (width >= 768px) after idle delay
-    if (typeof window !== 'undefined' && window.innerWidth >= 768) {
-      const timer = setTimeout(() => setShowCursor(true), 1500);
+    // Only initialize SplashCursor on desktop devices after page is fully idle
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) {
+      const scheduleIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 3000));
+      const idleId = scheduleIdle(() => {
+        setShowCursor(true);
+      });
+      return () => {
+        if (window.cancelIdleCallback) {
+          window.cancelIdleCallback(idleId);
+        }
+      };
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    const initAOS = () => {
+      try {
+        AOS.init({
+          duration: 600,
+          once: true,
+          easing: 'ease-in-out',
+          disable: 'mobile',
+        });
+      } catch (e) {
+        console.warn("AOS initialization error:", e);
+      }
+    };
+
+    if ('requestIdleCallback' in window) {
+      const id = window.requestIdleCallback(initAOS);
+      return () => window.cancelIdleCallback(id);
+    } else {
+      const timer = setTimeout(initAOS, 100);
       return () => clearTimeout(timer);
     }
   }, []);
 
   useEffect(() => {
-    try {
-      AOS.init({
-        duration: 800,
-        once: true,
-        easing: 'ease-in-out',
-      });
-    } catch (e) {
-      console.warn("AOS initialization error:", e);
-    }
-  }, []);
-
-  useEffect(() => {
     if (typeof window !== 'undefined') {
-      try {
-        window.scrollTo(0, 0);
-        AOS.refresh();
-      } catch (e) {
-        console.warn("AOS refresh error:", e);
-      }
+      window.scrollTo(0, 0);
+      const timer = setTimeout(() => {
+        try {
+          AOS.refresh();
+        } catch (e) {}
+      }, 200);
+      return () => clearTimeout(timer);
     }
   }, [pathname]);
 

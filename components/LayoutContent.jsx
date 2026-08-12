@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FooterWithPopup from '@/components/FooterWithPopup';
+import Footer from '@/components/Footer';
 
 const PromoPopup = dynamic(() => import('@/components/PromoPopup'), { ssr: false });
 const ChatbotLoader = dynamic(() => import('@/components/Chatbot/ChatbotLoader'), { ssr: false });
@@ -32,6 +33,7 @@ export default function LayoutContent({ children }) {
         {children}
       </main>
       <FooterWithPopup />
+      <Footer />
     </>
   );
 }

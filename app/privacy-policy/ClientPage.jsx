@@ -340,7 +340,7 @@ const PrivacyPolicy = () => {
                   <strong>Designation:</strong> Founder & Grievance Officer, MaaJanki Web Tech<br />
                   <strong>Email:</strong> <a href="mailto:info@maajankiwebtech.com">info@maajankiwebtech.com</a><br />
                   <strong>Phone:</strong> <a href="tel:+919006543913">+91 9006543913</a><br />
-                  <strong>Address:</strong> First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar, West Champaran, Bihar – 845101
+                  <strong>Address:</strong> Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar, West Champaran, Bihar – 845101
                 </p>
                 <p>
                   Any grievance or complaint regarding the processing of personal information must be raised in writing. We will acknowledge your complaint within <strong>24 hours</strong> and endeavour to resolve it within <strong>30 days</strong> of receipt.
@@ -380,9 +380,9 @@ const PrivacyPolicy = () => {
                   <span className="contact-icon"><MapPin size={28} /></span>
                   <h3>Bagaha Office</h3>
                   <p>
-                    First Floor, Near Cinema House,<br />
-                    Building of UCO Bank, Bagaha Bazar,<br />
-                    West Champaran, Bihar - 845101
+                    Brajmala Complex, First Floor,<br />
+                    Near Cinema House, Building of UCO Bank,<br />
+                    Bagaha Bazar, West Champaran, Bihar - 845101
                   </p>
                 </div>
               </div>

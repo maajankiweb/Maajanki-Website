@@ -1,76 +1,89 @@
 /* ---------------- Contact Promo Section ---------------- */
 .contact-promo-section {
   background : #000;
-  padding    : 80px 0;
+  padding    : 70px 0;
   font-family: "Poppins", sans-serif;
+  width      : 100%;
 }
 
 .contact-promo-container {
-  max-width: 1250px;
+  max-width: 1400px;
+  width    : 92%;
   margin   : 0 auto;
-  padding  : 0 40px;
+  padding  : 0 15px;
 }
 
 .contact-promo-grid {
   display              : grid;
   grid-template-columns: repeat(4, 1fr);
-  gap                  : 25px;
+  gap                  : 24px;
+  width                : 100%;
 }
 
 .contact-promo-card {
-  background     : #fff;
+  background     : #042544;
+  border         : 1.5px solid rgba(253, 106, 2, 0.3);
   border-radius  : 20px;
   text-align     : center;
-  min-height     : 160px;
-  height         : auto;
+  min-height     : 175px;
+  width          : 100%;
+  height         : 100%;
   display        : flex;
   flex-direction : column;
   justify-content: center;
   align-items    : center;
-  padding        : 20px 16px;
-  transition     : all 0.3s ease;
-  box-shadow     : 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding        : 28px 24px;
+  transition     : all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow     : 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .contact-promo-card:hover {
-  transform : translateY(-5px);
-  box-shadow: 0 8px 25px rgba(253, 106, 2, 0.3);
+  transform : translateY(-6px);
+  background: #06315b;
+  border-color: #FD6A02;
+  box-shadow: 0 14px 35px rgba(253, 106, 2, 0.35);
 }
 
 .contact-promo-icon {
   font-size    : 38px;
   color        : #FD6A02;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   transition   : all 0.3s ease;
 }
 
 .contact-promo-card:hover .contact-promo-icon {
-  transform: scale(1.2);
-  color    : #e05600;
+  transform: scale(1.15);
+  color    : #FF6B00;
 }
 
 .contact-promo-title {
   font-size    : 20px;
   font-weight  : 700;
-  color        : #000;
+  color        : #ffffff;
   margin-bottom: 8px;
 }
 
 .contact-promo-text {
-  color    : #6c757d;
-  font-size: 15px;
-  margin   : 0;
+  color          : #cbd5e1;
+  font-size      : 15px;
+  font-weight    : 500;
+  margin         : 0;
+  word-break     : break-word;
+  transition     : color 0.3s ease;
+  line-height    : 1.4;
 }
 
 .contact-link {
   text-decoration: none;
   color          : inherit;
   display        : block;
+  height         : 100%;
+  width          : 100%;
 }
 
 .contact-link:hover .contact-promo-text {
   color          : #FD6A02;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .contact-promo-card:hover .contact-promo-title {
@@ -78,38 +91,52 @@
 }
 
 .contact-icon {
-  width        : 32px;
-  height       : 32px;
+  width        : 38px;
+  height       : 38px;
   color        : #FD6A02;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  transition   : transform 0.3s ease;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
+.contact-promo-card:hover .contact-icon {
+  transform: scale(1.15);
+}
+
+/* Responsive (Mobile First Focus) */
+@media (max-width: 1200px) {
   .contact-promo-grid {
     grid-template-columns: repeat(2, 1fr);
     gap                  : 20px;
   }
-
-  .contact-promo-card {
-    min-height: 140px;
-    height: auto;
-  }
 }
 
-@media (max-width: 576px) {
-  .contact-promo-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 640px) {
+  .contact-promo-section {
+    padding: 40px 0;
   }
 
-  .contact-promo-section {
-    padding: 48px 0;
+  .contact-promo-container {
+    width  : 95%;
+    padding: 0 10px;
+  }
+
+  .contact-promo-grid {
+    grid-template-columns: 1fr;
+    gap                  : 16px;
   }
 
   .contact-promo-card {
-    min-height: 120px;
-    height       : 150px;
-    border-radius: 15px;
+    min-height   : 140px;
+    padding      : 22px 18px;
+    border-radius: 16px;
+  }
+
+  .contact-promo-title {
+    font-size: 18px;
+  }
+
+  .contact-promo-text {
+    font-size: 14px;
   }
 }
 

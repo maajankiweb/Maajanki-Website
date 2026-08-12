@@ -34,7 +34,7 @@ export default function Page() {
     "image": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar",
+      "streetAddress": "Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar",
       "addressLocality": "Bagaha",
       "addressRegion": "Bihar",
       "postalCode": "845101",
@@ -201,7 +201,7 @@ export default function Page() {
                     <strong>Business Name:</strong> Maajanki Web Tech
                   </p>
                   <p className="mb-2">
-                    <strong>Address:</strong> First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101
+                    <strong>Address:</strong> Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101
                   </p>
                   <p className="mb-2">
                     <strong>Phone:</strong> <a href="tel:+919006543913" className="text-dark">+91-9006543913</a>

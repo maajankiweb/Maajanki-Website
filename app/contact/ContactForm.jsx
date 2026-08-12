@@ -144,33 +144,60 @@ const ContactForm = () => {
             required
           >
             <option value="">-- Select a Service --</option>
-            <option value="ai-automation">AI Automation</option>
-            <option value="whatsapp-marketing-crm">WhatsApp Marketing & CRM</option>
-            <option value="software-saas-development">Software & SaaS Development</option>
-            <option value="application-development">Application Development</option>
-            <option value="website-development">Website Development</option>
-            <option value="web-design">Web Design</option>
-            <option value="branding">Branding</option>
-            <option value="graphic-design">Graphic Design</option>
-            <option value="ui-ux-design">UI/UX Design</option>
-            <option value="digital-marketing">Digital Marketing</option>
-            <option value="performance-marketing">Performance Marketing</option>
-            <option value="seo">SEO</option>
-            <option value="smo">SMO</option>
-            <option value="social-media-marketing">Social Media Marketing</option>
-            <option value="google-ads">Google Ads</option>
-            <option value="meta-ads">Meta Ads</option>
-            <option value="content-writing">Content Writing</option>
-            <option value="product-listing">Product Listing</option>
-            <option value="ecommerce-development">eCommerce Development</option>
-            <option value="wordpress-development">WordPress Development</option>
-            <option value="shopify-development">Shopify Development</option>
-            <option value="custom-web-development">Custom Web Development</option>
-            <option value="video-editing">Video Editing</option>
-            <option value="website-maintenance">Website Maintenance</option>
-            <option value="hosting-domain">Domain & Hosting Services</option>
-            <option value="business-email">Business Email Setup</option>
-            <option value="other">Other</option>
+            {[
+              "AI Automation",
+              "WhatsApp Marketing & CRM",
+              "Software Development",
+              "SaaS Development",
+              "Application Development",
+              "Website Development",
+              "Custom Web Development",
+              "WordPress Development",
+              "Shopify Development",
+              "E-commerce Development",
+              "Web Design",
+              "UI/UX Design",
+              "Branding",
+              "Logo Design",
+              "Graphics Design",
+              "Digital Marketing",
+              "SEO",
+              "Local SEO",
+              "SMO",
+              "Technical SEO",
+              "Social Media Marketing",
+              "Performance Marketing",
+              "Google Ads",
+              "Meta Ads",
+              "Lead Generation",
+              "Email Marketing",
+              "WhatsApp Marketing",
+              "Content Writing",
+              "Copywriting",
+              "Product Listing",
+              "Marketplace Management",
+              "Video Editing",
+              "Business Consultation",
+              "Domain Registration",
+              "Web Hosting",
+              "Business Email Setup",
+              "Website Maintenance",
+              "Website Redesign",
+              "Speed Optimization",
+              "Cyber Security",
+              "Cloud Services",
+              "API Integration",
+              "CRM Development",
+              "ERP Development",
+              "Chatbot Development",
+              "AI Chatbot",
+              "Automation Solutions",
+              "Other",
+            ].map((s) => (
+              <option key={s} value={s.toLowerCase().replace(/[^a-z0-9]+/g, "-")}>
+                {s}
+              </option>
+            ))}
           </select>
         </div>
 

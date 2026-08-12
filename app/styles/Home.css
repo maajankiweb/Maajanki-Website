@@ -2451,7 +2451,7 @@
 /* ── Counters Section ── */
 .counters-section {
   padding: 85px 0 !important;
-  background: #042442 !important;
+  background: #042544 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
@@ -2462,7 +2462,7 @@
 
 .counter-box-wrapper {
   background: #ffffff !important;
-  border: 2px solid #FD730E !important;
+  border: 2px solid #FD6A02 !important;
   border-radius: 20px !important;
   padding: 30px 18px !important;
   transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
@@ -2501,23 +2501,23 @@
   font-size: 2.2rem !important;
   font-weight: 800 !important;
   font-family: "Outfit", sans-serif !important;
-  color: #FD730E !important;
+  color: #FD6A02 !important;
   margin: 8px 0 4px !important;
   line-height: 1.1 !important;
 }
 
 .counter-title {
-  color: #042442 !important;
+  color: #042544 !important;
   font-weight: 800 !important;
   font-size: 16px !important;
   font-family: "Outfit", sans-serif !important;
   margin: 0 !important;
 }
 
-/* ── Clients Section (BRAND ORANGE: #FD730E) ── */
+/* ── Clients Section (BRAND ORANGE: #FD6A02) ── */
 .clients-section {
   padding: 85px 0 70px !important;
-  background: #FD730E !important;
+  background: #FD6A02 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
@@ -2532,7 +2532,7 @@
 
 .clients-title {
   display: inline-block !important;
-  background: #042442 !important;
+  background: #042544 !important;
   color: #ffffff !important;
   padding: 12px 38px !important;
   border-radius: 50px !important;
@@ -2548,7 +2548,7 @@
 
 .collaborators-title {
   display: inline-block !important;
-  background: #FD730E !important;
+  background: #FD6A02 !important;
   color: #ffffff !important;
   padding: 12px 38px !important;
   border-radius: 50px !important;
@@ -2594,7 +2594,7 @@
   margin: 0 14px !important;
   padding: 10px 24px !important;
   background: #ffffff !important;
-  border: 2px solid #042442 !important;
+  border: 2px solid #042544 !important;
   border-radius: 16px !important;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18) !important;
   transition: transform 0.3s ease, border-color 0.3s ease !important;
@@ -2605,7 +2605,7 @@
 
 .slide:hover {
   transform: translateY(-4px) !important;
-  border-color: #FD730E !important;
+  border-color: #FD6A02 !important;
 }
 
 .client-img,
@@ -2641,11 +2641,87 @@
   }
 }
 
-/* ── Collaborators Section (BRAND NAVY: #042442) ── */
-.collaborators-section {
-  padding: 85px 0 !important;
-  background: #042442 !important;
-  border-top: 3px solid #FD730E !important;
+/* ── Comprehensive Mobile-First Responsiveness ── */
+@media (max-width: 576px) {
+  .showcase-container {
+    padding: 0 16px;
+  }
+
+  .showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .content-area {
+    padding: 24px 0 10px;
+    text-align: center;
+  }
+
+  .section-badge {
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    margin-bottom: 18px;
+  }
+
+  .main-heading {
+    font-size: 1.45rem;
+    line-height: 1.3;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .content-text {
+    font-size: 14px;
+    line-height: 1.65;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .services-highlight {
+    padding: 16px 14px;
+    margin: 18px 0;
+    font-size: 13.5px;
+    text-align: left;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 24px;
+    font-size: 0.92rem;
+    margin-top: 16px;
+  }
+
+  .clients-title,
+  .collaborators-title {
+    font-size: 1rem !important;
+    padding: 8px 20px !important;
+    letter-spacing: 1px !important;
+  }
+
+  .slide {
+    width: 140px !important;
+    max-width: 140px !important;
+    height: 60px !important;
+    margin: 0 8px !important;
+    padding: 6px 14px !important;
+  }
+
+  .client-img,
+  .collaborator-img {
+    width: 95px !important;
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .main-heading {
+    font-size: 1.3rem;
+  }
+
+  .showcase-container {
+    padding: 0 12px;
+  }
 }
 
 

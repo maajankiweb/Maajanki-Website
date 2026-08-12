@@ -497,11 +497,28 @@
 @media (max-width: 576px) {
   .products-hero,
   .product-detail-section {
-    padding: 40px 16px 32px;
+    padding: 36px 14px 28px;
+  }
+
+  .products-label-badge {
+    font-size: 0.78rem;
+    padding: 6px 16px;
+    margin-bottom: 16px;
+  }
+
+  .products-hero h1 {
+    font-size: 1.85rem;
+    line-height: 1.25;
+    margin-bottom: 14px;
+  }
+
+  .products-hero-desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
   }
 
   .products-grid-section {
-    padding: 35px 16px 50px;
+    padding: 28px 12px 45px;
   }
 
   .product-card,
@@ -509,18 +526,60 @@
   .why-better-card,
   .module-card,
   .process-step-card {
-    padding: 22px 18px;
+    padding: 20px 16px;
     border-radius: 16px;
   }
 
   .product-card-header {
     flex-direction: row;
-    gap: 6px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .product-tag-badge {
+    font-size: 0.75rem;
+    padding: 3px 10px;
+  }
+
+  .product-status-badge {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+
+  .product-image-wrap {
+    margin-bottom: 18px;
+    border-radius: 12px;
+  }
+
+  .product-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .product-card-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+
+  .product-features-label {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+
+  .product-features li {
+    font-size: 0.84rem;
+    margin-bottom: 8px;
   }
 
   .product-cta-btn {
-    padding: 11px 20px;
-    font-size: 0.88rem;
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    border-radius: 30px;
   }
 
   .product-section-title {
@@ -530,16 +589,25 @@
 
 /* Ultra Small Phones (380px and down) */
 @media (max-width: 380px) {
+  .products-hero h1 {
+    font-size: 1.6rem;
+  }
+
   .product-card,
   .capability-card,
   .why-better-card,
   .module-card,
   .process-step-card {
-    padding: 18px 14px;
+    padding: 16px 12px;
   }
 
   .product-card h2,
   .product-section-title {
-    font-size: 20px;
+    font-size: 1.15rem;
+  }
+
+  .product-cta-btn {
+    padding: 11px 16px;
+    font-size: 0.85rem;
   }
 }

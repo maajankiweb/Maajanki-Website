@@ -251,9 +251,9 @@
 /* ---------- Portfolio Grid & Uniform Cards ---------- */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1300px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -830,13 +830,26 @@
   }
 
   .pf-filter-tabs {
-    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    margin-bottom: 28px;
     gap: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .pf-filter-tabs::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
   }
 
   .pf-filter-btn {
-    padding: 7px 14px;
-    font-size: 12.5px;
+    padding: 8px 16px;
+    font-size: 13px;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .pf-diff-card {
