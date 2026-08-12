@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "agent_permissions": {
+    "site_name": "MaaJanki Web Tech",
+    "site_url": "https://maajankiwebtech.com",
+    "allowed_actions": [
+      {
+        "action": "read_public_content",
+        "description": "Read all public pages, services, products, reviews, and portfolio details.",
+        "permission": "allowed"
+      },
+      {
+        "action": "submit_lead_inquiry",
+        "description": "Submit a business inquiry or request a call back via public contact forms.",
+        "endpoint": "https://maajankiwebtech.com/api/leads",
+        "permission": "allowed"
+      },
+      {
+        "action": "view_sitemap",
+        "description": "Access XML sitemap and machine-readable llms.txt discovery files.",
+        "endpoint": "https://maajankiwebtech.com/sitemap.xml",
+        "permission": "allowed"
+      }
+    ],
+    "disallowed_actions": [
+      {
+        "action": "access_admin_dashboard",
+        "description": "Access private administrative routes without authentication.",
+        "permission": "denied"
+      }
+    ],
+    "contact": {
+      "email": "info@maajankiwebtech.com",
+      "phone": "+91-9006543913"
+    }
+  }
+}

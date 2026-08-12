@@ -14,8 +14,9 @@ import {
   Menu,
   Shield,
   User,
-  LogOut,
-  Sparkles
+  Radio,
+  Volume2,
+  VolumeX,
 } from 'lucide-react';
 import { UserButton, useUser } from '@clerk/nextjs';
 
@@ -26,8 +27,12 @@ export default function AdminHeader({
   searchTerm,
   setSearchTerm,
   onLogoutClick,
-  unreadNotificationsCount = 3,
-  onOpenNotifications
+  unreadNotificationsCount = 0,
+  onOpenNotifications,
+  liveSync = true,
+  setLiveSync = () => {},
+  soundEnabled = true,
+  setSoundEnabled = () => {},
 }) {
   const { user } = useUser();
   const [lang, setLang] = useState('EN');
@@ -58,6 +63,30 @@ export default function AdminHeader({
 
       {/* Right Action Icons & User Dropdown */}
       <div className="flex items-center gap-2 md:gap-3">
+        {/* Real-Time Live Sync Badge Indicator */}
+        <button
+          onClick={() => setLiveSync(!liveSync)}
+          className={`hidden sm:flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold rounded-lg border transition-all ${
+            liveSync
+              ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/20'
+              : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-700'
+          }`}
+          title="Toggle Real-Time Live Background Sync"
+        >
+          <span className={`w-2 h-2 rounded-full ${liveSync ? 'bg-emerald-400 animate-ping' : 'bg-slate-500'}`} />
+          <Radio className="w-3.5 h-3.5" />
+          <span>{liveSync ? 'LIVE SYNC ON' : 'PAUSED'}</span>
+        </button>
+
+        {/* Real-Time Sound Alert Toggle */}
+        <button
+          onClick={() => setSoundEnabled(!soundEnabled)}
+          className="p-2 text-slate-400 hover:text-slate-100 hover:bg-slate-800 rounded-xl transition-colors hidden sm:block"
+          title={soundEnabled ? 'Mute Lead Sound Alert' : 'Enable Lead Sound Alert'}
+        >
+          {soundEnabled ? <Volume2 className="w-4 h-4 text-emerald-400" /> : <VolumeX className="w-4 h-4 text-slate-500" />}
+        </button>
+
         {/* Quick Actions Dropdown */}
         <div className="relative hidden sm:block">
           <button

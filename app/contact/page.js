@@ -11,7 +11,7 @@ import { Phone, MapPin, Mail, MessageCircle } from "lucide-react";
 export const metadata = {
   title: "Contact Web Agency Bagaha Bihar | Maajanki Web Tech",
   description: "Get in touch with Maajanki Web Tech, the premier website developer in West Champaran, Bihar. Contact our web design and marketing experts today for a free quote!",
-  keywords: ["website developer West Champaran","web design agency Bagaha","contact MaaJanki Web Tech","Bettiah Bihar"],
+  keywords: "website developer West Champaran, web design agency Bagaha, contact MaaJanki Web Tech, Bettiah Bihar",
   openGraph: {
     title: "Contact Web Agency Bagaha Bihar | Maajanki Web Tech",
     description: "Get in touch with Maajanki Web Tech, the premier website developer in West Champaran, Bihar. Contact our web design and marketing experts today for a free quote!",

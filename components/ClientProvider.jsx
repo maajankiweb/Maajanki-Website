@@ -15,17 +15,25 @@ export default function ClientProvider({ children }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: 'ease-in-out',
-    });
+    try {
+      AOS.init({
+        duration: 800,
+        once: true,
+        easing: 'ease-in-out',
+      });
+    } catch (e) {
+      console.warn("AOS initialization error:", e);
+    }
   }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.scrollTo(0, 0);
-      AOS.refresh();
+      try {
+        window.scrollTo(0, 0);
+        AOS.refresh();
+      } catch (e) {
+        console.warn("AOS refresh error:", e);
+      }
     }
   }, [pathname]);
 

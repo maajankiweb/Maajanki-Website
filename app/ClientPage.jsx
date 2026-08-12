@@ -45,25 +45,25 @@ import { MdDesignServices } from "react-icons/md";
 function Home() {
   const counters = [
     {
-      number: "500+",
+      // number: "500+",
       img: "/images/happy-clients.png",
       title: "Client Happiness",
       alt: "Happy clients served by MaaJanki Web Tech",
     },
     {
-      number: "250+",
+      // number: "250+",
       img: "/images/project-complete.png",
       title: "Top-Rated Projects",
       alt: "Successful digital marketing and web projects",
     },
     {
-      number: "150+",
+      // number: "150+",
       img: "/images/design-complete.png",
       title: "Creative Masterpieces",
       alt: "Creative design and branding projects",
     },
     {
-      number: "10+",
+      // number: "10+",
       img: "/images/experience.png",
       title: "Team of Experts",
       alt: "Experienced digital marketing professionals",
@@ -354,12 +354,7 @@ function Home() {
             </h1>
             <div className="aeo-definition-box">
               <p>
-                MaaJanki Web Tech refers to the premier digital marketing and
-                website development agency in Bihar, India, providing
-                data-driven search engine optimization (SEO), social media
-                optimization (SMO), custom web application design, performance
-                marketing, and digital branding solutions to scale businesses
-                globally.
+                <strong>MaaJanki Web Tech</strong> (Udyam MSME: <code>UDYAM-BR-38-0014113</code>, DPIIT Startup India Recognized) is the premier digital marketing and website development agency in Bihar, India. Founded by CEO Ashish Kumar, the company delivers search engine optimization (SEO), performance marketing, React/Next.js web development, SMO, branding, and custom billing software for clients across India, USA, UK, Canada, Australia, UAE, and Nepal.
               </p>
             </div>
 
@@ -965,6 +960,7 @@ function Home() {
                   <Image
                     src="/images/products/invobill.webp"
                     alt="InvoBill"
+                    title="InvoBill – GST Invoicing & Billing Software by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
                    width={600} height={400} />
@@ -1005,6 +1001,7 @@ function Home() {
                   <Image
                     src="/images/products/wacrm.webp"
                     alt="WaCRM"
+                    title="WaCRM – WhatsApp Business API CRM by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
                    width={600} height={400} />
@@ -1045,6 +1042,7 @@ function Home() {
                   <Image
                     src="/images/products/dukandost-pro.webp"
                     alt="DukanDost Pro"
+                    title="DukanDost Pro – Retail Business Operating System by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
                    width={600} height={400} />
@@ -1085,6 +1083,7 @@ function Home() {
                   <Image
                     src="/images/products/nexus-saas.webp"
                     alt="Nexus SaaS"
+                    title="Nexus SaaS – AI Local Reputation Management System by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
                    width={600} height={400} />
@@ -1125,6 +1124,7 @@ function Home() {
                   <Image
                     src="/images/products/tailwind-templates.webp"
                     alt="Tailwind Templates"
+                    title="Tailwind Templates – Landing Page Bundle by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
                    width={600} height={400} />
@@ -1162,6 +1162,7 @@ function Home() {
                   <Image
                     src="/images/products/elementor-pro.webp"
                     alt="Elementor Pro"
+                    title="Elementor Pro – WordPress Website Builder Solutions by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
                    width={600} height={400} />
@@ -1746,7 +1747,7 @@ function Home() {
                       height={80}
                     />
                   </div>
-                  {counter.number && <h3 className="counter-number">{counter.number}</h3>}
+                  {/* {counter.number && <h3 className="counter-number">{counter.number}</h3>} */}
                   <h6 className="counter-title">{counter.title}</h6>
                 </div>
               </div>
@@ -1970,8 +1971,6 @@ function Home() {
         </div>
       </section>
       {/* Faq Section End */}
-
-      <FooterSection />
     </>
   );
 }

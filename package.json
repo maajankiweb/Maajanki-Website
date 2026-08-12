@@ -33,7 +33,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/submit-indexnow.js",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "postbuild": "node scripts/generate-sitemap.js && node scripts/submit-indexnow.js",
     "start": "next start",
     "hostinger:build": "next build",
     "hostinger:start": "node server.js",

@@ -2,14 +2,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
 import './styles/Auth3D.css';
 import Script from 'next/script';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import PromoPopup from '@/components/PromoPopup';
 import ClientProvider from '@/components/ClientProvider';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import ChatbotLoader from '@/components/Chatbot/ChatbotLoader';
 import LayoutContent from '@/components/LayoutContent';
-import { ClerkProvider, Show, UserButton } from '@clerk/nextjs';
+import { ClerkProvider } from '@clerk/nextjs';
+import { Outfit, Poppins, Inter } from 'next/font/google';
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
+});
+
+const poppins = Poppins({
+  weight: ['300', '400', '500', '600', '700', '800'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+});
 
 
 
@@ -84,6 +99,7 @@ export default function RootLayout({ children }) {
           "contactType": "customer service"
         },
         "sameAs": [
+          "https://www.wikidata.org/wiki/Q115783355",
           "https://www.facebook.com/profile.php?id=61577526895580",
           "https://www.instagram.com/maajankiwebtech/",
           "https://www.linkedin.com/company/maajanki-web-tech-company/",
@@ -283,9 +299,8 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${outfit.variable} ${poppins.variable} ${inter.variable}`}>
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
         <script
@@ -295,7 +310,7 @@ export default function RootLayout({ children }) {
       </head>
 
       <body suppressHydrationWarning>
-        <ClerkProvider>
+        <ClerkProvider telemetry={false}>
           <ClientProvider>
             <LayoutContent>{children}</LayoutContent>
           </ClientProvider>

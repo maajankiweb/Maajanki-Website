@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, createContext, useContext } from 'react';
+import React, { useState, useEffect, useCallback, createContext, useContext, useRef } from 'react';
 import { useAuth } from '@clerk/nextjs';
 import AdminSidebar from './AdminSidebar';
 import AdminHeader from './AdminHeader';
@@ -9,7 +9,6 @@ import LogoutModal from './LogoutModal';
 import CompactAdminFooter from './CompactAdminFooter';
 import '@/app/admin/admin.css';
 
-// Admin Context to share leads data across all admin sub-pages
 const AdminContext = createContext();
 
 export function useAdminContext() {
@@ -25,14 +24,49 @@ export default function AdminShell({ children }) {
   const [showNotifications, setShowNotifications] = useState(false);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
+  // Real-Time States
+  const [liveSync, setLiveSync] = useState(true);
+  const [soundEnabled, setSoundEnabled] = useState(true);
+  const [latestToast, setLatestToast] = useState(null);
+
   // Leads Data state
   const [leads, setLeads] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  // Fetch leads from API
-  const fetchLeads = useCallback(async () => {
-    setLoading(true);
+  const previousLeadCountRef = useRef(0);
+  const isInitialMountRef = useRef(true);
+
+  // Play subtle sound alert on new lead arrival
+  const playNewLeadChime = useCallback(() => {
+    if (!soundEnabled) return;
+    try {
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(587.33, audioCtx.currentTime); // D5 note
+      osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.15); // A5 note
+
+      gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.3);
+    } catch {
+      // Audio playback blocked by browser policy until user interacts
+    }
+  }, [soundEnabled]);
+
+  // Fetch leads from API (support silent background update)
+  const fetchLeads = useCallback(async (isSilent = false) => {
+    if (!isSilent) {
+      setLoading(true);
+    }
     setError('');
 
     try {
@@ -45,21 +79,58 @@ export default function AdminShell({ children }) {
 
       const data = await response.json();
       if (response.ok && data.success) {
-        setLeads(data.leads || []);
+        const fetchedLeads = data.leads || [];
+
+        // Check if new leads arrived during background poll
+        if (!isInitialMountRef.current && fetchedLeads.length > previousLeadCountRef.current) {
+          const newLeadCount = fetchedLeads.length - previousLeadCountRef.current;
+          const newestLead = fetchedLeads[0];
+
+          // Trigger sound chime & toast popup
+          playNewLeadChime();
+          setLatestToast({
+            title: `🔔 ${newLeadCount} New Lead Received!`,
+            name: newestLead?.name || 'New Client',
+            service: newestLead?.service || 'Inquiry',
+            email: newestLead?.email || '',
+            timestamp: new Date().toLocaleTimeString(),
+          });
+
+          // Auto dismiss toast after 6 seconds
+          setTimeout(() => {
+            setLatestToast(null);
+          }, 6000);
+        }
+
+        previousLeadCountRef.current = fetchedLeads.length;
+        isInitialMountRef.current = false;
+        setLeads(fetchedLeads);
       } else {
-        setError(data.error || 'Failed to fetch leads');
+        if (!isSilent) setError(data.error || 'Failed to fetch leads');
       }
     } catch (err) {
-      console.error(err);
-      setError('Network connection error.');
+      console.error('Fetch error:', err);
+      if (!isSilent) setError('Network connection error.');
     } finally {
-      setLoading(false);
+      if (!isSilent) setLoading(false);
     }
-  }, [getToken]);
+  }, [getToken, playNewLeadChime]);
 
+  // Initial mount fetch
   useEffect(() => {
-    fetchLeads();
+    fetchLeads(false);
   }, [fetchLeads]);
+
+  // Real-time live background sync interval (every 10 seconds)
+  useEffect(() => {
+    if (!liveSync) return;
+
+    const intervalId = setInterval(() => {
+      fetchLeads(true); // Silent poll
+    }, 10000);
+
+    return () => clearInterval(intervalId);
+  }, [liveSync, fetchLeads]);
 
   // Update lead status handler
   const handleUpdateStatus = async (id, newStatus) => {
@@ -122,7 +193,7 @@ export default function AdminShell({ children }) {
       `"${(l.phone || '').replace(/"/g, '""')}"`,
       `"${(l.service || '').replace(/"/g, '""')}"`,
       `"${(l.url || '').replace(/"/g, '""')}"`,
-      l.status || 'new',
+      l.status || 'New',
       `"${(l.message || '').replace(/"/g, '""')}"`,
     ]);
 
@@ -146,6 +217,10 @@ export default function AdminShell({ children }) {
     handleExportCSV,
     searchTerm,
     setSearchTerm,
+    liveSync,
+    setLiveSync,
+    soundEnabled,
+    setSoundEnabled,
   };
 
   return (
@@ -171,11 +246,34 @@ export default function AdminShell({ children }) {
             setSearchTerm={setSearchTerm}
             onLogoutClick={() => setShowLogoutModal(true)}
             onOpenNotifications={() => setShowNotifications(!showNotifications)}
+            liveSync={liveSync}
+            setLiveSync={setLiveSync}
+            soundEnabled={soundEnabled}
+            setSoundEnabled={setSoundEnabled}
           />
 
           {/* Notifications Modal Dropdown */}
           {showNotifications && (
             <NotificationCenter leads={leads} onClose={() => setShowNotifications(false)} />
+          )}
+
+          {/* Real-time Toast Alert Notification Popup */}
+          {latestToast && (
+            <div className="fixed bottom-6 right-6 z-50 max-w-sm bg-gradient-to-r from-slate-900 to-slate-800 border-2 border-orange-500/80 rounded-2xl shadow-2xl p-4 text-white animate-bounce">
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <h6 className="font-bold text-orange-400 text-sm">{latestToast.title}</h6>
+                  <p className="font-semibold text-slate-100 text-xs mt-1">{latestToast.name} ({latestToast.service})</p>
+                  <p className="text-[11px] text-slate-400">{latestToast.email} • {latestToast.timestamp}</p>
+                </div>
+                <button
+                  onClick={() => setLatestToast(null)}
+                  className="text-slate-400 hover:text-white text-xs px-1"
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
           )}
 
           {/* Dynamic Page Content */}

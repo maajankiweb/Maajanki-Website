@@ -7,19 +7,6 @@ import Link from 'next/link';
 import '@/app/styles/Service.css';
 import '@/app/styles/Home.css';
 import FooterSection from '@/components/FooterWithPopup';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLightbulb,
-  faPenNib,
-  faCode,
-  faBullhorn,
-  faChartLine,
-  faKeyboard,
-  faShareAlt,
-  faShoppingCart,
-  faMobileAlt,
-  faRobot,
-} from "@fortawesome/free-solid-svg-icons";
 // Import icons from react-icons
 import {
   FaCode,
@@ -37,6 +24,12 @@ import {
   FaHashtag,
   FaShieldVirus,
   FaCloud,
+  FaLightbulb,
+  FaPenNib,
+  FaKeyboard,
+  FaChartLine,
+  FaShareAlt,
+  FaShoppingCart,
 } from "react-icons/fa";
 
 const Services = () => {
@@ -380,7 +373,7 @@ const Services = () => {
             <div className="services-icon-wrap">
               <div className="services-ring"></div>
               <div className="services-icon">
-                <FontAwesomeIcon icon={faLightbulb} />
+                <FaLightbulb />
               </div>
             </div>
             <p>Branding &amp; Identity</p>
@@ -392,7 +385,7 @@ const Services = () => {
             <div className="services-icon-wrap">
               <div className="services-ring"></div>
               <div className="services-icon">
-                <FontAwesomeIcon icon={faPenNib} />
+                <FaPenNib />
               </div>
             </div>
             <p>Creative Graphic Design</p>
@@ -404,7 +397,7 @@ const Services = () => {
             <div className="services-icon-wrap">
               <div className="services-ring"></div>
               <div className="services-icon">
-                <FontAwesomeIcon icon={faCode} />
+                <FaCode />
               </div>
             </div>
             <p>Website Development</p>
@@ -416,7 +409,7 @@ const Services = () => {
             <div className="services-icon-wrap">
               <div className="services-ring"></div>
               <div className="services-icon">
-                <FontAwesomeIcon icon={faKeyboard} />
+                <FaKeyboard />
               </div>
             </div>
             <p>SEO Content Writing</p>
@@ -428,7 +421,7 @@ const Services = () => {
             <div className="services-icon-wrap">
               <div className="services-ring"></div>
               <div className="services-icon">
-                <FontAwesomeIcon icon={faChartLine} />
+                <FaChartLine />
               </div>
             </div>
             <p>Search Engine Optimization</p>
@@ -440,7 +433,7 @@ const Services = () => {
             <div className="services-icon-wrap">
               <div className="services-ring"></div>
               <div className="services-icon">
-                <FontAwesomeIcon icon={faShareAlt} />
+                <FaShareAlt />
               </div>
             </div>
             <p>Social Media (SMO)</p>
@@ -452,7 +445,7 @@ const Services = () => {
             <div className="services-icon-wrap">
               <div className="services-ring"></div>
               <div className="services-icon">
-                <FontAwesomeIcon icon={faBullhorn} />
+                <FaBullhorn />
               </div>
             </div>
             <p>Performance Marketing</p>
@@ -464,7 +457,7 @@ const Services = () => {
             <div className="services-icon-wrap">
               <div className="services-ring"></div>
               <div className="services-icon">
-                <FontAwesomeIcon icon={faShoppingCart} />
+                <FaShoppingCart />
               </div>
             </div>
             <p>E-commerce Product Listing</p>
@@ -476,7 +469,7 @@ const Services = () => {
             <div className="services-icon-wrap">
               <div className="services-ring"></div>
               <div className="services-icon">
-                <FontAwesomeIcon icon={faMobileAlt} />
+                <FaMobileAlt />
               </div>
             </div>
             <p>App Development</p>
@@ -488,7 +481,7 @@ const Services = () => {
             <div className="services-icon-wrap">
               <div className="services-ring"></div>
               <div className="services-icon">
-                <FontAwesomeIcon icon={faRobot} />
+                <FaRobot />
               </div>
             </div>
             <p>AI Automation &amp; Chatbots</p>
@@ -586,7 +579,7 @@ const Services = () => {
                       height={80}
                     />
                   </div>
-                  <h3 className="counter-number">{counter.number}</h3>
+                  {/* {counter.number && <h3 className="counter-number">{counter.number}</h3>} */}
                   <h6 className="counter-title">{counter.title}</h6>
                 </div>
               </div>

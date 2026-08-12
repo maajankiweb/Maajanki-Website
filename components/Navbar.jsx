@@ -114,7 +114,7 @@ const Navbar = () => {
       <nav className="main-nav">
         <div className="logo">
           <Link href="/">
-            <Image priority src="/images/MaaJanki-Web-Tech-Logo.webp" alt="MaaJanki Web Tech logo – Digital Marketing and Website Development Agency in India" title="MaaJanki Web Tech | Digital Marketing & Web Development Agency" width={210} height={42}/>
+            <Image priority src="/images/MaaJanki-Web-Tech-Logo.webp" alt="MaaJanki Web Tech logo – Digital Marketing and Website Development Agency in India" title="MaaJanki Web Tech | Digital Marketing & Web Development Agency" width={200} height={80} style={{ height: 'auto', width: 'auto' }} />
           </Link>
         </div>
 

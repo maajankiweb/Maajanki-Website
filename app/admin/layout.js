@@ -3,14 +3,23 @@ export const dynamic = 'force-dynamic';
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
-
 import AdminShell from '@/components/admin/AdminShell';
 
-// Allowed Admin Email Addresses or Domains (e.g. maajankiwebtech@gmail.com, info@maajankiwebtech.com, @maajankiwebtech.com)
-const ALLOWED_ADMIN_PATTERNS = (process.env.ALLOWED_ADMIN_EMAILS || '')
-  .split(',')
-  .map((e) => e.trim().toLowerCase())
-  .filter(Boolean);
+export const metadata = {
+  title: 'Admin Control Center | MaaJanki Web Tech',
+  robots: {
+    index: false,
+    follow: false,
+    noimageindex: true,
+    noarchive: true,
+    nosnippet: true,
+  },
+};
+
+const DEFAULT_ADMIN_PATTERNS = ['maajankiweb@gmail.com', 'info@maajankiwebtech.com'];
+const ALLOWED_ADMIN_PATTERNS = process.env.ALLOWED_ADMIN_EMAILS
+  ? process.env.ALLOWED_ADMIN_EMAILS.split(',').map((e) => e.trim().toLowerCase()).filter(Boolean)
+  : DEFAULT_ADMIN_PATTERNS;
 
 export default async function AdminLayout({ children }) {
   const { userId } = await auth();
@@ -24,15 +33,15 @@ export default async function AdminLayout({ children }) {
   const userEmail = user?.primaryEmailAddress?.emailAddress?.toLowerCase() || '';
 
   const isAuthorized =
-    ALLOWED_ADMIN_PATTERNS.length === 0 ||
+    ALLOWED_ADMIN_PATTERNS.length > 0 &&
     ALLOWED_ADMIN_PATTERNS.some((pattern) => {
       if (pattern.startsWith('@')) {
         return userEmail.endsWith(pattern);
       }
-      return userEmail === pattern || userEmail.includes(pattern);
+      return userEmail === pattern;
     });
 
-  // If ALLOWED_ADMIN_EMAILS is configured, enforce email restriction
+  // If email is not in ALLOWED_ADMIN_EMAILS, display Access Denied
   if (!isAuthorized) {
     return (
       <div style={{
@@ -44,24 +53,26 @@ export default async function AdminLayout({ children }) {
         fontFamily: 'sans-serif',
         padding: '20px',
         textAlign: 'center',
+        backgroundColor: '#0f172a',
+        color: '#f8fafc',
       }}>
         <h1 style={{ fontSize: '48px', marginBottom: '10px' }}>🚫 Access Denied</h1>
-        <h3 style={{ color: '#e53e3e', marginBottom: '16px' }}>
+        <h3 style={{ color: '#f87171', marginBottom: '16px' }}>
           Unauthorized Admin Account ({userEmail})
         </h3>
-        <p style={{ color: '#4a5568', maxWidth: '500px', lineHeight: '1.6' }}>
-          Your email address is not authorized to view the MaaJanki Web Tech Lead Dashboard. Please sign in with an authorized admin account.
+        <p style={{ color: '#94a3b8', maxWidth: '500px', lineHeight: '1.6' }}>
+          Your email address is not authorized to access the MaaJanki Web Tech Admin Control Center. Access is strictly restricted to verified administrative email accounts.
         </p>
         <Link href="/sign-in" style={{
           marginTop: '24px',
-          padding: '10px 24px',
-          backgroundColor: '#042544',
-          color: '#fff',
+          padding: '12px 28px',
+          backgroundColor: '#fd6a02',
+          color: '#ffffff',
           borderRadius: '8px',
           textDecoration: 'none',
           fontWeight: '600',
         }}>
-          Switch Account / Sign In Again
+          Switch Account / Sign In
         </Link>
       </div>
     );

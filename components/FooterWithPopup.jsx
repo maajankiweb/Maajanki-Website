@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import "./FooterWithPopup.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const FooterWithPopup = () => {
   const [showModal, setShowModal] = useState(false);

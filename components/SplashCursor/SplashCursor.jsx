@@ -27,8 +27,24 @@ function SplashCursor({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    if (typeof window !== 'undefined' && window.innerWidth < 768) {
+      return;
+    }
+
     // Track if the effect is still active for cleanup
     let isActive = true;
+    let isContextLost = false;
+
+    const handleContextLost = (e) => {
+      e.preventDefault();
+      isContextLost = true;
+    };
+    const handleContextRestored = () => {
+      isContextLost = false;
+    };
+
+    canvas.addEventListener('webglcontextlost', handleContextLost, false);
+    canvas.addEventListener('webglcontextrestored', handleContextRestored, false);
 
     function pointerPrototype() {
       this.id = -1;
@@ -66,59 +82,72 @@ function SplashCursor({
     let pointers = [new pointerPrototype()];
 
     const { gl, ext } = getWebGLContext(canvas);
+    if (!gl || !ext) {
+      return () => {
+        canvas.removeEventListener('webglcontextlost', handleContextLost);
+        canvas.removeEventListener('webglcontextrestored', handleContextRestored);
+      };
+    }
+
     if (!ext.supportLinearFiltering) {
       config.DYE_RESOLUTION = 256;
       config.SHADING = false;
     }
 
     function getWebGLContext(canvas) {
-      const params = {
-        alpha: true,
-        depth: false,
-        stencil: false,
-        antialias: false,
-        preserveDrawingBuffer: false
-      };
-      let gl = canvas.getContext('webgl2', params);
-      const isWebGL2 = !!gl;
-      if (!isWebGL2) gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params);
+      try {
+        const params = {
+          alpha: true,
+          depth: false,
+          stencil: false,
+          antialias: false,
+          preserveDrawingBuffer: false
+        };
+        let gl = canvas.getContext('webgl2', params);
+        const isWebGL2 = !!gl;
+        if (!isWebGL2) gl = canvas.getContext('webgl', params) || canvas.getContext('experimental-webgl', params);
+        if (!gl) return { gl: null, ext: null };
 
-      let halfFloat;
-      let supportLinearFiltering;
-      if (isWebGL2) {
-        gl.getExtension('EXT_color_buffer_float');
-        supportLinearFiltering = gl.getExtension('OES_texture_float_linear');
-      } else {
-        halfFloat = gl.getExtension('OES_texture_half_float');
-        supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
-      }
-      gl.clearColor(0.0, 0.0, 0.0, 1.0);
-
-      const halfFloatTexType = isWebGL2 ? gl.HALF_FLOAT : halfFloat && halfFloat.HALF_FLOAT_OES;
-      let formatRGBA;
-      let formatRG;
-      let formatR;
-
-      if (isWebGL2) {
-        formatRGBA = getSupportedFormat(gl, gl.RGBA16F, gl.RGBA, halfFloatTexType);
-        formatRG = getSupportedFormat(gl, gl.RG16F, gl.RG, halfFloatTexType);
-        formatR = getSupportedFormat(gl, gl.R16F, gl.RED, halfFloatTexType);
-      } else {
-        formatRGBA = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
-        formatRG = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
-        formatR = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
-      }
-
-      return {
-        gl,
-        ext: {
-          formatRGBA,
-          formatRG,
-          formatR,
-          halfFloatTexType,
-          supportLinearFiltering
+        let halfFloat;
+        let supportLinearFiltering;
+        if (isWebGL2) {
+          gl.getExtension('EXT_color_buffer_float');
+          supportLinearFiltering = gl.getExtension('OES_texture_float_linear');
+        } else {
+          halfFloat = gl.getExtension('OES_texture_half_float');
+          supportLinearFiltering = gl.getExtension('OES_texture_half_float_linear');
         }
-      };
+        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+
+        const halfFloatTexType = isWebGL2 ? gl.HALF_FLOAT : halfFloat && halfFloat.HALF_FLOAT_OES;
+        let formatRGBA;
+        let formatRG;
+        let formatR;
+
+        if (isWebGL2) {
+          formatRGBA = getSupportedFormat(gl, gl.RGBA16F, gl.RGBA, halfFloatTexType);
+          formatRG = getSupportedFormat(gl, gl.RG16F, gl.RG, halfFloatTexType);
+          formatR = getSupportedFormat(gl, gl.R16F, gl.RED, halfFloatTexType);
+        } else {
+          formatRGBA = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
+          formatRG = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
+          formatR = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
+        }
+
+        return {
+          gl,
+          ext: {
+            formatRGBA,
+            formatRG,
+            formatR,
+            halfFloatTexType,
+            supportLinearFiltering
+          }
+        };
+      } catch (err) {
+        console.warn("WebGL initialization failed in SplashCursor:", err);
+        return { gl: null, ext: null };
+      }
     }
 
     function getSupportedFormat(gl, internalFormat, format, type) {
@@ -680,14 +709,20 @@ function SplashCursor({
     let colorUpdateTimer = 0.0;
 
     function updateFrame() {
-      if (!isActive) return;
-      const dt = calcDeltaTime();
-      if (resizeCanvas()) initFramebuffers();
-      updateColors(dt);
-      applyInputs();
-      step(dt);
-      render(null);
-      animationFrameId.current = requestAnimationFrame(updateFrame);
+      if (!isActive || isContextLost) return;
+      try {
+        const dt = calcDeltaTime();
+        if (resizeCanvas()) initFramebuffers();
+        updateColors(dt);
+        applyInputs();
+        step(dt);
+        render(null);
+      } catch (err) {
+        console.warn("SplashCursor frame render error:", err);
+      }
+      if (isActive && !isContextLost) {
+        animationFrameId.current = requestAnimationFrame(updateFrame);
+      }
     }
 
     function calcDeltaTime() {
@@ -1043,6 +1078,9 @@ function SplashCursor({
     // Cleanup function
     return () => {
       isActive = false;
+
+      canvas.removeEventListener('webglcontextlost', handleContextLost);
+      canvas.removeEventListener('webglcontextrestored', handleContextRestored);
 
       // Cancel animation frame
       if (animationFrameId.current) {

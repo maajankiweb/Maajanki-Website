@@ -5,10 +5,17 @@ import { auth, currentUser } from '@clerk/nextjs/server';
 import { connectDB } from '@/lib/db';
 import Lead from '@/lib/models/Lead';
 
-const ALLOWED_ADMIN_EMAILS = (process.env.ALLOWED_ADMIN_EMAILS || '')
-  .split(',')
-  .map((e) => e.trim().toLowerCase())
-  .filter(Boolean);
+const DEFAULT_ADMIN_EMAILS = ['maajankiweb@gmail.com', 'info@maajankiwebtech.com'];
+const ALLOWED_ADMIN_EMAILS = process.env.ALLOWED_ADMIN_EMAILS
+  ? process.env.ALLOWED_ADMIN_EMAILS.split(',').map((e) => e.trim().toLowerCase()).filter(Boolean)
+  : DEFAULT_ADMIN_EMAILS;
+
+const ALLOWED_STATUSES = ['New', 'Contacted', 'Qualified', 'Closed', 'Spam'];
+
+function sanitizeString(str) {
+  if (typeof str !== 'string') return '';
+  return str.replace(/\$/g, '').trim();
+}
 
 async function isAuthorized(request) {
   try {
@@ -24,17 +31,19 @@ async function isAuthorized(request) {
       return false;
     }
 
-    // Check email restriction if ALLOWED_ADMIN_EMAILS is configured
+    // Check email restriction
     if (ALLOWED_ADMIN_EMAILS.length > 0) {
       const user = await currentUser();
       const userEmail = user?.primaryEmailAddress?.emailAddress?.toLowerCase() || '';
       if (!ALLOWED_ADMIN_EMAILS.includes(userEmail)) {
+        console.warn(`[SECURITY ALERT] Unauthorized admin access attempt by: ${userEmail} (IP: ${request.headers.get('x-forwarded-for') || 'unknown'})`);
         return false;
       }
     }
 
     return true;
-  } catch {
+  } catch (err) {
+    console.error('[SECURITY ERROR] Authorization check failed:', err);
     return false;
   }
 }
@@ -47,8 +56,11 @@ export async function GET(request) {
   try {
     await connectDB();
     const { searchParams } = new URL(request.url);
-    const source = searchParams.get('source');
-    const status = searchParams.get('status');
+    const rawSource = searchParams.get('source');
+    const rawStatus = searchParams.get('status');
+
+    const source = sanitizeString(rawSource);
+    const status = sanitizeString(rawStatus);
 
     let query = {};
     if (source && source !== 'all') {
@@ -73,12 +85,23 @@ export async function PATCH(request) {
 
   try {
     await connectDB();
-    const { id, status } = await request.json();
+    const body = await request.json();
+    const id = sanitizeString(body?.id);
+    const status = sanitizeString(body?.status);
+
     if (!id || !status) {
       return NextResponse.json({ success: false, error: 'ID and Status required' }, { status: 400 });
     }
 
+    if (!ALLOWED_STATUSES.includes(status)) {
+      return NextResponse.json({ success: false, error: 'Invalid lead status value' }, { status: 400 });
+    }
+
     const updatedLead = await Lead.findByIdAndUpdate(id, { status }, { new: true });
+    if (!updatedLead) {
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 });
+    }
+
     return NextResponse.json({ success: true, lead: updatedLead }, { status: 200 });
   } catch (error) {
     console.error('Admin Update Error:', error);
@@ -94,13 +117,18 @@ export async function DELETE(request) {
   try {
     await connectDB();
     const { searchParams } = new URL(request.url);
-    const id = searchParams.get('id');
+    const rawId = searchParams.get('id');
+    const id = sanitizeString(rawId);
 
     if (!id) {
       return NextResponse.json({ success: false, error: 'Lead ID required' }, { status: 400 });
     }
 
-    await Lead.findByIdAndDelete(id);
+    const deleted = await Lead.findByIdAndDelete(id);
+    if (!deleted) {
+      return NextResponse.json({ success: false, error: 'Lead not found' }, { status: 404 });
+    }
+
     return NextResponse.json({ success: true, message: 'Lead deleted' }, { status: 200 });
   } catch (error) {
     console.error('Admin Delete Error:', error);

@@ -106,6 +106,7 @@ const PromoPopup = () => {
             <Image
               src="/images/promo-popup-left.webp"
               alt="MaaJanki Web Tech Website Development & SEO"
+              title="MaaJanki Web Tech – Website Development & SEO Consultation"
               className="promo-graphic-image"
               width="450"
               height="315"

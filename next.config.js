@@ -57,6 +57,10 @@ const nextConfig = {
         source: '/admin/:path*',
         headers: [
           {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow, noarchive, nosnippet, noimageindex',
+          },
+          {
             key: 'Cache-Control',
             value: 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
           },
@@ -74,6 +78,10 @@ const nextConfig = {
         source: '/admin',
         headers: [
           {
+            key: 'X-Robots-Tag',
+            value: 'noindex, nofollow, noarchive, nosnippet, noimageindex',
+          },
+          {
             key: 'Cache-Control',
             value: 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
           },
@@ -90,6 +98,10 @@ const nextConfig = {
       {
         source: '/:path*',
         headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+          },
           {
             key: 'X-DNS-Prefetch-Control',
             value: 'on',
@@ -124,6 +136,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Block WordPress probe requests (Redirect to home page)
+      { source: '/wp-json', destination: '/', permanent: false },
+      { source: '/wp-json/:path*', destination: '/', permanent: false },
+      { source: '/wp-admin', destination: '/', permanent: false },
+      { source: '/wp-admin/:path*', destination: '/', permanent: false },
+      { source: '/wp-login.php', destination: '/', permanent: false },
+      { source: '/xmlrpc.php', destination: '/', permanent: false },
       { source: '/all-leads', destination: '/admin/all-leads', permanent: false },
       { source: '/new-leads', destination: '/admin/new-leads', permanent: false },
       { source: '/contacted-leads', destination: '/admin/contacted-leads', permanent: false },

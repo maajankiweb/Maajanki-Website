@@ -2,11 +2,13 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import PromoPopup from '@/components/PromoPopup';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import ChatbotLoader from '@/components/Chatbot/ChatbotLoader';
+import FooterWithPopup from '@/components/FooterWithPopup';
+
+const PromoPopup = dynamic(() => import('@/components/PromoPopup'), { ssr: false });
+const ChatbotLoader = dynamic(() => import('@/components/Chatbot/ChatbotLoader'), { ssr: false });
 
 export default function LayoutContent({ children }) {
   const pathname = usePathname();
@@ -29,7 +31,7 @@ export default function LayoutContent({ children }) {
         <Breadcrumbs />
         {children}
       </main>
-      <Footer />
+      <FooterWithPopup />
     </>
   );
 }
