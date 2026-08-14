@@ -352,7 +352,7 @@ function Home() {
               Global Web Development & Digital Marketing Agency | MaaJanki Web Tech
             </h1>
             <div className="aeo-definition-box">
-              <p>
+              <p suppressHydrationWarning>
                 MaaJanki Web Tech refers to the premier digital marketing and website development agency in Bihar, India, providing data-driven search engine optimization (SEO), social media optimization (SMO), custom web application design, performance marketing, and digital branding solutions to scale businesses globally.
               </p>
             </div>

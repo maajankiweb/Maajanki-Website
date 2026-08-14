@@ -10,6 +10,7 @@ import Footer from '@/components/Footer';
 
 const PromoPopup = dynamic(() => import('@/components/PromoPopup'), { ssr: false });
 const ChatbotLoader = dynamic(() => import('@/components/Chatbot/ChatbotLoader'), { ssr: false });
+import FloatingButtons from '@/components/FloatingButtons';
 
 export default function LayoutContent({ children }) {
   const pathname = usePathname();
@@ -28,6 +29,7 @@ export default function LayoutContent({ children }) {
       <Navbar />
       <PromoPopup />
       <ChatbotLoader />
+      <FloatingButtons />
       <main id="main-content" style={{ minHeight: '80vh' }}>
         <Breadcrumbs />
         {children}
