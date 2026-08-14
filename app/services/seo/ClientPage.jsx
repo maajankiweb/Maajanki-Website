@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import "@/app/styles/Home.css";
 import "@/app/styles/SEO.css";
-import FooterWithPopup from '@/components/FooterWithPopup';
+import "@/app/styles/Branding.css";
 
 const SEO = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -86,28 +86,110 @@ const SEO = () => {
       </section>
       {/* Banner Section End */}
 
-      {/* Page Introduction Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="alt-font inner-heading">
-                Top-Rated <strong>SEO Services in Bihar, India</strong> –
-                Maximize Your Visibility on Traditional and Generative AI Search
-                Platforms
+      {/* Page Introduction Section - Redesigned Modern Layout */}
+      <section
+        className="seo-intro-redesign"
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 50%, #091e36 100%)",
+          padding: "80px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            className="seo-intro-card"
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+              border: "1px solid rgba(253, 106, 2, 0.35)",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(253, 106, 2, 0.15)",
+              position: "relative",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "30px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "rgba(253, 106, 2, 0.15)",
+                  border: "1px solid rgba(253, 106, 2, 0.5)",
+                  color: "#FD6A02",
+                  padding: "6px 20px",
+                  borderRadius: "30px",
+                  fontSize: "13px",
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                }}
+              >
+                Organic Growth &amp; SEO Strategy
+              </span>
+              <h2
+                style={{
+                  color: "#ffffff",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                  fontWeight: "800",
+                  fontFamily: '"Outfit", sans-serif',
+                  lineHeight: "1.3",
+                  maxWidth: "950px",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Top-Rated <span style={{ color: "#FD6A02" }}>SEO Services in Bihar, India</span> – Maximize Your Visibility on Traditional and Generative AI Search Platforms
               </h2>
+            </div>
 
-              <p className="text-medium line-height-28 sm-line-height-26">
-                Are you looking for the <strong>best SEO agency in Bihar, India</strong> to elevate your digital presence and outrank your market competitors? MaaJanki Web Tech provides strategic, result-oriented, and ethical white-hat <strong>search engine optimization (SEO) services</strong> specifically designed to drive high-converting organic traffic, qualified sales leads, and sustainable revenue growth for startups, enterprise brands, and growing online stores. Operating from Bagaha, Bihar, we actively support e-commerce, B2B, and local service brands in Patna, Delhi, Mumbai, and globally, ensuring that your business ranks at the top of search result layouts on Google, Yahoo, and Bing.
-              </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "30px",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.04)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#cbd5e1",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  Are you looking for the <strong style={{ color: "#ffffff" }}>best SEO agency in Bihar, India</strong> to elevate your digital presence and outrank your market competitors? MaaJanki Web Tech provides strategic, white-hat search engine optimization services for brands in Patna, Delhi, and globally.
+                </p>
+              </div>
 
-              <p className="text-medium line-height-28 sm-line-height-26">
-                Sustainable search placement requires a multi-faceted approach that goes beyond basic keyword placements. At MaaJanki Web Tech, we deploy a comprehensive optimization methodology that blends detailed keyword intelligence, exhaustive technical SEO health audits, deep speed improvements (targeting Core Web Vitals like LCP, CLS, and INP), and high-authority link-building campaigns. Our search specialists analyze competitor keyword gaps, build schema structured markup scripts (JSON-LD), audit robots.txt and sitemap configurations, and implement clean content siloing strategies. This signals search engines that your website is the most credible and authoritative answer to user search intents.
-              </p>
-
-              <p className="text-medium line-height-28 sm-line-height-26">
-                In today's evolving search landscape, we also optimize your web copy for Generative Engine Optimization (GEO) to ensure your business is captured by conversational AI systems. By structuring data formats, compiling factual direct-answers, and establishing Passage-Level Citability signals, we prepare your brand to be cited by AI search assistants including ChatGPT Search, Perplexity AI, Gemini, and Google's AI Overviews. From local map pack listing rankings via Google Business Profile optimization to complex eCommerce shop category SEO setups, partner with Bihar's top SEO consulting team to scale your business online.
-              </p>
+              <div
+                style={{
+                  background: "rgba(253, 106, 2, 0.08)",
+                  border: "1px solid rgba(253, 106, 2, 0.25)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#e2e8f0",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  We optimize your website for both search engine algorithms and modern AI engines (ChatGPT, Perplexity, Gemini) using technical audits, structured data, Core Web Vitals optimization, and high-authority link building.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -495,7 +577,7 @@ const SEO = () => {
                 </div>
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
-                <h2 className="jobready-heading-small">How We Work</h2>
+                <h2 className="main-heading">8. Organic Local & International SEO</h2>
                 <h3 className="seo-service-heading">Keyword Research & Strategy</h3>
                 <p className="content-text">
                   <strong>How We Work</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized search engine optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
@@ -710,44 +792,50 @@ const SEO = () => {
         </div>
       </section>
 
-      {/* Brochure Section */}
-      <section className="graphic-landing-section">
-        <div className="graphic-container">
-          <div className="graphic-left">
-            <h2 className="br-graphic-heading">
+      {/* Brochure Section - Matched Reference UI Design */}
+      <section
+        className="graphic-landing-section"
+        style={{
+          background: "radial-gradient(circle at 10% 20%, rgba(253, 106, 2, 0.25) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(4, 37, 68, 0.4) 0%, transparent 50%), linear-gradient(135deg, #042544 0%, #150902 45%, #FD6A02 100%)",
+          padding: "90px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+          borderBottom: "3px solid #042544",
+        }}
+      >
+        <div className="graphic-container" style={{ maxWidth: "1240px", margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "40px" }}>
+          {/* Left Column: Heading, Subtext & Brochure Download Card */}
+          <div className="graphic-left" style={{ flex: "1 1 500px" }}>
+            <h2 className="br-graphic-heading" style={{ color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', fontSize: "clamp(2rem, 3.5vw, 2.5rem)", marginBottom: "15px", lineHeight: "1.2" }}>
               Download Our Custom Search Engine Optimization Strategy
             </h2>
-            <p className="graphic-subtext">
-              Partner with MaaJanki Web Tech to grow your organic visibility. We
-              use ethical, white-hat strategies to build authority and drive
-              long-term business results.
+            <p className="graphic-subtext" style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "1.6", marginBottom: "30px" }}>
+              Partner with MaaJanki Web Tech to grow your organic visibility. We use ethical, white-hat strategies to build authority and drive long-term business results.
             </p>
 
-            <div className="graphic-brochure-box">
-              <h3 className="graphic-brochure-title">
+            <div className="graphic-brochure-box" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.12)", borderRadius: "18px", padding: "30px", boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)" }}>
+              <h3 className="graphic-brochure-title" style={{ color: "#ffffff", fontSize: "1.35rem", fontWeight: "700", marginBottom: "10px" }}>
                 Download Our SEO Campaign Outline
               </h3>
-              <p className="graphic-brochure-desc">
-                Learn about our keyword workflows, on-page optimization
-                checklists, and local citation strategies in our SEO brochure.
+              <p className="graphic-brochure-desc" style={{ color: "#94a3b8", fontSize: "14px", marginBottom: "20px", lineHeight: "1.5" }}>
+                Learn about our keyword workflows, on-page optimization checklists, and local citation strategies in our SEO brochure.
               </p>
 
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> On-Page and Technical
-                Optimization Guide
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> On-Page and Technical Optimization Guide
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> High-Quality White-Hat
-                Link Building
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> High-Quality White-Hat Link Building
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Google Business Profile
-                Setup & Tracking
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "25px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Google Business Profile Setup &amp; Tracking
               </div>
 
               <button
                 className="graphic-brochure-btn"
                 onClick={openBrochurePopup}
+                style={{ background: "linear-gradient(135deg, #7e22ce, #FD6A02)", color: "#ffffff", border: "none", borderRadius: "30px", padding: "12px 28px", fontWeight: "700", fontSize: "14px", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "8px", boxShadow: "0 8px 20px rgba(126, 34, 206, 0.4)", transition: "all 0.3s ease" }}
               >
                 ⬇️ Download SEO Brochure
               </button>
@@ -760,6 +848,7 @@ const SEO = () => {
                   <div
                     className="brochure-popup"
                     onClick={(e) => e.stopPropagation()}
+                    style={{ background: "#042544", border: "2px solid #FD6A02" }}
                   >
                     <span
                       className="brochure-close"
@@ -774,45 +863,51 @@ const SEO = () => {
                       onSubmit={(e) => {
                         e.preventDefault();
                         const form = e.target;
-                        const email = form.email ? form.email.value : "";
-                        fetch("/api/leads", {
+                        fetch(form.action, {
                           method: "POST",
-                          headers: { "Content-Type": "application/json" },
-                          body: JSON.stringify({
-                            email: email,
-                            service: "SEO Brochure Download",
-                            source: "brochure",
-                            message: "User requested SEO Service Brochure"
-                          })
-                        })
-                          .then((res) => res.json())
-                          .then((result) => {
-                            if (result.success) {
-                              alert("Thank you! Brochure request received.");
-                              form.reset();
-                              closeBrochurePopup();
-                            } else {
-                              alert(result.error || "Something went wrong.");
-                            }
-                          })
-                          .catch(() => alert("Network error. Please try again."));
+                          body: new FormData(form),
+                          headers: { Accept: "application/json" },
+                        }).then((res) => {
+                          if (res.ok) {
+                            alert("Thank you! Your brochure is downloading.");
+                            setIsPopupOpen(false);
+                            window.open(
+                              "/brochures/MaaJanki-Web-Tech-Branding-Brochure.pdf",
+                              "_blank"
+                            );
+                          } else {
+                            alert("Submission error. Please try again.");
+                          }
+                        });
                       }}
                     >
-                      <h3 className="brochure-title">Get Your SEO Guide</h3>
-                      <label htmlFor="email">Email Address:</label>
+                      <h3 className="brochure-title" style={{ color: "#ffffff" }}>
+                        Download SEO Guide
+                      </h3>
                       <input
-                        type="email"
-                        name="email"
-                        placeholder="you@example.com"
+                        type="text"
+                        name="name"
+                        placeholder="Your Name *"
                         required
                       />
                       <input
-                        type="hidden"
-                        name="brochure_request"
-                        value="SEO_Brochure"
+                        type="email"
+                        name="email"
+                        placeholder="Your Email *"
+                        required
                       />
-                      <button type="submit" className="brochure-submit-btn">
-                        Send My Brochure
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number *"
+                        required
+                      />
+                      <button
+                        type="submit"
+                        className="brochure-submit-btn"
+                        style={{ background: "#FD6A02", color: "#ffffff", borderRadius: "25px" }}
+                      >
+                        Download Now
                       </button>
                     </form>
                   </div>
@@ -821,26 +916,39 @@ const SEO = () => {
             </div>
           </div>
 
-          <div className="graphic-right">
-            <div className="graphic-service-grid">
+          {/* Right Column: 2-Column Grid of 8 Visual Service Cards */}
+          <div className="graphic-right" style={{ flex: "1 1 550px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
               {[
                 { icon: "fas fa-search", title: "Keyword Optimization" },
-                {
-                  icon: "fas fa-chart-line",
-                  title: "SEO Performance Tracking",
-                },
+                { icon: "fas fa-chart-line", title: "SEO Performance Tracking" },
                 { icon: "fas fa-map-marker-alt", title: "Local & Global SEO" },
                 { icon: "fas fa-pen-nib", title: "Content Optimization" },
                 { icon: "fas fa-link", title: "Link Building" },
                 { icon: "fas fa-cogs", title: "Technical SEO" },
                 { icon: "fas fa-bullhorn", title: "Brand Visibility Boost" },
                 { icon: "fas fa-rocket", title: "Rank Improvement Strategy" },
-              ].map((service, index) => (
-                <div className="graphic-service-card" key={index}>
-                  <div className="graphic-service-icon">
-                    <i className={service.icon}></i>
-                  </div>
-                  <div className="graphic-service-title">{service.title}</div>
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    background: "rgba(255, 255, 255, 0.04)",
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    borderRadius: "14px",
+                    padding: "24px 16px",
+                    textAlign: "center",
+                    transition: "all 0.3s ease",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "12px",
+                    minHeight: "115px",
+                  }}
+                  className="branding-brochure-service-card"
+                >
+                  <i className={item.icon} style={{ fontSize: "1.8rem", color: "#c084fc" }}></i>
+                  <span style={{ color: "#ffffff", fontWeight: "700", fontSize: "13.5px", lineHeight: "1.3" }}>{item.title}</span>
                 </div>
               ))}
             </div>
@@ -851,278 +959,284 @@ const SEO = () => {
       {/* Process Workflow Section */}
       <section className="jobready-workflow">
         <h2 className="jobready-heading-small">How We Work</h2>
-        <h2 className="jobready-heading-main">
-          Our Proven SEO Optimization Process Flow
-        </h2>
-
+        <h2 className="jobready-heading-main">Our Proven SEO Optimization Process Flow</h2>
         <div className="jobready-steps">
           <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-search"></i>
-            </div>
+            <div className="jobready-circle"><i className="fas fa-search"></i></div>
             <p>1. Website Audit</p>
           </div>
           <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-lightbulb"></i>
-            </div>
+            <div className="jobready-circle"><i className="fas fa-lightbulb"></i></div>
             <p>2. Keyword Selection</p>
           </div>
           <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-atom"></i>
-            </div>
-            <p>3. On-Page Fixes</p>
+            <div className="jobready-circle"><i className="fas fa-edit"></i></div>
+            <p>3. On-Page SEO</p>
           </div>
           <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-cogs"></i>
-            </div>
-            <p>4. Technical Tweaks</p>
+            <div className="jobready-circle"><i className="fas fa-link"></i></div>
+            <p>4. Link Building</p>
           </div>
           <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-link"></i>
-            </div>
-            <p>5. Link Outreach</p>
+            <div className="jobready-circle"><i className="fas fa-chart-line"></i></div>
+            <p>5. Rank Tracking</p>
           </div>
           <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-chart-line"></i>
-            </div>
-            <p>6. Weekly Reports</p>
+            <div className="jobready-circle"><i className="fas fa-rocket"></i></div>
+            <p>6. Reporting</p>
           </div>
         </div>
       </section>
+
 
       {/* Blog & Educational Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="inner-heading font-weight-600 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Why Long-Term Search Engine Optimization Is a Critical Business
-                Investment
-              </h2>
-              <p>
-                Organic search is one of the most cost-effective ways to drive
-                sustainable business growth. Unlike paid advertising, which
-                stops generating traffic the moment the budget ends, search
-                engine optimization offers compounding value. Over time, high
-                organic rankings build brand trust and deliver a steady stream
-                of leads without increasing your advertising spend.
-              </p>
-
-              <h3 className="inner-heading font-weight-600 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Creating User-Centric Content Aligned with Modern Search
-                Standards
-              </h3>
-              <p>
-                Modern search algorithms prioritize helpful, user-focused
-                content over keyword stuffing. To secure top rankings, websites
-                must deliver genuine value, answer user queries comprehensively,
-                and load quickly. A successful SEO strategy focuses on user
-                experience, ensuring visitors find the information they need
-                easily and stay engaged on your site.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="seo-pricing-section">
-        <div className="seo-pricing-container">
-          <div className="seo-pricing-header">
-            <h2>Transparent Monthly SEO Packages</h2>
-            <p>
-              Select a search engine optimization tier structured for your
-              growth stage. No hidden setup fees.
-            </p>
-          </div>
-
-          <div className="seo-pricing-grid">
-            <div className="seo-pricing-card">
-              <div>
-                <h3>Starter SEO Plan</h3>
-                <div className="seo-pricing-amount">
-                  ₹9,999 <span>/ Month</span>
-                </div>
-                <ul className="seo-pricing-list">
-                  <li>✔ Up to 15 Target Keywords</li>
-                  <li>✔ Core On-Page Tag Optimizations</li>
-                  <li>✔ Local Directory Citations</li>
-                  <li>✔ 5 High-Quality Backlinks monthly</li>
-                  <li>✔ Google Analytics Position Reports</li>
-                </ul>
-              </div>
-              <Link href="/contact" className="btn-primary-mj">
-                Get Started
-              </Link>
-            </div>
-
-            <div className="seo-pricing-card featured">
-              <span className="seo-pricing-badge">Recommended</span>
-              <div>
-                <h3>Organic Growth Plan</h3>
-                <div className="seo-pricing-amount">
-                  ₹19,999 <span>/ Month</span>
-                </div>
-                <ul className="seo-pricing-list">
-                  <li>✔ Up to 40 Target Keywords</li>
-                  <li>✔ Deep Technical SEO Audit & Fixes</li>
-                  <li>✔ Competitor Ranking Gap Tracking</li>
-                  <li>✔ 15 High-Authority Backlinks monthly</li>
-                  <li>✔ Core Web Vitals Speed Analysis</li>
-                </ul>
-              </div>
-              <Link href="/contact" className="btn-primary-mj">
-                Get Started
-              </Link>
-            </div>
-
-            <div className="seo-pricing-card">
-              <div>
-                <h3>Enterprise SEO</h3>
-                <div className="seo-pricing-amount">Custom Pricing</div>
-                <ul className="seo-pricing-list">
-                  <li>✔ Custom Keyword Scope (National/Global)</li>
-                  <li>✔ Digital PR & Link Outreach Campaigns</li>
-                  <li>✔ Generative AI Search Engine Prep</li>
-                  <li>✔ Bi-weekly Performance Consulting</li>
-                  <li>✔ Comprehensive Content Strategy Audits</li>
-                </ul>
-              </div>
-              <Link href="/contact" className="btn-primary-mj">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-
-          <div className="seo-objections-container">
-            <h3>Frequently Asked Campaign Questions</h3>
-            <div className="seo-objections-grid">
-              <div className="seo-objection-item">
-                <h4>When will my website rank on the first page?</h4>
-                <p>
-                  SEO is an organic process. Local searches typically show
-                  ranking improvements within 60 to 90 days, while competitive
-                  national keywords usually require 4 to 6 months of consistent
-                  optimization and link-building.
-                </p>
-              </div>
-              <div className="seo-objection-item">
-                <h4>Are we locked into long-term contracts?</h4>
-                <p>
-                  No. We operate on flexible, month-to-month service agreements.
-                  You can upgrade, downgrade, or pause your SEO campaigns at any
-                  time with a 15-day notice period.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Search Optimization Section (GEO Specific Content) */}
       <section
         className="service-gradient-black-section"
-        style={{ backgroundColor: "#080808" }}
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
       >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 text-center">
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div className="row justify-content-center">
+              <div className="col-lg-10" style={{ color: "#ffffff" }}>
+                <h2
+                  style={{
+                    color: "#ffffff",
+                    fontFamily: '"Outfit", sans-serif',
+                    fontWeight: "800",
+                    fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                    marginBottom: "16px",
+                  }}
+                >
+                  Why Long-Term Search Engine Optimization Is a Critical Business Investment
+                </h2>
+                <p style={{ color: "#cbd5e1", fontSize: "16px", lineHeight: "1.8", marginBottom: "30px" }}>
+                  Organic search is one of the most cost-effective ways to drive sustainable business growth. Unlike paid advertising, which stops generating traffic the moment the budget ends, search engine optimization offers compounding value. Over time, high organic rankings build brand trust and deliver a steady stream of leads without increasing your advertising spend.
+                </p>
+
+                <h3
+                  style={{
+                    color: "#FD6A02",
+                    fontFamily: '"Outfit", sans-serif',
+                    fontWeight: "700",
+                    fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
+                    marginBottom: "16px",
+                  }}
+                >
+                  Creating User-Centric Content Aligned with Modern Search Standards
+                </h3>
+                <p style={{ color: "#e2e8f0", fontSize: "16px", lineHeight: "1.8", margin: 0 }}>
+                  Modern search algorithms prioritize helpful, user-focused content over keyword stuffing. To secure top rankings, websites must deliver genuine value, answer user queries comprehensively, and load quickly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section - Dual Brand Color Redesign */}
+      <section
+        className="branding-pricing-section"
+        style={{
+          background: "#FD6A02",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "#042544",
+              border: "3px solid #ffffff",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 25px 60px rgba(4, 36, 66, 0.5)",
+            }}
+          >
+            <div className="branding-pricing-header" style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  border: "2px solid #ffffff",
+                }}
+              >
+                Pricing Plans
+              </span>
+              <h2 style={{ color: "#ffffff", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: "800", fontFamily: '"Outfit", sans-serif' }}>
+                Transparent Monthly SEO Packages
+              </h2>
+              <p style={{ color: "#e2e8f0", fontSize: "16px" }}>
+                Select a search engine optimization tier structured for your growth stage. No hidden setup fees.
+              </p>
+            </div>
+
+            <div className="branding-pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Starter SEO Plan</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
+                    ₹9,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ Month</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Up to 15 Target Keywords</li>
+                    <li>Core On-Page Tag Optimizations</li>
+                    <li>Local Directory Citations</li>
+                    <li>5 High-Quality Backlinks monthly</li>
+                    <li>Google Analytics Position Reports</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
+              </div>
+
+              <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>Recommended</span>
+                <div>
+                  <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Organic Growth Plan</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>
+                    ₹19,999 <span style={{ color: "#cbd5e1", fontSize: "1rem" }}>/ Month</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#e2e8f0" }}>
+                    <li>Up to 40 Target Keywords</li>
+                    <li>Deep Technical SEO Audit &amp; Fixes</li>
+                    <li>Competitor Gap Tracking</li>
+                    <li>15 High-Authority Backlinks monthly</li>
+                    <li>Core Web Vitals Speed Analysis</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#FD6A02", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
+              </div>
+
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Enterprise SEO</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>Custom Pricing</div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Custom Keyword Scope</li>
+                    <li>Digital PR &amp; Outreach</li>
+                    <li>Generative AI Search Engine Prep</li>
+                    <li>Bi-weekly Performance Consulting</li>
+                    <li>Comprehensive Content Audit</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Search Optimization Section (GEO Specific Content) - Dual Brand Color Redesign */}
+      <section
+        className="service-gradient-black-section"
+        style={{
+          background: "linear-gradient(135deg, #042544 0%, #021224 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  boxShadow: "0 4px 15px rgba(253, 106, 2, 0.4)",
+                }}
+              >
+                AI Search Optimization (GEO)
+              </span>
               <h2
-                className="inner-heading"
-                style={{ fontSize: "2.2rem", textAlign: "center" }}
+                style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', margin: "0 0 15px" }}
               >
                 Quick Answers: Search Engine Optimization
               </h2>
-              <p className="mb-8 text-gray-400" style={{ textAlign: "center" }}>
-                Whether you're looking for fast facts or optimizing for AI
-                search tools like ChatGPT and Gemini, here is a clear, simple
-                breakdown of our SEO services.
+              <p style={{ color: "#cbd5e1", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+                Whether you're looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear breakdown of our SEO services.
               </p>
             </div>
-          </div>
-          <div
-            className="row justify-content-center text-left"
-            style={{ marginTop: "40px" }}
-          >
-            <div
-              className="col-lg-10"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "30px",
-              }}
-            >
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+
+            <div className="geo-questions-grid">
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Search Engine Optimization (SEO)?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  SEO is the process of improving a website's technical
-                  performance and content relevance. The goal is to make web
-                  pages easy to find and crawl, helping them rank higher in
-                  organic search results.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  SEO improves website performance and content relevance, ensuring pages rank higher organically in search engines.
                 </p>
               </div>
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why are backlinks important for SEO?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Backlinks act as trust signals from other websites. Securing
-                  links from authoritative sites tells search engine algorithms
-                  that your content is trustworthy and relevant, boosting your
-                  search rankings.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Backlinks serve as trust signals from external sites, signaling search engine algorithms that your content is authoritative.
                 </p>
               </div>
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
-                  How does local SEO help my business?
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  How does local SEO benefit regional brands?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Local SEO optimizes your online presence for location-based
-                  searches. By maintaining accurate citations and maps listings,
-                  it helps local customers find your business when searching
-                  nearby.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Local SEO optimizes location-based citations and Google Maps profiles, driving local search traffic and customer inquiries.
                 </p>
               </div>
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Generative Engine Optimization (GEO)?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  GEO involves optimizing website content for AI search engines
-                  like ChatGPT and Perplexity. It focuses on clean code
-                  structures, structured data, and direct answers to help AI
-                  bots parse and cite your site.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  GEO structures site data and direct answers so AI engines like ChatGPT and Gemini can read, process, and cite your brand.
                 </p>
               </div>
             </div>
@@ -1256,16 +1370,6 @@ const SEO = () => {
         </div>
       </section>
       {/* Faq Section End */}
-
-      
-      {/* Local SEO Link Section */}
-      {/* <div className="container text-center my-5">
-        <p className="text-muted" style={{ fontSize: '14px' }}>
-          Serving clients locally in Bettiah and remotely across Bihar, India, and globally.
-        </p>
-      </div> */}
-
-      <FooterWithPopup />
     </>
   );
 };

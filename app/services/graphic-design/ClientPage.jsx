@@ -8,7 +8,6 @@ import Link from 'next/link';
 import "@/app/styles/Branding.css";
 import "@/app/styles/Home.css";
 import "@/app/styles/GraphicDesign.css";
-import FooterWithPopup from '@/components/FooterWithPopup';
 
 const GraphicDesign = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -70,22 +69,110 @@ const GraphicDesign = () => {
       </section>
       {/* Banner Section End */}
 
-      {/* Page Introduction Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="alt-font inner-heading">
-                Top-Rated <strong>Graphic Design Company in Bihar, India</strong> – Delivering Visually Stunning and High-Recall Creatives
+      {/* Page Introduction Section - Redesigned Modern Layout */}
+      <section
+        className="graphic-intro-redesign"
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 50%, #091e36 100%)",
+          padding: "80px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            className="graphic-intro-card"
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+              border: "1px solid rgba(253, 106, 2, 0.35)",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(253, 106, 2, 0.15)",
+              position: "relative",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "30px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "rgba(253, 106, 2, 0.15)",
+                  border: "1px solid rgba(253, 106, 2, 0.5)",
+                  color: "#FD6A02",
+                  padding: "6px 20px",
+                  borderRadius: "30px",
+                  fontSize: "13px",
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                }}
+              >
+                Graphic Design &amp; Visual Assets
+              </span>
+              <h2
+                style={{
+                  color: "#ffffff",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                  fontWeight: "800",
+                  fontFamily: '"Outfit", sans-serif',
+                  lineHeight: "1.3",
+                  maxWidth: "950px",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Top-Rated <span style={{ color: "#FD6A02" }}>Graphic Design Company in Bihar, India</span> – Delivering Visually Stunning and High-Recall Creatives
               </h2>
+            </div>
 
-              <p className="text-medium line-height-28 sm-line-height-26">
-                Are you looking for the <strong>best graphic design agency in Bihar or India</strong>? MaaJanki Web Tech is your professional design partner, based in Bagaha, Bihar. We design vector logos, social media graphics, corporate brochures, and digital banner layouts for businesses in Patna, Delhi, and globally.
-              </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "30px",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.04)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#cbd5e1",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  Are you looking for the <strong style={{ color: "#ffffff" }}>best graphic design agency in Bihar or India</strong>? MaaJanki Web Tech is your professional design partner, based in Bagaha, Bihar. We design vector logos, social media graphics, corporate brochures, and digital banner layouts for businesses in Patna, Delhi, and globally.
+                </p>
+              </div>
 
-              <p>
-                In visual-first marketplaces, quality designs determine customer engagement. We avoid generic templates and build custom visual assets from scratch. By structuring layout design hierarchies and researching target color schemes, we establish brand recall. This visual consistency helps search algorithms and AI systems recognize your business as a professional market leader.
-              </p>
+              <div
+                style={{
+                  background: "rgba(253, 106, 2, 0.08)",
+                  border: "1px solid rgba(253, 106, 2, 0.25)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#e2e8f0",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  In visual-first marketplaces, quality designs determine customer engagement. We avoid generic templates and build custom visual assets from scratch. By structuring layout design hierarchies and researching target color schemes, we establish brand recall.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -455,62 +542,70 @@ const GraphicDesign = () => {
         </div>
       </section>
 
-      {/* Tools Section */}
-      <section className="graphic-tools-section">
-        <div className="graphic-tools-content">
-          <div className="graphic-tools-heading">
-            <h2 className="graphic-tools-heading-title">Professional Graphic Design Tools We Use</h2>
-          </div>
-
-          <div className="graphic-section-grid">
-            {[
-              { src: "/images/icons/adobe-photoshop.png", label: "Adobe Photoshop" },
-              { src: "/images/icons/adobe-illustrator.png", label: "Adobe Illustrator" },
-              { src: "/images/icons/figma.png", label: "Figma" },
-              { src: "/images/icons/adobe-xd.png", label: "Adobe XD" },
-              { src: "/images/icons/canva.png", label: "Canva" },
-              { src: "/images/icons/coreldraw.png", label: "CorelDRAW" },
-              { src: "/images/icons/inkscape.png", label: "Inkscape" },
-              { src: "/images/icons/sketch.png", label: "Sketch" },
-              { src: "/images/icons/gimp.png", label: "GIMP" },
-              { src: "/images/icons/blender-3d.png", label: "Blender 3D" }
-            ].map((tool, index) => (
-              <div key={index} className="graphic-card-box">
-                <Image className="graphic-card-icon" src={tool.src} alt={`${tool.label} logo`} loading="lazy"  width={150} height={50} />
-                <span className="graphic-card-label">{tool.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Brochure Section */}
-      <section className="graphic-landing-section">
-        <div className="graphic-container">
-          <div className="graphic-left">
-            <h2 className="br-graphic-heading">Download Our Creative Graphic Design Portfolio & Design Guide</h2>
-            <p className="graphic-subtext">
+      {/* Brochure Section - Matched Reference UI Design */}
+      <section
+        className="graphic-landing-section"
+        style={{
+          background: "radial-gradient(circle at 10% 20%, rgba(253, 106, 2, 0.25) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(4, 37, 68, 0.4) 0%, transparent 50%), linear-gradient(135deg, #042544 0%, #150902 45%, #FD6A02 100%)",
+          padding: "90px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+          borderBottom: "3px solid #042544",
+        }}
+      >
+        <div className="graphic-container" style={{ maxWidth: "1240px", margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "40px" }}>
+          {/* Left Column: Heading, Subtext & Brochure Download Card */}
+          <div className="graphic-left" style={{ flex: "1 1 500px" }}>
+            <h2 className="br-graphic-heading" style={{ color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', fontSize: "clamp(2rem, 3.5vw, 2.5rem)", marginBottom: "15px", lineHeight: "1.2" }}>
+              Download Our Creative Graphic Design Portfolio &amp; Guide
+            </h2>
+            <p className="graphic-subtext" style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "1.6", marginBottom: "30px" }}>
               Partner with MaaJanki Web Tech to build organic brand authority. We design professional logos and flyers to connect with your target customers.
             </p>
 
-            <div className="graphic-brochure-box">
-              <h3 className="graphic-brochure-title">Download Our Graphic Design Portfolio</h3>
-              <p className="graphic-brochure-desc">
+            <div className="graphic-brochure-box" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.12)", borderRadius: "18px", padding: "30px", boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)" }}>
+              <h3 className="graphic-brochure-title" style={{ color: "#ffffff", fontSize: "1.35rem", fontWeight: "700", marginBottom: "10px" }}>
+                Download Our Graphic Design Portfolio
+              </h3>
+              <p className="graphic-brochure-desc" style={{ color: "#94a3b8", fontSize: "14px", marginBottom: "20px", lineHeight: "1.5" }}>
                 Learn about our design workflows, vector logo assets, and packaging guidelines in our brochure.
               </p>
 
-              <div className="graphic-feature"><i className="fas fa-check-circle"></i> Custom Logo and Typography Outlines</div>
-              <div className="graphic-feature"><i className="fas fa-check-circle"></i> Social Media Graphic Checklists</div>
-              <div className="graphic-feature"><i className="fas fa-check-circle"></i> Print Collateral Layout Guidelines</div>
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Custom Logo and Typography Outlines
+              </div>
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Social Media Graphic Checklists
+              </div>
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "25px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Print Collateral Layout Guidelines
+              </div>
 
-              <button className="graphic-brochure-btn" onClick={openBrochurePopup}>
+              <button
+                className="graphic-brochure-btn"
+                onClick={openBrochurePopup}
+                style={{ background: "linear-gradient(135deg, #7e22ce, #FD6A02)", color: "#ffffff", border: "none", borderRadius: "30px", padding: "12px 28px", fontWeight: "700", fontSize: "14px", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "8px", boxShadow: "0 8px 20px rgba(126, 34, 206, 0.4)", transition: "all 0.3s ease" }}
+              >
                 ⬇️ Download Graphic Brochure
               </button>
 
               {isPopupOpen && (
-                <div className="brochure-popup-overlay" onClick={closeBrochurePopup}>
-                  <div className="brochure-popup" onClick={(e) => e.stopPropagation()}>
-                    <span className="brochure-close" onClick={closeBrochurePopup}>&times;</span>
+                <div
+                  className="brochure-popup-overlay"
+                  onClick={closeBrochurePopup}
+                >
+                  <div
+                    className="brochure-popup"
+                    onClick={(e) => e.stopPropagation()}
+                    style={{ background: "#042544", border: "2px solid #FD6A02" }}
+                  >
+                    <span
+                      className="brochure-close"
+                      onClick={closeBrochurePopup}
+                    >
+                      &times;
+                    </span>
                     <form
                       action="https://getform.io/f/bvrmgenb"
                       method="POST"
@@ -522,26 +617,48 @@ const GraphicDesign = () => {
                           method: "POST",
                           body: new FormData(form),
                           headers: { Accept: "application/json" },
-                        })
-                          .then((response) => {
-                            if (response.ok) {
-                              window.open("https://drive.google.com/uc?export=download&id=YOUR_FILE_ID", "_blank");
-                              form.reset();
-                              closeBrochurePopup();
-                            } else {
-                              alert("Something went wrong. Please try again.");
-                            }
-                          })
-                          .catch(() => {
-                            alert("Network error. Please try again later.");
-                          });
+                        }).then((res) => {
+                          if (res.ok) {
+                            alert("Thank you! Your brochure is downloading.");
+                            setIsPopupOpen(false);
+                            window.open(
+                              "/brochures/MaaJanki-Web-Tech-Branding-Brochure.pdf",
+                              "_blank"
+                            );
+                          } else {
+                            alert("Submission error. Please try again.");
+                          }
+                        });
                       }}
                     >
-                      <h3 className="brochure-title">Request Design Brochure</h3>
-                      <label htmlFor="email">Business Email:</label>
-                      <input type="email" name="email" placeholder="you@company.com" required />
-                      <input type="hidden" name="brochure_request" value="Graphic_Design_Brochure" />
-                      <button type="submit" className="brochure-submit-btn">Send My Brochure</button>
+                      <h3 className="brochure-title" style={{ color: "#ffffff" }}>
+                        Download Design Guide
+                      </h3>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name *"
+                        required
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email *"
+                        required
+                      />
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number *"
+                        required
+                      />
+                      <button
+                        type="submit"
+                        className="brochure-submit-btn"
+                        style={{ background: "#FD6A02", color: "#ffffff", borderRadius: "25px" }}
+                      >
+                        Download Now
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -549,8 +666,9 @@ const GraphicDesign = () => {
             </div>
           </div>
 
-          <div className="graphic-right">
-            <div className="graphic-service-grid">
+          {/* Right Column: 2-Column Grid of 8 Visual Service Cards */}
+          <div className="graphic-right" style={{ flex: "1 1 550px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
               {[
                 { icon: "fas fa-paint-brush", title: "Logo & Brand Identity" },
                 { icon: "fas fa-image", title: "Social Media Graphics" },
@@ -559,11 +677,28 @@ const GraphicDesign = () => {
                 { icon: "fas fa-globe", title: "Website UI Graphic Mockups" },
                 { icon: "fas fa-video", title: "Motion Graphics Visuals" },
                 { icon: "fas fa-object-group", title: "Infographics & Vector Art" },
-                { icon: "fas fa-layer-group", title: "Packaging Graphic Design" }
-              ].map((service, index) => (
-                <div className="graphic-service-card" key={index}>
-                  <div className="graphic-service-icon"><i className={service.icon}></i></div>
-                  <div className="graphic-service-title">{service.title}</div>
+                { icon: "fas fa-layer-group", title: "Packaging Graphic Design" },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    background: "rgba(255, 255, 255, 0.04)",
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    borderRadius: "14px",
+                    padding: "24px 16px",
+                    textAlign: "center",
+                    transition: "all 0.3s ease",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "12px",
+                    minHeight: "115px",
+                  }}
+                  className="branding-brochure-service-card"
+                >
+                  <i className={item.icon} style={{ fontSize: "1.8rem", color: "#c084fc" }}></i>
+                  <span style={{ color: "#ffffff", fontWeight: "700", fontSize: "13.5px", lineHeight: "1.3" }}>{item.title}</span>
                 </div>
               ))}
             </div>
@@ -604,120 +739,232 @@ const GraphicDesign = () => {
         </div>
       </section>
 
-      {/* Blog & Educational Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Why Custom Graphic Design Is Essential for Brand Recall & Trust
+      {/* Pricing Section - Dual Brand Color Redesign */}
+      <section
+        className="branding-pricing-section"
+        style={{
+          background: "#FD6A02",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "#042544",
+              border: "3px solid #ffffff",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 25px 60px rgba(4, 36, 66, 0.5)",
+            }}
+          >
+            <div className="branding-pricing-header" style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  border: "2px solid #ffffff",
+                }}
+              >
+                Pricing Plans
+              </span>
+              <h2 style={{ color: "#ffffff", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: "800", fontFamily: '"Outfit", sans-serif' }}>
+                Transparent Graphic Design Packages
               </h2>
-              <p>
-                A professional visual identity distinguishes your business from competitors, establishing trust and visual recognition. While cheap templates offer fast setups, they lack unique brand narrative alignment. Custom vector designs ensure your logos, social posts, and print collaterals remain consistent, reinforcing your professional standards and supporting business growth.
-              </p>
-
-              <h3 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                How Visual Structure & Layout Design Drive User Engagement
-              </h3>
-              <p>
-                Visual structure determines how easily users read and understand your marketing messages. Clean typography, color contrast, and balanced layouts ensure information is clear and engaging, reducing user bounce rates on digital platforms.
+              <p style={{ color: "#e2e8f0", fontSize: "16px" }}>
+                Select a design plan structured for your branding goals. No hidden setup fees.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Pricing Section */}
-      <section className="branding-pricing-section">
-        <div className="branding-pricing-container">
-          <div className="branding-pricing-header">
-            <h2>Transparent Graphic Design Packages</h2>
-            <p>Select a design plan structured for your branding goals. No hidden setup fees.</p>
-          </div>
+            <div className="branding-pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Startup Identity Kit</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
+                    ₹7,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ One-time</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Custom Logo Design Concept</li>
+                    <li>Color Palette Selections</li>
+                    <li>Corporate Font Guide</li>
+                    <li>Business Card Layout</li>
+                    <li>High-resolution files (PNG/PDF)</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
+              </div>
 
-          <div className="branding-pricing-grid">
-            <div className="branding-pricing-card">
-              <div>
-                <h3>Startup Identity Kit</h3>
-                <div className="branding-pricing-amount">₹7,999 <span>/ One-time</span></div>
-                <ul className="branding-pricing-list">
-                  <li>Custom Logo Design Concept</li>
-                  <li>Color Palette Selections</li>
-                  <li>Corporate Font Guide</li>
-                  <li>Business Card Layout</li>
-                  <li>High-resolution files (PNG/PDF)</li>
-                </ul>
+              <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>Recommended</span>
+                <div>
+                  <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Corporate Identity Kit</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>
+                    ₹17,999 <span style={{ color: "#cbd5e1", fontSize: "1rem" }}>/ One-time</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#e2e8f0" }}>
+                    <li>3 Custom Logo Concepts</li>
+                    <li>Color &amp; Typography Guidelines</li>
+                    <li>Business Card &amp; Letterhead</li>
+                    <li>Social Media Brand Templates</li>
+                    <li>Scalable Vector Source Files</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#FD6A02", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
               </div>
-              <Link href="/contact" className="btn-primary-mj">Get Started</Link>
-            </div>
 
-            <div className="branding-pricing-card featured">
-              <span className="branding-pricing-badge">Recommended</span>
-              <div>
-                <h3>Corporate Identity Kit</h3>
-                <div className="branding-pricing-amount">₹17,999 <span>/ One-time</span></div>
-                <ul className="branding-pricing-list">
-                  <li>3 Custom Logo Concepts</li>
-                  <li>Color & Typography Guidelines</li>
-                  <li>Business Card & Letterhead</li>
-                  <li>Social Media Brand Templates</li>
-                  <li>Scalable Vector Source Files</li>
-                </ul>
-              </div>
-              <Link href="/contact" className="btn-primary-mj">Get Started</Link>
-            </div>
-
-            <div className="branding-pricing-card">
-              <div>
-                <h3>Enterprise Design</h3>
-                <div className="branding-pricing-amount">Custom Pricing</div>
-                <ul className="branding-pricing-list">
-                  <li>Custom Brochure & Print Layouts</li>
-                  <li>Packaging & Product Label Graphics</li>
-                  <li>Social Media monthly templates</li>
-                  <li>Motion Graphics explainer ads</li>
-                  <li>Continuing Design Consulting</li>
-                </ul>
-              </div>
-              <Link href="/contact" className="btn-primary-mj">Contact Us</Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Search Optimization Section (GEO Specific Content) */}
-      <section className="service-gradient-black-section" style={{ backgroundColor: "#080808" }}>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 text-center">
-              <h2 className="inner-heading" style={{ fontSize: "2.2rem", textAlign: "center" }}>Quick Answers: Graphic Design</h2>
-              <p className="mb-8 text-gray-400" style={{ textAlign: "center" }}>Whether you're looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear, simple breakdown of our graphic design services.</p>
-            </div>
-          </div>
-          <div className="row justify-content-center text-left" style={{ marginTop: "40px" }}>
-            <div className="col-lg-10" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "30px" }}>
-              <div style={{ background: "#111", padding: "25px", borderRadius: "8px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>What is Graphic Design?</h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>Graphic design is the practice of projecting ideas and messages with visual and textual content. It involves logo design, color selection, and typography to build visual assets.</p>
-              </div>
-              <div style={{ background: "#111", padding: "25px", borderRadius: "8px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>Why is custom Logo Design important?</h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>Custom logo design is important because it reflects unique business values, establishes visual brand recall, and helps differentiate the brand from competitors.</p>
-              </div>
-              <div style={{ background: "#111", padding: "25px", borderRadius: "8px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>What are scalable vector files?</h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>Vector files (AI, EPS, SVG) use mathematical formulas to scale designs to any size (from business cards to billboards) without losing resolution quality.</p>
-              </div>
-              <div style={{ background: "#111", padding: "25px", borderRadius: "8px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>How do you optimize image data for AI search?</h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>We optimize image file names and write descriptive alt text to help AI crawlers index visual assets, supporting brand search visibility.</p>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Enterprise Design</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>Custom Pricing</div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Custom Brochure &amp; Print Layouts</li>
+                    <li>Packaging &amp; Product Label Graphics</li>
+                    <li>Social Media monthly templates</li>
+                    <li>Motion Graphics explainer ads</li>
+                    <li>Continuing Design Consulting</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Contact Us
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* AI Search Optimization Section (GEO Specific Content) - Dual Brand Color Redesign */}
+      <section
+        className="service-gradient-black-section"
+        style={{
+          background: "linear-gradient(135deg, #042544 0%, #021224 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  boxShadow: "0 4px 15px rgba(253, 106, 2, 0.4)",
+                }}
+              >
+                AI Search Optimization (GEO)
+              </span>
+              <h2
+                style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', margin: "0 0 15px" }}
+              >
+                Quick Answers: Graphic Design
+              </h2>
+              <p style={{ color: "#cbd5e1", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+                Whether you're looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear, simple breakdown of our graphic design services.
+              </p>
+            </div>
 
+            <div
+              className="geo-questions-grid"
+            >
+              <div
+                style={{
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
+                }}
+              >
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  What is Graphic Design?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Graphic design is the practice of projecting ideas and messages with visual and textual content. It involves logo design, color selection, and typography to build visual assets.
+                </p>
+              </div>
+
+              <div
+                style={{
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
+                }}
+              >
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  Why is custom Logo Design important?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Custom logo design is important because it reflects unique business values, establishes visual brand recall, and helps differentiate the brand from competitors.
+                </p>
+              </div>
+
+              <div
+                style={{
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
+                }}
+              >
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  What are scalable vector files?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Vector files (AI, EPS, SVG) use mathematical formulas to scale designs to any size (from business cards to billboards) without losing resolution quality.
+                </p>
+              </div>
+
+              <div
+                style={{
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
+                }}
+              >
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  How do you optimize image data for AI search?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  We optimize image file names and write descriptive alt text to help AI crawlers index visual assets, supporting brand search visibility.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Faq Section Start */}
       <section className="faq-section">
@@ -831,15 +1078,6 @@ const GraphicDesign = () => {
       </section>
       {/* Faq Section End */}
 
-      
-      {/* Local SEO Link Section */}
-      {/* <div className="container text-center my-5">
-        <p className="text-muted" style={{ fontSize: '14px' }}>
-          Serving clients locally in Bettiah and remotely across Bihar, India, and globally.
-        </p>
-      </div> */}
-
-      <FooterWithPopup />
     </>
   );
 };

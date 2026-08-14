@@ -18,8 +18,9 @@ const Branding = () => {
     <>
       {/* SEO & GEO Optimization Metadata */}
       {
-/* JSON-LD Schema */
-}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+        /* JSON-LD Schema */
+      }<script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: `
         {
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
@@ -45,7 +46,7 @@ const Branding = () => {
 
       {/* Banner Section */}
       <section className="custom-banner">
-        <Image priority src="/images/pages/main-services-pages/branding-banner-image-Maajanki-Web-Tech.webp" alt="Branding Services & Brand Identity Design by MaaJanki Web Tech" title="Professional Branding Services & Brand Identity Design | MaaJanki Web Tech" data-no-retina="" width="1280" height="720"/>
+        <Image priority src="/images/pages/main-services-pages/branding-banner-image-Maajanki-Web-Tech.webp" alt="Branding Services & Brand Identity Design by MaaJanki Web Tech" title="Professional Branding Services & Brand Identity Design | MaaJanki Web Tech" data-no-retina="" width="1280" height="720" />
 
         <div className="banner-overlay">
           <div className="banner-content">
@@ -76,36 +77,111 @@ const Branding = () => {
       </section>
       {/* Banner Section End */}
 
-      {/* Page Introduction Section */}
+      {/* Page Introduction Section - Redesigned Modern Layout */}
       <section
-        className="service-gradient-black-section"
-        style={{ backgroundColor: "#050505" }}
+        className="branding-intro-redesign"
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 50%, #091e36 100%)",
+          padding: "80px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
       >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="alt-font inner-heading">
-                Top <strong>Branding Agency in Bihar, India</strong> – Building
-                Highly Recognized Logos and Identity Frameworks
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            className="branding-intro-card"
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+              border: "1px solid rgba(253, 106, 2, 0.35)",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(253, 106, 2, 0.15)",
+              position: "relative",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "30px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "rgba(253, 106, 2, 0.15)",
+                  border: "1px solid rgba(253, 106, 2, 0.5)",
+                  color: "#FD6A02",
+                  padding: "6px 20px",
+                  borderRadius: "30px",
+                  fontSize: "13px",
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                }}
+              >
+                Brand Strategy &amp; Identity
+              </span>
+              <h2
+                style={{
+                  color: "#ffffff",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                  fontWeight: "800",
+                  fontFamily: '"Outfit", sans-serif',
+                  lineHeight: "1.3",
+                  maxWidth: "950px",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Top <span style={{ color: "#FD6A02" }}>Branding Agency in Bihar, India</span> – Building Highly Recognized Logos and Identity Frameworks
               </h2>
+            </div>
 
-              <p className="text-medium line-height-28 sm-line-height-26">
-                Are you looking for the{" "}
-                <strong>best branding agency in Bihar or India</strong>?
-                MaaJanki Web Tech is your professional brand identity partner,
-                based in Bagaha, Bihar. We design visual elements, logos, color
-                palettes, and messaging strategies that help startups in Patna,
-                Delhi, and across India stand out in crowded marketplaces.
-              </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "30px",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.04)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#cbd5e1",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  Are you looking for the{" "}
+                  <strong style={{ color: "#ffffff" }}>best branding agency in Bihar or India</strong>? MaaJanki Web Tech is your professional brand identity partner, based in Bagaha, Bihar. We design visual elements, logos, color palettes, and messaging strategies that help startups in Patna, Delhi, and across India stand out in crowded marketplaces.
+                </p>
+              </div>
 
-              <p>
-                In competitive markets, consumers connect with brands they
-                trust. We avoid generic design templates and build custom brand
-                systems from scratch. By defining your brand strategy, logo
-                structures, and design guidelines, we build customer loyalty.
-                This structured approach helps search algorithms and AI engines
-                recognize your business as a verified industry leader.
-              </p>
+              <div
+                style={{
+                  background: "rgba(253, 106, 2, 0.08)",
+                  border: "1px solid rgba(253, 106, 2, 0.25)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#e2e8f0",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  In competitive markets, consumers connect with brands they trust. We avoid generic design templates and build custom brand systems from scratch. By defining your brand strategy, logo structures, and design guidelines, we build customer loyalty. This structured approach helps search algorithms and AI engines recognize your business as a verified industry leader.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -121,7 +197,7 @@ const Branding = () => {
               <div className="visual-area" style={{ justifyContent: "flex-end" }} data-aos="fade-up-right">
                 <div className="image-container">
                   <div className="main-image">
-                    <Image src="/images/all-pages-section-image/Branding/What-is-Branding-Maajanki-Web-Tech.webp" alt="Brand discovery and strategy by MaaJanki Web Tech" title="Brand Discovery Strategy" loading="lazy"  width={600} height={400} />
+                    <Image src="/images/all-pages-section-image/Branding/What-is-Branding-Maajanki-Web-Tech.webp" alt="Brand discovery and strategy by MaaJanki Web Tech" title="Brand Discovery Strategy" loading="lazy" width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -158,7 +234,7 @@ const Branding = () => {
               <div className="visual-area" style={{ justifyContent: "flex-start" }} data-aos="fade-up-right">
                 <div className="image-container">
                   <div className="main-image">
-                    <Image src="/images/all-pages-section-image/Branding/Why-choose-us-Maajanki-Web-Tech.webp" alt="Custom logo design and typography by MaaJanki Web Tech" title="Logo Design Services" loading="lazy"  width={150} height={50} />
+                    <Image src="/images/all-pages-section-image/Branding/Why-choose-us-Maajanki-Web-Tech.webp" alt="Custom logo design and typography by MaaJanki Web Tech" title="Logo Design Services" loading="lazy" width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -178,7 +254,7 @@ const Branding = () => {
                   Whether you are a manufacturer, exporter, or service provider, MaaJanki Web Tech helps you create a conversion-centered digital appearance. We make sure that your company profile and services pages look reliable, informative, and ready to convert visitors into customers.
                 </p>
                 <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your visual brand identity becomes a lead-generation tool, which helps you expand the access of your B2B business</strong> We coordinate directly with your teams to customize visual materials, standardize templates, and monitor 
+                  With MaaJanki Web Tech, <strong>your visual brand identity becomes a lead-generation tool, which helps you expand the access of your B2B business</strong> We coordinate directly with your teams to customize visual materials, standardize templates, and monitor
                 </p>
                 <span className="content-cta">
                   <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
@@ -195,7 +271,7 @@ const Branding = () => {
               <div className="visual-area" style={{ justifyContent: "flex-end" }} data-aos="fade-up-right">
                 <div className="image-container">
                   <div className="main-image">
-                    <Image src="/images/all-pages-section-image/Branding/branding_guidelines_1781263487071.webp" alt="Brand guidelines and style guide by MaaJanki Web Tech" title="Brand Guidelines" loading="lazy"  width={600} height={400} />
+                    <Image src="/images/all-pages-section-image/Branding/branding_guidelines_1781263487071.webp" alt="Brand guidelines and style guide by MaaJanki Web Tech" title="Brand Guidelines" loading="lazy" width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -232,7 +308,7 @@ const Branding = () => {
               <div className="visual-area" style={{ justifyContent: "flex-start" }} data-aos="fade-up-right">
                 <div className="image-container">
                   <div className="main-image">
-                    <Image src="/images/all-pages-section-image/Branding/corporate_stationery_1781263509085.webp" alt="Corporate stationery and print design by MaaJanki Web Tech" title="Corporate Stationery Design" loading="lazy"  width={600} height={400} />
+                    <Image src="/images/all-pages-section-image/Branding/corporate_stationery_1781263509085.webp" alt="Corporate stationery and print design by MaaJanki Web Tech" title="Corporate Stationery Design" loading="lazy" width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -269,7 +345,7 @@ const Branding = () => {
               <div className="visual-area" style={{ justifyContent: "flex-end" }} data-aos="fade-up-right">
                 <div className="image-container">
                   <div className="main-image">
-                    <Image src="/images/all-pages-section-image/Branding/Why-choose-us-Maajanki-Web-Tech.webp" alt="Brand naming and tagline development by MaaJanki Web Tech" title="Brand Naming Services" loading="lazy"  width={600} height={400} />
+                    <Image src="/images/all-pages-section-image/Branding/Why-choose-us-Maajanki-Web-Tech.webp" alt="Brand naming and tagline development by MaaJanki Web Tech" title="Brand Naming Services" loading="lazy" width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -306,7 +382,7 @@ const Branding = () => {
               <div className="visual-area" style={{ justifyContent: "flex-start" }} data-aos="fade-up-right">
                 <div className="image-container">
                   <div className="main-image">
-                    <Image src="/images/all-pages-section-image/Branding/brand_storytelling_1781263522263.webp" alt="Brand storytelling and copywriting by MaaJanki Web Tech" title="Brand Storytelling" loading="lazy"  width={600} height={400} />
+                    <Image src="/images/all-pages-section-image/Branding/brand_storytelling_1781263522263.webp" alt="Brand storytelling and copywriting by MaaJanki Web Tech" title="Brand Storytelling" loading="lazy" width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -343,7 +419,7 @@ const Branding = () => {
               <div className="visual-area" style={{ justifyContent: "flex-end" }} data-aos="fade-up-right">
                 <div className="image-container">
                   <div className="main-image">
-                    <Image src="/images/all-pages-section-image/Branding/rebranding_visuals_1781263533651.webp" alt="Rebranding and visual identity upgrade by MaaJanki Web Tech" title="Rebranding Services" loading="lazy"  width={600} height={400} />
+                    <Image src="/images/all-pages-section-image/Branding/rebranding_visuals_1781263533651.webp" alt="Rebranding and visual identity upgrade by MaaJanki Web Tech" title="Rebranding Services" loading="lazy" width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -380,7 +456,7 @@ const Branding = () => {
               <div className="visual-area" style={{ justifyContent: "flex-start" }} data-aos="fade-up-right">
                 <div className="image-container">
                   <div className="main-image">
-                    <Image src="/images/all-pages-section-image/Branding/What-is-Branding-Maajanki-Web-Tech.webp" alt="GEO integration for corporate brand by MaaJanki Web Tech" title="GEO Brand Integration" loading="lazy"  width={600} height={400} />
+                    <Image src="/images/all-pages-section-image/Branding/What-is-Branding-Maajanki-Web-Tech.webp" alt="GEO integration for corporate brand by MaaJanki Web Tech" title="GEO Brand Integration" loading="lazy" width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -590,51 +666,57 @@ const Branding = () => {
                 src={tool.src}
                 alt={`${tool.label} branding tool`}
                 loading="lazy"
-               width={150} height={50} />
+                width={150} height={50} />
               <span className="branding-card-label">{tool.label}</span>
             </div>
           ))}
         </div>
       </section>
-
-      {/* Brochure Section */}
-      <section className="graphic-landing-section">
-        <div className="graphic-container">
-          <div className="graphic-left">
-            <h2 className="br-graphic-heading">
-              Download Our Branding Identity & Design Guide
+      
+      {/* Brochure Section - Vibrant Brand Dual Color Gradient */}
+      <section
+        className="graphic-landing-section"
+        style={{
+          background: "radial-gradient(circle at 10% 20%, rgba(253, 106, 2, 0.25) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(4, 37, 68, 0.4) 0%, transparent 50%), linear-gradient(135deg, #042544 0%, #150902 45%, #FD6A02 100%)",
+          padding: "90px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+          borderBottom: "3px solid #042544",
+        }}
+      >
+        <div className="graphic-container" style={{ maxWidth: "1240px", margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "40px" }}>
+          {/* Left Column: Heading, Subtext & Brochure Download Card */}
+          <div className="graphic-left" style={{ flex: "1 1 500px" }}>
+            <h2 className="br-graphic-heading" style={{ color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', fontSize: "clamp(2rem, 3.5vw, 2.5rem)", marginBottom: "15px", lineHeight: "1.2" }}>
+              Download Our Branding Identity &amp; Design Guide
             </h2>
-            <p className="graphic-subtext">
-              Partner with MaaJanki Web Tech to build a distinct brand identity.
-              We design professional logos and define brand guidelines to
-              support your business growth.
+            <p className="graphic-subtext" style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "1.6", marginBottom: "30px" }}>
+              Partner with MaaJanki Web Tech to build a distinct brand identity. We design professional logos and define brand guidelines to support your business growth.
             </p>
 
-            <div className="graphic-brochure-box">
-              <h3 className="graphic-brochure-title">
+            <div className="graphic-brochure-box" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.12)", borderRadius: "18px", padding: "30px", boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)" }}>
+              <h3 className="graphic-brochure-title" style={{ color: "#ffffff", fontSize: "1.35rem", fontWeight: "700", marginBottom: "10px" }}>
                 Download Our Branding Campaign Outline
               </h3>
-              <p className="graphic-brochure-desc">
-                Learn about our custom design workflows, vector logo assets, and
-                packaging guidelines in our brochure.
+              <p className="graphic-brochure-desc" style={{ color: "#94a3b8", fontSize: "14px", marginBottom: "20px", lineHeight: "1.5" }}>
+                Learn about our custom design workflows, vector logo assets, and packaging guidelines in our brochure.
               </p>
 
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Custom Logo and
-                Typography Outlines
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Custom Logo and Typography Outlines
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Brand Style Guidelines
-                Manual
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Brand Style Guidelines Manual
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Visual Asset Design
-                Checklists
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "25px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Visual Asset Design Checklists
               </div>
 
               <button
                 className="graphic-brochure-btn"
                 onClick={openBrochurePopup}
+                style={{ background: "linear-gradient(135deg, #7e22ce, #FD6A02)", color: "#ffffff", border: "none", borderRadius: "30px", padding: "12px 28px", fontWeight: "700", fontSize: "14px", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "8px", boxShadow: "0 8px 20px rgba(126, 34, 206, 0.4)", transition: "all 0.3s ease" }}
               >
                 ⬇️ Download Branding Brochure
               </button>
@@ -647,6 +729,7 @@ const Branding = () => {
                   <div
                     className="brochure-popup"
                     onClick={(e) => e.stopPropagation()}
+                    style={{ background: "#042544", border: "2px solid #FD6A02" }}
                   >
                     <span
                       className="brochure-close"
@@ -665,41 +748,47 @@ const Branding = () => {
                           method: "POST",
                           body: new FormData(form),
                           headers: { Accept: "application/json" },
-                        })
-                          .then((response) => {
-                            if (response.ok) {
-                              window.open(
-                                "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID",
-                                "_blank",
-                              );
-                              form.reset();
-                              closeBrochurePopup();
-                            } else {
-                              alert("Something went wrong. Please try again.");
-                            }
-                          })
-                          .catch(() => {
-                            alert("Network error. Please try again later.");
-                          });
+                        }).then((res) => {
+                          if (res.ok) {
+                            alert("Thank you! Your brochure is downloading.");
+                            setIsPopupOpen(false);
+                            window.open(
+                              "/brochures/MaaJanki-Web-Tech-Branding-Brochure.pdf",
+                              "_blank"
+                            );
+                          } else {
+                            alert("Submission error. Please try again.");
+                          }
+                        });
                       }}
                     >
-                      <h3 className="brochure-title">
-                        Get Your Branding Guide
+                      <h3 className="brochure-title" style={{ color: "#ffffff" }}>
+                        Download Branding Guide
                       </h3>
-                      <label htmlFor="email">Business Email:</label>
                       <input
-                        type="email"
-                        name="email"
-                        placeholder="you@company.com"
+                        type="text"
+                        name="name"
+                        placeholder="Your Name *"
                         required
                       />
                       <input
-                        type="hidden"
-                        name="brochure_request"
-                        value="Branding_Brochure"
+                        type="email"
+                        name="email"
+                        placeholder="Your Email *"
+                        required
                       />
-                      <button type="submit" className="brochure-submit-btn">
-                        Send My Brochure
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number *"
+                        required
+                      />
+                      <button
+                        type="submit"
+                        className="brochure-submit-btn"
+                        style={{ background: "#FD6A02", color: "#ffffff", borderRadius: "25px" }}
+                      >
+                        Download Now
                       </button>
                     </form>
                   </div>
@@ -708,38 +797,39 @@ const Branding = () => {
             </div>
           </div>
 
-          <div className="graphic-right">
-            <div className="graphic-service-grid">
+          {/* Right Column: 2-Column Grid of 8 Visual Service Cards */}
+          <div className="graphic-right" style={{ flex: "1 1 550px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
               {[
-                {
-                  icon: "fas fa-lightbulb",
-                  title: "Brand Strategy & Positioning",
-                },
-                {
-                  icon: "fas fa-palette",
-                  title: "Logo & Visual Identity Design",
-                },
-                {
-                  icon: "fas fa-bullhorn",
-                  title: "Brand messaging frameworks",
-                },
+                { icon: "fas fa-lightbulb", title: "Brand Strategy & Positioning" },
+                { icon: "fas fa-palette", title: "Logo & Visual Identity Design" },
+                { icon: "fas fa-bullhorn", title: "Brand Messaging Frameworks" },
                 { icon: "fas fa-object-group", title: "Visual Style Guides" },
-                {
-                  icon: "fas fa-file-alt",
-                  title: "Stationery Design Checklists",
-                },
+                { icon: "fas fa-file-alt", title: "Stationery Design Checklists" },
                 { icon: "fas fa-handshake", title: "Rebranding Adjustments" },
-                {
-                  icon: "fas fa-feather-alt",
-                  title: "Tone of Voice Copywriting",
-                },
+                { icon: "fas fa-feather-alt", title: "Tone of Voice Copywriting" },
                 { icon: "fas fa-globe", title: "Digital Brand Elements" },
-              ].map((service, index) => (
-                <div className="graphic-service-card" key={index}>
-                  <div className="graphic-service-icon">
-                    <i className={service.icon}></i>
-                  </div>
-                  <div className="graphic-service-title">{service.title}</div>
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    background: "rgba(255, 255, 255, 0.04)",
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    borderRadius: "14px",
+                    padding: "24px 16px",
+                    textAlign: "center",
+                    transition: "all 0.3s ease",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "12px",
+                    minHeight: "115px",
+                  }}
+                  className="branding-brochure-service-card"
+                >
+                  <i className={item.icon} style={{ fontSize: "1.8rem", color: "#c084fc" }}></i>
+                  <span style={{ color: "#ffffff", fontWeight: "700", fontSize: "13.5px", lineHeight: "1.3" }}>{item.title}</span>
                 </div>
               ))}
             </div>
@@ -749,35 +839,33 @@ const Branding = () => {
 
       {/* Process Section */}
       <section className="jobready-workflow">
-        <h2 className="jobready-heading-small">How We Work</h2>
-        <h2 className="jobready-heading-main">
-          Our Proven Branding Design Process Flow
-        </h2>
+        <h3 className="jobready-heading-small">Structured Execution</h3>
+        <h2 className="jobready-heading-main">Our Branding Workflow</h2>
 
         <div className="jobready-steps">
           <div className="jobready-step">
             <div className="jobready-circle">
               <i className="fas fa-search"></i>
             </div>
-            <p>1. Brand Audit</p>
+            <p>1. Audit &amp; Discovery</p>
           </div>
           <div className="jobready-step">
             <div className="jobready-circle">
               <i className="fas fa-lightbulb"></i>
             </div>
-            <p>2. Strategy Setup</p>
+            <p>2. Concept Sketching</p>
+          </div>
+          <div className="jobready-step">
+            <div className="jobready-circle">
+              <i className="fas fa-bezier-curve"></i>
+            </div>
+            <p>3. Vector Construction</p>
           </div>
           <div className="jobready-step">
             <div className="jobready-circle">
               <i className="fas fa-palette"></i>
             </div>
-            <p>3. Logo Concepts</p>
-          </div>
-          <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-object-group"></i>
-            </div>
-            <p>4. Visual Guidelines</p>
+            <p>4. Palette &amp; Fonts</p>
           </div>
           <div className="jobready-step">
             <div className="jobready-circle">
@@ -794,173 +882,227 @@ const Branding = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="branding-pricing-section">
-        <div className="branding-pricing-container">
-          <div className="branding-pricing-header">
-            <h2>Transparent Branding Package Tiers</h2>
-            <p>
-              Select a brand identity plan structured for your growth stage. No
-              hidden setup fees.
-            </p>
-          </div>
-
-          <div className="branding-pricing-grid">
-            <div className="branding-pricing-card">
-              <div>
-                <h3>Startup Identity Kit</h3>
-                <div className="branding-pricing-amount">
-                  ₹9,999 <span>/ One-time</span>
-                </div>
-                <ul className="branding-pricing-list">
-                  <li>Custom Logo Design Concept</li>
-                  <li>Color Palette Selections</li>
-                  <li>Corporate Font Styling</li>
-                  <li>Business Card Layout</li>
-                  <li>Visual Brand Styling Sheet</li>
-                </ul>
-              </div>
-              <Link href="/contact" className="btn-primary-mj">
-                Get Started
-              </Link>
+      {/* Pricing Section - Dual Brand Color Redesign */}
+      <section
+        className="branding-pricing-section"
+        style={{
+          background: "#FD6A02",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "#042544",
+              border: "3px solid #ffffff",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 25px 60px rgba(4, 36, 66, 0.5)",
+            }}
+          >
+            <div className="branding-pricing-header" style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "80px 24px",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  border: "2px solid #ffffff",
+                }}
+              >
+                Pricing Plans
+              </span>
+              <h2 style={{ color: "#ffffff", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: "800", fontFamily: '"Outfit", sans-serif' }}>
+                Transparent Branding Package Tiers
+              </h2>
+              <p style={{ color: "#e2e8f0", fontSize: "16px" }}>
+                Select a brand identity plan structured for your growth stage. No hidden setup fees.
+              </p>
             </div>
 
-            <div className="branding-pricing-card featured">
-              <span className="branding-pricing-badge">Recommended</span>
-              <div>
-                <h3>Corporate Brand Suite</h3>
-                <div className="branding-pricing-amount">
-                  ₹24,999 <span>/ One-time</span>
+            <div className="branding-pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Startup Identity Kit</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
+                    ₹9,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ One-time</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Custom Logo Design Concept</li>
+                    <li>Color Palette Selections</li>
+                    <li>Corporate Font Styling</li>
+                    <li>Business Card Layout</li>
+                    <li>Visual Brand Styling Sheet</li>
+                  </ul>
                 </div>
-                <ul className="branding-pricing-list">
-                  <li>3 Custom Logo Concepts</li>
-                  <li>Full Visual Guidelines Manual</li>
-                  <li>Business Card & Letterhead</li>
-                  <li>Social Media Brand Kit</li>
-                  <li>Custom Presentation template</li>
-                </ul>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
               </div>
-              <Link href="/contact" className="btn-primary-mj">
-                Get Started
-              </Link>
-            </div>
 
-            <div className="branding-pricing-card">
-              <div>
-                <h3>Enterprise Rebranding</h3>
-                <div className="branding-pricing-amount">Custom Pricing</div>
-                <ul className="branding-pricing-list">
-                  <li>Deep Brand Audits & Positioning</li>
-                  <li>Comprehensive Identity Upgrades</li>
-                  <li>Custom Stationery Templates</li>
-                  <li>Brand Copywriting Guides</li>
-                  <li>Continuing Design Consulting</li>
-                </ul>
+              <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>Recommended</span>
+                <div>
+                  <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Corporate Brand Suite</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>
+                    ₹24,999 <span style={{ color: "#cbd5e1", fontSize: "1rem" }}>/ One-time</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#e2e8f0" }}>
+                    <li>3 Custom Logo Concepts</li>
+                    <li>Full Visual Guidelines Manual</li>
+                    <li>Business Card &amp; Letterhead</li>
+                    <li>Social Media Brand Kit</li>
+                    <li>Custom Presentation template</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#FD6A02", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
               </div>
-              <Link href="/contact" className="btn-primary-mj">
-                Contact Us
-              </Link>
+
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Enterprise Rebranding</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>Custom Pricing</div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Deep Brand Audits &amp; Positioning</li>
+                    <li>Comprehensive Identity Upgrades</li>
+                    <li>Custom Stationery Templates</li>
+                    <li>Brand Copywriting Guides</li>
+                    <li>Continuing Design Consulting</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Contact Us
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* AI Search Optimization Section (GEO Specific Content) */}
+      {/* AI Search Optimization Section (GEO Specific Content) - Dual Brand Color Redesign */}
       <section
         className="service-gradient-black-section"
-        style={{ backgroundColor: "#080808" }}
+        style={{
+          background: "linear-gradient(135deg, #042544 0%, #021224 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
       >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 text-center">
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  boxShadow: "0 4px 15px rgba(253, 106, 2, 0.4)",
+                }}
+              >
+                AI Search Optimization (GEO)
+              </span>
               <h2
-                className="inner-heading"
-                style={{ fontSize: "2.2rem", textAlign: "center" }}
+                style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', margin: "0 0 15px" }}
               >
                 Quick Answers: Branding
               </h2>
-              <p className="mb-8 text-gray-400" style={{ textAlign: "center" }}>
-                Whether you're looking for fast facts or optimizing for AI
-                search tools like ChatGPT and Gemini, here is a clear, simple
-                breakdown of our brand identity and strategy services.
+              <p style={{ color: "#cbd5e1", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+                Whether you're looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear, simple breakdown of our brand identity and strategy services.
               </p>
             </div>
-          </div>
-          <div
-            className="row justify-content-center text-left"
-            style={{ marginTop: "40px" }}
-          >
+
             <div
-              className="col-lg-10"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "30px",
-              }}
+              className="geo-questions-grid"
             >
               <div
                 style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Branding?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Branding is the practice of designing a distinct brand
-                  identity, visual style, and tagline to differentiate a
-                  business from competitors, establishing visual recognition and
-                  customer trust.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Branding is the practice of designing a distinct brand identity, visual style, and tagline to differentiate a business from competitors, establishing visual recognition and customer trust.
                 </p>
               </div>
+
               <div
                 style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
-                  Why is Brand Identity important?
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  Why does a company need a logo design?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Brand identity is important because it establishes visual
-                  recognition, communicates your business values, builds client
-                  trust, and supports organic business growth.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  A custom logo acts as the primary visual mark for a business. It creates instant brand recall across website platforms, social media headers, and offline packaging.
                 </p>
               </div>
+
               <div
                 style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
-                  What is included in brand guidelines?
+                <h4 style={{ color: "#FD6A02", fontWeight: "700", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  What is included in a Brand Guidelines Manual?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Brand guidelines detail rules for color palette values, vector
-                  logo usage, clear space limits, typography styles, and design
-                  rules to preserve consistency.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  A brand guide outlines rules for logo usage, primary &amp; secondary color palettes, font choices, typography scales, and imagery styles to maintain visual consistency.
                 </p>
               </div>
+
               <div
                 style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
-                  How does branding help with organic trust?
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  How does branding help with AI search visibility (GEO)?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Consistent branding build user recognition. Increased search
-                  volumes for your brand name signal domain authority to search
-                  engines, supporting your search visibility.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Consistent brand naming, verified entity details, and structured schema data allow generative AI tools like ChatGPT and Gemini to verify and cite your business as an industry authority.
                 </p>
               </div>
             </div>
@@ -1094,16 +1236,6 @@ const Branding = () => {
         </div>
       </section>
       {/* Faq Section End */}
-
-      
-      {/* Local SEO Link Section */}
-      {/* <div className="container text-center my-5">
-        <p className="text-muted" style={{ fontSize: '14px' }}>
-          Serving clients locally in Bettiah and remotely across Bihar, India, and globally.
-        </p>
-      </div> */}
-
-      <FooterWithPopup />
     </>
   );
 };

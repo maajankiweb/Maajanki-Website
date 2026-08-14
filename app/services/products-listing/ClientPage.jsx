@@ -70,31 +70,110 @@ const ProductsListing = () => {
       </section>
       {/* Banner Section End */}
 
-      {/* Page Introduction Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="alt-font inner-heading">
-                Top{" "}
-                <strong>
-                  eCommerce Product Listing Company in Bihar, India
-                </strong>{" "}
-                – Optimizing Catalogs for Amazon, Flipkart, Meesho, Myntra &
-                IndiaMART
+      {/* Page Introduction Section - Redesigned Modern Layout */}
+      <section
+        className="pl-intro-redesign"
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 50%, #091e36 100%)",
+          padding: "80px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            className="pl-intro-card"
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+              border: "1px solid rgba(253, 106, 2, 0.35)",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(253, 106, 2, 0.15)",
+              position: "relative",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "30px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "rgba(253, 106, 2, 0.15)",
+                  border: "1px solid rgba(253, 106, 2, 0.5)",
+                  color: "#FD6A02",
+                  padding: "6px 20px",
+                  borderRadius: "30px",
+                  fontSize: "13px",
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                }}
+              >
+                eCommerce &amp; Catalog Management
+              </span>
+              <h2
+                style={{
+                  color: "#ffffff",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                  fontWeight: "800",
+                  fontFamily: '"Outfit", sans-serif',
+                  lineHeight: "1.3",
+                  maxWidth: "950px",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Top <span style={{ color: "#FD6A02" }}>eCommerce Product Listing Company in Bihar, India</span> – Optimizing Catalogs for Amazon, Flipkart, Meesho, Myntra &amp; IndiaMART
               </h2>
+            </div>
 
-              <p className="text-medium line-height-28 sm-line-height-26">
-                Are you searching for the <strong>best product listing services in India</strong> to maximize your online sales and search visibility? MaaJanki Web Tech is a premier <strong>eCommerce product listing company in Bihar</strong>, headquartered in Bagaha and servicing active marketplace sellers in Patna, Delhi, and globally. We specialize in end-to-end catalog management services, including custom keyword-rich product title optimization, clear and compelling bullet points, and accurate marketplace catalog uploading. Our specialists ensure your inventory is structured to match modern buyer search patterns on leading retail channels, including Amazon, Flipkart, Meesho, Myntra, and IndiaMART B2B directories.
-              </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "30px",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.04)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#cbd5e1",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  Are you searching for the <strong style={{ color: "#ffffff" }}>best product listing services in India</strong> to maximize your online sales and search visibility? MaaJanki Web Tech is a premier eCommerce product listing company in Bihar, servicing active marketplace sellers in Patna, Delhi, and globally.
+                </p>
+              </div>
 
-              <p className="text-medium line-height-28 sm-line-height-26">
-                Success in digital commerce relies on aligning with platform-specific search algorithms. We move beyond generic, low-quality automated descriptions, crafting professionally researched, search-optimized product copy that triggers buyer actions and answers customer queries early. Our team researches high-frequency buyer search queries, maps products to correct marketplace browse nodes, and formats backend tags to build immediate search visibility. By adhering strictly to marketplace image standards, variation SKU grouping rules, and listing guidelines, we prevent inventory suppression, improve overall click-through rates, and enhance organic search engine ranking positions.
-              </p>
-
-              <p className="text-medium line-height-28 sm-line-height-26">
-                Furthermore, we optimize your e-commerce product catalogs to appeal to both traditional search engines and next-generation AI shopping copilots. Through Generative Engine Optimization (GEO) and structured schema integration, we make your product specifications and aggregate ratings readable by AI engines like ChatGPT, Gemini, and search copilots. Whether you require bulk product upload services using master CSV files, lead-optimized cataloging on IndiaMART, or fashion catalog management for Myntra, MaaJanki Web Tech provides the professional support to grow your seller account metrics, reduce returns, and drive organic online revenue.
-              </p>
+              <div
+                style={{
+                  background: "rgba(253, 106, 2, 0.08)",
+                  border: "1px solid rgba(253, 106, 2, 0.25)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#e2e8f0",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  We optimize e-commerce catalogs for Amazon, Flipkart, Meesho, Myntra, and IndiaMART using GEO techniques and structured schemas so your inventory ranks on search engines and AI shopping copilots.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -416,7 +495,7 @@ const ProductsListing = () => {
           </div>
         </div>
 
-        {/* Section 8 */}
+                {/* Section 8 */}
         <div style={{ width: "100%", background: "linear-gradient(315deg, #042544 0%, #FD6A02 100%)" }}>
           <div className="showcase-container">
             <div className="showcase-grid" style={{ direction: "rtl" }}>
@@ -428,15 +507,19 @@ const ProductsListing = () => {
                       alt="GEO for Marketplace Catalogs by MaaJanki Web Tech"
                       title="GEO AI Shopping Search Optimization"
                       loading="lazy"
-                     width={600} height={400} />
+                      width={600}
+                      height={400}
+                    />
                   </div>
                 </div>
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
-                <h2 className="product-title">Our eCommerce Cataloging Solutions</h2>
-                <h3 className="product-heading">SEO Product Titles</h3>
+                <h2 className="main-heading">8. Multi-Marketplace Catalog Management</h2>
+                <h3 className="sub-heading">
+                  Centralized Bulk Uploads & Multi-Channel Feed Syncing
+                </h3>
                 <p className="content-text">
-                  <strong>Our eCommerce Cataloging Solutions</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized product listing optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  <strong>Multi-Marketplace Catalog Management</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized product listing optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
                 </p>
                 <p className="content-text">
                   We specialize in <strong>optimized e-commerce product listings that highlight your product features and specs.</strong> By leveraging SEO-friendly product titles and high-resolution image alt texts, we ensure your product listing optimization aligns with the algorithms and search behavior of e-commerce marketplaces and search engines.
@@ -507,8 +590,7 @@ const ProductsListing = () => {
             </div>
             <h3 className="product-heading">Image Upload Support</h3>
             <p>
-              We edit and upload product images to ensure they meet marketplace
-              guidelines and background standards.
+              We edit and upload product images to ensure they meet marketplace guidelines and background standards.
             </p>
           </div>
 
@@ -518,52 +600,7 @@ const ProductsListing = () => {
             </div>
             <h3 className="product-heading">Price Configurations</h3>
             <p>
-              We configure competitive pricing details and discounts on your
-              seller panels.
-            </p>
-          </div>
-
-          <div className="product-box">
-            <div className="product-icon">
-              <i className="fas fa-sitemap"></i>
-            </div>
-            <h3 className="product-heading">Category Mapping</h3>
-            <p>
-              We select accurate product categories and browse nodes to ensure
-              your catalog displays correctly.
-            </p>
-          </div>
-
-          <div className="product-box">
-            <div className="product-icon">
-              <i className="fas fa-boxes"></i>
-            </div>
-            <h3 className="product-heading">Variant Setup</h3>
-            <p>
-              We manage color, size, and model variations cleanly on a single
-              listing to prevent customer confusion.
-            </p>
-          </div>
-
-          <div className="product-box">
-            <div className="product-icon">
-              <i className="fas fa-code"></i>
-            </div>
-            <h3 className="product-heading">SEO Metadata Tags</h3>
-            <p>
-              We write meta descriptions and titles to improve catalog
-              visibility on Google search results.
-            </p>
-          </div>
-
-          <div className="product-box">
-            <div className="product-icon">
-              <i className="fas fa-cloud-upload-alt"></i>
-            </div>
-            <h3 className="product-heading">Bulk Data Entry</h3>
-            <p>
-              We format bulk Excel data to upload large catalogs quickly,
-              avoiding formatting errors.
+              We configure competitive pricing details and discounts on your catalog items to maximize conversions.
             </p>
           </div>
         </div>
@@ -623,14 +660,8 @@ const ProductsListing = () => {
               gap: 20px;
             }
             @keyframes fadeInUpTool {
-              from {
-                opacity: 0;
-                transform: translateY(25px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
+              from { opacity: 0; transform: translateY(25px); }
+              to { opacity: 1; transform: translateY(0); }
             }
             .marketplace-card {
               background: #111111;
@@ -646,9 +677,7 @@ const ProductsListing = () => {
               box-shadow: 0 4px 15px rgba(255, 215, 0, 0.08);
               opacity: 0;
               animation: fadeInUpTool 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-              transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                          box-shadow 0.4s ease, 
-                          background-color 0.3s ease;
+              transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, background-color 0.3s ease;
             }
             .marketplace-card:hover {
               transform: translateY(-5px) scale(1.03);
@@ -671,56 +700,20 @@ const ProductsListing = () => {
             .marketplace-card:hover .marketplace-icon-wrap {
               transform: scale(1.08) rotate(3deg);
             }
-            .marketplace-icon {
-              width: 100%;
-              height: 100%;
-              object-fit: contain;
-            }
-            .marketplace-name {
-              color: #fff;
-              font-size: 1rem;
-              font-weight: 700;
-              margin: 0;
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-            @media (max-width: 1200px) {
-              .marketplace-grid {
-                grid-template-columns: repeat(5, 1fr);
-                gap: 15px;
-              }
-            }
-            @media (max-width: 992px) {
-              .marketplace-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 15px;
-              }
-            }
-            @media (max-width: 768px) {
-              .marketplace-grid {
-                grid-template-columns: repeat(2, 1fr);
-              }
-              .marketplaces-title {
-                font-size: 2rem;
-              }
-            }
-            @media (max-width: 480px) {
-              .marketplace-grid {
-                grid-template-columns: 1fr;
-              }
-            }
+            .marketplace-icon { width: 100%; height: 100%; object-fit: contain; }
+            .marketplace-name { color: #fff; font-size: 1rem; font-weight: 700; margin: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            @media (max-width: 1200px) { .marketplace-grid { grid-template-columns: repeat(5, 1fr); gap: 15px; } }
+            @media (max-width: 992px) { .marketplace-grid { grid-template-columns: repeat(3, 1fr); gap: 15px; } }
+            @media (max-width: 768px) { .marketplace-grid { grid-template-columns: repeat(2, 1fr); } .marketplaces-title { font-size: 2rem; } }
+            @media (max-width: 480px) { .marketplace-grid { grid-template-columns: 1fr; } }
           `}
         </style>
-        
+
         <div className="glow-circle"></div>
         <div className="glow-circle-2"></div>
 
         <div className="marketplaces-grid-container">
-          <h2 className="marketplaces-title">
-            Products-listing Tools We Use
-          </h2>
-
+          <h2 className="marketplaces-title">Products-listing Tools We Use</h2>
           <div className="marketplace-grid">
             {[
               { src: "/images/icons/shopify.png", label: "Shopify" },
@@ -734,20 +727,11 @@ const ProductsListing = () => {
               { src: "/images/icons/amazon.png", label: "Amazon Seller" },
               { src: "/images/icons/ebay.png", label: "eBay Seller" },
             ].map((tool, index) => (
-              <div
-                key={index}
-                className="marketplace-card"
-                style={{ animationDelay: `${index * 0.08}s` }}
-              >
+              <div key={index} className="marketplace-card" style={{ animationDelay: `${index * 0.08}s` }}>
                 <div className="marketplace-icon-wrap">
-                  <Image
-                    className="marketplace-icon"
-                    src={tool.src}
-                    alt={`${tool.label} logo`}
-                    loading="lazy"
-                   width={150} height={50} />
+                  <Image className="marketplace-icon" src={tool.src} alt={tool.label} width={50} height={50} loading="lazy" />
                 </div>
-                <h3 className="marketplace-name" title={tool.label}>{tool.label}</h3>
+                <span className="marketplace-name">{tool.label}</span>
               </div>
             ))}
           </div>
@@ -755,75 +739,75 @@ const ProductsListing = () => {
       </section>
 
       {/* Brochure Section */}
-      <section className="graphic-landing-section">
-        <div className="graphic-container">
-          <div className="graphic-left">
-            <h2 className="br-graphic-heading">
-              Download Our eCommerce Cataloging & Listing Guide
+      <section
+        className="graphic-landing-section"
+        style={{
+          background: "radial-gradient(circle at 10% 20%, rgba(253, 106, 2, 0.25) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(4, 37, 68, 0.4) 0%, transparent 50%), linear-gradient(135deg, #042544 0%, #150902 45%, #FD6A02 100%)",
+          padding: "90px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+          borderBottom: "3px solid #042544",
+        }}
+      >
+        <div className="graphic-container" style={{ maxWidth: "1240px", margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "40px" }}>
+          <div className="graphic-left" style={{ flex: "1 1 500px" }}>
+            <h2 className="br-graphic-heading" style={{ color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', fontSize: "clamp(2rem, 3.5vw, 2.5rem)", marginBottom: "15px", lineHeight: "1.2" }}>
+              Download Our Product Listing Optimization Guide
             </h2>
-            <p className="graphic-subtext">
-              Partner with MaaJanki Web Tech to build organic seller visibility.
-              We optimize product listings and format Excel feeds to connect
-              with target customers.
+            <p className="graphic-subtext" style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "1.6", marginBottom: "30px" }}>
+              Partner with MaaJanki Web Tech to list your products on top marketplaces with SEO-optimized titles, bullets, and images that convert.
             </p>
-
-            <div className="graphic-brochure-box">
-              <h3 className="graphic-brochure-title">
-                Download Our Cataloging Guide
-              </h3>
-              <p className="graphic-brochure-desc">
-                Learn about our listing workflows, search-friendly titles, and
-                image size rules in our brochure.
-              </p>
-
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Marketplace Category
-                Mapping Guides
+            <div className="graphic-brochure-box" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.12)", borderRadius: "18px", padding: "30px", boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)" }}>
+              <h3 style={{ color: "#ffffff", fontSize: "1.35rem", fontWeight: "700", marginBottom: "10px" }}>Get Our Product Listing Brochure</h3>
+              <p style={{ color: "#94a3b8", fontSize: "14px", marginBottom: "20px", lineHeight: "1.5" }}>Learn about our listing workflows, keyword frameworks, and marketplace strategies.</p>
+              <div style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7" }}></i> Keyword-Optimized Product Titles
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Product Description
-                Writing Guidelines
+              <div style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7" }}></i> Marketplace-Ready Image Formats
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Bulk SKU Formatting
-                Checklists
+              <div style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "25px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7" }}></i> Bulk CSV Upload-Ready Data Sheets
               </div>
-
-              <Link href="/contact"
+              <button
                 className="graphic-brochure-btn"
-                style={{ textDecoration: "none", textAlign: "center" }}
+                onClick={openBrochurePopup}
+                style={{ background: "linear-gradient(135deg, #7e22ce, #FD6A02)", color: "#ffffff", border: "none", borderRadius: "30px", padding: "12px 28px", fontWeight: "700", fontSize: "14px", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "8px", boxShadow: "0 8px 20px rgba(126, 34, 206, 0.4)", transition: "all 0.3s ease" }}
               >
-                Contact for eCommerce Solutions
-              </Link>
+                ⬇️ Download Listing Brochure
+              </button>
+              {isPopupOpen && (
+                <div className="brochure-popup-overlay" onClick={closeBrochurePopup}>
+                  <div className="brochure-popup" onClick={(e) => e.stopPropagation()} style={{ background: "#042544", border: "2px solid #FD6A02" }}>
+                    <span className="brochure-close" onClick={closeBrochurePopup}>&times;</span>
+                    <form action="https://getform.io/f/bvrmgenb" method="POST" id="brochure-form" onSubmit={(e) => { e.preventDefault(); const form = e.target; fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } }).then((res) => { if (res.ok) { alert("Thank you! Your brochure is downloading."); setIsPopupOpen(false); window.open("/brochures/MaaJanki-Web-Tech-Branding-Brochure.pdf", "_blank"); } else { alert("Submission error. Please try again."); } }); }}>
+                      <h3 className="brochure-title" style={{ color: "#ffffff" }}>Download Listing Guide</h3>
+                      <input type="text" name="name" placeholder="Your Name *" required />
+                      <input type="email" name="email" placeholder="Your Email *" required />
+                      <input type="tel" name="phone" placeholder="Phone Number *" required />
+                      <button type="submit" className="brochure-submit-btn" style={{ background: "#FD6A02", color: "#ffffff", borderRadius: "25px" }}>Download Now</button>
+                    </form>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
-
-          <div className="graphic-right">
-            <div className="graphic-service-grid">
+          <div className="graphic-right" style={{ flex: "1 1 550px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
               {[
-                { icon: "fas fa-heading", title: "Product Title Optimization" },
-                { icon: "fas fa-key", title: "Marketplace Search Tags" },
-                {
-                  icon: "fas fa-align-left",
-                  title: "Detailed Description Copy",
-                },
-                { icon: "fas fa-image", title: "Image Guideline Edits" },
-                {
-                  icon: "fas fa-dollar-sign",
-                  title: "Competitor Price Audits",
-                },
-                { icon: "fas fa-sitemap", title: "Category Mapping" },
-                { icon: "fas fa-boxes", title: "Variation Listings" },
-                {
-                  icon: "fas fa-cloud-upload-alt",
-                  title: "Bulk CSV Catalog Uploads",
-                },
-              ].map((service, index) => (
-                <div className="graphic-service-card" key={index}>
-                  <div className="graphic-service-icon">
-                    <i className={service.icon}></i>
-                  </div>
-                  <div className="graphic-service-title">{service.title}</div>
+                { icon: "fas fa-list-alt", title: "Keyword-Optimized Titles" },
+                { icon: "fas fa-tags", title: "Bullet Point Copywriting" },
+                { icon: "fas fa-image", title: "Marketplace Image Prep" },
+                { icon: "fas fa-file-excel", title: "Bulk CSV Upload Sheets" },
+                { icon: "fas fa-search", title: "A+ / EBC Content" },
+                { icon: "fas fa-star", title: "Review Strategy Planning" },
+                { icon: "fas fa-chart-line", title: "Sales Rank Optimization" },
+                { icon: "fas fa-globe", title: "Multi-Marketplace Sync" },
+              ].map((item, idx) => (
+                <div key={idx} className="branding-brochure-service-card" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.08)", borderRadius: "14px", padding: "24px 16px", textAlign: "center", transition: "all 0.3s ease", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", minHeight: "115px" }}>
+                  <i className={item.icon} style={{ fontSize: "1.8rem", color: "#c084fc" }}></i>
+                  <span style={{ color: "#ffffff", fontWeight: "700", fontSize: "13.5px", lineHeight: "1.3" }}>{item.title}</span>
                 </div>
               ))}
             </div>
@@ -833,328 +817,132 @@ const ProductsListing = () => {
 
       {/* Process Section */}
       <section className="jobready-workflow">
-        <h2 className="jobready-heading-small">How We Work</h2>
-        <h2 className="jobready-heading-main">
-          Our Proven eCommerce Cataloging Process Flow
-        </h2>
-
+        <h3 className="jobready-heading-small">Structured Execution</h3>
+        <h2 className="jobready-heading-main">Our Product Listing Workflow</h2>
         <div className="jobready-steps">
-          <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-search"></i>
-            </div>
-            <p>1. Catalog Auditing</p>
-          </div>
-          <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-lightbulb"></i>
-            </div>
-            <p>2. Keywords Research</p>
-          </div>
-          <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-pen"></i>
-            </div>
-            <p>3. Writing Descriptions</p>
-          </div>
-          <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-image"></i>
-            </div>
-            <p>4. Image Preparations</p>
-          </div>
-          <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-cloud-upload-alt"></i>
-            </div>
-            <p>5. Bulk CSV Uploading</p>
-          </div>
-          <div className="jobready-step">
-            <div className="jobready-circle">
-              <i className="fas fa-rocket"></i>
-            </div>
-            <p>6. Catalog Launch</p>
-          </div>
+          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-search"></i></div><p>1. Keyword Research</p></div>
+          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-pen"></i></div><p>2. Title &amp; Copy Writing</p></div>
+          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-image"></i></div><p>3. Image Optimization</p></div>
+          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-file-csv"></i></div><p>4. CSV Sheet Prep</p></div>
+          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-upload"></i></div><p>5. Bulk Upload</p></div>
+          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-chart-bar"></i></div><p>6. Rank Monitoring</p></div>
         </div>
       </section>
 
-      {/* Blog & Educational Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Why Professional Product Cataloging Is Essential for Seller
-                Success
-              </h2>
-              <p>
-                A professional product listing distinguishes your brand,
-                establishing buyer trust and search visibility. While basic
-                listings offer fast setups, they suffer from unoptimized details
-                and search errors. Custom optimized descriptions ensure your SKU
-                details, bullet highlights, and category tags remain accurate
-                across Amazon and Flipkart, reinforcing your professional
-                standards and supporting sales growth.
-              </p>
-
-              <h3 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Understanding the Impact of Listing Quality on Shopping
-                Conversions
-              </h3>
-              <p>
-                Listing quality determines how easily buyers understand your
-                product's value. Clean bullet features, high-resolution images,
-                and clear descriptions ensure product details are obvious and
-                engaging, reducing buyer hesitation on marketplace listings.
-              </p>
+      {/* Pricing Section */}
+      <section className="branding-pricing-section" style={{ background: "#FD6A02", padding: "85px 20px", position: "relative", overflow: "hidden" }}>
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ background: "#042544", border: "3px solid #ffffff", borderRadius: "24px", padding: "50px 40px", boxShadow: "0 25px 60px rgba(4, 36, 66, 0.5)" }}>
+            <div className="branding-pricing-header" style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span style={{ display: "inline-block", background: "#FD6A02", color: "#ffffff", padding: "8px 24px", borderRadius: "50px", fontSize: "13px", fontWeight: "800", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "16px", border: "2px solid #ffffff" }}>Pricing Plans</span>
+              <h2 style={{ color: "#ffffff", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: "800", fontFamily: '"Outfit", sans-serif' }}>Transparent Product Listing Packages</h2>
+              <p style={{ color: "#e2e8f0", fontSize: "16px" }}>Professional listing management with keyword-optimized copy. No hidden fees.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Redesigned Premium Pricing Section */}
-      <section className="cw-pricing-section">
-        <div className="cw-pricing-inner">
-          <div className="cw-pricing-header">
-            <span className="cw-pricing-badge">Pricing Plans</span>
-            <h2 className="cw-pricing-title">Transparent eCommerce Listing Packages</h2>
-            <p className="cw-pricing-subtitle">
-              Select a cataloging plan structured for your inventory size. Scale your brand authority across major e-commerce marketplaces with optimized, high-converting product pages.
-            </p>
-          </div>
-
-          <div className="cw-pricing-grid">
-            {/* Plan 1 */}
-            <div className="cw-price-card">
-              <div className="cw-price-card-top">
-                <div className="cw-price-icon">🚀</div>
-                <h3 className="cw-price-name">Startup Catalog Kit</h3>
-                <p className="cw-price-desc">
-                  Perfect for local sellers and new brands looking to list their initial inventory on a major marketplace.
-                </p>
-                <div className="cw-price-amount">
-                  <span className="cw-currency">₹</span>
-                  <span className="cw-price-num">9,999</span>
-                  <span className="cw-price-period">/ One-time</span>
+            <div className="branding-pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Starter Catalog</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>₹7,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ One-time</span></div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Up to 25 product listings</li>
+                    <li>Keyword-optimized titles</li>
+                    <li>Bullet point copywriting</li>
+                    <li>CSV upload sheet delivery</li>
+                    <li>1 marketplace platform</li>
+                  </ul>
                 </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>Get Started</Link>
               </div>
-              <ul className="cw-price-features">
-                <li><span className="cw-check">✔</span> Up to 50 Product Listings</li>
-                <li><span className="cw-check">✔</span> Custom Title & Bullet Optimization</li>
-                <li><span className="cw-check">✔</span> Standard Description Writing</li>
-                <li><span className="cw-check">✔</span> Basic Image Resizing & Guidelines Check</li>
-                <li><span className="cw-check">✔</span> Upload Support to 1 Marketplace</li>
-                <li><span className="cw-check">✔</span> Variation Parent-Child Mapping</li>
-              </ul>
-              <Link href="/contact" className="cw-price-btn cw-price-btn-outline">
-                Get Started
-              </Link>
-            </div>
-
-            {/* Plan 2 */}
-            <div className="cw-price-card cw-price-card-featured">
-              <span className="cw-price-popular-badge">🔥 Recommended</span>
-              <div className="cw-price-card-top">
-                <div className="cw-price-icon">🏢</div>
-                <h3 className="cw-price-name">Seller Growth Kit</h3>
-                <p className="cw-price-desc">
-                  Ideal for established businesses expanding across multiple retail sales channels and seeking search visibility.
-                </p>
-                <div className="cw-price-amount">
-                  <span className="cw-currency">₹</span>
-                  <span className="cw-price-num">19,999</span>
-                  <span className="cw-price-period">/ One-time</span>
+              <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>⭐ Recommended</span>
+                <div>
+                  <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Growth Catalog</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>₹18,999 <span style={{ color: "#cbd5e1", fontSize: "1rem" }}>/ One-time</span></div>
+                  <ul className="branding-pricing-list" style={{ color: "#e2e8f0" }}>
+                    <li>Up to 100 product listings</li>
+                    <li>Full A+ content creation</li>
+                    <li>Image background removal</li>
+                    <li>Multi-marketplace upload</li>
+                    <li>Review strategy included</li>
+                  </ul>
                 </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#FD6A02", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>Get Started</Link>
               </div>
-              <ul className="cw-price-features">
-                <li><span className="cw-check">✔</span> Up to 150 Product Listings</li>
-                <li><span className="cw-check">✔</span> High-Intent Keyword Optimization</li>
-                <li><span className="cw-check">✔</span> Detailed Description Copy (100+ words/item)</li>
-                <li><span className="cw-check">✔</span> Full Category Browse Node Mapping</li>
-                <li><span className="cw-check">✔</span> Upload Support to 2 Marketplaces</li>
-                <li><span className="cw-check">✔</span> Complete Variant & SKU Setup</li>
-              </ul>
-              <Link href="/contact" className="cw-price-btn cw-price-btn-filled">
-                Get Started
-              </Link>
-            </div>
-
-            {/* Plan 3 */}
-            <div className="cw-price-card">
-              <div className="cw-price-card-top">
-                <div className="cw-price-icon">🛒</div>
-                <h3 className="cw-price-name">Enterprise Catalog Management</h3>
-                <p className="cw-price-desc">
-                  Custom services for high-volume catalogs, ongoing inventory management, and search expansions.
-                </p>
-                <div className="cw-price-amount">
-                  <span className="cw-price-num">Custom</span>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Enterprise Catalog</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>Custom Pricing</div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>500+ product listings</li>
+                    <li>Dedicated account manager</li>
+                    <li>Full marketplace sync</li>
+                    <li>Ongoing listing audits</li>
+                    <li>Priority support</li>
+                  </ul>
                 </div>
-              </div>
-              <ul className="cw-price-features">
-                <li><span className="cw-check">✔</span> Unlimited SKU Uploads</li>
-                <li><span className="cw-check">✔</span> Multi-Channel Sync & Variation Setup</li>
-                <li><span className="cw-check">✔</span> Amazon A+ Content & EBC Setup</li>
-                <li><span className="cw-check">✔</span> Google Shopping Schema Integration</li>
-                <li><span className="cw-check">✔</span> Suppressed Listing Resolution</li>
-                <li><span className="cw-check">✔</span> Dedicated Catalog Account Manager</li>
-              </ul>
-              <Link href="/contact" className="cw-price-btn cw-price-btn-outline">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-
-          {/* Trust Strip */}
-          <div className="cw-pricing-trust">
-            <div className="cw-trust-item">
-              <span>🎯</span> 100% Data Accuracy
-            </div>
-            <div className="cw-trust-item">
-              <span>🔄</span> Multi-Channel Support
-            </div>
-            <div className="cw-trust-item">
-              <span>🔗</span> SKU Variation Mapping
-            </div>
-            <div className="cw-trust-item">
-              <span>👥</span> Dedicated Specialists
-            </div>
-          </div>
-
-          {/* FAQ section integrated beautifully inside pricing grid theme */}
-          <div className="cw-pricing-faq">
-            <h3 className="cw-pricing-faq-title">Quick Answers: eCommerce Product Listing</h3>
-            <div className="cw-pricing-faq-grid">
-              <div className="cw-pricing-faq-item">
-                <h4>What is eCommerce Product Listing?</h4>
-                <p>
-                  Think of eCommerce product listing as creating a digital shelf for your store. It is the process of setting up and structuring product detail pages on online marketplaces—including writing descriptive titles, key bullet features, and mapping tags—so customers can easily find and buy your items.
-                </p>
-              </div>
-              <div className="cw-pricing-faq-item">
-                <h4>Why is catalog optimization important?</h4>
-                <p>
-                  It is how you stand out in a busy marketplace. When you optimize your product titles, description copy, and backend search terms, marketplace search engines (like Amazon's A9) can index your products easily. This lifts your visibility, drives clicks, and turns casual browsers into buyers.
-                </p>
-              </div>
-              <div className="cw-pricing-faq-item">
-                <h4>What is SKU variation management?</h4>
-                <p>
-                  It is the art of keeping your product options organized. Instead of creating separate pages for every size, color, or style, we link them under a single parent SKU. This makes shopping easy for customers, prevents confusion, and aggregates all your reviews on one page.
-                </p>
-              </div>
-              <div className="cw-pricing-faq-item">
-                <h4>How does product schema help with search?</h4>
-                <p>
-                  Schema is like a translator for search engines. By embedding JSON-LD structured data code on your pages, you tell Google your exact price, stock availability, and rating details. This helps your products display as rich snippets in Google Shopping searches, boosting your clicks.
-                </p>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>Contact Us</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Faq Section Start */}
+      {/* GEO Section */}
+      <section className="service-gradient-black-section" style={{ background: "linear-gradient(135deg, #042544 0%, #021224 100%)", padding: "85px 20px", position: "relative", overflow: "hidden", borderTop: "3px solid #FD6A02" }}>
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "2px solid #FD6A02", borderRadius: "24px", padding: "50px 40px", boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)" }}>
+            <div style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span style={{ display: "inline-block", background: "#FD6A02", color: "#ffffff", padding: "8px 24px", borderRadius: "50px", fontSize: "13px", fontWeight: "800", letterSpacing: "2px", textTransform: "uppercase", marginBottom: "16px", boxShadow: "0 4px 15px rgba(253, 106, 2, 0.4)" }}>AI Search Optimization (GEO)</span>
+              <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', margin: "0 0 15px" }}>Quick Answers: Product Listing</h2>
+              <p style={{ color: "#cbd5e1", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>Fast facts for AI search tools like ChatGPT and Gemini about our marketplace product listing services.</p>
+            </div>
+            <div className="geo-questions-grid">
+              {[
+                { q: "What is Product Listing Optimization?", a: "Product listing optimization is the process of crafting keyword-rich titles, bullet points, and descriptions to improve product visibility and conversion rates on marketplaces like Amazon, Flipkart, and Shopify." },
+                { q: "Why are keyword-optimized titles important?", a: "Marketplace search algorithms rank products based on keyword relevance in titles. An optimized title directly boosts impressions, clicks, and sales rank." },
+                { q: "What marketplaces do you list products on?", a: "We list products on Amazon, Flipkart, Meesho, Shopify, WooCommerce, BigCommerce, eBay, Google Merchant Center, and other platforms." },
+                { q: "How does GEO help product listings?", a: "GEO formats your product copy so AI shopping assistants like Google Gemini and ChatGPT can understand, cite, and recommend your products to shoppers searching online." },
+              ].map((item, idx) => (
+                <div key={idx} style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                  <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>{item.q}</h4>
+                  <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
       <section className="faq-section">
         <div className="faq-header">
-          <h2>Frequently Asked Questions About Product Listing</h2>
+          <h2>Frequently Asked Questions About Product Listing Services</h2>
         </div>
-
         <div className="faq-grid">
           {[
-            {
-              id: "faq1",
-              question: "What exactly is eCommerce cataloging?",
-              answer: "eCommerce cataloging is the process of preparing your products for online sales. We organize all your product data—such as technical details, dimensions, images, and descriptions—into a clean, digital format that marketplaces require to list your items."
-            },
-            {
-              id: "faq2",
-              question: "Why does my online store need listing optimization?",
-              answer: "Because a basic upload isn't enough to attract buyers. Optimization ensures your products target the exact search terms your customers use. By writing clear titles, highlighting key benefits, and choosing correct categories, we help your listings rank higher and convert more traffic."
-            },
-            {
-              id: "faq3",
-              question: "What is included in a product listing package?",
-              answer: "Our packages cover everything needed to go live: custom search-optimized titles, bullet lists detailing key features, copywritten descriptions, category and sub-category mapping, variant configuration (colors/sizes), and backend search tag setup."
-            },
-            {
-              id: "faq4",
-              question: "How long does a cataloging project typically take?",
-              answer: "For a standard project of 50 product listings, it usually takes about 4 to 6 days. Larger inventories or multi-channel setups for hundreds of SKUs can take between 2 to 3 weeks to organize, format, and upload."
-            },
-            {
-              id: "faq5",
-              question: "Do you write product descriptions for Shopify and WooCommerce?",
-              answer: "Yes, we do! We write custom product copy and manage bulk uploads for self-hosted websites on platforms like Shopify, WooCommerce, Magento, and BigCommerce, ensuring a seamless shopping experience for your buyers."
-            },
-            {
-              id: "faq6",
-              question: "What information do you need from me to start listing?",
-              answer: "We will need your raw product images, pricing, model numbers or SKUs, dimensions, and basic feature specifications. If you have any supplier sheets or manufacturer details, those help us draft highly detailed listings."
-            },
-            {
-              id: "faq7",
-              question: "Can you help resolve suppressed or blocked Amazon listings?",
-              answer: "Absolutely. We audit your seller central account alerts, identify why the listing was suppressed (such as missing attributes, image errors, or title violations), update the required fields, and resubmit them to get them active again."
-            },
-            {
-              id: "faq8",
-              question: "Why is variant mapping so important for e-commerce?",
-              answer: "It prevents search page clutter and improves user experience. When a shopper sees color and size options on a single page, they stay on that page to buy. It also pools all customer reviews together, which boosts the listing's ranking score."
-            },
-            {
-              id: "faq9",
-              question: "What is industrial category mapping on IndiaMART?",
-              answer: "IndiaMART requires precise B2B category mapping. We ensure your machinery, raw materials, or industrial services are mapped to the exact micro-categories corporate buyers search, ensuring you receive highly qualified wholesale inquiries."
-            },
-            {
-              id: "faq10",
-              question: "Do you offer copywriting for Amazon A+ Content or EBC?",
-              answer: "Yes, we do. We write engaging, benefit-driven product copy specifically formatted for Amazon Enhanced Brand Content (EBC) layouts to explain your product's story and boost conversions."
-            },
-            {
-              id: "faq11",
-              question: "How do we get started on an e-commerce cataloging project?",
-              answer: "You can click the 'Contact Us' button, fill out the form, or email us directly at info@maajankiwebtech.com. Share your estimated SKU count and target marketplaces, and we'll set up a kickoff call."
-            },
-            {
-              id: "faq12",
-              question: "Will you provide the final CSV files to us?",
-              answer: "Yes, we deliver the complete, formatted CSV/Excel upload sheets for your records so that you always have a backup of your product database."
-            },
-            {
-              id: "faq13",
-              question: "Do you edit product photos or graphics?",
-              answer: "We handle standard image preparation, which includes resizing, cropping, and converting backgrounds to solid white to meet strict marketplace requirements (like Amazon's image policies)."
-            },
-            {
-              id: "faq14",
-              question: "Can we review the listing drafts before they go live?",
-              answer: "Yes, definitely. We share all keyword-optimized titles, bullets, and description drafts in a Google Sheet or Excel file for your review and approval before any bulk uploads begin."
-            },
-            {
-              id: "faq15",
-              question: "What is GEO for eCommerce catalogs?",
-              answer: "GEO (Generative Engine Optimization) means structuring your product copy and FAQs so that AI search assistants (like ChatGPT, Gemini, and shopping copilots) can read, understand, and recommend your products to shoppers."
-            }
+            { id: "faq1", question: "What platforms do you list products on?", answer: "We list products on Amazon, Flipkart, Meesho, Shopify, WooCommerce, BigCommerce, eBay, Etsy, Wix eCommerce, and Google Merchant Center." },
+            { id: "faq2", question: "How do you write product titles?", answer: "We research high-volume, high-intent keywords using tools like Helium 10, Jungle Scout, and Google Keyword Planner, then craft keyword-rich titles within marketplace character limits." },
+            { id: "faq3", question: "Do you handle Amazon A+ Content?", answer: "Yes. We create Enhanced Brand Content (EBC) and A+ Content for Amazon brand-registered sellers, using rich visuals and structured comparison tables." },
+            { id: "faq4", question: "What image formats do you prepare?", answer: "We prepare marketplace-compliant images: white background main images (2000x2000 minimum), lifestyle shots, and infographic images per Amazon, Flipkart, and Shopify standards." },
+            { id: "faq5", question: "Do you create CSV bulk upload sheets?", answer: "Yes. We prepare marketplace-ready bulk upload CSV files formatted to Amazon Seller Central, Flipkart Seller Hub, and Shopify import templates." },
+            { id: "faq6", question: "How many products can you list per day?", answer: "Our team can process 50 to 200 product listings per day, depending on content complexity and image preparation requirements." },
+            { id: "faq7", question: "Do you write product descriptions in Hindi?", answer: "Yes. We offer bilingual listing support in both English and Hindi for marketplaces serving Indian regional customers." },
+            { id: "faq8", question: "Can you list variations (size, color)?", answer: "Yes. We set up parent-child variation relationships for size, color, and material variations across all major marketplace platforms." },
+            { id: "faq9", question: "Do you optimize existing listings?", answer: "Yes. We audit your current listings and rewrite underperforming titles, bullets, and descriptions with better keyword targeting." },
+            { id: "faq10", question: "What is bullet point copywriting?", answer: "Bullet points are structured product highlights emphasizing key features and benefits, formatted to pass marketplace quality filters and persuade buyers." },
+            { id: "faq11", question: "Do you handle product category mapping?", answer: "Yes. We map each product to its most accurate category and subcategory on every marketplace to maximize algorithm discoverability." },
+            { id: "faq12", question: "Will you provide the final CSV files to us?", answer: "Yes, we deliver the complete, formatted CSV/Excel upload sheets for your records so that you always have a backup of your product database." },
+            { id: "faq13", question: "Do you edit product photos or graphics?", answer: "We handle standard image preparation, which includes resizing, cropping, and converting backgrounds to solid white to meet strict marketplace requirements (like Amazon's image policies)." },
+            { id: "faq14", question: "Can we review the listing drafts before they go live?", answer: "Yes, definitely. We share all keyword-optimized titles, bullets, and description drafts in a Google Sheet or Excel file for your review and approval before any bulk uploads begin." },
+            { id: "faq15", question: "What is GEO for eCommerce catalogs?", answer: "GEO (Generative Engine Optimization) means structuring your product copy and FAQs so that AI search assistants (like ChatGPT, Gemini, and shopping copilots) can read, understand, and recommend your products to shoppers." },
           ].map((faq, index) => (
             <div className="faq-item" key={faq.id}>
               <input type="checkbox" id={faq.id} className="faq-toggle" />
               <label htmlFor={faq.id} className="faq-question">
                 <span className="faq-number">{index + 1}</span>
                 <span className="faq-question-text">{faq.question}</span>
-                <svg
-                  className="faq-arrow"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
+                <svg className="faq-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
               </label>
               <div className="faq-content">
@@ -1165,16 +953,6 @@ const ProductsListing = () => {
         </div>
       </section>
       {/* Faq Section End */}
-
-      
-      {/* Local SEO Link Section */}
-      {/* <div className="container text-center my-5">
-        <p className="text-muted" style={{ fontSize: '14px' }}>
-          Serving clients locally in Bettiah and remotely across Bihar, India, and globally.
-        </p>
-      </div> */}
-
-      <FooterWithPopup />
     </>
   );
 };

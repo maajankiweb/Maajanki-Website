@@ -49,7 +49,7 @@ export default function Page() {
             "name": "Creative Agency Website",
             "genre": "Web Development",
             "description": "A responsive, modern website for a creative agency built using HTML, CSS and JavaScript.",
-            "url": "https://example.com/creative-agency"
+            "url": "https://maajankiwebtech.com/portfolio#creative-agency"
           }
         },
         {
@@ -60,7 +60,7 @@ export default function Page() {
             "name": "E-Commerce Platform",
             "genre": "E-Commerce",
             "description": "A fully functional online store with shopping cart and payment gateway integration.",
-            "url": "https://blog.maajankiwebtech.com"
+            "url": "https://maajankiwebtech.com/products/invobill"
           }
         },
         {
@@ -71,7 +71,7 @@ export default function Page() {
             "name": "Food Restaurant Website",
             "genre": "Web Development",
             "description": "A responsive website for a food restaurant with menu, booking, and delivery features.",
-            "url": "https://example.com/food-restaurant"
+            "url": "https://maajankiwebtech.com/portfolio#food-restaurant"
           }
         },
         {
@@ -82,7 +82,7 @@ export default function Page() {
             "name": "Job Posting Website",
             "genre": "Web Development",
             "description": "A platform for posting jobs and managing applications efficiently.",
-            "url": "https://example.com/job-posting"
+            "url": "https://maajankiwebtech.com/portfolio#job-posting"
           }
         },
         {
@@ -93,7 +93,7 @@ export default function Page() {
             "name": "Gym Trainer Website",
             "genre": "Web Development",
             "description": "A responsive website for gym trainers showcasing services, schedules, and client testimonials.",
-            "url": "https://example.com/gym-trainer"
+            "url": "https://maajankiwebtech.com/portfolio#gym-trainer"
           }
         },
         {
@@ -104,7 +104,7 @@ export default function Page() {
             "name": "Design Studio Graphics Website",
             "genre": "Web Design",
             "description": "A portfolio website for a design studio displaying graphic projects and services.",
-            "url": "https://example.com/design-studio"
+            "url": "https://maajankiwebtech.com/services/graphic-design"
           }
         },
         {
@@ -115,7 +115,7 @@ export default function Page() {
             "name": "Free AI Research Website",
             "genre": "Technology / AI",
             "description": "A website dedicated to sharing free AI research papers, tools, and tutorials.",
-            "url": "https://example.com/ai-research"
+            "url": "https://maajankiwebtech.com/products/nexus-saas"
           }
         },
         {
@@ -126,7 +126,7 @@ export default function Page() {
             "name": "LMS Portal Website",
             "genre": "Education",
             "description": "A learning management system (LMS) portal for online courses, quizzes, and student management.",
-            "url": "https://example.com/lms-portal"
+            "url": "https://maajankiwebtech.com/portfolio#lms-portal"
           }
         },
         {
@@ -137,7 +137,7 @@ export default function Page() {
             "name": "AI Voices Platform",
             "genre": "Technology / AI",
             "description": "An AI-powered voice generation platform with multi-language support and real-time audio preview.",
-            "url": "https://example.com/ai-voices"
+            "url": "https://maajankiwebtech.com/products/wacrm"
           }
         },
         {
@@ -148,7 +148,7 @@ export default function Page() {
             "name": "Digital Products Hub",
             "genre": "E-Commerce",
             "description": "A digital products marketplace where creators can sell eBooks, templates, courses, and software.",
-            "url": "https://example.com/digital-products"
+            "url": "https://maajankiwebtech.com/products"
           }
         }
       ]

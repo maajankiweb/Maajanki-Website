@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import "@/app/styles/WebDevelopment.css";
 import "@/app/styles/Home.css";
-import FooterWithPopup from '@/components/FooterWithPopup';
+import "@/app/styles/Branding.css";
 
 const WebDevelopment = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -18,8 +18,9 @@ const WebDevelopment = () => {
     <>
       {/* SEO & Generative Engine Optimization Metadata */}
       {
-/* JSON-LD Schema */
-}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+        /* JSON-LD Schema */
+      }<script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: `
         {
           "@context": "https://schema.org",
           "@graph": [
@@ -88,7 +89,7 @@ const WebDevelopment = () => {
 
       {/* Banner Section */}
       <section className="custom-banner">
-        <Image priority src="/images/pages/main-services-pages/web-development-banner-image-Maajanki-Web-Tech.webp" alt="Website Development Services by MaaJanki Web Tech – Responsive, SEO-Friendly Business Websites" title="Professional Website Development Services in India | MaaJanki Web Tech" data-no-retina="" width="1280" height="720"/>
+        <Image priority src="/images/pages/main-services-pages/web-development-banner-image-Maajanki-Web-Tech.webp" alt="Website Development Services by MaaJanki Web Tech – Responsive, SEO-Friendly Business Websites" title="Professional Website Development Services in India | MaaJanki Web Tech" data-no-retina="" width="1280" height="720" />
 
         <div className="banner-overlay">
           <div className="banner-content">
@@ -120,42 +121,110 @@ const WebDevelopment = () => {
       </section>
       {/* Banner Section End */}
 
-      {/* Page Introduction Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="alt-font inner-heading">
-                Top-Rated{" "}
-                <strong>Website Development Company in Bihar, India</strong> –
-                Delivering Fast, Custom, and SEO-Optimized Sites
+      {/* Page Introduction Section - Redesigned Modern Layout */}
+      <section
+        className="webdev-intro-redesign"
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 50%, #091e36 100%)",
+          padding: "80px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            className="webdev-intro-card"
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+              border: "1px solid rgba(253, 106, 2, 0.35)",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(253, 106, 2, 0.15)",
+              position: "relative",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "30px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "rgba(253, 106, 2, 0.15)",
+                  border: "1px solid rgba(253, 106, 2, 0.5)",
+                  color: "#FD6A02",
+                  padding: "6px 20px",
+                  borderRadius: "30px",
+                  fontSize: "13px",
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                }}
+              >
+                Web Engineering &amp; Development
+              </span>
+              <h2
+                style={{
+                  color: "#ffffff",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                  fontWeight: "800",
+                  fontFamily: '"Outfit", sans-serif',
+                  lineHeight: "1.3",
+                  maxWidth: "950px",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Top-Rated <span style={{ color: "#FD6A02" }}>Website Development Company in Bihar, India</span> – Delivering Fast, Custom, and SEO-Optimized Sites
               </h2>
+            </div>
 
-              <p className="text-medium line-height-28 sm-line-height-26">
-                Are you looking for the{" "}
-                <strong>
-                  best website development company in Bihar, India
-                </strong>
-                ? MaaJanki Web Tech is your trusted technology partner, crafting
-                high-performance, responsive websites for startups and corporate
-                clients across Bagaha, Patna, Delhi, Bangalore, and globally.
-                Our team combines custom UI/UX design, clean programming
-                standards, and advanced search engine optimization to create
-                digital experiences that rank #1 on search engines and attract
-                direct answers from AI search assistants like ChatGPT, Gemini,
-                and Perplexity.
-              </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "30px",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.04)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#cbd5e1",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  Are you looking for the <strong style={{ color: "#ffffff" }}>best website development company in Bihar, India</strong>? MaaJanki Web Tech is your trusted technology partner, crafting high-performance, responsive websites for clients across Bagaha, Patna, Delhi, Bangalore, and globally.
+                </p>
+              </div>
 
-              <p>
-                At MaaJanki Web Tech, we believe your website is the foundation
-                of your digital sales funnel. That is why we avoid generic
-                templates and build custom web solutions from scratch. Whether
-                you need a corporate business website, an e-commerce platform
-                (Shopify or WordPress), a high-converting landing page, or a
-                scalable full-stack web application (MERN stack), we ensure your
-                platform is built for speed, security, and organic business
-                growth.
-              </p>
+              <div
+                style={{
+                  background: "rgba(253, 106, 2, 0.08)",
+                  border: "1px solid rgba(253, 106, 2, 0.25)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#e2e8f0",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  We build custom web solutions from scratch—from corporate websites to Shopify, WordPress, and full-stack MERN web applications—ensuring platforms are built for speed, security, and search engine leadership.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -176,7 +245,7 @@ const WebDevelopment = () => {
                       alt="Custom website development services by MaaJanki Web Tech"
                       title="Website Development Services – MaaJanki Web Tech"
                       loading="lazy"
-                     width={600} height={400} />
+                      width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -218,7 +287,7 @@ const WebDevelopment = () => {
                       alt="Responsive website development on multiple devices by MaaJanki Web Tech"
                       title="Mobile-Responsive Web Engineering – MaaJanki Web Tech"
                       loading="lazy"
-                     width={600} height={400} />
+                      width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -799,80 +868,69 @@ const WebDevelopment = () => {
               label: "Firebase",
             },
             { src: "/images/icons/git.png", label: "Git" },
-            {
-              src: "/images/icons/github.png",
-              label: "GitHub",
-            },
-            {
-              src: "/images/icons/vercel.png",
-              label: "Vercel",
-            },
-            {
-              src: "/images/icons/netlify.png",
-              label: "Netlify",
-            },
-            {
-              src: "/images/icons/visual-studio-code-2019.png",
-              label: "VS Code",
-            },
-            {
-              src: "/images/icons/figma.png",
-              label: "Figma",
-            },
-          ].map((tool, i) => (
-            <div className="tool-card" key={i}>
+            { src: "/images/icons/github.png", label: "GitHub" },
+            { src: "/images/icons/vercel.png", label: "Vercel" },
+            { src: "/images/icons/netlify.png", label: "Netlify" },
+            { src: "/images/icons/figma.png", label: "Figma" },
+          ].map((tool, index) => (
+            <div key={index} className="tool-card">
               <Image
                 src={tool.src}
                 alt={`${tool.label} technology logo`}
-                title={tool.label}
-               width={150} height={50} />
+                loading="lazy"
+                width={150} height={50} />
               <span>{tool.label}</span>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Brochure Section */}
-      <section className="graphic-landing-section">
-        <div className="graphic-container">
-          <div className="graphic-left">
-            <h2 className="br-graphic-heading">
+      {/* Brochure Section - Vibrant Brand Dual Color Gradient */}
+      <section
+        className="graphic-landing-section"
+        style={{
+          background: "radial-gradient(circle at 10% 20%, rgba(253, 106, 2, 0.25) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(4, 37, 68, 0.4) 0%, transparent 50%), linear-gradient(135deg, #042544 0%, #150902 45%, #FD6A02 100%)",
+          padding: "90px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+          borderBottom: "3px solid #042544",
+        }}
+      >
+        <div className="graphic-container" style={{ maxWidth: "1240px", margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "40px" }}>
+          {/* Left Column: Heading, Subtext & Brochure Download Card */}
+          <div className="graphic-left" style={{ flex: "1 1 500px" }}>
+            <h2 className="br-graphic-heading" style={{ color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', fontSize: "clamp(2rem, 3.5vw, 2.5rem)", marginBottom: "15px", lineHeight: "1.2" }}>
               Download Our Complete Web Development Guide
             </h2>
-            <p className="graphic-subtext">
-              Build a reliable, high-performance web presence with MaaJanki Web
-              Tech. From planning to execution and maintenance, we offer
-              end-to-end development solutions that convert visitors into
-              customers.
+            <p className="graphic-subtext" style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "1.6", marginBottom: "30px" }}>
+              Partner with MaaJanki Web Tech to build a reliable, high-performance web presence. We design and code custom websites that drive growth and conversions.
             </p>
 
-            <div className="graphic-brochure-box">
-              <h3 className="graphic-brochure-title">
-                Get Our Brochure Delivered to Your Inbox
+            <div className="graphic-brochure-box" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.12)", borderRadius: "18px", padding: "30px", boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)" }}>
+              <h3 className="graphic-brochure-title" style={{ color: "#ffffff", fontSize: "1.35rem", fontWeight: "700", marginBottom: "10px" }}>
+                Get Our Web Development Brochure
               </h3>
-              <p className="graphic-brochure-desc">
-                Learn about our coding workflows, custom design frameworks, and
-                transparent support pricing in our development brochure.
+              <p className="graphic-brochure-desc" style={{ color: "#94a3b8", fontSize: "14px", marginBottom: "20px", lineHeight: "1.5" }}>
+                Learn about our coding workflows, design frameworks, and transparent pricing in our brochure.
               </p>
 
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Clean, Documented Source
-                Code
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Clean, Documented Source Code
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Mobile-Responsive Layout
-                Structures
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Mobile-Responsive Layout Structures
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> 30 to 90 Days
-                Post-Launch Support
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "25px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> 30 to 90 Days Post-Launch Support
               </div>
 
               <button
                 className="graphic-brochure-btn"
                 onClick={openBrochurePopup}
+                style={{ background: "linear-gradient(135deg, #7e22ce, #FD6A02)", color: "#ffffff", border: "none", borderRadius: "30px", padding: "12px 28px", fontWeight: "700", fontSize: "14px", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "8px", boxShadow: "0 8px 20px rgba(126, 34, 206, 0.4)", transition: "all 0.3s ease" }}
               >
-                ⬇️ Download Web Development Brochure
+                ⬇️ Download Web Brochure
               </button>
 
               {isPopupOpen && (
@@ -883,6 +941,7 @@ const WebDevelopment = () => {
                   <div
                     className="brochure-popup"
                     onClick={(e) => e.stopPropagation()}
+                    style={{ background: "#042544", border: "2px solid #FD6A02" }}
                   >
                     <span
                       className="brochure-close"
@@ -901,39 +960,47 @@ const WebDevelopment = () => {
                           method: "POST",
                           body: new FormData(form),
                           headers: { Accept: "application/json" },
-                        })
-                          .then((response) => {
-                            if (response.ok) {
-                              window.open(
-                                "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID",
-                                "_blank",
-                              );
-                              form.reset();
-                              closeBrochurePopup();
-                            } else {
-                              alert("Something went wrong. Please try again.");
-                            }
-                          })
-                          .catch(() => {
-                            alert("Network error. Please try again later.");
-                          });
+                        }).then((res) => {
+                          if (res.ok) {
+                            alert("Thank you! Your brochure is downloading.");
+                            setIsPopupOpen(false);
+                            window.open(
+                              "/brochures/MaaJanki-Web-Tech-Branding-Brochure.pdf",
+                              "_blank"
+                            );
+                          } else {
+                            alert("Submission error. Please try again.");
+                          }
+                        });
                       }}
                     >
-                      <h3 className="brochure-title">Request Web Brochure</h3>
-                      <label htmlFor="email">Business Email:</label>
+                      <h3 className="brochure-title" style={{ color: "#ffffff" }}>
+                        Download Web Guide
+                      </h3>
                       <input
-                        type="email"
-                        name="email"
-                        placeholder="you@company.com"
+                        type="text"
+                        name="name"
+                        placeholder="Your Name *"
                         required
                       />
                       <input
-                        type="hidden"
-                        name="brochure_request"
-                        value="website-development"
+                        type="email"
+                        name="email"
+                        placeholder="Your Email *"
+                        required
                       />
-                      <button type="submit" className="brochure-submit-btn">
-                        Send My Brochure
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number *"
+                        required
+                      />
+                      <button
+                        type="submit"
+                        className="brochure-submit-btn"
+                        style={{ background: "#FD6A02", color: "#ffffff", borderRadius: "25px" }}
+                      >
+                        Download Now
                       </button>
                     </form>
                   </div>
@@ -942,201 +1009,39 @@ const WebDevelopment = () => {
             </div>
           </div>
 
-          <div className="graphic-right">
-            <div className="graphic-service-grid">
+          {/* Right Column: 2-Column Grid of 8 Service Cards */}
+          <div className="graphic-right" style={{ flex: "1 1 550px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
               {[
                 { icon: "fas fa-desktop", title: "Responsive Web Layouts" },
                 { icon: "fas fa-code", title: "Custom Code Structures" },
-                {
-                  icon: "fas fa-shopping-cart",
-                  title: "E-Commerce Optimization",
-                },
+                { icon: "fas fa-shopping-cart", title: "E-Commerce Optimization" },
                 { icon: "fas fa-tachometer-alt", title: "Speed Optimization" },
                 { icon: "fas fa-shield-alt", title: "SSL Security Setup" },
                 { icon: "fas fa-mobile-alt", title: "Mobile Usability Tuning" },
                 { icon: "fas fa-database", title: "Database Architecture" },
-                {
-                  icon: "fas fa-chart-line",
-                  title: "SEO-Ready Implementation",
-                },
-              ].map((service, index) => (
-                <div className="graphic-service-card" key={index}>
-                  <div className="graphic-service-icon">
-                    <i className={service.icon}></i>
-                  </div>
-                  <div className="graphic-service-title">{service.title}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Cards Section */}
-      <section
-        className="tech-section"
-        style={{ backgroundColor: "#042544", padding: "80px 20px" }}
-      >
-        <div className="tech-inner">
-          <div className="tech-card frontend-section">
-            <h2>Frontend Technologies</h2>
-            <ul>
-              <li>HTML5 & CSS3</li>
-              <li>JavaScript (ES6+)</li>
-              <li>React.js Framework</li>
-              <li>Next.js (SSR / SSG)</li>
-              <li>Tailwind CSS / Bootstrap</li>
-            </ul>
-          </div>
-
-          <div className="tech-card backend-section">
-            <h2>Backend Frameworks</h2>
-            <ul>
-              <li>Node.js (Runtime)</li>
-              <li>Express.js (Framework)</li>
-              <li>PHP (Laravel System)</li>
-              <li>Python (Django Engine)</li>
-              <li>RESTful API Endpoints</li>
-            </ul>
-          </div>
-
-          <div className="tech-card database-section">
-            <h2>Database Systems</h2>
-            <ul>
-              <li>MongoDB (NoSQL)</li>
-              <li>MySQL Database</li>
-              <li>PostgreSQL System</li>
-              <li>Firebase Firestore</li>
-            </ul>
-          </div>
-
-          <div className="tech-card versioncontrol-section">
-            <h2>Version & Dev Tools</h2>
-            <ul>
-              <li>Git Version Control</li>
-              <li>GitHub Repositories</li>
-              <li>Vercel Deployments</li>
-              <li>Netlify Hosting</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* Maintenance Services Section */}
-      <section className="maintenance-section">
-        <div className="maintenance-container">
-          <div className="maintenance-header">
-            <h2 className="maintenance-title">
-              Website Support & Maintenance Services
-            </h2>
-            <p className="maintenance-subtitle">
-              We provide professional support to ensure your website remains
-              fast, secure, updated, and online 24/7.
-            </p>
-          </div>
-
-          <div className="maintenance-grid">
-            {[
-              {
-                icon: "fas fa-shield-alt",
-                title: "Security Monitoring",
-                desc: "Regular malware scans, firewall setups, and SSL updates to keep your business website secure.",
-              },
-              {
-                icon: "fas fa-sync-alt",
-                title: "Plugin & Core Updates",
-                desc: "Up-to-date installations of CMS versions, plugins, and dependencies to prevent compatibility issues.",
-              },
-              {
-                icon: "fas fa-database",
-                title: "Automated Data Backups",
-                desc: "Secure daily and weekly database backups with reliable recovery support to safeguard your assets.",
-              },
-              {
-                icon: "fas fa-tachometer-alt",
-                title: "Speed Maintenance",
-                desc: "Continuous performance audits and database cleaning to preserve fast page loading speeds.",
-              },
-              {
-                icon: "fas fa-search",
-                title: "Technical SEO Checks",
-                desc: "Fixing broken links, resolving crawl errors, and updating sitemaps for search visibility.",
-              },
-              {
-                icon: "fas fa-headset",
-                title: "24/7 Priority Support",
-                desc: "Access to our development team for fast bug resolutions and technical support.",
-              },
-              {
-                icon: "fas fa-edit",
-                title: "Content & Graphic Edits",
-                desc: "Fast revisions for textual copy, image banners, portfolios, and product catalog details.",
-              },
-              {
-                icon: "fas fa-clock",
-                title: "Uptime Audits",
-                desc: "Real-time monitoring of server response rates to prevent unexpected hosting outages.",
-              },
-            ].map((service, index) => (
-              <div className="maintenance-card" key={index}>
-                <div className="maintenance-icon">
-                  <i className={service.icon}></i>
-                </div>
-                <div className="maintenance-content">
-                  <h3 className="maintenance-card-title">{service.title}</h3>
-                  <p className="maintenance-card-desc">{service.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Web Development Process Section */}
-      <section className="mj-wp-process-section py-20 bg-black text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="sec_title text-4xl md:text-5xl font-bold mb-12">
-            Our Website Development Process Flow
-          </h2>
-
-          <div className="process_slider overflow-hidden">
-            <div className="process_wrap flex flex-wrap justify-center gap-8">
-              {[
-                {
-                  title: "1. Strategy Consultation",
-                  desc: "We discuss your business objectives, target keywords, and core features to define the website scope.",
-                },
-                {
-                  title: "2. Wireframing & Planning",
-                  desc: "We build wireframes mapping the content hierarchy and layout structure for responsive design.",
-                },
-                {
-                  title: "3. UI/UX Custom Design",
-                  desc: "We create user interface mockups focused on branding and customer conversion pathways.",
-                },
-                {
-                  title: "4. Clean-Code Engineering",
-                  desc: "We write clean code utilizing React, Next.js, or WordPress for fast loading and scalability.",
-                },
-                {
-                  title: "5. Speed & SEO Optimization",
-                  desc: "We integrate structured JSON-LD data and optimize speed for Google's Core Web Vitals.",
-                },
-                {
-                  title: "6. Launch & Uptime Setup",
-                  desc: "We verify hosting, deploy security SSL protocols, and launch your site with monitoring.",
-                },
-              ].map((step, index) => (
+                { icon: "fas fa-chart-line", title: "SEO-Ready Implementation" },
+              ].map((item, idx) => (
                 <div
-                  key={index}
-                  className="p_box bg-slate-900 p-6 rounded-xl shadow-md w-64 hover:scale-105 transition-transform duration-300"
+                  key={idx}
+                  style={{
+                    background: "rgba(255, 255, 255, 0.04)",
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    borderRadius: "14px",
+                    padding: "24px 16px",
+                    textAlign: "center",
+                    transition: "all 0.3s ease",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "12px",
+                    minHeight: "115px",
+                  }}
+                  className="branding-brochure-service-card"
                 >
-                  <div className="circle bg-purple-700 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
-                    <span className="box_head font-semibold text-sm text-center leading-tight">
-                      {step.title}
-                    </span>
-                  </div>
-                  <p className="text-gray-300 text-sm">{step.desc}</p>
+                  <i className={item.icon} style={{ fontSize: "1.8rem", color: "#c084fc" }}></i>
+                  <span style={{ color: "#ffffff", fontWeight: "700", fontSize: "13.5px", lineHeight: "1.3" }}>{item.title}</span>
                 </div>
               ))}
             </div>
@@ -1144,252 +1049,271 @@ const WebDevelopment = () => {
         </div>
       </section>
 
-      {/* Blog & Educational Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Why Custom Web Design Is Essential for Business Scalability
+      {/* Process Section */}
+      <section className="jobready-workflow">
+        <h3 className="jobready-heading-small">Structured Execution</h3>
+        <h2 className="jobready-heading-main">Our Web Development Workflow</h2>
+
+        <div className="jobready-steps">
+          <div className="jobready-step">
+            <div className="jobready-circle">
+              <i className="fas fa-comments"></i>
+            </div>
+            <p>1. Consultation</p>
+          </div>
+          <div className="jobready-step">
+            <div className="jobready-circle">
+              <i className="fas fa-sitemap"></i>
+            </div>
+            <p>2. Wireframing</p>
+          </div>
+          <div className="jobready-step">
+            <div className="jobready-circle">
+              <i className="fas fa-paint-brush"></i>
+            </div>
+            <p>3. UI/UX Design</p>
+          </div>
+          <div className="jobready-step">
+            <div className="jobready-circle">
+              <i className="fas fa-code"></i>
+            </div>
+            <p>4. Clean Coding</p>
+          </div>
+          <div className="jobready-step">
+            <div className="jobready-circle">
+              <i className="fas fa-tachometer-alt"></i>
+            </div>
+            <p>5. Speed & SEO</p>
+          </div>
+          <div className="jobready-step">
+            <div className="jobready-circle">
+              <i className="fas fa-rocket"></i>
+            </div>
+            <p>6. Launch & SSL</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section - Dual Brand Color Redesign */}
+      <section
+        className="branding-pricing-section"
+        style={{
+          background: "#FD6A02",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "#042544",
+              border: "3px solid #ffffff",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 25px 60px rgba(4, 36, 66, 0.5)",
+            }}
+          >
+            <div className="branding-pricing-header" style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  border: "2px solid #ffffff",
+                }}
+              >
+                Pricing Plans
+              </span>
+              <h2 style={{ color: "#ffffff", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: "800", fontFamily: '"Outfit", sans-serif' }}>
+                Transparent Web Development Pricing
               </h2>
-              <p>
-                A site built by a professional web development company is a
-                primary business asset. While template builders offer cheap,
-                short-term setups, they suffer from bloated code structures and
-                slow loading speeds. Custom coding guarantees that your site
-                loads instantly, responds on all screens, and ranks high on
-                Google. It gives you the flexibility to add custom databases,
-                user panels, and scale as your brand grows.
-              </p>
-
-              <h3 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Understanding the Impact of Page Speed on Customer Conversions
-              </h3>
-              <p>
-                Web traffic is lost when a page takes longer than three seconds
-                to load. Speed optimization is critical for maintaining user
-                engagement. By reducing HTTP requests, optimizing databases, and
-                compressing images, we ensure your site is fast. This improves
-                user satisfaction and raises your search engine rankings,
-                helping your business grow.
+              <p style={{ color: "#e2e8f0", fontSize: "16px" }}>
+                Complete source code ownership, zero monthly platform fees, full post-launch support included.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Pricing Section – Redesigned */}
-      <section className="wd-pricing-section">
-        <div className="wd-pricing-inner">
-          <div className="wd-pricing-header">
-            <span className="wd-pricing-badge">💰 Investment Plans</span>
-            <h2 className="wd-pricing-title">Transparent Web Development Pricing</h2>
-            <p className="wd-pricing-subtitle">
-              Choose a web development plan engineered for business growth. Complete source code ownership, zero monthly platform fees, and full post-launch support included.
-            </p>
-          </div>
-
-          <div className="wd-pricing-grid">
-            {/* Starter */}
-            <div className="wd-price-card">
-              <div className="wd-price-card-top">
-                <div className="wd-price-icon">🚀</div>
-                <h3 className="wd-price-name">Landing Page</h3>
-                <p className="wd-price-desc">Perfect for startups and lead-generation campaigns needing a high-impact single page.</p>
-                <div className="wd-price-amount">
-                  <span className="wd-currency">₹</span>
-                  <span className="wd-price-num">14,999</span>
-                  <span className="wd-price-period">/ One-time</span>
+            <div className="branding-pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Landing Page</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
+                    ₹14,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ One-time</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Single-page custom layout</li>
+                    <li>Mobile responsive design</li>
+                    <li>CTA lead capture widgets</li>
+                    <li>Schema &amp; on-page SEO</li>
+                    <li>30 days post-launch support</li>
+                  </ul>
                 </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
               </div>
-              <ul className="wd-price-features">
-                <li><span className="wd-check">✓</span> Single-page custom design layout</li>
-                <li><span className="wd-check">✓</span> Mobile &amp; desktop responsive structure</li>
-                <li><span className="wd-check">✓</span> CTA forms &amp; lead capture widgets</li>
-                <li><span className="wd-check">✓</span> Schema &amp; on-page SEO setup</li>
-                <li><span className="wd-check">✓</span> Google Analytics integration</li>
-                <li><span className="wd-check">✓</span> 30 days post-launch support</li>
-              </ul>
-              <Link href="/contact" className="wd-price-btn wd-price-btn-outline">Get Started</Link>
-            </div>
 
-            {/* Popular */}
-            <div className="wd-price-card wd-price-card-featured">
-              <div className="wd-price-popular-badge">⭐ Most Popular</div>
-              <div className="wd-price-card-top">
-                <div className="wd-price-icon">🏢</div>
-                <h3 className="wd-price-name">Corporate Website</h3>
-                <p className="wd-price-desc">Ideal for growing businesses needing a multi-page, fully branded digital presence.</p>
-                <div className="wd-price-amount">
-                  <span className="wd-currency">₹</span>
-                  <span className="wd-price-num">34,999</span>
-                  <span className="wd-price-period">/ One-time</span>
+              <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>⭐ Recommended</span>
+                <div>
+                  <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Corporate Website</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>
+                    ₹34,999 <span style={{ color: "#cbd5e1", fontSize: "1rem" }}>/ One-time</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#e2e8f0" }}>
+                    <li>Up to 10 custom pages</li>
+                    <li>Custom admin integration</li>
+                    <li>SSL &amp; database setup</li>
+                    <li>Core Web Vitals tuning</li>
+                    <li>60 days maintenance support</li>
+                  </ul>
                 </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#FD6A02", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
               </div>
-              <ul className="wd-price-features">
-                <li><span className="wd-check">✓</span> Up to 10 custom pages (React/WordPress)</li>
-                <li><span className="wd-check">✓</span> Custom admin dashboard integration</li>
-                <li><span className="wd-check">✓</span> SSL encryption &amp; database configuration</li>
-                <li><span className="wd-check">✓</span> Full schema markup &amp; technical SEO</li>
-                <li><span className="wd-check">✓</span> Core Web Vitals optimization (PageSpeed 90+)</li>
-                <li><span className="wd-check">✓</span> 60 days maintenance &amp; technical support</li>
-              </ul>
-              <Link href="/contact" className="wd-price-btn wd-price-btn-filled">Get Started</Link>
-            </div>
 
-            {/* Enterprise */}
-            <div className="wd-price-card">
-              <div className="wd-price-card-top">
-                <div className="wd-price-icon">🛒</div>
-                <h3 className="wd-price-name">E-Commerce Suite</h3>
-                <p className="wd-price-desc">Built for brands ready to sell online with a full-featured, conversion-optimized store.</p>
-                <div className="wd-price-amount">
-                  <span className="wd-currency">₹</span>
-                  <span className="wd-price-num">59,999</span>
-                  <span className="wd-price-period">+ / One-time</span>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>E-Commerce Suite</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>₹59,999+</div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Complete cart &amp; checkout</li>
+                    <li>Razorpay/Stripe integration</li>
+                    <li>Product catalog dashboard</li>
+                    <li>Product schema markup</li>
+                    <li>90 days premium support</li>
+                  </ul>
                 </div>
-              </div>
-              <ul className="wd-price-features">
-                <li><span className="wd-check">✓</span> Complete cart &amp; checkout pipeline</li>
-                <li><span className="wd-check">✓</span> Payment gateways (Razorpay, Stripe, PayPal)</li>
-                <li><span className="wd-check">✓</span> Product cataloging &amp; inventory dashboards</li>
-                <li><span className="wd-check">✓</span> Product schema &amp; Google Shopping setup</li>
-                <li><span className="wd-check">✓</span> SMS &amp; email order alert integrations</li>
-                <li><span className="wd-check">✓</span> 90 days premium support &amp; updates</li>
-              </ul>
-              <Link href="/contact" className="wd-price-btn wd-price-btn-outline">Contact Us</Link>
-            </div>
-          </div>
-
-          {/* Trust Strip */}
-          <div className="wd-pricing-trust">
-            <div className="wd-trust-item"><span>🔒</span> 100% Code Ownership</div>
-            <div className="wd-trust-item"><span>💳</span> Zero Monthly Fees</div>
-            <div className="wd-trust-item"><span>📞</span> Dedicated Support</div>
-            <div className="wd-trust-item"><span>⚡</span> Fast Delivery</div>
-          </div>
-
-          {/* FAQ objection handler */}
-          <div className="wd-pricing-faq">
-            <h3 className="wd-pricing-faq-title">Common Client Questions</h3>
-            <div className="wd-pricing-faq-grid">
-              <div className="wd-pricing-faq-item">
-                <h4>Do we get complete ownership of the code?</h4>
-                <p>Yes. Once your project is fully completed and successfully launched, we transfer 100% source code ownership and all database access rights to your business team. There are absolutely no hidden licensing fees or recurring platform charges.</p>
-              </div>
-              <div className="wd-pricing-faq-item">
-                <h4>Can we update content and images ourselves?</h4>
-                <p>Yes. We integrate intuitive Content Management Systems like WordPress or custom-built admin portals tailored to your workflow. We also provide comprehensive training videos and documentation so your team can edit all content, banners, and images independently.</p>
-              </div>
-              <div className="wd-pricing-faq-item">
-                <h4>What if my project needs are different from these plans?</h4>
-                <p>Every business has unique requirements. Contact us for a free custom consultation and we will scope a precise package based on your exact goals, page count, feature requirements, and timeline. Flexible payment options are also available.</p>
-              </div>
-              <div className="wd-pricing-faq-item">
-                <h4>How long does delivery take?</h4>
-                <p>Landing pages are delivered within 7–14 business days. Corporate websites typically take 4–6 weeks. E-Commerce platforms take 6–10 weeks depending on product volume and custom feature complexity. All timelines are confirmed before project start.</p>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Contact Us
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* AI Search Optimization Section (GEO) - Dual Brand Color Redesign */}
       <section
         className="service-gradient-black-section"
-        style={{ backgroundColor: "#080808" }}
+        style={{
+          background: "linear-gradient(135deg, #042544 0%, #021224 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
       >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 text-center">
-              <h2 className="inner-heading" style={{ fontSize: "2.2rem", textAlign: "center" }}>
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  boxShadow: "0 4px 15px rgba(253, 106, 2, 0.4)",
+                }}
+              >
+                AI Search Optimization (GEO)
+              </span>
+              <h2
+                style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', margin: "0 0 15px" }}
+              >
                 Quick Answers: Web Development
               </h2>
-              <p className="mb-8 text-gray-400" style={{ textAlign: "center" }}>
-                Whether you're looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear, simple breakdown of our web development services.
+              <p style={{ color: "#cbd5e1", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+                Whether you&apos;re looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear breakdown of our web development services.
               </p>
             </div>
-          </div>
-          <div
-            className="row justify-content-center text-left"
-            style={{ marginTop: "40px" }}
-          >
+
             <div
-              className="col-lg-10"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "30px",
-              }}
+              className="geo-questions-grid"
             >
               <div
                 style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Website Development?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Website development is the practice of coding, scripting,
-                  configuring, and deploying websites. It involves frontend
-                  design (HTML, CSS, React) and backend server-side databases
-                  (Node.js, PHP, MySQL) to build secure and functional web
-                  platforms.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Website development is the practice of coding, scripting, and configuring web apps using frontend (React, Next.js) and backend (Node, PHP, MySQL) frameworks to create reliable digital platforms.
                 </p>
               </div>
+
               <div
                 style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why is Custom Web Development important?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Custom web development is important because it removes
-                  redundant code, improves loading speeds, secures user
-                  transactions, and allows custom database scaling. It helps you
-                  stand out and rank better on Google compared to standard
-                  templates.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Custom development removes redundant bloat, boosts loading speeds, secures transactions, and scales custom database logic seamlessly for business growth.
                 </p>
               </div>
+
               <div
                 style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "700", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How does MaaJanki Web Tech build websites?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  MaaJanki Web Tech uses a structured 6-step process:
-                  Consultation, Wireframing, Custom UI/UX Design, Clean-Code
-                  Development, SEO & Core Vitals Optimization, and Hosting
-                  Launch with SSL security protocols.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  We follow a 6-step process: Consultation, Wireframing, Custom UI/UX Design, Clean Coding, SEO Tuning, and SSL Hosting Deployment.
                 </p>
               </div>
+
               <div
                 style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
+                  background: "#042544",
+                  border: "1px solid rgba(253, 106, 2, 0.3)",
+                  padding: "28px",
+                  borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Who needs custom web development?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Any business, startup, or enterprise wanting a secure, fast,
-                  and scalable online presence needs custom web development. It
-                  is especially critical for eCommerce stores, SaaS portals, and
-                  corporate organizations looking to rank high on search
-                  engines.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Startups, enterprises, eCommerce portals, and SaaS brands needing high performance, fast search indexing, and custom backend APIs need professional web development.
                 </p>
               </div>
             </div>
@@ -1407,8 +1331,7 @@ const WebDevelopment = () => {
           {[
             {
               id: "faq1",
-              question:
-                "What web development technologies do you specialize in?",
+              question: "What web development technologies do you specialize in?",
               answer:
                 "We specialize in both frontend and backend technologies. Our core stack includes React.js, Next.js, HTML5, CSS3, Tailwind CSS, JavaScript (ES6+), Node.js, Express.js, PHP, Laravel, WordPress, Shopify, MongoDB, and MySQL.",
             },
@@ -1420,8 +1343,7 @@ const WebDevelopment = () => {
             },
             {
               id: "faq3",
-              question:
-                "Do you integrate payment gateways and third-party APIs?",
+              question: "Do you integrate payment gateways and third-party APIs?",
               answer:
                 "Yes, we integrate local and global payment solutions like Razorpay, PayU, Stripe, and PayPal, along with custom CRM platforms, shipping tools, and WhatsApp Business API modules.",
             },
@@ -1525,16 +1447,6 @@ const WebDevelopment = () => {
         </div>
       </section>
       {/* Faq Section End */}
-
-      
-      {/* Local SEO Link Section */}
-      {/* <div className="container text-center my-5">
-        <p className="text-muted" style={{ fontSize: '14px' }}>
-          Serving clients locally in Bettiah and remotely across Bihar, India, and globally.
-        </p>
-      </div> */}
-
-      <FooterWithPopup />
     </>
   );
 };

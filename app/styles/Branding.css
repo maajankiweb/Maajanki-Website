@@ -191,23 +191,24 @@ section.wow.animate__fadeIn {
 .text-medium {
     font-size    : 1.1rem;
     line-height  : 1.8;
-    color        : #ddd;
+    color        : #ffffff !important;
     margin-bottom: 20px;
     text-align   : left;
 }
 
-p {
+section.wow.animate__fadeIn p {
     font-size    : 1.05rem;
     line-height  : 1.8;
-    color        : #fff;
+    color        : #ffffff !important;
     margin-bottom: 18px;
     text-align   : left;
 }
 
 /* Highlighted bold text */
-.highlight-bold {
-    font-weight: 700;
-    color      : #FD6A02;
+.highlight-bold,
+.branding-overview-section strong {
+    font-weight    : 800 !important;
+    color          : #000000 !important;
 }
 
 /* Responsive typography */
@@ -553,6 +554,7 @@ section.p-0.wow.animate__fadeIn {
     margin-bottom          : 20px;
     background             : linear-gradient(135deg, #000, #FD6A02);
     -webkit-background-clip: text;
+    background-clip        : text;
     -webkit-text-fill-color: transparent;
     transition             : all 0.3s ease;
 }
@@ -560,6 +562,7 @@ section.p-0.wow.animate__fadeIn {
 .branding-box:hover .branding-icon {
     background             : linear-gradient(135deg, #fff, #FD6A02);
     -webkit-background-clip: text;
+    background-clip        : text;
     -webkit-text-fill-color: transparent;
     transform              : scale(1.1);
 }
@@ -567,19 +570,24 @@ section.p-0.wow.animate__fadeIn {
 /* Headings */
 .branding-heading {
     font-size    : 1.5rem;
-    font-weight  : 600;
+    font-weight  : 700;
     margin-bottom: 15px;
+    color        : #0f172a !important;
+}
+
+.branding-box:hover .branding-heading {
+    color: #ffffff !important;
 }
 
 /* Description */
 .branding-box p {
     font-size  : 1rem;
     line-height: 1.6;
-    color      : #555;
+    color      : #475569 !important;
 }
 
 .branding-box:hover p {
-    color: #f3f3f3;
+    color: #ffffff !important;
 }
 
 /* Responsive */
@@ -1088,5 +1096,98 @@ section.p-0.wow.animate__fadeIn {
   .branding-left,
   .branding-right {
     flex: 1 1 100%;
+  }
+
+  .branding-pricing-grid {
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+  }
+}
+
+/* Mobile First Responsiveness for Brochure, Pricing & GEO Sections */
+@media (max-width: 576px) {
+  .graphic-landing-section,
+  .branding-landing-section,
+  .webdev-landing-section {
+    padding: 40px 16px !important;
+  }
+
+  .graphic-container,
+  .branding-container,
+  .webdev-container {
+    padding: 0 12px !important;
+    gap: 24px !important;
+  }
+
+  .br-graphic-heading,
+  .br-branding-heading {
+    font-size: 1.5rem !important;
+    text-align: center;
+  }
+
+  .graphic-subtext,
+  .branding-subtext {
+    font-size: 0.92rem !important;
+    text-align: center;
+  }
+
+  .graphic-brochure-box,
+  .branding-brochure-box {
+    padding: 20px 16px !important;
+    border-radius: 12px !important;
+  }
+
+  .graphic-brochure-btn,
+  .branding-brochure-btn {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 12px 16px !important;
+  }
+
+  .branding-pricing-section {
+    padding: 50px 16px !important;
+  }
+
+  .branding-pricing-header h2 {
+    font-size: 1.7rem !important;
+  }
+
+  .branding-pricing-card {
+    padding: 24px 18px !important;
+    border-radius: 16px !important;
+  }
+
+  .branding-intro-card,
+  .cw-intro-card,
+  .graphic-intro-card,
+  .pm-intro-card,
+  .pl-intro-card,
+  .seo-intro-card,
+  .smo-intro-card,
+  .uiux-intro-card,
+  .webdev-intro-card {
+    padding: 30px 18px !important;
+    border-radius: 18px !important;
+  }
+}
+
+/* AI Search Optimization (GEO) 4-Card Desktop Layout & Responsive Rules */
+.geo-questions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1200px) {
+  .geo-questions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .geo-questions-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }

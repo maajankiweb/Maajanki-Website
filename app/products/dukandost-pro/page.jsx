@@ -12,6 +12,9 @@ export const metadata = {
     url: "https://maajankiwebtech.com/products/dukandost-pro",
     images: [{ url: "https://maajankiwebtech.com/images/products/dukandost-pro.webp" }],
   },
+  alternates: {
+    canonical: "https://maajankiwebtech.com/products/dukandost-pro",
+  },
 };
 
 export default function DukanDostProPage() {

@@ -12,6 +12,9 @@ export const metadata = {
     url: "https://maajankiwebtech.com/products/wacrm",
     images: [{ url: "https://maajankiwebtech.com/images/products/wacrm.webp" }],
   },
+  alternates: {
+    canonical: "https://maajankiwebtech.com/products/wacrm",
+  },
 };
 
 export default function WaCRMPage() {

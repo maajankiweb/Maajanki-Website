@@ -293,7 +293,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="footer-bottom">
-        © {currentYear} <span>MaaJanki Web Tech</span> | All Rights Reserved
+        © {currentYear} <span>MaaJanki Web Tech LLP</span> | All Rights Reserved
       </div>
 
       {/* Floating Buttons */}

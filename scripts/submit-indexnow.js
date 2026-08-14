@@ -6,10 +6,16 @@ const key = process.env.INDEXNOW_KEY || 'a57e3f890cf24f5aabf2c253cb47ff21';
 const baseUrl = `https://${host}`;
 
 const locations = [
-  'bettiah', 'bagaha', 'narkatiaganj', 'raxaul', 'motihari',
-  'patna', 'noida', 'jaipur', 'lucknow', 'muzaffarpur', 'gaya',
-  'delhi', 'mumbai', 'bengaluru', 'hyderabad', 'pune', 'kolkata',
-  'united-states', 'united-kingdom', 'canada', 'australia', 'united-arab-emirates', 'nepal'
+  'argentina', 'australia', 'austria', 'bagaha', 'bahrain', 'bangladesh',
+  'belgium', 'bengaluru', 'bettiah', 'brazil', 'canada', 'chile',
+  'delhi', 'denmark', 'finland', 'france', 'gaya', 'germany',
+  'hyderabad', 'india', 'ireland', 'italy', 'jaipur', 'japan',
+  'kenya', 'kolkata', 'kuwait', 'lucknow', 'malaysia', 'mexico',
+  'motihari', 'mumbai', 'muzaffarpur', 'narkatiaganj', 'nepal', 'netherlands',
+  'new-zealand', 'nigeria', 'noida', 'norway', 'oman', 'patna',
+  'poland', 'portugal', 'pune', 'qatar', 'raxaul', 'saudi-arabia',
+  'singapore', 'south-africa', 'south-korea', 'spain', 'sri-lanka', 'sweden',
+  'switzerland', 'united-arab-emirates', 'united-kingdom', 'united-states'
 ];
 
 const paths = [

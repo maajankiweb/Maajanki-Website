@@ -49,6 +49,25 @@ const FooterWithPopup = () => {
         pageUrl: typeof window !== "undefined" ? window.location.href : "",
       }).toString();
 
+      // Save to MongoDB Atlas via internal /api/leads endpoint
+      try {
+        await fetch("/api/leads", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            service: formData.service,
+            message: formData.message,
+            source: "footer-popup",
+            url: typeof window !== "undefined" ? window.location.href : "",
+          }),
+        });
+      } catch (dbErr) {
+        console.warn("MongoDB lead save notice:", dbErr);
+      }
+
       const response = await fetch(GOOGLE_SHEET_API, {
         method: "POST",
         headers: {

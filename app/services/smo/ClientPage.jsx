@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import "@/app/styles/SMO.css";
 import "@/app/styles/Home.css";
-import FooterWithPopup from '@/components/FooterWithPopup';
+import "@/app/styles/Branding.css";
 
 const SMO = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -17,9 +17,8 @@ const SMO = () => {
   return (
     <>
       {/* SEO Optimization for SMO Page */}
-      {
-/* JSON-LD Schema */
-}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+      {/* JSON-LD Schema */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
         {
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
@@ -75,36 +74,110 @@ const SMO = () => {
       </section>
       {/* Banner Section End */}
 
-      {/* Page Introduction Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="alt-font inner-heading">
-                Top-Rated <strong>SMO Company in Bihar, India</strong> – Growing
-                Organic Brand Reach Across All Social Networks
+      {/* Page Introduction Section - Redesigned Modern Layout */}
+      <section
+        className="smo-intro-redesign"
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 50%, #091e36 100%)",
+          padding: "80px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            className="smo-intro-card"
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+              border: "1px solid rgba(253, 106, 2, 0.35)",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(253, 106, 2, 0.15)",
+              position: "relative",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "30px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "rgba(253, 106, 2, 0.15)",
+                  border: "1px solid rgba(253, 106, 2, 0.5)",
+                  color: "#FD6A02",
+                  padding: "6px 20px",
+                  borderRadius: "30px",
+                  fontSize: "13px",
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                }}
+              >
+                Social Media Optimization
+              </span>
+              <h2
+                style={{
+                  color: "#ffffff",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                  fontWeight: "800",
+                  fontFamily: '"Outfit", sans-serif',
+                  lineHeight: "1.3",
+                  maxWidth: "950px",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Top-Rated <span style={{ color: "#FD6A02" }}>SMO Company in Bihar, India</span> – Growing Organic Brand Reach Across All Social Networks
               </h2>
+            </div>
 
-              <p className="text-medium line-height-28 sm-line-height-26">
-                Are you looking for the{" "}
-                <strong>best SMO services in Bihar, India</strong>? MaaJanki Web
-                Tech is your professional social media optimization partner,
-                helping businesses build a strong organic presence across
-                Facebook, Instagram, LinkedIn, and YouTube. Based in Bagaha,
-                Bihar, we assist startups and established companies in Patna,
-                Delhi, and across India in converting casual followers into
-                loyal customers.
-              </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "30px",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.04)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#cbd5e1",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  Are you looking for the <strong style={{ color: "#ffffff" }}>best SMO services in Bihar, India</strong>? MaaJanki Web Tech helps businesses build a strong organic presence across Facebook, Instagram, LinkedIn, and YouTube for clients in Patna, Delhi, and across India.
+                </p>
+              </div>
 
-              <p>
-                Social media is the digital storefront of your brand. We avoid
-                generic, automated posts and focus on custom-crafted,
-                value-driven campaigns. By optimizing your business profiles,
-                researching trending hashtags, and handling daily community
-                engagement, we build trust. This organic trust signals to search
-                engine algorithms and generative AI tools that your brand is a
-                reputable leader in its market.
-              </p>
+              <div
+                style={{
+                  background: "rgba(253, 106, 2, 0.08)",
+                  border: "1px solid rgba(253, 106, 2, 0.25)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#e2e8f0",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  By optimizing profiles, researching hashtags, and executing community engagement, we build brand authority that search engines and AI assistants recognize.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -632,71 +705,6 @@ const SMO = () => {
               >
                 ⬇️ Download SMO Brochure
               </button>
-
-              {isPopupOpen && (
-                <div
-                  className="brochure-popup-overlay"
-                  onClick={closeBrochurePopup}
-                >
-                  <div
-                    className="brochure-popup"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <span
-                      className="brochure-close"
-                      onClick={closeBrochurePopup}
-                    >
-                      &times;
-                    </span>
-                    <form
-                      action="https://getform.io/f/bvrmgenb"
-                      method="POST"
-                      id="brochure-form"
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        const form = e.target;
-                        fetch(form.action, {
-                          method: "POST",
-                          body: new FormData(form),
-                          headers: { Accept: "application/json" },
-                        })
-                          .then((response) => {
-                            if (response.ok) {
-                              window.open(
-                                "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID",
-                                "_blank",
-                              );
-                              form.reset();
-                              closeBrochurePopup();
-                            } else {
-                              alert("Something went wrong. Please try again.");
-                            }
-                          })
-                          .catch(() => {
-                            alert("Network error. Please try again later.");
-                          });
-                      }}
-                    >
-                      <h3 className="brochure-title">Request SMO Brochure</h3>
-                      <label htmlFor="email">Email Address:</label>
-                      <input
-                        type="email"
-                        name="email"
-                        placeholder="you@example.com"
-                        required
-                      />
-                      <input
-                        type="hidden"
-                        name="brochure_request"
-                        value="SMO_Brochure"
-                      />
-                      <button type="submit" className="brochure-submit-btn">
-                        Send My Brochure
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
 
@@ -728,267 +736,258 @@ const SMO = () => {
       </section>
 
       {/* Blog & Educational Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Why Organic Social Media Optimization Is a Crucial Branding
-                Strategy
-              </h2>
-              <p>
-                Organic social media optimization is the foundation of building
-                a reliable brand identity. While paid social advertising
-                generates short-term traffic, organic optimization creates
-                lasting customer connections. By sharing valuable content and
-                engaging with your audience, you build a community that supports
-                and recommends your brand.
-              </p>
-
-              <h3 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                How Social Engagement Signals Influence Search Visibility
-              </h3>
-              <p>
-                Modern search algorithms and AI engines track social media brand
-                mentions as trust signals. Active business profiles with high
-                engagement rates build brand authority. By maintaining updated
-                social accounts, you tell search engines that your business is
-                active and trusted by users.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section - Redesigned */}
-      <section className="smo-pkg-section">
-        {/* Decorative glow blobs */}
-        <div className="smo-pkg-glow smo-pkg-glow--left" aria-hidden="true" />
-        <div className="smo-pkg-glow smo-pkg-glow--right" aria-hidden="true" />
-
-        <div className="smo-pkg-container">
-          {/* Header */}
-          <div className="smo-pkg-header">
-            <span className="smo-pkg-eyebrow">💰 No Hidden Fees. Ever.</span>
-            <h2 className="smo-pkg-title">Transparent Monthly SMO Packages</h2>
-            <p className="smo-pkg-subtitle">
-              Pick the plan that fits your brand's ambition. Every package
-              includes dedicated account management and monthly reporting.
-            </p>
-          </div>
-
-          {/* Cards */}
-          <div className="smo-pkg-grid">
-
-            {/* Starter */}
-            <div className="smo-pkg-card">
-              <div className="smo-pkg-card-top">
-                <div className="smo-pkg-icon-wrap smo-pkg-icon-wrap--blue">
-                  <i className="fas fa-seedling" />
-                </div>
-                <h3 className="smo-pkg-plan-name">Starter SMO</h3>
-                <p className="smo-pkg-plan-desc">Perfect for new brands starting their social journey.</p>
-                <div className="smo-pkg-price-row">
-                  <span className="smo-pkg-currency">₹</span>
-                  <span className="smo-pkg-amount">7,999</span>
-                  <span className="smo-pkg-period">/mo</span>
-                </div>
-              </div>
-              <ul className="smo-pkg-features">
-                <li><i className="fas fa-check" /> Manage 2 Social Channels</li>
-                <li><i className="fas fa-check" /> 12 Graphic Posts / Month</li>
-                <li><i className="fas fa-check" /> Basic Profile Optimization</li>
-                <li><i className="fas fa-check" /> Basic Hashtag Research</li>
-                <li><i className="fas fa-check" /> Monthly Progress Report</li>
-                <li className="smo-pkg-feature--muted"><i className="fas fa-minus" /> Reels / Video Content</li>
-                <li className="smo-pkg-feature--muted"><i className="fas fa-minus" /> Community Moderation</li>
-              </ul>
-              <Link href="/contact" className="smo-pkg-btn smo-pkg-btn--outline">
-                Get Started <i className="fas fa-arrow-right" />
-              </Link>
-            </div>
-
-            {/* Brand Growth – Featured */}
-            <div className="smo-pkg-card smo-pkg-card--featured">
-              <div className="smo-pkg-glow-ring" aria-hidden="true" />
-              <span className="smo-pkg-badge">⭐ Most Popular</span>
-              <div className="smo-pkg-card-top">
-                <div className="smo-pkg-icon-wrap smo-pkg-icon-wrap--orange">
-                  <i className="fas fa-rocket" />
-                </div>
-                <h3 className="smo-pkg-plan-name">Brand Growth</h3>
-                <p className="smo-pkg-plan-desc">Accelerate reach with a full-content & community engine.</p>
-                <div className="smo-pkg-price-row">
-                  <span className="smo-pkg-currency">₹</span>
-                  <span className="smo-pkg-amount">14,999</span>
-                  <span className="smo-pkg-period">/mo</span>
-                </div>
-              </div>
-              <ul className="smo-pkg-features">
-                <li><i className="fas fa-check" /> Manage 4 Social Channels</li>
-                <li><i className="fas fa-check" /> 24 Custom Posts &amp; 4 Reels</li>
-                <li><i className="fas fa-check" /> Deep Profile Optimization</li>
-                <li><i className="fas fa-check" /> Core Hashtag &amp; Keyword Research</li>
-                <li><i className="fas fa-check" /> Active Community Commenting</li>
-                <li><i className="fas fa-check" /> Engagement Analytics Report</li>
-                <li><i className="fas fa-check" /> Bi-weekly Strategy Check-in</li>
-              </ul>
-              <Link href="/contact" className="smo-pkg-btn smo-pkg-btn--primary">
-                Get Started <i className="fas fa-arrow-right" />
-              </Link>
-            </div>
-
-            {/* Enterprise */}
-            <div className="smo-pkg-card">
-              <div className="smo-pkg-card-top">
-                <div className="smo-pkg-icon-wrap smo-pkg-icon-wrap--gold">
-                  <i className="fas fa-crown" />
-                </div>
-                <h3 className="smo-pkg-plan-name">Enterprise SMO</h3>
-                <p className="smo-pkg-plan-desc">Full-scale brand domination across every platform.</p>
-                <div className="smo-pkg-price-row smo-pkg-price-row--custom">
-                  <span className="smo-pkg-amount-custom">Custom Pricing</span>
-                </div>
-              </div>
-              <ul className="smo-pkg-features">
-                <li><i className="fas fa-check" /> Custom Platform Support</li>
-                <li><i className="fas fa-check" /> Daily Content Posting</li>
-                <li><i className="fas fa-check" /> Custom Video Editing &amp; Scripts</li>
-                <li><i className="fas fa-check" /> Multi-channel Community Moderation</li>
-                <li><i className="fas fa-check" /> Brand Strategy Consulting</li>
-                <li><i className="fas fa-check" /> Dedicated Account Manager</li>
-                <li><i className="fas fa-check" /> GEO &amp; AI Visibility Integration</li>
-              </ul>
-              <Link href="/contact" className="smo-pkg-btn smo-pkg-btn--outline">
-                Contact Us <i className="fas fa-arrow-right" />
-              </Link>
-            </div>
-
-          </div>{/* /grid */}
-
-          {/* Trust Strip */}
-          <div className="smo-pkg-trust">
-            <div className="smo-pkg-trust-item">
-              <i className="fas fa-shield-alt" />
-              <span>Zero Setup Fees</span>
-            </div>
-            <div className="smo-pkg-trust-divider" />
-            <div className="smo-pkg-trust-item">
-              <i className="fas fa-sync-alt" />
-              <span>Cancel Anytime</span>
-            </div>
-            <div className="smo-pkg-trust-divider" />
-            <div className="smo-pkg-trust-item">
-              <i className="fas fa-headset" />
-              <span>Dedicated Support</span>
-            </div>
-            <div className="smo-pkg-trust-divider" />
-            <div className="smo-pkg-trust-item">
-              <i className="fas fa-chart-bar" />
-              <span>Monthly Reports</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Pricing Section End */}
-
-      {/* AI Search Optimization Section (GEO Specific Content) */}
       <section
         className="service-gradient-black-section"
-        style={{ backgroundColor: "#080808" }}
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
       >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 text-center">
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div className="row justify-content-center">
+              <div className="col-lg-10" style={{ color: "#ffffff" }}>
+                <h2
+                  style={{
+                    color: "#ffffff",
+                    fontFamily: '"Outfit", sans-serif',
+                    fontWeight: "800",
+                    fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                    marginBottom: "16px",
+                  }}
+                >
+                  Why Organic Social Media Optimization Is a Crucial Branding Strategy
+                </h2>
+                <p style={{ color: "#cbd5e1", fontSize: "16px", lineHeight: "1.8", marginBottom: "30px" }}>
+                  Organic social media optimization is the foundation of building
+                  a reliable brand identity. While paid social advertising
+                  generates short-term traffic, organic optimization creates
+                  lasting customer connections. By sharing valuable content and
+                  engaging with your audience, you build a community that supports
+                  and recommends your brand.
+                </p>
+
+                <h3
+                  style={{
+                    color: "#FD6A02",
+                    fontFamily: '"Outfit", sans-serif',
+                    fontWeight: "700",
+                    fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
+                    marginBottom: "16px",
+                  }}
+                >
+                  How Social Engagement Signals Influence Search Visibility
+                </h3>
+                <p style={{ color: "#e2e8f0", fontSize: "16px", lineHeight: "1.8", margin: 0 }}>
+                  Modern search algorithms and AI engines track social media brand mentions as trust signals. Active business profiles with high engagement rates build brand authority. By maintaining updated social accounts, you tell search engines that your business is active and trusted by users.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section - Dual Brand Color Redesign */}
+      <section
+        className="branding-pricing-section"
+        style={{
+          background: "#FD6A02",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "#042544",
+              border: "3px solid #ffffff",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 25px 60px rgba(4, 36, 66, 0.5)",
+            }}
+          >
+            <div className="branding-pricing-header" style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  border: "2px solid #ffffff",
+                }}
+              >
+                Pricing Plans
+              </span>
+              <h2 style={{ color: "#ffffff", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: "800", fontFamily: '"Outfit", sans-serif' }}>
+                Transparent Monthly SMO Packages
+              </h2>
+              <p style={{ color: "#e2e8f0", fontSize: "16px" }}>
+                Select a social media optimization tier structured for your growth stage. No hidden setup fees.
+              </p>
+            </div>
+
+            <div className="branding-pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Starter SMO</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
+                    ₹7,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ Month</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Manage 2 Social Channels</li>
+                    <li>12 Graphic Posts / Month</li>
+                    <li>Basic Profile Optimization</li>
+                    <li>Hashtag &amp; Bio Research</li>
+                    <li>Monthly Progress Report</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
+              </div>
+
+              <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>Recommended</span>
+                <div>
+                  <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Brand Growth</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>
+                    ₹14,999 <span style={{ color: "#cbd5e1", fontSize: "1rem" }}>/ Month</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#e2e8f0" }}>
+                    <li>Manage 4 Social Channels</li>
+                    <li>24 Custom Posts &amp; 4 Reels</li>
+                    <li>Deep Profile Optimization</li>
+                    <li>Active Community Moderation</li>
+                    <li>Bi-weekly Strategy Check-in</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#FD6A02", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
+              </div>
+
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Enterprise SMO</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>Custom Pricing</div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Custom Platform Support</li>
+                    <li>Daily Content &amp; Video Shorts</li>
+                    <li>Dedicated Account Manager</li>
+                    <li>Multi-channel Moderation</li>
+                    <li>GEO &amp; AI Visibility Integration</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Search Optimization Section (GEO Specific Content) - Dual Brand Color Redesign */}
+      <section
+        className="service-gradient-black-section"
+        style={{
+          background: "linear-gradient(135deg, #042544 0%, #021224 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  boxShadow: "0 4px 15px rgba(253, 106, 2, 0.4)",
+                }}
+              >
+                AI Search Optimization (GEO)
+              </span>
               <h2
-                className="inner-heading"
-                style={{ fontSize: "2.2rem", textAlign: "center" }}
+                style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', margin: "0 0 15px" }}
               >
                 Quick Answers: Social Media Optimization
               </h2>
-              <p className="mb-8 text-gray-400" style={{ textAlign: "center" }}>
-                Whether you're looking for fast facts or optimizing for AI
-                search tools like ChatGPT and Gemini, here is a clear, simple
-                breakdown of our SMO services.
+              <p style={{ color: "#cbd5e1", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+                Whether you're looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear breakdown of our SMO services.
               </p>
             </div>
-          </div>
-          <div
-            className="row justify-content-center text-left"
-            style={{ marginTop: "40px" }}
-          >
-            <div
-              className="col-lg-10"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "30px",
-              }}
-            >
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+
+            <div className="geo-questions-grid">
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Social Media Optimization (SMO)?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  SMO involves optimizing business profiles and content across
-                  social platforms like Facebook, Instagram, and LinkedIn. It
-                  focuses on profile setups, graphic posts, and hashtag research
-                  to increase organic brand visibility.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  SMO involves optimizing business profiles and content across platforms like Facebook, Instagram, and LinkedIn to build organic reach.
                 </p>
               </div>
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why is organic SMO important?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Organic SMO is important because it builds direct customer
-                  trust, drives free website referral traffic, and signals brand
-                  credibility to search engine algorithms, supporting your
-                  overall search rankings.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Organic SMO builds authentic customer trust, drives free referral traffic, and signals brand credibility to search algorithms.
                 </p>
               </div>
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How does SMO differ from SEO?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  SEO focuses on optimizing a website to rank on search engine
-                  results pages, while SMO optimizes social media profiles and
-                  posts to increase brand visibility on social networks.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  SEO targets web page search rankings, while SMO optimizes social channels and posts to maximize audience reach on social networks.
                 </p>
               </div>
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How does community management help?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Community management involves responding to user comments and
-                  direct messages. This responsiveness builds client trust and
-                  boosts profile activity levels, which social algorithms favor.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Community management responds to comments and DMs, boosting profile activity levels which social algorithms prioritize.
                 </p>
               </div>
             </div>
@@ -1024,7 +1023,6 @@ const SMO = () => {
             },
             {
               id: "faq4",
-              heading: "Profile Optimizations",
               question: "What does profile optimization include?",
               answer:
                 "It includes designing professional display images, cover graphics, writing keyword-rich bios, and setting up contact link buttons.",
@@ -1124,15 +1122,6 @@ const SMO = () => {
       </section>
       {/* Faq Section End */}
 
-      
-      {/* Local SEO Link Section */}
-      {/* <div className="container text-center my-5">
-        <p className="text-muted" style={{ fontSize: '14px' }}>
-          Serving clients locally in Bettiah and remotely across Bihar, India, and globally.
-        </p>
-      </div> */}
-
-      <FooterWithPopup />
     </>
   );
 };

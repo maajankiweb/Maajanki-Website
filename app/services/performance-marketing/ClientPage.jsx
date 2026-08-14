@@ -92,37 +92,111 @@ const PerformanceMarketing = () => {
       </section>
       {/* Banner Section End */}
 
-      {/* Page Introduction Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="alt-font inner-heading">
-                Top-Rated{" "}
-                <strong>Performance Marketing Agency in Bihar, India</strong> –
-                Accelerating Business Growth via Data-Driven Paid Ads
+      {/* Page Introduction Section - Redesigned Modern Layout */}
+      <section
+        className="pm-intro-redesign"
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 50%, #091e36 100%)",
+          padding: "80px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            className="pm-intro-card"
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+              border: "1px solid rgba(253, 106, 2, 0.35)",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(253, 106, 2, 0.15)",
+              position: "relative",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "30px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "rgba(253, 106, 2, 0.15)",
+                  border: "1px solid rgba(253, 106, 2, 0.5)",
+                  color: "#FD6A02",
+                  padding: "6px 20px",
+                  borderRadius: "30px",
+                  fontSize: "13px",
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                }}
+              >
+                Performance Marketing &amp; Paid Growth
+              </span>
+              <h2
+                style={{
+                  color: "#ffffff",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                  fontWeight: "800",
+                  fontFamily: '"Outfit", sans-serif',
+                  lineHeight: "1.3",
+                  maxWidth: "950px",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Top-Rated <span style={{ color: "#FD6A02" }}>Performance Marketing Agency in Bihar, India</span> – Accelerating Business Growth via Data-Driven Paid Ads
               </h2>
+            </div>
 
-              <p className="text-medium line-height-28 sm-line-height-26">
-                Are you looking for professional{" "}
-                <strong>performance marketing services in India</strong>?
-                MaaJanki Web Tech, located in Bagaha, Bihar, designs and
-                executes conversion-focused paid advertising campaigns. We help
-                small businesses, B2B brands, and e-commerce stores in Patna,
-                Delhi, and globally acquire quality leads, increase sales
-                volume, and reduce customer acquisition costs (CAC).
-              </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "30px",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.04)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#cbd5e1",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  Are you looking for professional{" "}
+                  <strong style={{ color: "#ffffff" }}>performance marketing services in India</strong>? MaaJanki Web Tech, located in Bagaha, Bihar, designs and executes conversion-focused paid advertising campaigns for businesses in Patna, Delhi, and globally.
+                </p>
+              </div>
 
-              <p>
-                We do not believe in running generic ad campaigns that only
-                produce surface-level impressions. Instead, our team conducts
-                detailed customer persona audits, configures advanced tracking
-                tags, writes compelling ad copies, and performs A/B tests to
-                optimize Return on Ad Spend (ROAS). By aligning our media buying
-                strategies with Google's and Meta's machine learning algorithms,
-                we ensure your ad budget works efficiently to capture
-                ready-to-buy consumers.
-              </p>
+              <div
+                style={{
+                  background: "rgba(253, 106, 2, 0.08)",
+                  border: "1px solid rgba(253, 106, 2, 0.25)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#e2e8f0",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  We conduct detailed customer persona audits, configure advanced tracking tags, write compelling ad copies, and perform A/B tests to optimize Return on Ad Spend (ROAS) and capture ready-to-buy consumers efficiently.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -780,57 +854,61 @@ const PerformanceMarketing = () => {
                 alt={tool.alt}
                 title={tool.title}
                 loading="lazy"
-               width={150} height={50} />
+width={150} height={50} />
               <span className="performance-card-label">{tool.label}</span>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Brochure Section */}
-      <section className="graphic-landing-section">
-        <div className="graphic-container">
-          <div className="graphic-left">
-            <h2 className="br-graphic-heading">
-              Download Our Performance Marketing & Paid Ads Growth Guide
+      {/* Brochure Section - Matched Reference UI Design */}
+      <section
+        className="graphic-landing-section"
+        style={{
+          background: "radial-gradient(circle at 10% 20%, rgba(253, 106, 2, 0.25) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(4, 37, 68, 0.4) 0%, transparent 50%), linear-gradient(135deg, #042544 0%, #150902 45%, #FD6A02 100%)",
+          padding: "90px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+          borderBottom: "3px solid #042544",
+        }}
+      >
+        <div className="graphic-container" style={{ maxWidth: "1240px", margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "40px" }}>
+          {/* Left Column: Heading, Subtext & Brochure Download Card */}
+          <div className="graphic-left" style={{ flex: "1 1 500px" }}>
+            <h2 className="br-graphic-heading" style={{ color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', fontSize: "clamp(2rem, 3.5vw, 2.5rem)", marginBottom: "15px", lineHeight: "1.2" }}>
+              Download Our Performance Marketing &amp; Paid Ads Growth Guide
             </h2>
-            <p className="graphic-subtext">
-              Partner with MaaJanki Web Tech to build measurable lead flow. We
-              build campaigns and design landing pages that connect with buyer
-              search intent.
+            <p className="graphic-subtext" style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "1.6", marginBottom: "30px" }}>
+              Partner with MaaJanki Web Tech to build measurable lead flow. We build campaigns and design landing pages that connect with buyer search intent.
             </p>
 
-            <div className="graphic-brochure-box">
-              <h3 className="graphic-brochure-title">
+            <div className="graphic-brochure-box" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.12)", borderRadius: "18px", padding: "30px", boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)" }}>
+              <h3 className="graphic-brochure-title" style={{ color: "#ffffff", fontSize: "1.35rem", fontWeight: "700", marginBottom: "10px" }}>
                 Download Our PPC Growth Guide
               </h3>
-              <p className="graphic-brochure-desc">
-                Learn about our ad testing strategies, custom pixel setups, and
-                landing page frameworks in our guide.
+              <p className="graphic-brochure-desc" style={{ color: "#94a3b8", fontSize: "14px", marginBottom: "20px", lineHeight: "1.5" }}>
+                Learn about our ad testing strategies, custom pixel setups, and landing page frameworks in our guide.
               </p>
 
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> PPC Keyword Match &
-                Bidding Guides
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> PPC Keyword Match &amp; Bidding Guides
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Custom Lead Gen Ad
-                Templates
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Custom Lead Gen Ad Templates
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> GTM & Pixel Conversion
-                Checklists
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "25px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> GTM &amp; Pixel Conversion Checklists
               </div>
 
-              {/* Download Button */}
               <button
                 className="graphic-brochure-btn"
                 onClick={openBrochurePopup}
+                style={{ background: "linear-gradient(135deg, #7e22ce, #FD6A02)", color: "#ffffff", border: "none", borderRadius: "30px", padding: "12px 28px", fontWeight: "700", fontSize: "14px", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "8px", boxShadow: "0 8px 20px rgba(126, 34, 206, 0.4)", transition: "all 0.3s ease" }}
               >
                 ⬇️ Download Brochure
               </button>
 
-              {/* Popup Form */}
               {isPopupOpen && (
                 <div
                   className="brochure-popup-overlay"
@@ -839,6 +917,7 @@ const PerformanceMarketing = () => {
                   <div
                     className="brochure-popup"
                     onClick={(e) => e.stopPropagation()}
+                    style={{ background: "#042544", border: "2px solid #FD6A02" }}
                   >
                     <span
                       className="brochure-close"
@@ -846,7 +925,6 @@ const PerformanceMarketing = () => {
                     >
                       &times;
                     </span>
-
                     <form
                       action="https://getform.io/f/bvrmgenb"
                       method="POST"
@@ -858,43 +936,47 @@ const PerformanceMarketing = () => {
                           method: "POST",
                           body: new FormData(form),
                           headers: { Accept: "application/json" },
-                        })
-                          .then((response) => {
-                            if (response.ok) {
-                              window.open(
-                                "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID",
-                                "_blank",
-                              );
-                              form.reset();
-                              closeBrochurePopup();
-                            } else {
-                              alert("Something went wrong. Please try again.");
-                            }
-                          })
-                          .catch(() => {
-                            alert(
-                              "An error occurred. Please check your internet connection.",
+                        }).then((res) => {
+                          if (res.ok) {
+                            alert("Thank you! Your brochure is downloading.");
+                            setIsPopupOpen(false);
+                            window.open(
+                              "/brochures/MaaJanki-Web-Tech-Branding-Brochure.pdf",
+                              "_blank"
                             );
-                          });
+                          } else {
+                            alert("Submission error. Please try again.");
+                          }
+                        });
                       }}
                     >
-                      <h3 className="brochure-title">
-                        Get Your Paid Ads Brochure
+                      <h3 className="brochure-title" style={{ color: "#ffffff" }}>
+                        Download Performance Guide
                       </h3>
-                      <label htmlFor="email">Email Address</label>
                       <input
-                        type="email"
-                        name="email"
-                        placeholder="you@example.com"
+                        type="text"
+                        name="name"
+                        placeholder="Your Name *"
                         required
                       />
                       <input
-                        type="hidden"
-                        name="brochure_request"
-                        value="performance_marketing"
+                        type="email"
+                        name="email"
+                        placeholder="Your Email *"
+                        required
                       />
-                      <button type="submit" className="brochure-submit-btn">
-                        Send Brochure
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number *"
+                        required
+                      />
+                      <button
+                        type="submit"
+                        className="brochure-submit-btn"
+                        style={{ background: "#FD6A02", color: "#ffffff", borderRadius: "25px" }}
+                      >
+                        Download Now
                       </button>
                     </form>
                   </div>
@@ -903,26 +985,39 @@ const PerformanceMarketing = () => {
             </div>
           </div>
 
-          <div className="graphic-right">
-            <div className="graphic-service-grid">
+          {/* Right Column: 2-Column Grid of 8 Visual Service Cards */}
+          <div className="graphic-right" style={{ flex: "1 1 550px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
               {[
                 { icon: "fas fa-bullhorn", title: "PPC Campaign Setup" },
                 { icon: "fas fa-chart-line", title: "Google Ads Optimization" },
                 { icon: "fas fa-ad", title: "Meta Lead Gen Ads" },
                 { icon: "fas fa-users", title: "Audience Retargeting" },
                 { icon: "fas fa-coins", title: "Conversion Audits" },
-                {
-                  icon: "fas fa-hand-holding-usd",
-                  title: "Sales Funnel Design",
-                },
+                { icon: "fas fa-hand-holding-usd", title: "Sales Funnel Design" },
                 { icon: "fas fa-chart-pie", title: "Ad Copy A/B Testing" },
                 { icon: "fas fa-rocket", title: "Scale Ad Budgets" },
-              ].map((service, index) => (
-                <div className="graphic-service-card" key={index}>
-                  <div className="graphic-service-icon">
-                    <i className={service.icon}></i>
-                  </div>
-                  <div className="graphic-service-title">{service.title}</div>
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    background: "rgba(255, 255, 255, 0.04)",
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    borderRadius: "14px",
+                    padding: "24px 16px",
+                    textAlign: "center",
+                    transition: "all 0.3s ease",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "12px",
+                    minHeight: "115px",
+                  }}
+                  className="branding-brochure-service-card"
+                >
+                  <i className={item.icon} style={{ fontSize: "1.8rem", color: "#c084fc" }}></i>
+                  <span style={{ color: "#ffffff", fontWeight: "700", fontSize: "13.5px", lineHeight: "1.3" }}>{item.title}</span>
                 </div>
               ))}
             </div>
@@ -979,307 +1074,263 @@ const PerformanceMarketing = () => {
       </section>
 
       {/* Blog & Educational Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Why Data-Driven Attribution Is Key to Digital Advertising
-                Success
-              </h2>
-              <p>
-                In paid advertising, knowing where your conversions come from is
-                essential. While basic setups show general click details, they
-                often miss conversion sources, causing wasted budget.
-                Implementing conversion tracking via GA4 and Google Tag Manager
-                allows us to verify which keywords and ad layouts are driving
-                leads. This attribution maps out customer touchpoints, helping
-                us focus spend on profitable campaigns.
-              </p>
-
-              <h3 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Bidding Strategies: Machine Learning vs Manual CPC Management
-              </h3>
-              <p>
-                Modern paid advertising networks rely on machine learning to
-                optimize bids. We combine manual controls with smart bidding
-                strategies (such as Target CPA and Maximize Conversions). This
-                ensure ad bids adjust in real time to capture active users,
-                lowering overall acquisition costs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="branding-pricing-section">
-        <div className="branding-pricing-container">
-          <div className="branding-pricing-header">
-            <h2>Transparent Performance Marketing Pricing Plans</h2>
-            <p>
-              Choose an ads management plan aligned with your budget. We provide
-              clear conversion tracking setup and monthly performance
-              dashboards.
-            </p>
-          </div>
-
-          <div className="branding-pricing-grid">
-            {/* Plan 1 */}
-            <div className="branding-pricing-card">
-              <div>
-                <h3>Starter Ads Management</h3>
-                <div className="branding-pricing-amount">
-                  ₹15,000 <span>/ Month</span>
-                </div>
-                <ul className="branding-pricing-list">
-                  <li>Management of Ad Budgets Up to ₹1L/Month</li>
-                  <li>Meta Ads OR Google Ads Setup</li>
-                  <li>Custom Audience Targeting & Pixel Setup</li>
-                  <li>A/B Ad Creative Testing</li>
-                  <li>Bi-weekly Performance Reporting</li>
-                </ul>
-              </div>
-              <Link href="/contact" className="btn-primary-mj">
-                Get Started
-              </Link>
-            </div>
-
-            {/* Plan 2 */}
-            <div className="branding-pricing-card featured">
-              <span className="branding-pricing-badge">Most Popular</span>
-              <div>
-                <h3>Sales Scale Pro</h3>
-                <div className="branding-pricing-amount">
-                  ₹35,000 <span>/ Month</span>
-                </div>
-                <ul className="branding-pricing-list">
-                  <li>Management of Ad Budgets Up to ₹5L/Month</li>
-                  <li>Meta Ads + Google Ads Setup</li>
-                  <li>Retargeting & Lookalike Audiences</li>
-                  <li>Custom Ad Copy & Ad Design Consulting</li>
-                  <li>Weekly Performance Dashboard & Audits</li>
-                </ul>
-              </div>
-              <Link href="/contact" className="btn-primary-mj">
-                Get Started
-              </Link>
-            </div>
-
-            {/* Plan 3 */}
-            <div className="branding-pricing-card">
-              <div>
-                <h3>Omnichannel Growth Suite</h3>
-                <div className="branding-pricing-amount">Custom Pricing</div>
-                <ul className="branding-pricing-list">
-                  <li>Multi-channel Ads (Meta, Google, YouTube, LinkedIn)</li>
-                  <li>Unlimited Ad Budget Scope Management</li>
-                  <li>CRM Synchronization & Funnel Tracking</li>
-                  <li>High-converting Landing Page Consulting</li>
-                  <li>Dedicated Analytics Support & Auditing</li>
-                </ul>
-              </div>
-              <Link href="/contact" className="btn-primary-mj">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-
-          {/* Risk Mitigation Block */}
-          <div
-            style={{
-              background: "rgba(255,255,255,0.02)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              borderRadius: "12px",
-              padding: "40px",
-              marginTop: "60px",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "1.6rem",
-                fontWeight: "700",
-                marginBottom: "30px",
-                textAlign: "center",
-                color: "#fff",
-              }}
-            >
-              Risk Mitigation & Objections Resolved
-            </h3>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                gap: "30px",
-              }}
-            >
-              <div>
-                <h4
-                  style={{
-                    fontSize: "1.1rem",
-                    fontWeight: "600",
-                    color: "#ffeb3b",
-                    marginBottom: "12px",
-                  }}
-                >
-                  Is the ad spend budget included in the monthly fee?
-                </h4>
-                <p
-                  style={{
-                    fontSize: "0.95rem",
-                    color: "rgba(255,255,255,0.7)",
-                    lineHeight: "1.6",
-                  }}
-                >
-                  No. The ad budget is paid directly by the client to the
-                  advertising platforms (Google Ads, Meta Ads). Our monthly
-                  service fee covers strategy, ad setup, creative consulting,
-                  audience targeting, tracking, optimization, and reporting.
-                </p>
-              </div>
-              <div>
-                <h4
-                  style={{
-                    fontSize: "1.1rem",
-                    fontWeight: "600",
-                    color: "#ffeb3b",
-                    marginBottom: "12px",
-                  }}
-                >
-                  Do you guarantee immediate sales or leads?
-                </h4>
-                <p
-                  style={{
-                    fontSize: "0.95rem",
-                    color: "rgba(255,255,255,0.7)",
-                    lineHeight: "1.6",
-                  }}
-                >
-                  We guarantee high-intent, targeted traffic and lead
-                  acquisitions aligned with your audience profile. Conversions
-                  and actual sales also depend on external factors like your
-                  landing page experience, product pricing, and sales follow-up
-                  team.
-                </p>
-              </div>
-              <div>
-                <h4
-                  style={{
-                    fontSize: "1.1rem",
-                    fontWeight: "600",
-                    color: "#ffeb3b",
-                    marginBottom: "12px",
-                  }}
-                >
-                  Which ad network is best for my business?
-                </h4>
-                <p
-                  style={{
-                    fontSize: "0.95rem",
-                    color: "rgba(255,255,255,0.7)",
-                    lineHeight: "1.6",
-                  }}
-                >
-                  We analyze your target audience. Typically, B2B brands perform
-                  best on Google Search & LinkedIn, while B2C/eCommerce brands
-                  scale fastest via Meta Ads & Google Shopping.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Search Optimization Section (GEO Specific Content) */}
       <section
         className="service-gradient-black-section"
-        style={{ backgroundColor: "#080808" }}
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
       >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 text-center">
-              <h2 className="inner-heading" style={{ fontSize: "2.2rem", textAlign: "center" }}>
-                Quick Answers: Performance Marketing
-              </h2>
-              <p className="mb-8 text-gray-400" style={{ textAlign: "center" }}>
-                Whether you're looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear, simple breakdown of our performance marketing services.
-              </p>
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div className="row justify-content-center">
+              <div className="col-lg-10" style={{ color: "#ffffff" }}>
+                <h2
+                  style={{
+                    color: "#ffffff",
+                    fontFamily: '"Outfit", sans-serif',
+                    fontWeight: "800",
+                    fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                    marginBottom: "16px",
+                  }}
+                >
+                  Why Data-Driven Attribution Is Key to Digital Advertising Success
+                </h2>
+                <p style={{ color: "#cbd5e1", fontSize: "16px", lineHeight: "1.8", marginBottom: "30px" }}>
+                  In paid advertising, knowing where your conversions come from is
+                  essential. While basic setups show general click details, they
+                  often miss conversion sources, causing wasted budget.
+                  Implementing conversion tracking via GA4 and Google Tag Manager
+                  allows us to verify which keywords and ad layouts are driving
+                  leads. This attribution maps out customer touchpoints, helping
+                  us focus spend on profitable campaigns.
+                </p>
+
+                <h3
+                  style={{
+                    color: "#FD6A02",
+                    fontFamily: '"Outfit", sans-serif',
+                    fontWeight: "700",
+                    fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
+                    marginBottom: "16px",
+                  }}
+                >
+                  Bidding Strategies: Machine Learning vs Manual CPC Management
+                </h3>
+                <p style={{ color: "#e2e8f0", fontSize: "16px", lineHeight: "1.8", margin: 0 }}>
+                  Modern paid advertising networks rely on machine learning to
+                  optimize bids. We combine manual controls with smart bidding
+                  strategies (such as Target CPA and Maximize Conversions). This
+                  ensure ad bids adjust in real time to capture active users,
+                  lowering overall acquisition costs.
+                </p>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Pricing Section - Dual Brand Color Redesign */}
+      <section
+        className="branding-pricing-section"
+        style={{
+          background: "#FD6A02",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <div
-            className="row justify-content-center text-left"
-            style={{ marginTop: "40px" }}
+            style={{
+              background: "#042544",
+              border: "3px solid #ffffff",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 25px 60px rgba(4, 36, 66, 0.5)",
+            }}
           >
-            <div
-              className="col-lg-10"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "1fr 1fr",
-                gap: "30px",
-              }}
-            >
-              <div
+            <div className="branding-pricing-header" style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
                 style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  border: "2px solid #ffffff",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+                Pricing Plans
+              </span>
+              <h2 style={{ color: "#ffffff", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: "800", fontFamily: '"Outfit", sans-serif' }}>
+                Transparent Performance Marketing Packages
+              </h2>
+              <p style={{ color: "#e2e8f0", fontSize: "16px" }}>
+                Select an advertising management plan structured for your ROI targets. No hidden setup fees.
+              </p>
+            </div>
+
+            <div className="branding-pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Starter Ads Management</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
+                    ₹15,000 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ Month</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Ad Spend Scope Up to ₹1L/Month</li>
+                    <li>Meta Ads OR Google Ads Setup</li>
+                    <li>Custom Audience &amp; Pixel Setup</li>
+                    <li>A/B Ad Creative Testing</li>
+                    <li>Bi-weekly Performance Reports</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
+              </div>
+
+              <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>Recommended</span>
+                <div>
+                  <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Sales Scale Pro</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>
+                    ₹35,000 <span style={{ color: "#cbd5e1", fontSize: "1rem" }}>/ Month</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#e2e8f0" }}>
+                    <li>Ad Spend Scope Up to ₹5L/Month</li>
+                    <li>Meta Ads + Google Ads Setup</li>
+                    <li>Retargeting &amp; Lookalike Audiences</li>
+                    <li>Custom Ad Copy &amp; Creative Audits</li>
+                    <li>Weekly Dashboard &amp; ROAS Audits</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#FD6A02", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
+              </div>
+
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Omnichannel Growth</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>Custom Pricing</div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>Multi-channel (Meta, Google, YouTube, LinkedIn)</li>
+                    <li>Unlimited Ad Budget Scope</li>
+                    <li>CRM Sync &amp; Funnel Tracking</li>
+                    <li>Landing Page CRO Consulting</li>
+                    <li>Dedicated Analytics Lead</li>
+                  </ul>
+                </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AI Search Optimization Section (GEO Specific Content) - Dual Brand Color Redesign */}
+      <section
+        className="service-gradient-black-section"
+        style={{
+          background: "linear-gradient(135deg, #042544 0%, #021224 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  boxShadow: "0 4px 15px rgba(253, 106, 2, 0.4)",
+                }}
+              >
+                AI Search Optimization (GEO)
+              </span>
+              <h2
+                style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', margin: "0 0 15px" }}
+              >
+                Quick Answers: Performance Marketing
+              </h2>
+              <p style={{ color: "#cbd5e1", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+                Whether you're looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear breakdown of our performance marketing services.
+              </p>
+            </div>
+
+            <div className="geo-questions-grid">
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Performance Marketing?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Performance marketing is an advertising strategy where brands
-                  pay only when specific, measurable conversion goals—like
-                  sales, clicks, or lead registrations—are achieved.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Performance marketing is a results-oriented advertising strategy where businesses pay only when measurable actions—like lead form submits, clicks, or sales—are completed.
                 </p>
               </div>
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How does performance marketing differ from branding?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Branding campaigns focus on general reach and long-term brand
-                  awareness. Performance marketing targets short-term,
-                  measurable transactions and lead generation goals.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Branding focuses on long-term recall and market authority, whereas performance marketing optimizes immediate lead generation, Cost Per Acquisition (CPA), and Return on Ad Spend (ROAS).
                 </p>
               </div>
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
-                  How do Google Ads help local businesses in Bihar?
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  How do Google Ads assist targeted lead capture?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Google Ads target geo-specific search terms, displaying your
-                  contact details and landing pages to active buyers in Patna,
-                  Bagaha, or other local areas.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Google Ads place your services in front of active searchers with precise keyword and geo-targeting, capturing high-intent traffic instantly.
                 </p>
               </div>
-              <div
-                style={{
-                  background: "#111",
-                  padding: "25px",
-                  borderRadius: "8px",
-                }}
-              >
-                <h4 style={{ color: "#FD6A02", fontWeight: "600" }}>
-                  Why is conversion tracking essential for paid campaigns?
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  Why is Conversion Tracking mandatory for paid ads?
                 </h4>
-                <p style={{ color: "#ccc", fontSize: "0.92rem" }}>
-                  Conversion tracking logs user actions (e.g. form submissions,
-                  checkout events), indicating which ad formats and keywords are
-                  driving profitable outcomes.
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Conversion tracking measures exact user actions, pinpointing profitable ad creatives and keywords while eliminating wasted ad spend.
                 </p>
               </div>
             </div>
@@ -1508,14 +1559,6 @@ const PerformanceMarketing = () => {
       </section>
 
       
-      {/* Local SEO Link Section */}
-      {/* <div className="container text-center my-5">
-        <p className="text-muted" style={{ fontSize: '14px' }}>
-          Serving clients locally in Bettiah and remotely across Bihar, India, and globally.
-        </p>
-      </div> */}
-
-      <FooterWithPopup />
     </>
   );
 };

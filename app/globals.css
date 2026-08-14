@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "@fortawesome/fontawesome-free/css/all.min.css";
 
 /* =====================================================
    GLOBAL BASE STYLES - MaaJanki Web Tech
@@ -12,7 +11,7 @@
 body {
   margin: 0;
   font-family:
-    var(--font-outfit),
+    var(--font-poppins),
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
@@ -22,6 +21,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #111;
   line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .heading-outfit {
+  font-family: var(--font-outfit), sans-serif;
 }
 
 
@@ -710,5 +713,23 @@ h4:not(.admin-layout-root h4),
   display: block;
   margin: 0 auto;
   flex-shrink: 0;
+}
+
+/* =====================================================
+   CORE WEB VITALS & DEFERRED RENDERING OPTIMIZATIONS
+   ===================================================== */
+.products-grid-section,
+.product-detail-section,
+.mj-footer,
+.reviews-section,
+.locations-grid,
+.service-detail-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 400px;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
 }
 

@@ -260,6 +260,36 @@ export default function RootLayout({ children }) {
         "areaServed": { "@type": "Country", "name": "India" }
       },
       {
+        "@type": "FAQPage",
+        "@id": "https://maajankiwebtech.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What services does MaaJanki Web Tech provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MaaJanki Web Tech provides custom web development, SEO & AEO optimization, social media marketing, performance marketing, graphic design, branding, and proprietary SaaS platforms like InvoBill, WaCRM, DukanDost Pro, and Nexus SaaS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is MaaJanki Web Tech an officially registered business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, MaaJanki Web Tech is a DPIIT Recognized Startup India enterprise and registered MSME under Udyam Registration UDYAM-BR-38-0014113."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is the founder of MaaJanki Web Tech?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ashish Kumar (Wikidata Q115783355) is the Founder & CEO of MaaJanki Web Tech."
+            }
+          }
+        ]
+      },
+      {
         "@type": "BreadcrumbList",
         "@id": "https://maajankiwebtech.com/#breadcrumb",
         "itemListElement": [
@@ -301,8 +331,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${outfit.variable} ${poppins.variable} ${inter.variable}`}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

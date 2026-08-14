@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import "@/app/styles/ContentWriting.css";
 import "@/app/styles/Home.css";
-import FooterWithPopup from '@/components/FooterWithPopup';
+import "@/app/styles/Branding.css";
 
 const ContentWriting = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -76,30 +76,112 @@ const ContentWriting = () => {
       </section>
       {/* Banner Section End */}
 
-      {/* Page Introduction Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="alt-font inner-heading">
-                Top-Rated{" "}
-                <strong>Content Writing Agency in Bihar, India</strong> –
-                High-Quality Copy Aligned with Modern SEO & AI Standards
+      {/* Page Introduction Section - Redesigned Modern Layout */}
+      <section
+        className="cw-intro-redesign"
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 50%, #091e36 100%)",
+          padding: "80px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            className="cw-intro-card"
+            style={{
+              background: "rgba(255, 255, 255, 0.03)",
+              backdropFilter: "blur(16px)",
+              WebkitBackdropFilter: "blur(16px)",
+              border: "1px solid rgba(253, 106, 2, 0.35)",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(253, 106, 2, 0.15)",
+              position: "relative",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "30px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "rgba(253, 106, 2, 0.15)",
+                  border: "1px solid rgba(253, 106, 2, 0.5)",
+                  color: "#FD6A02",
+                  padding: "6px 20px",
+                  borderRadius: "30px",
+                  fontSize: "13px",
+                  fontWeight: "700",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                }}
+              >
+                Content &amp; Copywriting Strategy
+              </span>
+              <h2
+                style={{
+                  color: "#ffffff",
+                  fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
+                  fontWeight: "800",
+                  fontFamily: '"Outfit", sans-serif',
+                  lineHeight: "1.3",
+                  maxWidth: "950px",
+                  margin: "0 auto 20px",
+                }}
+              >
+                Top-Rated <span style={{ color: "#FD6A02" }}>Content Writing Agency in Bihar, India</span> – High-Quality Copy Aligned with Modern SEO &amp; AI Standards
               </h2>
+            </div>
 
-              <p className="text-medium line-height-28 sm-line-height-26">
-                MaaJanki Web Tech is the premier{" "}
-                <strong>content writing and copywriting agency in Bagaha, Bihar, India</strong>
-                , dedicated to crafting high-performance copy that drives organic business growth. We deliver professional, SEO-optimized content services for businesses in Patna, Delhi, and globally. Our writing solutions include strategic blog posting, high-converting landing page copywriting, professional company profiles, B2B technical copywriting, and persuasive e-commerce product descriptions. By blending creative storytelling with search data, we help brands stand out in saturated digital spaces.
-              </p>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "30px",
+                alignItems: "center",
+              }}
+            >
+              <div
+                style={{
+                  background: "rgba(255, 255, 255, 0.04)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#cbd5e1",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  MaaJanki Web Tech is the premier{" "}
+                  <strong style={{ color: "#ffffff" }}>content writing and copywriting agency in Bagaha, Bihar, India</strong>
+                  , dedicated to crafting high-performance copy that drives organic business growth. We deliver professional, SEO-optimized content services for businesses in Patna, Delhi, and globally.
+                </p>
+              </div>
 
-              <p>
-                Search engines and modern generative AI tools have redefined content standards. We move away from flat, low-value, AI-generated text, focusing instead on primary research, original insights, and expert authority. By structuring your content around precise user search intent, integrating high-volume long-tail keywords, and strictly adhering to Google's E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness) guidelines, we build credible, helpful resources. This dual-optimization strategy ensures your website ranks highly on traditional search engines while earning top citations in AI summaries like ChatGPT, Claude, and Perplexity.
-              </p>
-
-              <p>
-                Beyond rankings, our copy is designed to establish true brand authority and drive customer action. We understand that every sentence must align with your brand's unique narrative and convert casual readers into loyal advocates. By mapping out a comprehensive content strategy, we establish consistency across all marketing funnel assets—including email campaigns, brochures, and website pages. Partner with us to scale your digital presence globally with high-quality, conversion-focused content writing that delivers real, measurable return on marketing investment.
-              </p>
+              <div
+                style={{
+                  background: "rgba(253, 106, 2, 0.08)",
+                  border: "1px solid rgba(253, 106, 2, 0.25)",
+                  borderRadius: "16px",
+                  padding: "28px 24px",
+                }}
+              >
+                <p
+                  style={{
+                    color: "#e2e8f0",
+                    fontSize: "16px",
+                    lineHeight: "1.8",
+                    margin: 0,
+                  }}
+                >
+                  Search engines and modern generative AI tools have redefined content standards. We move away from flat, low-value, AI-generated text, focusing instead on primary research, original insights, and expert authority. By structuring your content around precise search intent and Google E-E-A-T guidelines, we build credible, helpful resources that rank and convert.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -559,10 +641,12 @@ const ContentWriting = () => {
                 </div>
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
-                <h2 className="content-title">Our Content Writing Solutions</h2>
-                <h3 className="content-heading">Website Content Writing</h3>
+                <h2 className="main-heading">8. GEO AI Content Search Optimization</h2>
+                <h3 className="sub-heading">
+                  Optimizing Brand Copy for AI Engines & Generative Search
+                </h3>
                 <p className="content-text">
-                  <strong>Our Content Writing Solutions</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized content writing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  <strong>GEO AI Content Search Optimization</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized content writing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
                 </p>
                 <p className="content-text">
                   We specialize in <strong>keyword-rich search content that highlights your products and services with clarity and impact.</strong> By leveraging semantic search terms and long-tail query mapping, we ensure your content writing aligns with the algorithms and search behavior of Google and other search engines.
@@ -759,43 +843,50 @@ const ContentWriting = () => {
         </div>
       </section>
 
-      {/* Brochure Section */}
-      <section className="graphic-landing-section">
-        <div className="graphic-container">
-          <div className="graphic-left">
-            <h2 className="br-graphic-heading">
-              Download Our Content Writing & Copywriting Guide
+      {/* Brochure Section - Matched Reference UI Design */}
+      <section
+        className="graphic-landing-section"
+        style={{
+          background: "radial-gradient(circle at 10% 20%, rgba(253, 106, 2, 0.25) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(4, 37, 68, 0.4) 0%, transparent 50%), linear-gradient(135deg, #042544 0%, #150902 45%, #FD6A02 100%)",
+          padding: "90px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+          borderBottom: "3px solid #042544",
+        }}
+      >
+        <div className="graphic-container" style={{ maxWidth: "1240px", margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "40px" }}>
+          {/* Left Column: Heading, Subtext & Brochure Download Card */}
+          <div className="graphic-left" style={{ flex: "1 1 500px" }}>
+            <h2 className="br-graphic-heading" style={{ color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', fontSize: "clamp(2rem, 3.5vw, 2.5rem)", marginBottom: "15px", lineHeight: "1.2" }}>
+              Download Our Content Writing &amp; Copywriting Guide
             </h2>
-            <p className="graphic-subtext">
-              Partner with MaaJanki Web Tech to build organic visibility. We
-              write professional, SEO-optimized copy to connect with your target
-              customers.
+            <p className="graphic-subtext" style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "1.6", marginBottom: "30px" }}>
+              Partner with MaaJanki Web Tech to build organic visibility. We write professional, SEO-optimized copy to connect with your target customers.
             </p>
 
-            <div className="graphic-brochure-box">
-              <h3 className="graphic-brochure-title">
+            <div className="graphic-brochure-box" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.12)", borderRadius: "18px", padding: "30px", boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)" }}>
+              <h3 className="graphic-brochure-title" style={{ color: "#ffffff", fontSize: "1.35rem", fontWeight: "700", marginBottom: "10px" }}>
                 Download Our Copywriting Campaign Outline
               </h3>
-              <p className="graphic-brochure-desc">
-                Learn about our content workflows, blog schedules, and keyword
-                research templates in our brochure.
+              <p className="graphic-brochure-desc" style={{ color: "#94a3b8", fontSize: "14px", marginBottom: "20px", lineHeight: "1.5" }}>
+                Learn about our content workflows, blog schedules, and keyword research templates in our brochure.
               </p>
 
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Website Content Audits &
-                Strategy
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Website Content Audits &amp; Strategy
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> SEO Content Optimization
-                Templates
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> SEO Content Optimization Templates
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Blog Content Calendars
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "25px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#a855f7", fontSize: "1rem" }}></i> Blog Content Calendars
               </div>
 
               <button
                 className="graphic-brochure-btn"
                 onClick={openBrochurePopup}
+                style={{ background: "linear-gradient(135deg, #7e22ce, #FD6A02)", color: "#ffffff", border: "none", borderRadius: "30px", padding: "12px 28px", fontWeight: "700", fontSize: "14px", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "8px", boxShadow: "0 8px 20px rgba(126, 34, 206, 0.4)", transition: "all 0.3s ease" }}
               >
                 ⬇️ Download Content Brochure
               </button>
@@ -808,6 +899,7 @@ const ContentWriting = () => {
                   <div
                     className="brochure-popup"
                     onClick={(e) => e.stopPropagation()}
+                    style={{ background: "#042544", border: "2px solid #FD6A02" }}
                   >
                     <span
                       className="brochure-close"
@@ -826,41 +918,47 @@ const ContentWriting = () => {
                           method: "POST",
                           body: new FormData(form),
                           headers: { Accept: "application/json" },
-                        })
-                          .then((response) => {
-                            if (response.ok) {
-                              window.open(
-                                "https://drive.google.com/uc?export=download&id=YOUR_FILE_ID",
-                                "_blank",
-                              );
-                              form.reset();
-                              closeBrochurePopup();
-                            } else {
-                              alert("Something went wrong. Please try again.");
-                            }
-                          })
-                          .catch(() => {
-                            alert("Network error. Please try again later.");
-                          });
+                        }).then((res) => {
+                          if (res.ok) {
+                            alert("Thank you! Your brochure is downloading.");
+                            setIsPopupOpen(false);
+                            window.open(
+                              "/brochures/MaaJanki-Web-Tech-Branding-Brochure.pdf",
+                              "_blank"
+                            );
+                          } else {
+                            alert("Submission error. Please try again.");
+                          }
+                        });
                       }}
                     >
-                      <h3 className="brochure-title">
-                        Request Content Brochure
+                      <h3 className="brochure-title" style={{ color: "#ffffff" }}>
+                        Download Content Guide
                       </h3>
-                      <label htmlFor="email">Business Email:</label>
                       <input
-                        type="email"
-                        name="email"
-                        placeholder="you@company.com"
+                        type="text"
+                        name="name"
+                        placeholder="Your Name *"
                         required
                       />
                       <input
-                        type="hidden"
-                        name="brochure_request"
-                        value="Content_Brochure"
+                        type="email"
+                        name="email"
+                        placeholder="Your Email *"
+                        required
                       />
-                      <button type="submit" className="brochure-submit-btn">
-                        Send My Brochure
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number *"
+                        required
+                      />
+                      <button
+                        type="submit"
+                        className="brochure-submit-btn"
+                        style={{ background: "#FD6A02", color: "#ffffff", borderRadius: "25px" }}
+                      >
+                        Download Now
                       </button>
                     </form>
                   </div>
@@ -869,29 +967,39 @@ const ContentWriting = () => {
             </div>
           </div>
 
-          <div className="graphic-right">
-            <div className="graphic-service-grid">
+          {/* Right Column: 2-Column Grid of 8 Visual Service Cards */}
+          <div className="graphic-right" style={{ flex: "1 1 550px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
               {[
                 { icon: "fas fa-search", title: "Keyword Optimization" },
-                {
-                  icon: "fas fa-chart-line",
-                  title: "Content Performance Reports",
-                },
-                {
-                  icon: "fas fa-map-marker-alt",
-                  title: "Local content targeting",
-                },
+                { icon: "fas fa-chart-line", title: "Content Performance Reports" },
+                { icon: "fas fa-map-marker-alt", title: "Local content targeting" },
                 { icon: "fas fa-pen-nib", title: "Website Copywriting" },
                 { icon: "fas fa-link", title: "SEO-friendly blog posts" },
                 { icon: "fas fa-cogs", title: "E-E-A-T Quality Checks" },
                 { icon: "fas fa-bullhorn", title: "Conversion Copywriting" },
                 { icon: "fas fa-rocket", title: "AI Search Optimizations" },
-              ].map((service, index) => (
-                <div className="graphic-service-card" key={index}>
-                  <div className="graphic-service-icon">
-                    <i className={service.icon}></i>
-                  </div>
-                  <div className="graphic-service-title">{service.title}</div>
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    background: "rgba(255, 255, 255, 0.04)",
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    borderRadius: "14px",
+                    padding: "24px 16px",
+                    textAlign: "center",
+                    transition: "all 0.3s ease",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "12px",
+                    minHeight: "115px",
+                  }}
+                  className="branding-brochure-service-card"
+                >
+                  <i className={item.icon} style={{ fontSize: "1.8rem", color: "#c084fc" }}></i>
+                  <span style={{ color: "#ffffff", fontWeight: "700", fontSize: "13.5px", lineHeight: "1.3" }}>{item.title}</span>
                 </div>
               ))}
             </div>
@@ -947,174 +1055,263 @@ const ContentWriting = () => {
       </section>
 
       {/* Blog & Educational Section */}
-      <section className="service-gradient-black-section">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <h2 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                Why Professional Copywriting Is Essential for Digital Marketing
-                Success
-              </h2>
-              <p>
-                Professional copywriting distinguishes your brand, establishing
-                trust and market authority. While generic templates offer fast
-                setups, they lack unique brand narrative alignment. A custom
-                copywriting strategy ensures your website copy, blog posts, and
-                landing pages remain consistent, reinforcing your brand voice
-                and supporting organic business growth.
-              </p>
+      <section
+        className="service-gradient-black-section"
+        style={{
+          background: "linear-gradient(135deg, #020617 0%, #042544 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div className="row justify-content-center">
+              <div className="col-lg-10" style={{ color: "#ffffff" }}>
+                <h2
+                  style={{
+                    color: "#ffffff",
+                    fontFamily: '"Outfit", sans-serif',
+                    fontWeight: "800",
+                    fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+                    marginBottom: "16px",
+                  }}
+                >
+                  Why Professional Copywriting Is Essential for Digital Marketing Success
+                </h2>
+                <p style={{ color: "#cbd5e1", fontSize: "16px", lineHeight: "1.8", marginBottom: "30px" }}>
+                  Professional copywriting distinguishes your brand, establishing
+                  trust and market authority. While generic templates offer fast
+                  setups, they lack unique brand narrative alignment. A custom
+                  copywriting strategy ensures your website copy, blog posts, and
+                  landing pages remain consistent, reinforcing your brand voice
+                  and supporting organic business growth.
+                </p>
 
-              <h3 className="inner-heading font-weight-500 alt-font d-block margin-10px-bottom text-medium text-extra-dark-gray">
-                How Informational Content Drives Customer Conversions
-              </h3>
-              <p>
-                Informational content answers customer questions directly,
-                building organic trust and visitor engagement. Providing
-                detailed solutions establishes your brand as an industry
-                authority, prompting users to take action. A strategic
-                copywriting approach focuses on user intent, helping you convert
-                organic traffic into loyal customers.
-              </p>
+                <h3
+                  style={{
+                    color: "#FD6A02",
+                    fontFamily: '"Outfit", sans-serif',
+                    fontWeight: "700",
+                    fontSize: "clamp(1.2rem, 2.5vw, 1.7rem)",
+                    marginBottom: "16px",
+                  }}
+                >
+                  How Informational Content Drives Customer Conversions
+                </h3>
+                <p style={{ color: "#e2e8f0", fontSize: "16px", lineHeight: "1.8", margin: 0 }}>
+                  Informational content answers customer questions directly,
+                  building organic trust and visitor engagement. Providing
+                  detailed solutions establishes your brand as an industry
+                  authority, prompting users to take action. A strategic
+                  copywriting approach focuses on user intent, helping you convert
+                  organic traffic into loyal customers.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Redesigned Premium Pricing Section */}
-      <section className="cw-pricing-section">
-        <div className="cw-pricing-inner">
-          <div className="cw-pricing-header">
-            <span className="cw-pricing-badge">Pricing Plans</span>
-            <h2 className="cw-pricing-title">Transparent Content Packages</h2>
-            <p className="cw-pricing-subtitle">
-              Select a content plan structured for your growth stage. Scale your brand authority with professional, plagiarism-free, and SEO-optimized copy.
-            </p>
-          </div>
+      {/* Pricing Section - Dual Brand Color Redesign */}
+      <section
+        className="branding-pricing-section"
+        style={{
+          background: "#FD6A02",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "#042544",
+              border: "3px solid #ffffff",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 25px 60px rgba(4, 36, 66, 0.5)",
+            }}
+          >
+            <div className="branding-pricing-header" style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  border: "2px solid #ffffff",
+                }}
+              >
+                Pricing Plans
+              </span>
+              <h2 style={{ color: "#ffffff", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: "800", fontFamily: '"Outfit", sans-serif' }}>
+                Transparent Content Writing Packages
+              </h2>
+              <p style={{ color: "#e2e8f0", fontSize: "16px" }}>
+                Select a content plan structured for your growth stage. Scale your brand authority with professional copy.
+              </p>
+            </div>
 
-          <div className="cw-pricing-grid">
-            {/* Plan 1 */}
-            <div className="cw-price-card">
-              <div className="cw-price-card-top">
-                <div className="cw-price-icon">🚀</div>
-                <h3 className="cw-price-name">Starter Content Plan</h3>
-                <p className="cw-price-desc">
-                  Perfect for growing blogs and local businesses looking to establish a basic search presence.
-                </p>
-                <div className="cw-price-amount">
-                  <span className="cw-currency">₹</span>
-                  <span className="cw-price-num">5,999</span>
-                  <span className="cw-price-period">/ Month</span>
+            <div className="branding-pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Starter Content Plan</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
+                    ₹5,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ Month</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>4 Blog Posts (1000+ words)</li>
+                    <li>Intent-Based Keyword Research</li>
+                    <li>Basic On-Page SEO &amp; Meta Tags</li>
+                    <li>Copyscape &amp; Grammarly Check</li>
+                    <li>1 Revision per Article</li>
+                  </ul>
                 </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
               </div>
-              <ul className="cw-price-features">
-                <li><span className="cw-check">✔</span> 4 High-Quality Blog Posts (1000+ words)</li>
-                <li><span className="cw-check">✔</span> Intent-Based Keyword Research</li>
-                <li><span className="cw-check">✔</span> Basic On-Page SEO & Meta Tags</li>
-                <li><span className="cw-check">✔</span> Plagiarism (Copyscape) & Grammarly Check</li>
-                <li><span className="cw-check">✔</span> 1 Round of Revision per Article</li>
-                <li><span className="cw-check">✔</span> Monthly Content Performance Report</li>
-              </ul>
-              <Link href="/contact" className="cw-price-btn cw-price-btn-outline">
-                Get Started
-              </Link>
-            </div>
 
-            {/* Plan 2 */}
-            <div className="cw-price-card cw-price-card-featured">
-              <span className="cw-price-popular-badge">🔥 Most Popular</span>
-              <div className="cw-price-card-top">
-                <div className="cw-price-icon">🏢</div>
-                <h3 className="cw-price-name">Authority Blog Plan</h3>
-                <p className="cw-price-desc">
-                  Ideal for businesses looking to aggressively build topical authority and drive organic traffic.
-                </p>
-                <div className="cw-price-amount">
-                  <span className="cw-currency">₹</span>
-                  <span className="cw-price-num">11,999</span>
-                  <span className="cw-price-period">/ Month</span>
+              <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>Recommended</span>
+                <div>
+                  <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Authority Blog Plan</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>
+                    ₹11,999 <span style={{ color: "#cbd5e1", fontSize: "1rem" }}>/ Month</span>
+                  </div>
+                  <ul className="branding-pricing-list" style={{ color: "#e2e8f0" }}>
+                    <li>8 Blog Posts (1200+ words)</li>
+                    <li>Semantic Topic Clustering</li>
+                    <li>Google E-E-A-T Compliance</li>
+                    <li>Internal Linking Strategy</li>
+                    <li>Unlimited Revisions</li>
+                  </ul>
                 </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#FD6A02", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Get Started
+                </Link>
               </div>
-              <ul className="cw-price-features">
-                <li><span className="cw-check">✔</span> 8 High-Quality Blog Posts (1200+ words)</li>
-                <li><span className="cw-check">✔</span> Semantic Topic Clustering & Mapping</li>
-                <li><span className="cw-check">✔</span> Core Keyword Target Alignment</li>
-                <li><span className="cw-check">✔</span> Google E-E-A-T Quality Compliance</li>
-                <li><span className="cw-check">✔</span> Advanced Internal Linking Strategy</li>
-                <li><span className="cw-check">✔</span> Premium Support & Unlimited Revisions</li>
-              </ul>
-              <Link href="/contact" className="cw-price-btn cw-price-btn-filled">
-                Get Started
-              </Link>
-            </div>
 
-            {/* Plan 3 */}
-            <div className="cw-price-card">
-              <div className="cw-price-card-top">
-                <div className="cw-price-icon">🛒</div>
-                <h3 className="cw-price-name">Custom Copywriting</h3>
-                <p className="cw-price-desc">
-                  Tailored services for landing page copy, product descriptions, pitch decks, and B2B case studies.
-                </p>
-                <div className="cw-price-amount">
-                  <span className="cw-price-num">Custom</span>
+              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
+                <div>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Custom Copywriting</h3>
+                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>Custom Pricing</div>
+                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
+                    <li>High-Converting Website Copy</li>
+                    <li>Sales Pages &amp; Email Funnels</li>
+                    <li>B2B Case Studies &amp; Whitepapers</li>
+                    <li>Product Description Bundles</li>
+                    <li>Dedicated Account Manager</li>
+                  </ul>
                 </div>
+                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
+                  Contact Us
+                </Link>
               </div>
-              <ul className="cw-price-features">
-                <li><span className="cw-check">✔</span> High-Converting Website Copy</li>
-                <li><span className="cw-check">✔</span> Sales Landing Pages & Email Funnels</li>
-                <li><span className="cw-check">✔</span> B2B Case Studies & Whitepapers</li>
-                <li><span className="cw-check">✔</span> Optimized Product Descriptions</li>
-                <li><span className="cw-check">✔</span> Dedicated Project Manager</li>
-                <li><span className="cw-check">✔</span> Tailored Content Calendar Strategy</li>
-              </ul>
-              <Link href="/contact" className="cw-price-btn cw-price-btn-outline">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-
-          {/* Trust Strip */}
-          <div className="cw-pricing-trust">
-            <div className="cw-trust-item">
-              <span>✍️</span> 100% Copyscape Passed
-            </div>
-            <div className="cw-trust-item">
-              <span>👥</span> Dedicated Niche Writers
-            </div>
-            <div className="cw-trust-item">
-              <span>🎯</span> SEO & GEO Optimized
-            </div>
-            <div className="cw-trust-item">
-              <span>🔄</span> Unlimited Revisions
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* FAQ section integrated beautifully inside pricing grid theme */}
-          <div className="cw-pricing-faq">
-            <h3 className="cw-pricing-faq-title">Frequently Asked Questions</h3>
-            <div className="cw-pricing-faq-grid">
-              <div className="cw-pricing-faq-item">
-                <h4>What is Content Writing?</h4>
-                <p>
-                  Think of content writing as the art of telling your brand's story. It's about planning, writing, and editing useful online materials—like blogs, articles, and website pages—that don't just sell, but actually help and educate your audience.
+      {/* AI Search Optimization Section (GEO Specific Content) - Dual Brand Color Redesign */}
+      <section
+        className="service-gradient-black-section"
+        style={{
+          background: "linear-gradient(135deg, #042544 0%, #021224 100%)",
+          padding: "85px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+        }}
+      >
+        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div
+            style={{
+              background: "rgba(255, 255, 255, 0.04)",
+              border: "2px solid #FD6A02",
+              borderRadius: "24px",
+              padding: "50px 40px",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "40px" }}>
+              <span
+                style={{
+                  display: "inline-block",
+                  background: "#FD6A02",
+                  color: "#ffffff",
+                  padding: "8px 24px",
+                  borderRadius: "50px",
+                  fontSize: "13px",
+                  fontWeight: "800",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                  marginBottom: "16px",
+                  boxShadow: "0 4px 15px rgba(253, 106, 2, 0.4)",
+                }}
+              >
+                AI Search Optimization (GEO)
+              </span>
+              <h2
+                style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', margin: "0 0 15px" }}
+              >
+                Quick Answers: Content Writing
+              </h2>
+              <p style={{ color: "#cbd5e1", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
+                Whether you're looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear breakdown of our content writing services.
+              </p>
+            </div>
+
+            <div className="geo-questions-grid">
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  What is Content Writing?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Content writing is the strategic practice of planning, drafting, and editing web copy—such as blogs, articles, and product descriptions—to inform audiences and boost organic search rankings.
                 </p>
               </div>
-              <div className="cw-pricing-faq-item">
-                <h4>Why is SEO Content writing important?</h4>
-                <p>
-                  It’s how your customers find you organically. When you write content around the exact words and questions your audience is searching for, search engines notice. It lifts your rankings, puts you on their radar, and makes you a trusted resource.
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  Why is SEO Copywriting important?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  SEO copywriting integrates targeted keywords into compelling narratives, helping search engines understand your page relevance while persuading visitors to take action.
                 </p>
               </div>
-              <div className="cw-pricing-faq-item">
-                <h4>What is E-E-A-T in content writing?</h4>
-                <p>
-                  It is Google's checklist for quality content: Experience, Expertise, Authoritativeness, and Trustworthiness. Basically, Google wants to know if you really know your stuff, if your facts are correct, and if readers can trust your advice.
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  What is Google E-E-A-T in content?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. It is Google's quality framework ensuring written content provides reliable facts.
                 </p>
               </div>
-              <div className="cw-pricing-faq-item">
-                <h4>How do you write content for AI search engines?</h4>
-                <p>
-                  AI bots don't search the web like humans do—they look for quick, direct, and structured facts. We write conversational headings and clear, straightforward answers that make it incredibly easy for AI systems (like ChatGPT and Gemini) to parse, understand, and credit your site.
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  How do you write copy for AI Search Engines (GEO)?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  GEO formats content with direct answers, conversational headings, and structured data, making it effortless for AI tools like ChatGPT to cite your brand.
                 </p>
               </div>
             </div>
@@ -1233,16 +1430,6 @@ const ContentWriting = () => {
         </div>
       </section>
       {/* Faq Section End */}
-
-      
-      {/* Local SEO Link Section */}
-      {/* <div className="container text-center my-5">
-        <p className="text-muted" style={{ fontSize: '14px' }}>
-          Serving clients locally in Bettiah and remotely across Bihar, India, and globally.
-        </p>
-      </div> */}
-
-      <FooterWithPopup />
     </>
   );
 };

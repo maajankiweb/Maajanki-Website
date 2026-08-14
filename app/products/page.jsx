@@ -12,6 +12,9 @@ export const metadata = {
     url: "https://maajankiwebtech.com/products",
     images: [{ url: "https://maajankiwebtech.com/assets/og-image.jpg" }],
   },
+  alternates: {
+    canonical: "https://maajankiwebtech.com/products",
+  },
 };
 
 export default function ProductsPage() {

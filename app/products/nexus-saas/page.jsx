@@ -12,6 +12,9 @@ export const metadata = {
     url: "https://maajankiwebtech.com/products/nexus-saas",
     images: [{ url: "https://maajankiwebtech.com/images/products/nexus-saas.webp" }],
   },
+  alternates: {
+    canonical: "https://maajankiwebtech.com/products/nexus-saas",
+  },
 };
 
 export default function NexusSaaSPage() {
