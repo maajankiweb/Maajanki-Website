@@ -25,13 +25,19 @@ const Navbar = () => {
   useEffect(() => {
     if (!navbarRef.current) return;
 
+    let rafId;
     const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
-        const height = entry.target.offsetHeight;
-        document.documentElement.style.setProperty(
-          "--navbar-height",
-          `${height}px`
-        );
+      if (!entries.length) return;
+      const entry = entries[0];
+      const height = entry.borderBoxSize?.[0]?.blockSize || entry.contentRect?.height;
+      if (height) {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(() => {
+          document.documentElement.style.setProperty(
+            "--navbar-height",
+            `${Math.round(height)}px`
+          );
+        });
       }
     });
 
@@ -39,6 +45,7 @@ const Navbar = () => {
 
     return () => {
       resizeObserver.disconnect();
+      if (rafId) cancelAnimationFrame(rafId);
     };
   }, []);
 

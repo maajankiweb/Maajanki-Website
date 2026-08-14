@@ -1,5 +1,6 @@
 export const dynamic = 'force-dynamic';
 
+import { ClerkProvider } from '@clerk/nextjs';
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
@@ -78,5 +79,12 @@ export default async function AdminLayout({ children }) {
     );
   }
 
-  return <AdminShell>{children}</AdminShell>;
+  return (
+    <ClerkProvider
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      telemetry={false}
+    >
+      <AdminShell>{children}</AdminShell>
+    </ClerkProvider>
+  );
 }

@@ -1,6 +1,6 @@
 export const dynamic = 'force-dynamic';
 
-import { SignIn } from '@clerk/nextjs';
+import { ClerkProvider, SignIn } from '@clerk/nextjs';
 import '../../styles/Auth3D.css';
 
 export const metadata = {
@@ -11,7 +11,11 @@ export const metadata = {
 
 export default function SignInPage() {
   return (
-    <main className="auth-3d-wrapper">
+    <ClerkProvider
+      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
+      telemetry={false}
+    >
+      <main className="auth-3d-wrapper">
       {/* Dynamic 3D Ambient Orbs */}
       <div className="auth-3d-orb auth-3d-orb-1" />
       <div className="auth-3d-orb auth-3d-orb-2" />
@@ -113,5 +117,6 @@ export default function SignInPage() {
         </div>
       </div>
     </main>
+    </ClerkProvider>
   );
 }

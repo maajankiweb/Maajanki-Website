@@ -1,10 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
 import './styles/Auth3D.css';
-import Script from 'next/script';
 import ClientProvider from '@/components/ClientProvider';
 import LayoutContent from '@/components/LayoutContent';
-import { ClerkProvider } from '@clerk/nextjs';
+import Analytics from '@/components/Analytics';
 import { Outfit, Poppins, Inter } from 'next/font/google';
 
 const outfit = Outfit({
@@ -331,17 +330,25 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${outfit.variable} ${poppins.variable} ${inter.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.clarity.ms" />
         <link
+          rel="preload"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          as="style"
+        />
+        <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
+          media="print"
+          onLoad="this.media='all'"
         />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -349,37 +356,11 @@ export default function RootLayout({ children }) {
       </head>
 
       <body suppressHydrationWarning>
-        <ClerkProvider
-          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-          telemetry={false}
-        >
-          <ClientProvider>
-            <LayoutContent>{children}</LayoutContent>
-          </ClientProvider>
-        </ClerkProvider>
+        <ClientProvider>
+          <LayoutContent>{children}</LayoutContent>
+        </ClientProvider>
 
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-CGPN1G03DW"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-CGPN1G03DW');
-          `}
-        </Script>
-
-        <Script id="microsoft-clarity" strategy="lazyOnload">
-          {`
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window,document,"clarity","script","u4zs398tm0");
-          `}
-        </Script>
+        <Analytics />
       </body>
     </html>
   );

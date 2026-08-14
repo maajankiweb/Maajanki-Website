@@ -18,13 +18,20 @@ const nextConfig = {
       },
     ],
   },
-  modularizeImports: {
-    'react-icons': {
-      transform: 'react-icons/{{member}}',
-    },
-    'lucide-react': {
-      transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
-    },
+  devIndicators: false,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
+  },
+  experimental: {
+    optimizePackageImports: [
+      'react-icons',
+      'lucide-react',
+      '@fortawesome/react-fontawesome',
+      'framer-motion',
+      'clsx',
+      'tailwind-merge',
+      'recharts'
+    ],
   },
   webpack: (config) => {
     config.infrastructureLogging = {
@@ -34,6 +41,15 @@ const nextConfig = {
   },
   async headers() {
     return [
+      {
+        source: '/:all*(svg|jpg|jpeg|png|webp|avif|gif|ico|woff|woff2|ttf|txt)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
       {
         source: '/_next/static/:path*',
         headers: [

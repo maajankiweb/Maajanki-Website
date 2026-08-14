@@ -18,16 +18,18 @@ const PromoPopup = () => {
   });
 
   useEffect(() => {
-    // Only run on the Homepage ('/')
-    if (pathname !== '/') {
+    // Only run on the Homepage ('/') and on Desktop devices (>= 768px)
+    if (pathname !== '/' || (typeof window !== 'undefined' && window.innerWidth < 768)) {
       setIsOpen(false);
       return;
     }
 
-    // Trigger on open & every page reload on homepage after 1.5s delay
+    // Trigger on open & every page reload on desktop homepage after 2.5s delay
     const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 1500);
+      if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+        setIsOpen(true);
+      }
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, [pathname]);
