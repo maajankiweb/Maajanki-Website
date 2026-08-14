@@ -2757,4 +2757,34 @@
   }
 }
 
+/* ================================
+   Global Pricing Featured Badge (Centered)
+================================= */
+.branding-pricing-card.featured {
+  position: relative !important;
+}
+
+.branding-pricing-badge {
+  position: absolute !important;
+  top: -14px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: #FD6A02 !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 12px !important;
+  padding: 5px 20px !important;
+  border-radius: 50px !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  box-shadow: 0 4px 15px rgba(253, 106, 2, 0.6) !important;
+  border: 2px solid #ffffff !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 10 !important;
+}
+
+
 

@@ -1,32 +1,35 @@
 /* 🌐 Web Development Section Styles */
 .webdev-section {
   background-color: #FD6A02;
-  padding         : 80px 0;
+  padding         : 80px 20px;
   text-align      : center;
-  color           : #000;
+  color           : #fff;
+  font-family     : "Poppins", sans-serif;
 }
 
 .webdev-title {
-  font-size    : 36px;
+  font-size    : 2.5rem;
   font-weight  : 700;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color        : #fff;
+  font-family  : "Outfit", sans-serif;
+  text-align   : center;
 }
 
 .webdev-subtitle {
-  font-size  : 18px;
-  color      : #fff;
-  max-width  : 700px;
-  margin     : 0 auto 50px;
-  line-height: 1.6;
-  text-align : center;
+  font-size    : 1.2rem;
+  color        : #fff;
+  max-width    : 800px;
+  margin       : 0 auto 50px;
+  line-height  : 1.6;
+  text-align   : center;
 }
 
 /* 🧩 Grid Layout */
 .webdev-grid {
   display              : grid;
   grid-template-columns: repeat(3, 1fr);
-  gap                  : 30px;
+  gap                  : 25px;
   max-width            : 1200px;
   margin               : 0 auto;
 }
@@ -34,73 +37,103 @@
 /* 💡 Service Box */
 .service-box {
   background-color: #fff;
-  border          : 2px solid #FD6A02;
-  border-radius   : 16px;
-  padding         : 40px 25px;
-  text-align      : center;
-  box-shadow      : 0 6px 15px rgba(0, 0, 0, 0.08);
+  color           : #333;
+  padding         : 40px 20px;
+  border-radius   : 15px;
   transition      : all 0.3s ease;
+  box-shadow      : 0 4px 10px rgba(0, 0, 0, 0.2);
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
+  text-align      : center;
+  min-height      : 280px;
+  cursor          : pointer;
 }
 
 .service-box:hover {
   background-color: #000;
   color           : #fff;
   transform       : translateY(-8px);
-}
-
-.service-box:hover .webdev-icon i {
-  color: #fff;
+  box-shadow      : 0 8px 18px rgba(0, 0, 0, 0.6);
 }
 
 .webdev-icon {
-  font-size    : 40px;
-  color        : #FD6A02;
-  margin-bottom: 20px;
-  transition   : color 0.3s ease;
+  font-size              : 2.8rem;
+  margin-bottom          : 20px;
+  background             : linear-gradient(135deg, #000, #FD6A02);
+  -webkit-background-clip: text;
+  background-clip        : text;
+  -webkit-text-fill-color: transparent;
+  transition             : all 0.3s ease;
+}
+
+.service-box:hover .webdev-icon {
+  background             : linear-gradient(135deg, #fff, #FD6A02);
+  -webkit-background-clip: text;
+  background-clip        : text;
+  -webkit-text-fill-color: transparent;
+  transform              : scale(1.1);
 }
 
 .webdev-heading {
-  font-size    : 22px;
-  font-weight  : 600;
-  margin-bottom: 12px;
-  color        : #000;
-  transition   : color 0.3s ease;
+  font-size    : 1.5rem;
+  font-weight  : 700;
+  margin-bottom: 15px;
+  color        : #0f172a !important;
+  text-align   : center;
 }
 
 .service-box:hover .webdev-heading {
-  color: #fff;
+  color: #ffffff !important;
 }
 
 .service-box p {
-  font-size  : 16px;
-  color      : #333;
+  font-size  : 1rem;
+  color      : #475569 !important;
   text-align : center;
   line-height: 1.6;
-  transition : color 0.3s ease;
 }
 
 .service-box:hover p {
-  color: #fff;
+  color: #ffffff !important;
 }
 
 /* 📱 Responsive Design */
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .webdev-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .webdev-title {
+    font-size: 2rem;
+  }
+
+  .webdev-heading {
+    font-size: 1.3rem;
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .webdev-grid {
     grid-template-columns: 1fr;
   }
 
   .webdev-title {
-    font-size: 28px;
+    font-size: 1.8rem;
   }
 
-  .webdev-subtitle {
-    font-size: 16px;
+  .service-box {
+    padding   : 25px 15px;
+    min-height: auto;
+  }
+
+  .webdev-heading {
+    font-size: 1.2rem;
+  }
+
+  .webdev-icon {
+    font-size: 2.3rem;
   }
 }
 

@@ -1,82 +1,139 @@
 .performance-marketing-section {
-  padding         : 60px 20px;
+  padding         : 80px 20px;
   background-color: #FD6A02;
   color           : #fff;
-  font-family     : Arial, sans-serif;
+  font-family     : "Poppins", sans-serif;
   text-align      : center;
 }
 
 .pm-title {
-  font-size    : 28px;
+  font-size    : 2.5rem;
+  font-weight  : 700;
+  margin-bottom: 20px;
   color        : #fff;
-  /* Pink-red heading */
-  margin-bottom: 15px;
+  font-family  : "Outfit", sans-serif;
 }
 
 .pm-subtitle {
-  font-size  : 16px;
-  max-width  : 750px;
-  margin     : 0 auto 40px auto;
-  line-height: 1.6;
-  color      : #fff;
-  text-align : center;
+  font-size    : 1.2rem;
+  margin-bottom: 50px;
+  color        : #fff;
+  max-width    : 800px;
+  margin-left  : auto;
+  margin-right : auto;
+  line-height  : 1.6;
+  text-align   : center;
 }
 
 /* Grid layout: 3 cards per row on desktop */
 .pm-grid {
   display              : grid;
   grid-template-columns: repeat(3, 1fr);
-  gap                  : 20px;
-  justify-items        : center;
-  align-items          : stretch;
+  gap                  : 25px;
+  max-width            : 1200px;
+  margin               : 0 auto;
 }
 
 /* Individual card */
 .pm-box {
-  background-color: #111;
-  padding         : 25px;
-  border-radius   : 12px;
+  background-color: #fff;
+  color           : #333;
+  padding         : 40px 20px;
+  border-radius   : 15px;
+  transition      : all 0.3s ease;
+  box-shadow      : 0 4px 10px rgba(0, 0, 0, 0.2);
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
   text-align      : center;
-  transition      : transform 0.3s, box-shadow 0.3s;
+  min-height      : 280px;
 }
 
 .pm-box:hover {
-  transform : translateY(-8px);
-  box-shadow: 0 8px 20px rgb(255, 255, 255);
+  background-color: #000;
+  color           : #fff;
+  transform       : translateY(-8px);
+  box-shadow      : 0 8px 18px rgba(0, 0, 0, 0.6);
 }
 
 .pm-icon {
-  font-size    : 36px;
-  color        : #FD6A02;
-  margin-bottom: 15px;
-  text-align   : center;
+  font-size              : 2.8rem;
+  margin-bottom          : 20px;
+  background             : linear-gradient(135deg, #000, #FD6A02);
+  -webkit-background-clip: text;
+  background-clip        : text;
+  -webkit-text-fill-color: transparent;
+  transition             : all 0.3s ease;
+  display                : inline-block;
+}
+
+.pm-box:hover .pm-icon {
+  background             : linear-gradient(135deg, #fff, #FD6A02);
+  -webkit-background-clip: text;
+  background-clip        : text;
+  -webkit-text-fill-color: transparent;
+  transform              : scale(1.1);
 }
 
 .pm-heading {
-  font-size    : 20px;
-  margin-bottom: 10px;
-  color        : #FD6A02;
+  font-size    : 1.5rem;
+  font-weight  : 700;
+  margin-bottom: 15px;
+  color        : #0f172a !important;
   text-align   : center;
 }
 
+.pm-box:hover .pm-heading {
+  color: #ffffff !important;
+}
+
 .pm-box p {
-  font-size  : 14px;
+  font-size  : 1rem;
   line-height: 1.6;
-  color      : #fff;
+  color      : #475569 !important;
   text-align : center;
 }
 
-/* Responsive: 2 cards per row for tablets */
-@media (max-width: 1024px) {
+.pm-box:hover p {
+  color: #ffffff !important;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
   .pm-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .pm-title {
+    font-size: 2rem;
+  }
+
+  .pm-heading {
+    font-size: 1.3rem;
+  }
 }
 
-/* Responsive: 1 card per row for mobile */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .pm-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pm-title {
+    font-size: 1.8rem;
+  }
+
+  .pm-box {
+    padding   : 25px 15px;
+    min-height: auto;
+  }
+
+  .pm-heading {
+    font-size: 1.2rem;
+  }
+
+  .pm-icon {
+    font-size: 2.3rem;
   }
 }
 

@@ -19,8 +19,9 @@ const GraphicDesign = () => {
     <>
       {/* SEO & GEO Optimization Metadata */}
       {
-/* JSON-LD Schema */
-}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+        /* JSON-LD Schema */
+      }<script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: `
         {
           "@context": "https://schema.org",
           "@type": "ProfessionalService",
@@ -46,7 +47,7 @@ const GraphicDesign = () => {
 
       {/* Banner Section */}
       <section className="custom-banner">
-        <Image priority src="/images/pages/main-services-pages/graphic-design-banner-image-Maajanki-Web-Tech.webp" alt="Graphic Design Services by MaaJanki Web Tech" title="Professional Graphic Design Services for Branding & Marketing | MaaJanki Web Tech" width="1280" height="720"/>
+        <Image priority src="/images/pages/main-services-pages/graphic-design-banner-image-Maajanki-Web-Tech.webp" alt="Graphic Design Services by MaaJanki Web Tech" title="Professional Graphic Design Services for Branding & Marketing | MaaJanki Web Tech" width="1280" height="720" />
 
         <div className="banner-overlay">
           <div className="banner-content">
@@ -192,7 +193,7 @@ const GraphicDesign = () => {
                       alt="Logo design and branding assets by MaaJanki Web Tech"
                       title="Logo and Brand Identity Design"
                       loading="lazy"
-                       width={150} height={50} />
+                      width={150} height={50} />
                   </div>
                 </div>
               </div>
@@ -234,7 +235,7 @@ const GraphicDesign = () => {
                       alt="Social media graphic design posts"
                       title="Social Media Creative Design"
                       loading="lazy"
-                       width={600} height={400} />
+                      width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -276,7 +277,7 @@ const GraphicDesign = () => {
                       alt="Brochures, flyers and print marketing materials"
                       title="Print & Marketing Material Design"
                       loading="lazy"
-                       width={600} height={400} />
+                      width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -318,7 +319,7 @@ const GraphicDesign = () => {
                       alt="Infographics and visual data diagrams"
                       title="Custom Infographics & Visual Data"
                       loading="lazy"
-                       width={600} height={400} />
+                      width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -360,7 +361,7 @@ const GraphicDesign = () => {
                       alt="Motion graphics and animation explainer layouts"
                       title="Motion Graphics & Video Creatives"
                       loading="lazy"
-                       width={600} height={400} />
+                      width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -402,7 +403,7 @@ const GraphicDesign = () => {
                       alt="Packaging and labeling design mockups"
                       title="Packaging & Product Label Graphics"
                       loading="lazy"
-                       width={600} height={400} />
+                      width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -444,7 +445,7 @@ const GraphicDesign = () => {
                       alt="Rebranding and visual identity refresh concepts"
                       title="Rebranding & Visual Identity Refresh"
                       loading="lazy"
-                       width={600} height={400} />
+                      width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -486,7 +487,7 @@ const GraphicDesign = () => {
                       alt="GEO optimization for image search and AI indexing"
                       title="GEO Optimization for Image Data"
                       loading="lazy"
-                       width={600} height={400} />
+                      width={600} height={400} />
                   </div>
                 </div>
               </div>
@@ -516,7 +517,6 @@ const GraphicDesign = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid Section */}
       <section className="graphic-section">
         <h2 className="graphic-title">Our Graphic Design Solutions</h2>
@@ -526,12 +526,18 @@ const GraphicDesign = () => {
 
         <div className="graphic-grid">
           {[
-            { icon: "fas fa-pen-nib", title: "Logo & Brand Design", desc: "Custom vector logo design reflecting your corporate personality and values." },
-            { icon: "fas fa-image", title: "Social Media Graphics", desc: "Engaging post designs, carousels, and templates for social platforms." },
-            { icon: "fas fa-file-alt", title: "Print Layout Design", desc: "Professional flyers, brochures, packaging, and collaterals ready for print." },
-            { icon: "fas fa-pen-fancy", title: "UI Mockup Designs", desc: "Modern visual layouts and interface prototypes for web platforms." },
-            { icon: "fas fa-palette", title: "Custom Illustrations", desc: "Vector drawings and icons tailored to support your brand story." },
-            { icon: "fas fa-video", title: "Motion Graphics", desc: "Animated banners and promo video templates for digital campaigns." }
+            { icon: "fas fa-pen-nib", title: "Logo & Brand Design", desc: "Custom vector logos, wordmarks, and brand identity kits built to reflect your business personality." },
+            { icon: "fas fa-layer-group", title: "Social Media Graphics", desc: "Eye-catching post designs, story templates, carousels, and reels covers for Instagram, Facebook & LinkedIn." },
+            { icon: "fas fa-print", title: "Print Layout Design", desc: "Print-ready brochures, flyers, leaflets, business cards, and roll-up banners for offline marketing." },
+            { icon: "fas fa-desktop", title: "UI Mockup Design", desc: "High-fidelity website and app interface prototypes designed for user clarity and conversion." },
+            { icon: "fas fa-paint-brush", title: "Custom Illustrations", desc: "Hand-crafted vector illustrations, icons, mascots, and character art tailored to your brand story." },
+            { icon: "fas fa-film", title: "Motion Graphics", desc: "Animated intros, explainer video visuals, ad creatives, and GIF banners for digital campaigns." },
+            { icon: "fas fa-box-open", title: "Packaging & Label Design", desc: "Product box designs, sticker labels, pouches, and packaging mockups that stand out on shelves." },
+            { icon: "fas fa-chart-pie", title: "Infographic Design", desc: "Data-rich visual summaries, process flowcharts, and comparison graphics for blogs and presentations." },
+            { icon: "fas fa-bullhorn", title: "Ad Banner & Campaign Design", desc: "Google Display Ads, Meta Ad creatives, and promotional banners designed for high click-through rates." },
+            { icon: "fas fa-id-badge", title: "Brand Identity Kit", desc: "Complete brand guidelines covering logo usage, color palette, typography, and visual standards." },
+            { icon: "fas fa-file-powerpoint", title: "Presentation Design", desc: "Corporate pitch decks, investor presentations, and proposal templates with premium visual design." },
+            { icon: "fas fa-sync-alt", title: "Rebranding & Visual Refresh", desc: "Modernize outdated logos, update color systems, and refresh your entire visual identity for today's market." },
           ].map((service, index) => (
             <div className="graphic-box" key={index}>
               <div className="graphic-icon"><i className={service.icon}></i></div>
@@ -806,7 +812,7 @@ const GraphicDesign = () => {
               </div>
 
               <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
-                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>Recommended</span>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>⭐ Recommended</span>
                 <div>
                   <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Corporate Identity Kit</h3>
                   <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>

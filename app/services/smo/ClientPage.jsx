@@ -664,52 +664,133 @@ const SMO = () => {
         </div>
       </section>
 
-      {/* Brochure Section */}
-      <section className="graphic-landing-section">
-        <div className="graphic-container">
-          <div className="graphic-left">
-            <h2 className="br-graphic-heading">
+      {/* Brochure Section - Matched Reference UI Design */}
+      <section
+        className="graphic-landing-section"
+        style={{
+          background: "radial-gradient(circle at 10% 20%, rgba(253, 106, 2, 0.25) 0%, transparent 40%), radial-gradient(circle at 90% 80%, rgba(4, 37, 68, 0.4) 0%, transparent 50%), linear-gradient(135deg, #042544 0%, #150902 45%, #FD6A02 100%)",
+          padding: "90px 20px",
+          position: "relative",
+          overflow: "hidden",
+          borderTop: "3px solid #FD6A02",
+          borderBottom: "3px solid #042544",
+        }}
+      >
+        <div className="graphic-container" style={{ maxWidth: "1240px", margin: "0 auto", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "40px" }}>
+          {/* Left Column: Heading, Subtext & Brochure Download Card */}
+          <div className="graphic-left" style={{ flex: "1 1 500px" }}>
+            <h2 className="br-graphic-heading" style={{ color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', fontSize: "clamp(2rem, 3.5vw, 2.5rem)", marginBottom: "15px", lineHeight: "1.2" }}>
               Download Our Social Media Optimization Strategy Guide
             </h2>
-            <p className="graphic-subtext">
-              Partner with MaaJanki Web Tech to build organic brand authority.
-              We implement strategic content plans to grow engagement across
-              Facebook, Instagram, and LinkedIn.
+            <p className="graphic-subtext" style={{ color: "#cbd5e1", fontSize: "15px", lineHeight: "1.6", marginBottom: "30px" }}>
+              Partner with MaaJanki Web Tech to build organic brand authority. We implement strategic content plans to grow engagement across Facebook, Instagram, and LinkedIn.
             </p>
 
-            <div className="graphic-brochure-box">
-              <h3 className="graphic-brochure-title">
+            <div className="graphic-brochure-box" style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.12)", borderRadius: "18px", padding: "30px", boxShadow: "0 15px 35px rgba(0, 0, 0, 0.4)" }}>
+              <h3 className="graphic-brochure-title" style={{ color: "#ffffff", fontSize: "1.35rem", fontWeight: "700", marginBottom: "10px" }}>
                 Download Our SMO Strategy Outline
               </h3>
-              <p className="graphic-brochure-desc">
-                Learn about our profile optimizations, image post guidelines,
-                and target hashtag workflows in our SMO brochure.
+              <p className="graphic-brochure-desc" style={{ color: "#94a3b8", fontSize: "14px", marginBottom: "20px", lineHeight: "1.5" }}>
+                Learn about our profile optimizations, image post guidelines, and target hashtag workflows in our SMO brochure.
               </p>
 
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Social Profile Audits
-                and Optimization Checklist
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#FD6A02", fontSize: "1rem" }}></i> Social Profile Audits and Optimization Checklist
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Custom Graphic Post
-                Formats
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#FD6A02", fontSize: "1rem" }}></i> Custom Graphic Post Formats
               </div>
-              <div className="graphic-feature">
-                <i className="fas fa-check-circle"></i> Community Management
-                Workflows
+              <div className="graphic-feature" style={{ color: "#ffffff", fontWeight: "600", fontSize: "14px", marginBottom: "25px", display: "flex", alignItems: "center", gap: "10px" }}>
+                <i className="fas fa-check-circle" style={{ color: "#FD6A02", fontSize: "1rem" }}></i> Community Management Workflows
               </div>
 
               <button
                 className="graphic-brochure-btn"
                 onClick={openBrochurePopup}
+                style={{ background: "linear-gradient(135deg, #7e22ce, #FD6A02)", color: "#ffffff", border: "none", borderRadius: "30px", padding: "12px 28px", fontWeight: "700", fontSize: "14px", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: "8px", boxShadow: "0 8px 20px rgba(126, 34, 206, 0.4)", transition: "all 0.3s ease" }}
               >
                 ⬇️ Download SMO Brochure
               </button>
+
+              {isPopupOpen && (
+                <div
+                  className="brochure-popup-overlay"
+                  onClick={closeBrochurePopup}
+                >
+                  <div
+                    className="brochure-popup"
+                    onClick={(e) => e.stopPropagation()}
+                    style={{ background: "#042544", border: "2px solid #FD6A02" }}
+                  >
+                    <span
+                      className="brochure-close"
+                      onClick={closeBrochurePopup}
+                    >
+                      &times;
+                    </span>
+                    <form
+                      action="https://getform.io/f/bvrmgenb"
+                      method="POST"
+                      id="brochure-form"
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        const form = e.target;
+                        fetch(form.action, {
+                          method: "POST",
+                          body: new FormData(form),
+                          headers: { Accept: "application/json" },
+                        }).then((res) => {
+                          if (res.ok) {
+                            alert("Thank you! Your brochure is downloading.");
+                            setIsPopupOpen(false);
+                            window.open(
+                              "/brochures/MaaJanki-Web-Tech-Branding-Brochure.pdf",
+                              "_blank"
+                            );
+                          } else {
+                            alert("Submission error. Please try again.");
+                          }
+                        });
+                      }}
+                    >
+                      <h3 className="brochure-title" style={{ color: "#ffffff" }}>
+                        Download SMO Strategy Guide
+                      </h3>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name *"
+                        required
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email *"
+                        required
+                      />
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number *"
+                        required
+                      />
+                      <button
+                        type="submit"
+                        className="brochure-submit-btn"
+                        style={{ background: "#FD6A02", color: "#ffffff", borderRadius: "25px" }}
+                      >
+                        Download Now
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
-          <div className="graphic-right">
-            <div className="smo-brochure-grid">
+          {/* Right Column: 2-Column Grid of 8 Visual Service Cards */}
+          <div className="graphic-right" style={{ flex: "1 1 550px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
               {[
                 { icon: "fab fa-facebook-f", title: "Facebook Setup" },
                 { icon: "fab fa-instagram", title: "Instagram Growth" },
@@ -717,17 +798,29 @@ const SMO = () => {
                 { icon: "fab fa-linkedin-in", title: "LinkedIn Optimization" },
                 { icon: "fab fa-youtube", title: "YouTube Optimization" },
                 { icon: "fas fa-bullhorn", title: "Organic Branding" },
-                {
-                  icon: "fas fa-chart-line",
-                  title: "Monthly Analytics Reports",
-                },
+                { icon: "fas fa-chart-line", title: "Monthly Analytics Reports" },
                 { icon: "fas fa-rocket", title: "Campaign Refinements" },
-              ].map((service, index) => (
-                <div className="graphic-service-card" key={index}>
-                  <div className="smo-brochure-icon">
-                    <i className={service.icon}></i>
-                  </div>
-                  <div className="graphic-service-title">{service.title}</div>
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    background: "rgba(255, 255, 255, 0.04)",
+                    border: "1px solid rgba(255, 255, 255, 0.08)",
+                    borderRadius: "14px",
+                    padding: "24px 16px",
+                    textAlign: "center",
+                    transition: "all 0.3s ease",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "12px",
+                    minHeight: "115px",
+                  }}
+                  className="branding-brochure-service-card"
+                >
+                  <i className={item.icon} style={{ fontSize: "1.8rem", color: "#c084fc" }}></i>
+                  <span style={{ color: "#ffffff", fontWeight: "700", fontSize: "13.5px", lineHeight: "1.3" }}>{item.title}</span>
                 </div>
               ))}
             </div>
@@ -865,7 +958,7 @@ const SMO = () => {
               </div>
 
               <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
-                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>Recommended</span>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>⭐ Recommended</span>
                 <div>
                   <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Brand Growth</h3>
                   <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>

@@ -599,33 +599,48 @@ const UIUXDesign = () => {
           {[
             {
               icon: "fas fa-search",
-              heading: "User Research",
-              text: "We analyze user habits and expectations to plan a strategic UX blueprint.",
+              heading: "User Research & Personas",
+              text: "We analyze user habits, pain points, and journey expectations to plan a strategic UX blueprint.",
             },
             {
               icon: "fas fa-draw-polygon",
               heading: "Layout Wireframing",
-              text: "We design structured, low-fidelity wireframes detailing content hierarchy.",
+              text: "We design structured, low-fidelity wireframes detailing content hierarchy and page structure.",
             },
             {
               icon: "fas fa-object-group",
               heading: "Clickable Prototypes",
-              text: "We build interactive Figma prototypes to test user flows before coding.",
+              text: "We build interactive Figma prototypes to simulate realistic user journeys before development.",
             },
             {
               icon: "fas fa-paint-brush",
               heading: "Visual UI Design",
-              text: "We design custom display graphics, colors, and typography matching style guides.",
+              text: "We craft custom display themes, color palettes, and typography matching brand identity guides.",
             },
             {
               icon: "fas fa-route",
-              heading: "User Journey Strategy",
-              text: "We define conversion pathways to guide visitors toward key actions.",
+              heading: "User Journey & Funnels",
+              text: "We define conversion-focused user flows and micro-interactions to guide visitors toward key actions.",
             },
             {
               icon: "fas fa-vial",
-              heading: "Usability Audits",
-              text: "We test interface accessibility and resolve navigation friction.",
+              heading: "Usability Audits & Testing",
+              text: "We audit interface accessibility, conduct heuristic tests, and eliminate navigation friction.",
+            },
+            {
+              icon: "fas fa-cubes",
+              heading: "Design Systems & UI Kits",
+              text: "We build scalable component libraries with atomic design principles for rapid development.",
+            },
+            {
+              icon: "fas fa-mobile-alt",
+              heading: "Mobile App UI Design",
+              text: "We create native iOS and Android interface experiences with fluid gestures and responsive layouts.",
+            },
+            {
+              icon: "fas fa-tachometer-alt",
+              heading: "SaaS & Dashboard UI",
+              text: "We design data-dense analytics dashboards, admin portals, and CRM layouts with intuitive controls.",
             },
           ].map((item, index) => (
             <div key={index} className="uiux-service-box">
@@ -1020,7 +1035,7 @@ const UIUXDesign = () => {
               </div>
 
               <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
-                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>Recommended</span>
+                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>⭐ Recommended</span>
                 <div>
                   <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Web &amp; App UI Kit</h3>
                   <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>

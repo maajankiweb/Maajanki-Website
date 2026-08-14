@@ -2,37 +2,41 @@
    Product Listing Section
 ================================= */
 .product-section {
-  padding: 80px 0;
-  background: linear-gradient(135deg, #000, #FD6A02);
-  text-align: center;
-  font-family: "Poppins", sans-serif;
+  padding         : 80px 20px;
+  background-color: #FD6A02;
+  color           : #fff;
+  text-align      : center;
+  font-family     : "Poppins", sans-serif;
 }
 
 .product-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #fff;
+  font-size    : 2.5rem;
+  font-weight  : 700;
   margin-bottom: 20px;
+  color        : #fff;
+  font-family  : "Outfit", sans-serif;
 }
 
 .product-subtitle {
-  font-size: 1rem;
-  color: #fff;
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto 50px;
-  line-height: 1.6;
+  font-size    : 1.2rem;
+  margin-bottom: 50px;
+  color        : #fff;
+  max-width    : 800px;
+  margin-left  : auto;
+  margin-right : auto;
+  line-height  : 1.6;
+  text-align   : center;
 }
 
 /* ================================
    Grid Layout
 ================================= */
 .product-grid {
-  display: grid;
+  display              : grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap                  : 25px;
+  max-width            : 1200px;
+  margin               : 0 auto;
 }
 
 /* ================================
@@ -40,54 +44,65 @@
 ================================= */
 .product-box {
   background-color: #fff;
-  border: 2px solid #FD6A02;
-  border-radius: 16px;
-  padding: 30px 25px;
-  text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  cursor: pointer;
+  color           : #333;
+  padding         : 40px 20px;
+  border-radius   : 15px;
+  transition      : all 0.3s ease;
+  box-shadow      : 0 4px 10px rgba(0, 0, 0, 0.2);
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
+  text-align      : center;
+  min-height      : 280px;
+  cursor          : pointer;
 }
 
 .product-box:hover {
   background-color: #000;
-  color: #fff;
-  transform: translateY(-6px);
+  color           : #fff;
+  transform       : translateY(-8px);
+  box-shadow      : 0 8px 18px rgba(0, 0, 0, 0.6);
 }
 
 .product-icon {
-  font-size: 40px;
-  color: #FD6A02;
-  margin-bottom: 20px;
-  transition: color 0.3s ease;
+  font-size              : 2.8rem;
+  margin-bottom          : 20px;
+  background             : linear-gradient(135deg, #000, #FD6A02);
+  -webkit-background-clip: text;
+  background-clip        : text;
+  -webkit-text-fill-color: transparent;
+  transition             : all 0.3s ease;
 }
 
 .product-box:hover .product-icon {
-  color: #fff;
+  background             : linear-gradient(135deg, #fff, #FD6A02);
+  -webkit-background-clip: text;
+  background-clip        : text;
+  -webkit-text-fill-color: transparent;
+  transform              : scale(1.1);
 }
 
 .product-heading {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #000;
-  transition: color 0.3s ease;
+  font-size    : 1.5rem;
+  font-weight  : 700;
+  margin-bottom: 15px;
+  color        : #0f172a !important;
 }
 
 .product-box:hover .product-heading {
-  color: #fff;
+  color: #ffffff !important;
 }
 
 .product-box p {
-  font-size: 1rem;
-  color: #333;
-  text-align: center;
+  font-size  : 1rem;
   line-height: 1.6;
-  transition: color 0.3s ease;
+  color      : #475569 !important;
+  text-align : center;
 }
 
 .product-box:hover p {
-  color: #fff;
+  color: #ffffff !important;
 }
 
 /* ================================
@@ -96,29 +111,37 @@
 @media (max-width: 992px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-}
-
-@media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0 20px;
   }
 
-  .product-box {
-    padding: 25px 15px;
+  .product-title {
+    font-size: 2rem;
+  }
+
+  .product-heading {
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
   .product-title {
     font-size: 1.8rem;
   }
 
-  .product-subtitle {
-    font-size: 0.95rem;
+  .product-box {
+    padding   : 25px 15px;
+    min-height: auto;
+  }
+
+  .product-heading {
+    font-size: 1.2rem;
+  }
+
+  .product-icon {
+    font-size: 2.3rem;
   }
 }
 
@@ -248,3 +271,184 @@
     font-size: 1.8rem;
   }
 }
+
+/* ================================
+   Structured Execution / Workflow Section
+================================= */
+.jobready-workflow {
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #042544 0%, #021224 50%, #000000 100%);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #FD6A02;
+  border-bottom: 3px solid #FD6A02;
+  font-family: "Poppins", sans-serif;
+}
+
+.jobready-workflow::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(253, 106, 2, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.jobready-heading-small {
+  display: inline-block;
+  background: #FD6A02;
+  color: #ffffff;
+  padding: 6px 20px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(253, 106, 2, 0.3);
+}
+
+.jobready-heading-main {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 50px;
+  letter-spacing: -0.5px;
+}
+
+.jobready-steps {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.jobready-step {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(253, 106, 2, 0.35);
+  border-radius: 18px;
+  padding: 30px 15px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.jobready-step:hover {
+  transform: translateY(-10px);
+  background: rgba(253, 106, 2, 0.12);
+  border-color: #FD6A02;
+  box-shadow: 0 15px 35px rgba(253, 106, 2, 0.4);
+}
+
+.jobready-step-num {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: rgba(253, 106, 2, 0.8);
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 1px;
+}
+
+.jobready-circle {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid #FD6A02;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: radial-gradient(circle, #042544 30%, #000 100%);
+  box-shadow: 0 0 20px rgba(253, 106, 2, 0.3);
+  transition: all 0.3s ease;
+}
+
+.jobready-step:hover .jobready-circle {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(253, 106, 2, 0.6);
+  border-color: #ffffff;
+}
+
+.jobready-circle::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  border-top: 3px solid #FD6A02;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-left: 3px solid transparent;
+  animation: spinArc 3.5s linear infinite;
+}
+
+.jobready-circle i {
+  font-size: 1.6rem;
+  color: #FD6A02;
+  transition: all 0.3s ease;
+}
+
+.jobready-step:hover .jobready-circle i {
+  color: #ffffff;
+}
+
+.jobready-step p {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+  font-family: "Poppins", sans-serif;
+}
+
+.jobready-step:hover p {
+  color: #FD6A02;
+}
+
+@keyframes spinArc {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 1200px) {
+  .jobready-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jobready-steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .jobready-heading-main {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .jobready-steps {
+    grid-template-columns: 1fr;
+  }
+}
+

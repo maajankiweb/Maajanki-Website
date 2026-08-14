@@ -1,6 +1,6 @@
 'use client';
 
-import React from "react";
+import React, { useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,6 +10,10 @@ import "@/app/styles/ProductsListing.css";
 import FooterWithPopup from '@/components/FooterWithPopup';
 
 const ProductsListing = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const openBrochurePopup = () => setIsPopupOpen(true);
+  const closeBrochurePopup = () => setIsPopupOpen(false);
+
   return (
     <>
       {/* SEO & GEO Optimization Metadata */}
@@ -543,6 +547,7 @@ const ProductsListing = () => {
       </section>
 
       {/* Services Grid Section */}
+      {/* Services Grid Section */}
       <section className="product-section">
         <h2 className="product-title">Our eCommerce Cataloging Solutions</h2>
         <p className="product-subtitle">
@@ -600,7 +605,47 @@ const ProductsListing = () => {
             </div>
             <h3 className="product-heading">Price Configurations</h3>
             <p>
-              We configure competitive pricing details and discounts on your catalog items to maximize conversions.
+              We configure competitive pricing details, tiered discounts, and promotional deals on your catalog items.
+            </p>
+          </div>
+
+          <div className="product-box">
+            <div className="product-icon">
+              <i className="fas fa-cubes"></i>
+            </div>
+            <h3 className="product-heading">Variation & Matrix Setup</h3>
+            <p>
+              We create multi-attribute parent-child variations for sizes, colors, styles, and pack counts.
+            </p>
+          </div>
+
+          <div className="product-box">
+            <div className="product-icon">
+              <i className="fas fa-sync-alt"></i>
+            </div>
+            <h3 className="product-heading">Multi-Marketplace Sync</h3>
+            <p>
+              We synchronize products across Amazon, Flipkart, Shopify, and eBay with centralized feed management.
+            </p>
+          </div>
+
+          <div className="product-box">
+            <div className="product-icon">
+              <i className="fas fa-sitemap"></i>
+            </div>
+            <h3 className="product-heading">Category & Taxonomy Mapping</h3>
+            <p>
+              We assign correct browse nodes, sub-categories, and item types so buyers find your items instantly.
+            </p>
+          </div>
+
+          <div className="product-box">
+            <div className="product-icon">
+              <i className="fas fa-boxes"></i>
+            </div>
+            <h3 className="product-heading">Inventory & Stock Feeds</h3>
+            <p>
+              We automate inventory updates, barcode (UPC/EAN/SKU) assignment, and bulk CSV catalog imports.
             </p>
           </div>
         </div>
@@ -719,7 +764,7 @@ const ProductsListing = () => {
               { src: "/images/icons/shopify.png", label: "Shopify" },
               { src: "/images/icons/wordpress.png", label: "WooCommerce" },
               { src: "/images/icons/bigcommerce.png", label: "BigCommerce" },
-              { src: "https://img.icons8.com/color/96/wix.png", label: "Wix eCommerce" },
+              { src: "/images/icons/wix.png", label: "Wix eCommerce" },
               { src: "/images/icons/shopping-cart.png", label: "Ecwid" },
               { src: "/images/icons/box.png", label: "Sellbrite" },
               { src: "/images/icons/split-transaction.png", label: "CedCommerce" },
@@ -817,15 +862,39 @@ const ProductsListing = () => {
 
       {/* Process Section */}
       <section className="jobready-workflow">
-        <h3 className="jobready-heading-small">Structured Execution</h3>
+        <span className="jobready-heading-small">Structured Execution</span>
         <h2 className="jobready-heading-main">Our Product Listing Workflow</h2>
         <div className="jobready-steps">
-          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-search"></i></div><p>1. Keyword Research</p></div>
-          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-pen"></i></div><p>2. Title &amp; Copy Writing</p></div>
-          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-image"></i></div><p>3. Image Optimization</p></div>
-          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-file-csv"></i></div><p>4. CSV Sheet Prep</p></div>
-          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-upload"></i></div><p>5. Bulk Upload</p></div>
-          <div className="jobready-step"><div className="jobready-circle"><i className="fas fa-chart-bar"></i></div><p>6. Rank Monitoring</p></div>
+          <div className="jobready-step">
+            <span className="jobready-step-num">01</span>
+            <div className="jobready-circle"><i className="fas fa-search"></i></div>
+            <p>1. Keyword Research</p>
+          </div>
+          <div className="jobready-step">
+            <span className="jobready-step-num">02</span>
+            <div className="jobready-circle"><i className="fas fa-pen-nib"></i></div>
+            <p>2. Title &amp; Copy Writing</p>
+          </div>
+          <div className="jobready-step">
+            <span className="jobready-step-num">03</span>
+            <div className="jobready-circle"><i className="fas fa-images"></i></div>
+            <p>3. Image Optimization</p>
+          </div>
+          <div className="jobready-step">
+            <span className="jobready-step-num">04</span>
+            <div className="jobready-circle"><i className="fas fa-file-csv"></i></div>
+            <p>4. CSV Sheet Prep</p>
+          </div>
+          <div className="jobready-step">
+            <span className="jobready-step-num">05</span>
+            <div className="jobready-circle"><i className="fas fa-cloud-upload-alt"></i></div>
+            <p>5. Bulk Upload</p>
+          </div>
+          <div className="jobready-step">
+            <span className="jobready-step-num">06</span>
+            <div className="jobready-circle"><i className="fas fa-chart-line"></i></div>
+            <p>6. Rank Monitoring</p>
+          </div>
         </div>
       </section>
 

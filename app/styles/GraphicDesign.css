@@ -4,24 +4,28 @@
 .graphic-section {
   padding         : 80px 20px;
   background-color: #FD6A02;
+  color           : #fff;
   text-align      : center;
-  font-family     : 'Arial', sans-serif;
+  font-family     : "Poppins", sans-serif;
 }
 
 .graphic-title {
-  font-size    : 2rem;
+  font-size    : 2.5rem;
   font-weight  : 700;
+  margin-bottom: 20px;
   color        : #fff;
-  /* white text */
-  margin-bottom: 15px;
+  font-family  : "Outfit", sans-serif;
 }
 
 .graphic-subtitle {
-  font-size  : 1rem;
-  color      : #fff;
-  max-width  : 700px;
-  margin     : 0 auto 50px auto;
-  line-height: 1.6;
+  font-size    : 1.2rem;
+  margin-bottom: 50px;
+  color        : #fff;
+  max-width    : 800px;
+  margin-left  : auto;
+  margin-right : auto;
+  line-height  : 1.6;
+  text-align   : center;
 }
 
 /* ==========================
@@ -30,7 +34,7 @@
 .graphic-grid {
   display              : grid;
   grid-template-columns: repeat(3, 1fr);
-  gap                  : 20px;
+  gap                  : 25px;
   max-width            : 1200px;
   margin               : 0 auto;
 }
@@ -39,37 +43,64 @@
    Graphic Box
 ========================== */
 .graphic-box {
-  background-color: #000;
-  padding         : 30px 20px;
+  background-color: #fff;
+  color           : #333;
+  padding         : 40px 20px;
   border-radius   : 15px;
-  box-shadow      : 0 10px 25px rgba(0, 0, 0, 0.3);
-  transition      : transform 0.3s ease, box-shadow 0.3s ease;
+  transition      : all 0.3s ease;
+  box-shadow      : 0 4px 10px rgba(0, 0, 0, 0.2);
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  justify-content : center;
+  text-align      : center;
+  min-height      : 280px;
 }
 
 .graphic-box:hover {
-  transform : translateY(-10px);
-  box-shadow: 0 15px 35px rgb(255, 255, 255);
+  background-color: #000;
+  color           : #fff;
+  transform       : translateY(-8px);
+  box-shadow      : 0 8px 18px rgba(0, 0, 0, 0.6);
 }
 
 .graphic-icon {
-  font-size    : 3rem;
-  color        : #fff;
-  /* white icons for contrast */
-  margin-bottom: 20px;
+  font-size              : 2.8rem;
+  margin-bottom          : 20px;
+  background             : linear-gradient(135deg, #000, #FD6A02);
+  -webkit-background-clip: text;
+  background-clip        : text;
+  -webkit-text-fill-color: transparent;
+  transition             : all 0.3s ease;
+}
+
+.graphic-box:hover .graphic-icon {
+  background             : linear-gradient(135deg, #fff, #FD6A02);
+  -webkit-background-clip: text;
+  background-clip        : text;
+  -webkit-text-fill-color: transparent;
+  transform              : scale(1.1);
 }
 
 .graphic-heading {
-  font-size    : 1.25rem;
-  font-weight  : 600;
-  color        : #fff;
-  margin-bottom: 10px;
+  font-size    : 1.5rem;
+  font-weight  : 700;
+  margin-bottom: 15px;
+  color        : #0f172a !important;
+}
+
+.graphic-box:hover .graphic-heading {
+  color: #ffffff !important;
 }
 
 .graphic-box p {
-  font-size  : 0.95rem;
-  color      : #fff;
-  line-height: 1.5;
-  text-align : center;
+  font-size  : 1rem;
+  line-height: 1.6;
+  color      : #475569 !important;
+}
+
+.graphic-box:hover p {
+  color: #ffffff !important;
 }
 
 /* ==========================
@@ -78,24 +109,37 @@
 @media (max-width: 992px) {
   .graphic-grid {
     grid-template-columns: repeat(2, 1fr);
-    /* 2 cards per row on tablets */
-    gap                  : 20px;
   }
 
-  .graphic-box {
-    padding: 25px 15px;
-  }
-
-  .graphic-icon {
-    font-size: 2.5rem;
+  .graphic-title {
+    font-size: 2rem;
   }
 
   .graphic-heading {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .graphic-grid {
+    grid-template-columns: 1fr;
   }
 
-  .graphic-box p {
-    font-size: 0.9rem;
+  .graphic-title {
+    font-size: 1.8rem;
+  }
+
+  .graphic-box {
+    padding   : 25px 15px;
+    min-height: auto;
+  }
+
+  .graphic-heading {
+    font-size: 1.2rem;
+  }
+
+  .graphic-icon {
+    font-size: 2.3rem;
   }
 }
 
