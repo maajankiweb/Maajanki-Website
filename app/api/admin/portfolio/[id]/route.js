@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import connectToDatabase from '@/lib/db';
+import { connectDB } from '@/lib/db';
 import Portfolio from '@/lib/models/Portfolio';
 
 export async function PATCH(req, { params }) {
   try {
-    await connectToDatabase();
+    await connectDB();
     const { id } = await params;
     const body = await req.json();
 
@@ -22,7 +22,7 @@ export async function PATCH(req, { params }) {
 
 export async function DELETE(req, { params }) {
   try {
-    await connectToDatabase();
+    await connectDB();
     const { id } = await params;
 
     const deletedProject = await Portfolio.findByIdAndDelete(id);

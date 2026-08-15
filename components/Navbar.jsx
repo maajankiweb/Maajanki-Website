@@ -127,9 +127,15 @@ const Navbar = () => {
 
         <div className="nav-right">
           {/* Mobile Menu Toggle */}
-          <div className="menu-toggle" onClick={() => setMenuOpen(!isMenuOpen)}>
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+            onClick={() => setMenuOpen(!isMenuOpen)}
+          >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
-          </div>
+          </button>
 
           <ul className={`nav-links ${isMenuOpen ? "show" : ""}`}>
             <li>

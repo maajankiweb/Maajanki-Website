@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import connectToDatabase from '@/lib/db';
+import { connectDB } from '@/lib/db';
 import Portfolio from '@/lib/models/Portfolio';
 
 export async function GET() {
   try {
-    await connectToDatabase();
+    await connectDB();
     const projects = await Portfolio.find({}).sort({ order: 1, createdAt: -1 }).lean();
     return NextResponse.json({ success: true, projects });
   } catch (error) {
@@ -15,7 +15,7 @@ export async function GET() {
 
 export async function POST(req) {
   try {
-    await connectToDatabase();
+    await connectDB();
     const body = await req.json();
     const { title, category, description, fullImage, heroImage, link, imgTitle, featured, order } = body;
 

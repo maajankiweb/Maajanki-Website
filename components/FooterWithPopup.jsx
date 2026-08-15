@@ -138,9 +138,11 @@ const FooterWithPopup = () => {
             <div className="mj-modal-header">
               <h4 className="mj-modal-title">Let&apos;s Work Together</h4>
               <button
+                type="button"
                 className="mj-modal-close"
                 onClick={closeModal}
                 disabled={loading}
+                aria-label="Close modal"
               >
                 ✕
               </button>

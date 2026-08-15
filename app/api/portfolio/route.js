@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import connectToDatabase from '@/lib/db';
+import { connectDB } from '@/lib/db';
 import Portfolio from '@/lib/models/Portfolio';
 
 const INITIAL_PROJECTS = [
@@ -106,7 +106,7 @@ const INITIAL_PROJECTS = [
 
 export async function GET() {
   try {
-    await connectToDatabase();
+    await connectDB();
     let projects = await Portfolio.find({}).sort({ order: 1, createdAt: -1 }).lean();
 
     // Auto seed initial 9 projects if database collection is empty

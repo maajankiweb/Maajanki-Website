@@ -24,7 +24,12 @@ export default clerkMiddleware(async (auth, req) => {
         const authHeader = req.headers.get('authorization');
         const secretKey = process.env.ADMIN_SECRET_KEY;
         if (authHeader && secretKey && authHeader.replace('Bearer ', '').trim() === secretKey) {
-          return;
+          const res = NextResponse.next();
+          res.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0');
+          res.headers.set('Pragma', 'no-cache');
+          res.headers.set('Expires', '0');
+          res.headers.set('Surrogate-Control', 'no-store');
+          return res;
         }
         return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
       }
@@ -32,15 +37,21 @@ export default clerkMiddleware(async (auth, req) => {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 });
     }
   }
+
+  const response = NextResponse.next();
+  // Enforce zero-cache anti-stale headers across browser and proxy CDN
+  response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0');
+  response.headers.set('Pragma', 'no-cache');
+  response.headers.set('Expires', '0');
+  response.headers.set('Surrogate-Control', 'no-store');
+  return response;
 });
 
 export const config = {
   matcher: [
-    // Skip Next.js internals and all static files, unless found in search params
+    // Skip Next.js internals and static assets
     '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
-    // Always run for Clerk's auto-proxy path
     '/__clerk/:path*',
-    // Always run for API routes
     '/(api|trpc)(.*)',
   ],
 };

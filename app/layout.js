@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import './globals.css';
 import './styles/Auth3D.css';
 import ClientProvider from '@/components/ClientProvider';
@@ -56,6 +57,12 @@ export const metadata = {
     locale: 'en_IN',
     images: [
       {
+        url: 'https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp',
+        width: 1200,
+        height: 630,
+        alt: 'MaaJanki Web Tech Logo',
+      },
+      {
         url: 'https://maajankiwebtech.com/assets/og-image.jpg',
         width: 1200,
         height: 630,
@@ -67,7 +74,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'MaaJanki Web Tech | Digital Growth Partner',
     description: 'Professional web development and digital marketing agency in India.',
-    images: ['https://maajankiwebtech.com/assets/twitter-card.jpg'],
+    images: ['https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp'],
     creator: '@maajankiweb',
   },
   other: {
@@ -90,7 +97,7 @@ export default function RootLayout({ children }) {
         "@id": "https://maajankiwebtech.com/#organization",
         "name": "MaaJanki Web Tech",
         "url": "https://maajankiwebtech.com/",
-        "logo": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png",
+        "logo": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
         "description": "MaaJanki Web Tech is a professional web development and digital marketing agency in India, specializing in SEO, branding, performance marketing, and custom web solutions.",
         "contactPoint": {
           "@type": "ContactPoint",
@@ -134,7 +141,7 @@ export default function RootLayout({ children }) {
         "@id": "https://maajankiwebtech.com/#localbusiness",
         "@type": "LocalBusiness",
         "name": "MaaJanki Web Tech",
-        "image": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png",
+        "image": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
         "url": "https://maajankiwebtech.com/",
         "telephone": "+91-9006543913",
         "description": "Professional website development and digital marketing agency in Bagaha, Bihar.",

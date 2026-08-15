@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import {
   FolderKanban,
   Plus,
@@ -288,9 +289,12 @@ export default function PortfolioManager() {
                     {/* Homepage Image */}
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2">
-                        <img
+                        <Image
+                          unoptimized
                           src={proj.fullImage}
                           alt={proj.title}
+                          width={64}
+                          height={48}
                           className="w-16 h-12 object-cover rounded-lg border border-slate-700 bg-slate-950"
                         />
                         <div>
@@ -303,9 +307,12 @@ export default function PortfolioManager() {
                     {/* /portfolio Hero Image */}
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2">
-                        <img
+                        <Image
+                          unoptimized
                           src={proj.heroImage}
                           alt={proj.title}
+                          width={64}
+                          height={48}
                           className="w-16 h-12 object-cover rounded-lg border border-slate-700 bg-slate-950"
                         />
                         <div>
@@ -474,9 +481,12 @@ export default function PortfolioManager() {
                     </label>
                   </div>
                   {formData.fullImage && (
-                    <img
+                    <Image
+                      unoptimized
                       src={formData.fullImage}
                       alt="Full Page Preview"
+                      width={120}
+                      height={64}
                       className="mt-2 h-16 rounded-lg border border-slate-800 object-cover"
                     />
                   )}
@@ -511,9 +521,12 @@ export default function PortfolioManager() {
                     </label>
                   </div>
                   {formData.heroImage && (
-                    <img
+                    <Image
+                      unoptimized
                       src={formData.heroImage}
                       alt="Hero Image Preview"
+                      width={120}
+                      height={64}
                       className="mt-2 h-16 rounded-lg border border-slate-800 object-cover"
                     />
                   )}

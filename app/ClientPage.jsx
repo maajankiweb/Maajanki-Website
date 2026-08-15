@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import LogoLoop from '@/components/LogoLoop/LogoLoop';
 import Magnet from '@/components/Magnet/Magnet';
+import SpecularButton from '@/components/SpecularButton';
 import '@/app/styles/Home.css';
 
 // Import icons from react-icons
@@ -360,45 +361,97 @@ function Home() {
     <>
       {/* SEO META TAGS */}
 
-      
 
-      {/* Hero Section */}
-      <section className="custom-banner">
-        <Image
-          priority
-          fetchPriority="high"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
-          quality={80}
-          src="/images/pages/main-services-pages/Home-page-image-Maajanki.webp"
-          width={1200}
-          height={675}
-          alt="Maajanki Web Tech – Custom Brand Identity and Design Solutions"
-          title="Maajanki Web Tech – Website Development & Digital Marketing Agency in India"
-          data-no-retina=""
-        />
 
-        <div className="banner-overlay">
-          <div className="banner-content">
-            <h1>
-              Global Web Development & Digital Marketing Agency | MaaJanki Web Tech
-            </h1>
-            <div className="aeo-definition-box">
-              <p suppressHydrationWarning>
-                MaaJanki Web Tech refers to the premier digital marketing and website development agency in Bihar, India, providing data-driven search engine optimization (SEO), social media optimization (SMO), custom web application design, performance marketing, and digital branding solutions to scale businesses globally.
-              </p>
+      {/* Premium Hero Section with Brand Gradient */}
+      <section className="mj-hero-section">
+        <div className="hero-background-effects">
+          <div className="hero-glow-orange"></div>
+          <div className="hero-glow-navy"></div>
+        </div>
+
+        <div className="container hero-inner-container">
+          <div className="row align-items-center">
+            {/* Left Content Column */}
+            <div className="col-lg-7 hero-left-content">
+              {/* Main Headline */}
+              <h1 className="hero-title">
+                Global Web Development &amp; Digital Marketing Agency | MaaJanki Web Tech
+              </h1>
+
+              {/* Description Subtext */}
+              <div className="aeo-definition-box">
+                <p className="hero-desc" suppressHydrationWarning>
+                  MaaJanki Web Tech refers to the premier digital marketing and website development agency in Bihar, India, providing data-driven search engine optimization (SEO), social media optimization (SMO), custom web application design, performance marketing, and digital branding solutions to scale businesses globally.
+                </p>
+              </div>
+
+              {/* Action Buttons with Interactive WebGL Specular Reflection */}
+              <div className="hero-cta-buttons">
+                <Magnet padding={30} magnetStrength={10}>
+                  <SpecularButton
+                    as="a"
+                    href="/about"
+                    size="lg"
+                    radius={28}
+                    lineColor="#fd6a02"
+                    baseColor="#042544"
+                    textColor="#ffffff"
+                    intensity={1.2}
+                    shineSize={14}
+                    shineFade={35}
+                    speed={0.4}
+                    followMouse
+                    proximity={300}
+                    className="hero-specular-btn-primary"
+                  >
+                    Know More <span className="btn-arrow">→</span>
+                  </SpecularButton>
+                </Magnet>
+
+                <Magnet padding={30} magnetStrength={10}>
+                  <SpecularButton
+                    as="a"
+                    href="/contact"
+                    size="lg"
+                    radius={28}
+                    lineColor="#ffffff"
+                    baseColor="#0f172a"
+                    textColor="#ffffff"
+                    tint="#ffffff"
+                    tintOpacity={0.06}
+                    blur={10}
+                    intensity={1}
+                    shineSize={10}
+                    shineFade={40}
+                    speed={0.3}
+                    followMouse
+                    proximity={250}
+                    className="hero-specular-btn-secondary"
+                  >
+                    Contact Us
+                  </SpecularButton>
+                </Magnet>
+              </div>
             </div>
 
-            <div className="banner-buttons">
-              <Magnet padding={30} magnetStrength={10}>
-                <Link href="/about" className="btn2">
-                  Know More
-                </Link>
-              </Magnet>
-              <Magnet padding={30} magnetStrength={10}>
-                <Link href="/contact" className="btn1">
-                  Contact Us
-                </Link>
-              </Magnet>
+            {/* Right Image Column */}
+            <div className="col-lg-5 hero-right-image text-center">
+              <div className="founder-hero-wrapper">
+                {/* Founder Image */}
+                <div className="founder-portrait-container">
+                  <Image
+                    priority
+                    fetchPriority="high"
+                    src="/images/founder.png"
+                    width={480}
+                    height={580}
+                    alt="Founder &amp; Lead Architect – MaaJanki Web Tech"
+                    title="Founder &amp; Lead Architect – MaaJanki Web Tech"
+                    className="founder-portrait-img"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -419,7 +472,7 @@ function Home() {
                     title="Website Optimization & SEO Services by MaaJanki Web Tech"
                     width="65"
                     height="65"
-                   />
+                  />
                   <span className="number-bg">01</span>
                 </div>
                 <div className="promo-info">
@@ -447,7 +500,7 @@ function Home() {
                     title="Increase Website Traffic with SEO & Digital Marketing"
                     width="65"
                     height="65"
-                   />
+                  />
                   <span className="number-bg">02</span>
                 </div>
                 <div className="promo-info">
@@ -475,7 +528,7 @@ function Home() {
                     title="Digital Marketing Services by MaaJanki Web Tech"
                     width="65"
                     height="65"
-                   />
+                  />
                   <span className="number-bg">03</span>
                 </div>
                 <div className="promo-info">
@@ -516,7 +569,7 @@ function Home() {
                     height="1080"
                     alt="Website Development and Digital Marketing Agency in India"
                     title="Maajanki Web Tech – Website Development & Digital Marketing Agency in India"
-                   />
+                  />
                 </div>
                 <div className="decorative-elements"></div>
               </div>
@@ -641,7 +694,7 @@ function Home() {
                   alt="Digital Marketing Agency Services in India"
                   title="Maajanki Web Tech – Website Development & Digital Marketing Agency in India"
                   className="img-fluid about-single-img"
-                 />
+                />
               </div>
             </div>
           </div>
@@ -668,7 +721,7 @@ function Home() {
                     height="1080"
                     alt="Website Development and Digital Marketing Services"
                     title="Website Development & Digital Marketing Services in India"
-                   />
+                  />
                 </div>
                 <div className="decorative-elements"></div>
               </div>
@@ -799,7 +852,7 @@ function Home() {
             alt="Website audit illustration"
             title="MaaJanki Web Tech – Website Development & Digital Marketing Agency in India"
             loading="lazy"
-           />
+          />
 
           <Image
             src="/images/pages/main-services-pages/cta-1-mike.svg"
@@ -809,7 +862,7 @@ function Home() {
             alt="Digital marketing audit illustration"
             title="Free Digital Marketing Audit by MaaJanki Web Tech"
             loading="lazy"
-           />
+          />
         </div>
       </section>
       {/* Call to Action Section End */}
@@ -993,7 +1046,7 @@ function Home() {
                     title="InvoBill – GST Invoicing & Billing Software by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
-                   width={600} height={400} />
+                    width={600} height={400} />
                 </div>
                 <h3
                   className="text-xl font-semibold mb-3"
@@ -1034,7 +1087,7 @@ function Home() {
                     title="WaCRM – WhatsApp Business API CRM by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
-                   width={600} height={400} />
+                    width={600} height={400} />
                 </div>
                 <h3
                   className="text-xl font-semibold mb-3"
@@ -1075,7 +1128,7 @@ function Home() {
                     title="DukanDost Pro – Retail Business Operating System by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
-                   width={600} height={400} />
+                    width={600} height={400} />
                 </div>
                 <h3
                   className="text-xl font-semibold mb-3"
@@ -1116,7 +1169,7 @@ function Home() {
                     title="Nexus SaaS – AI Local Reputation Management System by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
-                   width={600} height={400} />
+                    width={600} height={400} />
                 </div>
                 <h3
                   className="text-xl font-semibold mb-3"
@@ -1157,7 +1210,7 @@ function Home() {
                     title="Tailwind Templates – Landing Page Bundle by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
-                   width={600} height={400} />
+                    width={600} height={400} />
                 </div>
                 <h3
                   className="text-xl font-semibold mb-3"
@@ -1195,7 +1248,7 @@ function Home() {
                     title="Elementor Pro – WordPress Website Builder Solutions by MaaJanki Web Tech"
                     style={{ maxWidth: "100%", borderRadius: "8px" }}
                     loading="lazy"
-                   width={600} height={400} />
+                    width={600} height={400} />
                 </div>
                 <h3
                   className="text-xl font-semibold mb-3"
@@ -1243,70 +1296,70 @@ function Home() {
             {(livePortfolio.length > 0
               ? livePortfolio
               : [
-                  {
-                    title: "Apex Tutorial Bettiah",
-                    img: "/images/project/Apex Tutorial Full Page.jpg",
-                    link: "https://apex-tutorial-gray.vercel.app/",
-                    imgTitle:
-                      "Apex Tutorial Bettiah Science Coaching Website – MaaJanki Web Tech",
-                  },
-                  {
-                    title: "InvoBill – Free GST Billing",
-                    img: "/images/project/Invobill Full Page.jpg",
-                    link: "https://invobill.in/",
-                    imgTitle:
-                      "InvoBill Free GST Invoice Generator Web App – MaaJanki Web Tech",
-                  },
-                  {
-                    title: "MaaJanki Digital Blog",
-                    img: "/images/project/Maajanki Blog Full Page.jpg",
-                    link: "https://blog.maajankiwebtech.com/",
-                    imgTitle:
-                      "MaaJanki Web Tech Tech & Digital Growth Blog",
-                  },
-                  {
-                    title: "Style Beauty Studio",
-                    img: "/images/project/Beauty Studio Full Page.jpg",
-                    link: "https://style-beauty-studio.vercel.app/",
-                    imgTitle:
-                      "Style Beauty Studio Luxury Bridal Makeup Website",
-                  },
-                  {
-                    title: "Shivam Kumar Portfolio",
-                    img: "/images/project/Shivam Full Page.jpg",
-                    link: "https://shivam-kumar-portfolio-snowy.vercel.app/",
-                    imgTitle:
-                      "Shivam Kumar HR Specialist & MBA Portfolio Website",
-                  },
-                  {
-                    title: "HareRam Ray Portfolio",
-                    img: "/images/project/Hareram Full Page.jpg",
-                    link: "https://hareram-ray-portfolio.vercel.app/",
-                    imgTitle:
-                      "HareRam Ray MBA HR Portfolio Website",
-                  },
-                  {
-                    title: "Avnish Kumar Portfolio",
-                    img: "/images/project/Avnish Full Page.jpg",
-                    link: "https://avnish-kumar-portfolio.vercel.app/",
-                    imgTitle:
-                      "Avnish Kumar Ray Business Analytics Portfolio",
-                  },
-                  {
-                    title: "Saurav Kumar Portfolio",
-                    img: "/images/project/Saurav Full page.jpg",
-                    link: "https://saurav-kumar-portfolio-eight.vercel.app/",
-                    imgTitle:
-                      "Saurav Kumar Finance & Marketing Portfolio",
-                  },
-                  {
-                    title: "S Yasmin Fitness Coaching",
-                    img: "/images/project/Fitnesh Full Page.jpg",
-                    link: "https://fitness-coach-three-lemon.vercel.app/",
-                    imgTitle:
-                      "S Yasmin Fitness Coaching Platform",
-                  },
-                ]
+                {
+                  title: "Apex Tutorial Bettiah",
+                  img: "/images/project/Apex Tutorial Full Page.jpg",
+                  link: "https://apex-tutorial-gray.vercel.app/",
+                  imgTitle:
+                    "Apex Tutorial Bettiah Science Coaching Website – MaaJanki Web Tech",
+                },
+                {
+                  title: "InvoBill – Free GST Billing",
+                  img: "/images/project/Invobill Full Page.jpg",
+                  link: "https://invobill.in/",
+                  imgTitle:
+                    "InvoBill Free GST Invoice Generator Web App – MaaJanki Web Tech",
+                },
+                {
+                  title: "MaaJanki Digital Blog",
+                  img: "/images/project/Maajanki Blog Full Page.jpg",
+                  link: "https://blog.maajankiwebtech.com/",
+                  imgTitle:
+                    "MaaJanki Web Tech Tech & Digital Growth Blog",
+                },
+                {
+                  title: "Style Beauty Studio",
+                  img: "/images/project/Beauty Studio Full Page.jpg",
+                  link: "https://style-beauty-studio.vercel.app/",
+                  imgTitle:
+                    "Style Beauty Studio Luxury Bridal Makeup Website",
+                },
+                {
+                  title: "Shivam Kumar Portfolio",
+                  img: "/images/project/Shivam Full Page.jpg",
+                  link: "https://shivam-kumar-portfolio-snowy.vercel.app/",
+                  imgTitle:
+                    "Shivam Kumar HR Specialist & MBA Portfolio Website",
+                },
+                {
+                  title: "HareRam Ray Portfolio",
+                  img: "/images/project/Hareram Full Page.jpg",
+                  link: "https://hareram-ray-portfolio.vercel.app/",
+                  imgTitle:
+                    "HareRam Ray MBA HR Portfolio Website",
+                },
+                {
+                  title: "Avnish Kumar Portfolio",
+                  img: "/images/project/Avnish Full Page.jpg",
+                  link: "https://avnish-kumar-portfolio.vercel.app/",
+                  imgTitle:
+                    "Avnish Kumar Ray Business Analytics Portfolio",
+                },
+                {
+                  title: "Saurav Kumar Portfolio",
+                  img: "/images/project/Saurav Full page.jpg",
+                  link: "https://saurav-kumar-portfolio-eight.vercel.app/",
+                  imgTitle:
+                    "Saurav Kumar Finance & Marketing Portfolio",
+                },
+                {
+                  title: "S Yasmin Fitness Coaching",
+                  img: "/images/project/Fitnesh Full Page.jpg",
+                  link: "https://fitness-coach-three-lemon.vercel.app/",
+                  imgTitle:
+                    "S Yasmin Fitness Coaching Platform",
+                },
+              ]
             ).map((project, index) => (
               <div key={index} className="preview-column">
                 <a
@@ -1556,7 +1609,7 @@ function Home() {
                   alt="Why choose MaaJanki Web Tech for website development and digital marketing"
                   title="Why Choose MaaJanki Web Tech – Website Development & Digital Marketing Experts"
                   className="img-fluid"
-                 />
+                />
               </div>
             </div>
           </div>
@@ -1590,7 +1643,7 @@ function Home() {
                       width="280"
                       height="260"
                       loading="lazy"
-                     />
+                    />
                   </span>
                 </div>
                 <h3>Analysis</h3>
@@ -1613,7 +1666,7 @@ function Home() {
                       width="280"
                       height="260"
                       loading="lazy"
-                     />
+                    />
                   </span>
                 </div>
               </div>
@@ -1632,7 +1685,7 @@ function Home() {
                       width="280"
                       height="260"
                       loading="lazy"
-                     />
+                    />
                   </span>
                 </div>
                 <h3>Refine</h3>
@@ -1655,7 +1708,7 @@ function Home() {
                       width="280"
                       height="260"
                       loading="lazy"
-                     />
+                    />
                   </span>
                 </div>
               </div>
@@ -1745,7 +1798,7 @@ function Home() {
                       height="75"
                       className="mx-auto d-block"
                       loading="lazy"
-                     />
+                    />
                   </div>
                   <h3 className="promo-title">{item.title.split("|")[0]}</h3>
                   {item.desc ? (

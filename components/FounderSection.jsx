@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import "./FounderSection.css";
-import { FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
+import { FaLinkedin, FaXTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa6";
 
 export default function FounderSection() {
   const Founder = {
@@ -91,7 +91,7 @@ export default function FounderSection() {
               }
             }}
           >
-            <i className="fab fa-whatsapp"></i> Contact Founder
+            <FaWhatsapp style={{ marginRight: "8px", verticalAlign: "middle" }} /> Contact Founder
           </a>
         </div>
       </div>
