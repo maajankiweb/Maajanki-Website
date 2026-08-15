@@ -11,104 +11,101 @@ const PortfolioSection = () => {
 
   const sampleProjects = [
     {
-      title: "Creative Agency Website",
-      category: "Web Development",
-      description:
-        "A responsive, modern website for a creative agency built using HTML, CSS and JavaScript.",
-      image: "/images/project/home-boxed.jpg",
-      altText: "Creative agency website preview",
-      link: "https://example.com/creative-agency",
-    },
-    {
-      title: "E-Commerce Platform",
-      category: "E-Commerce",
-      description:
-        "A fully functional online store with shopping cart and payment gateway integration.",
-      image: "/images/project/E-Commerce.webp",
-      altText: "E-commerce platform website",
-      link: "https://blog.maajankiwebtech.com",
-    },
-    {
-      title: "Food Restaurant Website",
-      category: "Web Development",
-      featured: true,
-      description:
-        "A responsive website for a food restaurant with menu, booking, and delivery features.",
-      image: "/images/project/Food-Delivery-App-UI.webp",
-      altText: "Food Delivery Website",
-      link: "https://example.com/food-restaurant",
-    },
-    {
-      title: "Job Posting Website",
-      category: "Web Development",
-      featured: true,
-      description:
-        "A platform for posting jobs and managing applications efficiently.",
-      image: "/images/project/jon-posting-website.jpg",
-      altText: "Job Posting Website",
-      link: "https://example.com/job-posting",
-    },
-    {
-      title: "Gym Trainer Website",
-      category: "Web Development",
-      description:
-        "A responsive website for gym trainers showcasing services, schedules, and client testimonials.",
-      image: "/images/project/GYM-Trainer.jpg",
-      altText: "Gym Trainer Website",
-      link: "https://example.com/gym-trainer",
-    },
-    {
-      title: "Design Studio Graphics Website",
-      category: "Web Design",
-      description:
-        "A portfolio website for a design studio displaying graphic projects and services.",
-      image: "/images/project/Design-Studio-Creative-Graphic.jpg",
-      altText: "Design Studio Website",
-      link: "https://example.com/design-studio",
-    },
-    {
-      title: "Free AI Research Website",
-      category: "Technology / AI",
-      description:
-        "A website dedicated to sharing free AI research papers, tools, and tutorials.",
-      image: "/images/project/Free-AI-Research.jpg",
-      altText: "AI Research Website",
-      link: "https://example.com/ai-research",
-    },
-    {
-      title: "LMS Portal Website",
+      title: "Apex Tutorial Bettiah",
       category: "Education",
-      description:
-        "A learning management system (LMS) portal for online courses, quizzes, and student management.",
-      image: "/images/project/lms-portal.webp",
-      altText: "LMS website design",
-      link: "https://example.com/lms-portal",
-    },
-    {
-      title: "AI Voices Platform",
-      category: "Technology / AI",
       featured: true,
       description:
-        "An AI-powered voice generation platform with multi-language support and real-time audio preview.",
-      image: "/images/project/AI-Voices-Home-Page.webp",
-      altText: "AI Voices Platform",
-      link: "https://example.com/ai-voices",
+        "Premier Bihar Board (BSEB) 11th & 12th Science coaching portal in Bettiah with Smart Board classrooms and course programs.",
+      image: "/images/project/Apex Tutorial Full Page.jpg",
+      altText: "Apex Tutorial Bettiah Science Coaching Website",
+      link: "https://apex-tutorial-gray.vercel.app/",
     },
     {
-      title: "Digital Products Hub",
-      category: "E-Commerce",
+      title: "InvoBill – Free GST Invoice Generator",
+      category: "SaaS / Application",
+      featured: true,
       description:
-        "A digital products marketplace where creators can sell eBooks, templates, courses, and software.",
-      image: "/images/project/Digital-Products-Hub-Home-Page.webp",
-      altText: "Digital Products Hub",
-      link: "https://example.com/digital-products",
+        "Instant 100% free GST billing & invoice generator for Indian small businesses with auto CGST/SGST/IGST calculations and PDF export.",
+      image: "/images/project/Invobill Full Page.jpg",
+      altText: "InvoBill Free GST Invoice Generator India",
+      link: "https://invobill.in/",
+    },
+    {
+      title: "MaaJanki Web Tech Digital Blog",
+      category: "Technology / AI",
+      featured: false,
+      description:
+        "Practical insights on SEO strategies, web development frameworks, digital marketing automation, and business growth.",
+      image: "/images/project/Maajanki Blog Full Page.jpg",
+      altText: "MaaJanki Web Tech Digital Growth & SEO Blog",
+      link: "https://blog.maajankiwebtech.com/",
+    },
+    {
+      title: "Style Beauty Studio",
+      category: "Web Design",
+      featured: true,
+      description:
+        "Luxury bridal makeup and beauty salon website showcasing bridal packages, hair styling gallery, and online appointments.",
+      image: "/images/project/Beauty Studio Full Page.jpg",
+      altText: "Style Beauty Studio Luxury Bridal Salon Website",
+      link: "https://style-beauty-studio.vercel.app/",
+    },
+    {
+      title: "Shivam Kumar Portfolio",
+      category: "Web Development",
+      featured: false,
+      description:
+        "Personal portfolio for an MBA student and HR Specialist featuring recruitment services, education roadmap, and skills timeline.",
+      image: "/images/project/Shivam Full Page.jpg",
+      altText: "Shivam Kumar HR Specialist Portfolio Website",
+      link: "https://shivam-kumar-portfolio-snowy.vercel.app/",
+    },
+    {
+      title: "HareRam Ray Portfolio",
+      category: "Web Development",
+      featured: false,
+      description:
+        "Professional portfolio for an MBA candidate specializing in HR & Marketing, featuring AI recruitment research & leadership.",
+      image: "/images/project/Hareram Full Page.jpg",
+      altText: "HareRam Ray MBA HR Portfolio Website",
+      link: "https://hareram-ray-portfolio.vercel.app/",
+    },
+    {
+      title: "Avnish Kumar Ray Portfolio",
+      category: "Web Development",
+      featured: false,
+      description:
+        "Portfolio for an MBA candidate specializing in Business Analytics & Finance, highlighting MS Excel & R data modeling.",
+      image: "/images/project/Avnish Full Page.jpg",
+      altText: "Avnish Kumar Ray Business Analytics Portfolio Website",
+      link: "https://avnish-kumar-portfolio.vercel.app/",
+    },
+    {
+      title: "Saurav Kumar Portfolio",
+      category: "Web Development",
+      featured: false,
+      description:
+        "Modern portfolio for an MBA student in Finance & Marketing, featuring retail operations experience and financial analysis.",
+      image: "/images/project/Saurav Full page.jpg",
+      altText: "Saurav Kumar Finance Marketing Portfolio Website",
+      link: "https://saurav-kumar-portfolio-eight.vercel.app/",
+    },
+    {
+      title: "S Yasmin Fitness Coaching",
+      category: "Web Design",
+      featured: true,
+      description:
+        "Dynamic health and fitness coaching website featuring custom workout programs, transformation plans, and client booking.",
+      image: "/images/project/Fitnesh Full Page.jpg",
+      altText: "S Yasmin Fitness Coaching Platform",
+      link: "https://fitness-coach-three-lemon.vercel.app/",
     },
   ];
 
   const categories = [
     "All",
     "Web Development",
-    "E-Commerce",
+    "SaaS / Application",
     "Web Design",
     "Technology / AI",
     "Education",
@@ -296,12 +293,15 @@ const PortfolioSection = () => {
                     <h3 className="pf-overlay-title">{item.title}</h3>
                     <p className="pf-overlay-desc">{item.description}</p>
                     {item.link && (
-                      <button
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="view-project-btn"
-                        onClick={() => window.open(item.link, "_blank")}
+                        style={{ textDecoration: "none" }}
                       >
                         View Project <i className="fas fa-arrow-right"></i>
-                      </button>
+                      </a>
                     )}
                   </div>
                 </div>

@@ -23,14 +23,23 @@ const ALLOWED_ADMIN_PATTERNS = process.env.ALLOWED_ADMIN_EMAILS
   : DEFAULT_ADMIN_PATTERNS;
 
 export default async function AdminLayout({ children }) {
-  const { userId } = await auth();
+  let userId = null;
+  let user = null;
+
+  try {
+    const authObj = await auth();
+    userId = authObj?.userId;
+    if (userId) {
+      user = await currentUser();
+    }
+  } catch (err) {
+    console.error('Clerk Admin Auth Error:', err);
+  }
 
   // If not signed in, redirect to Clerk sign-in page
   if (!userId) {
     redirect('/sign-in');
   }
-
-  const user = await currentUser();
   const userEmail = user?.primaryEmailAddress?.emailAddress?.toLowerCase() || '';
 
   const isAuthorized =

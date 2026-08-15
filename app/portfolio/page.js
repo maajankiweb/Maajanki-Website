@@ -39,17 +39,17 @@ export default function Page() {
     "mainEntity": {
       "@type": "ItemList",
       "name": "MaaJanki Web Tech Portfolio Projects",
-      "numberOfItems": 10,
+      "numberOfItems": 9,
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "item": {
             "@type": "CreativeWork",
-            "name": "Creative Agency Website",
-            "genre": "Web Development",
-            "description": "A responsive, modern website for a creative agency built using HTML, CSS and JavaScript.",
-            "url": "https://maajankiwebtech.com/portfolio#creative-agency"
+            "name": "Apex Tutorial Bettiah",
+            "genre": "Education",
+            "description": "Premier Bihar Board (BSEB) 11th & 12th Science coaching portal in Bettiah with Smart Board classrooms and course programs.",
+            "url": "https://apex-tutorial-gray.vercel.app/"
           }
         },
         {
@@ -57,10 +57,10 @@ export default function Page() {
           "position": 2,
           "item": {
             "@type": "CreativeWork",
-            "name": "E-Commerce Platform",
-            "genre": "E-Commerce",
-            "description": "A fully functional online store with shopping cart and payment gateway integration.",
-            "url": "https://maajankiwebtech.com/products/invobill"
+            "name": "InvoBill – Free GST Invoice Generator",
+            "genre": "SaaS / Application",
+            "description": "Instant 100% free GST billing & invoice generator for Indian small businesses with auto CGST/SGST/IGST calculations.",
+            "url": "https://invobill.in/"
           }
         },
         {
@@ -68,10 +68,10 @@ export default function Page() {
           "position": 3,
           "item": {
             "@type": "CreativeWork",
-            "name": "Food Restaurant Website",
-            "genre": "Web Development",
-            "description": "A responsive website for a food restaurant with menu, booking, and delivery features.",
-            "url": "https://maajankiwebtech.com/portfolio#food-restaurant"
+            "name": "MaaJanki Web Tech Digital Blog",
+            "genre": "Technology / AI",
+            "description": "Practical insights on SEO strategies, web development frameworks, digital marketing automation, and business growth.",
+            "url": "https://blog.maajankiwebtech.com/"
           }
         },
         {
@@ -79,10 +79,10 @@ export default function Page() {
           "position": 4,
           "item": {
             "@type": "CreativeWork",
-            "name": "Job Posting Website",
-            "genre": "Web Development",
-            "description": "A platform for posting jobs and managing applications efficiently.",
-            "url": "https://maajankiwebtech.com/portfolio#job-posting"
+            "name": "Style Beauty Studio",
+            "genre": "Web Design",
+            "description": "Luxury bridal makeup and beauty salon website showcasing bridal packages, hair styling gallery, and online appointments.",
+            "url": "https://style-beauty-studio.vercel.app/"
           }
         },
         {
@@ -90,10 +90,10 @@ export default function Page() {
           "position": 5,
           "item": {
             "@type": "CreativeWork",
-            "name": "Gym Trainer Website",
+            "name": "Shivam Kumar Portfolio",
             "genre": "Web Development",
-            "description": "A responsive website for gym trainers showcasing services, schedules, and client testimonials.",
-            "url": "https://maajankiwebtech.com/portfolio#gym-trainer"
+            "description": "Personal portfolio for an MBA student and HR Specialist featuring recruitment services, education roadmap, and skills timeline.",
+            "url": "https://shivam-kumar-portfolio-snowy.vercel.app/"
           }
         },
         {
@@ -101,10 +101,10 @@ export default function Page() {
           "position": 6,
           "item": {
             "@type": "CreativeWork",
-            "name": "Design Studio Graphics Website",
-            "genre": "Web Design",
-            "description": "A portfolio website for a design studio displaying graphic projects and services.",
-            "url": "https://maajankiwebtech.com/services/graphic-design"
+            "name": "HareRam Ray Portfolio",
+            "genre": "Web Development",
+            "description": "Professional portfolio for an MBA candidate specializing in HR & Marketing, featuring AI recruitment research & leadership.",
+            "url": "https://hareram-ray-portfolio.vercel.app/"
           }
         },
         {
@@ -112,10 +112,10 @@ export default function Page() {
           "position": 7,
           "item": {
             "@type": "CreativeWork",
-            "name": "Free AI Research Website",
-            "genre": "Technology / AI",
-            "description": "A website dedicated to sharing free AI research papers, tools, and tutorials.",
-            "url": "https://maajankiwebtech.com/products/nexus-saas"
+            "name": "Avnish Kumar Ray Portfolio",
+            "genre": "Web Development",
+            "description": "Portfolio for an MBA candidate specializing in Business Analytics & Finance, highlighting MS Excel & R data modeling.",
+            "url": "https://avnish-kumar-portfolio.vercel.app/"
           }
         },
         {
@@ -123,10 +123,10 @@ export default function Page() {
           "position": 8,
           "item": {
             "@type": "CreativeWork",
-            "name": "LMS Portal Website",
-            "genre": "Education",
-            "description": "A learning management system (LMS) portal for online courses, quizzes, and student management.",
-            "url": "https://maajankiwebtech.com/portfolio#lms-portal"
+            "name": "Saurav Kumar Portfolio",
+            "genre": "Web Development",
+            "description": "Modern portfolio for an MBA student in Finance & Marketing, featuring retail operations experience and financial analysis.",
+            "url": "https://saurav-kumar-portfolio-eight.vercel.app/"
           }
         },
         {
@@ -134,21 +134,10 @@ export default function Page() {
           "position": 9,
           "item": {
             "@type": "CreativeWork",
-            "name": "AI Voices Platform",
-            "genre": "Technology / AI",
-            "description": "An AI-powered voice generation platform with multi-language support and real-time audio preview.",
-            "url": "https://maajankiwebtech.com/products/wacrm"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 10,
-          "item": {
-            "@type": "CreativeWork",
-            "name": "Digital Products Hub",
-            "genre": "E-Commerce",
-            "description": "A digital products marketplace where creators can sell eBooks, templates, courses, and software.",
-            "url": "https://maajankiwebtech.com/products"
+            "name": "S Yasmin Fitness Coaching",
+            "genre": "Web Design",
+            "description": "Dynamic health and fitness coaching website featuring custom workout programs, transformation plans, and client booking.",
+            "url": "https://fitness-coach-three-lemon.vercel.app/"
           }
         }
       ]

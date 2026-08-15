@@ -1222,63 +1222,76 @@ function Home() {
           <div className="portfolio-grid">
             {[
               {
-                title: "E-Commerce Website",
-                img: "/images/project/Digital-Products-Hub-Home-Page.webp",
-                link: "https://blog.maajankiwebtech.com",
+                title: "Apex Tutorial Bettiah",
+                img: "/images/project/Apex Tutorial Full Page.jpg",
+                link: "https://apex-tutorial-gray.vercel.app/",
                 imgTitle:
-                  "E-Commerce Website Development Project by MaaJanki Web Tech",
+                  "Apex Tutorial Bettiah Science Coaching Website – MaaJanki Web Tech",
               },
               {
-                title: "AI Portfolio Website",
-                img: "/images/project/Ai-agency.webp",
-                link: "#",
+                title: "InvoBill – Free GST Billing",
+                img: "/images/project/Invobill Full Page.jpg",
+                link: "https://invobill.in/",
                 imgTitle:
-                  "AI Portfolio Website Design & Development – MaaJanki Web Tech",
+                  "InvoBill Free GST Invoice Generator Web App – MaaJanki Web Tech",
               },
               {
-                title: "AI Voice Generater Landing Page",
-                img: "/images/project/AI-Voices-Home-Page.webp",
-                link: "#",
+                title: "MaaJanki Digital Blog",
+                img: "/images/project/Maajanki Blog Full Page.jpg",
+                link: "https://blog.maajankiwebtech.com/",
                 imgTitle:
-                  "AI Voice Generater Landing Page Design Project by MaaJanki Web Tech",
+                  "MaaJanki Web Tech Tech & Digital Growth Blog",
               },
               {
-                title: "Digital Ads Landing Page",
-                img: "/images/project/DigitalAds-Pro.webp",
-                link: "#",
-                imgTitle: "Digital Ads Landing Page Design – MaaJanki Web Tech",
-              },
-              {
-                title: "Online Food Delivery Platform",
-                img: "/images/project/Food-Delivery-App.webp",
-                link: "#",
+                title: "Style Beauty Studio",
+                img: "/images/project/Beauty Studio Full Page.jpg",
+                link: "https://style-beauty-studio.vercel.app/",
                 imgTitle:
-                  "Online Food Delivery Platform Website Development Project",
+                  "Style Beauty Studio Luxury Bridal Makeup Website",
               },
               {
-                title: "Restaurant Landing Page",
-                img: "/images/project/Gusto-Restaurant-Fine-Dining-Experience.jpg",
-                link: "#",
-                imgTitle: "Restaurant Landing Page Design – MaaJanki Web Tech",
-              },
-              {
-                title: "Fitness & Gym Landing Page",
-                img: "/images/project/GYM-Trainer-Landing.jpg",
-                link: "#",
-                imgTitle: "Fitness & Gym Landing Page Design Project",
-              },
-              {
-                title: "Tools Converter Platform",
-                img: "/images/project/ToolHub-All-in-One.jpg",
-                link: "#",
+                title: "Shivam Kumar Portfolio",
+                img: "/images/project/Shivam Full Page.jpg",
+                link: "https://shivam-kumar-portfolio-snowy.vercel.app/",
                 imgTitle:
-                  "Tools Converter Platform Website Development – MaaJanki Web Tech",
+                  "Shivam Kumar HR Specialist & MBA Portfolio Website",
+              },
+              {
+                title: "HareRam Ray Portfolio",
+                img: "/images/project/Hareram Full Page.jpg",
+                link: "https://hareram-ray-portfolio.vercel.app/",
+                imgTitle:
+                  "HareRam Ray MBA HR Portfolio Website",
+              },
+              {
+                title: "Avnish Kumar Portfolio",
+                img: "/images/project/Avnish Full Page.jpg",
+                link: "https://avnish-kumar-portfolio.vercel.app/",
+                imgTitle:
+                  "Avnish Kumar Ray Business Analytics Portfolio",
+              },
+              {
+                title: "Saurav Kumar Portfolio",
+                img: "/images/project/Saurav Full page.jpg",
+                link: "https://saurav-kumar-portfolio-eight.vercel.app/",
+                imgTitle:
+                  "Saurav Kumar Finance & Marketing Portfolio",
+              },
+              {
+                title: "S Yasmin Fitness Coaching",
+                img: "/images/project/Fitnesh Full Page.jpg",
+                link: "https://fitness-coach-three-lemon.vercel.app/",
+                imgTitle:
+                  "S Yasmin Fitness Coaching Platform",
               },
             ].map((project, index) => (
               <div key={index} className="preview-column">
-                <div
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="site-mockup"
-                  onClick={() => window.open(project.link, "_blank")}
+                  style={{ display: "block", textDecoration: "none" }}
                 >
                   <div className="mockup-screen">
                     <Image
@@ -1289,19 +1302,21 @@ function Home() {
                       loading="lazy"
                       width="360"
                       height="360"
-                     />
-                    <button
-                      className="view-button"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        window.open(project.link, "_blank");
-                      }}
-                    >
+                    />
+                    <span className="view-button">
                       Live Preview
-                    </button>
+                    </span>
                   </div>
-                </div>
-                <div className="site-title">{project.title}</div>
+                </a>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="site-title"
+                  style={{ display: "block", textDecoration: "none" }}
+                >
+                  {project.title}
+                </a>
               </div>
             ))}
           </div>

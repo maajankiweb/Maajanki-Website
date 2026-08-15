@@ -927,32 +927,44 @@
     scale: 1.03;
 }
 
-/* button at bottom */
+/* centered live preview button */
 .view-button {
-    position      : absolute;
-    bottom        : 0;
-    left          : 0;
-    width         : 100%;
-    padding       : 14px 0;
-    background    : linear-gradient(90deg, #FD6A02, #000);
-    color         : #ffffff;
-    font-weight   : 600;
-    border        : none;
-    font-size     : 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    cursor        : pointer;
-    opacity       : 0;
-    transition    : opacity 0.35s ease, background 0.3s ease;
-    z-index       : 10;
+    position        : absolute;
+    top             : 50%;
+    left            : 50%;
+    transform       : translate(-50%, -50%) scale(0.9);
+    width           : auto;
+    min-width       : 140px;
+    padding         : 12px 24px;
+    border-radius   : 50px;
+    background      : linear-gradient(135deg, #FD6A02 0%, #FF8C00 100%);
+    box-shadow      : 0 8px 25px rgba(253, 106, 2, 0.45), 0 4px 12px rgba(0, 0, 0, 0.35);
+    color           : #ffffff;
+    font-weight     : 700;
+    border          : 1px solid rgba(255, 255, 255, 0.3);
+    font-size       : 0.85rem;
+    text-transform  : uppercase;
+    letter-spacing  : 0.8px;
+    text-align      : center;
+    cursor          : pointer;
+    opacity         : 0;
+    transition      : opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    z-index         : 10;
+    display         : inline-flex;
+    align-items     : center;
+    justify-content : center;
+    white-space     : nowrap;
 }
 
 .site-mockup:hover .view-button {
-    opacity: 1;
+    opacity  : 1;
+    transform: translate(-50%, -50%) scale(1);
 }
 
 .view-button:hover {
-    background: linear-gradient(90deg, #000, #FD6A02);
+    background: linear-gradient(135deg, #042544 0%, #FD6A02 100%);
+    box-shadow: 0 12px 30px rgba(253, 106, 2, 0.65), 0 6px 16px rgba(0, 0, 0, 0.5);
+    color     : #ffffff;
 }
 
 /* title below card */
@@ -1051,8 +1063,9 @@
     }
 
     .view-button {
-        padding  : 12px 0;
-        font-size: 0.8rem;
+        padding  : 10px 18px;
+        font-size: 0.75rem;
+        min-width: 120px;
     }
 
     .site-title {

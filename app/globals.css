@@ -66,7 +66,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  content-visibility: auto;
 }
 
 /* Defer rendering of heavy below-the-fold images for instant browser speed */
@@ -716,20 +715,16 @@ h4:not(.admin-layout-root h4),
 }
 
 /* =====================================================
-   CORE WEB VITALS & DEFERRED RENDERING OPTIMIZATIONS
+   CORE WEB VITALS & TOUCH INTERACTION OPTIMIZATIONS
    ===================================================== */
-.products-grid-section,
-.product-detail-section,
-.mj-footer,
-.reviews-section,
-.locations-grid,
-.service-detail-section {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 400px;
-}
-
-.gpu-accelerated {
-  transform: translateZ(0);
-  will-change: transform;
+/* Eliminate 300ms mobile tap delay for instant touch interaction */
+button,
+a,
+input,
+select,
+textarea,
+.site-mockup,
+.filter-btn {
+  touch-action: manipulation;
 }
 

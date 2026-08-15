@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { MapPin, Filter, Layers, Navigation } from 'lucide-react';
-import 'leaflet/dist/leaflet.css';
 
 // Dynamic import for Leaflet map components to avoid SSR issue in Next.js
 const MapContainer = dynamic(
@@ -43,7 +42,8 @@ export default function LeadMap({ leads = [] }) {
   const locations = leadLocations.length > 0 ? leadLocations : defaultHQ;
 
   useEffect(() => {
-    // Client-side L.icon initialization
+    // Client-side L.icon & CSS initialization
+    import('leaflet/dist/leaflet.css');
     import('leaflet').then((L) => {
       const icon = L.icon({
         iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
