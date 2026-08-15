@@ -1,27 +1,31 @@
 /* Custom styles & design system tokens for Admin Dashboard */
 
 :root {
-  --primary-orange: #FF6B00;
-  --primary-orange-hover: #E56000;
-  --primary-orange-light: rgba(255, 107, 0, 0.12);
+  --primary-orange: #FD6A02;
+  --primary-orange-hover: #E55D00;
+  --primary-orange-light: rgba(253, 106, 2, 0.15);
   --secondary-navy: #0F172A;
   --bg-main: #F8FAFC;
   --card-bg: #FFFFFF;
   --border-color: #E2E8F0;
   --text-main: #0F172A;
   --text-muted: #64748B;
+  --sidebar-bg: #0F172A;
+  --sidebar-border: #1E293B;
   --admin-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
   --admin-shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.08), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
   --admin-shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
 }
 
 .dark-theme {
-  --secondary-navy: #090D16;
-  --bg-main: #0B0F19;
-  --card-bg: #151C2C;
-  --border-color: #26334D;
+  --secondary-navy: #042544;
+  --bg-main: #020617;
+  --card-bg: #0F172A;
+  --border-color: #1E293B;
   --text-main: #F8FAFC;
   --text-muted: #94A3B8;
+  --sidebar-bg: #090D16;
+  --sidebar-border: #1E293B;
   --admin-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
   --admin-shadow-md: 0 4px 10px rgba(0, 0, 0, 0.5);
   --admin-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);
@@ -91,7 +95,44 @@
   box-shadow: var(--admin-shadow-md);
 }
 
-/* Custom Scrollbar */
+/* Sidebar Custom Scrollbar */
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 9999px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #FD6A02;
+}
+
+/* Active Nav Glow Effects */
+.sidebar-nav-active {
+  background: linear-gradient(135deg, #FD6A02 0%, #E55D00 100%);
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 20px -4px rgba(253, 106, 2, 0.4);
+}
+
+.sidebar-subnav-active {
+  color: #FD6A02 !important;
+  background-color: rgba(253, 106, 2, 0.12);
+  border-left: 3px solid #FD6A02;
+  font-weight: 700;
+}
+
+/* Custom Scrollbar Global */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -114,3 +155,4 @@
   border-radius: 0.75rem;
   z-index: 10;
 }
+
