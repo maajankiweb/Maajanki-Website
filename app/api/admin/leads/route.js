@@ -5,7 +5,12 @@ import { auth, currentUser } from '@clerk/nextjs/server';
 import { connectDB } from '@/lib/db';
 import Lead from '@/lib/models/Lead';
 
-const DEFAULT_ADMIN_EMAILS = ['maajankiweb@gmail.com', 'info@maajankiwebtech.com'];
+const DEFAULT_ADMIN_EMAILS = [
+  'info@maajankiwebtech.com',
+  'maajankiwebtech@gmail.com',
+  'maajankiweb@gmail.com',
+  '@maajankiwebtech.com',
+];
 const ALLOWED_ADMIN_EMAILS = process.env.ALLOWED_ADMIN_EMAILS
   ? process.env.ALLOWED_ADMIN_EMAILS.split(',').map((e) => e.trim().toLowerCase()).filter(Boolean)
   : DEFAULT_ADMIN_EMAILS;
@@ -34,9 +39,23 @@ async function isAuthorized(request) {
     // Check email restriction
     if (ALLOWED_ADMIN_EMAILS.length > 0) {
       const user = await currentUser();
-      const userEmail = user?.primaryEmailAddress?.emailAddress?.toLowerCase() || '';
-      if (!ALLOWED_ADMIN_EMAILS.includes(userEmail)) {
-        console.warn(`[SECURITY ALERT] Unauthorized admin access attempt by: ${userEmail} (IP: ${request.headers.get('x-forwarded-for') || 'unknown'})`);
+      const userEmails = (user?.emailAddresses?.map((e) => e.emailAddress.toLowerCase()) || []).filter(Boolean);
+      if (user?.primaryEmailAddress?.emailAddress) {
+        const primary = user.primaryEmailAddress.emailAddress.toLowerCase();
+        if (!userEmails.includes(primary)) userEmails.push(primary);
+      }
+
+      const isMatch = userEmails.some((userEmail) =>
+        ALLOWED_ADMIN_EMAILS.some((pattern) => {
+          if (pattern.startsWith('@')) {
+            return userEmail.endsWith(pattern);
+          }
+          return userEmail === pattern;
+        })
+      );
+
+      if (!isMatch) {
+        console.warn(`[SECURITY ALERT] Unauthorized admin access attempt by: ${userEmails.join(', ')} (IP: ${request.headers.get('x-forwarded-for') || 'unknown'})`);
         return false;
       }
     }

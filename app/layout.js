@@ -1,3 +1,4 @@
+import { ClerkProvider } from '@clerk/nextjs';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './globals.css';
@@ -335,29 +336,31 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className={`${outfit.variable} ${poppins.variable} ${inter.variable}`}>
-      <head>
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.clarity.ms" />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
+    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
+      <html lang="en" className={`${outfit.variable} ${poppins.variable} ${inter.variable}`}>
+        <head>
+          <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+          <link rel="dns-prefetch" href="https://www.clarity.ms" />
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            crossOrigin="anonymous"
+            referrerPolicy="no-referrer"
+          />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+        </head>
 
-      <body suppressHydrationWarning>
-        <ClientProvider>
-          <LayoutContent>{children}</LayoutContent>
-        </ClientProvider>
+        <body suppressHydrationWarning>
+          <ClientProvider>
+            <LayoutContent>{children}</LayoutContent>
+          </ClientProvider>
 
-        <Analytics />
-      </body>
-    </html>
+          <Analytics />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

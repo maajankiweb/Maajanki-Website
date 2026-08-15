@@ -1,6 +1,5 @@
 export const dynamic = 'force-dynamic';
 
-import { ClerkProvider } from '@clerk/nextjs';
 import { auth, currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
@@ -17,7 +16,13 @@ export const metadata = {
   },
 };
 
-const DEFAULT_ADMIN_PATTERNS = ['maajankiweb@gmail.com', 'info@maajankiwebtech.com'];
+const DEFAULT_ADMIN_PATTERNS = [
+  'info@maajankiwebtech.com',
+  'maajankiwebtech@gmail.com',
+  'maajankiweb@gmail.com',
+  '@maajankiwebtech.com',
+];
+
 const ALLOWED_ADMIN_PATTERNS = process.env.ALLOWED_ADMIN_EMAILS
   ? process.env.ALLOWED_ADMIN_EMAILS.split(',').map((e) => e.trim().toLowerCase()).filter(Boolean)
   : DEFAULT_ADMIN_PATTERNS;
@@ -40,60 +45,76 @@ export default async function AdminLayout({ children }) {
   if (!userId) {
     redirect('/sign-in');
   }
-  const userEmail = user?.primaryEmailAddress?.emailAddress?.toLowerCase() || '';
+
+  // Collect all email addresses attached to the Clerk account
+  const userEmails = (user?.emailAddresses?.map((e) => e.emailAddress.toLowerCase()) || []).filter(Boolean);
+  if (user?.primaryEmailAddress?.emailAddress) {
+    const primary = user.primaryEmailAddress.emailAddress.toLowerCase();
+    if (!userEmails.includes(primary)) userEmails.push(primary);
+  }
+
+  const primaryEmail = user?.primaryEmailAddress?.emailAddress?.toLowerCase() || userEmails[0] || 'Unknown User';
 
   const isAuthorized =
     ALLOWED_ADMIN_PATTERNS.length > 0 &&
-    ALLOWED_ADMIN_PATTERNS.some((pattern) => {
-      if (pattern.startsWith('@')) {
-        return userEmail.endsWith(pattern);
-      }
-      return userEmail === pattern;
-    });
+    userEmails.some((userEmail) =>
+      ALLOWED_ADMIN_PATTERNS.some((pattern) => {
+        if (pattern.startsWith('@')) {
+          return userEmail.endsWith(pattern);
+        }
+        return userEmail === pattern;
+      })
+    );
 
   // If email is not in ALLOWED_ADMIN_EMAILS, display Access Denied
   if (!isAuthorized) {
     return (
       <div style={{
-        minHeight: '80vh',
+        minHeight: '85vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        fontFamily: 'sans-serif',
-        padding: '20px',
+        fontFamily: 'system-ui, -apple-system, sans-serif',
+        padding: '24px',
         textAlign: 'center',
         backgroundColor: '#0f172a',
         color: '#f8fafc',
       }}>
-        <h1 style={{ fontSize: '48px', marginBottom: '10px' }}>🚫 Access Denied</h1>
-        <h3 style={{ color: '#f87171', marginBottom: '16px' }}>
-          Unauthorized Admin Account ({userEmail})
-        </h3>
-        <p style={{ color: '#94a3b8', maxWidth: '500px', lineHeight: '1.6' }}>
-          Your email address is not authorized to access the MaaJanki Web Tech Admin Control Center. Access is strictly restricted to verified administrative email accounts.
-        </p>
-        <Link href="/sign-in" style={{
-          marginTop: '24px',
-          padding: '12px 28px',
-          backgroundColor: '#fd6a02',
-          color: '#ffffff',
-          borderRadius: '8px',
-          textDecoration: 'none',
-          fontWeight: '600',
+        <div style={{
+          maxWdith: '550px',
+          width: '100%',
+          backgroundColor: '#1e293b',
+          border: '1px solid #334155',
+          borderRadius: '16px',
+          padding: '36px 24px',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
         }}>
-          Switch Account / Sign In
-        </Link>
+          <h1 style={{ fontSize: '42px', marginBottom: '12px' }}>🚫 Access Restricted</h1>
+          <h3 style={{ color: '#f87171', fontSize: '18px', marginBottom: '16px', wordBreak: 'break-all' }}>
+            Unauthorized Account: {primaryEmail}
+          </h3>
+          <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.6', marginBottom: '24px' }}>
+            Access to the MaaJanki Web Tech Admin Control Center is strictly restricted to verified administrative email accounts.
+          </p>
+          <Link href="/sign-in" style={{
+            display: 'inline-block',
+            padding: '12px 28px',
+            backgroundColor: '#fd6a02',
+            color: '#ffffff',
+            borderRadius: '10px',
+            textDecoration: 'none',
+            fontWeight: '700',
+            fontSize: '15px',
+            boxShadow: '0 4px 14px rgba(253, 106, 2, 0.4)',
+          }}>
+            Switch Account / Sign In as Admin
+          </Link>
+        </div>
       </div>
     );
   }
 
-  return (
-    <ClerkProvider
-      publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-      telemetry={false}
-    >
-      <AdminShell>{children}</AdminShell>
-    </ClerkProvider>
-  );
+  return <AdminShell>{children}</AdminShell>;
 }
+

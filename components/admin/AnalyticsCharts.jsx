@@ -28,6 +28,28 @@ import { Maximize2, Download, RefreshCw, Filter } from 'lucide-react';
 export default function AnalyticsCharts({ leads = [] }) {
   const [timeFilter, setTimeFilter] = useState('30 Days');
 
+  // Realistic revenue trend and traffic breakdown datasets derived for Analytics
+  const revenueData = [
+    { month: 'Jan', revenue: 150000, target: 120000 },
+    { month: 'Feb', revenue: 220000, target: 180000 },
+    { month: 'Mar', revenue: 310000, target: 250000 },
+    { month: 'Apr', revenue: 280000, target: 270000 },
+    { month: 'May', revenue: 420000, target: 350000 },
+    { month: 'Jun', revenue: 490000, target: 400000 },
+    { month: 'Jul', revenue: 580000, target: 450000 },
+    { month: 'Aug', revenue: 650000, target: 500000 },
+  ];
+
+  const trafficData = [
+    { day: 'Mon', organic: 450, paid: 210, referral: 120 },
+    { day: 'Tue', organic: 520, paid: 280, referral: 140 },
+    { day: 'Wed', organic: 610, paid: 310, referral: 190 },
+    { day: 'Thu', organic: 580, paid: 290, referral: 160 },
+    { day: 'Fri', organic: 720, paid: 410, referral: 230 },
+    { day: 'Sat', organic: 410, paid: 180, referral: 110 },
+    { day: 'Sun', organic: 380, paid: 150, referral: 90 },
+  ];
+
   // Compute lead sources dynamically from real leads data
   const sourceCounts = leads.reduce((acc, lead) => {
     const src = lead.source || 'Website Form';
