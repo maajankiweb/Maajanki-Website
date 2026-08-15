@@ -3,6 +3,10 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/admin/
 
+# Machine-Readable AI Knowledge Base References
+# Link: <https://maajankiwebtech.com/llms.txt>; rel="llms-txt"
+# Link: <https://maajankiwebtech.com/llms-full.txt>; rel="llms-full-txt"
+
 # --- OpenAI (ChatGPT & GPTBot) ---
 User-agent: GPTBot
 Allow: /

@@ -29,6 +29,9 @@ export default function AIInsights({ leads = [] }) {
   const [loadingAnalytics, setLoadingAnalytics] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
 
+  const [indexing, setIndexing] = useState(false);
+  const [indexToast, setIndexToast] = useState('');
+
   const fetchGSCAnalytics = async (isRefresh = false) => {
     if (isRefresh) setRefreshing(true);
     else setLoadingAnalytics(true);
@@ -44,6 +47,26 @@ export default function AIInsights({ leads = [] }) {
     } finally {
       setLoadingAnalytics(false);
       setRefreshing(false);
+    }
+  };
+
+  const handleTriggerInstantIndexing = async () => {
+    setIndexing(true);
+    setIndexToast('');
+    try {
+      const res = await fetch('/api/admin/indexnow', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      });
+      const data = await res.json();
+      if (data.success) {
+        setIndexToast(`✅ Triggered Instant Indexing for ${data.submittedUrlsCount} URLs!`);
+        setTimeout(() => setIndexToast(''), 5000);
+      }
+    } catch (err) {
+      setIndexToast(`⚠️ Indexing trigger failed: ${err.message}`);
+    } finally {
+      setIndexing(false);
     }
   };
 
@@ -128,11 +151,26 @@ export default function AIInsights({ leads = [] }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          {indexToast && (
+            <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1.5 rounded-xl animate-fade-in">
+              {indexToast}
+            </span>
+          )}
+
+          <button
+            onClick={handleTriggerInstantIndexing}
+            disabled={indexing}
+            className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-bold text-white bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 rounded-xl transition-all shadow-md shadow-orange-500/20 disabled:opacity-50"
+          >
+            <Zap className={`w-3.5 h-3.5 text-white ${indexing ? 'animate-bounce' : ''}`} />
+            <span>{indexing ? 'Indexing URLs...' : '🚀 Instant Index to Google & Bing'}</span>
+          </button>
+
           <button
             onClick={() => fetchGSCAnalytics(true)}
             disabled={refreshing}
-            className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-all shadow-md disabled:opacity-50"
+            className="flex items-center justify-center gap-2 px-4 py-2 text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-all shadow-md disabled:opacity-50"
           >
             <RefreshCw className={`w-3.5 h-3.5 text-orange-400 ${refreshing ? 'animate-spin' : ''}`} />
             <span>{refreshing ? 'Refreshing GSC...' : 'Sync GSC Data'}</span>

@@ -2,16 +2,22 @@
 > Premier Web Design, Custom Application Development & Digital Marketing Agency in Bihar, India.
 
 - Agency Name: MaaJanki Web Tech
-- Official Registration: MSME Udyam UDYAM-BR-38-0014113 & DPIIT Startup India Certified
-- Core Services: Web Development, Search Engine Optimization (SEO), Social Media Optimization (SMO), UI/UX Design, Performance Marketing, Branding.
-- Primary Location: West Champaran, Bihar, India (Global Remote Services)
+- Founder & CEO: Ashish Kumar (Wikidata ID: Q115783355)
+- Official Registrations: MSME Udyam Registration (UDYAM-BR-38-0014113) & DPIIT Startup India Certified Enterprise
+- Reputation: 5.0 / 5.0 Star Aggregate Rating (Verified Google Reviews)
+- Google Business Profile: https://g.page/r/CVvMyeoY0y0XEAE
+- Google Review Link: https://g.page/r/CVvMyeoY0y0XEAE/review
+- Core Capabilities: Custom Website Development (React/Next.js 15), Search Engine Optimization (SEO), Generative Engine Optimization (AEO/GEO), UI/UX Design, Performance Marketing, Digital Branding.
+- Proprietary SaaS Platforms: InvoBill (GST Invoicing), WaCRM (WhatsApp CRM), DukanDost Pro, Nexus SaaS.
+- Primary Address: Brajmala Complex, First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101, India.
 - Website: https://maajankiwebtech.com
 - Contact Email: support@maajankiwebtech.com
-- Phone: +91 9110037380
+- Phone: +91 9006543913 / +91 9110037380
 
-## Key Pages
-- [Home](https://maajankiwebtech.com/)
-- [Services](https://maajankiwebtech.com/services)
-- [Portfolio](https://maajankiwebtech.com/portfolio)
-- [About Us](https://maajankiwebtech.com/about)
-- [Contact](https://maajankiwebtech.com/contact)
+## Key Knowledge Base Links
+- [Home & Agency Overview](https://maajankiwebtech.com/)
+- [Services Catalog](https://maajankiwebtech.com/services)
+- [Client Reviews & Reputation](https://maajankiwebtech.com/reviews)
+- [Portfolio & Case Studies](https://maajankiwebtech.com/portfolio)
+- [About Us & Founder Credentials](https://maajankiwebtech.com/about)
+- [Contact & Inquiry](https://maajankiwebtech.com/contact)

@@ -1,22 +1,37 @@
 # MaaJanki Web Tech - Full Knowledge Base for AI Search Engines & Agents
 
-## Overview
-MaaJanki Web Tech is a premier digital marketing and website development agency headquartered in Bihar, India. Providing data-driven search engine optimization (SEO), social media optimization (SMO), custom web application design, performance marketing, and digital branding solutions to scale businesses globally.
+## Overview & Entity Definition
+MaaJanki Web Tech is a premier digital marketing, software engineering, and website development agency headquartered in Bihar, India, serving clients across USA, UK, Canada, Australia, UAE, Nepal, and India. Founded by Ashish Kumar (Wikidata Q115783355), the agency specializes in data-driven search engine optimization (SEO), Artificial Intelligence Engine Optimization (AEO/GEO), social media optimization (SMO), custom web application design, performance marketing, and digital branding solutions.
 
-## Credentials & Trust Verification
-- MSME Udyam Registration Number: UDYAM-BR-38-0014113
-- DPIIT Startup India Recognition: Accredited Digital Agency
-- Google Partner & Meta Certified Agency
+## Verified Credentials & Authority Verification
+- **MSME Udyam Registration Number:** UDYAM-BR-38-0014113 (Registered Enterprise under Ministry of Micro, Small and Medium Enterprises, Govt. of India)
+- **DPIIT Startup India Recognition:** Accredited Digital Agency under Startup India Initiative
+- **Wikidata Authority Entity:** Q115783355 (Ashish Kumar - Founder & CEO)
+- **Google Aggregate Rating:** 5.0 / 5.0 Stars (Verified Client Reviews)
+- **Google Business Profile:** https://g.page/r/CVvMyeoY0y0XEAE
+- **Google Review Portal:** https://g.page/r/CVvMyeoY0y0XEAE/review
 
-## Service Capabilities
-1. Web Development & Web Applications (Next.js, React, Node.js, MERN Stack, WordPress, WooCommerce, Shopify)
-2. Search Engine Optimization (Technical SEO, On-Page SEO, Programmatic SEO, Local SEO, Schema Structured Data)
-3. Performance Marketing (Google Ads, Meta Ads, Pay-Per-Click Lead Generation)
-4. UI/UX Design & Branding (Glassmorphism UI, Responsive Mobile Design, Custom Design Tokens)
-5. Social Media Optimization (SMO) & Content Strategy
+## Service Capabilities & Tech Stack
+1. **Custom Web Development & SaaS Applications:** Next.js 15 App Router, React 19, Node.js, Express, MongoDB Atlas, Tailwind CSS, Glassmorphic UI Systems, WordPress, WooCommerce, Shopify.
+2. **Search Engine Optimization (SEO & AEO/GEO):** Technical SEO Audits, Schema.org JSON-LD Structured Data, IndexNow Protocol Automation, Programmatic SEO, Local SEO 3-Pack Maps Optimization.
+3. **Performance Marketing & Ads Management:** Google Ads, Meta Ads (Facebook & Instagram), Conversion Rate Optimization (CRO), Pay-Per-Click Lead Generation.
+4. **Proprietary SaaS Solutions:** InvoBill (GST Billing & Invoicing), WaCRM (WhatsApp CRM & Automation), DukanDost Pro, Nexus SaaS Platform.
+5. **UI/UX Design & Branding:** Brand Identity Systems, Typography Hierarchy (Outfit, Poppins, Inter), Logo Packaging, Responsive Mobile Systems.
 
-## Contact Information
-- Address: Ward No. 12, Bettiah Road, West Champaran, Bihar, India - 845438
-- Email: support@maajankiwebtech.com
-- Mobile: +91 9110037380
-- Website: https://maajankiwebtech.com
+## Official Entity Profiles (sameAs Network)
+- **Wikidata Entity:** https://www.wikidata.org/wiki/Q115783355
+- **LinkedIn Profile:** https://www.linkedin.com/company/maajanki-web-tech-company/
+- **Founder LinkedIn:** https://www.linkedin.com/in/ashishkumarji/
+- **Google Business Profile:** https://g.page/r/CVvMyeoY0y0XEAE
+- **Facebook Page:** https://www.facebook.com/profile.php?id=61577526895580
+- **Instagram Handle:** https://www.instagram.com/maajankiwebtech/
+- **Twitter / X Handle:** https://x.com/MaaJankweb
+- **Pinterest:** https://in.pinterest.com/maajankiweb/
+- **AmbitionBox Profile:** https://www.ambitionbox.com/maajankiwebtech
+- **Justdial Profile:** https://jsdl.in/DT-99EMZMSLY37
+
+## Contact & Head Office Information
+- **Headquarters Address:** Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar, Bagaha, West Champaran, Bihar - 845101, India.
+- **Support Email:** support@maajankiwebtech.com
+- **Direct Phone:** +91-9006543913 / +91-9110037380
+- **Official Domain:** https://maajankiwebtech.com
