@@ -100,6 +100,7 @@ export default function AdminSidebar({
     {
       heading: 'MANAGEMENT',
       items: [
+        { id: 'portfolio-mgr', label: 'Portfolio Manager', icon: FolderKanban, badge: 'New', href: '/admin/portfolio' },
         { id: 'tasks', label: 'Tasks & Kanban', icon: CheckSquare, href: '/admin/tasks-kanban' },
         { id: 'calendar', label: 'Calendar & Follow-ups', icon: CalendarIcon, href: '/admin/calendar-followups' },
         { id: 'reports', label: 'Reports & Exports', icon: FileText, href: '/admin/reports-exports' },

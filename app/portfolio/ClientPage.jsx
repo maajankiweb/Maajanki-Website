@@ -8,6 +8,28 @@ import '@/app/styles/Portfolio.css';
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState("All");
+  const [liveProjects, setLiveProjects] = useState([]);
+
+  React.useEffect(() => {
+    fetch('/api/portfolio')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success && data.projects && data.projects.length > 0) {
+          setLiveProjects(
+            data.projects.map((p) => ({
+              title: p.title,
+              category: p.category || 'Web Development',
+              featured: p.featured,
+              description: p.description || '',
+              image: p.heroImage || p.fullImage,
+              altText: p.imgTitle || p.title,
+              link: p.link,
+            }))
+          );
+        }
+      })
+      .catch((err) => console.error('Error fetching portfolio page projects:', err));
+  }, []);
 
   const sampleProjects = [
     {
@@ -16,7 +38,7 @@ const PortfolioSection = () => {
       featured: true,
       description:
         "Premier Bihar Board (BSEB) 11th & 12th Science coaching portal in Bettiah with Smart Board classrooms and course programs.",
-      image: "/images/project/Apex Tutorial Full Page.jpg",
+      image: "/images/project/apex-tutorial.jpg",
       altText: "Apex Tutorial Bettiah Science Coaching Website",
       link: "https://apex-tutorial-gray.vercel.app/",
     },
@@ -26,7 +48,7 @@ const PortfolioSection = () => {
       featured: true,
       description:
         "Instant 100% free GST billing & invoice generator for Indian small businesses with auto CGST/SGST/IGST calculations and PDF export.",
-      image: "/images/project/Invobill Full Page.jpg",
+      image: "/images/project/invobill.jpg",
       altText: "InvoBill Free GST Invoice Generator India",
       link: "https://invobill.in/",
     },
@@ -36,7 +58,7 @@ const PortfolioSection = () => {
       featured: false,
       description:
         "Practical insights on SEO strategies, web development frameworks, digital marketing automation, and business growth.",
-      image: "/images/project/Maajanki Blog Full Page.jpg",
+      image: "/images/project/maajanki-blog.jpg",
       altText: "MaaJanki Web Tech Digital Growth & SEO Blog",
       link: "https://blog.maajankiwebtech.com/",
     },
@@ -46,7 +68,7 @@ const PortfolioSection = () => {
       featured: true,
       description:
         "Luxury bridal makeup and beauty salon website showcasing bridal packages, hair styling gallery, and online appointments.",
-      image: "/images/project/Beauty Studio Full Page.jpg",
+      image: "/images/project/style-beauty-studio.jpg",
       altText: "Style Beauty Studio Luxury Bridal Salon Website",
       link: "https://style-beauty-studio.vercel.app/",
     },
@@ -56,7 +78,7 @@ const PortfolioSection = () => {
       featured: false,
       description:
         "Personal portfolio for an MBA student and HR Specialist featuring recruitment services, education roadmap, and skills timeline.",
-      image: "/images/project/Shivam Full Page.jpg",
+      image: "/images/project/shivam-kumar-portfolio.jpg",
       altText: "Shivam Kumar HR Specialist Portfolio Website",
       link: "https://shivam-kumar-portfolio-snowy.vercel.app/",
     },
@@ -66,7 +88,7 @@ const PortfolioSection = () => {
       featured: false,
       description:
         "Professional portfolio for an MBA candidate specializing in HR & Marketing, featuring AI recruitment research & leadership.",
-      image: "/images/project/Hareram Full Page.jpg",
+      image: "/images/project/hareram-ray-portfolio.jpg",
       altText: "HareRam Ray MBA HR Portfolio Website",
       link: "https://hareram-ray-portfolio.vercel.app/",
     },
@@ -76,7 +98,7 @@ const PortfolioSection = () => {
       featured: false,
       description:
         "Portfolio for an MBA candidate specializing in Business Analytics & Finance, highlighting MS Excel & R data modeling.",
-      image: "/images/project/Avnish Full Page.jpg",
+      image: "/images/project/avnish-kumar-portfolio.jpg",
       altText: "Avnish Kumar Ray Business Analytics Portfolio Website",
       link: "https://avnish-kumar-portfolio.vercel.app/",
     },
@@ -86,7 +108,7 @@ const PortfolioSection = () => {
       featured: false,
       description:
         "Modern portfolio for an MBA student in Finance & Marketing, featuring retail operations experience and financial analysis.",
-      image: "/images/project/Saurav Full page.jpg",
+      image: "/images/project/saurav-kumar-portfolio.jpg",
       altText: "Saurav Kumar Finance Marketing Portfolio Website",
       link: "https://saurav-kumar-portfolio-eight.vercel.app/",
     },
@@ -96,25 +118,27 @@ const PortfolioSection = () => {
       featured: true,
       description:
         "Dynamic health and fitness coaching website featuring custom workout programs, transformation plans, and client booking.",
-      image: "/images/project/Fitnesh Full Page.jpg",
+      image: "/images/project/fitness-coach.jpg",
       altText: "S Yasmin Fitness Coaching Platform",
       link: "https://fitness-coach-three-lemon.vercel.app/",
     },
   ];
 
+  const activeProjectsList = liveProjects.length > 0 ? liveProjects : sampleProjects;
+
   const categories = [
     "All",
     "Web Development",
-    "SaaS / Application",
     "Web Design",
+    "SaaS / Application",
     "Technology / AI",
     "Education",
   ];
 
   const filteredProjects =
     activeFilter === "All"
-      ? sampleProjects
-      : sampleProjects.filter((p) => p.category === activeFilter);
+      ? activeProjectsList
+      : activeProjectsList.filter((p) => p.category === activeFilter);
 
 
   const overviewCards = [
