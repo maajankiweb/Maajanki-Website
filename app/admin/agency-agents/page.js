@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import {
   Bot,
   RefreshCw,
@@ -18,6 +18,10 @@ import {
   Code,
   Globe,
   SlidersHorizontal,
+  ChevronLeft,
+  ChevronRight,
+  LayoutGrid,
+  Rows,
 } from 'lucide-react';
 
 export default function AgencyAgentsPage() {
@@ -27,6 +31,8 @@ export default function AgencyAgentsPage() {
   const [syncInfo, setSyncInfo] = useState({ source: '', time: '' });
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
+  const [isCategoryGridView, setIsCategoryGridView] = useState(false);
+  const scrollRef = useRef(null);
 
   // Modals state
   const [selectedPromptAgent, setSelectedPromptAgent] = useState(null);
@@ -70,6 +76,56 @@ export default function AgencyAgentsPage() {
     const set = new Set(agents.map((a) => a.category).filter(Boolean));
     return ['all', ...Array.from(set)];
   }, [agents]);
+
+  // Count agents per category
+  const categoryCounts = useMemo(() => {
+    const counts = { all: agents.length };
+    agents.forEach((a) => {
+      if (a.category) {
+        counts[a.category] = (counts[a.category] || 0) + 1;
+      }
+    });
+    return counts;
+  }, [agents]);
+
+  // Formatted category label helper
+  const getCategoryLabel = (cat) => {
+    const count = categoryCounts[cat] || 0;
+    if (cat === 'all') return `🌟 All Domains (${count})`;
+
+    const map = {
+      academic: '🎓 Academic',
+      design: '🎨 Design & UX',
+      engineering: '💻 Engineering',
+      examples: '💡 Examples',
+      finance: '💵 Finance',
+      'game-development': '🎮 Game Dev',
+      gis: '🗺️ GIS & Mapping',
+      healthcare: '🩺 Healthcare',
+      integrations: '⚡ Integrations',
+      marketing: '📢 Marketing & SEO',
+      'paid-media': '💰 Paid Media',
+      product: '📊 Product',
+      'project-management': '🎬 Project Mgmt',
+      sales: '💼 Sales & Outreach',
+      security: '🔒 Security & SecOps',
+      'spatial-computing': '🥽 Spatial XR',
+      specialized: '⚡ Specialized',
+      strategy: '🎯 Strategy',
+      support: '🛟 Support & Ops',
+      testing: '🧪 Quality & QA',
+    };
+
+    const label = map[cat.toLowerCase()] || `${cat.charAt(0).toUpperCase() + cat.slice(1)}`;
+    return `${label} (${count})`;
+  };
+
+  const scrollCategories = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === 'left' ? -250 : 250;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  };
 
   // Filtered agents
   const filteredAgents = useMemo(() => {
@@ -192,7 +248,7 @@ export default function AgencyAgentsPage() {
         </div>
       </div>
 
-      {/* Toolbar: Search Bar & Category Tabs */}
+      {/* Toolbar: Search Bar & Enhanced Responsive Category Controls */}
       <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl shadow-lg space-y-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Search Bar */}
@@ -207,31 +263,97 @@ export default function AgencyAgentsPage() {
             />
           </div>
 
-          <div className="text-xs text-slate-400 font-medium">
-            Showing <span className="text-orange-400 font-bold">{filteredAgents.length}</span> of {agents.length} agents
+          {/* View Toggle & Agent Counter */}
+          <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
+            <div className="text-xs text-slate-400 font-medium">
+              Showing <span className="text-orange-400 font-bold">{filteredAgents.length}</span> of {agents.length} agents
+            </div>
+
+            <button
+              onClick={() => setIsCategoryGridView(!isCategoryGridView)}
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-colors shadow-sm"
+              title={isCategoryGridView ? 'Switch to One-Line Slider Mode' : 'Switch to Multi-Row Grid View'}
+            >
+              {isCategoryGridView ? (
+                <>
+                  <Rows className="w-3.5 h-3.5 text-orange-400" />
+                  <span>One-Line Slide</span>
+                </>
+              ) : (
+                <>
+                  <LayoutGrid className="w-3.5 h-3.5 text-orange-400" />
+                  <span>Row & Column Grid</span>
+                </>
+              )}
+            </button>
           </div>
         </div>
 
-        {/* Category Tabs */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-          {categories.map((cat) => {
-            const isActive = activeCategory === cat;
-            const label = cat === 'all' ? '🌟 All Domains' : cat.toUpperCase();
-            return (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-3 py-1.5 text-xs font-semibold rounded-xl whitespace-nowrap transition-all border ${
-                  isActive
-                    ? 'bg-gradient-to-r from-orange-600 to-amber-600 border-orange-500 text-white shadow-md shadow-orange-500/20'
-                    : 'bg-slate-800/60 border-slate-700/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800'
-                }`}
-              >
-                {label}
-              </button>
-            );
-          })}
-        </div>
+        {/* Category Tabs Section */}
+        {isCategoryGridView ? (
+          /* Mode 1: Clean Multi-Row & Column Grid View */
+          <div className="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80">
+            {categories.map((cat) => {
+              const isActive = activeCategory === cat;
+              const label = getCategoryLabel(cat);
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-3 py-1.5 text-xs font-semibold rounded-xl transition-all border ${
+                    isActive
+                      ? 'bg-gradient-to-r from-orange-600 to-amber-600 border-orange-500 text-white shadow-md shadow-orange-500/20'
+                      : 'bg-slate-800/60 border-slate-700/80 text-slate-300 hover:text-white hover:bg-slate-800'
+                  }`}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
+        ) : (
+          /* Mode 2: Smooth One-Line Horizontal Slider with Navigation Arrows */
+          <div className="relative flex items-center pt-2 border-t border-slate-800/80">
+            <button
+              onClick={() => scrollCategories('left')}
+              className="p-1.5 text-slate-400 hover:text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 rounded-lg mr-2 shrink-0 transition-colors"
+              title="Slide Left"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+
+            <div
+              ref={scrollRef}
+              className="flex items-center gap-2 overflow-x-auto scrollbar-none py-1 scroll-smooth w-full"
+            >
+              {categories.map((cat) => {
+                const isActive = activeCategory === cat;
+                const label = getCategoryLabel(cat);
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveCategory(cat)}
+                    className={`px-3 py-1.5 text-xs font-semibold rounded-xl whitespace-nowrap transition-all border shrink-0 ${
+                      isActive
+                        ? 'bg-gradient-to-r from-orange-600 to-amber-600 border-orange-500 text-white shadow-md shadow-orange-500/20'
+                        : 'bg-slate-800/60 border-slate-700/80 text-slate-300 hover:text-white hover:bg-slate-800'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
+
+            <button
+              onClick={() => scrollCategories('right')}
+              className="p-1.5 text-slate-400 hover:text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 rounded-lg ml-2 shrink-0 transition-colors"
+              title="Slide Right"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Agents Cards Grid */}
