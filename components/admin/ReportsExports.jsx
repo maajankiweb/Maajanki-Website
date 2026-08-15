@@ -94,7 +94,7 @@ export default function ReportsExports({ leads = [] }) {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
             <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
               <div className="text-xs text-slate-400">Total Leads Included</div>
-              <div className="text-xl font-black text-slate-100 mt-1">{leads.length || 42} Records</div>
+              <div className="text-xl font-black text-slate-100 mt-1">{leads.length} Records</div>
             </div>
             <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
               <div className="text-xs text-slate-400">Export Scope</div>

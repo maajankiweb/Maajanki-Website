@@ -50,6 +50,14 @@
   box-sizing: border-box;
 }
 
+/* Strict Bootstrap & Browser Link Reset for Admin Dashboard & Sidebar */
+.admin-layout-root a,
+.admin-layout-root a:hover,
+.admin-layout-root a:focus,
+.admin-layout-root a:visited {
+  text-decoration: none !important;
+}
+
 /* Typography Hierarchy */
 .admin-layout-root h1 {
   font-size: 36px;
@@ -118,18 +126,44 @@
   background: #FD6A02;
 }
 
-/* Active Nav Glow Effects */
-.sidebar-nav-active {
-  background: linear-gradient(135deg, #FD6A02 0%, #E55D00 100%);
-  color: #FFFFFF !important;
-  box-shadow: 0 8px 20px -4px rgba(253, 106, 2, 0.4);
+/* Strict Bootstrap & Browser Link Reset for Admin Dashboard & Sidebar */
+.admin-layout-root a,
+.admin-layout-root a:hover,
+.admin-layout-root a:focus,
+.admin-layout-root a:visited {
+  text-decoration: none !important;
 }
 
-.sidebar-subnav-active {
-  color: #FD6A02 !important;
-  background-color: rgba(253, 106, 2, 0.12);
-  border-left: 3px solid #FD6A02;
-  font-weight: 700;
+.sidebar-scroll a,
+.sidebar-scroll a:hover,
+.sidebar-scroll a:focus {
+  text-decoration: none !important;
+}
+
+.admin-sidebar-sublink {
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 200ms ease;
+}
+
+.admin-sidebar-sublink:hover {
+  color: #f8fafc !important;
+  background-color: rgba(255, 255, 255, 0.08);
+  text-decoration: none !important;
+}
+
+.admin-sidebar-sublink-active {
+  color: #fd6a02 !important;
+  background-color: rgba(253, 106, 2, 0.15);
+  border-left: 3px solid #fd6a02;
+  font-weight: 700 !important;
+  text-decoration: none !important;
 }
 
 /* Custom Scrollbar Global */
