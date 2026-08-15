@@ -83,10 +83,15 @@ const About = () => {
                 "longitude": 84.2625
               },
               "priceRange": "$$",
+              "hasMap": "https://g.page/r/CVvMyeoY0y0XEAE",
+              "sameAs": [
+                "https://g.page/r/CVvMyeoY0y0XEAE",
+                "https://g.page/r/CVvMyeoY0y0XEAE/review"
+              ],
               "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "24",
+                "ratingValue": "5.0",
+                "reviewCount": "5",
                 "bestRating": "5",
                 "worstRating": "1"
               }

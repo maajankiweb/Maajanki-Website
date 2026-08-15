@@ -112,7 +112,8 @@ export default function RootLayout({ children }) {
           "https://www.linkedin.com/company/maajanki-web-tech-company/",
           "https://x.com/MaaJankweb",
           "https://in.pinterest.com/maajankiweb/",
-          "https://g.page/r/CdM4-zj2uGnQEB0"
+          "https://g.page/r/CVvMyeoY0y0XEAE",
+          "https://g.page/r/CVvMyeoY0y0XEAE/review"
         ],
         "areaServed": [
           { "@type": "Country", "name": "India" },
@@ -146,6 +147,11 @@ export default function RootLayout({ children }) {
         "url": "https://maajankiwebtech.com/",
         "telephone": "+91-9006543913",
         "description": "Professional website development and digital marketing agency in Bagaha, Bihar.",
+        "hasMap": "https://g.page/r/CVvMyeoY0y0XEAE",
+        "sameAs": [
+          "https://g.page/r/CVvMyeoY0y0XEAE",
+          "https://g.page/r/CVvMyeoY0y0XEAE/review"
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar",
@@ -177,8 +183,8 @@ export default function RootLayout({ children }) {
         "priceRange": "$$",
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "24",
+          "ratingValue": "5.0",
+          "reviewCount": "5",
           "bestRating": "5",
           "worstRating": "1"
         },

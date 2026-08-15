@@ -127,6 +127,8 @@ const Reviews = () => {
                 "telephone": "+91-9006543913",
                 "priceRange": "$",
                 "sameAs": [
+                  "https://g.page/r/CVvMyeoY0y0XEAE",
+                  "https://g.page/r/CVvMyeoY0y0XEAE/review",
                   "https://jsdl.in/DT-99EMZMSLY37",
                   "https://www.ambitionbox.com/maajankiwebtech"
                 ],
@@ -140,8 +142,8 @@ const Reviews = () => {
                 },
                 "aggregateRating": {
                   "@type": "AggregateRating",
-                  "ratingValue": "4.9",
-                  "reviewCount": "124",
+                  "ratingValue": "5.0",
+                  "reviewCount": "5",
                   "bestRating": "5",
                   "worstRating": "1"
                 },
@@ -194,19 +196,19 @@ const Reviews = () => {
           {/* Rating Summary Block */}
           <div className="reviews-summary-box">
             <div className="summary-score-card">
-              <div className="summary-score-num">4.9</div>
+              <div className="summary-score-num">5.0</div>
               <div className="summary-stars">
                 <FaStar /><FaStar /><FaStar /><FaStar /><FaStar />
               </div>
-              <div className="summary-score-lbl">Average Rating (124+ Reviews)</div>
+              <div className="summary-score-lbl">Average Rating (5 Verified Reviews)</div>
             </div>
             
             <div className="summary-text-card">
               <h3>Direct definition of our credibility</h3>
               <p>
-                MaaJanki Web Tech maintains a verified aggregate rating of <strong>4.9 / 5.0 stars</strong> 
-                across major business directories including Google Business Profile, Trustpilot, and 
-                clutch-based surveys. We maintain 100% transparent reviews with zero artificial modifications.
+                MaaJanki Web Tech maintains a verified 5-Star aggregate rating of <strong>5.0 / 5.0 stars</strong> 
+                on <a href="https://g.page/r/CVvMyeoY0y0XEAE/review" target="_blank" rel="noopener noreferrer" style={{ color: '#FD6A02', fontWeight: 'bold' }}>Google Business Profile</a>, 
+                Trustpilot, and Justdial. We maintain 100% transparent reviews with zero artificial modifications.
               </p>
             </div>
           </div>
