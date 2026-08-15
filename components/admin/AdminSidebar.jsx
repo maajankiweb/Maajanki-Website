@@ -100,6 +100,7 @@ export default function AdminSidebar({
     {
       heading: 'ANALYTICS & AI',
       items: [
+        { id: 'agency-agents', label: 'Agency AI Agents', icon: Bot, badge: 'Auto-Sync', href: '/admin/agency-agents' },
         { id: 'ai-insights', label: 'AI Insights', icon: Bot, badge: 'AI', href: '/admin/ai-insights' },
         { id: 'maps', label: 'Global Map Analytics', icon: Globe, href: '/admin/global-map-analytics' },
         { id: 'customers', label: 'Customers & CRM', icon: Building2, href: '/admin/customers-crm' },

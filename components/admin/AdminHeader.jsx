@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import {
   Search,
   Bell,
@@ -17,6 +18,7 @@ import {
   Radio,
   Volume2,
   VolumeX,
+  Bot,
 } from 'lucide-react';
 import { UserButton, useUser } from '@clerk/nextjs';
 
@@ -33,7 +35,9 @@ export default function AdminHeader({
   setLiveSync = () => {},
   soundEnabled = true,
   setSoundEnabled = () => {},
+  onCreateLeadClick = () => {},
 }) {
+  const router = useRouter();
   const { user } = useUser();
   const [lang, setLang] = useState('EN');
   const [showQuickActions, setShowQuickActions] = useState(false);
@@ -100,20 +104,36 @@ export default function AdminHeader({
 
           {showQuickActions && (
             <div
-              className="absolute right-0 mt-2 w-48 bg-slate-800 border border-slate-700 rounded-xl shadow-xl py-1 z-50 animate-in fade-in zoom-in-95"
+              className="absolute right-0 mt-2 w-52 bg-slate-800 border border-slate-700 rounded-xl shadow-xl py-1 z-50 animate-in fade-in zoom-in-95"
               onClick={() => setShowQuickActions(false)}
             >
-              <button className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left">
-                <UserPlus className="w-4 h-4 text-orange-400" />
-                <span>Create Lead</span>
+              <button
+                onClick={() => onCreateLeadClick()}
+                className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left transition-colors"
+              >
+                <UserPlus className="w-4 h-4 text-orange-400 shrink-0" />
+                <span>Create New Lead</span>
               </button>
-              <button className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left">
-                <User className="w-4 h-4 text-blue-400" />
-                <span>Add Team User</span>
+              <button
+                onClick={() => router.push('/admin/agency-agents')}
+                className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left transition-colors"
+              >
+                <Bot className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>Launch Agency AI Agent</span>
               </button>
-              <button className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left">
-                <FileDown className="w-4 h-4 text-emerald-400" />
-                <span>Generate Report</span>
+              <button
+                onClick={() => router.push('/admin/team-performance')}
+                className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left transition-colors"
+              >
+                <User className="w-4 h-4 text-blue-400 shrink-0" />
+                <span>Add / Manage Team</span>
+              </button>
+              <button
+                onClick={() => router.push('/admin/reports-exports')}
+                className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left transition-colors"
+              >
+                <FileDown className="w-4 h-4 text-amber-400 shrink-0" />
+                <span>Generate Export Report</span>
               </button>
             </div>
           )}

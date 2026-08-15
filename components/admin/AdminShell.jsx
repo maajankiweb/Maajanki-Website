@@ -6,6 +6,7 @@ import AdminSidebar from './AdminSidebar';
 import AdminHeader from './AdminHeader';
 import NotificationCenter from './NotificationCenter';
 import LogoutModal from './LogoutModal';
+import CreateLeadModal from './CreateLeadModal';
 import CompactAdminFooter from './CompactAdminFooter';
 import '@/app/admin/admin.css';
 
@@ -23,6 +24,7 @@ export default function AdminShell({ children }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [showNotifications, setShowNotifications] = useState(false);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
+  const [showCreateLeadModal, setShowCreateLeadModal] = useState(false);
 
   // Real-Time States
   const [liveSync, setLiveSync] = useState(true);
@@ -250,12 +252,20 @@ export default function AdminShell({ children }) {
             setLiveSync={setLiveSync}
             soundEnabled={soundEnabled}
             setSoundEnabled={setSoundEnabled}
+            onCreateLeadClick={() => setShowCreateLeadModal(true)}
           />
 
           {/* Notifications Modal Dropdown */}
           {showNotifications && (
             <NotificationCenter leads={leads} onClose={() => setShowNotifications(false)} />
           )}
+
+          {/* Create Lead Modal */}
+          <CreateLeadModal
+            isOpen={showCreateLeadModal}
+            onClose={() => setShowCreateLeadModal(false)}
+            onLeadCreated={() => fetchLeads(true)}
+          />
 
           {/* Real-time Toast Alert Notification Popup */}
           {latestToast && (
