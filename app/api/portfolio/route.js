@@ -107,17 +107,24 @@ const INITIAL_PROJECTS = [
 export async function GET() {
   try {
     await connectDB();
-    let projects = await Portfolio.find({}).sort({ order: 1, createdAt: -1 }).lean();
+    const count = await Portfolio.countDocuments();
 
-    // Auto seed initial 9 projects if database collection is empty
-    if (!projects || projects.length === 0) {
-      await Portfolio.insertMany(INITIAL_PROJECTS);
-      projects = await Portfolio.find({}).sort({ order: 1, createdAt: -1 }).lean();
+    // Auto seed initial 9 projects only if database collection is completely empty
+    if (count === 0) {
+      const ops = INITIAL_PROJECTS.map((p) => ({
+        updateOne: {
+          filter: { title: p.title },
+          update: { $setOnInsert: p },
+          upsert: true,
+        },
+      }));
+      await Portfolio.bulkWrite(ops);
     }
 
+    const projects = await Portfolio.find({}).sort({ order: 1, createdAt: -1 }).lean();
     return NextResponse.json({ success: true, count: projects.length, projects });
   } catch (error) {
     console.error('API /api/portfolio GET Error:', error);
-    return NextResponse.json({ success: false, projects: INITIAL_PROJECTS, error: error.message }, { status: 500 });
+    return NextResponse.json({ success: false, projects: [], error: error.message }, { status: 500 });
   }
 }

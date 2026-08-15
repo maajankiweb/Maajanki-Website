@@ -1293,74 +1293,7 @@ function Home() {
 
           {/* Portfolio Grid */}
           <div className="portfolio-grid">
-            {(livePortfolio.length > 0
-              ? livePortfolio
-              : [
-                {
-                  title: "Apex Tutorial Bettiah",
-                  img: "/images/project/Apex Tutorial Full Page.jpg",
-                  link: "https://apex-tutorial-gray.vercel.app/",
-                  imgTitle:
-                    "Apex Tutorial Bettiah Science Coaching Website – MaaJanki Web Tech",
-                },
-                {
-                  title: "InvoBill – Free GST Billing",
-                  img: "/images/project/Invobill Full Page.jpg",
-                  link: "https://invobill.in/",
-                  imgTitle:
-                    "InvoBill Free GST Invoice Generator Web App – MaaJanki Web Tech",
-                },
-                {
-                  title: "MaaJanki Digital Blog",
-                  img: "/images/project/Maajanki Blog Full Page.jpg",
-                  link: "https://blog.maajankiwebtech.com/",
-                  imgTitle:
-                    "MaaJanki Web Tech Tech & Digital Growth Blog",
-                },
-                {
-                  title: "Style Beauty Studio",
-                  img: "/images/project/Beauty Studio Full Page.jpg",
-                  link: "https://style-beauty-studio.vercel.app/",
-                  imgTitle:
-                    "Style Beauty Studio Luxury Bridal Makeup Website",
-                },
-                {
-                  title: "Shivam Kumar Portfolio",
-                  img: "/images/project/Shivam Full Page.jpg",
-                  link: "https://shivam-kumar-portfolio-snowy.vercel.app/",
-                  imgTitle:
-                    "Shivam Kumar HR Specialist & MBA Portfolio Website",
-                },
-                {
-                  title: "HareRam Ray Portfolio",
-                  img: "/images/project/Hareram Full Page.jpg",
-                  link: "https://hareram-ray-portfolio.vercel.app/",
-                  imgTitle:
-                    "HareRam Ray MBA HR Portfolio Website",
-                },
-                {
-                  title: "Avnish Kumar Portfolio",
-                  img: "/images/project/Avnish Full Page.jpg",
-                  link: "https://avnish-kumar-portfolio.vercel.app/",
-                  imgTitle:
-                    "Avnish Kumar Ray Business Analytics Portfolio",
-                },
-                {
-                  title: "Saurav Kumar Portfolio",
-                  img: "/images/project/Saurav Full page.jpg",
-                  link: "https://saurav-kumar-portfolio-eight.vercel.app/",
-                  imgTitle:
-                    "Saurav Kumar Finance & Marketing Portfolio",
-                },
-                {
-                  title: "S Yasmin Fitness Coaching",
-                  img: "/images/project/Fitnesh Full Page.jpg",
-                  link: "https://fitness-coach-three-lemon.vercel.app/",
-                  imgTitle:
-                    "S Yasmin Fitness Coaching Platform",
-                },
-              ]
-            ).map((project, index) => (
+            {livePortfolio.map((project, index) => (
               <div key={index} className="preview-column">
                 <a
                   href={project.link}
