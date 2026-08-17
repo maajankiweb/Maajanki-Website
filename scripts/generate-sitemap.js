@@ -22,48 +22,48 @@ const pages = [
   { path: '/', changefreq: 'daily', priority: '1.0' },
 
   // Core Pages
-  { path: '/about', changefreq: 'monthly', priority: '0.8' },
-  { path: '/services', changefreq: 'weekly', priority: '0.9' },
-  { path: '/portfolio', changefreq: 'weekly', priority: '0.8' },
-  { path: '/industries', changefreq: 'weekly', priority: '0.8' },
-  { path: '/products', changefreq: 'weekly', priority: '0.8' },
-  { path: '/reviews', changefreq: 'weekly', priority: '0.8' },
-  { path: '/contact', changefreq: 'monthly', priority: '0.8' },
-  { path: '/locations', changefreq: 'weekly', priority: '0.8' },
+  { path: '/about', changefreq: 'daily', priority: '0.8' },
+  { path: '/services', changefreq: 'daily', priority: '0.95' },
+  { path: '/portfolio', changefreq: 'daily', priority: '0.85' },
+  { path: '/industries', changefreq: 'daily', priority: '0.85' },
+  { path: '/products', changefreq: 'daily', priority: '0.85' },
+  { path: '/reviews', changefreq: 'daily', priority: '0.85' },
+  { path: '/contact', changefreq: 'daily', priority: '0.85' },
+  { path: '/locations', changefreq: 'daily', priority: '0.85' },
 
   // Legal Pages
   { path: '/privacy-policy', changefreq: 'monthly', priority: '0.3' },
   { path: '/terms-conditions', changefreq: 'monthly', priority: '0.3' },
 
   // Product Detail Pages
-  { path: '/products/dukandost-pro', changefreq: 'weekly', priority: '0.85' },
-  { path: '/products/wacrm', changefreq: 'weekly', priority: '0.85' },
-  { path: '/products/nexus-saas', changefreq: 'weekly', priority: '0.85' },
-  { path: '/products/invobill', changefreq: 'weekly', priority: '0.85' },
-  { path: '/products/tailwind-templates', changefreq: 'weekly', priority: '0.85' },
-  { path: '/products/elementor-pro', changefreq: 'weekly', priority: '0.85' },
+  { path: '/products/dukandost-pro', changefreq: 'daily', priority: '0.9' },
+  { path: '/products/wacrm', changefreq: 'daily', priority: '0.9' },
+  { path: '/products/nexus-saas', changefreq: 'daily', priority: '0.9' },
+  { path: '/products/invobill', changefreq: 'daily', priority: '0.9' },
+  { path: '/products/tailwind-templates', changefreq: 'daily', priority: '0.9' },
+  { path: '/products/elementor-pro', changefreq: 'daily', priority: '0.9' },
 
   // Service Detail Pages
-  { path: '/services/web-development', changefreq: 'weekly', priority: '0.85' },
-  { path: '/services/seo', changefreq: 'weekly', priority: '0.85' },
-  { path: '/services/smo', changefreq: 'weekly', priority: '0.85' },
-  { path: '/services/performance-marketing', changefreq: 'weekly', priority: '0.85' },
-  { path: '/services/graphic-design', changefreq: 'weekly', priority: '0.85' },
-  { path: '/services/content-writing', changefreq: 'weekly', priority: '0.85' },
-  { path: '/services/products-listing', changefreq: 'weekly', priority: '0.85' },
-  { path: '/services/ui-ux-design', changefreq: 'weekly', priority: '0.85' },
-  { path: '/services/branding', changefreq: 'weekly', priority: '0.85' },
+  { path: '/services/web-development', changefreq: 'daily', priority: '0.95' },
+  { path: '/services/seo', changefreq: 'daily', priority: '0.95' },
+  { path: '/services/smo', changefreq: 'daily', priority: '0.95' },
+  { path: '/services/performance-marketing', changefreq: 'daily', priority: '0.95' },
+  { path: '/services/graphic-design', changefreq: 'daily', priority: '0.95' },
+  { path: '/services/content-writing', changefreq: 'daily', priority: '0.95' },
+  { path: '/services/products-listing', changefreq: 'daily', priority: '0.95' },
+  { path: '/services/ui-ux-design', changefreq: 'daily', priority: '0.95' },
+  { path: '/services/branding', changefreq: 'daily', priority: '0.95' },
 
   // Location Pages
   ...locations.map(loc => ({
     path: `/locations/${loc}`,
-    changefreq: 'weekly',
-    priority: '0.8'
+    changefreq: 'daily',
+    priority: '0.85'
   })),
 
   // AI Discovery & Meta Files
-  { path: '/llms.txt', changefreq: 'monthly', priority: '0.5' },
-  { path: '/llms-full.txt', changefreq: 'monthly', priority: '0.5' },
+  { path: '/llms.txt', changefreq: 'daily', priority: '0.6' },
+  { path: '/llms-full.txt', changefreq: 'daily', priority: '0.6' },
   { path: '/mcp-actions.json', changefreq: 'monthly', priority: '0.4' },
   { path: '/robots.txt', changefreq: 'monthly', priority: '0.3' }
 ];

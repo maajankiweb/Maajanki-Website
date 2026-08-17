@@ -1,21 +1,28 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "SEO Services & Google Business Bagaha | Maajanki Web Tech",
-  description: "Rank #1 on Google with our local SEO services in Bagaha, Bihar. We optimize Google Business Profiles, build links, and do technical audits. Get free audit!",
-  keywords: ["SEO services Bagaha","local SEO Bagaha","Google Business Profile optimization"],
+  title: "SEO Services in Patna, Bihar & AEO Optimization India | MaaJanki Web Tech",
+  description: "Rank #1 on Google and AI search engines with expert SEO services in Patna, Bihar, and India. Local SEO, AEO (AI Engine Optimization), and Google Business Profile management.",
+  keywords: [
+    "SEO services in Patna",
+    "best SEO agency Bihar",
+    "Next.js AEO SEO agency India",
+    "local SEO Patna",
+    "Google Business Profile optimization Bihar",
+    "MaaJanki Web Tech SEO"
+  ],
   openGraph: {
-    title: "SEO Services & Google Business Bagaha | Maajanki Web Tech",
-    description: "Rank #1 on Google with our local SEO services in Bagaha, Bihar. We optimize Google Business Profiles, build links, and do technical audits. Get free audit!",
+    title: "SEO Services in Patna, Bihar & AEO Optimization India",
+    description: "Rank #1 on Google and AI search engines with expert SEO services in Patna, Bihar, and India.",
     url: "https://maajankiwebtech.com/services/seo",
-    siteName: "Maajanki Web Tech",
+    siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Services & Google Business Bagaha | Maajanki Web Tech",
-    description: "Rank #1 on Google with our local SEO services in Bagaha, Bihar. We optimize Google Business Profiles, build links, and do technical audits. Get free audit!",
+    title: "SEO Services in Patna, Bihar & AEO Optimization India",
+    description: "Rank #1 on Google and AI search engines with expert SEO services in Patna, Bihar, and India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/seo",
@@ -27,48 +34,82 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": "https://maajankiwebtech.com/services/seo/#service",
-    "name": "SEO Services & Google Business Profile Optimization",
+    "name": "SEO Services & AI Engine Optimization (AEO)",
     "provider": {
       "@id": "https://maajankiwebtech.com/#organization"
     },
     "serviceType": "Search Engine Optimization",
-    "description": "Professional local SEO and Google Business Profile optimization services in Bagaha, Bihar. We help businesses rank on the first page of Google, drive organic traffic, and increase leads.",
+    "description": "Professional SEO services in Patna, Bihar, and India. Specializing in Local SEO, Google Business Profile optimization, Technical SEO audits, and Generative AI Search (AEO/GEO) citations.",
     "areaServed": [
+      { "@type": "City", "name": "Patna" },
       { "@type": "City", "name": "Bagaha" },
+      { "@type": "City", "name": "Bettiah" },
       { "@type": "City", "name": "Motihari" },
       { "@type": "State", "name": "Bihar" },
       { "@type": "Country", "name": "India" }
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "SEO Packages",
+      "name": "SEO & AEO Services Packages",
       "itemListElement": [
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Local SEO Optimization",
-            "description": "Google Business Profile setup, optimization, local citations, and map pack ranking."
+            "name": "Local SEO & Map Pack Optimization",
+            "description": "Google Business Profile setup, local citation building, and map pack ranking in Patna & Bihar."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "On-Page & Technical SEO",
-            "description": "Meta tag optimization, schema markup injection, site speed improvement, and crawl budget optimization."
+            "name": "Generative Engine Optimization (AEO/GEO)",
+            "description": "Structuring content for ChatGPT, Perplexity, Google Gemini, and Claude AI citations."
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "SEO Audits & Competitor Analysis",
-            "description": "In-depth technical audits and keyword gap analysis against top competitors."
+            "name": "Technical SEO & Schema Injection",
+            "description": "Meta tag optimization, Schema.org JSON-LD injection, site speed optimization, and IndexNow pings."
           }
         }
       ]
     }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://maajankiwebtech.com/services/seo/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Why are MaaJanki Web Tech's SEO services in Patna & Bihar effective?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We combine local Google Search Console data, Google Business Profile optimization, Schema.org structured data, and high-quality entity citations to guarantee maximum search visibility."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is AI Engine Optimization (AEO) and how does it help my business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AEO ensures your website is indexed, cited, and recommended by AI assistants like ChatGPT, Perplexity, Google Gemini, and Claude when users ask for recommendations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How quickly can my business rank on Google in Bihar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With our targeted local SEO and IndexNow instant indexing pings, local search rankings typically see noticeable movement within 14 to 30 days."
+        }
+      }
+    ]
   };
 
   return (
@@ -76,6 +117,10 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <ClientPage />
     </>

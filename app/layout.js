@@ -36,11 +36,20 @@ export const viewport = {
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com'),
   title: {
-    default: 'Digital Marketing & Web Development Agency in Bihar | MaaJanki Web Tech',
+    default: 'Next.js Web Development Agency & SEO Services in Patna, Bihar & India | MaaJanki Web Tech',
     template: '%s | MaaJanki Web Tech',
   },
   description:
-    'MaaJanki Web Tech is the best digital marketing & web development agency in Bihar, India. We offer expert SEO, web design, SMO & branding services.',
+    'MaaJanki Web Tech is a premier Next.js web development agency and SEO services company in Patna, Bihar, and India. Expert in custom web application development, AEO, local SEO, and performance marketing.',
+  keywords: [
+    'Next.js web development agency India',
+    'SEO services in Patna',
+    'custom web application developer Bihar',
+    'web development company Patna',
+    'digital marketing agency Bihar',
+    'MaaJanki Web Tech',
+    'local SEO services Bihar'
+  ],
   authors: [{ name: 'MaaJanki Web Tech' }],
   robots: { index: true, follow: true },
   icons: {
@@ -50,9 +59,9 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    title: 'MaaJanki Web Tech | Global Web Development & Digital Marketing Agency',
+    title: 'MaaJanki Web Tech | Next.js Web Development & SEO Agency India',
     description:
-      'Professional web development, SEO, SMO, and digital marketing agency serving clients in USA, UK, Canada, Australia, Japan, India, and Bihar.',
+      'Premier Next.js web development, SEO services in Patna, custom web application developer in Bihar, serving clients across India and globally.',
     url: 'https://maajankiwebtech.com/',
     siteName: 'MaaJanki Web Tech',
     locale: 'en_IN',
@@ -73,16 +82,16 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MaaJanki Web Tech | Digital Growth Partner',
-    description: 'Professional web development and digital marketing agency in India.',
+    title: 'MaaJanki Web Tech | Next.js Web Dev & SEO Services India',
+    description: 'Premier Next.js web development agency & SEO services provider in Patna, Bihar, and India.',
     images: ['https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp'],
     creator: '@maajankiweb',
   },
   other: {
     'geo.region': 'IN-BR',
-    'geo.placename': 'Bagaha, Bihar, India',
-    'geo.position': '27.121;84.0722',
-    ICBM: '27.121, 84.0722',
+    'geo.placename': 'Patna, Bagaha, Bihar, India',
+    'geo.position': '25.5941;85.1376',
+    ICBM: '25.5941, 85.1376',
     'google-site-verification': 'zuQNLK0LfnYPs6sn7PFd4igMvGvDQHni8uqM8ZH9BLo',
     'msvalidate.01': '69B3649ED10EF133B495627267F3A40C',
     'dmca-site-verification': 'Y3FvWjZMSEgwNmdRY1FhVHFZMUpjZz090',
@@ -281,7 +290,31 @@ export default function RootLayout({ children }) {
             "name": "What services does MaaJanki Web Tech provide?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "MaaJanki Web Tech provides custom web development, SEO & AEO optimization, social media marketing, performance marketing, graphic design, branding, and proprietary SaaS platforms like InvoBill, WaCRM, DukanDost Pro, and Nexus SaaS."
+              "text": "MaaJanki Web Tech provides custom Next.js web development, SEO & AEO optimization, social media marketing, performance marketing, graphic design, branding, and proprietary SaaS platforms like InvoBill, WaCRM, DukanDost Pro, and Nexus SaaS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is MaaJanki Web Tech a top Next.js web development agency in India?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, MaaJanki Web Tech is a leading Next.js web development agency in India specializing in ultra-fast, SEO-optimized web applications, custom SaaS platforms, and enterprise software solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does MaaJanki Web Tech provide SEO services in Patna & Bihar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide comprehensive Search Engine Optimization (SEO) and Generative Engine Optimization (AEO) services in Patna, Bagaha, Bettiah, and across Bihar to rank businesses #1 on Google and AI search engines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can MaaJanki Web Tech build custom web applications for businesses in Bihar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, as a premier custom web application developer in Bihar, we build scalable web applications, e-commerce solutions, and custom business management software tailored for clients across Bihar, India, and internationally."
             }
           },
           {

@@ -68,47 +68,47 @@ export default async function sitemap() {
 
   const locationPages = locations.map((loc) => ({
     path: `/locations/${loc}`,
-    changeFrequency: 'weekly',
-    priority: 0.8
+    changeFrequency: 'daily',
+    priority: 0.85
   }));
 
-  // 8 Main Core Pages + Products, Services Sub-pages & Policy Pages
+  // Core Pages + Products, Services Sub-pages & Policy Pages
   const staticPages = [
-    // 8 Main Core Pages
+    // Core Pages
     { path: '', changeFrequency: 'daily', priority: 1.0 },
-    { path: '/about', changeFrequency: 'monthly', priority: 0.8 },
-    { path: '/services', changeFrequency: 'weekly', priority: 0.9 },
-    { path: '/portfolio', changeFrequency: 'weekly', priority: 0.8 },
-    { path: '/industries', changeFrequency: 'weekly', priority: 0.8 },
-    { path: '/products', changeFrequency: 'weekly', priority: 0.8 },
-    { path: '/reviews', changeFrequency: 'weekly', priority: 0.8 },
-    { path: '/contact', changeFrequency: 'monthly', priority: 0.8 },
+    { path: '/about', changeFrequency: 'daily', priority: 0.8 },
+    { path: '/services', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/portfolio', changeFrequency: 'daily', priority: 0.85 },
+    { path: '/industries', changeFrequency: 'daily', priority: 0.85 },
+    { path: '/products', changeFrequency: 'daily', priority: 0.85 },
+    { path: '/reviews', changeFrequency: 'daily', priority: 0.85 },
+    { path: '/contact', changeFrequency: 'daily', priority: 0.85 },
 
     // Location Landing Index Page
-    { path: '/locations', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/locations', changeFrequency: 'daily', priority: 0.85 },
 
     // Policy & Legal Pages
     { path: '/privacy-policy', changeFrequency: 'monthly', priority: 0.3 },
     { path: '/terms-conditions', changeFrequency: 'monthly', priority: 0.3 },
 
     // 6 Product Detail Pages
-    { path: '/products/dukandost-pro', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/products/wacrm', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/products/nexus-saas', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/products/invobill', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/products/tailwind-templates', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/products/elementor-pro', changeFrequency: 'weekly', priority: 0.85 },
+    { path: '/products/dukandost-pro', changeFrequency: 'daily', priority: 0.9 },
+    { path: '/products/wacrm', changeFrequency: 'daily', priority: 0.9 },
+    { path: '/products/nexus-saas', changeFrequency: 'daily', priority: 0.9 },
+    { path: '/products/invobill', changeFrequency: 'daily', priority: 0.9 },
+    { path: '/products/tailwind-templates', changeFrequency: 'daily', priority: 0.9 },
+    { path: '/products/elementor-pro', changeFrequency: 'daily', priority: 0.9 },
 
     // 9 Specialized Services Sub-Pages
-    { path: '/services/web-development', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/services/seo', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/services/smo', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/services/performance-marketing', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/services/graphic-design', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/services/content-writing', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/services/products-listing', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/services/ui-ux-design', changeFrequency: 'weekly', priority: 0.85 },
-    { path: '/services/branding', changeFrequency: 'weekly', priority: 0.85 },
+    { path: '/services/web-development', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/seo', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/smo', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/performance-marketing', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/graphic-design', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/content-writing', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/products-listing', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/ui-ux-design', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/branding', changeFrequency: 'daily', priority: 0.95 },
 
     // All 58 Location Sub-Pages
     ...locationPages,
@@ -116,8 +116,8 @@ export default async function sitemap() {
 
   // AI Discovery & Meta files
   const aiDiscoveryFiles = [
-    { path: '/llms.txt', changeFrequency: 'monthly', priority: 0.5 },
-    { path: '/llms-full.txt', changeFrequency: 'monthly', priority: 0.5 },
+    { path: '/llms.txt', changeFrequency: 'daily', priority: 0.6 },
+    { path: '/llms-full.txt', changeFrequency: 'daily', priority: 0.6 },
     { path: '/mcp-actions.json', changeFrequency: 'monthly', priority: 0.4 },
     { path: '/robots.txt', changeFrequency: 'monthly', priority: 0.3 },
   ];
