@@ -196,7 +196,7 @@ export default function Page() {
 
                 {/* Visible NAP Section */}
                 <div className="nap-section my-4 p-3 bg-light border rounded">
-                  <h3 className="h5 font-weight-bold text-dark mb-3">MaaJanki Web Tech (Bagaha Head Office)</h3>
+                  <h3 className="h5 font-weight-bold text-dark mb-3">MaaJanki Web Tech (Bagaha Regional Office address)</h3>
                   <p className="mb-2">
                     <strong>Business Name:</strong> Maajanki Web Tech
                   </p>

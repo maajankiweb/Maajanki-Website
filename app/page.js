@@ -1,12 +1,34 @@
 import ClientPage from "./ClientPage";
 
 export const metadata = {
-  title: "Web Development & Digital Marketing | MaaJanki Web Tech",
-  description: "MaaJanki Web Tech is a top web development & digital marketing agency in Bihar, India, serving global clients. Contact us today for a free quote!",
-  keywords: "web development agency India, digital marketing agency Bihar, best website development company in Patna, SEO services India, software development company Patna, web designer Bagaha Bettiah, MaaJanki Web Tech",
+  title: "Best Website Development Agency & Software Company in Bettiah, Bihar | MaaJanki Web Tech",
+  description: "MaaJanki Web Tech is top-rated as the best website development agency and software company in Bettiah, Bagaha, Motihari, Muzaffarpur, Patna, and across Bihar, UP, Delhi, MP, and West Bengal.",
+  keywords: [
+    "Best Website Development Agency in Bettiah",
+    "Best Website Development Agency in Bagaha",
+    "Best Website Development Agency in West Champaran",
+    "Best Website Development Agency in Motihari",
+    "Best Website Development Agency in East Champaran",
+    "Best Website Development Agency in Muzaffarpur",
+    "Best Website Development Agency in Patna",
+    "Best Website Development Agency in Bihar Sharif",
+    "Best Website Development Agency in Gaya",
+    "Best Website Development Agency near me",
+    "Software Company in Bettiah",
+    "Software Company in Bagaha",
+    "Software Company in Patna",
+    "Software Company in Bihar",
+    "Software Company near me",
+    "Web development agency Bihar",
+    "Web development agency Uttar Pradesh UP",
+    "Web development agency Delhi NCR",
+    "Web development agency Madhya Pradesh MP",
+    "Web development agency West Bengal",
+    "MaaJanki Web Tech"
+  ],
   openGraph: {
-    title: "Web Development & Digital Marketing | MaaJanki Web Tech",
-    description: "MaaJanki Web Tech is a top web development & digital marketing agency in Bihar, India, serving global clients. Contact us today for a free quote!",
+    title: "Best Website Development Agency & Software Company in Bettiah, Bihar | MaaJanki Web Tech",
+    description: "MaaJanki Web Tech is the premier website development agency and software company in Bettiah, West Champaran, Patna, Bihar, and across Indian states.",
     url: "https://maajankiwebtech.com/",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -14,8 +36,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development & Digital Marketing | MaaJanki Web Tech",
-    description: "MaaJanki Web Tech is a top web development & digital marketing agency in Bihar, India, serving global clients. Contact us today for a free quote!",
+    title: "Best Website Development Agency & Software Company in Bettiah, Bihar | MaaJanki Web Tech",
+    description: "Top website development agency and software company serving Bettiah, Bagaha, Motihari, Patna, Bihar, UP, Delhi, MP, and West Bengal.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/",

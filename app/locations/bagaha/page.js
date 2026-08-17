@@ -8,9 +8,27 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Digital Marketing Agency in Bagaha, Bihar | Maajanki Web Tech",
-  description: "MaaJanki Web Tech is the leading web design agency and digital marketing company in Bagaha, Bihar. We offer custom web development, local SEO, and paid ads. Contact us today!",
-  keywords: ["web design agency Bagaha", "website developer West Champaran", "digital marketing agency Bagaha", "SEO services Bagaha", "MaaJanki Web Tech"],
+  title: "Best Website Development Agency & Software Company in Bagaha, Bihar | MaaJanki Web Tech",
+  description: "MaaJanki Web Tech is top-rated as the best website development agency and software company in Bagaha, Bihar. We build Next.js web apps, e-commerce portals, local SEO, and custom business software.",
+  keywords: [
+    "Best Website Development Agency in Bagaha",
+    "Best Website Development Agency in Bettiah",
+    "Best Website Development Agency in West Champaran",
+    "Best Website Development Agency in Motihari",
+    "Best Website Development Agency in East Champaran",
+    "Best Website Development Agency in Muzaffarpur",
+    "Best Website Development Agency in Patna",
+    "Best Website Development Agency near me",
+    "Software Company in Bagaha",
+    "Software Company in Bettiah",
+    "Software Company in Patna",
+    "Software Company in Bihar",
+    "Software Company near me",
+    "Web development agency Bihar",
+    "Web development agency Uttar Pradesh UP",
+    "Web development agency Delhi NCR",
+    "MaaJanki Web Tech Bagaha"
+  ],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/bagaha',
   }
@@ -196,12 +214,9 @@ export default function Page() {
 
                 {/* Visible NAP Section */}
                 <div className="nap-section my-4 p-3 bg-light border rounded">
-                  <h3 className="h5 font-weight-bold text-dark mb-3">MaaJanki Web Tech (Bagaha Head Office)</h3>
+                  <h3 className="h5 font-weight-bold text-dark mb-3">MaaJanki Web Tech (Bagaha Regional Office address)</h3>
                   <p className="mb-2">
-                    <strong>Business Name:</strong> Maajanki Web Tech
-                  </p>
-                  <p className="mb-2">
-                    <strong>Address:</strong> Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101
+                    <strong>Bagaha Regional Office address:</strong> Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101
                   </p>
                   <p className="mb-2">
                     <strong>Phone:</strong> <a href="tel:+919006543913" className="text-dark">+91-9006543913</a>
