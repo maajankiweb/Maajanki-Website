@@ -1,4 +1,31 @@
 const https = require('https');
+const fs = require('fs');
+const path = require('path');
+
+// Auto-load environment variables from .env.local and .env if present
+const rootDir = path.resolve(__dirname, '..');
+function loadEnvFile(filePath) {
+  if (fs.existsSync(filePath)) {
+    const content = fs.readFileSync(filePath, 'utf8');
+    content.split('\n').forEach(line => {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) return;
+      const eqIdx = trimmed.indexOf('=');
+      if (eqIdx !== -1) {
+        const key = trimmed.slice(0, eqIdx).trim();
+        let value = trimmed.slice(eqIdx + 1).trim();
+        if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
+          value = value.slice(1, -1);
+        }
+        if (!process.env[key]) {
+          process.env[key] = value;
+        }
+      }
+    });
+  }
+}
+loadEnvFile(path.join(rootDir, '.env.local'));
+loadEnvFile(path.join(rootDir, '.env'));
 
 // Target parameters (overridable via environment variables)
 const host = process.env.INDEXNOW_HOST || 'maajankiwebtech.com';
