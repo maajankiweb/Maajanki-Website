@@ -1,19 +1,20 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "SEO Content Writing & Copywriting Services in Patna, Bihar, India & Global | MaaJanki Web Tech",
-  description: "Hire expert SEO content writers and technical copywriters in Patna, Bihar, India, serving clients across USA, UK, Canada, and UAE. Rank higher on Google and AI search engines.",
+  title: "SEO Content Writing & Copywriting Services in Bihar | MaaJanki Web Tech",
+  description: "Hire expert SEO content writers and copywriters in Patna, Bihar, and India. High-converting website content, technical blog posts, and AEO copy.",
   keywords: [
+    "SEO Content Writing Bihar",
     "SEO content writing Patna",
     "copywriters Bihar",
-    "technical content writing India",
-    "website copywriter USA UK UAE",
+    "website content writing India",
+    "technical content writing Bihar",
     "blog writing agency Patna",
     "MaaJanki Web Tech content"
   ],
   openGraph: {
-    title: "SEO Content Writing & Copywriting Services in Patna, Bihar, India & Global",
-    description: "Hire expert SEO content writers and copywriters in Patna, Bihar, India, and globally.",
+    title: "SEO Content Writing & Copywriting Services in Bihar | MaaJanki Web Tech",
+    description: "Hire expert SEO content writers and copywriters in Patna, Bihar, and India.",
     url: "https://maajankiwebtech.com/services/content-writing",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -21,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Content Writing & Copywriting Services in Patna, Bihar, India & Global",
-    description: "Hire expert SEO content writers and copywriters in Patna, Bihar, India, and globally.",
+    title: "SEO Content Writing & Copywriting Services in Bihar | MaaJanki Web Tech",
+    description: "Hire expert SEO content writers and copywriters in Patna, Bihar, and India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/content-writing",

@@ -1,21 +1,21 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Our Web Design & SEO Portfolio Bihar | Maajanki Web Tech",
-  description: "Explore our web development and digital marketing projects in Bihar. See how our website developer in West Champaran delivers growth. Get a free quote!",
-  keywords: ["website developer West Champaran","web design agency Bagaha","MaaJanki Web Tech portfolio"],
+  title: "Web Development & Digital Marketing Portfolio | MaaJanki Web Tech",
+  description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across Bihar & India.",
+  keywords: ["website development portfolio", "SEO case studies Bihar", "web design projects Bettiah Bagaha Patna", "MaaJanki Web Tech portfolio"],
   openGraph: {
-    title: "Our Web Design & SEO Portfolio Bihar | Maajanki Web Tech",
-    description: "Explore our web development and digital marketing projects in Bihar. See how our website developer in West Champaran delivers growth. Get a free quote!",
+    title: "Web Development & Digital Marketing Portfolio | MaaJanki Web Tech",
+    description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across Bihar & India.",
     url: "https://maajankiwebtech.com/portfolio",
-    siteName: "Maajanki Web Tech",
+    siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Web Design & SEO Portfolio Bihar | Maajanki Web Tech",
-    description: "Explore our web development and digital marketing projects in Bihar. See how our website developer in West Champaran delivers growth. Get a free quote!",
+    title: "Web Development & Digital Marketing Portfolio | MaaJanki Web Tech",
+    description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across Bihar & India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/portfolio",

@@ -1,19 +1,21 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "PPC Paid Ads & Google Ads Agency Patna, Bihar, India & Global | MaaJanki Web Tech",
-  description: "Scale revenue with ROI-driven Google Ads, Facebook Ads, and PPC campaigns in Patna, Bihar, India, serving clients in USA, UK, Canada, and UAE.",
+  title: "Google Ads & PPC Agency in Bihar & India | Performance Marketing | MaaJanki Web Tech",
+  description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in Patna, Bihar, and India. Certified PPC agency for local & global growth.",
   keywords: [
     "Google Ads agency Patna",
+    "Google Ads Management Services in Bihar",
+    "PPC agency Bihar",
     "performance marketing Bihar",
-    "PPC agency India",
-    "Facebook Ads management USA UK UAE",
-    "paid marketing agency Patna",
+    "Facebook Ads management agency Bihar",
+    "Google Ads for small businesses",
+    "paid advertising services India",
     "MaaJanki Web Tech PPC"
   ],
   openGraph: {
-    title: "PPC Paid Ads & Google Ads Agency Patna, Bihar, India & Global",
-    description: "Scale revenue with ROI-driven Google Ads and Facebook Ads campaigns in Patna, Bihar, India, and globally.",
+    title: "Google Ads & PPC Agency in Bihar & India | Performance Marketing | MaaJanki Web Tech",
+    description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in Patna, Bihar, and India.",
     url: "https://maajankiwebtech.com/services/performance-marketing",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -21,8 +23,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PPC Paid Ads & Google Ads Agency Patna, Bihar, India & Global",
-    description: "Scale revenue with ROI-driven Google Ads and Facebook Ads campaigns.",
+    title: "Google Ads & PPC Agency in Bihar & India | Performance Marketing | MaaJanki Web Tech",
+    description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in Patna, Bihar, and India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/performance-marketing",

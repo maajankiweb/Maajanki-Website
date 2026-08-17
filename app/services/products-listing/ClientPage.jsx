@@ -49,8 +49,7 @@ const ProductsListing = () => {
         <div className="banner-overlay">
           <div className="banner-content">
             <h1>
-              eCommerce Product Listing & Catalog Management Services in India |
-              Boost Marketplace Traffic & Orders
+              eCommerce Product Listing &amp; Cataloging Services in India | Amazon, Flipkart &amp; Meesho Management
             </h1>
             <div className="aeo-definition-box">
               <p>

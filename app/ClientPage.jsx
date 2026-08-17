@@ -377,7 +377,7 @@ function Home() {
             <div className="col-lg-7 hero-left-content">
               {/* Main Headline */}
               <h1 className="hero-title">
-                Global Web Development &amp; Digital Marketing Agency | MaaJanki Web Tech
+                Website Development &amp; Digital Marketing Agency in Bihar, India | MaaJanki Web Tech
               </h1>
 
               {/* Description Subtext */}

@@ -1,18 +1,19 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "eCommerce Product Listing Services Amazon Flipkart Meesho India & Global | MaaJanki Web Tech",
-  description: "Professional eCommerce product listing, cataloging, A+ content, and account management for Amazon, Flipkart, Meesho, Shopify, and IndiaMART in Bihar, India, and globally.",
+  title: "eCommerce Product Listing Services in India | Amazon & Flipkart Agency | MaaJanki Web Tech",
+  description: "Professional eCommerce product listing, cataloging, A+ content, and store management for Amazon, Flipkart, Meesho & Shopify sellers in Bihar & India.",
   keywords: [
-    "Amazon product listing Patna",
+    "Product listing services in India",
     "eCommerce cataloging Bihar",
-    "Flipkart listing agency India",
-    "Shopify product listing USA UK UAE",
-    "product listing services Bihar",
+    "Amazon Flipkart product listing services",
+    "Amazon product listing Patna",
+    "Flipkart product listing agency India",
+    "eCommerce product upload and listing services",
     "MaaJanki Web Tech eCommerce"
   ],
   openGraph: {
-    title: "eCommerce Product Listing Services Amazon Flipkart Meesho India & Global",
+    title: "eCommerce Product Listing Services in India | Amazon & Flipkart Agency | MaaJanki Web Tech",
     description: "Professional eCommerce product listing, cataloging, and account management for Amazon, Flipkart, Meesho, Shopify, and IndiaMART.",
     url: "https://maajankiwebtech.com/services/products-listing",
     siteName: "MaaJanki Web Tech",
@@ -21,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "eCommerce Product Listing Services Amazon Flipkart Meesho India & Global",
-    description: "Professional eCommerce product listing and cataloging services.",
+    title: "eCommerce Product Listing Services in India | Amazon & Flipkart Agency | MaaJanki Web Tech",
+    description: "Professional eCommerce product listing and cataloging services for sellers in India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/products-listing",

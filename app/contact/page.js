@@ -8,21 +8,21 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Contact Web Agency Bagaha Bihar | Maajanki Web Tech",
-  description: "Get in touch with Maajanki Web Tech, the premier website developer in West Champaran, Bihar. Contact our web design and marketing experts today for a free quote!",
-  keywords: "website developer West Champaran, web design agency Bagaha, contact MaaJanki Web Tech, Bettiah Bihar",
+  title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in Bihar",
+  description: "Contact MaaJanki Web Tech in Bagaha, West Champaran, Bihar. Call +91-9006543913 or email info@maajankiwebtech.com for web development & SEO inquiries.",
+  keywords: "website developer West Champaran, web design agency Bagaha, contact MaaJanki Web Tech, Bettiah Bihar, Patna web developer",
   openGraph: {
-    title: "Contact Web Agency Bagaha Bihar | Maajanki Web Tech",
-    description: "Get in touch with Maajanki Web Tech, the premier website developer in West Champaran, Bihar. Contact our web design and marketing experts today for a free quote!",
+    title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in Bihar",
+    description: "Contact MaaJanki Web Tech in Bagaha, West Champaran, Bihar. Call +91-9006543913 or email info@maajankiwebtech.com for web development & SEO inquiries.",
     url: "https://maajankiwebtech.com/contact",
-    siteName: "Maajanki Web Tech",
+    siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Web Agency Bagaha Bihar | Maajanki Web Tech",
-    description: "Get in touch with Maajanki Web Tech, the premier website developer in West Champaran, Bihar. Contact our web design and marketing experts today for a free quote!",
+    title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in Bihar",
+    description: "Contact MaaJanki Web Tech in Bagaha, West Champaran, Bihar. Call +91-9006543913 or email info@maajankiwebtech.com for web development & SEO inquiries.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/contact",

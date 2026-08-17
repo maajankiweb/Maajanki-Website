@@ -59,8 +59,7 @@ const SEO = () => {
         <div className="banner-overlay">
           <div className="banner-content">
             <h1>
-              Best SEO Agency in India | Organic Traffic Growth & Conversion
-              Optimization Campaigns
+              SEO Services in Patna, Bihar &amp; India | Local SEO &amp; AI Engine Optimization (AEO) Agency
             </h1>
             <div className="aeo-definition-box">
               <p>

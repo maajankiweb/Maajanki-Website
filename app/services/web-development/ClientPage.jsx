@@ -94,8 +94,7 @@ const WebDevelopment = () => {
         <div className="banner-overlay">
           <div className="banner-content">
             <h1>
-              Best Website Development Company in Bihar, India | Custom Web
-              Solutions to Accelerate Business Growth
+              Website Development Services in Bihar &amp; India | Custom Next.js &amp; WordPress Agency
             </h1>
             <div className="aeo-definition-box">
               <p>

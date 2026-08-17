@@ -1,19 +1,22 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "SEO Services in Patna, Bihar & AEO Optimization India | MaaJanki Web Tech",
-  description: "Rank #1 on Google and AI search engines with expert SEO services in Patna, Bihar, and India. Local SEO, AEO (AI Engine Optimization), and Google Business Profile management.",
+  title: "SEO Services in Patna, Bihar & India | Local SEO & AEO Agency | MaaJanki Web Tech",
+  description: "Rank #1 on Google and AI search engines with expert SEO services in Patna, Bettiah, Bagaha, Bihar & India. Local SEO, AEO (AI Engine Optimization), and GBP management.",
   keywords: [
-    "SEO services in Patna",
-    "best SEO agency Bihar",
-    "Next.js AEO SEO agency India",
-    "local SEO Patna",
+    "SEO Services in Patna",
+    "SEO Company in Bihar",
+    "Best SEO Agency Bihar",
+    "Local SEO Services in Bihar",
+    "Affordable SEO Services Bihar",
+    "SEO Agency for Small Businesses",
     "Google Business Profile optimization Bihar",
+    "Generative AI Engine Optimization AEO",
     "MaaJanki Web Tech SEO"
   ],
   openGraph: {
-    title: "SEO Services in Patna, Bihar & AEO Optimization India",
-    description: "Rank #1 on Google and AI search engines with expert SEO services in Patna, Bihar, and India.",
+    title: "SEO Services in Patna, Bihar & India | Local SEO & AEO Agency | MaaJanki Web Tech",
+    description: "Rank #1 on Google and AI search engines with expert SEO services in Patna, Bettiah, Bagaha, Bihar, and across India.",
     url: "https://maajankiwebtech.com/services/seo",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -21,8 +24,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Services in Patna, Bihar & AEO Optimization India",
-    description: "Rank #1 on Google and AI search engines with expert SEO services in Patna, Bihar, and India.",
+    title: "SEO Services in Patna, Bihar & India | Local SEO & AEO Agency | MaaJanki Web Tech",
+    description: "Rank #1 on Google and AI search engines with expert SEO services in Patna, Bettiah, Bagaha, Bihar, and across India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/seo",

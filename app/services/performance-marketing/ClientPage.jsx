@@ -66,8 +66,7 @@ const PerformanceMarketing = () => {
         <div className="banner-overlay">
           <div className="banner-content">
             <h1>
-              Performance Marketing Services India | Hire the Best Paid Ads &
-              PPC Agency to Scale ROI, Leads & Sales
+              Google Ads &amp; PPC Management Services in Bihar &amp; India | Performance Marketing Agency
             </h1>
             <div className="aeo-definition-box">
               <p>
