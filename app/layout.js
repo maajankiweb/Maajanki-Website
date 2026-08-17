@@ -374,32 +374,41 @@ export default function RootLayout({ children }) {
     ]
   };
 
-  return (
-    <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
-      <html lang="en" className={`${outfit.variable} ${poppins.variable} ${inter.variable}`}>
-        <head>
-          <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-          <link rel="dns-prefetch" href="https://www.clarity.ms" />
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-            crossOrigin="anonymous"
-            referrerPolicy="no-referrer"
-          />
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
-        </head>
+  let clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  if (process.env.NODE_ENV === 'development' && clerkPublishableKey?.startsWith('pk_live_')) {
+    clerkPublishableKey = process.env.NEXT_PUBLIC_DEV_CLERK_KEY || '';
+  }
 
-        <body suppressHydrationWarning>
-          <ClientProvider>
-            <LayoutContent>{children}</LayoutContent>
-          </ClientProvider>
+  const content = (
+    <html lang="en" className={`${outfit.variable} ${poppins.variable} ${inter.variable}`}>
+      <head>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.clarity.ms" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
 
-          <Analytics />
-        </body>
-      </html>
-    </ClerkProvider>
+      <body suppressHydrationWarning>
+        <ClientProvider>
+          <LayoutContent>{children}</LayoutContent>
+        </ClientProvider>
+
+        <Analytics />
+      </body>
+    </html>
   );
+
+  if (clerkPublishableKey) {
+    return <ClerkProvider publishableKey={clerkPublishableKey}>{content}</ClerkProvider>;
+  }
+
+  return content;
 }
