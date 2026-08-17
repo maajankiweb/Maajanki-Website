@@ -120,7 +120,8 @@ Contact Info:
 - Website 3: https://invobill.in
 - Website 4: https://blog.maajankiwebtech.com
 - Hours: Mon–Sun, 9:00 AM – 7:00 PM
-- Book a Free Strategy Call: https://calendly.com/maajankiwebtech
+- Book Free Digital Growth Audit: https://cal.com/maa-janki-y6je7a/free-digital-growth
+- Book Project Discovery & Proposal Consultation: https://cal.com/maa-janki-y6je7a/project-discovery-proposal-consultation
 
 Lead Collection Flow:
 When users show interest in our services, systematically ask for the following details to generate a lead (avoid asking the same information twice):
