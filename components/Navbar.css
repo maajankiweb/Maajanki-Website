@@ -32,10 +32,10 @@
 }
 
 .contact-info {
-  display: flex !important;
+  display: inline-flex !important;
   flex-direction: row !important;
   align-items: center !important;
-  gap: 8px;
+  gap: 4px;
   white-space: nowrap !important;
   flex-wrap: nowrap !important;
 }
@@ -43,11 +43,11 @@
 .contact-link {
   color: #ffffff !important;
   text-decoration: none;
-  display: flex !important;
+  display: inline-flex !important;
   align-items: center !important;
   white-space: nowrap !important;
   transition: all 0.25s ease;
-  padding: 2px 6px;
+  padding: 2px 4px;
   border-radius: 4px;
   line-height: 1;
 }
@@ -64,9 +64,15 @@
 
 .contact-info .divider {
   margin: 0 4px;
-  color: rgba(255, 255, 255, 0.6) !important;
+  color: rgba(255, 255, 255, 0.75) !important;
   user-select: none;
-  display: inline-block;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 400;
+  vertical-align: middle;
 }
 
 .social-icons {
@@ -187,7 +193,7 @@
   width: 100%;
 }
 
-/* ---------- Mega Dropdown ---------- */
+/* ---------- Mega Dropdown Desktop ---------- */
 .nav-item.dropdown {
   position: relative;
 }
@@ -214,12 +220,14 @@
   transition: all 0.3s ease;
 }
 
-.dropdown-menu.mega-dropdown.show,
-.nav-item.dropdown:hover .mega-dropdown {
-  display: block;
-  opacity: 1;
-  visibility: visible;
-  animation: navDropdownFade 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+@media (min-width: 992px) {
+  .dropdown-menu.mega-dropdown.show,
+  .nav-item.dropdown:hover .mega-dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    animation: navDropdownFade 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
 }
 
 @keyframes navDropdownFade {
@@ -344,7 +352,7 @@
     background: rgba(4, 37, 68, 0.98);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    padding: 20px 0;
+    padding: 16px 0 24px 0;
     position: absolute;
     top: 100%;
     left: 0;
@@ -352,6 +360,9 @@
     z-index: 998;
     border-bottom: 3px solid #fd6a02;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    max-height: calc(100vh - var(--navbar-height, 75px));
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav-right .nav-links.show {
@@ -373,7 +384,7 @@
   .nav-links li {
     width: 100%;
     text-align: left;
-    padding: 10px 28px;
+    padding: 8px 24px;
   }
 
   .nav-links a {
@@ -381,31 +392,46 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .services-link-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .dropdown-menu.mega-dropdown {
     position: static;
     transform: none;
-    opacity: 1;
-    visibility: visible;
-    display: block;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
     width: 100%;
-    padding: 16px 20px;
+    padding: 12px 16px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: none;
     border-radius: 12px;
-    margin-top: 10px;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .dropdown-menu.mega-dropdown.show {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .mega-dropdown .row {
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
   }
 
   .mega-dropdown .col-md-4 h6 {
     font-size: 13px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .mega-dropdown .dropdown-item {
@@ -417,7 +443,7 @@
 /* Phones (767px and down): Single line top bar */
 @media (max-width: 767px) {
   .top-bar {
-    padding: 6px 16px;
+    padding: 6px 12px;
     font-size: 12px;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -430,13 +456,23 @@
   }
 
   .contact-info {
-    gap: 8px;
+    gap: 4px;
     white-space: nowrap;
     flex-wrap: nowrap;
   }
 
+  .contact-link {
+    font-size: 11.5px;
+    padding: 2px 2px;
+  }
+
+  .contact-info .divider {
+    margin: 0 3px;
+    font-size: 12px;
+  }
+
   .social-icons {
-    gap: 8px;
+    gap: 6px;
     white-space: nowrap;
     flex-wrap: nowrap;
   }
@@ -460,8 +496,18 @@
 /* Small phones (480px and down) */
 @media (max-width: 480px) {
   .top-bar {
-    padding: 6px 12px;
-    font-size: 11.5px;
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .contact-link {
+    font-size: 11px;
+    padding: 1px 2px;
+  }
+
+  .contact-info .divider {
+    margin: 0 2px;
+    font-size: 11px;
   }
 
   .main-nav {
