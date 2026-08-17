@@ -24,6 +24,12 @@ export const metadata = {
     "Web development agency Delhi NCR",
     "Web development agency Madhya Pradesh MP",
     "Web development agency West Bengal",
+    "Offshore web development company India",
+    "Web development agency USA",
+    "Web design company UK",
+    "Web development agency UAE Dubai",
+    "Web development agency Canada",
+    "Web development agency Australia",
     "MaaJanki Web Tech"
   ],
   openGraph: {

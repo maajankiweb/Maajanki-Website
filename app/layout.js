@@ -390,6 +390,16 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+
+        {/* International SEO Hreflang Tags */}
+        <link rel="alternate" hrefLang="en-US" href="https://maajankiwebtech.com/locations/united-states" />
+        <link rel="alternate" hrefLang="en-GB" href="https://maajankiwebtech.com/locations/united-kingdom" />
+        <link rel="alternate" hrefLang="en-CA" href="https://maajankiwebtech.com/locations/canada" />
+        <link rel="alternate" hrefLang="en-AU" href="https://maajankiwebtech.com/locations/australia" />
+        <link rel="alternate" hrefLang="en-AE" href="https://maajankiwebtech.com/locations/united-arab-emirates" />
+        <link rel="alternate" hrefLang="en-IN" href="https://maajankiwebtech.com/" />
+        <link rel="alternate" hrefLang="x-default" href="https://maajankiwebtech.com/" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

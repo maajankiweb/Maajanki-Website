@@ -6,13 +6,24 @@ import './PricingSection.css';
 
 const PricingSection = ({ onSelectTier }) => {
   const [billingCycle, setBillingCycle] = useState('project'); // 'project' or 'retainer'
+  const [currency, setCurrency] = useState('INR'); // 'INR', 'USD', 'EUR', 'GBP', 'AED'
+
+  const priceMap = {
+    INR: { starterProj: '₹14,999', starterRet: '₹4,999/mo', growthProj: '₹34,999', growthRet: '₹12,499/mo', vipProj: '₹89,999', vipRet: '₹29,999/mo' },
+    USD: { starterProj: '$199', starterRet: '$69/mo', growthProj: '$449', growthRet: '$159/mo', vipProj: '$1,199', vipRet: '$399/mo' },
+    EUR: { starterProj: '€179', starterRet: '€59/mo', growthProj: '€419', growthRet: '€149/mo', vipProj: '€1,099', vipRet: '€369/mo' },
+    GBP: { starterProj: '£159', starterRet: '£49/mo', growthProj: '£369', growthRet: '£129/mo', vipProj: '£949', vipRet: '£319/mo' },
+    AED: { starterProj: '749 AED', starterRet: '249 AED/mo', growthProj: '1,649 AED', growthRet: '599 AED/mo', vipProj: '4,399 AED', vipRet: '1,499 AED/mo' }
+  };
+
+  const currPrices = priceMap[currency] || priceMap.INR;
 
   const pricingTiers = [
     {
       id: 'starter',
       name: 'Starter Business',
       tagline: 'Ideal for SMEs needing a high-converting web presence fast.',
-      price: billingCycle === 'project' ? '₹14,999' : '₹4,999/mo',
+      price: billingCycle === 'project' ? currPrices.starterProj : currPrices.starterRet,
       period: billingCycle === 'project' ? 'one-time' : 'billed monthly',
       featured: false,
       badge: 'Fast Launch',
@@ -31,7 +42,7 @@ const PricingSection = ({ onSelectTier }) => {
       id: 'growth',
       name: 'Growth & Lead Engine',
       tagline: 'Complete digital architecture built for rapid scaling & lead sourcing.',
-      price: billingCycle === 'project' ? '₹34,999' : '₹12,499/mo',
+      price: billingCycle === 'project' ? currPrices.growthProj : currPrices.growthRet,
       period: billingCycle === 'project' ? 'one-time' : 'billed monthly',
       featured: true,
       badge: '🔥 Most Popular',
@@ -41,8 +52,8 @@ const PricingSection = ({ onSelectTier }) => {
         '15+ Page Web Application or E-Commerce Portal',
         'AI Search Engine Optimization (AEO/GEO for ChatGPT & Google SGE)',
         'Automated Lead Sourcing Popups & CRM Integration',
-        'Local SEO Package (Bettiah, Patna & Regional Ranking)',
-        'Google Business Profile Optimization',
+        'Global & Multi-Region Technical SEO Package',
+        'Google Business Profile & Map Listing Optimization',
         'Dedicated WhatsApp & Call Lead Routing System',
         'Bi-Weekly ROI Performance & Traffic Analytics',
       ],
@@ -51,7 +62,7 @@ const PricingSection = ({ onSelectTier }) => {
       id: 'enterprise-vip',
       name: 'Enterprise VIP Tier',
       tagline: 'High-ticket custom web systems, AI workflows & white-glove SLA.',
-      price: billingCycle === 'project' ? '₹89,999' : '₹29,999/mo',
+      price: billingCycle === 'project' ? currPrices.vipProj : currPrices.vipRet,
       period: billingCycle === 'project' ? 'starting at' : 'billed monthly',
       featured: false,
       badge: '👑 VIP Enterprise Anchor',
@@ -62,7 +73,7 @@ const PricingSection = ({ onSelectTier }) => {
         '48-Hour Rapid Onboarding "Magic Moment" Guarantee',
         'Full AI Workflow & Automated Lead Nurturing Sequence',
         'Dedicated Senior Account Director & 24/7 Priority SLA',
-        'Multi-Region SEO & Pan-India Market Expansion',
+        'Pan-India & International Global Market Expansion',
         'Custom Analytics Dashboard & Funnel Conversion Audit',
         'Quarterly Executive Strategy & Revenue Optimization Reviews',
       ],
@@ -97,20 +108,35 @@ const PricingSection = ({ onSelectTier }) => {
             Choose the package engineered for your business scale. No hidden fees, guaranteed 48-hour onboarding, and government-recognized enterprise quality.
           </p>
 
-          {/* Toggle Switch */}
-          <div className="billing-toggle-wrapper">
-            <button
-              className={`billing-toggle-btn ${billingCycle === 'project' ? 'active' : ''}`}
-              onClick={() => setBillingCycle('project')}
-            >
-              One-Time Project
-            </button>
-            <button
-              className={`billing-toggle-btn ${billingCycle === 'retainer' ? 'active' : ''}`}
-              onClick={() => setBillingCycle('retainer')}
-            >
-              Monthly Retainer <span className="discount-tag">Save 15%</span>
-            </button>
+          {/* Toggle Switches: Billing Cycle & Global Currency */}
+          <div className="pricing-controls-container">
+            <div className="billing-toggle-wrapper">
+              <button
+                className={`billing-toggle-btn ${billingCycle === 'project' ? 'active' : ''}`}
+                onClick={() => setBillingCycle('project')}
+              >
+                One-Time Project
+              </button>
+              <button
+                className={`billing-toggle-btn ${billingCycle === 'retainer' ? 'active' : ''}`}
+                onClick={() => setBillingCycle('retainer')}
+              >
+                Monthly Retainer <span className="discount-tag">Save 15%</span>
+              </button>
+            </div>
+
+            <div className="currency-selector-wrapper">
+              <span className="currency-label">Currency:</span>
+              {['INR', 'USD', 'EUR', 'GBP', 'AED'].map((curr) => (
+                <button
+                  key={curr}
+                  className={`currency-btn ${currency === curr ? 'active' : ''}`}
+                  onClick={() => setCurrency(curr)}
+                >
+                  {curr === 'INR' ? '₹ INR' : curr === 'USD' ? '$ USD' : curr === 'EUR' ? '€ EUR' : curr === 'GBP' ? '£ GBP' : 'AED'}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
