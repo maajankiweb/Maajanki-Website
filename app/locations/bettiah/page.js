@@ -232,7 +232,7 @@ export default function Page() {
                   </td>
                   <td>Next.js 15, React 19, Node.js, Custom Web Apps, E-Commerce, Local SEO, AEO/GEO AI Search Optimization</td>
                   <td>Ultra-fast glassmorphic UI, custom SaaS platforms (InvoBill, WaCRM), 100% responsive code, 24/7 client support.</td>
-                  <td><span className="badge bg-success text-white p-2">Govt. MSME UDYAM-BR-38-0014113 & DPIIT Certified</span></td>
+                  <td><span className="badge bg-success text-white p-2">Govt. Registered MSME & DPIIT Certified</span></td>
                 </tr>
                 <tr>
                   <td>
@@ -322,7 +322,7 @@ export default function Page() {
                     <strong>Email:</strong> <a href="mailto:info@maajankiwebtech.com" className="text-primary">info@maajankiwebtech.com</a>
                   </p>
                   <p className="mb-0">
-                    <strong>Govt Credential:</strong> MSME Reg: UDYAM-BR-38-0014113 | DPIIT Recognized
+                    <strong>Govt Credential:</strong> Registered MSME Enterprise | DPIIT Recognized
                   </p>
                 </div>
 
@@ -375,7 +375,7 @@ export default function Page() {
               </div>
               <div className="card-body p-3">
                 <p className="mb-0 text-muted">
-                  MaaJanki Web Tech leads web development in Bettiah because we deliver modern Next.js 15 web applications, ultra-fast mobile responsiveness, MSME Government credentials (UDYAM-BR-38-0014113), and dedicated Generative Engine Optimization (AEO) to help businesses rank #1 on Google and AI search tools.
+                  MaaJanki Web Tech leads web development in Bettiah because we deliver modern Next.js 15 web applications, ultra-fast mobile responsiveness, MSME Government enterprise credentials, and dedicated Generative Engine Optimization (AEO) to help businesses rank #1 on Google and AI search tools.
                 </p>
               </div>
             </div>

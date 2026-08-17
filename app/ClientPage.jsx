@@ -7,6 +7,7 @@ import Link from 'next/link';
 import LogoLoop from '@/components/LogoLoop/LogoLoop';
 import Magnet from '@/components/Magnet/Magnet';
 import SpecularButton from '@/components/SpecularButton';
+import PricingSection from '@/components/PricingSection';
 import '@/app/styles/Home.css';
 
 // Import icons from react-icons
@@ -391,7 +392,7 @@ function Home() {
                 <Magnet padding={30} magnetStrength={10}>
                   <SpecularButton
                     as="a"
-                    href="/about"
+                    href="/contact"
                     size="lg"
                     radius={28}
                     lineColor="#fd6a02"
@@ -405,14 +406,14 @@ function Home() {
                     proximity={300}
                     className="hero-specular-btn-primary"
                   >
-                    Know More <span className="btn-arrow">→</span>
+                    Book Free 30-Min Strategy Audit <span className="btn-arrow">→</span>
                   </SpecularButton>
                 </Magnet>
 
                 <Magnet padding={30} magnetStrength={10}>
                   <SpecularButton
                     as="a"
-                    href="/contact"
+                    href="#pricing"
                     size="lg"
                     radius={28}
                     lineColor="#ffffff"
@@ -429,7 +430,7 @@ function Home() {
                     proximity={250}
                     className="hero-specular-btn-secondary"
                   >
-                    Contact Us
+                    Claim Growth Pricing
                   </SpecularButton>
                 </Magnet>
               </div>
@@ -1012,6 +1013,9 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* 3-Tier Value-Based Pricing Section */}
+      <PricingSection />
 
       {/* Products Section */}
       <section

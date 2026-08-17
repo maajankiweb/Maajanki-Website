@@ -18,23 +18,20 @@ const PromoPopup = () => {
   });
 
   useEffect(() => {
-    // Only run on the Homepage ('/') and on Desktop devices (>= 768px)
-    if (pathname !== '/' || (typeof window !== 'undefined' && window.innerWidth < 768)) {
+    // Run on Homepage ('/')
+    if (pathname !== '/') {
       setIsOpen(false);
       return;
     }
 
-    // Trigger on open & every page reload on desktop homepage after 2.5s delay
+    // Trigger after 3 seconds delay for all screen sizes
     const timer = setTimeout(() => {
-      if (typeof window !== 'undefined' && window.innerWidth >= 768) {
-        setIsOpen(true);
-      }
-    }, 2500);
+      setIsOpen(true);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, [pathname]);
 
-  // Do not render anything if not on the homepage or if closed
   if (pathname !== '/' || !isOpen) return null;
 
   const handleClose = () => {
@@ -130,10 +127,10 @@ const PromoPopup = () => {
             ) : (
               <>
                 <div className="promo-header">
-                  <span className="promo-badge">Limited Time Offer</span>
-                  <h2 className="promo-title">Transform Your Digital Presence</h2>
+                  <span className="promo-badge">🔥 Free Growth Audit</span>
+                  <h2 className="promo-title">Accelerate Your Business Growth</h2>
                   <p className="promo-description">
-                    Get a free website audit & custom SEO strategy for your business. Leave your contact below for a 1-on-1 consultation!
+                    Claim your complimentary 1-minute Website & AI Growth Audit. Discover how to 2x your lead conversion rate today!
                   </p>
                 </div>
 

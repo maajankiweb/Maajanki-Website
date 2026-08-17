@@ -223,7 +223,7 @@ const About = () => {
               </p>
 
               <p style={{ color: "rgba(255, 255, 255, 0.95)", fontSize: "16px", lineHeight: "1.8", marginBottom: "0" }}>
-                At MaaJanki Web Tech — a DPIIT Startup India & Udyam MSME recognized agency (Registration No: <strong>UDYAM-BR-38-0014113</strong>) — we focus on building people-centric brand
+                At MaaJanki Web Tech — a DPIIT Startup India & Government Registered MSME Enterprise — we focus on building people-centric brand
                 identities and high-converting marketing funnels. By combining target keyword research, search
                 engine optimization, structured schema markup, and conversion tracking, we help
                 brands dominate search results across India and earn citations on AI answer engines like ChatGPT and Perplexity. When you partner with MaaJanki Web Tech, you
@@ -527,7 +527,7 @@ const About = () => {
 
               <p className="why-us-text">
                 Transparency, cutting-edge technology, and verifiable ROI are at
-                the core of everything we do. As a DPIIT Startup India & Udyam MSME recognized agency (Registration No: <strong>UDYAM-BR-38-0014113</strong>), we focus on long-term digital authority —
+                the core of everything we do. As a DPIIT Startup India & Government Registered MSME Enterprise, we focus on long-term digital authority —
                 delivering scalable digital solutions that support sustainable
                 business growth across India.
               </p>
@@ -753,7 +753,7 @@ const About = () => {
                 }}
               >
                 Transparency and integrity are the foundation of quality work.
-                As an officially registered DPIIT Startup India & Udyam MSME agency (<strong>UDYAM-BR-38-0014113</strong>),
+                As an officially registered DPIIT Startup India & Government Registered MSME Enterprise,
                 we believe trust is built through honest communication, white-hat SEO practices, and clear milestone expectations at every stage of a
                 project.
               </p>

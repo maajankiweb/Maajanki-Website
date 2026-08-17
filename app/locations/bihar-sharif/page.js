@@ -204,7 +204,7 @@ export default function Page() {
                   </div>
                   <div className="d-flex align-items-center mb-3">
                     <CheckCircle className="text-success mr-2" size={20} />
-                    <span className="text-dark font-weight-medium">Government MSME UDYAM-BR-38-0014113 Accredited</span>
+                    <span className="text-dark font-weight-medium">Government Registered MSME Accredited Enterprise</span>
                   </div>
                   <div className="d-flex align-items-center">
                     <CheckCircle className="text-success mr-2" size={20} />
