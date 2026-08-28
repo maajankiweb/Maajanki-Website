@@ -931,22 +931,32 @@ width={150} height={50} />
                       onSubmit={(e) => {
                         e.preventDefault();
                         const form = e.target;
+                        const formData = new FormData(form);
+                        fetch("/api/leads", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({
+                            name: formData.get("name") || "",
+                            email: formData.get("email") || "",
+                            phone: formData.get("phone") || "",
+                            service: "Brochure Download - Performance Marketing",
+                            source: "brochure-modal",
+                            url: typeof window !== "undefined" ? window.location.href : "",
+                          }),
+                        }).catch(() => {});
+
                         fetch(form.action, {
                           method: "POST",
-                          body: new FormData(form),
+                          body: formData,
                           headers: { Accept: "application/json" },
-                        }).then((res) => {
-                          if (res.ok) {
-                            alert("Thank you! Your brochure is downloading.");
-                            setIsPopupOpen(false);
-                            window.open(
-                              "/brochures/MaaJanki-Web-Tech-Branding-Brochure.pdf",
-                              "_blank"
-                            );
-                          } else {
-                            alert("Submission error. Please try again.");
-                          }
-                        });
+                        }).catch(() => {});
+
+                        alert("Thank you! Your brochure is downloading.");
+                        setIsPopupOpen(false);
+                        window.open(
+                          "/brochures/MaaJanki-Web-Tech-Branding-Brochure.pdf",
+                          "_blank"
+                        );
                       }}
                     >
                       <h3 className="brochure-title" style={{ color: "#ffffff" }}>

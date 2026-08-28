@@ -801,10 +801,10 @@ function Home() {
                     <div className="col-lg-5 col-md-6">
                       <div className="form-group analysis-form-group mb-0">
                         <input
-                          type="url"
+                          type="text"
                           name="url"
                           className="form-control"
-                          placeholder="Enter your website URL"
+                          placeholder="Enter your website URL (e.g. maajankiwebtech.com)"
                           required
                         />
                       </div>

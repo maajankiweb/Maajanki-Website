@@ -15,10 +15,6 @@ const FooterWithPopup = () => {
     message: "",
   });
 
-  // Google Apps Script Web App URL
-  const GOOGLE_SHEET_API =
-    "https://script.google.com/macros/s/AKfycbyh3EGN-3ZQLOe1ECaGhlAAzhyPbJ0I_lmNKXMQIrGW-z0qsCuvd6WZc87-GsnfJ5ih/exec";
-
   const openModal = () => setShowModal(true);
   const closeModal = () => !loading && setShowModal(false);
 
@@ -38,72 +34,38 @@ const FooterWithPopup = () => {
     setLoading(true);
 
     try {
-      // Use x-www-form-urlencoded to avoid CORS preflight issues
-      const formBody = new URLSearchParams({
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        service: formData.service,
-        message: formData.message,
-        source: "Footer Popup",
-        pageUrl: typeof window !== "undefined" ? window.location.href : "",
-      }).toString();
-
-      // Save to MongoDB Atlas via internal /api/leads endpoint
-      try {
-        await fetch("/api/leads", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            phone: formData.phone,
-            service: formData.service,
-            message: formData.message,
-            source: "footer-popup",
-            url: typeof window !== "undefined" ? window.location.href : "",
-          }),
-        });
-      } catch (dbErr) {
-        console.warn("MongoDB lead save notice:", dbErr);
-      }
-
-      const response = await fetch(GOOGLE_SHEET_API, {
+      const response = await fetch("/api/leads", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: formBody,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          source: "footer-popup",
+          url: typeof window !== "undefined" ? window.location.href : "",
+        }),
       });
 
-      const text = await response.text();
-      let result = { success: false };
+      const result = await response.json();
 
-      try {
-        result = JSON.parse(text);
-      } catch (err) {
-        console.warn("Could not parse JSON:", err);
+      if (response.ok && result.success) {
+        alert("Thank you! We will contact you soon.");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        });
+        closeModal();
+      } else {
+        alert(result.error || "Submission failed. Please try again.");
       }
-
-      if (!result.success) {
-        alert(result.message || "Submission failed. Please try again.");
-        return;
-      }
-
-      alert("Thank you! We will contact you soon.");
-
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-      });
-
-      closeModal();
     } catch (error) {
-      console.error("Google Sheet Error:", error);
-      alert("Network error. Please try again later.");
+      console.error("Lead submission error:", error);
+      alert("Submission error. Please try again later.");
     } finally {
       setLoading(false);
     }

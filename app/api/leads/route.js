@@ -88,6 +88,30 @@ export async function POST(request) {
       status: 'New',
     });
 
+    // Server-side forwarding to Google Sheet Web App
+    const GOOGLE_SHEET_URL = process.env.GOOGLE_SHEET_WEB_APP_URL ||
+      'https://script.google.com/macros/s/AKfycbyh3EGN-3ZQLOe1ECaGhlAAzhyPbJ0I_lmNKXMQIrGW-z0qsCuvd6WZc87-GsnfJ5ih/exec';
+
+    try {
+      const sheetBody = new URLSearchParams({
+        name: cleanName || 'N/A',
+        email: cleanEmail || 'N/A',
+        phone: cleanPhone || 'N/A',
+        service: cleanService || 'General Inquiry',
+        message: cleanMessage || '',
+        source: cleanSource || 'website',
+        pageUrl: cleanUrl || '',
+      }).toString();
+
+      fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: sheetBody,
+      }).catch((err) => console.warn('Google Sheet async sync notice:', err.message));
+    } catch (sheetErr) {
+      console.warn('Google Sheet forward warning:', sheetErr.message);
+    }
+
     return NextResponse.json({ success: true, leadId: newLead._id }, { status: 201 });
   } catch (error) {
     console.error('Lead Save Error:', error);

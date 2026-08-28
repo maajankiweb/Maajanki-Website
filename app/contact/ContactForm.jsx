@@ -30,10 +30,6 @@ const ContactForm = () => {
 
   const [loading, setLoading] = useState(false);
 
-  // Google Apps Script Web App URL
-  const GOOGLE_SHEET_API =
-    "https://script.google.com/macros/s/AKfycbw9GstFxV5fcwm3s8moNdPtDeOHSN_Wz0I6KAH0bipEiQyc6aDLZN1bBo278XR_q52XnA/exec";
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -48,6 +44,10 @@ const ContactForm = () => {
     setLoading(true);
 
     try {
+      const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+      const isLocationPage = typeof window !== "undefined" && window.location.pathname.includes("/locations/");
+      const pageLocation = isLocationPage ? window.location.pathname.split("/").filter(Boolean).pop() : "";
+
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: {
@@ -55,7 +55,8 @@ const ContactForm = () => {
         },
         body: JSON.stringify({
           ...formData,
-          source: "contact-page"
+          source: isLocationPage ? `location-${pageLocation}` : "contact-page",
+          url: currentUrl,
         }),
       });
 
