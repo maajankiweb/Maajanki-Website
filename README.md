@@ -114,8 +114,8 @@ A production-grade, high-performance Web Platform & Multi-Page Admin Suite built
 - **Udyam MSME Registration**: `UDYAM-BR-38-0014113`
 - **DPIIT Startup India**: Accredited Digital Agency
 - **Official Website**: [https://maajankiwebtech.com](https://maajankiwebtech.com)
-- **Contact Email**: support@maajankiwebtech.com
-- **Phone / WhatsApp**: +91 9110037380
+- **Contact Email**: info@maajankiwebtech.com
+- **Phone / WhatsApp**: +91 9110037380 / +91 9006543913
 
 ---
 

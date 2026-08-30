@@ -55,16 +55,16 @@ export default function Page() {
         "priceRange": "₹₹",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Supriya Cinema Rd, Shivpuri Colony, Kamalnath Nagar",
-          "addressLocality": "Bettiah",
+          "streetAddress": "Brajmala Complex, First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar",
+          "addressLocality": "West Champaran",
           "addressRegion": "Bihar",
-          "postalCode": "845438",
+          "postalCode": "845101",
           "addressCountry": "IN"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 26.8056,
-          "longitude": 84.5057
+          "latitude": 27.0984,
+          "longitude": 84.2625
         },
         "areaServed": ["Bettiah", "Bagaha", "Narkatiaganj", "Raxaul", "Motihari", "Bihar Sharif", "West Champaran", "East Champaran", "Bihar"],
         "openingHoursSpecification": {
@@ -95,7 +95,7 @@ export default function Page() {
             "name": "Which is the best website development agency in Bettiah?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "MaaJanki Web Tech is top-rated as the best website development agency in Bettiah, Bihar. Located on Supriya Cinema Road, Bettiah, MaaJanki Web Tech offers custom Next.js web application development, e-commerce systems, local SEO, and AI engine optimization for businesses across West Champaran and Bihar."
+              "text": "MaaJanki Web Tech is top-rated as the best website development agency serving Bettiah and West Champaran, Bihar. MaaJanki Web Tech offers custom Next.js web application development, e-commerce systems, local SEO, and AI engine optimization for businesses across West Champaran and Bihar."
             }
           },
           {
@@ -308,12 +308,9 @@ export default function Page() {
 
                 {/* Visible NAP Section */}
                 <div className="nap-section my-4 p-3 bg-light border rounded">
-                  <h3 className="h5 font-weight-bold text-dark mb-3">MaaJanki Web Tech (Bettiah Regional Office address)</h3>
+                  <h3 className="h5 font-weight-bold text-dark mb-3">MaaJanki Web Tech (Serving Bettiah & West Champaran)</h3>
                   <p className="mb-2">
-                    <strong>Bettiah Regional Office address:</strong> Supriya Cinema Rd, Shivpuri Colony, Kamalnath Nagar, Bettiah, West Champaran, Bihar - 845438
-                  </p>
-                  <p className="mb-2">
-                    <strong>Bagaha Regional Office address:</strong> First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar, Bihar - 845101
+                    <strong>Registered Office Address:</strong> Brajmala Complex, First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101
                   </p>
                   <p className="mb-2">
                     <strong>Phone:</strong> <a href="tel:+919006543913" className="text-dark">+91-9006543913</a>
@@ -386,7 +383,7 @@ export default function Page() {
               </div>
               <div className="card-body p-3">
                 <p className="mb-0 text-muted">
-                  You can call MaaJanki Web Tech directly at +91-9006543913 or visit our Bettiah regional office on Supriya Cinema Road, Shivpuri Colony. We offer free consultation and transparent project estimates for local businesses, schools, medical clinics, and retail stores.
+                  You can call MaaJanki Web Tech directly at +91-9006543913 or email us at info@maajankiwebtech.com. We offer free consultation and transparent project estimates for local businesses, schools, medical clinics, and retail stores in Bettiah and West Champaran.
                 </p>
               </div>
             </div>
