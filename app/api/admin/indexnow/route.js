@@ -1,6 +1,11 @@
 import { NextResponse } from 'next/server';
+import { validateAdminRequest, recordSecurityEvent } from '@/lib/admin-auth';
 
 export async function POST(request) {
+  // Rate limit: Max 5 IndexNow submissions per minute
+  const authCheck = await validateAdminRequest(request, { maxRequests: 5, windowMs: 60000 });
+  if (!authCheck.authorized) return authCheck.response;
+
   try {
     const body = await request.json().catch(() => ({}));
     const customUrls = body.urls || [];
@@ -59,6 +64,14 @@ export async function POST(request) {
     } catch (err) {
       console.warn('Google Sitemap Ping notice:', err.message);
     }
+
+    recordSecurityEvent({
+      action: 'INDEXNOW_TRIGGER',
+      status: 'SUCCESS',
+      actor: authCheck.userEmail,
+      ip: authCheck.clientIp,
+      details: `Triggered Instant Indexing for ${urlList.length} URLs`,
+    });
 
     return NextResponse.json({
       success: true,

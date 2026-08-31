@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import {
   Search,
   Bell,
@@ -16,25 +17,20 @@ import {
   Shield,
   LogOut,
   PanelLeft,
-  PanelLeftClose
+  PanelLeftClose,
+  Lock
 } from 'lucide-react';
 
 /**
  * AdminHeader Component
  * Premium top navigation bar for MaaJanki Web Tech admin dashboard.
- *
- * @param {Object} props
- * @param {boolean} props.collapsed - Whether the sidebar is collapsed
- * @param {function} props.onToggleCollapse - Handler for toggling desktop sidebar collapse
- * @param {function} props.onToggleMobileSidebar - Handler for toggling mobile sidebar
- * @param {function} props.onToggleTheme - Handler for toggling dark/light theme
- * @param {string} props.theme - Current theme ('light' or 'dark')
  */
 const AdminHeader = ({
   collapsed = false,
   onToggleCollapse = () => {},
   onToggleMobileSidebar = () => {},
   onToggleTheme = () => {},
+  onLockSession = () => {},
   theme = 'light'
 }) => {
   const pathname = usePathname();
@@ -306,11 +302,15 @@ const AdminHeader = ({
               boxShadow: 'var(--shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.1))'
             }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-1, 4px)' }}>
-                <button className="dropdown-item"><User size={16} /> Profile</button>
-                <button className="dropdown-item"><Settings size={16} /> Account Settings</button>
-                <button className="dropdown-item"><Shield size={16} /> Security</button>
+                <Link href="/admin/settings-security" className="dropdown-item" style={{ textDecoration: 'none' }}><User size={16} /> Profile & Account</Link>
+                <Link href="/admin/settings-security" className="dropdown-item" style={{ textDecoration: 'none' }}><Shield size={16} /> Security & 2FA</Link>
+                {onLockSession && (
+                  <button onClick={() => { setIsUserDropdownOpen(false); onLockSession(); }} className="dropdown-item">
+                    <Lock size={16} /> Lock Session
+                  </button>
+                )}
                 <div style={{ height: '1px', backgroundColor: 'var(--border-color, #e5e7eb)', margin: 'var(--spacing-1, 4px) 0' }}></div>
-                <button className="dropdown-item" style={{ color: 'var(--color-danger, #ef4444)' }}><LogOut size={16} /> Sign Out</button>
+                <Link href="/sign-in" className="dropdown-item" style={{ color: 'var(--color-danger, #ef4444)', textDecoration: 'none' }}><LogOut size={16} /> Sign Out</Link>
               </div>
             </div>
           )}

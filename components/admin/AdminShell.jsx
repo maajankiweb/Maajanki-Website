@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect, createContext, useContext, useCallback } from 'react';
+import { useState, useEffect, createContext, useContext, useCallback, useRef } from 'react';
 import AdminSidebar from './AdminSidebar';
 import AdminHeader from './AdminHeader';
+import AdminLockScreen from './AdminLockScreen';
 
 /**
  * Admin Dashboard Context
@@ -20,17 +21,44 @@ export function useAdminContext() {
 
 /**
  * AdminShell — Root layout wrapper for the admin dashboard.
- * Manages sidebar collapse, theme toggle, and mobile drawer state.
+ * Manages sidebar collapse, theme toggle, mobile drawer state, and zero-trust auto-lock.
  */
 export default function AdminShell({ children }) {
-  // Sidebar collapse state (persisted)
   const [collapsed, setCollapsed] = useState(false);
-  // Mobile sidebar open state
   const [mobileOpen, setMobileOpen] = useState(false);
-  // Theme state (persisted)
   const [theme, setTheme] = useState('light');
-  // Loading state for initial mount
   const [mounted, setMounted] = useState(false);
+  const [isLocked, setIsLocked] = useState(false);
+  const inactivityTimerRef = useRef(null);
+
+  // Inactivity Auto-Lock (15 Minutes)
+  const INACTIVITY_TIMEOUT_MS = 15 * 60 * 1000;
+
+  const resetInactivityTimer = useCallback(() => {
+    if (inactivityTimerRef.current) {
+      clearTimeout(inactivityTimerRef.current);
+    }
+    inactivityTimerRef.current = setTimeout(() => {
+      setIsLocked(true);
+    }, INACTIVITY_TIMEOUT_MS);
+  }, [INACTIVITY_TIMEOUT_MS]);
+
+  useEffect(() => {
+    const handleUserActivity = () => {
+      if (!isLocked) {
+        resetInactivityTimer();
+      }
+    };
+
+    const events = ['mousedown', 'mousemove', 'keydown', 'scroll', 'touchstart'];
+    events.forEach(evt => window.addEventListener(evt, handleUserActivity, { passive: true }));
+    resetInactivityTimer();
+
+    return () => {
+      events.forEach(evt => window.removeEventListener(evt, handleUserActivity));
+      if (inactivityTimerRef.current) clearTimeout(inactivityTimerRef.current);
+    };
+  }, [resetInactivityTimer, isLocked]);
 
   // Load persisted preferences on mount
   useEffect(() => {
@@ -45,12 +73,11 @@ export default function AdminShell({ children }) {
       if (savedTheme) {
         setTheme(savedTheme);
       } else {
-        // Check system preference
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         setTheme(prefersDark ? 'dark' : 'light');
       }
     } catch {
-      // localStorage not available (SSR)
+      // localStorage not available
     }
     setMounted(true);
   }, []);
@@ -74,7 +101,7 @@ export default function AdminShell({ children }) {
     }
   }, [collapsed, mounted]);
 
-  // Close mobile sidebar on route change or resize
+  // Close mobile sidebar on resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -98,13 +125,13 @@ export default function AdminShell({ children }) {
 
   // Lock body scroll when mobile sidebar is open
   useEffect(() => {
-    if (mobileOpen) {
+    if (mobileOpen || isLocked) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
     return () => { document.body.style.overflow = ''; };
-  }, [mobileOpen]);
+  }, [mobileOpen, isLocked]);
 
   const toggleCollapse = useCallback(() => {
     setCollapsed(prev => !prev);
@@ -118,22 +145,34 @@ export default function AdminShell({ children }) {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
   }, []);
 
+  const lockSession = useCallback(() => {
+    setIsLocked(true);
+  }, []);
+
+  const unlockSession = useCallback(() => {
+    setIsLocked(false);
+    resetInactivityTimer();
+  }, [resetInactivityTimer]);
+
   const handleNavigate = useCallback((action) => {
-    // Close mobile sidebar on navigation
     setMobileOpen(false);
     if (action === 'signout') {
-      // Redirect to sign-in page (Clerk handles sign out)
       window.location.href = '/sign-in';
+    } else if (action === 'lock') {
+      lockSession();
     }
-  }, []);
+  }, [lockSession]);
 
   const contextValue = {
     collapsed,
     mobileOpen,
     theme,
+    isLocked,
     toggleCollapse,
     toggleMobileSidebar,
     toggleTheme,
+    lockSession,
+    unlockSession,
     handleNavigate,
   };
 
@@ -162,6 +201,9 @@ export default function AdminShell({ children }) {
         data-collapsed={String(collapsed)}
         data-theme={theme}
       >
+        {/* Session Security Lock Overlay */}
+        {isLocked && <AdminLockScreen onUnlock={unlockSession} />}
+
         {/* Mobile Overlay */}
         <div
           className={`admin-sidebar-overlay ${mobileOpen ? 'visible' : ''}`}
@@ -183,6 +225,7 @@ export default function AdminShell({ children }) {
           onToggleCollapse={toggleCollapse}
           onToggleMobileSidebar={toggleMobileSidebar}
           onToggleTheme={toggleTheme}
+          onLockSession={lockSession}
           theme={theme}
         />
 

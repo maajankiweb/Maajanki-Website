@@ -1,8 +1,15 @@
 import { NextResponse } from 'next/server';
+import { validateAdminRequest, sanitizeString, sanitizePayload } from '@/lib/admin-auth';
 
 export async function POST(request) {
+  // Enforce admin auth & rate limiting on AI execution endpoint (max 20 prompts/minute)
+  const authCheck = await validateAdminRequest(request, { maxRequests: 20, windowMs: 60000 });
+  if (!authCheck.authorized) return authCheck.response;
+
   try {
-    const { agentId, agentName, categoryName, systemPrompt, userPrompt } = await request.json();
+    const rawBody = await request.json();
+    const body = sanitizePayload(rawBody);
+    const { agentId, agentName, categoryName, systemPrompt, userPrompt } = body;
 
     if (!userPrompt || !userPrompt.trim()) {
       return NextResponse.json({ success: false, error: 'User prompt is required' }, { status: 400 });

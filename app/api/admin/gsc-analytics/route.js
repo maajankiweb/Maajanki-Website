@@ -1,7 +1,11 @@
 import { NextResponse } from 'next/server';
 import { fetchGscSearchAnalytics } from '@/lib/google-api';
+import { validateAdminRequest } from '@/lib/admin-auth';
 
 export async function GET(request) {
+  const authCheck = await validateAdminRequest(request);
+  if (!authCheck.authorized) return authCheck.response;
+
   try {
     // 1. Google Search Console Verification & Health Meta Data
     const verificationStatus = {

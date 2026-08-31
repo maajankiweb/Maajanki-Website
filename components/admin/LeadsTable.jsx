@@ -62,17 +62,15 @@ export default function LeadsTable({ statusFilter }) {
     return () => clearTimeout(timer);
   }, [searchTerm]);
 
-  const fetchLeads = async () => {
+  const fetchLeads = React.useCallback(async () => {
     try {
       setLoading(true);
       let url = '/api/admin/leads';
       if (statusFilter) url += `?status=${encodeURIComponent(statusFilter)}`;
       
-      // Mocking fetch if API doesn't exist yet, but using the requested pattern
       const res = await fetch(url);
       if (!res.ok) {
         if (res.status === 404) {
-          // Fallback to mock data for demo purposes
           setLeads([
             { id: '1', name: 'Rahul Sharma', company: 'TechNova', email: 'rahul@technova.in', phone: '+91 9876543210', service: 'Web Development', source: 'Google Ads', status: 'New', createdAt: new Date(Date.now() - 3600000).toISOString() },
             { id: '2', name: 'Priya Patel', company: '', email: 'priya.p@gmail.com', phone: '+91 9988776655', service: 'SEO', source: 'Organic', status: 'Contacted', createdAt: new Date(Date.now() - 86400000).toISOString() },
