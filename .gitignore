@@ -21,6 +21,7 @@
 .env.test.local
 .env.production.local
 /public/chat-config.php
+/backups
 
 # logs & cache
 *.log

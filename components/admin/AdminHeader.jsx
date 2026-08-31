@@ -1,199 +1,364 @@
 'use client';
 
-import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import {
   Search,
   Bell,
   Sun,
   Moon,
-  Plus,
-  FileDown,
-  UserPlus,
-  Globe,
+  HelpCircle,
   ChevronDown,
   Menu,
-  Shield,
+  Command,
   User,
-  Radio,
-  Volume2,
-  VolumeX,
-  Bot,
+  Settings,
+  Shield,
+  LogOut,
+  PanelLeft,
+  PanelLeftClose
 } from 'lucide-react';
-import { UserButton, useUser } from '@clerk/nextjs';
 
-export default function AdminHeader({
-  darkMode,
-  setDarkMode,
-  setMobileOpen,
-  searchTerm,
-  setSearchTerm,
-  onLogoutClick,
-  unreadNotificationsCount = 0,
-  onOpenNotifications,
-  liveSync = true,
-  setLiveSync = () => {},
-  soundEnabled = true,
-  setSoundEnabled = () => {},
-  onCreateLeadClick = () => {},
-}) {
-  const router = useRouter();
-  const { user } = useUser();
-  const [lang, setLang] = useState('EN');
-  const [showQuickActions, setShowQuickActions] = useState(false);
+/**
+ * AdminHeader Component
+ * Premium top navigation bar for MaaJanki Web Tech admin dashboard.
+ *
+ * @param {Object} props
+ * @param {boolean} props.collapsed - Whether the sidebar is collapsed
+ * @param {function} props.onToggleCollapse - Handler for toggling desktop sidebar collapse
+ * @param {function} props.onToggleMobileSidebar - Handler for toggling mobile sidebar
+ * @param {function} props.onToggleTheme - Handler for toggling dark/light theme
+ * @param {string} props.theme - Current theme ('light' or 'dark')
+ */
+const AdminHeader = ({
+  collapsed = false,
+  onToggleCollapse = () => {},
+  onToggleMobileSidebar = () => {},
+  onToggleTheme = () => {},
+  theme = 'light'
+}) => {
+  const pathname = usePathname();
+  const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsUserDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  const generateBreadcrumbs = (path) => {
+    if (!path || path === '/admin') {
+      return [{ label: 'Dashboard', isCurrent: true }];
+    }
+
+    const breadcrumbs = [{ label: 'Dashboard', isCurrent: false }];
+
+    if (path.includes('/all-leads')) {
+      breadcrumbs.push({ label: 'Lead Management', isCurrent: false });
+      breadcrumbs.push({ label: 'All Leads', isCurrent: true });
+    } else if (path.includes('/forms/contact')) {
+      breadcrumbs.push({ label: 'Website Forms', isCurrent: false });
+      breadcrumbs.push({ label: 'Contact Form', isCurrent: true });
+    } else if (path.includes('/agency-agents')) {
+      breadcrumbs.push({ label: 'Analytics & AI', isCurrent: false });
+      breadcrumbs.push({ label: 'Agency AI Agents', isCurrent: true });
+    } else {
+      const segments = path.split('/').filter(Boolean);
+      segments.forEach((seg, index) => {
+        if (seg === 'admin') return;
+        const label = seg.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        breadcrumbs.push({ label, isCurrent: index === segments.length - 1 });
+      });
+    }
+
+    return breadcrumbs;
+  };
+
+  const breadcrumbs = generateBreadcrumbs(pathname);
 
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between h-16 px-4 md:px-6 bg-slate-900/95 backdrop-blur border-b border-slate-800 text-slate-100 transition-colors">
-      {/* Left: Mobile Menu Toggle & Search Bar */}
-      <div className="flex items-center gap-3 flex-1 max-w-md">
+    <header className="admin-header" style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      height: 'var(--header-height, 64px)',
+      padding: '0 var(--spacing-4, 16px)',
+      backgroundColor: 'var(--bg-surface, #ffffff)',
+      borderBottom: '1px solid var(--border-color, #e5e7eb)',
+      position: 'sticky',
+      top: 0,
+      zIndex: 40
+    }}>
+      {/* LEFT SECTION */}
+      <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-4, 16px)' }}>
+        {/* Mobile Hamburger */}
         <button
-          onClick={() => setMobileOpen(true)}
-          className="p-2 text-slate-400 hover:text-slate-100 rounded-lg lg:hidden"
+          className="topbar-icon-btn mobile-only-flex"
+          onClick={onToggleMobileSidebar}
+          aria-label="Toggle Mobile Menu"
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'none',
+            border: 'none',
+            color: 'var(--text-secondary, #4b5563)',
+            cursor: 'pointer',
+            padding: 'var(--spacing-2, 8px)',
+            borderRadius: 'var(--radius-md, 6px)'
+          }}
         >
-          <Menu className="w-6 h-6" />
+          <Menu size={20} />
         </button>
 
-        <div className="relative w-full">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-          <input
-            type="text"
-            placeholder="Search leads, customers, projects..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-9 pr-4 py-2 text-sm bg-slate-800/80 border border-slate-700/60 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all"
-          />
+        {/* Desktop Collapse/Expand */}
+        <button
+          className="topbar-icon-btn desktop-only-flex"
+          onClick={onToggleCollapse}
+          aria-label="Toggle Sidebar"
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: 'none',
+            border: 'none',
+            color: 'var(--text-secondary, #4b5563)',
+            cursor: 'pointer',
+            padding: 'var(--spacing-2, 8px)',
+            borderRadius: 'var(--radius-md, 6px)'
+          }}
+        >
+          {collapsed ? <PanelLeft size={20} /> : <PanelLeftClose size={20} />}
+        </button>
+
+        {/* Breadcrumbs */}
+        <nav className="topbar-breadcrumb desktop-only-flex" aria-label="Breadcrumb" style={{ alignItems: 'center', gap: 'var(--spacing-2, 8px)', fontSize: 'var(--font-size-sm, 14px)' }}>
+          {breadcrumbs.map((crumb, index) => (
+            <React.Fragment key={index}>
+              <span className={crumb.isCurrent ? 'topbar-breadcrumb-current' : ''} style={{
+                color: crumb.isCurrent ? 'var(--text-primary, #111827)' : 'var(--text-secondary, #4b5563)',
+                fontWeight: crumb.isCurrent ? '500' : '400'
+              }}>
+                {crumb.label}
+              </span>
+              {index < breadcrumbs.length - 1 && (
+                <span className="topbar-breadcrumb-sep" style={{ color: 'var(--text-tertiary, #9ca3af)' }}>/</span>
+              )}
+            </React.Fragment>
+          ))}
+        </nav>
+      </div>
+
+      {/* CENTER SECTION */}
+      <div className="topbar-search desktop-only-flex" style={{
+        alignItems: 'center',
+        position: 'relative',
+        maxWidth: '400px',
+        width: '100%',
+        margin: '0 var(--spacing-4, 16px)'
+      }}>
+        <Search className="topbar-search-icon" size={18} style={{
+          position: 'absolute',
+          left: 'var(--spacing-3, 12px)',
+          color: 'var(--text-tertiary, #9ca3af)'
+        }} />
+        <input
+          type="text"
+          className="topbar-search-input admin-input"
+          placeholder="Search leads, customers, projects..."
+          style={{
+            width: '100%',
+            padding: 'var(--spacing-2, 8px) var(--spacing-3, 12px)',
+            paddingLeft: 'var(--spacing-9, 36px)',
+            paddingRight: 'var(--spacing-12, 48px)',
+            borderRadius: 'var(--radius-md, 6px)',
+            border: '1px solid var(--border-color, #e5e7eb)',
+            backgroundColor: 'var(--bg-elevated, #f9fafb)',
+            color: 'var(--text-primary, #111827)',
+            outline: 'none',
+            fontSize: 'var(--font-size-sm, 14px)'
+          }}
+        />
+        <div className="topbar-search-shortcut" style={{
+          position: 'absolute',
+          right: 'var(--spacing-3, 12px)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: 'var(--spacing-1, 4px)',
+          color: 'var(--text-tertiary, #9ca3af)',
+          fontSize: 'var(--font-size-xs, 12px)',
+          backgroundColor: 'var(--bg-body, #f3f4f6)',
+          padding: '2px 6px',
+          borderRadius: 'var(--radius-sm, 4px)',
+          border: '1px solid var(--border-color, #e5e7eb)'
+        }}>
+          <Command size={12} />
+          <span>K</span>
         </div>
       </div>
 
-      {/* Right Action Icons & User Dropdown */}
-      <div className="flex items-center gap-2 md:gap-3">
-        {/* Real-Time Live Sync Badge Indicator */}
-        <button
-          onClick={() => setLiveSync(!liveSync)}
-          className={`hidden sm:flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold rounded-lg border transition-all ${
-            liveSync
-              ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-400 hover:bg-emerald-500/20'
-              : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-700'
-          }`}
-          title="Toggle Real-Time Live Background Sync"
-        >
-          <span className={`w-2 h-2 rounded-full ${liveSync ? 'bg-emerald-400 animate-ping' : 'bg-slate-500'}`} />
-          <Radio className="w-3.5 h-3.5" />
-          <span>{liveSync ? 'LIVE SYNC ON' : 'PAUSED'}</span>
+      {/* RIGHT SECTION */}
+      <div className="topbar-actions" style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-3, 12px)' }}>
+        <button className="topbar-icon-btn" aria-label="Notifications" style={{
+          position: 'relative',
+          background: 'none',
+          border: 'none',
+          color: 'var(--text-secondary, #4b5563)',
+          cursor: 'pointer',
+          padding: 'var(--spacing-2, 8px)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: 'var(--radius-full, 9999px)'
+        }}>
+          <Bell size={20} />
+          <span className="badge-dot" style={{
+            position: 'absolute',
+            top: '4px',
+            right: '6px',
+            width: '8px',
+            height: '8px',
+            backgroundColor: 'var(--color-danger, #ef4444)',
+            borderRadius: '50%',
+            border: '2px solid var(--bg-surface, #ffffff)'
+          }}></span>
         </button>
 
-        {/* Real-Time Sound Alert Toggle */}
-        <button
-          onClick={() => setSoundEnabled(!soundEnabled)}
-          className="p-2 text-slate-400 hover:text-slate-100 hover:bg-slate-800 rounded-xl transition-colors hidden sm:block"
-          title={soundEnabled ? 'Mute Lead Sound Alert' : 'Enable Lead Sound Alert'}
-        >
-          {soundEnabled ? <Volume2 className="w-4 h-4 text-emerald-400" /> : <VolumeX className="w-4 h-4 text-slate-500" />}
+        <button className="topbar-icon-btn" onClick={onToggleTheme} aria-label="Toggle Theme" style={{
+          background: 'none',
+          border: 'none',
+          color: 'var(--text-secondary, #4b5563)',
+          cursor: 'pointer',
+          padding: 'var(--spacing-2, 8px)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: 'var(--radius-full, 9999px)'
+        }}>
+          {theme === 'dark' ? <Moon size={20} /> : <Sun size={20} />}
         </button>
 
-        {/* Quick Actions Dropdown */}
-        <div className="relative hidden sm:block">
+        <button className="topbar-icon-btn" aria-label="Help" style={{
+          background: 'none',
+          border: 'none',
+          color: 'var(--text-secondary, #4b5563)',
+          cursor: 'pointer',
+          padding: 'var(--spacing-2, 8px)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: 'var(--radius-full, 9999px)'
+        }}>
+          <HelpCircle size={20} />
+        </button>
+
+        {/* User Dropdown */}
+        <div className="topbar-user" ref={dropdownRef} style={{ position: 'relative', marginLeft: 'var(--spacing-2, 8px)' }}>
           <button
-            onClick={() => setShowQuickActions(!showQuickActions)}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 text-white rounded-lg shadow-sm shadow-orange-500/20 transition-all"
+            onClick={() => setIsUserDropdownOpen(!isUserDropdownOpen)}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 'var(--spacing-2, 8px)',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: 'var(--spacing-1, 4px)'
+            }}
           >
-            <Plus className="w-4 h-4" />
-            <span>Quick Action</span>
-            <ChevronDown className="w-3.5 h-3.5 opacity-80" />
+            <div className="topbar-avatar" style={{
+              width: '36px',
+              height: '36px',
+              borderRadius: 'var(--radius-full, 9999px)',
+              backgroundColor: 'var(--color-primary, #FD6A02)',
+              color: '#fff',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontWeight: '600',
+              fontSize: 'var(--font-size-sm, 14px)'
+            }}>
+              AK
+            </div>
+            <div className="topbar-user-info desktop-only-flex" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+              <span className="topbar-user-name" style={{ fontSize: 'var(--font-size-sm, 14px)', fontWeight: '600', color: 'var(--text-primary, #111827)' }}>Ashish Kumar</span>
+              <span className="topbar-user-role" style={{ fontSize: 'var(--font-size-xs, 12px)', color: 'var(--text-tertiary, #9ca3af)' }}>Super Admin</span>
+            </div>
+            <ChevronDown size={16} style={{ color: 'var(--text-tertiary, #9ca3af)' }} />
           </button>
 
-          {showQuickActions && (
-            <div
-              className="absolute right-0 mt-2 w-52 bg-slate-800 border border-slate-700 rounded-xl shadow-xl py-1 z-50 animate-in fade-in zoom-in-95"
-              onClick={() => setShowQuickActions(false)}
-            >
-              <button
-                onClick={() => onCreateLeadClick()}
-                className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left transition-colors"
-              >
-                <UserPlus className="w-4 h-4 text-orange-400 shrink-0" />
-                <span>Create New Lead</span>
-              </button>
-              <button
-                onClick={() => router.push('/admin/agency-agents')}
-                className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left transition-colors"
-              >
-                <Bot className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Launch Agency AI Agent</span>
-              </button>
-              <button
-                onClick={() => router.push('/admin/team-performance')}
-                className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left transition-colors"
-              >
-                <User className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>Add / Manage Team</span>
-              </button>
-              <button
-                onClick={() => router.push('/admin/reports-exports')}
-                className="w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium text-slate-200 hover:bg-slate-700/60 text-left transition-colors"
-              >
-                <FileDown className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>Generate Export Report</span>
-              </button>
+          {isUserDropdownOpen && (
+            <div className="admin-card" style={{
+              position: 'absolute',
+              top: '100%',
+              right: 0,
+              marginTop: 'var(--spacing-2, 8px)',
+              width: '200px',
+              padding: 'var(--spacing-2, 8px)',
+              zIndex: 50,
+              backgroundColor: 'var(--bg-surface, #ffffff)',
+              border: '1px solid var(--border-color, #e5e7eb)',
+              borderRadius: 'var(--radius-lg, 8px)',
+              boxShadow: 'var(--shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.1))'
+            }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--spacing-1, 4px)' }}>
+                <button className="dropdown-item"><User size={16} /> Profile</button>
+                <button className="dropdown-item"><Settings size={16} /> Account Settings</button>
+                <button className="dropdown-item"><Shield size={16} /> Security</button>
+                <div style={{ height: '1px', backgroundColor: 'var(--border-color, #e5e7eb)', margin: 'var(--spacing-1, 4px) 0' }}></div>
+                <button className="dropdown-item" style={{ color: 'var(--color-danger, #ef4444)' }}><LogOut size={16} /> Sign Out</button>
+              </div>
             </div>
           )}
         </div>
-
-        {/* Dark/Light Toggle */}
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="p-2 text-slate-400 hover:text-slate-100 hover:bg-slate-800 rounded-xl transition-colors"
-          title="Toggle Dark / Light Theme"
-        >
-          {darkMode ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5 text-slate-300" />}
-        </button>
-
-        {/* Notifications */}
-        <button
-          onClick={onOpenNotifications}
-          className="relative p-2 text-slate-400 hover:text-slate-100 hover:bg-slate-800 rounded-xl transition-colors"
-          title="Notifications"
-        >
-          <Bell className="w-5 h-5" />
-          {unreadNotificationsCount > 0 && (
-            <span className="absolute top-1.5 right-1.5 flex items-center justify-center min-w-[18px] h-4 px-1 bg-orange-600 text-white font-bold text-[10px] rounded-full border-2 border-slate-900">
-              {unreadNotificationsCount}
-            </span>
-          )}
-        </button>
-
-        {/* Language Switcher */}
-        <button
-          onClick={() => setLang(lang === 'EN' ? 'HI' : 'EN')}
-          className="hidden md:flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-slate-300 hover:bg-slate-800 rounded-lg transition-colors border border-slate-700/50"
-        >
-          <Globe className="w-3.5 h-3.5 text-orange-400" />
-          <span>{lang}</span>
-        </button>
-
-        <div className="h-6 w-px bg-slate-800 mx-1 hidden sm:block" />
-
-        {/* Clerk User Button & Details */}
-        <div className="flex items-center gap-3">
-          <div className="hidden sm:flex flex-col text-right">
-            <span className="text-xs font-bold text-slate-100 truncate max-w-[120px]">
-              {user?.fullName || user?.primaryEmailAddress?.emailAddress?.split('@')[0] || 'Admin User'}
-            </span>
-            <span className="text-[10px] text-orange-400 font-semibold flex items-center justify-end gap-1">
-              <Shield className="w-3 h-3 inline" /> Super Admin
-            </span>
-          </div>
-
-          <UserButton
-            afterSignOutUrl="/"
-            appearance={{
-              elements: {
-                avatarBox: 'w-9 h-9 border-2 border-orange-500/50 hover:border-orange-500 transition-colors',
-              },
-            }}
-          />
-        </div>
       </div>
+
+      <style jsx>{`
+        .mobile-only-flex {
+          display: none;
+        }
+        .desktop-only-flex {
+          display: flex;
+        }
+        
+        @media (max-width: 768px) {
+          .mobile-only-flex {
+            display: flex;
+          }
+          .desktop-only-flex {
+            display: none !important;
+          }
+        }
+        
+        .topbar-icon-btn:hover {
+          background-color: var(--bg-hover, #f3f4f6);
+        }
+        
+        .dropdown-item {
+          display: flex;
+          alignItems: center;
+          gap: var(--spacing-2, 8px);
+          padding: var(--spacing-2, 8px) var(--spacing-3, 12px);
+          width: 100%;
+          text-align: left;
+          background: none;
+          border: none;
+          border-radius: var(--radius-sm, 4px);
+          cursor: pointer;
+          font-size: var(--font-size-sm, 14px);
+          color: var(--text-secondary, #4b5563);
+        }
+        
+        .dropdown-item:hover {
+          background-color: var(--bg-hover, #f3f4f6);
+        }
+      `}</style>
     </header>
   );
-}
+};
+
+export default AdminHeader;

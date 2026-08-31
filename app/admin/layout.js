@@ -4,6 +4,7 @@ import { auth, currentUser } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import AdminShell from '@/components/admin/AdminShell';
+import './design-tokens.css';
 
 export const metadata = {
   title: 'Admin Control Center | MaaJanki Web Tech',
