@@ -1,5 +1,5 @@
-// Required for prerendering the sitemap during static export (output: 'export')
-export const dynamic = 'force-static';
+// Automatically revalidate & regenerate sitemap every 24 hours (86,400 seconds)
+export const revalidate = 86400;
 
 export default async function sitemap() {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com';

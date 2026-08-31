@@ -1,8 +1,8 @@
 import ClientPage from "./ClientPage";
 
 export const metadata = {
-  title: "Website Development & Digital Marketing Agency in Bihar | MaaJanki Web Tech",
-  description: "MaaJanki Web Tech is the premier website development agency and digital marketing company in Bihar & India. Expert Next.js web development, local SEO, and Google Ads.",
+  title: "Web Development & SEO Agency in Bihar | MaaJanki Web Tech",
+  description: "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js web applications, local SEO, and Google Ads.",
   keywords: [
     "Website Development Company in Bihar",
     "Website Development Agency in Patna",
@@ -17,21 +17,34 @@ export const metadata = {
     "custom web application developer Bihar",
     "MaaJanki Web Tech"
   ],
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Website Development & Digital Marketing Agency in Bihar | MaaJanki Web Tech",
-    description: "MaaJanki Web Tech is the premier website development agency and digital marketing company in Bihar, Patna, Bettiah, Bagaha, and across India.",
-    url: "https://maajankiwebtech.com/",
+    title: "Web Development & SEO Agency in Bihar | MaaJanki Web Tech",
+    description: "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js web applications, local SEO, and Google Ads.",
+    url: "https://maajankiwebtech.com",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development & Digital Marketing Agency in Bihar | MaaJanki Web Tech",
-    description: "Premier website development agency and digital marketing company serving Patna, Bettiah, Bagaha, Bihar, and across India.",
+    title: "Web Development & SEO Agency in Bihar | MaaJanki Web Tech",
+    description: "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js web applications, local SEO, and Google Ads.",
   },
   alternates: {
-    canonical: "https://maajankiwebtech.com/",
+    canonical: "https://maajankiwebtech.com",
   },
 };
 

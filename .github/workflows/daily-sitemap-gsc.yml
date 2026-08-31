@@ -1,0 +1,33 @@
+name: Daily 24-Hour Sitemap & Search Engine Sync
+
+on:
+  schedule:
+    # Runs every 24 hours at 00:00 UTC (05:30 AM IST)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  sitemap-sync:
+    name: Regenerate Sitemap & Ping Search Engines
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm ci || npm install --legacy-peer-deps
+
+      - name: Regenerate XML Sitemap & Submit to IndexNow
+        run: |
+          node scripts/generate-sitemap.js
+          node scripts/submit-indexnow.js
+          node scripts/auto-backlink-syndicate.js
+
+      - name: Trigger Daily Cron API
+        run: |
+          curl -s -X GET "https://maajankiwebtech.com/api/cron/sitemap" || echo "API trigger completed"

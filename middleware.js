@@ -39,6 +39,8 @@ export default clerkMiddleware(async (auth, req) => {
   }
 
   const response = NextResponse.next();
+  // Enforce indexable robots header for search crawlers & SEO tools
+  response.headers.set('X-Robots-Tag', 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
   // Enforce zero-cache anti-stale headers across browser and proxy CDN
   response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0, s-maxage=0');
   response.headers.set('Pragma', 'no-cache');

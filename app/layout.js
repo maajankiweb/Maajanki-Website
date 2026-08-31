@@ -36,11 +36,11 @@ export const viewport = {
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com'),
   title: {
-    default: 'Next.js Web Development Agency & SEO Services in Patna, Bihar & India | MaaJanki Web Tech',
+    default: 'Web Development & SEO Agency in Bihar | MaaJanki Web Tech',
     template: '%s | MaaJanki Web Tech',
   },
   description:
-    'MaaJanki Web Tech is a premier Next.js web development agency and SEO services company in Patna, Bihar, and India. Expert in custom web application development, AEO, local SEO, and performance marketing.',
+    'MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js web applications, local SEO, and Google Ads.',
   keywords: [
     'Next.js web development agency India',
     'SEO services in Patna',
@@ -51,7 +51,22 @@ export const metadata = {
     'local SEO services Bihar'
   ],
   authors: [{ name: 'MaaJanki Web Tech' }],
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://maajankiwebtech.com',
+  },
   icons: {
     icon: '/favicon.png',
     shortcut: '/favicon.png',
