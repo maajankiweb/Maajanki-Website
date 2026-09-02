@@ -463,19 +463,21 @@ export default function AIAutomationHub() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '13px' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px' }}>
                   <span style={{ color: 'var(--color-text-secondary)' }}>Business Name:</span>
-                  <strong>MaaJanki Web Tech</strong>
+                  <strong>Web Development & SEO Agency in Bihar | MaaJanki Web Tech</strong>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px' }}>
                   <span style={{ color: 'var(--color-text-secondary)' }}>MSME Registration:</span>
                   <code>UDYAM-BR-38-0014113</code>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px' }}>
-                  <span style={{ color: 'var(--color-text-secondary)' }}>Primary Operating HQ:</span>
-                  <strong>Bagaha & Patna, Bihar, India</strong>
+                  <span style={{ color: 'var(--color-text-secondary)' }}>Full Address:</span>
+                  <span style={{ fontWeight: '600', textAlign: 'right', maxWidth: '60%' }}>
+                    Brajmala Complex, 1st Floor, Near Cinema House, UCO Bank Bldg, Bagaha Bazar, West Champaran, Bihar - 845101
+                  </span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px' }}>
                   <span style={{ color: 'var(--color-text-secondary)' }}>Direct Hotline:</span>
-                  <strong>+91 90065 43913</strong>
+                  <strong>(+91) 9006543913</strong>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '8px' }}>
                   <span style={{ color: 'var(--color-text-secondary)' }}>Official Email:</span>
@@ -485,13 +487,13 @@ export default function AIAutomationHub() {
 
               <div style={{ marginTop: '16px', display: 'flex', gap: '8px' }}>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=MaaJanki+Web+Tech+Bagaha+Patna"
+                  href="https://share.google/HcCrNXvxvOP3cWf99"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="admin-btn admin-btn-primary"
                   style={{ flex: 1, justifyContent: 'center', fontSize: '13px' }}
                 >
-                  <MapPin size={14} /> Open Live Google Maps Listing
+                  <MapPin size={14} /> Open Live Google Business Profile (share.google)
                 </a>
               </div>
             </div>
