@@ -69,25 +69,15 @@ export default function LeadsTable({ statusFilter }) {
       if (statusFilter) url += `?status=${encodeURIComponent(statusFilter)}`;
       
       const res = await fetch(url);
-      if (!res.ok) {
-        if (res.status === 404) {
-          setLeads([
-            { id: '1', name: 'Rahul Sharma', company: 'TechNova', email: 'rahul@technova.in', phone: '+91 9876543210', service: 'Web Development', source: 'Google Ads', status: 'New', createdAt: new Date(Date.now() - 3600000).toISOString() },
-            { id: '2', name: 'Priya Patel', company: '', email: 'priya.p@gmail.com', phone: '+91 9988776655', service: 'SEO', source: 'Organic', status: 'Contacted', createdAt: new Date(Date.now() - 86400000).toISOString() },
-            { id: '3', name: 'Amit Singh', company: 'Singh Enterprises', email: 'amit@singhent.com', phone: '+91 9123456789', service: 'E-commerce', source: 'Website', status: 'Qualified', createdAt: new Date(Date.now() - 172800000).toISOString() },
-            { id: '4', name: 'Neha Gupta', company: '', email: 'neha123@yahoo.com', phone: '+91 9876512345', service: 'Digital Marketing', source: 'Referral', status: 'Closed', createdAt: new Date(Date.now() - 432000000).toISOString() },
-            { id: '5', name: 'Vikas Kumar', company: 'VK Solutions', email: 'vikas@vksol.in', phone: '+91 9000111222', service: 'Web Development', source: 'WhatsApp', status: 'Spam', createdAt: new Date(Date.now() - 600000).toISOString() },
-          ]);
-          setError(null);
-        } else {
-          throw new Error('Failed to fetch leads');
-        }
-      } else {
+      if (res.ok) {
         const data = await res.json();
         setLeads(data.leads || []);
+      } else {
+        setLeads([]);
       }
     } catch (err) {
       console.error(err);
+      setLeads([]);
       setError(err.message);
     } finally {
       setLoading(false);

@@ -15,52 +15,53 @@ import {
   Zap
 } from 'lucide-react';
 
-const TEAM_MEMBERS = [
-  {
-    name: 'Ashish Kumar',
-    role: 'Founder & Solutions Architect',
-    assigned: 28,
-    contacted: 28,
-    qualified: 18,
-    closed: 12,
-    conversionRate: '42.8%',
-    responseTime: '< 10 mins',
-    revenue: '₹4.8L',
-    rating: '5.0',
-  },
-  {
-    name: 'AI Lead Qualifier Agent',
-    role: 'Automated 24/7 Web & Bot Intake',
-    assigned: 45,
-    contacted: 45,
-    qualified: 32,
-    closed: 18,
-    conversionRate: '40.0%',
-    responseTime: '< 30 secs',
-    revenue: '₹2.4L',
-    rating: '4.9',
-  },
-  {
-    name: 'Sales & Growth Operations',
-    role: 'B2B Client Strategy & Outbound',
-    assigned: 15,
-    contacted: 14,
-    qualified: 10,
-    closed: 6,
-    conversionRate: '40.0%',
-    responseTime: '< 15 mins',
-    revenue: '₹1.8L',
-    rating: '4.8',
-  }
-];
-
 export default function TeamPerformance({ leads = [] }) {
-  const totalLeads = leads.length > 0 ? leads.length : 47;
+  const totalLeads = leads.length;
   const contactedLeads = leads.filter(l => (l.status || '').toLowerCase() === 'contacted').length;
   const qualifiedLeads = leads.filter(l => (l.status || '').toLowerCase() === 'qualified').length;
   const closedLeads = leads.filter(l => (l.status || '').toLowerCase() === 'closed').length;
 
-  const conversionRate = totalLeads > 0 ? ((closedLeads / totalLeads) * 100).toFixed(1) : '25.5';
+  const conversionRate = totalLeads > 0 ? ((closedLeads / totalLeads) * 100).toFixed(1) : '0.0';
+  const totalRevenue = closedLeads > 0 ? `₹${(closedLeads * 50000).toLocaleString('en-IN')}` : '₹0';
+
+  const teamMembers = [
+    {
+      name: 'Ashish Kumar',
+      role: 'Founder & Solutions Architect',
+      assigned: totalLeads,
+      contacted: contactedLeads + qualifiedLeads + closedLeads,
+      qualified: qualifiedLeads,
+      closed: closedLeads,
+      conversionRate: `${conversionRate}%`,
+      responseTime: '< 10 mins',
+      revenue: totalRevenue,
+      rating: '5.0',
+    },
+    {
+      name: 'AI Lead Qualifier Agent',
+      role: 'Automated 24/7 Web & Bot Intake',
+      assigned: leads.filter(l => (l.source || '').toLowerCase().includes('chatbot')).length,
+      contacted: leads.filter(l => (l.source || '').toLowerCase().includes('chatbot')).length,
+      qualified: leads.filter(l => (l.source || '').toLowerCase().includes('chatbot') && (l.status || '').toLowerCase() === 'qualified').length,
+      closed: leads.filter(l => (l.source || '').toLowerCase().includes('chatbot') && (l.status || '').toLowerCase() === 'closed').length,
+      conversionRate: totalLeads > 0 ? `${conversionRate}%` : '0.0%',
+      responseTime: '< 30 secs',
+      revenue: totalRevenue,
+      rating: '5.0',
+    },
+    {
+      name: 'Sales & Growth Operations',
+      role: 'B2B Client Strategy & Outbound',
+      assigned: 0,
+      contacted: 0,
+      qualified: 0,
+      closed: 0,
+      conversionRate: '0.0%',
+      responseTime: '< 15 mins',
+      revenue: '₹0',
+      rating: '5.0',
+    }
+  ];
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
@@ -133,7 +134,7 @@ export default function TeamPerformance({ leads = [] }) {
             <div className="admin-card-title">Operations Desk Efficiency Breakdown</div>
             <div className="admin-card-subtitle">Activity logs, qualification throughput, and closed contracts</div>
           </div>
-          <span className="admin-badge admin-badge-qualified">
+          <span className="admin-badge admin-badge-closed">
             <Zap style={{ width: 12, height: 12 }} /> Live Tracked
           </span>
         </div>
@@ -152,7 +153,7 @@ export default function TeamPerformance({ leads = [] }) {
               </tr>
             </thead>
             <tbody>
-              {TEAM_MEMBERS.map((member, idx) => (
+              {teamMembers.map((member, idx) => (
                 <tr key={idx}>
                   <td>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-3)' }}>

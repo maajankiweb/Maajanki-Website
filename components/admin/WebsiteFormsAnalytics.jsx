@@ -43,86 +43,9 @@ export default function WebsiteFormsAnalytics({ leads = [], activeFormType = 'al
   const [selectedSubmission, setSelectedSubmission] = useState(null);
   const [statusMessage, setStatusMessage] = useState('');
 
-  // Sample submission demo data if live database leads list is empty
+  // Strictly use live database leads submitted to website forms
   const displayLeads = useMemo(() => {
-    if (leads && leads.length > 0) return leads;
-    return [
-      {
-        _id: 'form-101',
-        name: 'Vikram Malhotra',
-        email: 'vikram@malhotratech.com',
-        phone: '+91 98765 43210',
-        company: 'Malhotra Infotech',
-        service: 'Web Development',
-        message: 'Looking for a full Next.js rebuild of our B2B SaaS platform.',
-        source: 'contact-page',
-        url: 'https://maajankiwebtech.com/contact',
-        createdAt: new Date(Date.now() - 3600000 * 2).toISOString(),
-        status: 'New',
-        utm: { source: 'google_ads', medium: 'cpc', campaign: 'saas_dev_india' },
-        device: 'Desktop (macOS / Chrome)',
-      },
-      {
-        _id: 'form-102',
-        name: 'Ananya Sharma',
-        email: 'ananya@bihareshoppe.in',
-        phone: '+91 91234 56789',
-        company: 'Bihar E-Shoppe',
-        service: 'SEO Services',
-        message: 'Need local & e-commerce SEO optimization for 500+ product catalog.',
-        source: 'website-audit',
-        url: 'https://maajankiwebtech.com/#audit',
-        createdAt: new Date(Date.now() - 3600000 * 8).toISOString(),
-        status: 'Qualified',
-        utm: { source: 'organic_search', medium: 'google', campaign: 'seo_bihar' },
-        device: 'Mobile (Android / Chrome)',
-      },
-      {
-        _id: 'form-103',
-        name: 'Rajesh Verma',
-        email: 'rajesh@patnaretail.com',
-        phone: '+91 98350 12345',
-        company: 'Patna Retail Hub',
-        service: 'GST Invoicing Software (InvoBill)',
-        message: 'Need GST billing software trial for our 3 retail outlets in Patna.',
-        source: 'homepage-promo-popup',
-        url: 'https://maajankiwebtech.com/',
-        createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
-        status: 'Contacted',
-        utm: { source: 'direct', medium: 'none', campaign: 'summer_promo' },
-        device: 'Desktop (Windows / Edge)',
-      },
-      {
-        _id: 'form-104',
-        name: 'Dr. S. K. Roy',
-        email: 'drskroy@healthclinic.org',
-        phone: '+91 94310 98765',
-        company: 'Roy Multi-Speciality Clinic',
-        service: 'AI Chatbot & Automation',
-        message: 'Automate appointment booking via WhatsApp and website chatbot.',
-        source: 'chatbot',
-        url: 'https://maajankiwebtech.com/services/ai-automation',
-        createdAt: new Date(Date.now() - 3600000 * 48).toISOString(),
-        status: 'Qualified',
-        utm: { source: 'meta_ads', medium: 'instagram', campaign: 'healthcare_ai' },
-        device: 'Mobile (iOS / Safari)',
-      },
-      {
-        _id: 'form-105',
-        name: 'Amitabh Sen',
-        email: 'amitabh@senlogistics.com',
-        phone: '+91 97712 34567',
-        company: 'Sen Logistics & Freight',
-        service: 'Performance Marketing',
-        message: 'Requesting agency portfolio brochure and pricing breakdown.',
-        source: 'brochure',
-        url: 'https://maajankiwebtech.com/services',
-        createdAt: new Date(Date.now() - 3600000 * 72).toISOString(),
-        status: 'New',
-        utm: { source: 'linkedin', medium: 'social', campaign: 'b2b_outreach' },
-        device: 'Desktop (Windows / Chrome)',
-      }
-    ];
+    return leads || [];
   }, [leads]);
 
   // Aggregate metrics per form

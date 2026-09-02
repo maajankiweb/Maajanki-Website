@@ -31,11 +31,7 @@ export default function ReportsExports({ leads = [] }) {
   const generateExport = (format) => {
     setExportMessage(`Generating ${format.toUpperCase()} export...`);
 
-    const dataToExport = leads.length > 0 ? leads : [
-      { name: 'Vikram Malhotra', email: 'vikram@malhotratech.com', phone: '+91 98765 43210', service: 'Web Development', source: 'contact-page', status: 'New', createdAt: new Date().toISOString() },
-      { name: 'Ananya Sharma', email: 'ananya@bihareshoppe.in', phone: '+91 91234 56789', service: 'SEO Services', source: 'website-audit', status: 'Qualified', createdAt: new Date().toISOString() },
-      { name: 'Rajesh Verma', email: 'rajesh@patnaretail.com', phone: '+91 98350 12345', service: 'GST Invoicing Software', source: 'homepage-promo-popup', status: 'Contacted', createdAt: new Date().toISOString() },
-    ];
+    const dataToExport = leads || [];
 
     setTimeout(() => {
       if (format === 'json') {
@@ -63,7 +59,7 @@ export default function ReportsExports({ leads = [] }) {
         link.click();
       }
 
-      setExportMessage(`✅ Download ready: maajanki_${selectedPreset}_report.${format}`);
+      setExportMessage(`✅ Download ready: maajanki_${selectedPreset}_report.${format} (${dataToExport.length} records)`);
       setTimeout(() => setExportMessage(''), 4000);
     }, 600);
   };

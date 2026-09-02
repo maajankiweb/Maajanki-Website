@@ -26,11 +26,9 @@ export default function LeadMap({ leads = [] }) {
   const [customIcon, setCustomIcon] = useState(null);
 
   const defaultLocations = [
-    { id: 'hq', name: 'MaaJanki Web Tech HQ', lat: 27.0984, lng: 84.2625, type: 'Office', city: 'Bagaha / Patna, Bihar', count: 5 },
-    { id: 'delhi', name: 'Delhi NCR Strategic Desk', lat: 28.6139, lng: 77.2090, type: 'Office', city: 'New Delhi', count: 12 },
-    { id: 'bengaluru', name: 'South India Tech Hub', lat: 12.9716, lng: 77.5946, type: 'Client', city: 'Bengaluru', count: 8 },
-    { id: 'dubai', name: 'International Client Node (UAE)', lat: 25.2048, lng: 55.2708, type: 'Client', city: 'Dubai, UAE', count: 4 },
-    { id: 'usa', name: 'North America Inbound Node', lat: 37.7749, lng: -122.4194, type: 'Lead', city: 'San Francisco, CA', count: 3 },
+    { id: 'hq', name: 'MaaJanki Web Tech HQ', lat: 27.0984, lng: 84.2625, type: 'Office', city: 'Bagaha & Patna, Bihar', count: leads.length },
+    { id: 'delhi', name: 'Delhi NCR Strategic Node', lat: 28.6139, lng: 77.2090, type: 'Office', city: 'New Delhi', count: 0 },
+    { id: 'bengaluru', name: 'South India Hub', lat: 12.9716, lng: 77.5946, type: 'Office', city: 'Bengaluru', count: 0 },
   ];
 
   const locations = defaultLocations;

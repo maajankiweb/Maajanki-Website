@@ -33,7 +33,7 @@ export const metadata = {
   openGraph: {
     title: "Web Development & SEO Agency in Bihar | MaaJanki Web Tech",
     description: "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js web applications, local SEO, and Google Ads.",
-    url: "https://maajankiwebtech.com",
+    url: "https://maajankiwebtech.com/",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
@@ -44,7 +44,7 @@ export const metadata = {
     description: "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js web applications, local SEO, and Google Ads.",
   },
   alternates: {
-    canonical: "https://maajankiwebtech.com",
+    canonical: "https://maajankiwebtech.com/",
   },
 };
 

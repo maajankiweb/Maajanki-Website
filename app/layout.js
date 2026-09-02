@@ -65,7 +65,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://maajankiwebtech.com',
+    canonical: 'https://maajankiwebtech.com/',
   },
   icons: {
     icon: '/favicon.png',

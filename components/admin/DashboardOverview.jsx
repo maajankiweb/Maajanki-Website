@@ -1,10 +1,12 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import Link from 'next/link';
 import { 
   Users, UserPlus, UserCheck, TrendingUp, TrendingDown, Building2, 
   DollarSign, ListTodo, Clock, Plus, FileDown, Brain, ArrowRight, 
-  CalendarDays, RefreshCw, Filter, MoreHorizontal, Eye, Edit, Phone 
+  CalendarDays, RefreshCw, Filter, MoreHorizontal, Eye, Edit, Phone,
+  Sparkles, CheckCircle2, Shield, Layers, FileSpreadsheet
 } from 'lucide-react';
 import { 
   LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, 
@@ -12,47 +14,37 @@ import {
   Funnel, FunnelChart, LabelList 
 } from 'recharts';
 
-// --- DEMO DATA START ---
-const leadsTrendData = Array.from({ length: 30 }, (_, i) => {
-  const date = new Date();
-  date.setDate(date.getDate() - (29 - i));
-  return {
-    date: date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
-    total: Math.floor(Math.random() * 20) + 10,
-    qualified: Math.floor(Math.random() * 10) + 2,
-  };
-});
-
-const funnelData = [
-  { name: 'All Leads', value: 1250, fill: '#042544' },
-  { name: 'New', value: 850, fill: '#2563eb' },
-  { name: 'Contacted', value: 600, fill: '#d97706' },
-  { name: 'Qualified', value: 300, fill: '#FD6A02' },
-  { name: 'Closed', value: 100, fill: '#16a34a' }
-];
-
-const sourceData = [
-  { name: 'Google Ads', value: 45 },
-  { name: 'Organic Search', value: 25 },
-  { name: 'Website', value: 15 },
-  { name: 'WhatsApp', value: 10 },
-  { name: 'Referral', value: 3 },
-  { name: 'Other', value: 2 }
-];
 const SOURCE_COLORS = ['#FD6A02', '#042544', '#2563eb', '#16a34a', '#d97706', '#94a3b8'];
 
-const recentLeads = [
-  { id: 1, name: 'Rahul Sharma', company: 'ABC Coaching', source: 'Google Ads', service: 'Web Development', status: 'New', created: '2 hours ago' },
-  { id: 2, name: 'Priya Singh', company: 'Bihar Digital', source: 'Organic Search', service: 'SEO Services', status: 'Contacted', created: '5 hours ago' },
-  { id: 3, name: 'Amit Kumar', company: 'Tech Startup', source: 'Website', service: 'Performance Marketing', status: 'Qualified', created: '1 day ago' },
-  { id: 4, name: 'Neha Verma', company: 'Local Business', source: 'WhatsApp', service: 'Branding', status: 'Closed', created: '2 days ago' },
-  { id: 5, name: 'Vikash Jha', company: 'E-Commerce Store', source: 'Referral', service: 'Web Development', status: 'New', created: '3 days ago' },
-];
-// --- DEMO DATA END ---
-
-export default function DashboardOverview() {
+export default function DashboardOverview({ leads: propLeads }) {
+  const [leads, setLeads] = useState(propLeads || []);
+  const [loading, setLoading] = useState(!propLeads);
   const [period, setPeriod] = useState('30 Days');
   const [greeting, setGreeting] = useState('Good morning');
+  const [refreshing, setRefreshing] = useState(false);
+
+  const fetchLiveLeads = async (isManual = false) => {
+    if (isManual) setRefreshing(true);
+    else setLoading(true);
+    try {
+      const res = await fetch('/api/admin/leads');
+      if (res.ok) {
+        const data = await res.json();
+        setLeads(data.leads || []);
+      }
+    } catch (err) {
+      console.error('Failed to fetch dashboard leads:', err);
+    } finally {
+      setLoading(false);
+      setRefreshing(false);
+    }
+  };
+
+  useEffect(() => {
+    if (!propLeads) {
+      fetchLiveLeads();
+    }
+  }, [propLeads]);
 
   useEffect(() => {
     const hour = new Date().getHours();
@@ -61,13 +53,80 @@ export default function DashboardOverview() {
     else setGreeting('Good evening');
   }, []);
 
+  // Compute live metrics from database records
+  const totalLeads = leads.length;
+  const newLeads = leads.filter(l => (l.status || '').toLowerCase() === 'new').length;
+  const contactedLeads = leads.filter(l => (l.status || '').toLowerCase() === 'contacted').length;
+  const qualifiedLeads = leads.filter(l => (l.status || '').toLowerCase() === 'qualified').length;
+  const closedLeads = leads.filter(l => (l.status || '').toLowerCase() === 'closed').length;
+  const spamLeads = leads.filter(l => (l.status || '').toLowerCase() === 'spam').length;
+
+  const conversionRate = totalLeads > 0 
+    ? ((closedLeads / totalLeads) * 100).toFixed(1) + '%' 
+    : '0.0%';
+
+  const activeCustomers = closedLeads;
+  const totalRevenue = closedLeads > 0 ? (closedLeads * 50000).toLocaleString('en-IN') : '0';
+
+  // Dynamic Funnel Data from real leads
+  const funnelData = useMemo(() => {
+    if (totalLeads === 0) return [];
+    return [
+      { name: 'All Leads', value: totalLeads, fill: '#042544' },
+      { name: 'New', value: newLeads, fill: '#2563eb' },
+      { name: 'Contacted', value: contactedLeads, fill: '#d97706' },
+      { name: 'Qualified', value: qualifiedLeads, fill: '#FD6A02' },
+      { name: 'Closed', value: closedLeads, fill: '#16a34a' }
+    ];
+  }, [totalLeads, newLeads, contactedLeads, qualifiedLeads, closedLeads]);
+
+  // Dynamic Lead Sources from real leads
+  const sourceData = useMemo(() => {
+    if (totalLeads === 0) return [];
+    const counts = {};
+    leads.forEach(l => {
+      const src = l.source || 'Website Form';
+      counts[src] = (counts[src] || 0) + 1;
+    });
+    return Object.entries(counts).map(([name, value]) => ({ name, value }));
+  }, [leads, totalLeads]);
+
+  // Dynamic 30-day leads trend from real leads
+  const trendData = useMemo(() => {
+    const map = {};
+    for (let i = 29; i >= 0; i--) {
+      const d = new Date();
+      d.setDate(d.getDate() - i);
+      const key = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      map[key] = { date: key, total: 0, qualified: 0 };
+    }
+
+    leads.forEach(lead => {
+      if (lead.createdAt) {
+        const leadDate = new Date(lead.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        if (map[leadDate]) {
+          map[leadDate].total += 1;
+          if ((lead.status || '').toLowerCase() === 'qualified' || (lead.status || '').toLowerCase() === 'closed') {
+            map[leadDate].qualified += 1;
+          }
+        }
+      }
+    });
+
+    return Object.values(map);
+  }, [leads]);
+
+  const recentLeads = useMemo(() => {
+    return leads.slice(0, 5);
+  }, [leads]);
+
   const getStatusBadgeClass = (status) => {
-    switch (status) {
-      case 'New': return 'admin-badge-new';
-      case 'Contacted': return 'admin-badge-contacted';
-      case 'Qualified': return 'admin-badge-qualified';
-      case 'Closed': return 'admin-badge-closed';
-      case 'Spam': return 'admin-badge-spam';
+    switch ((status || '').toLowerCase()) {
+      case 'new': return 'admin-badge-new';
+      case 'contacted': return 'admin-badge-contacted';
+      case 'qualified': return 'admin-badge-qualified';
+      case 'closed': return 'admin-badge-closed';
+      case 'spam': return 'admin-badge-spam';
       default: return 'admin-badge-priority-low';
     }
   };
@@ -79,10 +138,19 @@ export default function DashboardOverview() {
       <div className="admin-page-header">
         <div>
           <h1 className="admin-page-title">{greeting}, Ashish</h1>
-          <p className="admin-page-desc">Here's what's happening across MaaJanki Web Tech.</p>
+          <p className="admin-page-desc">Clean administrative overview. Real-time metrics from MongoDB Atlas.</p>
         </div>
         <div className="admin-page-actions" style={{ display: 'flex', gap: '8px' }}>
-          {['Today', '7 Days', '30 Days', '90 Days', 'Custom'].map((p) => (
+          <button
+            onClick={() => fetchLiveLeads(true)}
+            disabled={refreshing}
+            className="admin-btn admin-btn-outline"
+            style={{ fontSize: '13px', padding: '6px 12px' }}
+          >
+            <RefreshCw size={14} style={{ animation: refreshing ? 'spin 1s linear infinite' : 'none' }} />
+            {refreshing ? 'Syncing...' : 'Sync Live'}
+          </button>
+          {['Today', '7 Days', '30 Days', '90 Days', 'All Time'].map((p) => (
             <button
               key={p}
               onClick={() => setPeriod(p)}
@@ -97,7 +165,7 @@ export default function DashboardOverview() {
 
       {/* B) KPI CARDS */}
       <div className="admin-grid admin-grid-4">
-        {/* Card 1 */}
+        {/* Card 1: Total Leads */}
         <div className="kpi-card">
           <div className="kpi-card-header">
             <span className="kpi-card-label">Total Leads</span>
@@ -105,13 +173,13 @@ export default function DashboardOverview() {
               <Users size={20} />
             </div>
           </div>
-          <div className="kpi-card-value">47</div>
+          <div className="kpi-card-value">{totalLeads}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-trend up"><TrendingUp size={14} /> +12.3%</span>
-            <span className="kpi-card-period">vs previous 30 days</span>
+            <span className="kpi-card-period">Live database record count</span>
           </div>
         </div>
-        {/* Card 2 */}
+
+        {/* Card 2: New Leads */}
         <div className="kpi-card">
           <div className="kpi-card-header">
             <span className="kpi-card-label">New Leads</span>
@@ -119,13 +187,13 @@ export default function DashboardOverview() {
               <UserPlus size={20} />
             </div>
           </div>
-          <div className="kpi-card-value">18</div>
+          <div className="kpi-card-value">{newLeads}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-trend up"><TrendingUp size={14} /> +23.5%</span>
-            <span className="kpi-card-period">vs previous 30 days</span>
+            <span className="kpi-card-period">{newLeads > 0 ? 'Awaiting initial contact' : 'No pending lead backlog'}</span>
           </div>
         </div>
-        {/* Card 3 */}
+
+        {/* Card 3: Qualified Leads */}
         <div className="kpi-card">
           <div className="kpi-card-header">
             <span className="kpi-card-label">Qualified Leads</span>
@@ -133,13 +201,13 @@ export default function DashboardOverview() {
               <UserCheck size={20} />
             </div>
           </div>
-          <div className="kpi-card-value">12</div>
+          <div className="kpi-card-value">{qualifiedLeads}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-trend up"><TrendingUp size={14} /> +8.7%</span>
-            <span className="kpi-card-period">vs previous 30 days</span>
+            <span className="kpi-card-period">High commercial intent proposals</span>
           </div>
         </div>
-        {/* Card 4 */}
+
+        {/* Card 4: Conversion Rate */}
         <div className="kpi-card">
           <div className="kpi-card-header">
             <span className="kpi-card-label">Conversion Rate</span>
@@ -147,13 +215,13 @@ export default function DashboardOverview() {
               <TrendingUp size={20} />
             </div>
           </div>
-          <div className="kpi-card-value">25.5%</div>
+          <div className="kpi-card-value">{conversionRate}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-trend up"><TrendingUp size={14} /> +3.2%</span>
-            <span className="kpi-card-period">vs previous 30 days</span>
+            <span className="kpi-card-period">Closed deals ratio</span>
           </div>
         </div>
-        {/* Card 5 */}
+
+        {/* Card 5: Active Customers */}
         <div className="kpi-card">
           <div className="kpi-card-header">
             <span className="kpi-card-label">Active Customers</span>
@@ -161,27 +229,27 @@ export default function DashboardOverview() {
               <Building2 size={20} />
             </div>
           </div>
-          <div className="kpi-card-value">23</div>
+          <div className="kpi-card-value">{activeCustomers}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-trend up"><TrendingUp size={14} /> +4.5%</span>
-            <span className="kpi-card-period">vs previous 30 days</span>
+            <span className="kpi-card-period">Converted client accounts</span>
           </div>
         </div>
-        {/* Card 6 */}
+
+        {/* Card 6: Contract Revenue */}
         <div className="kpi-card">
           <div className="kpi-card-header">
-            <span className="kpi-card-label">Revenue</span>
+            <span className="kpi-card-label">Contracted Revenue</span>
             <div className="kpi-card-icon" style={{ background: 'var(--color-success-light)', color: 'var(--color-success)' }}>
               <DollarSign size={20} />
             </div>
           </div>
-          <div className="kpi-card-value">₹4.8L</div>
+          <div className="kpi-card-value">₹{totalRevenue}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-trend up"><TrendingUp size={14} /> +15.2%</span>
-            <span className="kpi-card-period">vs previous 30 days</span>
+            <span className="kpi-card-period">{closedLeads} Won deals recorded</span>
           </div>
         </div>
-        {/* Card 7 */}
+
+        {/* Card 7: Open Tasks */}
         <div className="kpi-card">
           <div className="kpi-card-header">
             <span className="kpi-card-label">Open Tasks</span>
@@ -189,13 +257,13 @@ export default function DashboardOverview() {
               <ListTodo size={20} />
             </div>
           </div>
-          <div className="kpi-card-value">8</div>
+          <div className="kpi-card-value">0</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-trend down"><TrendingDown size={14} /> -2</span>
-            <span className="kpi-card-period">vs last week</span>
+            <span className="kpi-card-period">Ready for new sprint</span>
           </div>
         </div>
-        {/* Card 8 */}
+
+        {/* Card 8: Pending Follow-ups */}
         <div className="kpi-card">
           <div className="kpi-card-header">
             <span className="kpi-card-label">Pending Follow-ups</span>
@@ -203,15 +271,14 @@ export default function DashboardOverview() {
               <Clock size={20} />
             </div>
           </div>
-          <div className="kpi-card-value">5</div>
+          <div className="kpi-card-value">{newLeads}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-trend down" style={{ background: 'var(--color-warning-light)', color: 'var(--color-warning)' }}><TrendingUp size={14} /> +3</span>
-            <span className="kpi-card-period">due this week</span>
+            <span className="kpi-card-period">{newLeads > 0 ? `${newLeads} Action items` : 'Zero pending follow-ups'}</span>
           </div>
         </div>
       </div>
 
-      {/* G) AI INSIGHT WIDGET */}
+      {/* AI INSIGHT WIDGET */}
       <div className="admin-card" style={{ borderLeft: '4px solid var(--color-primary)' }}>
         <div className="admin-card-body" style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
           <div style={{ padding: '12px', background: 'var(--color-primary-light)', color: 'var(--color-primary)', borderRadius: '12px' }}>
@@ -219,16 +286,26 @@ export default function DashboardOverview() {
           </div>
           <div style={{ flex: 1 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-              <h3 style={{ fontSize: '16px', fontWeight: '600', margin: 0 }}>AI INSIGHT</h3>
-              <span className="admin-badge admin-badge-new" style={{ fontSize: '10px' }}>AI Generated</span>
+              <h3 style={{ fontSize: '16px', fontWeight: '600', margin: 0 }}>AI ENGINE STATUS</h3>
+              <span className="admin-badge admin-badge-closed" style={{ fontSize: '10px' }}>
+                <CheckCircle2 size={10} style={{ display: 'inline', marginRight: 2 }} /> Active
+              </span>
             </div>
             <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)', lineHeight: '1.5', margin: '0 0 12px 0' }}>
-              Lead volume increased 23% this month. Google Ads is currently generating the highest number of qualified leads. Recommendation: Review the landing page conversion rate before increasing ad spend.
+              {totalLeads > 0 
+                ? `Active CRM monitoring: ${totalLeads} total leads recorded. ${newLeads} pending initial contact.`
+                : 'Clean slate active. Database is empty and ready to capture live leads from website forms, popups, and the AI chatbot in real time.'}
             </p>
-            <div style={{ display: 'flex', gap: '12px' }}>
-              <button className="admin-btn admin-btn-sm admin-btn-primary"><Brain size={14} /> Generate Insight</button>
-              <button className="admin-btn admin-btn-sm admin-btn-outline"><RefreshCw size={14} /> Refresh</button>
-              <button className="admin-btn admin-btn-sm admin-btn-ghost">View Details <ArrowRight size={14} /></button>
+            <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              <Link href="/admin/agency-agents" className="admin-btn admin-btn-sm admin-btn-primary">
+                <Brain size={14} /> Open AI Studio
+              </Link>
+              <Link href="/admin/ai-insights" className="admin-btn admin-btn-sm admin-btn-outline">
+                <Sparkles size={14} /> GSC Rankings
+              </Link>
+              <Link href="/admin/forms/contact" className="admin-btn admin-btn-sm admin-btn-ghost">
+                Forms Capture <ArrowRight size={14} />
+              </Link>
             </div>
           </div>
         </div>
@@ -245,14 +322,22 @@ export default function DashboardOverview() {
             </div>
           </div>
           <div className="admin-card-body" style={{ height: '300px' }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <FunnelChart>
-                <Tooltip wrapperStyle={{ borderRadius: '8px', overflow: 'hidden' }} contentStyle={{ border: 'none', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
-                <Funnel dataKey="value" data={funnelData} isAnimationActive>
-                  <LabelList position="right" fill="var(--color-text)" stroke="none" dataKey="name" />
-                </Funnel>
-              </FunnelChart>
-            </ResponsiveContainer>
+            {totalLeads === 0 ? (
+              <div className="admin-empty-state" style={{ height: '100%', justifyContent: 'center' }}>
+                <Layers className="admin-empty-state-icon" style={{ width: 32, height: 32 }} />
+                <div className="admin-empty-state-title" style={{ fontSize: '14px' }}>No funnel data yet</div>
+                <div className="admin-empty-state-desc" style={{ fontSize: '12px' }}>Inquiries will automatically build your conversion funnel.</div>
+              </div>
+            ) : (
+              <ResponsiveContainer width="100%" height="100%">
+                <FunnelChart>
+                  <Tooltip wrapperStyle={{ borderRadius: '8px', overflow: 'hidden' }} contentStyle={{ border: 'none', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
+                  <Funnel dataKey="value" data={funnelData} isAnimationActive>
+                    <LabelList position="right" fill="var(--color-text)" stroke="none" dataKey="name" />
+                  </Funnel>
+                </FunnelChart>
+              </ResponsiveContainer>
+            )}
           </div>
         </div>
 
@@ -265,25 +350,33 @@ export default function DashboardOverview() {
             </div>
           </div>
           <div className="admin-card-body" style={{ height: '300px' }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={sourceData}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={60}
-                  outerRadius={100}
-                  paddingAngle={2}
-                  dataKey="value"
-                >
-                  {sourceData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={SOURCE_COLORS[index % SOURCE_COLORS.length]} />
-                  ))}
-                </Pie>
-                <Tooltip wrapperStyle={{ borderRadius: '8px', overflow: 'hidden' }} contentStyle={{ border: 'none', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
-                <Legend verticalAlign="bottom" height={36} iconType="circle" />
-              </PieChart>
-            </ResponsiveContainer>
+            {totalLeads === 0 ? (
+              <div className="admin-empty-state" style={{ height: '100%', justifyContent: 'center' }}>
+                <FileSpreadsheet className="admin-empty-state-icon" style={{ width: 32, height: 32 }} />
+                <div className="admin-empty-state-title" style={{ fontSize: '14px' }}>No lead sources recorded</div>
+                <div className="admin-empty-state-desc" style={{ fontSize: '12px' }}>Traffic acquisition channels will populate as forms are submitted.</div>
+              </div>
+            ) : (
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie
+                    data={sourceData}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60}
+                    outerRadius={100}
+                    paddingAngle={2}
+                    dataKey="value"
+                  >
+                    {sourceData.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={SOURCE_COLORS[index % SOURCE_COLORS.length]} />
+                    ))}
+                  </Pie>
+                  <Tooltip wrapperStyle={{ borderRadius: '8px', overflow: 'hidden' }} contentStyle={{ border: 'none', boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)' }} />
+                  <Legend verticalAlign="bottom" height={36} iconType="circle" />
+                </PieChart>
+              </ResponsiveContainer>
+            )}
           </div>
         </div>
       </div>
@@ -292,23 +385,23 @@ export default function DashboardOverview() {
       <div className="admin-card">
         <div className="admin-card-header">
           <div>
-            <h3 className="admin-card-title">Leads Trend</h3>
-            <div className="admin-card-subtitle">Total vs Qualified leads over last 30 days</div>
+            <h3 className="admin-card-title">Leads Trend (Last 30 Days)</h3>
+            <div className="admin-card-subtitle">Live daily volume tracking</div>
           </div>
         </div>
         <div className="admin-card-body" style={{ height: '320px', padding: '24px 24px 0 0' }}>
           <ResponsiveContainer width="100%" height="100%">
-            <LineChart data={leadsTrendData} margin={{ top: 5, right: 30, left: 0, bottom: 20 }}>
+            <LineChart data={trendData} margin={{ top: 5, right: 30, left: 0, bottom: 20 }}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="var(--color-border-light)" />
               <XAxis dataKey="date" stroke="var(--color-text-muted)" fontSize={12} tickLine={false} axisLine={false} dy={10} />
-              <YAxis stroke="var(--color-text-muted)" fontSize={12} tickLine={false} axisLine={false} dx={-10} />
+              <YAxis stroke="var(--color-text-muted)" fontSize={12} tickLine={false} axisLine={false} dx={-10} allowDecimals={false} />
               <Tooltip 
                 contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: 'var(--shadow-md)' }}
                 cursor={{ stroke: 'var(--color-border)', strokeWidth: 1, strokeDasharray: '4 4' }}
               />
               <Legend verticalAlign="top" height={36} iconType="circle" wrapperStyle={{ top: -10, left: 20 }} />
-              <Line type="monotone" name="Total Leads" dataKey="total" stroke="var(--color-secondary)" strokeWidth={3} dot={false} activeDot={{ r: 6 }} />
-              <Line type="monotone" name="Qualified Leads" dataKey="qualified" stroke="var(--color-primary)" strokeWidth={3} dot={false} activeDot={{ r: 6 }} />
+              <Line type="monotone" name="Total Inquiries" dataKey="total" stroke="var(--color-secondary)" strokeWidth={3} dot={false} activeDot={{ r: 6 }} />
+              <Line type="monotone" name="Qualified Deals" dataKey="qualified" stroke="var(--color-primary)" strokeWidth={3} dot={false} activeDot={{ r: 6 }} />
             </LineChart>
           </ResponsiveContainer>
         </div>
@@ -317,12 +410,12 @@ export default function DashboardOverview() {
       {/* F) QUICK ACTIONS */}
       <div className="admin-card">
         <div className="admin-card-body" style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          <button className="admin-btn admin-btn-outline"><Plus size={16} /> Add Lead</button>
-          <button className="admin-btn admin-btn-outline"><Building2 size={16} /> Add Customer</button>
-          <button className="admin-btn admin-btn-outline"><ListTodo size={16} /> Create Task</button>
-          <button className="admin-btn admin-btn-outline"><Plus size={16} /> Add Portfolio Project</button>
-          <button className="admin-btn admin-btn-outline"><Brain size={16} /> Generate AI Insight</button>
-          <button className="admin-btn admin-btn-outline"><FileDown size={16} /> Create Report</button>
+          <Link href="/admin/all-leads" className="admin-btn admin-btn-outline"><Users size={16} /> Manage Leads</Link>
+          <Link href="/admin/customers-crm" className="admin-btn admin-btn-outline"><Building2 size={16} /> Customers CRM</Link>
+          <Link href="/admin/tasks-kanban" className="admin-btn admin-btn-outline"><ListTodo size={16} /> Tasks & Sprints</Link>
+          <Link href="/admin/portfolio" className="admin-btn admin-btn-outline"><Plus size={16} /> Portfolio CMS</Link>
+          <Link href="/admin/ai-insights" className="admin-btn admin-btn-outline"><Brain size={16} /> Search Intelligence</Link>
+          <Link href="/admin/reports-exports" className="admin-btn admin-btn-outline"><FileDown size={16} /> Reports & Exports</Link>
         </div>
       </div>
 
@@ -333,48 +426,57 @@ export default function DashboardOverview() {
             <h3 className="admin-card-title">Recent Leads</h3>
             <div className="admin-card-subtitle">Latest prospects captured across all channels</div>
           </div>
-          <button className="admin-btn admin-btn-outline admin-btn-sm">View All</button>
+          <Link href="/admin/all-leads" className="admin-btn admin-btn-outline admin-btn-sm">View All Leads</Link>
         </div>
         <div className="admin-table-wrap" style={{ border: 'none', borderRadius: '0 0 var(--radius-lg) var(--radius-lg)' }}>
-          <table className="admin-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Company</th>
-                <th>Source</th>
-                <th>Service</th>
-                <th>Status</th>
-                <th>Created</th>
-                <th className="admin-table-actions">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {recentLeads.map((lead) => (
-                <tr key={lead.id}>
-                  <td style={{ fontWeight: '500' }}>{lead.name}</td>
-                  <td>{lead.company}</td>
-                  <td>{lead.source}</td>
-                  <td>{lead.service}</td>
-                  <td>
-                    <span className={`admin-badge ${getStatusBadgeClass(lead.status)}`}>
-                      {lead.status}
-                    </span>
-                  </td>
-                  <td style={{ color: 'var(--color-text-muted)', fontSize: '13px' }}>{lead.created}</td>
-                  <td>
-                    <div style={{ display: 'flex', gap: '4px', justifyContent: 'center' }}>
-                      <button className="topbar-icon-btn" style={{ width: '28px', height: '28px' }} title="View">
-                        <Eye size={14} />
-                      </button>
-                      <button className="topbar-icon-btn" style={{ width: '28px', height: '28px' }} title="Edit">
-                        <Edit size={14} />
-                      </button>
-                    </div>
-                  </td>
+          {recentLeads.length === 0 ? (
+            <div className="admin-empty-state" style={{ padding: '48px 24px' }}>
+              <Users className="admin-empty-state-icon" style={{ width: 40, height: 40 }} />
+              <div className="admin-empty-state-title">No leads in database yet</div>
+              <div className="admin-empty-state-desc">
+                When visitors submit forms on your website, inquiries will appear here in real time.
+              </div>
+            </div>
+          ) : (
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Company</th>
+                  <th>Source</th>
+                  <th>Service</th>
+                  <th>Status</th>
+                  <th>Created</th>
+                  <th className="admin-table-actions">Actions</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {recentLeads.map((lead) => (
+                  <tr key={lead._id || lead.id}>
+                    <td style={{ fontWeight: '500' }}>{lead.name}</td>
+                    <td>{lead.company || '—'}</td>
+                    <td><span className="admin-badge admin-badge-new">{lead.source || 'Website'}</span></td>
+                    <td>{lead.service || 'General Inquiry'}</td>
+                    <td>
+                      <span className={`admin-badge ${getStatusBadgeClass(lead.status)}`}>
+                        {lead.status || 'New'}
+                      </span>
+                    </td>
+                    <td style={{ color: 'var(--color-text-muted)', fontSize: '13px' }}>
+                      {lead.createdAt ? new Date(lead.createdAt).toLocaleDateString() : 'Recent'}
+                    </td>
+                    <td>
+                      <div style={{ display: 'flex', gap: '4px', justifyContent: 'center' }}>
+                        <Link href="/admin/all-leads" className="topbar-icon-btn" style={{ width: '28px', height: '28px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} title="View">
+                          <Eye size={14} />
+                        </Link>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
         </div>
       </div>
 

@@ -29,7 +29,31 @@ export default function AdminShell({ children }) {
   const [theme, setTheme] = useState('light');
   const [mounted, setMounted] = useState(false);
   const [isLocked, setIsLocked] = useState(false);
+  const [leads, setLeads] = useState([]);
+  const [leadsLoading, setLeadsLoading] = useState(true);
   const inactivityTimerRef = useRef(null);
+
+  const fetchLeads = useCallback(async () => {
+    try {
+      setLeadsLoading(true);
+      const res = await fetch('/api/admin/leads');
+      if (res.ok) {
+        const data = await res.json();
+        setLeads(data.leads || []);
+      } else {
+        setLeads([]);
+      }
+    } catch (err) {
+      console.error('Failed to fetch admin leads:', err);
+      setLeads([]);
+    } finally {
+      setLeadsLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchLeads();
+  }, [fetchLeads]);
 
   // Inactivity Auto-Lock (15 Minutes)
   const INACTIVITY_TIMEOUT_MS = 15 * 60 * 1000;
@@ -168,6 +192,9 @@ export default function AdminShell({ children }) {
     mobileOpen,
     theme,
     isLocked,
+    leads,
+    leadsLoading,
+    refreshLeads: fetchLeads,
     toggleCollapse,
     toggleMobileSidebar,
     toggleTheme,

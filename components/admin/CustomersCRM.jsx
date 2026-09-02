@@ -38,92 +38,22 @@ export default function CustomersCRM({ leads = [] }) {
   const [tierFilter, setTierFilter] = useState('all');
   const [selectedCustomer, setSelectedCustomer] = useState(null);
 
-  // Derive CRM customer records from leads or sample database records
+  // Derive CRM customer records strictly from real database leads
   const customerList = useMemo(() => {
-    if (leads && leads.length > 0) {
-      return leads.map((l, idx) => ({
-        id: l._id || `cust-${idx}`,
-        name: l.name || 'Enterprise Client',
-        company: l.company || `${l.name ? l.name.split(' ')[0] : 'Client'} Enterprises`,
-        email: l.email || 'client@company.in',
-        phone: l.phone || '+91 98000 00000',
-        service: l.service || 'Web Development & SEO',
-        status: l.status || 'New',
-        dealValue: l.status === 'Closed' || l.status === 'closed' ? 150000 : l.status === 'Qualified' || l.status === 'qualified' ? 75000 : 25000,
-        tier: (l.status || '').toLowerCase() === 'closed' ? 'VIP Enterprise' : (l.status || '').toLowerCase() === 'qualified' ? 'Growth Client' : 'Prospect',
-        createdAt: l.createdAt || new Date().toISOString(),
-        notes: l.message || 'Client inquired via website form for customized digital solutions.',
-      }));
-    }
-
-    // Realistic demo CRM accounts
-    return [
-      {
-        id: 'cust-1',
-        name: 'Ashok Singhania',
-        company: 'Singhania Logistics Ltd.',
-        email: 'ashok@singhanialogistics.com',
-        phone: '+91 98350 44556',
-        service: 'Next.js Custom SaaS & ERP',
-        status: 'Closed',
-        dealValue: 240000,
-        tier: 'VIP Enterprise',
-        createdAt: new Date(Date.now() - 86400000 * 5).toISOString(),
-        notes: 'Signed 12-month enterprise SaaS development & cloud hosting contract.',
-      },
-      {
-        id: 'cust-2',
-        name: 'Dr. Manish Jha',
-        company: 'Patliputra Diagnostics Hub',
-        email: 'drjha@patliputradiagnostics.in',
-        phone: '+91 94312 88990',
-        service: 'Local SEO & Google Ads',
-        status: 'Qualified',
-        dealValue: 85000,
-        tier: 'Growth Client',
-        createdAt: new Date(Date.now() - 86400000 * 12).toISOString(),
-        notes: 'Monthly retainer for high-intent medical clinic lead generation across Bihar.',
-      },
-      {
-        id: 'cust-3',
-        name: 'Ritu Agarwal',
-        company: 'Agarwal Sarees & Silks',
-        email: 'ritu@agarwalsarees.com',
-        phone: '+91 91223 34455',
-        service: 'InvoBill GST Billing Software',
-        status: 'Closed',
-        dealValue: 45000,
-        tier: 'VIP Enterprise',
-        createdAt: new Date(Date.now() - 86400000 * 20).toISOString(),
-        notes: '3-store license for InvoBill GST invoicing and thermal printer setup.',
-      },
-      {
-        id: 'cust-4',
-        name: 'Deepak Choudhary',
-        company: 'Champaran Agrotech Co.',
-        email: 'deepak@champaranagro.in',
-        phone: '+91 97711 22334',
-        service: 'E-Commerce Website Development',
-        status: 'Contacted',
-        dealValue: 60000,
-        tier: 'Prospect',
-        createdAt: new Date(Date.now() - 86400000 * 2).toISOString(),
-        notes: 'Requested proposal for B2B agricultural equipment product listing.',
-      },
-      {
-        id: 'cust-5',
-        name: 'Kavita Mishra',
-        company: 'Mishra Academy & Coaching',
-        email: 'kavita@mishraacademy.org',
-        phone: '+91 90065 11223',
-        service: 'Branding & Social Media (SMO)',
-        status: 'Qualified',
-        dealValue: 50000,
-        tier: 'Growth Client',
-        createdAt: new Date(Date.now() - 86400000 * 7).toISOString(),
-        notes: 'Looking for full Instagram & YouTube branding and digital lead funnels.',
-      }
-    ];
+    if (!leads || leads.length === 0) return [];
+    return leads.map((l, idx) => ({
+      id: l._id || `cust-${idx}`,
+      name: l.name || 'Enterprise Client',
+      company: l.company || `${l.name ? l.name.split(' ')[0] : 'Client'} Enterprises`,
+      email: l.email || 'client@company.in',
+      phone: l.phone || '+91 98000 00000',
+      service: l.service || 'Web Development & SEO',
+      status: l.status || 'New',
+      dealValue: (l.status || '').toLowerCase() === 'closed' ? 150000 : (l.status || '').toLowerCase() === 'qualified' ? 75000 : 25000,
+      tier: (l.status || '').toLowerCase() === 'closed' ? 'VIP Enterprise' : (l.status || '').toLowerCase() === 'qualified' ? 'Growth Client' : 'Prospect',
+      createdAt: l.createdAt || new Date().toISOString(),
+      notes: l.message || 'Inquiry captured from website form.',
+    }));
   }, [leads]);
 
   const filteredCustomers = useMemo(() => {

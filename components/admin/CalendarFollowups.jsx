@@ -20,60 +20,27 @@ import {
   MapPin
 } from 'lucide-react';
 
-const INITIAL_EVENTS = [
-  {
-    id: 'ev-1',
-    title: 'Discovery Call: Next.js SaaS Rebuild',
-    client: 'Vikram Malhotra (Malhotra Infotech)',
-    email: 'vikram@malhotratech.com',
-    phone: '+91 98765 43210',
-    type: 'Video',
-    date: '2026-08-31',
-    time: '11:30 AM',
-    status: 'Scheduled',
-    notes: 'Review project scope, microservice architecture, and Q3 deployment timeline.',
-  },
-  {
-    id: 'ev-2',
-    title: 'Consultation: Local SEO & Keyword Intent Strategy',
-    client: 'Dr. Manish Jha (Patliputra Diagnostics)',
-    email: 'drjha@patliputradiagnostics.in',
-    phone: '+91 94312 88990',
-    type: 'PhoneCall',
-    date: '2026-08-31',
-    time: '02:00 PM',
-    status: 'Scheduled',
-    notes: 'Evaluate Google Search Console rankings and local citation opportunities across Bihar.',
-  },
-  {
-    id: 'ev-3',
-    title: 'Product Demo: InvoBill GST Software Integration',
-    client: 'Rajesh Verma (Patna Retail Hub)',
-    email: 'rajesh@patnaretail.com',
-    phone: '+91 98350 12345',
-    type: 'Video',
-    date: '2026-09-01',
-    time: '04:30 PM',
-    status: 'Upcoming',
-    notes: 'Walkthrough multi-terminal billing, barcode scanning, and GST return export.',
-  },
-  {
-    id: 'ev-4',
-    title: 'Performance Marketing Audit Review',
-    client: 'Ananya Sharma (Bihar E-Shoppe)',
-    email: 'ananya@bihareshoppe.in',
-    phone: '+91 91234 56789',
-    type: 'PhoneCall',
-    date: '2026-09-02',
-    time: '10:00 AM',
-    status: 'Upcoming',
-    notes: 'Analyze Meta Ads ROAS and review custom e-commerce landing page conversion rates.',
-  }
-];
+const INITIAL_EVENTS = [];
 
 export default function CalendarFollowups({ leads = [] }) {
   const [selectedDate, setSelectedDate] = useState(new Date().toISOString().slice(0, 10));
-  const [events, setEvents] = useState(INITIAL_EVENTS);
+  const [events, setEvents] = useState(() => {
+    if (leads && leads.length > 0) {
+      return leads.map((l, idx) => ({
+        id: l._id || `ev-${idx}`,
+        title: `Follow-up: ${l.service || 'Website Inquiry'}`,
+        client: l.name || 'Prospect',
+        email: l.email || '',
+        phone: l.phone || '',
+        type: idx % 2 === 0 ? 'Video' : 'PhoneCall',
+        date: new Date(l.createdAt || Date.now()).toISOString().slice(0, 10),
+        time: '11:00 AM',
+        status: (l.status || '').toLowerCase() === 'closed' ? 'Completed' : 'Scheduled',
+        notes: l.message || 'Inquiry follow-up',
+      }));
+    }
+    return [];
+  });
   const [typeFilter, setTypeFilter] = useState('all');
   const [showModal, setShowModal] = useState(false);
   const [newEvent, setNewEvent] = useState({

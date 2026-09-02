@@ -123,7 +123,7 @@ export default async function sitemap() {
   ];
 
   return [...staticPages, ...aiDiscoveryFiles].map((page) => ({
-    url: `${baseUrl}${page.path}`,
+    url: page.path === '' || page.path === '/' ? `${baseUrl}/` : `${baseUrl}${page.path}`,
     lastModified: new Date(),
     changeFrequency: page.changeFrequency,
     priority: page.priority,
