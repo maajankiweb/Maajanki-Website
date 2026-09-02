@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Plus,
   MoreHorizontal,
@@ -16,98 +16,16 @@ import {
   X,
   Sparkles,
   ArrowRight,
-  ArrowLeft
+  ArrowLeft,
+  Trash2,
+  ListTodo
 } from 'lucide-react';
 
-const INITIAL_TASKS = {
-  todo: [
-    {
-      id: 'task-1',
-      title: 'Run Schema.org Audit on 58 Global Location Pages',
-      category: 'SEO & Indexing',
-      priority: 'High',
-      date: 'Aug 31',
-      members: ['AK', 'SEO'],
-      comments: 3,
-      attachments: 2,
-    },
-    {
-      id: 'task-2',
-      title: 'Configure Google Analytics 4 Custom Events for Audit Form',
-      category: 'Analytics',
-      priority: 'Medium',
-      date: 'Sep 02',
-      members: ['DEV'],
-      comments: 1,
-      attachments: 0,
-    },
-    {
-      id: 'task-3',
-      title: 'Onboard Bihar E-Shoppe into InvoBill GST Platform',
-      category: 'Client Success',
-      priority: 'High',
-      date: 'Sep 03',
-      members: ['AK'],
-      comments: 4,
-      attachments: 1,
-    }
-  ],
-  inProgress: [
-    {
-      id: 'task-4',
-      title: 'Deploy Next.js 15 App Router Production Optimization',
-      category: 'Engineering',
-      priority: 'High',
-      date: 'Today',
-      members: ['DEV', 'AK'],
-      comments: 6,
-      attachments: 3,
-    },
-    {
-      id: 'task-5',
-      title: 'IndexNow Push for New Case Studies & Service URLs',
-      category: 'Automation',
-      priority: 'Medium',
-      date: 'Today',
-      members: ['BOT'],
-      comments: 2,
-      attachments: 0,
-    }
-  ],
-  review: [
-    {
-      id: 'task-6',
-      title: 'Review Performance Marketing Funnel for Bagaha Clients',
-      category: 'Marketing',
-      priority: 'Low',
-      date: 'Sep 01',
-      members: ['MKT'],
-      comments: 2,
-      attachments: 1,
-    }
-  ],
-  completed: [
-    {
-      id: 'task-7',
-      title: 'Implement Dark Mode Tokens and Glassmorphism App Shell',
-      category: 'UI/UX Design',
-      priority: 'High',
-      date: 'Aug 30',
-      members: ['DES', 'DEV'],
-      comments: 8,
-      attachments: 5,
-    },
-    {
-      id: 'task-8',
-      title: 'DPIIT & MSME Trust Badge Verification in Footer',
-      category: 'Compliance',
-      priority: 'Medium',
-      date: 'Aug 29',
-      members: ['AK'],
-      comments: 1,
-      attachments: 2,
-    }
-  ],
+const EMPTY_TASKS = {
+  todo: [],
+  inProgress: [],
+  review: [],
+  completed: [],
 };
 
 const COLUMNS_CONFIG = [
@@ -118,23 +36,55 @@ const COLUMNS_CONFIG = [
 ];
 
 export default function TasksKanban() {
-  const [columns, setColumns] = useState(INITIAL_TASKS);
+  const [columns, setColumns] = useState(EMPTY_TASKS);
+  const [mounted, setMounted] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [newTaskTitle, setNewTaskTitle] = useState('');
   const [newTaskCategory, setNewTaskCategory] = useState('Engineering');
   const [newTaskPriority, setNewTaskPriority] = useState('Medium');
   const [newTaskCol, setNewTaskCol] = useState('todo');
 
+  // Load persistent user tasks from localStorage
+  useEffect(() => {
+    setMounted(true);
+    try {
+      const saved = localStorage.getItem('maajanki_kanban_tasks');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed && typeof parsed === 'object') {
+          setColumns({
+            todo: parsed.todo || [],
+            inProgress: parsed.inProgress || [],
+            review: parsed.review || [],
+            completed: parsed.completed || []
+          });
+        }
+      }
+    } catch (err) {
+      console.warn('Kanban localStorage load notice:', err.message);
+    }
+  }, []);
+
+  // Save to localStorage on change
+  const saveTasks = (newCols) => {
+    setColumns(newCols);
+    try {
+      localStorage.setItem('maajanki_kanban_tasks', JSON.stringify(newCols));
+    } catch (err) {
+      console.warn('Kanban localStorage save notice:', err.message);
+    }
+  };
+
   const moveTask = (taskId, fromCol, toCol) => {
-    setColumns(prev => {
-      const task = prev[fromCol].find(t => t.id === taskId);
-      if (!task) return prev;
-      return {
-        ...prev,
-        [fromCol]: prev[fromCol].filter(t => t.id !== taskId),
-        [toCol]: [task, ...prev[toCol]],
-      };
-    });
+    const task = columns[fromCol].find(t => t.id === taskId);
+    if (!task) return;
+
+    const newCols = {
+      ...columns,
+      [fromCol]: columns[fromCol].filter(t => t.id !== taskId),
+      [toCol]: [task, ...columns[toCol]],
+    };
+    saveTasks(newCols);
   };
 
   const handleAddTask = (e) => {
@@ -146,27 +96,37 @@ export default function TasksKanban() {
       title: newTaskTitle.trim(),
       category: newTaskCategory,
       priority: newTaskPriority,
-      date: 'Today',
+      date: new Date().toLocaleDateString('en-IN', { month: 'short', day: 'numeric' }),
       members: ['AK'],
       comments: 0,
       attachments: 0,
     };
 
-    setColumns(prev => ({
-      ...prev,
-      [newTaskCol]: [newTask, ...prev[newTaskCol]],
-    }));
+    const newCols = {
+      ...columns,
+      [newTaskCol]: [newTask, ...columns[newTaskCol]],
+    };
 
+    saveTasks(newCols);
     setNewTaskTitle('');
     setShowModal(false);
   };
 
   const deleteTask = (taskId, colKey) => {
-    setColumns(prev => ({
-      ...prev,
-      [colKey]: prev[colKey].filter(t => t.id !== taskId),
-    }));
+    const newCols = {
+      ...columns,
+      [colKey]: columns[colKey].filter(t => t.id !== taskId),
+    };
+    saveTasks(newCols);
   };
+
+  const clearAllTasks = () => {
+    if (window.confirm('Are you sure you want to clear all tasks from the Kanban board?')) {
+      saveTasks(EMPTY_TASKS);
+    }
+  };
+
+  const totalTasksCount = Object.values(columns).reduce((acc, col) => acc + (col?.length || 0), 0);
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-6)' }}>
@@ -183,13 +143,22 @@ export default function TasksKanban() {
             Track agency sprints, client deliverables, SEO optimization workflows, and development tasks
           </p>
         </div>
-        <div className="admin-page-actions">
+        <div className="admin-page-actions" style={{ display: 'flex', gap: '8px' }}>
+          {totalTasksCount > 0 && (
+            <button onClick={clearAllTasks} className="admin-btn admin-btn-outline" style={{ fontSize: '13px' }}>
+              <Trash2 size={14} /> Clear Board
+            </button>
+          )}
           <button
-            onClick={() => setShowModal(true)}
+            onClick={() => {
+              setNewTaskCol('todo');
+              setShowModal(true);
+            }}
             className="admin-btn admin-btn-primary"
+            style={{ fontSize: '13px' }}
           >
-            <Plus style={{ width: 16, height: 16 }} />
-            Create Task
+            <Plus size={14} />
+            <span>Create Task</span>
           </button>
         </div>
       </div>
@@ -197,7 +166,7 @@ export default function TasksKanban() {
       {/* Kanban Columns Grid */}
       <div style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
         gap: 'var(--space-4)',
         alignItems: 'start'
       }}>
@@ -208,12 +177,13 @@ export default function TasksKanban() {
               key={col.key}
               className="admin-card"
               style={{
-                background: 'var(--color-bg)',
-                border: '1px solid var(--color-border)',
+                background: 'var(--bg-elevated, #f9fafb)',
+                border: '1px solid var(--border-color, #e5e7eb)',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 'var(--space-3)',
-                padding: 'var(--space-4)'
+                padding: 'var(--space-4)',
+                borderRadius: 'var(--radius-lg, 12px)'
               }}
             >
               <div style={{
@@ -221,13 +191,13 @@ export default function TasksKanban() {
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 paddingBottom: 'var(--space-2)',
-                borderBottom: '1px solid var(--color-border-light)'
+                borderBottom: '1px solid var(--border-color, #e5e7eb)'
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)' }}>
-                  <span style={{ fontSize: 'var(--text-xs)', fontWeight: 'var(--weight-bold)', color: 'var(--color-text)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  <span style={{ fontSize: '12px', fontWeight: '700', color: 'var(--color-text)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
                     {col.name}
                   </span>
-                  <span className={`admin-badge ${col.badge}`}>
+                  <span className={`admin-badge ${col.badge}`} style={{ fontSize: '11px' }}>
                     {tasks.length}
                   </span>
                 </div>
@@ -236,26 +206,48 @@ export default function TasksKanban() {
                     setNewTaskCol(col.key);
                     setShowModal(true);
                   }}
-                  className="admin-btn admin-btn-ghost admin-btn-sm"
+                  className="topbar-icon-btn"
                   style={{ width: 24, height: 24, padding: 0 }}
-                  title="Add task to this column"
+                  title={`Add task to ${col.name}`}
                 >
-                  <Plus style={{ width: 14, height: 14 }} />
+                  <Plus size={14} />
                 </button>
               </div>
 
               {/* Tasks List in Column */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)', minHeight: '200px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-3)', minHeight: '180px' }}>
                 {tasks.length === 0 ? (
                   <div style={{
-                    padding: 'var(--space-8) var(--space-4)',
+                    padding: '36px 16px',
                     textAlign: 'center',
                     color: 'var(--color-text-muted)',
-                    fontSize: 'var(--text-xs)',
-                    border: '1px dashed var(--color-border)',
-                    borderRadius: 'var(--radius-md)'
+                    fontSize: '12px',
+                    border: '1px dashed var(--border-color)',
+                    borderRadius: '8px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px'
                   }}>
-                    No tasks in this stage
+                    <ListTodo size={20} style={{ opacity: 0.5 }} />
+                    <div>No tasks in this stage</div>
+                    <button
+                      onClick={() => {
+                        setNewTaskCol(col.key);
+                        setShowModal(true);
+                      }}
+                      style={{
+                        background: 'none',
+                        border: 'none',
+                        color: 'var(--color-primary)',
+                        fontSize: '11px',
+                        fontWeight: '600',
+                        cursor: 'pointer'
+                      }}
+                    >
+                      + Add Task
+                    </button>
                   </div>
                 ) : (
                   tasks.map(task => (
@@ -263,39 +255,40 @@ export default function TasksKanban() {
                       key={task.id}
                       className="admin-card"
                       style={{
-                        padding: 'var(--space-4)',
+                        padding: '14px',
                         display: 'flex',
                         flexDirection: 'column',
-                        gap: 'var(--space-3)',
-                        boxShadow: 'var(--shadow-xs)',
-                        border: '1px solid var(--color-border)',
-                        background: 'var(--color-surface)',
+                        gap: '10px',
+                        boxShadow: 'var(--shadow-sm)',
+                        border: '1px solid var(--border-color)',
+                        background: 'var(--bg-card, #ffffff)',
+                        borderRadius: '8px'
                       }}
                     >
                       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <span className={`admin-badge admin-badge-priority-${task.priority.toLowerCase()}`}>
+                        <span className={`admin-badge admin-badge-priority-${task.priority.toLowerCase()}`} style={{ fontSize: '10px' }}>
                           {task.priority}
                         </span>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                           <span style={{ fontSize: '11px', color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center', gap: 2 }}>
-                            <Clock style={{ width: 10, height: 10 }} /> {task.date}
+                            <Clock size={11} /> {task.date}
                           </span>
                           <button
                             onClick={() => deleteTask(task.id, col.key)}
                             style={{ background: 'none', border: 'none', color: 'var(--color-text-muted)', cursor: 'pointer', padding: 2 }}
                             title="Delete task"
                           >
-                            ✕
+                            <X size={12} />
                           </button>
                         </div>
                       </div>
 
-                      <div style={{ fontSize: 'var(--text-sm)', fontWeight: 'var(--weight-semibold)', color: 'var(--color-text)', lineHeight: 'var(--leading-snug)' }}>
+                      <div style={{ fontSize: '13px', fontWeight: '600', color: 'var(--color-text)', lineHeight: '1.4' }}>
                         {task.title}
                       </div>
 
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 'var(--space-2)', borderTop: '1px solid var(--color-border-light)', fontSize: '11px', color: 'var(--color-text-muted)' }}>
-                        <span style={{ color: 'var(--color-primary)', fontWeight: 'var(--weight-medium)' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '8px', borderTop: '1px solid var(--border-color)', fontSize: '11px', color: 'var(--color-text-muted)' }}>
+                        <span style={{ color: 'var(--color-primary)', fontWeight: '600' }}>
                           {task.category}
                         </span>
 
@@ -308,11 +301,11 @@ export default function TasksKanban() {
                                 const prevIdx = order.indexOf(col.key) - 1;
                                 if (prevIdx >= 0) moveTask(task.id, col.key, order[prevIdx]);
                               }}
-                              className="admin-btn admin-btn-ghost admin-btn-sm"
+                              className="topbar-icon-btn"
                               style={{ width: 22, height: 22, padding: 0 }}
                               title="Move left"
                             >
-                              <ArrowLeft style={{ width: 12, height: 12 }} />
+                              <ArrowLeft size={12} />
                             </button>
                           )}
                           {col.key !== 'completed' && (
@@ -322,11 +315,11 @@ export default function TasksKanban() {
                                 const nextIdx = order.indexOf(col.key) + 1;
                                 if (nextIdx < order.length) moveTask(task.id, col.key, order[nextIdx]);
                               }}
-                              className="admin-btn admin-btn-ghost admin-btn-sm"
+                              className="topbar-icon-btn"
                               style={{ width: 22, height: 22, padding: 0 }}
                               title="Move right"
                             >
-                              <ArrowRight style={{ width: 12, height: 12 }} />
+                              <ArrowRight size={12} />
                             </button>
                           )}
                         </div>
@@ -344,67 +337,70 @@ export default function TasksKanban() {
       {showModal && (
         <div className="admin-modal-overlay" onClick={() => setShowModal(false)}>
           <div className="admin-modal" onClick={e => e.stopPropagation()} style={{ maxWidth: '480px' }}>
-            <form onSubmit={handleAddTask}>
-              <div className="admin-modal-header">
-                <div className="admin-modal-title">Create Agency Task</div>
-                <button type="button" onClick={() => setShowModal(false)} className="admin-btn admin-btn-ghost admin-btn-sm">
-                  ✕
-                </button>
+            <div className="admin-modal-header">
+              <div className="admin-modal-title" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Plus size={18} style={{ color: 'var(--color-primary)' }} />
+                Create New Task
               </div>
+              <button onClick={() => setShowModal(false)} className="topbar-icon-btn" style={{ width: 28, height: 28 }}>
+                <X size={16} />
+              </button>
+            </div>
 
-              <div className="admin-modal-body" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-4)' }}>
-                <div className="admin-form-group" style={{ marginBottom: 0 }}>
-                  <label className="admin-label">Task Title <span className="required">*</span></label>
+            <form onSubmit={handleAddTask}>
+              <div className="admin-modal-body" style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+                <div>
+                  <label className="admin-help-text">Task Title / Action Item *</label>
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Audit Google Analytics 4 Tagging"
+                    autoFocus
+                    placeholder="e.g. Audit Google Search Console coverage for location pages"
                     value={newTaskTitle}
                     onChange={e => setNewTaskTitle(e.target.value)}
                     className="admin-input"
                   />
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 'var(--space-3)' }}>
-                  <div className="admin-form-group" style={{ marginBottom: 0 }}>
-                    <label className="admin-label">Category</label>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
+                  <div>
+                    <label className="admin-help-text">Category</label>
                     <select
                       value={newTaskCategory}
                       onChange={e => setNewTaskCategory(e.target.value)}
-                      className="admin-input admin-select"
+                      className="admin-select"
                     >
-                      <option>Engineering</option>
-                      <option>SEO & Indexing</option>
-                      <option>Marketing</option>
-                      <option>UI/UX Design</option>
-                      <option>Client Success</option>
-                      <option>Automation</option>
+                      <option value="Engineering">Engineering</option>
+                      <option value="SEO & Indexing">SEO & Indexing</option>
+                      <option value="UI/UX Design">UI/UX Design</option>
+                      <option value="Marketing">Marketing</option>
+                      <option value="Client Success">Client Success</option>
+                      <option value="Compliance">Compliance</option>
                     </select>
                   </div>
 
-                  <div className="admin-form-group" style={{ marginBottom: 0 }}>
-                    <label className="admin-label">Priority</label>
+                  <div>
+                    <label className="admin-help-text">Priority</label>
                     <select
                       value={newTaskPriority}
                       onChange={e => setNewTaskPriority(e.target.value)}
-                      className="admin-input admin-select"
+                      className="admin-select"
                     >
-                      <option>Low</option>
-                      <option>Medium</option>
-                      <option>High</option>
-                      <option>Urgent</option>
+                      <option value="High">High</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Low">Low</option>
                     </select>
                   </div>
                 </div>
 
-                <div className="admin-form-group" style={{ marginBottom: 0 }}>
-                  <label className="admin-label">Starting Column</label>
+                <div>
+                  <label className="admin-help-text">Initial Column Stage</label>
                   <select
                     value={newTaskCol}
                     onChange={e => setNewTaskCol(e.target.value)}
-                    className="admin-input admin-select"
+                    className="admin-select"
                   >
-                    <option value="todo">To Do</option>
+                    <option value="todo">Backlog & To Do</option>
                     <option value="inProgress">In Progress</option>
                     <option value="review">Under Review</option>
                     <option value="completed">Completed</option>
@@ -412,12 +408,12 @@ export default function TasksKanban() {
                 </div>
               </div>
 
-              <div className="admin-modal-footer">
+              <div className="admin-modal-footer" style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px' }}>
                 <button type="button" onClick={() => setShowModal(false)} className="admin-btn admin-btn-outline">
                   Cancel
                 </button>
                 <button type="submit" className="admin-btn admin-btn-primary">
-                  <Plus style={{ width: 14, height: 14 }} /> Add Task
+                  <Plus size={14} /> Add Task
                 </button>
               </div>
             </form>
