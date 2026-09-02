@@ -33,27 +33,33 @@ export default function AdminShell({ children }) {
   const [leadsLoading, setLeadsLoading] = useState(true);
   const inactivityTimerRef = useRef(null);
 
-  const fetchLeads = useCallback(async () => {
+  const fetchLeads = useCallback(async (isBackground = false) => {
     try {
-      setLeadsLoading(true);
+      if (!isBackground) setLeadsLoading(true);
       const res = await fetch('/api/admin/leads');
       if (res.ok) {
         const data = await res.json();
         setLeads(data.leads || []);
-      } else {
-        setLeads([]);
       }
     } catch (err) {
       console.error('Failed to fetch admin leads:', err);
-      setLeads([]);
     } finally {
-      setLeadsLoading(false);
+      if (!isBackground) setLeadsLoading(false);
     }
   }, []);
 
   useEffect(() => {
     fetchLeads();
-  }, [fetchLeads]);
+
+    // 10-second real-time polling when browser tab is active
+    const pollInterval = setInterval(() => {
+      if (document.visibilityState === 'visible' && !isLocked) {
+        fetchLeads(true);
+      }
+    }, 10000);
+
+    return () => clearInterval(pollInterval);
+  }, [fetchLeads, isLocked]);
 
   // Inactivity Auto-Lock (15 Minutes)
   const INACTIVITY_TIMEOUT_MS = 15 * 60 * 1000;

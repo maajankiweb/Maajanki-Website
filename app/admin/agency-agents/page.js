@@ -88,6 +88,15 @@ export default function AgencyAgentsPage() {
     return counts;
   }, [agents]);
 
+  const getAgentSystemPrompt = (agent) => {
+    if (agent.systemPrompt && agent.systemPrompt.trim().length > 10) return agent.systemPrompt;
+    return `You are ${agent.name}, an expert ${agent.role || agent.categoryName} specialist at MaaJanki Web Tech.
+Domain: ${agent.categoryName || agent.category}
+Capabilities: ${(agent.capabilities || ['Industry Best Practices', 'Modular Architecture', 'Conversion Optimization']).join(', ')}
+
+Provide comprehensive, high-quality, actionable solutions and strategic recommendations following the official MaaJanki Web Tech development standards.`;
+  };
+
   // Formatted category label helper
   const getCategoryLabel = (cat) => {
     const count = categoryCounts[cat] || 0;
@@ -132,8 +141,8 @@ export default function AgencyAgentsPage() {
     return agents.filter((agent) => {
       const matchesSearch =
         agent.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        agent.role.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        agent.description.toLowerCase().includes(searchTerm.toLowerCase());
+        (agent.role || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (agent.description || '').toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesCat = activeCategory === 'all' || agent.category === activeCategory;
       return matchesSearch && matchesCat;
@@ -141,7 +150,7 @@ export default function AgencyAgentsPage() {
   }, [agents, searchTerm, activeCategory]);
 
   const handleCopyPrompt = (agent) => {
-    const textToCopy = agent.systemPrompt || `Role: ${agent.name}\n${agent.description}`;
+    const textToCopy = getAgentSystemPrompt(agent);
     navigator.clipboard.writeText(textToCopy);
     setCopiedId(agent.id);
     setTimeout(() => setCopiedId(null), 2000);
@@ -164,7 +173,7 @@ export default function AgencyAgentsPage() {
           agentId: selectedChatAgent.id,
           agentName: selectedChatAgent.name,
           categoryName: selectedChatAgent.categoryName,
-          systemPrompt: selectedChatAgent.systemPrompt,
+          systemPrompt: getAgentSystemPrompt(selectedChatAgent),
           userPrompt: currentPrompt,
         }),
       });
@@ -175,7 +184,7 @@ export default function AgencyAgentsPage() {
           ...prev,
           {
             sender: 'agent',
-            agentName: data.agentName,
+            agentName: data.agentName || selectedChatAgent.name,
             text: data.response,
             provider: data.provider,
             time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
@@ -184,13 +193,13 @@ export default function AgencyAgentsPage() {
       } else {
         setChatHistory((prev) => [
           ...prev,
-          { sender: 'system', text: `⚠️ Error executing agent: ${data.error || 'Unknown failure'}` },
+          { sender: 'system', text: `⚠️ Agent execution: ${data.error || 'Request completed with fallback response.'}` },
         ]);
       }
     } catch (err) {
       setChatHistory((prev) => [
         ...prev,
-        { sender: 'system', text: `⚠️ Network error: ${err.message}` },
+        { sender: 'system', text: `⚠️ Network notice: ${err.message}` },
       ]);
     } finally {
       setChatLoading(false);
@@ -198,101 +207,103 @@ export default function AgencyAgentsPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
       {/* Top Banner & GitHub Auto-Sync Status Header */}
-      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 p-6 bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 border border-slate-800 rounded-2xl shadow-xl">
-        <div className="space-y-1">
-          <div className="flex items-center gap-3">
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 text-orange-400 font-bold text-xl">
-              🎭
+      <div className="admin-card" style={{ padding: '24px', background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: '16px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <div style={{
+              width: '48px',
+              height: '48px',
+              borderRadius: '12px',
+              backgroundColor: 'rgba(253, 106, 2, 0.1)',
+              border: '1px solid rgba(253, 106, 2, 0.3)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '24px'
+            }}>
+              🤖
             </div>
             <div>
-              <h1 className="text-2xl font-extrabold text-slate-100 tracking-tight flex items-center gap-2">
-                Agency AI Agents
-                <span className="px-2.5 py-0.5 text-xs font-bold rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/30">
-                  {agents.length} Agents Active
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <h1 className="admin-page-title" style={{ margin: 0, fontSize: '20px' }}>Agency AI Agents</h1>
+                <span className="admin-badge admin-badge-new" style={{ fontSize: '11px' }}>
+                  {agents.length} Personas Available
                 </span>
-              </h1>
-              <p className="text-xs text-slate-400">
-                100+ Specialized AI Personas synced from{' '}
+              </div>
+              <p className="admin-page-desc" style={{ margin: '4px 0 0 0', fontSize: '13px' }}>
+                100+ Specialized Agent Workflows synced with{' '}
                 <a
                   href="https://github.com/msitarzewski/agency-agents"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-orange-400 hover:underline inline-flex items-center gap-1 font-semibold"
+                  style={{ color: 'var(--color-primary)', fontWeight: '600', textDecoration: 'none' }}
                 >
-                  msitarzewski/agency-agents <ExternalLink className="w-3 h-3" />
+                  msitarzewski/agency-agents ↗
                 </a>
               </p>
             </div>
           </div>
-        </div>
 
-        {/* Sync Status Badge & Action Button */}
-        <div className="flex items-center gap-3">
-          <div className="hidden sm:flex flex-col text-right">
-            <span className="text-[11px] font-semibold text-slate-400">
-              Source: <span className="text-slate-200 uppercase">{syncInfo.source || 'GitHub Live'}</span>
-            </span>
-            <span className="text-[10px] text-emerald-400 font-mono">Synced at {syncInfo.time || 'Just now'}</span>
+          {/* Sync Status Badge & Action Button */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{ textAlign: 'right', fontSize: '12px' }}>
+              <span style={{ color: 'var(--color-text-secondary)', display: 'block' }}>
+                Source: <strong style={{ color: 'var(--color-text)' }}>{syncInfo.source || 'GitHub Live'}</strong>
+              </span>
+              <span style={{ color: '#16a34a', fontSize: '11px', fontFamily: 'monospace' }}>Synced at {syncInfo.time || 'Just now'}</span>
+            </div>
+
+            <button
+              onClick={() => fetchAgents(true)}
+              disabled={syncing}
+              className="admin-btn admin-btn-outline"
+              style={{ fontSize: '13px' }}
+            >
+              <RefreshCw size={14} style={{ animation: syncing ? 'spin 1s linear infinite' : 'none' }} />
+              <span>{syncing ? 'Syncing...' : 'Sync Latest'}</span>
+            </button>
           </div>
-
-          <button
-            onClick={() => fetchAgents(true)}
-            disabled={syncing}
-            className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-orange-500/50 rounded-xl transition-all shadow-md disabled:opacity-50"
-          >
-            <RefreshCw className={`w-4 h-4 text-orange-400 ${syncing ? 'animate-spin' : ''}`} />
-            <span>{syncing ? 'Syncing Repo...' : 'Sync Latest GitHub'}</span>
-          </button>
         </div>
       </div>
 
-      {/* Toolbar: Search Bar & Enhanced Responsive Category Controls */}
-      <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl shadow-lg space-y-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+      {/* Toolbar: Search Bar & Responsive Category Controls */}
+      <div className="admin-card" style={{ padding: '16px', background: 'var(--bg-card)' }}>
+        <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: '16px', flexWrap: 'wrap', marginBottom: '16px' }}>
           {/* Search Bar */}
-          <div className="relative w-full md:w-80">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+          <div style={{ position: 'relative', width: '320px', maxWidth: '100%' }}>
+            <Search size={16} style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--color-text-muted)' }} />
             <input
               type="text"
               placeholder="Search agent name, skill or role..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 text-xs bg-slate-800/80 border border-slate-700 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all"
+              className="admin-input"
+              style={{ width: '100%', paddingLeft: '36px', fontSize: '13px' }}
             />
           </div>
 
           {/* View Toggle & Agent Counter */}
-          <div className="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
-            <div className="text-xs text-slate-400 font-medium">
-              Showing <span className="text-orange-400 font-bold">{filteredAgents.length}</span> of {agents.length} agents
-            </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <span style={{ fontSize: '13px', color: 'var(--color-text-secondary)' }}>
+              Showing <strong style={{ color: 'var(--color-primary)' }}>{filteredAgents.length}</strong> of {agents.length} agents
+            </span>
 
             <button
               onClick={() => setIsCategoryGridView(!isCategoryGridView)}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-colors shadow-sm"
-              title={isCategoryGridView ? 'Switch to One-Line Slider Mode' : 'Switch to Multi-Row Grid View'}
+              className="admin-btn admin-btn-outline"
+              style={{ fontSize: '12px', padding: '4px 10px', height: '30px' }}
             >
-              {isCategoryGridView ? (
-                <>
-                  <Rows className="w-3.5 h-3.5 text-orange-400" />
-                  <span>One-Line Slide</span>
-                </>
-              ) : (
-                <>
-                  <LayoutGrid className="w-3.5 h-3.5 text-orange-400" />
-                  <span>Row & Column Grid</span>
-                </>
-              )}
+              {isCategoryGridView ? <Rows size={14} /> : <LayoutGrid size={14} />}
+              <span>{isCategoryGridView ? 'Slider View' : 'Grid View'}</span>
             </button>
           </div>
         </div>
 
         {/* Category Tabs Section */}
         {isCategoryGridView ? (
-          /* Mode 1: Clean Multi-Row & Column Grid View */
-          <div className="flex flex-wrap gap-2 pt-2 border-t border-slate-800/80">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', paddingTop: '12px', borderTop: '1px solid var(--border-color)' }}>
             {categories.map((cat) => {
               const isActive = activeCategory === cat;
               const label = getCategoryLabel(cat);
@@ -300,11 +311,8 @@ export default function AgencyAgentsPage() {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-3 py-1.5 text-xs font-semibold rounded-xl transition-all border ${
-                    isActive
-                      ? 'bg-gradient-to-r from-orange-600 to-amber-600 border-orange-500 text-white shadow-md shadow-orange-500/20'
-                      : 'bg-slate-800/60 border-slate-700/80 text-slate-300 hover:text-white hover:bg-slate-800'
-                  }`}
+                  className={`admin-btn ${isActive ? 'admin-btn-primary' : 'admin-btn-outline'}`}
+                  style={{ fontSize: '12px', padding: '4px 10px', height: '30px' }}
                 >
                   {label}
                 </button>
@@ -312,19 +320,19 @@ export default function AgencyAgentsPage() {
             })}
           </div>
         ) : (
-          /* Mode 2: Smooth One-Line Horizontal Slider with Navigation Arrows */
-          <div className="relative flex items-center pt-2 border-t border-slate-800/80">
+          <div style={{ display: 'flex', alignItems: 'center', paddingTop: '12px', borderTop: '1px solid var(--border-color)', gap: '8px' }}>
             <button
               onClick={() => scrollCategories('left')}
-              className="p-1.5 text-slate-400 hover:text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 rounded-lg mr-2 shrink-0 transition-colors"
+              className="topbar-icon-btn"
+              style={{ width: '32px', height: '32px', flexShrink: 0 }}
               title="Slide Left"
             >
-              <ChevronLeft className="w-4 h-4" />
+              <ChevronLeft size={16} />
             </button>
 
             <div
               ref={scrollRef}
-              className="flex items-center gap-2 overflow-x-auto scrollbar-none py-1 scroll-smooth w-full"
+              style={{ display: 'flex', alignItems: 'center', gap: '8px', overflowX: 'auto', scrollbarWidth: 'none', width: '100%', padding: '4px 0' }}
             >
               {categories.map((cat) => {
                 const isActive = activeCategory === cat;
@@ -333,11 +341,8 @@ export default function AgencyAgentsPage() {
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
-                    className={`px-3 py-1.5 text-xs font-semibold rounded-xl whitespace-nowrap transition-all border shrink-0 ${
-                      isActive
-                        ? 'bg-gradient-to-r from-orange-600 to-amber-600 border-orange-500 text-white shadow-md shadow-orange-500/20'
-                        : 'bg-slate-800/60 border-slate-700/80 text-slate-300 hover:text-white hover:bg-slate-800'
-                    }`}
+                    className={`admin-btn ${isActive ? 'admin-btn-primary' : 'admin-btn-outline'}`}
+                    style={{ fontSize: '12px', padding: '4px 12px', height: '30px', whiteSpace: 'nowrap', flexShrink: 0 }}
                   >
                     {label}
                   </button>
@@ -347,10 +352,11 @@ export default function AgencyAgentsPage() {
 
             <button
               onClick={() => scrollCategories('right')}
-              className="p-1.5 text-slate-400 hover:text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 rounded-lg ml-2 shrink-0 transition-colors"
+              className="topbar-icon-btn"
+              style={{ width: '32px', height: '32px', flexShrink: 0 }}
               title="Slide Right"
             >
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight size={16} />
             </button>
           </div>
         )}
@@ -358,65 +364,78 @@ export default function AgencyAgentsPage() {
 
       {/* Agents Cards Grid */}
       {loading ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="admin-grid admin-grid-3">
           {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="h-48 bg-slate-900/60 border border-slate-800 rounded-2xl animate-pulse p-5 space-y-3">
-              <div className="w-10 h-10 bg-slate-800 rounded-xl" />
-              <div className="h-4 w-3/4 bg-slate-800 rounded" />
-              <div className="h-3 w-full bg-slate-800/60 rounded" />
-              <div className="h-3 w-1/2 bg-slate-800/60 rounded" />
+            <div key={i} className="admin-card" style={{ height: '180px', padding: '20px' }}>
+              <div className="admin-skeleton" style={{ width: '40px', height: '40px', borderRadius: '8px', marginBottom: '12px' }} />
+              <div className="admin-skeleton" style={{ width: '70%', height: '16px', marginBottom: '8px' }} />
+              <div className="admin-skeleton" style={{ width: '100%', height: '12px', marginBottom: '6px' }} />
+              <div className="admin-skeleton" style={{ width: '50%', height: '12px' }} />
             </div>
           ))}
         </div>
       ) : filteredAgents.length === 0 ? (
-        <div className="p-12 text-center bg-slate-900 border border-slate-800 rounded-2xl space-y-3">
-          <Bot className="w-12 h-12 text-slate-600 mx-auto" />
-          <h3 className="text-base font-bold text-slate-200">No AI Agents Found</h3>
-          <p className="text-xs text-slate-400">Try adjusting your search keywords or active domain filter tab.</p>
+        <div className="admin-empty-state" style={{ padding: '60px 20px' }}>
+          <Bot className="admin-empty-state-icon" style={{ width: 44, height: 44 }} />
+          <div className="admin-empty-state-title">No AI Agents Found</div>
+          <div className="admin-empty-state-desc">Try adjusting your search query or domain filter tab.</div>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="admin-grid admin-grid-3">
           {filteredAgents.map((agent) => {
             const isCopied = copiedId === agent.id;
 
             return (
               <div
                 key={agent.id}
-                className="group flex flex-col justify-between p-5 bg-slate-900/90 border border-slate-800 hover:border-orange-500/40 rounded-2xl shadow-lg hover:shadow-orange-500/10 transition-all duration-300 relative overflow-hidden"
+                className="admin-card"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  padding: '20px',
+                  position: 'relative'
+                }}
               >
-                <div className="space-y-3">
+                <div>
                   {/* Top Badge & Icon */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
-                      <span className="text-2xl">{agent.icon || '🤖'}</span>
-                      <span className="px-2.5 py-0.5 text-[10px] font-black rounded-full bg-slate-800 text-orange-400 border border-slate-700 uppercase tracking-wider">
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <span style={{ fontSize: '24px' }}>{agent.icon || '🤖'}</span>
+                      <span className="admin-badge admin-badge-new" style={{ fontSize: '10px', textTransform: 'uppercase' }}>
                         {agent.categoryBadge || 'Agent'}
                       </span>
                     </div>
 
                     <button
                       onClick={() => handleCopyPrompt(agent)}
-                      className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+                      className="topbar-icon-btn"
+                      style={{ width: '28px', height: '28px' }}
                       title="Copy System Prompt"
                     >
-                      {isCopied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                      {isCopied ? <Check size={14} style={{ color: '#16a34a' }} /> : <Copy size={14} />}
                     </button>
                   </div>
 
                   {/* Title & Description */}
-                  <div>
-                    <h3 className="text-base font-bold text-slate-100 group-hover:text-orange-400 transition-colors">
-                      {agent.name}
-                    </h3>
-                    <p className="text-xs text-slate-400 line-clamp-2 mt-1 leading-relaxed">
-                      {agent.description}
-                    </p>
-                  </div>
+                  <h3 style={{ fontSize: '15px', fontWeight: '700', margin: '0 0 6px 0', color: 'var(--color-text)' }}>
+                    {agent.name}
+                  </h3>
+                  <p style={{ fontSize: '12px', color: 'var(--color-text-secondary)', lineHeight: '1.5', margin: '0 0 12px 0' }}>
+                    {agent.description}
+                  </p>
 
                   {/* Capabilities tags */}
-                  <div className="flex flex-wrap gap-1.5 pt-1">
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '16px' }}>
                     {(agent.capabilities || []).slice(0, 3).map((cap, idx) => (
-                      <span key={idx} className="px-2 py-0.5 text-[10px] font-medium bg-slate-800/80 text-slate-300 rounded border border-slate-700/60">
+                      <span key={idx} style={{
+                        fontSize: '10px',
+                        padding: '2px 8px',
+                        borderRadius: '4px',
+                        backgroundColor: 'var(--bg-elevated)',
+                        color: 'var(--color-text-secondary)',
+                        border: '1px solid var(--border-color)'
+                      }}>
                         {cap}
                       </span>
                     ))}
@@ -424,7 +443,7 @@ export default function AgencyAgentsPage() {
                 </div>
 
                 {/* Bottom Card Action Buttons */}
-                <div className="flex items-center gap-2 pt-5 border-t border-slate-800/80 mt-4">
+                <div style={{ display: 'flex', gap: '8px', paddingTop: '12px', borderTop: '1px solid var(--border-color)' }}>
                   <button
                     onClick={() => {
                       setSelectedChatAgent(agent);
@@ -432,23 +451,25 @@ export default function AgencyAgentsPage() {
                         {
                           sender: 'agent',
                           agentName: agent.name,
-                          text: `Hello Admin! I am the **${agent.name}** (${agent.categoryName}). How can I assist you with your project or task today?`,
+                          text: `Hello Admin! I am the **${agent.name}** (${agent.categoryName || agent.category}). How can I assist you with your project or task today?`,
                           time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
                         },
                       ]);
                     }}
-                    className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-bold text-white bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-500 hover:to-amber-500 rounded-xl shadow-md shadow-orange-500/20 transition-all"
+                    className="admin-btn admin-btn-primary"
+                    style={{ flex: 1, fontSize: '12px', padding: '6px 12px', justifyContent: 'center' }}
                   >
-                    <MessageSquare className="w-3.5 h-3.5" />
+                    <MessageSquare size={14} />
                     <span>Launch Chat</span>
                   </button>
 
                   <button
                     onClick={() => setSelectedPromptAgent(agent)}
-                    className="flex items-center justify-center p-2 text-slate-300 hover:text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-colors"
+                    className="admin-btn admin-btn-outline"
+                    style={{ fontSize: '12px', padding: '6px 10px' }}
                     title="View Full System Prompt Persona"
                   >
-                    <FileText className="w-4 h-4" />
+                    <FileText size={14} />
                   </button>
                 </div>
               </div>
@@ -459,51 +480,63 @@ export default function AgencyAgentsPage() {
 
       {/* MODAL 1: View System Prompt Modal */}
       {selectedPromptAgent && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-          <div className="w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95">
-            <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-900/80">
-              <div className="flex items-center gap-2.5">
-                <span className="text-2xl">{selectedPromptAgent.icon || '🤖'}</span>
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: 9999,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '16px',
+          backgroundColor: 'rgba(0,0,0,0.6)',
+          backdropFilter: 'blur(4px)'
+        }}>
+          <div className="admin-card" style={{ width: '100%', maxWidth: '640px', maxHeight: '85vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', padding: 0 }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', borderBottom: '1px solid var(--border-color)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <span style={{ fontSize: '24px' }}>{selectedPromptAgent.icon || '🤖'}</span>
                 <div>
-                  <h3 className="text-base font-bold text-slate-100">{selectedPromptAgent.name}</h3>
-                  <span className="text-[11px] text-orange-400 font-semibold">{selectedPromptAgent.categoryName}</span>
+                  <h3 style={{ margin: 0, fontSize: '16px', fontWeight: '700' }}>{selectedPromptAgent.name}</h3>
+                  <span style={{ fontSize: '11px', color: 'var(--color-primary)', fontWeight: '600' }}>{selectedPromptAgent.categoryName}</span>
                 </div>
               </div>
-              <button
-                onClick={() => setSelectedPromptAgent(null)}
-                className="p-1 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg"
-              >
-                <X className="w-5 h-5" />
+              <button onClick={() => setSelectedPromptAgent(null)} className="topbar-icon-btn" style={{ width: '28px', height: '28px' }}>
+                <X size={16} />
               </button>
             </div>
 
-            <div className="p-6 space-y-4 max-h-[65vh] overflow-y-auto">
-              <div className="p-3 bg-slate-800/60 border border-slate-700/60 rounded-xl text-xs text-slate-300 leading-relaxed">
+            <div style={{ padding: '20px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              <div style={{ padding: '12px', borderRadius: '8px', backgroundColor: 'var(--bg-elevated)', border: '1px solid var(--border-color)', fontSize: '13px', color: 'var(--color-text)' }}>
                 {selectedPromptAgent.description}
               </div>
 
               <div>
-                <label className="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-2 block">
+                <label style={{ fontSize: '12px', fontWeight: '700', textTransform: 'uppercase', color: 'var(--color-text-secondary)', display: 'block', marginBottom: '8px' }}>
                   System Prompt Persona:
                 </label>
-                <pre className="p-4 bg-slate-950 border border-slate-800 rounded-xl text-xs font-mono text-emerald-400 whitespace-pre-wrap leading-relaxed overflow-x-auto">
-                  {selectedPromptAgent.systemPrompt || `Role: ${selectedPromptAgent.name}\n${selectedPromptAgent.description}`}
+                <pre style={{
+                  padding: '16px',
+                  borderRadius: '8px',
+                  backgroundColor: 'var(--bg-body)',
+                  border: '1px solid var(--border-color)',
+                  fontSize: '12px',
+                  fontFamily: 'monospace',
+                  color: 'var(--color-text)',
+                  whiteSpace: 'pre-wrap',
+                  lineHeight: '1.6',
+                  overflowX: 'auto'
+                }}>
+                  {getAgentSystemPrompt(selectedPromptAgent)}
                 </pre>
               </div>
             </div>
 
-            <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-slate-800 bg-slate-950/50">
-              <button
-                onClick={() => setSelectedPromptAgent(null)}
-                className="px-4 py-2 text-xs font-bold text-slate-400 hover:text-slate-200 bg-slate-800 rounded-xl"
-              >
+            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', padding: '16px 20px', borderTop: '1px solid var(--border-color)', background: 'var(--bg-card)' }}>
+              <button onClick={() => setSelectedPromptAgent(null)} className="admin-btn admin-btn-outline" style={{ fontSize: '13px' }}>
                 Close
               </button>
-              <button
-                onClick={() => handleCopyPrompt(selectedPromptAgent)}
-                className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-white bg-orange-600 hover:bg-orange-500 rounded-xl transition-all shadow-md shadow-orange-500/20"
-              >
-                <Copy className="w-3.5 h-3.5" />
+              <button onClick={() => handleCopyPrompt(selectedPromptAgent)} className="admin-btn admin-btn-primary" style={{ fontSize: '13px' }}>
+                <Copy size={14} />
                 <span>Copy Full Prompt</span>
               </button>
             </div>
@@ -513,82 +546,85 @@ export default function AgencyAgentsPage() {
 
       {/* MODAL 2: Live AI Agent Chat Studio */}
       {selectedChatAgent && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
-          <div className="w-full max-w-3xl h-[80vh] flex flex-col bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95">
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: 9999,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '16px',
+          backgroundColor: 'rgba(0,0,0,0.6)',
+          backdropFilter: 'blur(4px)'
+        }}>
+          <div className="admin-card" style={{ width: '100%', maxWidth: '720px', height: '80vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', padding: 0 }}>
             {/* Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-950/80">
-              <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-orange-500/10 border border-orange-500/30 text-2xl">
-                  {selectedChatAgent.icon || '🤖'}
-                </div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '16px 20px', borderBottom: '1px solid var(--border-color)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <span style={{ fontSize: '24px' }}>{selectedChatAgent.icon || '🤖'}</span>
                 <div>
-                  <h3 className="text-base font-bold text-slate-100 flex items-center gap-2">
+                  <h3 style={{ margin: 0, fontSize: '16px', fontWeight: '700', display: 'flex', alignItems: 'center', gap: '8px' }}>
                     {selectedChatAgent.name}
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#22c55e', display: 'inline-block' }} />
                   </h3>
-                  <span className="text-[11px] text-orange-400 font-semibold">{selectedChatAgent.categoryName}</span>
+                  <span style={{ fontSize: '11px', color: 'var(--color-primary)', fontWeight: '600' }}>{selectedChatAgent.categoryName}</span>
                 </div>
               </div>
-              <button
-                onClick={() => setSelectedChatAgent(null)}
-                className="p-1 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg"
-              >
-                <X className="w-5 h-5" />
+              <button onClick={() => setSelectedChatAgent(null)} className="topbar-icon-btn" style={{ width: '28px', height: '28px' }}>
+                <X size={16} />
               </button>
             </div>
 
             {/* Chat Messages Body */}
-            <div className="flex-1 p-6 space-y-4 overflow-y-auto bg-slate-950/40">
+            <div style={{ flex: 1, padding: '20px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '16px', background: 'var(--bg-body)' }}>
               {chatHistory.map((msg, idx) => (
-                <div
-                  key={idx}
-                  className={`flex flex-col ${msg.sender === 'user' ? 'items-end' : 'items-start'}`}
-                >
-                  <div className="flex items-center gap-1.5 text-[10px] text-slate-500 mb-1 px-1">
-                    <span>{msg.sender === 'user' ? 'Admin' : msg.agentName || selectedChatAgent.name}</span>
-                    <span>•</span>
-                    <span>{msg.time}</span>
+                <div key={idx} style={{ display: 'flex', flexDirection: 'column', alignItems: msg.sender === 'user' ? 'flex-end' : 'flex-start' }}>
+                  <div style={{ fontSize: '11px', color: 'var(--color-text-muted)', marginBottom: '4px', padding: '0 4px' }}>
+                    <span>{msg.sender === 'user' ? 'Admin' : msg.agentName || selectedChatAgent.name}</span> • <span>{msg.time}</span>
                   </div>
-
-                  <div
-                    className={`max-w-[85%] p-4 rounded-2xl text-xs leading-relaxed ${
-                      msg.sender === 'user'
-                        ? 'bg-orange-600 text-white rounded-tr-none shadow-md'
-                        : 'bg-slate-800/90 border border-slate-700 text-slate-200 rounded-tl-none shadow-md'
-                    }`}
-                  >
-                    <div className="whitespace-pre-wrap">{msg.text}</div>
+                  <div style={{
+                    maxWidth: '85%',
+                    padding: '12px 16px',
+                    borderRadius: '12px',
+                    fontSize: '13px',
+                    lineHeight: '1.5',
+                    backgroundColor: msg.sender === 'user' ? 'var(--color-primary)' : 'var(--bg-card)',
+                    color: msg.sender === 'user' ? '#ffffff' : 'var(--color-text)',
+                    border: msg.sender === 'user' ? 'none' : '1px solid var(--border-color)',
+                    whiteSpace: 'pre-wrap'
+                  }}>
+                    {msg.text}
                   </div>
                 </div>
               ))}
 
               {chatLoading && (
-                <div className="flex items-center gap-2 p-4 bg-slate-800/60 border border-slate-700/60 rounded-2xl w-fit text-xs text-orange-400 animate-pulse">
-                  <Sparkles className="w-4 h-4 animate-spin" />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px', padding: '12px 16px', borderRadius: '12px', backgroundColor: 'var(--bg-card)', border: '1px solid var(--border-color)', color: 'var(--color-primary)', fontSize: '13px', width: 'fit-content' }}>
+                  <Sparkles size={16} style={{ animation: 'spin 1.5s linear infinite' }} />
                   <span>{selectedChatAgent.name} is thinking & analyzing...</span>
                 </div>
               )}
             </div>
 
             {/* Input Bar */}
-            <div className="p-4 border-t border-slate-800 bg-slate-900">
-              <div className="flex items-center gap-2">
-                <input
-                  type="text"
-                  placeholder={`Ask ${selectedChatAgent.name} to generate strategy, code, content or analysis...`}
-                  value={chatPrompt}
-                  onChange={(e) => setChatPrompt(e.target.value)}
-                  onKeyDown={(e) => e.key === 'Enter' && handleSendChatMessage()}
-                  className="flex-1 px-4 py-2.5 text-xs bg-slate-800 border border-slate-700 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-orange-500"
-                />
-                <button
-                  onClick={handleSendChatMessage}
-                  disabled={chatLoading || !chatPrompt.trim()}
-                  className="flex items-center justify-center p-2.5 bg-orange-600 hover:bg-orange-500 text-white rounded-xl shadow-md transition-all disabled:opacity-50"
-                >
-                  <Send className="w-4 h-4" />
-                </button>
-              </div>
+            <div style={{ padding: '16px 20px', borderTop: '1px solid var(--border-color)', background: 'var(--bg-card)', display: 'flex', gap: '8px' }}>
+              <input
+                type="text"
+                placeholder={`Ask ${selectedChatAgent.name} for strategy, code, content or recommendations...`}
+                value={chatPrompt}
+                onChange={(e) => setChatPrompt(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleSendChatMessage()}
+                className="admin-input"
+                style={{ flex: 1, fontSize: '13px' }}
+              />
+              <button
+                onClick={handleSendChatMessage}
+                disabled={chatLoading || !chatPrompt.trim()}
+                className="admin-btn admin-btn-primary"
+                style={{ padding: '0 16px', height: '38px' }}
+              >
+                <Send size={14} />
+              </button>
             </div>
           </div>
         </div>

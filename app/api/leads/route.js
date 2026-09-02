@@ -3,6 +3,7 @@ export const dynamic = 'force-dynamic';
 import { NextResponse } from 'next/server';
 import { connectDB } from '@/lib/db';
 import Lead from '@/lib/models/Lead';
+import { sendWhatsAppNotification } from '@/lib/notifications';
 
 // In-memory rate limiting map (IP -> timestamp array)
 const rateLimitMap = new Map();
@@ -110,6 +111,21 @@ export async function POST(request) {
       }).catch((err) => console.warn('Google Sheet async sync notice:', err.message));
     } catch (sheetErr) {
       console.warn('Google Sheet forward warning:', sheetErr.message);
+    }
+
+    // Trigger instant WhatsApp notification to admin
+    try {
+      sendWhatsAppNotification({
+        name: cleanName,
+        email: cleanEmail,
+        phone: cleanPhone,
+        service: cleanService,
+        message: cleanMessage,
+        source: cleanSource,
+        url: cleanUrl
+      }).catch(err => console.warn('WhatsApp notification async error:', err.message));
+    } catch (waErr) {
+      console.warn('WhatsApp notification trigger warning:', waErr.message);
     }
 
     return NextResponse.json({ success: true, leadId: newLead._id }, { status: 201 });

@@ -4,7 +4,8 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { 
   Users, Search, Filter, Plus, Download, ChevronDown, 
   MoreVertical, Eye, Edit, MessageSquare, Trash2,
-  ChevronLeft, ChevronRight, ArrowUpDown, X, Loader2
+  ChevronLeft, ChevronRight, ArrowUpDown, X, Loader2,
+  Sparkles, Mail
 } from 'lucide-react';
 import { toast } from 'react-toastify';
 
@@ -53,6 +54,38 @@ export default function LeadsTable({ statusFilter }) {
     name: '', email: '', phone: '', service: '', source: '', message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [draftingLeadId, setDraftingLeadId] = useState(null);
+
+  const handleSendAiDraftEmail = async (lead) => {
+    if (!lead.email) return;
+    setDraftingLeadId(lead._id || lead.id);
+    try {
+      const res = await fetch('/api/admin/ai-draft-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          recipientName: lead.name,
+          recipientEmail: lead.email,
+          company: lead.company,
+          serviceRequested: lead.service,
+          notes: lead.message,
+          status: lead.status,
+        })
+      });
+
+      const data = await res.json();
+      if (data.success && data.gmailUrl) {
+        window.open(data.gmailUrl, '_blank', 'noopener,noreferrer');
+      } else {
+        window.location.href = `mailto:${lead.email}?subject=MaaJanki%20Web%20Tech%20Follow-up`;
+      }
+    } catch (err) {
+      console.warn('AI Draft Email notice:', err.message);
+      window.location.href = `mailto:${lead.email}`;
+    } finally {
+      setDraftingLeadId(null);
+    }
+  };
 
   // Debounce search
   useEffect(() => {
@@ -396,9 +429,21 @@ export default function LeadsTable({ statusFilter }) {
                       </span>
                     </td>
                     <td className="admin-table-actions">
-                      <button className="admin-btn-ghost admin-btn-icon sm" onClick={() => deleteLead(lead.id)}>
-                        <Trash2 size={16} />
-                      </button>
+                      <div style={{ display: 'flex', gap: '4px', justifyContent: 'flex-end', alignItems: 'center' }}>
+                        {lead.email && (
+                          <button
+                            className="admin-btn-ghost admin-btn-icon sm"
+                            onClick={() => handleSendAiDraftEmail(lead)}
+                            title="Generate AI Email Draft and open in Gmail"
+                            style={{ color: 'var(--color-primary)' }}
+                          >
+                            <Sparkles size={14} />
+                          </button>
+                        )}
+                        <button className="admin-btn-ghost admin-btn-icon sm" onClick={() => deleteLead(lead._id || lead.id)}>
+                          <Trash2 size={16} />
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))}

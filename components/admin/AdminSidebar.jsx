@@ -132,24 +132,6 @@ export default function AdminSidebar({ collapsed, onToggle, onNavigate }) {
             MJ
           </Link>
         )}
-        
-        {onToggle && (
-          <button 
-            onClick={() => onToggle(!collapsed)} 
-            className="admin-btn-icon"
-            style={{ 
-              background: 'none', 
-              border: 'none', 
-              cursor: 'pointer',
-              color: 'var(--text-secondary, #4b5563)',
-              padding: '4px',
-              borderRadius: '4px'
-            }}
-            aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
-          >
-            {collapsed ? <PanelLeft size={20} /> : <PanelLeftClose size={20} />}
-          </button>
-        )}
       </div>
 
       <nav className="sidebar-nav" style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden', padding: '16px 0' }}>

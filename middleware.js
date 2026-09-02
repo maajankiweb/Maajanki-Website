@@ -4,6 +4,28 @@ import { NextResponse } from 'next/server';
 export default clerkMiddleware(async (auth, req) => {
   const { pathname } = req.nextUrl;
 
+  // 0. WordPress & CMS Anti-Fingerprinting Defense (Block automated scanner probes)
+  const isWordPressProbe = 
+    pathname.startsWith('/wp-json') ||
+    pathname.startsWith('/wp-admin') ||
+    pathname.startsWith('/wp-content') ||
+    pathname.startsWith('/wp-includes') ||
+    pathname.startsWith('/wordpress') ||
+    pathname === '/wp-login.php' ||
+    pathname === '/xmlrpc.php';
+
+  if (isWordPressProbe) {
+    const blockedRes = new NextResponse(JSON.stringify({ error: 'Endpoint Not Found', status: 404 }), {
+      status: 404,
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet',
+        'Cache-Control': 'no-store, max-age=0',
+      }
+    });
+    return blockedRes;
+  }
+
   // 1. Guard all /admin routes
   if (pathname.startsWith('/admin')) {
     try {

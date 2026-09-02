@@ -116,7 +116,8 @@ const AdminHeader = ({
         <button
           className="topbar-icon-btn desktop-only-flex"
           onClick={onToggleCollapse}
-          aria-label="Toggle Sidebar"
+          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+          title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
           style={{
             alignItems: 'center',
             justifyContent: 'center',
@@ -125,7 +126,8 @@ const AdminHeader = ({
             color: 'var(--text-secondary, #4b5563)',
             cursor: 'pointer',
             padding: 'var(--spacing-2, 8px)',
-            borderRadius: 'var(--radius-md, 6px)'
+            borderRadius: 'var(--radius-md, 6px)',
+            transition: 'color 0.2s ease, background 0.2s ease'
           }}
         >
           {collapsed ? <PanelLeft size={20} /> : <PanelLeftClose size={20} />}
@@ -199,6 +201,29 @@ const AdminHeader = ({
 
       {/* RIGHT SECTION */}
       <div className="topbar-actions" style={{ display: 'flex', alignItems: 'center', gap: 'var(--spacing-3, 12px)' }}>
+        {/* Live Indicator Badge */}
+        <div className="desktop-only-flex" style={{
+          alignItems: 'center',
+          gap: '6px',
+          padding: '4px 10px',
+          borderRadius: 'var(--radius-full, 9999px)',
+          backgroundColor: 'rgba(34, 197, 94, 0.1)',
+          border: '1px solid rgba(34, 197, 94, 0.3)',
+          color: '#16a34a',
+          fontSize: '11px',
+          fontWeight: '600'
+        }}>
+          <span style={{
+            width: '6px',
+            height: '6px',
+            borderRadius: '50%',
+            backgroundColor: '#22c55e',
+            display: 'inline-block',
+            boxShadow: '0 0 6px #22c55e'
+          }}></span>
+          <span>Live</span>
+        </div>
+
         <button className="topbar-icon-btn" aria-label="Notifications" style={{
           position: 'relative',
           background: 'none',

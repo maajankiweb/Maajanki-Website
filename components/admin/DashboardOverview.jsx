@@ -6,7 +6,8 @@ import {
   Users, UserPlus, UserCheck, TrendingUp, TrendingDown, Building2, 
   DollarSign, ListTodo, Clock, Plus, FileDown, Brain, ArrowRight, 
   CalendarDays, RefreshCw, Filter, MoreHorizontal, Eye, Edit, Phone,
-  Sparkles, CheckCircle2, Shield, Layers, FileSpreadsheet
+  Sparkles, CheckCircle2, Shield, Layers, FileSpreadsheet, Calendar,
+  X, Check
 } from 'lucide-react';
 import { 
   LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, 
@@ -22,6 +23,17 @@ export default function DashboardOverview({ leads: propLeads }) {
   const [period, setPeriod] = useState('30 Days');
   const [greeting, setGreeting] = useState('Good morning');
   const [refreshing, setRefreshing] = useState(false);
+  const [lastSynced, setLastSynced] = useState(Date.now());
+  const [syncSecondsAgo, setSyncSecondsAgo] = useState(0);
+
+  // Custom date range state
+  const [showCustomPicker, setShowCustomPicker] = useState(false);
+  const [customStartDate, setCustomStartDate] = useState(
+    new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10)
+  );
+  const [customEndDate, setCustomEndDate] = useState(
+    new Date().toISOString().slice(0, 10)
+  );
 
   const fetchLiveLeads = async (isManual = false) => {
     if (isManual) setRefreshing(true);
@@ -31,6 +43,7 @@ export default function DashboardOverview({ leads: propLeads }) {
       if (res.ok) {
         const data = await res.json();
         setLeads(data.leads || []);
+        setLastSynced(Date.now());
       }
     } catch (err) {
       console.error('Failed to fetch dashboard leads:', err);
@@ -41,7 +54,10 @@ export default function DashboardOverview({ leads: propLeads }) {
   };
 
   useEffect(() => {
-    if (!propLeads) {
+    if (propLeads) {
+      setLeads(propLeads);
+      setLastSynced(Date.now());
+    } else {
       fetchLiveLeads();
     }
   }, [propLeads]);
@@ -53,13 +69,69 @@ export default function DashboardOverview({ leads: propLeads }) {
     else setGreeting('Good evening');
   }, []);
 
-  // Compute live metrics from database records
-  const totalLeads = leads.length;
-  const newLeads = leads.filter(l => (l.status || '').toLowerCase() === 'new').length;
-  const contactedLeads = leads.filter(l => (l.status || '').toLowerCase() === 'contacted').length;
-  const qualifiedLeads = leads.filter(l => (l.status || '').toLowerCase() === 'qualified').length;
-  const closedLeads = leads.filter(l => (l.status || '').toLowerCase() === 'closed').length;
-  const spamLeads = leads.filter(l => (l.status || '').toLowerCase() === 'spam').length;
+  // Update "synced X seconds ago" ticker
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSyncSecondsAgo(Math.floor((Date.now() - lastSynced) / 1000));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [lastSynced]);
+
+  // Filter leads dynamically based on selected date range
+  const filteredLeads = useMemo(() => {
+    const now = new Date();
+    
+    if (period === 'Today') {
+      const startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+      return leads.filter(l => {
+        const time = l.createdAt ? new Date(l.createdAt).getTime() : 0;
+        return time >= startOfDay;
+      });
+    }
+
+    if (period === '7 Days') {
+      const threshold = now.getTime() - 7 * 86400000;
+      return leads.filter(l => {
+        const time = l.createdAt ? new Date(l.createdAt).getTime() : 0;
+        return time >= threshold;
+      });
+    }
+
+    if (period === '30 Days') {
+      const threshold = now.getTime() - 30 * 86400000;
+      return leads.filter(l => {
+        const time = l.createdAt ? new Date(l.createdAt).getTime() : 0;
+        return time >= threshold;
+      });
+    }
+
+    if (period === '90 Days') {
+      const threshold = now.getTime() - 90 * 86400000;
+      return leads.filter(l => {
+        const time = l.createdAt ? new Date(l.createdAt).getTime() : 0;
+        return time >= threshold;
+      });
+    }
+
+    if (period === 'Custom') {
+      const start = new Date(customStartDate + 'T00:00:00').getTime();
+      const end = new Date(customEndDate + 'T23:59:59').getTime();
+      return leads.filter(l => {
+        const time = l.createdAt ? new Date(l.createdAt).getTime() : 0;
+        return time >= start && time <= end;
+      });
+    }
+
+    return leads; // 'All Time'
+  }, [leads, period, customStartDate, customEndDate]);
+
+  // Compute live metrics from filtered database records
+  const totalLeads = filteredLeads.length;
+  const newLeads = filteredLeads.filter(l => (l.status || '').toLowerCase() === 'new').length;
+  const contactedLeads = filteredLeads.filter(l => (l.status || '').toLowerCase() === 'contacted').length;
+  const qualifiedLeads = filteredLeads.filter(l => (l.status || '').toLowerCase() === 'qualified').length;
+  const closedLeads = filteredLeads.filter(l => (l.status || '').toLowerCase() === 'closed').length;
+  const spamLeads = filteredLeads.filter(l => (l.status || '').toLowerCase() === 'spam').length;
 
   const conversionRate = totalLeads > 0 
     ? ((closedLeads / totalLeads) * 100).toFixed(1) + '%' 
@@ -68,7 +140,7 @@ export default function DashboardOverview({ leads: propLeads }) {
   const activeCustomers = closedLeads;
   const totalRevenue = closedLeads > 0 ? (closedLeads * 50000).toLocaleString('en-IN') : '0';
 
-  // Dynamic Funnel Data from real leads
+  // Dynamic Funnel Data from filtered leads
   const funnelData = useMemo(() => {
     if (totalLeads === 0) return [];
     return [
@@ -80,28 +152,30 @@ export default function DashboardOverview({ leads: propLeads }) {
     ];
   }, [totalLeads, newLeads, contactedLeads, qualifiedLeads, closedLeads]);
 
-  // Dynamic Lead Sources from real leads
+  // Dynamic Lead Sources from filtered leads
   const sourceData = useMemo(() => {
     if (totalLeads === 0) return [];
     const counts = {};
-    leads.forEach(l => {
+    filteredLeads.forEach(l => {
       const src = l.source || 'Website Form';
       counts[src] = (counts[src] || 0) + 1;
     });
     return Object.entries(counts).map(([name, value]) => ({ name, value }));
-  }, [leads, totalLeads]);
+  }, [filteredLeads, totalLeads]);
 
-  // Dynamic 30-day leads trend from real leads
+  // Dynamic trend chart based on selected date range
   const trendData = useMemo(() => {
+    const daysCount = period === 'Today' ? 1 : period === '7 Days' ? 7 : period === '90 Days' ? 90 : 30;
     const map = {};
-    for (let i = 29; i >= 0; i--) {
+    
+    for (let i = daysCount - 1; i >= 0; i--) {
       const d = new Date();
       d.setDate(d.getDate() - i);
       const key = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
       map[key] = { date: key, total: 0, qualified: 0 };
     }
 
-    leads.forEach(lead => {
+    filteredLeads.forEach(lead => {
       if (lead.createdAt) {
         const leadDate = new Date(lead.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
         if (map[leadDate]) {
@@ -114,11 +188,11 @@ export default function DashboardOverview({ leads: propLeads }) {
     });
 
     return Object.values(map);
-  }, [leads]);
+  }, [filteredLeads, period]);
 
   const recentLeads = useMemo(() => {
-    return leads.slice(0, 5);
-  }, [leads]);
+    return filteredLeads.slice(0, 5);
+  }, [filteredLeads]);
 
   const getStatusBadgeClass = (status) => {
     switch ((status || '').toLowerCase()) {
@@ -137,45 +211,126 @@ export default function DashboardOverview({ leads: propLeads }) {
       {/* A) GREETING HEADER */}
       <div className="admin-page-header">
         <div>
-          <h1 className="admin-page-title">{greeting}, Ashish</h1>
-          <p className="admin-page-desc">Clean administrative overview. Real-time metrics from MongoDB Atlas.</p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '4px' }}>
+            <h1 className="admin-page-title" style={{ margin: 0 }}>{greeting}, Ashish</h1>
+            {/* Real-time Live Badge */}
+            <span className="admin-badge admin-badge-closed" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', padding: '2px 8px' }}>
+              <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: '#22c55e', display: 'inline-block', boxShadow: '0 0 6px #22c55e' }} />
+              Live Sync
+            </span>
+          </div>
+          <p className="admin-page-desc" style={{ margin: 0 }}>
+            Real-time analytics from MongoDB Atlas. Synced {syncSecondsAgo === 0 ? 'just now' : `${syncSecondsAgo}s ago`}.
+          </p>
         </div>
-        <div className="admin-page-actions" style={{ display: 'flex', gap: '8px' }}>
+
+        {/* Date Filter Controls */}
+        <div className="admin-page-actions" style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center' }}>
           <button
             onClick={() => fetchLiveLeads(true)}
             disabled={refreshing}
             className="admin-btn admin-btn-outline"
             style={{ fontSize: '13px', padding: '6px 12px' }}
+            title="Refresh database records"
           >
             <RefreshCw size={14} style={{ animation: refreshing ? 'spin 1s linear infinite' : 'none' }} />
-            {refreshing ? 'Syncing...' : 'Sync Live'}
+            {refreshing ? 'Syncing...' : 'Sync Now'}
           </button>
-          {['Today', '7 Days', '30 Days', '90 Days', 'All Time'].map((p) => (
+
+          <div style={{ display: 'flex', gap: '4px', backgroundColor: 'var(--bg-card)', padding: '3px', borderRadius: 'var(--radius-md, 8px)', border: '1px solid var(--border-color, #e5e7eb)' }}>
+            {['Today', '7 Days', '30 Days', '90 Days', 'All Time'].map((p) => (
+              <button
+                key={p}
+                onClick={() => setPeriod(p)}
+                className={`admin-btn ${period === p ? 'admin-btn-primary' : 'admin-btn-ghost'}`}
+                style={{ fontSize: '12px', padding: '4px 10px', borderRadius: '6px', height: '28px' }}
+              >
+                {p}
+              </button>
+            ))}
+
             <button
-              key={p}
-              onClick={() => setPeriod(p)}
-              className={`admin-btn ${period === p ? 'admin-btn-primary' : 'admin-btn-outline'}`}
-              style={{ fontSize: '13px', padding: '6px 12px' }}
+              onClick={() => {
+                setPeriod('Custom');
+                setShowCustomPicker(true);
+              }}
+              className={`admin-btn ${period === 'Custom' ? 'admin-btn-primary' : 'admin-btn-ghost'}`}
+              style={{ fontSize: '12px', padding: '4px 10px', borderRadius: '6px', height: '28px', display: 'flex', alignItems: 'center', gap: '4px' }}
             >
-              {p}
+              <Calendar size={12} />
+              {period === 'Custom' ? `${customStartDate.slice(5)} to ${customEndDate.slice(5)}` : 'Custom'}
             </button>
-          ))}
+          </div>
         </div>
       </div>
+
+      {/* Custom Date Range Picker Modal / Dropdown */}
+      {showCustomPicker && (
+        <div className="admin-card" style={{ border: '1px solid var(--color-primary)', background: 'var(--bg-card)', padding: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Calendar size={16} style={{ color: 'var(--color-primary)' }} />
+              <strong style={{ fontSize: '14px' }}>Select Custom Date Range</strong>
+            </div>
+            <button 
+              onClick={() => setShowCustomPicker(false)}
+              className="topbar-icon-btn"
+              style={{ width: '24px', height: '24px' }}
+            >
+              <X size={14} />
+            </button>
+          </div>
+
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+              <label style={{ fontSize: '12px', color: 'var(--color-text-secondary)' }}>Start Date</label>
+              <input
+                type="date"
+                value={customStartDate}
+                onChange={(e) => setCustomStartDate(e.target.value)}
+                className="admin-input"
+                style={{ padding: '6px 10px', fontSize: '13px' }}
+              />
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+              <label style={{ fontSize: '12px', color: 'var(--color-text-secondary)' }}>End Date</label>
+              <input
+                type="date"
+                value={customEndDate}
+                onChange={(e) => setCustomEndDate(e.target.value)}
+                className="admin-input"
+                style={{ padding: '6px 10px', fontSize: '13px' }}
+              />
+            </div>
+
+            <button
+              onClick={() => {
+                setPeriod('Custom');
+                setShowCustomPicker(false);
+              }}
+              className="admin-btn admin-btn-primary"
+              style={{ alignSelf: 'flex-end', fontSize: '13px', padding: '7px 14px' }}
+            >
+              <Check size={14} /> Apply Range
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* B) KPI CARDS */}
       <div className="admin-grid admin-grid-4">
         {/* Card 1: Total Leads */}
         <div className="kpi-card">
           <div className="kpi-card-header">
-            <span className="kpi-card-label">Total Leads</span>
+            <span className="kpi-card-label">Total Leads ({period})</span>
             <div className="kpi-card-icon" style={{ background: 'var(--color-info-light)', color: 'var(--color-info)' }}>
               <Users size={20} />
             </div>
           </div>
           <div className="kpi-card-value">{totalLeads}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-period">Live database record count</span>
+            <span className="kpi-card-period">{totalLeads > 0 ? `${totalLeads} in current range` : '0 in selected range'}</span>
           </div>
         </div>
 
@@ -189,7 +344,7 @@ export default function DashboardOverview({ leads: propLeads }) {
           </div>
           <div className="kpi-card-value">{newLeads}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-period">{newLeads > 0 ? 'Awaiting initial contact' : 'No pending lead backlog'}</span>
+            <span className="kpi-card-period">{newLeads > 0 ? 'Awaiting initial contact' : 'Zero lead backlog'}</span>
           </div>
         </div>
 
@@ -203,7 +358,7 @@ export default function DashboardOverview({ leads: propLeads }) {
           </div>
           <div className="kpi-card-value">{qualifiedLeads}</div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '8px' }}>
-            <span className="kpi-card-period">High commercial intent proposals</span>
+            <span className="kpi-card-period">High intent proposals</span>
           </div>
         </div>
 
@@ -293,8 +448,8 @@ export default function DashboardOverview({ leads: propLeads }) {
             </div>
             <p style={{ fontSize: '14px', color: 'var(--color-text-secondary)', lineHeight: '1.5', margin: '0 0 12px 0' }}>
               {totalLeads > 0 
-                ? `Active CRM monitoring: ${totalLeads} total leads recorded. ${newLeads} pending initial contact.`
-                : 'Clean slate active. Database is empty and ready to capture live leads from website forms, popups, and the AI chatbot in real time.'}
+                ? `Active CRM monitoring (${period}): ${totalLeads} inquiries in this time window. ${newLeads} pending initial contact.`
+                : `Active monitoring for ${period}: No inquiries recorded in this range. Inbound submissions from website forms will appear here instantly.`}
             </p>
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
               <Link href="/admin/agency-agents" className="admin-btn admin-btn-sm admin-btn-primary">
@@ -317,7 +472,7 @@ export default function DashboardOverview({ leads: propLeads }) {
         <div className="admin-card">
           <div className="admin-card-header">
             <div>
-              <h3 className="admin-card-title">Lead Funnel</h3>
+              <h3 className="admin-card-title">Lead Funnel ({period})</h3>
               <div className="admin-card-subtitle">Conversion tracking across stages</div>
             </div>
           </div>
@@ -325,7 +480,7 @@ export default function DashboardOverview({ leads: propLeads }) {
             {totalLeads === 0 ? (
               <div className="admin-empty-state" style={{ height: '100%', justifyContent: 'center' }}>
                 <Layers className="admin-empty-state-icon" style={{ width: 32, height: 32 }} />
-                <div className="admin-empty-state-title" style={{ fontSize: '14px' }}>No funnel data yet</div>
+                <div className="admin-empty-state-title" style={{ fontSize: '14px' }}>No funnel data for {period}</div>
                 <div className="admin-empty-state-desc" style={{ fontSize: '12px' }}>Inquiries will automatically build your conversion funnel.</div>
               </div>
             ) : (
@@ -345,7 +500,7 @@ export default function DashboardOverview({ leads: propLeads }) {
         <div className="admin-card">
           <div className="admin-card-header">
             <div>
-              <h3 className="admin-card-title">Lead Sources</h3>
+              <h3 className="admin-card-title">Lead Sources ({period})</h3>
               <div className="admin-card-subtitle">Distribution by acquisition channel</div>
             </div>
           </div>
@@ -353,8 +508,8 @@ export default function DashboardOverview({ leads: propLeads }) {
             {totalLeads === 0 ? (
               <div className="admin-empty-state" style={{ height: '100%', justifyContent: 'center' }}>
                 <FileSpreadsheet className="admin-empty-state-icon" style={{ width: 32, height: 32 }} />
-                <div className="admin-empty-state-title" style={{ fontSize: '14px' }}>No lead sources recorded</div>
-                <div className="admin-empty-state-desc" style={{ fontSize: '12px' }}>Traffic acquisition channels will populate as forms are submitted.</div>
+                <div className="admin-empty-state-title" style={{ fontSize: '14px' }}>No lead sources for {period}</div>
+                <div className="admin-empty-state-desc" style={{ fontSize: '12px' }}>Traffic channels will populate as forms are submitted.</div>
               </div>
             ) : (
               <ResponsiveContainer width="100%" height="100%">
@@ -385,7 +540,7 @@ export default function DashboardOverview({ leads: propLeads }) {
       <div className="admin-card">
         <div className="admin-card-header">
           <div>
-            <h3 className="admin-card-title">Leads Trend (Last 30 Days)</h3>
+            <h3 className="admin-card-title">Leads Trend ({period})</h3>
             <div className="admin-card-subtitle">Live daily volume tracking</div>
           </div>
         </div>
@@ -423,7 +578,7 @@ export default function DashboardOverview({ leads: propLeads }) {
       <div className="admin-card">
         <div className="admin-card-header">
           <div>
-            <h3 className="admin-card-title">Recent Leads</h3>
+            <h3 className="admin-card-title">Recent Leads ({period})</h3>
             <div className="admin-card-subtitle">Latest prospects captured across all channels</div>
           </div>
           <Link href="/admin/all-leads" className="admin-btn admin-btn-outline admin-btn-sm">View All Leads</Link>
@@ -432,7 +587,7 @@ export default function DashboardOverview({ leads: propLeads }) {
           {recentLeads.length === 0 ? (
             <div className="admin-empty-state" style={{ padding: '48px 24px' }}>
               <Users className="admin-empty-state-icon" style={{ width: 40, height: 40 }} />
-              <div className="admin-empty-state-title">No leads in database yet</div>
+              <div className="admin-empty-state-title">No leads found in this period</div>
               <div className="admin-empty-state-desc">
                 When visitors submit forms on your website, inquiries will appear here in real time.
               </div>
