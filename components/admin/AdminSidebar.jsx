@@ -8,7 +8,8 @@ import {
   LayoutDashboard, Users, UserPlus, Phone, CheckCircle, XCircle, AlertTriangle,
   FileText, Send, Megaphone, Gift, MessageSquare, BookOpen, Mail, PhoneCall,
   Bot, Brain, Globe, UsersRound, Briefcase, KanbanSquare, CalendarDays, BarChart3,
-  Trophy, Settings, LogOut, ChevronRight, ChevronDown, PanelLeftClose, PanelLeft
+  Trophy, Settings, LogOut, ChevronRight, ChevronDown, PanelLeftClose, PanelLeft,
+  Activity, SlidersHorizontal
 } from 'lucide-react';
 
 const MENU_ITEMS = [
@@ -28,7 +29,7 @@ const MENU_ITEMS = [
       { label: 'Contacted', icon: Phone, href: '/admin/contacted-leads' },
       { label: 'Qualified', icon: CheckCircle, href: '/admin/qualified-leads' },
       { label: 'Closed', icon: CheckCircle, href: '/admin/closed-leads' },
-      { label: 'Spam', icon: AlertTriangle, href: '/admin/spam-leads' }
+      { label: 'Spam', icon: XCircle, href: '/admin/spam-leads' }
     ]
   },
   {
@@ -36,13 +37,13 @@ const MENU_ITEMS = [
     collapsible: true,
     icon: FileText,
     items: [
-      { label: 'Contact Form', icon: MessageSquare, href: '/admin/forms/contact' },
+      { label: 'Contact Form', icon: Mail, href: '/admin/forms/contact' },
       { label: 'Audit Form', icon: FileText, href: '/admin/forms/audit' },
       { label: 'Footer Popup', icon: Send, href: '/admin/forms/footer' },
-      { label: 'Promo Popup', icon: Megaphone, href: '/admin/forms/promo' },
-      { label: 'AI Chatbot', icon: Bot, href: '/admin/forms/chatbot' },
+      { label: 'Promo Popup', icon: Gift, href: '/admin/forms/promo' },
+      { label: 'AI Chatbot', icon: MessageSquare, href: '/admin/forms/chatbot' },
       { label: 'Brochure Download', icon: BookOpen, href: '/admin/forms/brochure' },
-      { label: 'Newsletter', icon: Mail, href: '/admin/forms/newsletter' },
+      { label: 'Newsletter', icon: Megaphone, href: '/admin/forms/newsletter' },
       { label: 'Callback Request', icon: PhoneCall, href: '/admin/forms/callback' }
     ]
   },
@@ -52,7 +53,8 @@ const MENU_ITEMS = [
       { label: 'Agency AI Agents', icon: Bot, href: '/admin/agency-agents' },
       { label: 'AI Insights', icon: Brain, href: '/admin/ai-insights' },
       { label: 'Global Map', icon: Globe, href: '/admin/global-map-analytics' },
-      { label: 'Customers & CRM', icon: UsersRound, href: '/admin/customers-crm' }
+      { label: 'Customers & CRM', icon: UsersRound, href: '/admin/customers-crm' },
+      { label: 'System Health & APM', icon: Activity, href: '/admin/system-health' }
     ]
   },
   {
@@ -62,6 +64,7 @@ const MENU_ITEMS = [
       { label: 'Tasks & Kanban', icon: KanbanSquare, href: '/admin/tasks-kanban' },
       { label: 'Calendar & Follow-ups', icon: CalendarDays, href: '/admin/calendar-followups' },
       { label: 'Reports & Exports', icon: BarChart3, href: '/admin/reports-exports' },
+      { label: 'Feature Flags', icon: SlidersHorizontal, href: '/admin/feature-flags' },
       { label: 'Team Performance', icon: Trophy, href: '/admin/team-performance' },
       { label: 'Settings & Security', icon: Settings, href: '/admin/settings-security' }
     ]

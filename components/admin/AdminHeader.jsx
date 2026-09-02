@@ -132,6 +132,12 @@ const AdminHeader = ({
     } else if (path.includes('/agency-agents')) {
       breadcrumbs.push({ label: 'Analytics & AI', isCurrent: false });
       breadcrumbs.push({ label: 'Agency AI Agents', isCurrent: true });
+    } else if (path.includes('/system-health')) {
+      breadcrumbs.push({ label: 'Analytics & AI', isCurrent: false });
+      breadcrumbs.push({ label: 'System Health & APM', isCurrent: true });
+    } else if (path.includes('/feature-flags')) {
+      breadcrumbs.push({ label: 'Management', isCurrent: false });
+      breadcrumbs.push({ label: 'Feature Flags', isCurrent: true });
     } else {
       const segments = path.split('/').filter(Boolean);
       segments.forEach((seg, index) => {
