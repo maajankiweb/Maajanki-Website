@@ -9,7 +9,7 @@ import {
   FileText, Send, Megaphone, Gift, MessageSquare, BookOpen, Mail, PhoneCall,
   Bot, Brain, Globe, UsersRound, Briefcase, KanbanSquare, CalendarDays, BarChart3,
   Trophy, Settings, LogOut, ChevronRight, ChevronDown, PanelLeftClose, PanelLeft,
-  Activity, SlidersHorizontal
+  Activity, SlidersHorizontal, Sparkles
 } from 'lucide-react';
 
 const MENU_ITEMS = [
@@ -50,6 +50,7 @@ const MENU_ITEMS = [
   {
     group: 'ANALYTICS & AI',
     items: [
+      { label: 'AI Automation Hub', icon: Sparkles, href: '/admin/automation-hub' },
       { label: 'Agency AI Agents', icon: Bot, href: '/admin/agency-agents' },
       { label: 'AI Insights', icon: Brain, href: '/admin/ai-insights' },
       { label: 'Global Map', icon: Globe, href: '/admin/global-map-analytics' },

@@ -129,6 +129,9 @@ const AdminHeader = ({
     } else if (path.includes('/forms/contact')) {
       breadcrumbs.push({ label: 'Website Forms', isCurrent: false });
       breadcrumbs.push({ label: 'Contact Form', isCurrent: true });
+    } else if (path.includes('/automation-hub')) {
+      breadcrumbs.push({ label: 'Analytics & AI', isCurrent: false });
+      breadcrumbs.push({ label: 'AI Automation Hub', isCurrent: true });
     } else if (path.includes('/agency-agents')) {
       breadcrumbs.push({ label: 'Analytics & AI', isCurrent: false });
       breadcrumbs.push({ label: 'Agency AI Agents', isCurrent: true });

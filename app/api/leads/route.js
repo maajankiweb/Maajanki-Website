@@ -4,6 +4,8 @@ import { NextResponse } from 'next/server';
 import { connectDB } from '@/lib/db';
 import Lead from '@/lib/models/Lead';
 import { sendWhatsAppNotification } from '@/lib/notifications';
+import { verifyEmailAddress } from '@/lib/email-verifier';
+import { sendAIPersonalizedOutreachEmail } from '@/lib/ai-outreach-engine';
 
 // In-memory rate limiting map (IP -> timestamp array)
 const rateLimitMap = new Map();
@@ -42,7 +44,7 @@ export async function POST(request) {
     // Rate Limiting Check
     if (isRateLimited(clientIp)) {
       return NextResponse.json(
-        { success: false, error: 'Too many requests. Please try again in 15 minutes.' },
+        { success: false, error: 'Bohot saare requests prapt hue hain. Kripya 15 minute baad punah prayas karein.' },
         { status: 429 }
       );
     }
@@ -66,14 +68,20 @@ export async function POST(request) {
     // Validate that at least contact info is provided
     if (!cleanEmail && !cleanPhone && !cleanName && !cleanUrl) {
       return NextResponse.json(
-        { success: false, error: 'At least one contact detail or URL is required' },
+        { success: false, error: 'Kripya kam se kam ek contact detail (email ya phone) darj karein.' },
         { status: 400 }
       );
     }
 
-    // Email regex validation if email is provided
-    if (cleanEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanEmail)) {
-      return NextResponse.json({ success: false, error: 'Please enter a valid email address' }, { status: 400 });
+    // 100% Free Real-Time Email Verification & Disposable Domain Blocker
+    if (cleanEmail) {
+      const emailCheck = await verifyEmailAddress(cleanEmail);
+      if (!emailCheck.valid) {
+        return NextResponse.json(
+          { success: false, error: emailCheck.reason },
+          { status: 400 }
+        );
+      }
     }
 
     await connectDB();
@@ -89,7 +97,7 @@ export async function POST(request) {
       status: 'New',
     });
 
-    // Server-side forwarding to Google Sheet Web App
+    // 1. Server-side forwarding to Google Sheet Web App
     const GOOGLE_SHEET_URL = process.env.GOOGLE_SHEET_WEB_APP_URL ||
       'https://script.google.com/macros/s/AKfycbyh3EGN-3ZQLOe1ECaGhlAAzhyPbJ0I_lmNKXMQIrGW-z0qsCuvd6WZc87-GsnfJ5ih/exec';
 
@@ -113,7 +121,7 @@ export async function POST(request) {
       console.warn('Google Sheet forward warning:', sheetErr.message);
     }
 
-    // Trigger instant WhatsApp notification to admin
+    // 2. Trigger instant WhatsApp notification to admin (+91 9006543913)
     try {
       sendWhatsAppNotification({
         name: cleanName,
@@ -126,6 +134,21 @@ export async function POST(request) {
       }).catch(err => console.warn('WhatsApp notification async error:', err.message));
     } catch (waErr) {
       console.warn('WhatsApp notification trigger warning:', waErr.message);
+    }
+
+    // 3. Trigger Free AI Personalized Outreach Email to the verified lead
+    if (cleanEmail) {
+      try {
+        sendAIPersonalizedOutreachEmail({
+          name: cleanName,
+          email: cleanEmail,
+          service: cleanService,
+          message: cleanMessage,
+          source: cleanSource
+        }).catch(err => console.warn('AI Outreach auto-responder notice:', err.message));
+      } catch (emailErr) {
+        console.warn('AI Outreach trigger error:', emailErr.message);
+      }
     }
 
     return NextResponse.json({ success: true, leadId: newLead._id }, { status: 201 });
