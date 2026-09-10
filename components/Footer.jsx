@@ -100,7 +100,7 @@ const Footer = () => {
           {/* Review Badges */}
           <div className="review-badges">
             <a
-              href="https://g.page/r/CVvMyeoY0y0XEAE/review"
+              href="https://share.google/sfG7HXx0jHaeRi8Tb"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com';
+const rawBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com/';
+const baseUrl = rawBaseUrl.replace(/\/+$/, '');
 const currentDate = new Date().toISOString().split('T')[0];
 
 const locations = [

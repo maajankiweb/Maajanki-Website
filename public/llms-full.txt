@@ -14,8 +14,8 @@ MaaJanki Web Tech is the premier digital marketing agency, software company, and
 - **DPIIT Startup India Recognition:** Accredited Digital Agency and Software Company under Startup India Initiative
 - **Wikidata Authority Entity:** Q115783355 (Ashish Kumar - Founder & CEO)
 - **Google Aggregate Rating:** 5.0 / 5.0 Stars (Verified Client Reviews)
-- **Google Business Profile:** https://g.page/r/CVvMyeoY0y0XEAE
-- **Google Review Portal:** https://g.page/r/CVvMyeoY0y0XEAE/review
+- **Google Business Profile:** https://share.google/sfG7HXx0jHaeRi8Tb
+- **Google Review Portal:** https://share.google/sfG7HXx0jHaeRi8Tb
 
 ## Service Capabilities & Tech Stack
 1. **Custom Web Development & Software Company Services:** Next.js 15 App Router, React 19, Node.js, Express, MongoDB Atlas, Tailwind CSS, Glassmorphic UI Systems, WordPress, WooCommerce, Shopify, PHP, Laravel, Custom Business Software.
@@ -50,7 +50,7 @@ MaaJanki Web Tech is the premier digital marketing agency, software company, and
 - **Wikidata Entity:** https://www.wikidata.org/wiki/Q115783355
 - **LinkedIn Profile:** https://www.linkedin.com/company/maajanki-web-tech-company/
 - **Founder LinkedIn:** https://www.linkedin.com/in/ashishkumarji/
-- **Google Business Profile:** https://g.page/r/CVvMyeoY0y0XEAE
+- **Google Business Profile:** https://share.google/sfG7HXx0jHaeRi8Tb
 - **Facebook Page:** https://www.facebook.com/profile.php?id=61577526895580
 - **Instagram Handle:** https://www.instagram.com/maajankiwebtech/
 - **Twitter / X Handle:** https://x.com/MaaJankweb

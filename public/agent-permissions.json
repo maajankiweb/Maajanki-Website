@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "agent_permissions": {
     "site_name": "MaaJanki Web Tech",
-    "site_url": "https://maajankiwebtech.com",
+    "site_url": "https://maajankiwebtech.com/",
     "allowed_actions": [
       {
         "action": "read_public_content",

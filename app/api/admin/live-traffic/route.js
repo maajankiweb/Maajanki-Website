@@ -14,7 +14,7 @@ export async function GET(request) {
   }
 
   try {
-    const siteUrl = 'https://maajankiwebtech.com';
+    const siteUrl = 'https://maajankiwebtech.com/';
     const domain = 'maajankiwebtech.com';
 
     // 1. Live Internet DNS Resolution via Google DNS over HTTPS (Real Internet Fetch)

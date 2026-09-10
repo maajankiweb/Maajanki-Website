@@ -79,7 +79,7 @@ export default function LocationsHubPage() {
     provider: {
       '@type': 'Organization',
       name: 'MaaJanki Web Tech',
-      url: 'https://maajankiwebtech.com',
+      url: 'https://maajankiwebtech.com/',
     },
   };
 

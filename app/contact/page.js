@@ -35,7 +35,7 @@ export default function Page() {
     "@type": "LocalBusiness",
     "name": "Maajanki Web Tech",
     "description": "Web development and digital marketing agency in Bagaha, West Champaran, Bihar",
-    "url": "https://maajankiwebtech.com",
+    "url": "https://maajankiwebtech.com/",
     "telephone": "+91-9006543913",
     "image": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
     "address": {
@@ -84,7 +84,7 @@ export default function Page() {
     "isPartOf": {
       "@type": "WebSite",
       "@id": "https://maajankiwebtech.com/#website",
-      "url": "https://maajankiwebtech.com"
+      "url": "https://maajankiwebtech.com/"
     }
   };
 
@@ -123,7 +123,7 @@ export default function Page() {
             </p>
             <div className="banner-buttons">
               <a
-                href="https://g.page/r/CVvMyeoY0y0XEAE/review"
+                href="https://share.google/sfG7HXx0jHaeRi8Tb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn1"
@@ -151,7 +151,7 @@ export default function Page() {
             </a>
 
             <a 
-              href="https://g.page/r/CdM4-zj2uGnQEB0" 
+              href="https://share.google/sfG7HXx0jHaeRi8Tb" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="contact-link"
@@ -245,7 +245,7 @@ export default function Page() {
                   </a>
 
                   <a
-                    href="https://g.page/r/CdM4-zj2uGnQEB0"
+                    href="https://share.google/sfG7HXx0jHaeRi8Tb"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline-dark btn-block"

@@ -127,8 +127,7 @@ const Reviews = () => {
                 "telephone": "+91-9006543913",
                 "priceRange": "$",
                 "sameAs": [
-                  "https://g.page/r/CVvMyeoY0y0XEAE",
-                  "https://g.page/r/CVvMyeoY0y0XEAE/review",
+                  "https://share.google/sfG7HXx0jHaeRi8Tb",
                   "https://jsdl.in/DT-99EMZMSLY37",
                   "https://www.ambitionbox.com/maajankiwebtech"
                 ],
@@ -207,7 +206,7 @@ const Reviews = () => {
               <h3>Direct definition of our credibility</h3>
               <p>
                 MaaJanki Web Tech maintains a verified 5-Star aggregate rating of <strong>5.0 / 5.0 stars</strong> 
-                on <a href="https://g.page/r/CVvMyeoY0y0XEAE/review" target="_blank" rel="noopener noreferrer" style={{ color: '#FD6A02', fontWeight: 'bold' }}>Google Business Profile</a>, 
+                on <a href="https://share.google/sfG7HXx0jHaeRi8Tb" target="_blank" rel="noopener noreferrer" style={{ color: '#FD6A02', fontWeight: 'bold' }}>Google Business Profile</a>, 
                 Trustpilot, and Justdial. We maintain 100% transparent reviews with zero artificial modifications.
               </p>
             </div>
@@ -263,7 +262,7 @@ const Reviews = () => {
             
             <div className="reviews-cta-buttons">
               <a
-                href="https://g.page/r/CVvMyeoY0y0XEAE/review"
+                href="https://share.google/sfG7HXx0jHaeRi8Tb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="review-btn review-btn-google"

@@ -110,7 +110,7 @@ export default function Page() {
             </p>
             <div className="banner-buttons">
               <a
-                href="https://g.page/r/CVvMyeoY0y0XEAE/review"
+                href="https://share.google/sfG7HXx0jHaeRi8Tb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn1"
@@ -138,7 +138,7 @@ export default function Page() {
             </a>
 
             <a 
-              href="https://g.page/r/CdM4-zj2uGnQEB0" 
+              href="https://share.google/sfG7HXx0jHaeRi8Tb" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="contact-link"
@@ -248,7 +248,7 @@ export default function Page() {
                   </a>
 
                   <a
-                    href="https://g.page/r/CdM4-zj2uGnQEB0"
+                    href="https://share.google/sfG7HXx0jHaeRi8Tb"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline-dark btn-block"

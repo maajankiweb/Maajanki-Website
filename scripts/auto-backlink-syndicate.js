@@ -149,7 +149,7 @@ function generateGitHubShowcase() {
 > Accredited by **DPIIT Startup India** & Registered **MSME Udyam Enterprise** (\`UDYAM-BR-38-0014113\`).
 
 [![Website](https://img.shields.io/badge/Website-maajankiwebtech.com-FF6B00?style=for-the-badge&logo=google-chrome&logoColor=white)](https://maajankiwebtech.com)
-[![Google Reviews](https://img.shields.io/badge/Google%20Rating-5.0%20Stars%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://g.page/r/CVvMyeoY0y0XEAE/review)
+[![Google Reviews](https://img.shields.io/badge/Google%20Rating-5.0%20Stars%20%E2%98%85%E2%98%85%E2%98%85%E2%98%85%E2%98%85-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://share.google/sfG7HXx0jHaeRi8Tb)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-MaaJanki%20Web%20Tech-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/maajanki-web-tech-company/)
 
 ---

@@ -43,9 +43,6 @@ export const metadata = {
     title: "Web Development & SEO Agency in Bihar | MaaJanki Web Tech",
     description: "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js web applications, local SEO, and Google Ads.",
   },
-  alternates: {
-    canonical: "https://maajankiwebtech.com/",
-  },
 };
 
 export default function Page() {
@@ -114,6 +111,7 @@ export default function Page() {
 
   return (
     <>
+      <link rel="canonical" href="https://maajankiwebtech.com/" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

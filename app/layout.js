@@ -34,7 +34,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com/'),
   title: {
     default: 'Web Development & SEO Agency in Bihar | MaaJanki Web Tech',
     template: '%s | MaaJanki Web Tech',
@@ -63,9 +63,6 @@ export const metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  alternates: {
-    canonical: 'https://maajankiwebtech.com/',
   },
   icons: {
     icon: '/favicon.png',
@@ -136,8 +133,7 @@ export default function RootLayout({ children }) {
           "https://www.linkedin.com/company/maajanki-web-tech-company/",
           "https://x.com/MaaJankweb",
           "https://in.pinterest.com/maajankiweb/",
-          "https://g.page/r/CVvMyeoY0y0XEAE",
-          "https://g.page/r/CVvMyeoY0y0XEAE/review"
+          "https://share.google/sfG7HXx0jHaeRi8Tb"
         ],
         "areaServed": [
           { "@type": "Country", "name": "India" },
@@ -171,10 +167,9 @@ export default function RootLayout({ children }) {
         "url": "https://maajankiwebtech.com/",
         "telephone": "+91-9006543913",
         "description": "Professional website development and digital marketing agency in Bagaha, Bihar.",
-        "hasMap": "https://g.page/r/CVvMyeoY0y0XEAE",
+        "hasMap": "https://share.google/sfG7HXx0jHaeRi8Tb",
         "sameAs": [
-          "https://g.page/r/CVvMyeoY0y0XEAE",
-          "https://g.page/r/CVvMyeoY0y0XEAE/review"
+          "https://share.google/sfG7HXx0jHaeRi8Tb"
         ],
         "address": {
           "@type": "PostalAddress",

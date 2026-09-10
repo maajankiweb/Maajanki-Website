@@ -75,7 +75,7 @@ export default function Page() {
         },
         "sameAs": [
           "https://www.wikidata.org/wiki/Q115783355",
-          "https://g.page/r/CVvMyeoY0y0XEAE",
+          "https://share.google/sfG7HXx0jHaeRi8Tb",
           "https://www.linkedin.com/company/maajanki-web-tech-company/",
           "https://www.facebook.com/profile.php?id=61577526895580",
           "https://www.instagram.com/maajankiwebtech/"
@@ -141,7 +141,7 @@ export default function Page() {
             </p>
             <div className="banner-buttons">
               <a
-                href="https://g.page/r/CVvMyeoY0y0XEAE/review"
+                href="https://share.google/sfG7HXx0jHaeRi8Tb"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn1"
@@ -169,7 +169,7 @@ export default function Page() {
             </a>
 
             <a 
-              href="https://g.page/r/CdM4-zj2uGnQEB0" 
+              href="https://share.google/sfG7HXx0jHaeRi8Tb" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="contact-link"
@@ -325,7 +325,7 @@ export default function Page() {
 
                 <div className="d-flex flex-column gap-2">
                   <a
-                    href="https://g.page/r/CVvMyeoY0y0XEAE/review"
+                    href="https://share.google/sfG7HXx0jHaeRi8Tb"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-block text-white"
@@ -341,7 +341,7 @@ export default function Page() {
                   </a>
 
                   <a
-                    href="https://g.page/r/CVvMyeoY0y0XEAE"
+                    href="https://share.google/sfG7HXx0jHaeRi8Tb"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline-dark btn-block"

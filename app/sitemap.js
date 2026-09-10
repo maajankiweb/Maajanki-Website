@@ -2,7 +2,8 @@
 export const revalidate = 86400;
 
 export default async function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com';
+  const rawBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com/';
+  const baseUrl = rawBaseUrl.replace(/\/+$/, '');
 
   // All 58 Target Location Pages (Bihar, India & Global Regions)
   const locations = [

@@ -38,7 +38,7 @@ const SEO = () => {
             "@type": "Organization",
             "@id": "https://maajankiwebtech.com/#organization",
             "name": "MaaJanki Web Tech",
-            "url": "https://maajankiwebtech.com",
+            "url": "https://maajankiwebtech.com/",
             "logo": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png",
             "founder": {
               "@type": "Person",
