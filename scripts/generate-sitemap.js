@@ -24,6 +24,8 @@ const pages = [
 
   // Core Pages
   { path: '/about', changefreq: 'daily', priority: '0.8' },
+  { path: '/our-team', changefreq: 'daily', priority: '0.85' },
+  { path: '/careers', changefreq: 'daily', priority: '0.85' },
   { path: '/services', changefreq: 'daily', priority: '0.95' },
   { path: '/portfolio', changefreq: 'daily', priority: '0.85' },
   { path: '/industries', changefreq: 'daily', priority: '0.85' },

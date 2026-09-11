@@ -214,6 +214,9 @@ const nextConfig = {
       },
       // 301 Redirect deprecated 3rd-party product
       { source: '/products/elementor-pro', destination: '/products', permanent: true },
+      // Aliases / Canonical Redirects
+      { source: '/career', destination: '/careers', permanent: true },
+      { source: '/team', destination: '/our-team', permanent: true },
       // Block WordPress probe requests (Redirect to home page)
       { source: '/wp-json', destination: '/', permanent: false },
       { source: '/wp-json/:path*', destination: '/', permanent: false },

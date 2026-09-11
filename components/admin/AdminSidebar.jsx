@@ -61,6 +61,7 @@ const MENU_ITEMS = [
   {
     group: 'MANAGEMENT',
     items: [
+      { label: 'Team Members', icon: Users, href: '/admin/team' },
       { label: 'Portfolio Manager', icon: Briefcase, href: '/admin/portfolio' },
       { label: 'Tasks & Kanban', icon: KanbanSquare, href: '/admin/tasks-kanban' },
       { label: 'Calendar & Follow-ups', icon: CalendarDays, href: '/admin/calendar-followups' },

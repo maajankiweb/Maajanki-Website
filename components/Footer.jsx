@@ -126,12 +126,18 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* COMPANY */}
+        {/* COMPANY - PART 1 */}
         <div className="footer-col">
           <h3>COMPANY</h3>
           <ul>
             <li>
               <Link href="/about">About Us</Link>
+            </li>
+            <li>
+              <Link href="/our-team">Our Team</Link>
+            </li>
+            <li>
+              <Link href="/careers">Careers</Link>
             </li>
             <li>
               <Link href="/services">Our Services</Link>
@@ -142,6 +148,13 @@ const Footer = () => {
             <li>
               <Link href="/portfolio">Portfolio</Link>
             </li>
+          </ul>
+        </div>
+
+        {/* QUICK LINKS - PART 2 */}
+        <div className="footer-col">
+          <h3>QUICK LINKS</h3>
+          <ul>
             <li>
               <Link href="/reviews">Reviews</Link>
             </li>

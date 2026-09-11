@@ -11,8 +11,8 @@
 .footer-container {
   display              : grid;
   grid-template-columns: 1fr;
-  gap                  : 35px;
-  padding              : 40px 20px;
+  gap                  : 24px;
+  padding              : 30px 16px;
 }
 
 .footer-col {
@@ -56,55 +56,66 @@
 /* HEADINGS */
 .footer-col h3 {
   color        : #FD6A02;
-  font-size    : 16px;
-  margin-bottom: 12px;
+  font-size    : 15px;
+  font-weight  : 700;
+  margin-bottom: 10px;
+  white-space  : nowrap;
 }
 
 /* LISTS */
 .footer-col ul {
   list-style: none;
   padding   : 0;
+  margin    : 0;
 }
 
 .footer-col ul li {
-  margin-bottom: 12px;
+  margin-bottom: 7px;
   display      : flex;
   align-items  : flex-start;
-  gap          : 8px;
+  gap          : 6px;
 }
 
 .footer-col ul li i,
 .footer-col ul li .footer-icon {
   color         : #FD6A02;
-  font-size     : 1.15rem;
+  font-size     : 0.95rem;
   flex-shrink   : 0;
-  margin-top    : 3px;
+  margin-top    : 2px;
 }
 
-.footer-col:not(:nth-child(4)) ul li a {
+.footer-col:not(:last-child) ul li a {
   color          : #ffffff;
   text-decoration: none;
-  font-size      : 14px;
-  transition     : 0.3s ease;
+  font-size      : 13px;
+  transition     : 0.25s ease;
   position       : relative;
-  padding-left   : 14px;
+  padding-left   : 12px;
+  line-height    : 1.4;
+  display        : inline-block;
 }
 
-.footer-col:not(:nth-child(4)) ul li a::before {
+.footer-col:not(:last-child) ul li a::before {
   content: "›";
   position: absolute;
   left: 0;
   color: #FD6A02;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 1;
+  font-size: 15px;
+  line-height: 1.1;
 }
 
 .footer-col ul li a {
   color          : #ffffff;
   text-decoration: none;
-  font-size      : 14px;
-  transition     : 0.3s ease;
+  font-size      : 13px;
+  transition     : 0.25s ease;
+}
+
+.footer-col ul li span {
+  font-size      : 13px;
+  line-height    : 1.4;
+  color          : #cbd5e1;
 }
 
 .footer-col ul li a:hover {
@@ -258,24 +269,40 @@
    RESPONSIVE BREAKPOINTS
 ===================================== */
 
-/* TABLETS */
-@media (min-width: 600px) {
+/* TABLETS (2 rows of 3 columns) */
+@media (min-width: 600px) and (max-width: 991px) {
   .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-    padding              : 50px 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap                  : 24px;
+    padding              : 40px 24px;
   }
 
   .badge-list {
-    flex-direction: row;
-    flex-wrap     : wrap;
+    flex-direction: column;
+    gap           : 8px;
   }
 }
 
-/* LAPTOPS */
+/* LAPTOPS & DESKTOPS (ALL 6 COLUMNS IN 1 SINGLE ROW) */
 @media (min-width: 992px) {
   .footer-container {
-    grid-template-columns: repeat(4, 1fr) 1.2fr;
-    padding              : 60px 80px;
+    grid-template-columns: 1.3fr 0.85fr 0.85fr 1fr 1.35fr 0.95fr;
+    gap                  : 16px;
+    padding              : 40px 24px;
+  }
+
+  .badge-list {
+    flex-direction: column;
+    gap           : 8px;
+  }
+}
+
+/* WIDE DESKTOPS */
+@media (min-width: 1240px) {
+  .footer-container {
+    grid-template-columns: 1.4fr 0.9fr 0.9fr 1.05fr 1.4fr 1fr;
+    gap                  : 20px;
+    padding              : 45px 36px;
   }
 }
 

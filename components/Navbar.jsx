@@ -307,13 +307,13 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/blog" onClick={handleLinkClick}>
-                BLOG
+              <Link href="/our-team" onClick={handleLinkClick}>
+                OUR TEAM
               </Link>
             </li>
             <li>
-              <Link href="/tools" onClick={handleLinkClick}>
-                TOOLS
+              <Link href="/careers" onClick={handleLinkClick}>
+                CAREERS
               </Link>
             </li>
             <li>

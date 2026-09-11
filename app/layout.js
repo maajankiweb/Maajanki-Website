@@ -379,7 +379,7 @@ export default function RootLayout({ children }) {
 
   let clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
   if (process.env.NODE_ENV === 'development' && clerkPublishableKey?.startsWith('pk_live_')) {
-    clerkPublishableKey = process.env.NEXT_PUBLIC_DEV_CLERK_KEY || '';
+    clerkPublishableKey = process.env.NEXT_PUBLIC_DEV_CLERK_KEY || clerkPublishableKey;
   }
 
   const content = (

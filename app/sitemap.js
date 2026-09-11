@@ -78,6 +78,8 @@ export default async function sitemap() {
     // Core Pages
     { path: '', changeFrequency: 'daily', priority: 1.0 },
     { path: '/about', changeFrequency: 'daily', priority: 0.8 },
+    { path: '/our-team', changeFrequency: 'daily', priority: 0.85 },
+    { path: '/careers', changeFrequency: 'daily', priority: 0.85 },
     { path: '/services', changeFrequency: 'daily', priority: 0.95 },
     { path: '/portfolio', changeFrequency: 'daily', priority: 0.85 },
     { path: '/industries', changeFrequency: 'daily', priority: 0.85 },
