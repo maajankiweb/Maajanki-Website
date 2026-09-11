@@ -145,7 +145,7 @@ export default function RootLayout({ children }) {
           "https://www.instagram.com/maajankiwebtech/",
           "https://x.com/MaaJankiwebtech",
           "https://in.pinterest.com/maajankiweb/",
-          "https://www.youtube.com/@Akwebmasterhub",
+          "https://www.youtube.com/@Ashishkmj",
           "https://g.page/r/CVvMyeoY0y0XEAE"
         ],
         "areaServed": ["Bihar", "Uttar Pradesh", "Delhi", "Mumbai", "Bengaluru", "India"],

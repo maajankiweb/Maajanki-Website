@@ -88,7 +88,7 @@ const Footer = () => {
               <FaPinterest />
             </a>
             <a
-              href="https://www.youtube.com/@Akwebmasterhub"
+              href="https://www.youtube.com/@Ashishkmj"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
