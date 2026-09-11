@@ -152,13 +152,10 @@ const Footer = () => {
               <Link href="/contact">Contact Us</Link>
             </li>
             <li>
-              <a
-                href="https://blog.maajankiwebtech.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Blog
-              </a>
+              <Link href="/blog">Blog</Link>
+            </li>
+            <li>
+              <Link href="/tools">Free Tools</Link>
             </li>
           </ul>
         </div>

@@ -112,7 +112,6 @@ export default async function sitemap() {
     { path: '/products/nexus-saas', changeFrequency: 'daily', priority: 0.9 },
     { path: '/products/invobill', changeFrequency: 'daily', priority: 0.9 },
     { path: '/products/tailwind-templates', changeFrequency: 'daily', priority: 0.9 },
-    { path: '/products/elementor-pro', changeFrequency: 'daily', priority: 0.9 },
 
     // 9 Specialized Services Sub-Pages
     { path: '/services/web-development', changeFrequency: 'daily', priority: 0.95 },

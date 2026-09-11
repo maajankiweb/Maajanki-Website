@@ -103,23 +103,6 @@ export default function ProductsPage() {
         "SEO Optimized Layouts with Core Web Vitals < 95+",
         "Clean Component Architecture & Zero Dependencies"
       ]
-    },
-    {
-      title: "Elementor Pro",
-      tag: "WordPress Builder",
-      badgeColor: "#ec4899",
-      badgeText: "WordPress Preferred",
-      description: "The world's leading drag-and-drop WordPress website builder. Build premium WooCommerce storefronts, dynamic popups, and custom themes without writing code.",
-      image: "/images/products/elementor-pro.webp",
-      link: "/products",
-      external: false,
-      buttonText: "Explore Elementor Pro",
-      features: [
-        "Intuitive Drag-and-Drop Visual Page Builder",
-        "WooCommerce Custom Builder & Product Page Layouts",
-        "300+ Premium Pro Kits & Section Templates",
-        "Dynamic Motion Effects & Theme Builder Integration"
-      ]
     }
   ];
 

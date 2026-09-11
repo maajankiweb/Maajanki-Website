@@ -212,6 +212,8 @@ const nextConfig = {
         destination: 'https://maajankiwebtech.com/blog/:path*',
         permanent: true,
       },
+      // 301 Redirect deprecated 3rd-party product
+      { source: '/products/elementor-pro', destination: '/products', permanent: true },
       // Block WordPress probe requests (Redirect to home page)
       { source: '/wp-json', destination: '/', permanent: false },
       { source: '/wp-json/:path*', destination: '/', permanent: false },

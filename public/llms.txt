@@ -36,4 +36,6 @@
 - [Client Reviews & Reputation](https://maajankiwebtech.com/reviews)
 - [Portfolio & Case Studies](https://maajankiwebtech.com/portfolio)
 - [About Us & Founder Credentials](https://maajankiwebtech.com/about)
+- [Blog & Engineering Articles](https://maajankiwebtech.com/blog)
+- [Free Developer & Business Tools](https://maajankiwebtech.com/tools)
 - [Contact & Inquiry](https://maajankiwebtech.com/contact)

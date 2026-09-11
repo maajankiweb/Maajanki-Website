@@ -97,23 +97,6 @@ const Products = () => {
       ],
       demoLink: "#",
       features: "Best for Startups, Developers & Web Agencies"
-    },
-    {
-      id: 12,
-      title: "Elementor Pro - WordPress Page Builder Plugin",
-      category: "WordPress Plugins",
-      tag: "Plugin",
-      badgeClass: "plugin-badge",
-      description: "The world's leading drag-and-drop WordPress website builder. Edit templates visually in real-time, customize headers & footers with the theme builder, access 100+ professional widgets, and build premium WooCommerce storefronts with ease.",
-      image: "/images/products/elementor-pro.webp",
-      highlights: [
-        "Visual Drag-and-Drop Editor",
-        "Theme Builder (Headers, Footers & Archives)",
-        "100+ Pro Widgets & Templates",
-        "Full WooCommerce Builder Integration"
-      ],
-      demoLink: "#",
-      features: "Best for WordPress Designers & Web Agencies"
     }
   ];
 

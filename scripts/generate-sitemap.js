@@ -52,7 +52,6 @@ const pages = [
   { path: '/products/nexus-saas', changefreq: 'daily', priority: '0.9' },
   { path: '/products/invobill', changefreq: 'daily', priority: '0.9' },
   { path: '/products/tailwind-templates', changefreq: 'daily', priority: '0.9' },
-  { path: '/products/elementor-pro', changefreq: 'daily', priority: '0.9' },
 
   // Service Detail Pages
   { path: '/services/web-development', changefreq: 'daily', priority: '0.95' },

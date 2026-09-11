@@ -307,6 +307,16 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <Link href="/blog" onClick={handleLinkClick}>
+                BLOG
+              </Link>
+            </li>
+            <li>
+              <Link href="/tools" onClick={handleLinkClick}>
+                TOOLS
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" onClick={handleLinkClick}>
                 CONTACT US
               </Link>
