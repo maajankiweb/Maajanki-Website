@@ -10,25 +10,6 @@ import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle } from "lucide-r
 export const metadata = {
   title: "Best Website Development Agency & Software Company in Bagaha, Bihar | MaaJanki Web Tech",
   description: "MaaJanki Web Tech is top-rated as the best website development agency and software company in Bagaha, Bihar. We build Next.js web apps, e-commerce portals, local SEO, and custom business software.",
-  keywords: [
-    "Best Website Development Agency in Bagaha",
-    "Best Website Development Agency in Bettiah",
-    "Best Website Development Agency in West Champaran",
-    "Best Website Development Agency in Motihari",
-    "Best Website Development Agency in East Champaran",
-    "Best Website Development Agency in Muzaffarpur",
-    "Best Website Development Agency in Patna",
-    "Best Website Development Agency near me",
-    "Software Company in Bagaha",
-    "Software Company in Bettiah",
-    "Software Company in Patna",
-    "Software Company in Bihar",
-    "Software Company near me",
-    "Web development agency Bihar",
-    "Web development agency Uttar Pradesh UP",
-    "Web development agency Delhi NCR",
-    "MaaJanki Web Tech Bagaha"
-  ],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/bagaha',
   }
@@ -60,8 +41,8 @@ export default function Page() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 27.0984,
-      "longitude": 84.2625
+      "latitude": 27.2029,
+      "longitude": 84.4679
     },
     "areaServed": ["Bagaha", "Bagaha", "Narkatiaganj", "Raxaul", "Motihari", "West Champaran", "East Champaran", "Bihar"],
     "priceRange": "₹₹",

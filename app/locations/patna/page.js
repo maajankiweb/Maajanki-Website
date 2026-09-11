@@ -10,27 +10,6 @@ import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle } from "lucide-r
 export const metadata = {
   title: "Best Website Development Agency & Software Company in Patna, Bihar | MaaJanki Web Tech",
   description: "MaaJanki Web Tech is top-rated as the best website development agency and software company in Patna, Bihar. We build Next.js web applications, e-commerce portals, local SEO, and custom software.",
-  keywords: [
-    "Best Website Development Agency in Patna",
-    "Best Website Development Agency in Bettiah",
-    "Best Website Development Agency in Bagaha",
-    "Best Website Development Agency in West Champaran",
-    "Best Website Development Agency in Motihari",
-    "Best Website Development Agency in East Champaran",
-    "Best Website Development Agency in Muzaffarpur",
-    "Best Website Development Agency in Bihar Sharif",
-    "Best Website Development Agency in Gaya",
-    "Best Website Development Agency near me",
-    "Software Company in Patna",
-    "Software Company in Bettiah",
-    "Software Company in Bagaha",
-    "Software Company in Bihar",
-    "Software Company near me",
-    "Web development agency Bihar",
-    "Web development agency Uttar Pradesh UP",
-    "Web development agency Delhi NCR",
-    "MaaJanki Web Tech Patna"
-  ],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/patna',
   }

@@ -79,31 +79,25 @@ export const metadata = {
     locale: 'en_IN',
     images: [
       {
-        url: 'https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp',
+        url: 'https://maajankiwebtech.com/images/og-banner.webp',
         width: 1200,
         height: 630,
-        alt: 'MaaJanki Web Tech Logo',
-      },
-      {
-        url: 'https://maajankiwebtech.com/assets/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'MaaJanki Web Tech',
+        alt: 'MaaJanki Web Tech — Web Development & Digital Marketing Agency in Bihar',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MaaJanki Web Tech | Next.js Web Dev & SEO Services India',
-    description: 'Premier Next.js web development agency & SEO services provider in Patna, Bihar, and India.',
-    images: ['https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp'],
+    title: 'Web Development & SEO Agency in Bihar | MaaJanki Web Tech',
+    description: 'MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js, local SEO, and Google Ads.',
+    images: ['https://maajankiwebtech.com/images/og-banner.webp'],
     creator: '@maajankiweb',
   },
   other: {
+    'geo.position': '27.2029;84.4679',
+    ICBM: '27.2029, 84.4679',
+    'geo.placename': 'Bagaha, West Champaran, Bihar, India',
     'geo.region': 'IN-BR',
-    'geo.placename': 'Patna, Bagaha, Bihar, India',
-    'geo.position': '25.5941;85.1376',
-    ICBM: '25.5941, 85.1376',
     'google-site-verification': 'zuQNLK0LfnYPs6sn7PFd4igMvGvDQHni8uqM8ZH9BLo',
     'msvalidate.01': '69B3649ED10EF133B495627267F3A40C',
     'dmca-site-verification': 'Y3FvWjZMSEgwNmdRY1FhVHFZMUpjZz090',
@@ -118,99 +112,98 @@ export default function RootLayout({ children }) {
         "@type": "Organization",
         "@id": "https://maajankiwebtech.com/#organization",
         "name": "MaaJanki Web Tech",
-        "url": "https://maajankiwebtech.com/",
+        "legalName": "MaaJanki Web Tech LLP",
+        "url": "https://maajankiwebtech.com",
         "logo": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
-        "description": "MaaJanki Web Tech is a professional web development and digital marketing agency in India, specializing in SEO, branding, performance marketing, and custom web solutions.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+91-9006543913",
-          "contactType": "customer service"
-        },
-        "sameAs": [
-          "https://www.wikidata.org/wiki/Q115783355",
-          "https://www.facebook.com/profile.php?id=61577526895580",
-          "https://www.instagram.com/maajankiwebtech/",
-          "https://www.linkedin.com/company/maajanki-web-tech-company/",
-          "https://x.com/MaaJankweb",
-          "https://in.pinterest.com/maajankiweb/",
-          "https://share.google/sfG7HXx0jHaeRi8Tb"
-        ],
-        "areaServed": [
-          { "@type": "Country", "name": "India" },
-          { "@type": "Country", "name": "United States" },
-          { "@type": "Country", "name": "United Kingdom" },
-          { "@type": "Country", "name": "Canada" },
-          { "@type": "Country", "name": "Australia" },
-          { "@type": "Country", "name": "United Arab Emirates" },
-          { "@type": "Country", "name": "Nepal" }
-        ],
-        "founder": {
-          "@id": "https://maajankiwebtech.com/#founder"
-        },
-        "awards": [
-          "Udyam MSME Registered",
-          "Startup India DPIIT Recognized"
-        ],
-        "identifier": [
-          {
-            "@type": "PropertyValue",
-            "propertyID": "Udyam Registration Number",
-            "value": "UDYAM-BR-38-0014113"
-          }
-        ]
-      },
-      {
-        "@id": "https://maajankiwebtech.com/#localbusiness",
-        "@type": "LocalBusiness",
-        "name": "MaaJanki Web Tech",
-        "image": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
-        "url": "https://maajankiwebtech.com/",
-        "telephone": "+91-9006543913",
-        "description": "Professional website development and digital marketing agency in Bagaha, Bihar.",
-        "hasMap": "https://share.google/sfG7HXx0jHaeRi8Tb",
-        "sameAs": [
-          "https://share.google/sfG7HXx0jHaeRi8Tb"
-        ],
+        "foundingDate": "2021",
+        "description": "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar, India, specializing in Next.js web applications, local SEO, Google Ads, branding, and performance marketing.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar",
-          "addressLocality": "Bagaha, West Champaran",
+          "addressLocality": "Bagaha",
+          "addressRegion": "Bihar",
+          "postalCode": "845101",
+          "addressCountry": "IN"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-9006543913",
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Hindi"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-9471273041",
+            "contactType": "sales",
+            "availableLanguage": ["English", "Hindi"]
+          }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/company/maajanki-web-tech-company/",
+          "https://www.facebook.com/maajankiwebtech",
+          "https://www.instagram.com/maajankiwebtech/",
+          "https://x.com/MaaJankiwebtech",
+          "https://in.pinterest.com/maajankiweb/",
+          "https://www.youtube.com/@Akwebmasterhub",
+          "https://g.page/r/CVvMyeoY0y0XEAE"
+        ],
+        "areaServed": ["Bihar", "Uttar Pradesh", "Delhi", "Mumbai", "Bengaluru", "India"],
+        "hasCredential": [
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "MSME Registration" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "DPIIT Startup India" },
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Udyam Registration" }
+        ],
+        "founder": {
+          "@id": "https://maajankiwebtech.com/#founder"
+        }
+      },
+      {
+        "@id": "https://maajankiwebtech.com/#localbusiness",
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "name": "MaaJanki Web Tech",
+        "image": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
+        "url": "https://maajankiwebtech.com",
+        "telephone": "+91-9006543913",
+        "email": "info@maajankiwebtech.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar",
+          "addressLocality": "Bagaha",
           "addressRegion": "Bihar",
           "postalCode": "845101",
           "addressCountry": "IN"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 27.0984,
-          "longitude": 84.2625
+          "latitude": 27.2029,
+          "longitude": 84.4679
         },
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday"
-            ],
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
             "opens": "10:00",
             "closes": "18:00"
           }
         ],
-        "priceRange": "$$",
+        "priceRange": "₹₹",
+        "currenciesAccepted": "INR, USD",
+        "paymentAccepted": "Cash, UPI, Bank Transfer, Razorpay",
+        "serviceArea": {
+          "@type": "AdministrativeArea",
+          "name": "Bihar, India"
+        },
+        "hasMap": "https://g.page/r/CVvMyeoY0y0XEAE/review",
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "5.0",
-          "reviewCount": "5",
-          "bestRating": "5",
-          "worstRating": "1"
+          "ratingValue": "4.9",
+          "reviewCount": "47"
         },
         "founder": {
           "@id": "https://maajankiwebtech.com/#founder"
         },
-        "foundingDate": "2025-01-01"
+        "foundingDate": "2021"
       },
       {
         "@id": "https://maajankiwebtech.com/#founder",

@@ -10,24 +10,6 @@ import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle } from "lucide-r
 export const metadata = {
   title: "Best Website Development Agency & Software Company in Motihari, Bihar | MaaJanki Web Tech",
   description: "MaaJanki Web Tech is top-rated as the best website development agency and software company in Motihari, East Champaran, Bihar. We build Next.js web apps, e-commerce stores, and local SEO.",
-  keywords: [
-    "Best Website Development Agency in Motihari",
-    "Best Website Development Agency in East Champaran",
-    "Best Website Development Agency in Bettiah",
-    "Best Website Development Agency in Bagaha",
-    "Best Website Development Agency in West Champaran",
-    "Best Website Development Agency in Muzaffarpur",
-    "Best Website Development Agency in Patna",
-    "Best Website Development Agency near me",
-    "Software Company in Motihari",
-    "Software Company in East Champaran",
-    "Software Company in Bettiah",
-    "Software Company in Bihar",
-    "Software Company near me",
-    "Web development agency Bihar",
-    "Web development agency Uttar Pradesh UP",
-    "MaaJanki Web Tech Motihari"
-  ],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/motihari',
   }

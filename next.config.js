@@ -205,6 +205,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Subdomain 301 Migration from blog.maajankiwebtech.com to /blog
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'blog.maajankiwebtech.com' }],
+        destination: 'https://maajankiwebtech.com/blog/:path*',
+        permanent: true,
+      },
       // Block WordPress probe requests (Redirect to home page)
       { source: '/wp-json', destination: '/', permanent: false },
       { source: '/wp-json/:path*', destination: '/', permanent: false },

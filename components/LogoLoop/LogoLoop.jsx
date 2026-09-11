@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useCallback, useEffect, useMemo, useRef, useState, memo } from 'react';
 import './LogoLoop.css';
 
-const ANIMATION_CONFIG = { SMOOTH_TAU: 0.25, MIN_COPIES: 2, COPY_HEADROOM: 2 };
+const ANIMATION_CONFIG = { SMOOTH_TAU: 0.25, MIN_COPIES: 2, COPY_HEADROOM: 0 };
 
 const toCssLength = value => (typeof value === 'number' ? `${value}px` : (value ?? undefined));
 
@@ -182,14 +182,11 @@ export const LogoLoop = memo(
         }
         if (sequenceHeight > 0) {
           setSeqHeight(Math.ceil(sequenceHeight));
-          const viewport = containerRef.current?.clientHeight ?? parentHeight ?? sequenceHeight;
-          const copiesNeeded = Math.ceil(viewport / sequenceHeight) + ANIMATION_CONFIG.COPY_HEADROOM;
-          setCopyCount(Math.max(ANIMATION_CONFIG.MIN_COPIES, copiesNeeded));
+          setCopyCount(2);
         }
       } else if (sequenceWidth > 0) {
         setSeqWidth(Math.ceil(sequenceWidth));
-        const copiesNeeded = Math.ceil(containerWidth / sequenceWidth) + ANIMATION_CONFIG.COPY_HEADROOM;
-        setCopyCount(Math.max(ANIMATION_CONFIG.MIN_COPIES, copiesNeeded));
+        setCopyCount(2);
       }
     }, [isVertical]);
 

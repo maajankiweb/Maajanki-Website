@@ -66,28 +66,20 @@ function Home() {
 
   const counters = [
     {
-      // number: "500+",
-      img: "/images/happy-clients.png",
-      title: "Client Happiness",
-      alt: "Happy clients served by MaaJanki Web Tech",
+      number: "60+",
+      title: "Happy Clients",
     },
     {
-      // number: "250+",
-      img: "/images/project-complete.png",
-      title: "Top-Rated Projects",
-      alt: "Successful digital marketing and web projects",
+      number: "100+",
+      title: "Projects Completed",
     },
     {
-      // number: "150+",
-      img: "/images/design-complete.png",
-      title: "Creative Masterpieces",
-      alt: "Creative design and branding projects",
+      number: "50+",
+      title: "Designs Delivered",
     },
     {
-      // number: "10+",
-      img: "/images/experience.png",
-      title: "Team of Experts",
-      alt: "Experienced digital marketing professionals",
+      number: "4+",
+      title: "Years Experience",
     },
   ];
 
@@ -451,6 +443,9 @@ function Home() {
                     title="Founder &amp; Lead Architect – MaaJanki Web Tech"
                     className="founder-portrait-img"
                   />
+                  <p className="text-sm font-medium text-gray-200 mt-2" style={{ color: "rgba(255, 255, 255, 0.95)", fontSize: "14px", fontWeight: "600", marginTop: "10px" }}>
+                    Ashish Kumar — Founder &amp; Lead Architect
+                  </p>
                 </div>
               </div>
             </div>
@@ -1236,44 +1231,6 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 mb-4">
-              <div
-                className="product-card text-center p-4 rounded h-100 d-flex flex-column"
-                style={{
-                  background: "#FD6A02",
-                  border: "1px solid #fff",
-                  transition: "transform 0.3s ease",
-                }}
-              >
-                <div className="product-image-container mb-3">
-                  <Image
-                    src="/images/products/elementor-pro.webp"
-                    alt="Elementor Pro"
-                    title="Elementor Pro – WordPress Website Builder Solutions by MaaJanki Web Tech"
-                    style={{ maxWidth: "100%", borderRadius: "8px" }}
-                    loading="lazy"
-                    width={600} height={400} />
-                </div>
-                <h3
-                  className="text-xl font-semibold mb-3"
-                  style={{ color: "#fff" }}
-                >
-                  Elementor Pro
-                </h3>
-                <p style={{ color: "#ffffff", fontSize: "14px" }}>
-                  The world's leading drag-and-drop WordPress website builder.
-                  Build premium WooCommerce storefronts with ease.
-                </p>
-                <div className="mt-auto">
-                  <Link href="/products"
-                    className="btn-outline-mj"
-                    style={{ padding: "8px 20px", fontSize: "14px" }}
-                  >
-                    View Product
-                  </Link>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -1765,28 +1722,26 @@ function Home() {
       {/* ---------- Promo Section End ---------- */}
 
       {/* Counter and Clients Section */}
-      <section className="counters-section">
+      <section className="counters-section py-5" style={{ background: "#ffffff", borderTop: "1px solid #f1f5f9", borderBottom: "1px solid #f1f5f9" }}>
         <div className="container">
-          <div className="row row-cols-2 row-cols-md-4 g-4">
+          <div className="row row-cols-2 row-cols-md-4 g-4 text-center">
             {counters.map((counter, index) => (
-              <div
-                key={index}
-                className="col text-center counter-item"
-              >
-                <div className="counter-box-wrapper">
-                  <div className="counter-icon-container">
-                    <Image
-                      loading="lazy"
-                      src={counter.img}
-                      alt={counter.title}
-                      title={counter.title}
-                      className="counter-img"
-                      width={80}
-                      height={80}
-                    />
-                  </div>
-                  {/* {counter.number && <h3 className="counter-number">{counter.number}</h3>} */}
-                  <h6 className="counter-title">{counter.title}</h6>
+              <div key={index} className="col counter-item">
+                <div
+                  className="counter-box-wrapper p-4 rounded-3 h-100 d-flex flex-column justify-content-center"
+                  style={{
+                    background: "#f8fafc",
+                    border: "1px solid #e2e8f0",
+                    boxShadow: "0 4px 15px rgba(4, 37, 68, 0.05)",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  }}
+                >
+                  <p className="text-3xl md:text-4xl font-extrabold mb-1" style={{ color: "#042544", fontSize: "2.2rem", fontWeight: "800", lineHeight: "1.2" }}>
+                    {counter.number}
+                  </p>
+                  <p className="text-sm font-semibold mb-0 text-uppercase tracking-wider" style={{ color: "#FD6A02", fontSize: "0.85rem", letterSpacing: "0.8px" }}>
+                    {counter.title}
+                  </p>
                 </div>
               </div>
             ))}
@@ -1871,6 +1826,80 @@ function Home() {
         </div>
       </section>
       {/* Collaborators Section End */}
+
+      {/* Client Testimonials Section */}
+      <section className="testimonials-section py-5" style={{ background: "#042544", color: "#ffffff" }}>
+        <div className="container">
+          <div className="text-center mb-5">
+            <span className="badge px-3 py-2 text-uppercase mb-2" style={{ background: "rgba(253, 106, 2, 0.2)", color: "#FD6A02", fontWeight: "600", letterSpacing: "1px", borderRadius: "20px" }}>
+              Client Endorsements
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2" style={{ color: "#ffffff", fontWeight: "700" }}>
+              What Our Clients Say
+            </h2>
+            <p className="lead mx-auto" style={{ color: "rgba(255, 255, 255, 0.8)", maxWidth: "650px", fontSize: "16px" }}>
+              Discover how businesses in Bihar, across India, and globally achieve first-page Google rankings and high-converting web applications with MaaJanki Web Tech.
+            </p>
+          </div>
+
+          <div className="row g-4">
+            {[
+              {
+                quote: "MaaJanki Web Tech ne hamare business ki online presence completely transform kar di. 3 months mein Google pe first page aa gaye.",
+                name: "Vikram Aditya",
+                business: "Operations Manager, Bettiah Logistics",
+                rating: 5
+              },
+              {
+                quote: "The team built our complete custom React e-commerce storefront. Our loading speeds dropped below 1.5s and sales increased by 150% in the first quarter itself. Truly Bihar's finest agency!",
+                name: "Amit Verma",
+                business: "Founder, BiharCart",
+                rating: 5
+              },
+              {
+                quote: "Outstanding organic growth! Their SEO strategy boosted our keyword rankings on the first page of Google for high-intent search queries. 200% influx of qualified organic leads.",
+                name: "Priya Sharma",
+                business: "Marketing Director, TechVibe India",
+                rating: 5
+              },
+              {
+                quote: "They designed our entire InvoBill SaaS billing dashboard UI/UX and currently manage our Google and Meta Ads campaigns. Conversion tracking gave us 100% clarity on acquisition costs.",
+                name: "Rajesh Ranjan",
+                business: "CEO, InvoBill Systems",
+                rating: 5
+              }
+            ].map((item, idx) => (
+              <div key={idx} className="col-md-6 col-lg-3">
+                <div
+                  className="p-4 rounded-4 h-100 d-flex flex-column justify-content-between"
+                  style={{
+                    background: "rgba(255, 255, 255, 0.05)",
+                    backdropFilter: "blur(10px)",
+                    border: "1px solid rgba(255, 255, 255, 0.12)",
+                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)",
+                    transition: "transform 0.3s ease, border-color 0.3s ease",
+                  }}
+                >
+                  <div>
+                    <div className="d-flex mb-3" style={{ color: "#FD6A02" }}>
+                      {[...Array(item.rating)].map((_, i) => (
+                        <i key={i} className="fas fa-star me-1" style={{ fontSize: "14px" }}></i>
+                      ))}
+                    </div>
+                    <p className="mb-4" style={{ color: "rgba(255, 255, 255, 0.9)", fontSize: "14px", lineHeight: "1.6", fontStyle: "italic" }}>
+                      &ldquo;{item.quote}&rdquo;
+                    </p>
+                  </div>
+                  <div className="pt-3 border-top" style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}>
+                    <h6 className="mb-0 fw-bold text-white" style={{ fontSize: "15px" }}>{item.name}</h6>
+                    <small style={{ color: "#FD6A02", fontSize: "12px", fontWeight: "500" }}>{item.business}</small>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Faq Section Start */}
       <section className="faq-section">
