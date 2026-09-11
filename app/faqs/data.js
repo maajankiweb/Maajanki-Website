@@ -5,6 +5,7 @@ export const FAQ_CATEGORIES = [
   { id: 'branding', label: 'Branding', icon: 'FaPalette' },
   { id: 'content', label: 'Content Writing', icon: 'FaPenNib' },
   { id: 'design', label: 'Graphic Design', icon: 'FaVectorSquare' },
+  { id: 'uiux', label: 'UI/UX Design', icon: 'FaPencilRuler' },
   { id: 'web', label: 'Web Development', icon: 'FaCode' },
   { id: 'marketing', label: 'Performance Marketing', icon: 'FaChartLine' },
   { id: 'product', label: 'Product Listing', icon: 'FaBoxOpen' },

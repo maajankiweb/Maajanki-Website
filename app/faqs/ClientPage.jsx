@@ -46,16 +46,13 @@ export default function FaqsClientPage() {
 
   // Monitor scroll for scroll-to-top button
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 400) {
-        setShowScrollTop(true);
-      } else {
-        setShowScrollTop(false);
-      }
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const handleScroll = () => {
+    setShowScrollTop(window.scrollY > 400);
+  };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -135,7 +132,7 @@ export default function FaqsClientPage() {
               This comprehensive guide answers the exact questions our clients ask most.
               If your question is not covered below, our team is available directly via our{' '}
               <Link href="/contact">contact page</Link> or phone at{' '}
-              <a href="tel:+917355434536">+91-7355434536</a>.
+              <a href="tel:+919006543913">+91-9006543913</a>.
             </p>
           </div>
 

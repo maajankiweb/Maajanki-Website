@@ -11,7 +11,7 @@ export default function FounderSection() {
       "Helping Businesses Build Stronger Brands, Better Websites & Sustainable Digital Growth",
     about:
       "Ashish Kumar is the Founder & CEO of MaaJanki Web Tech, a leading digital marketing and web development agency dedicated to helping  businesses establish a powerful online presence and achieve sustainable growth. With expertise in website development, SEO, branding, performance marketing, and AI-powered digital solutions, he works closely with startups, MSMEs, and enterprises to create customized strategies that drive measurable business results. His approach combines innovative technology, user-focused design, and data-driven marketing to improve search visibility, generate qualified leads, increase conversions, and build long-term brand authority. Through transparency, continuous innovation, and a commitment to client success, Ashish has helped businesses strengthen their digital presence and accelerate growth in today's competitive online marketplace.",
-    img: "/images/Ashish-Kumar.webp",
+    img: "/images/founder.png",
     social: {
       li: "https://www.linkedin.com/in/ashishkumarji/",
       tw: "https://x.com/MaaJankiwebtech",

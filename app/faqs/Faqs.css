@@ -83,6 +83,7 @@
 .mj-faq-hero h1 span {
   background: linear-gradient(135deg, #FD6A02 0%, #FF8C38 50%, #ffffff 100%);
   -webkit-background-clip: text;
+    background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -115,8 +116,7 @@
 .mj-faq-hero-intro a {
   color: #FD6A02;
   font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
   transition: color 0.2s ease;
 }
 
@@ -402,8 +402,7 @@
 .mj-faq-answer a {
   color: #FD6A02;
   font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 
