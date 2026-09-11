@@ -392,7 +392,7 @@ function Home() {
                 <Magnet padding={30} magnetStrength={10}>
                   <SpecularButton
                     as="a"
-                    href="/contact"
+                    href="/portfolio"
                     size="lg"
                     radius={28}
                     lineColor="#fd6a02"
@@ -406,14 +406,14 @@ function Home() {
                     proximity={300}
                     className="hero-specular-btn-primary"
                   >
-                    Book Free 30-Min Strategy Audit <span className="btn-arrow">→</span>
+                    See More Results <span className="btn-arrow">→</span>
                   </SpecularButton>
                 </Magnet>
 
                 <Magnet padding={30} magnetStrength={10}>
                   <SpecularButton
                     as="a"
-                    href="#pricing"
+                    href="/contact"
                     size="lg"
                     radius={28}
                     lineColor="#ffffff"
@@ -430,7 +430,7 @@ function Home() {
                     proximity={250}
                     className="hero-specular-btn-secondary"
                   >
-                    Claim Growth Pricing
+                    Get Free Audit
                   </SpecularButton>
                 </Magnet>
               </div>

@@ -84,6 +84,26 @@ export async function POST(request) {
       }
     }
 
+    // Strict Phone Number & Anti-Dummy Validation
+    if (cleanPhone) {
+      const digits = cleanPhone.replace(/\D/g, '');
+      const last10 = digits.slice(-10);
+      const isAllSame = /^(\d)\1{9}$/.test(last10);
+      const dummyPhones = new Set([
+        '1234567890', '0123456789', '9876543210', '8765432109', '0987654321',
+        '1231231234', '1212121212', '9898989898', '9090909090', '9988776655',
+        '1122334455', '9876598765', '1234512345', '9999988888', '0000011111',
+        '1010101010', '9191919191', '1234567891', '9876543211', '1234567899'
+      ]);
+
+      if (digits.length < 10 || isAllSame || dummyPhones.has(last10) || (last10.length === 10 && !/^[6-9]/.test(last10))) {
+        return NextResponse.json(
+          { success: false, error: 'Kripya ek valid 10-digit mobile number darj karein (dummy ya fake number swikaar nahi hai).' },
+          { status: 400 }
+        );
+      }
+    }
+
     await connectDB();
 
     const newLead = await Lead.create({
