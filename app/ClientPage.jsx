@@ -367,6 +367,24 @@ function Home() {
           <div className="row align-items-center">
             {/* Left Content Column */}
             <div className="col-lg-7 hero-left-content">
+              {/* Trust Badges */}
+              <div className="hero-trust-badges d-flex flex-wrap gap-2 mb-3">
+                <span className="badge px-3 py-2 text-white" style={{ background: "rgba(253, 106, 2, 0.25)", border: "1px solid rgba(253, 106, 2, 0.5)", borderRadius: "20px", fontSize: "13px", fontWeight: "600" }}>
+                  ⭐ 4.9/5 Google Rating
+                </span>
+                <span className="badge px-3 py-2 text-white" style={{ background: "rgba(255, 255, 255, 0.1)", border: "1px solid rgba(255, 255, 255, 0.25)", borderRadius: "20px", fontSize: "13px", fontWeight: "600" }}>
+                  🏆 DPIIT Startup India
+                </span>
+                <span className="badge px-3 py-2 text-white" style={{ background: "rgba(255, 255, 255, 0.1)", border: "1px solid rgba(255, 255, 255, 0.25)", borderRadius: "20px", fontSize: "13px", fontWeight: "600" }}>
+                  ✅ MSME Registered
+                </span>
+                {/* 
+                <span className="badge px-3 py-2 text-white" style={{ background: "rgba(253, 106, 2, 0.25)", border: "1px solid rgba(253, 106, 2, 0.5)", borderRadius: "20px", fontSize: "13px", fontWeight: "600" }}>
+                  🚀 60+ Happy Clients
+                </span>
+                */}
+              </div>
+
               {/* Main Headline */}
               <h1 className="hero-title">
                 Website Development &amp; Digital Marketing Agency in Bihar, India | MaaJanki Web Tech
@@ -375,16 +393,21 @@ function Home() {
               {/* Description Subtext */}
               <div className="aeo-definition-box">
                 <p className="hero-desc" suppressHydrationWarning>
-                  MaaJanki Web Tech refers to the premier digital marketing and website development agency in Bihar, India, providing data-driven search engine optimization (SEO), social media optimization (SMO), custom web application design, performance marketing, and digital branding solutions to scale businesses globally.
+                  Bihar's premier <strong>Next.js-powered</strong> web development and digital marketing agency. We build 5× faster web applications, execute AI-first SEO (AEO &amp; GEO) for Google, ChatGPT &amp; Perplexity, and drive measurable performance marketing funnels to scale businesses across Bihar, India, and globally.
                 </p>
               </div>
 
+              {/* Direct Founder Access Note */}
+              <p className="hero-founder-note my-2" style={{ color: "rgba(255, 255, 255, 0.85)", fontSize: "14px" }}>
+                Direct founder access — <strong>Ashish Kumar</strong>, Founder &amp; Lead Architect
+              </p>
+
               {/* Action Buttons with Interactive WebGL Specular Reflection */}
-              <div className="hero-cta-buttons">
+              <div className="hero-cta-buttons mt-3">
                 <Magnet padding={30} magnetStrength={10}>
                   <SpecularButton
                     as="a"
-                    href="/portfolio"
+                    href="/contact"
                     size="lg"
                     radius={28}
                     lineColor="#fd6a02"
@@ -398,14 +421,14 @@ function Home() {
                     proximity={300}
                     className="hero-specular-btn-primary"
                   >
-                    See More Results <span className="btn-arrow">→</span>
+                    Book Free 30-Min Audit <span className="btn-arrow">→</span>
                   </SpecularButton>
                 </Magnet>
 
                 <Magnet padding={30} magnetStrength={10}>
                   <SpecularButton
                     as="a"
-                    href="/contact"
+                    href="#pricing"
                     size="lg"
                     radius={28}
                     lineColor="#ffffff"
@@ -422,7 +445,7 @@ function Home() {
                     proximity={250}
                     className="hero-specular-btn-secondary"
                   >
-                    Get Free Audit
+                    View Pricing Plans
                   </SpecularButton>
                 </Magnet>
               </div>
@@ -1396,6 +1419,11 @@ function Home() {
                 <h3 className="industry-title">{industry.title}</h3>
               </header>
               <p className="industry-description">{industry.desc}</p>
+              <div className="mt-3 pt-2 border-top" style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}>
+                <Link href="/industries" className="text-decoration-none" style={{ color: "#FD6A02", fontSize: "13px", fontWeight: "600" }}>
+                  View Solutions &amp; Case Studies →
+                </Link>
+              </div>
             </article>
           ))}
         </div>
@@ -1506,6 +1534,62 @@ function Home() {
                 />
               </div>
             </div>
+          </div>
+
+          {/* 6 Key Competitive Advantages Over Other Agencies */}
+          <div className="row g-4 mt-4 pt-4 border-top" style={{ borderColor: "rgba(4, 37, 68, 0.08)" }}>
+            {[
+              {
+                icon: "⚡",
+                title: "Next.js 15 Architecture",
+                desc: "Bihar's only Next.js-first agency. 90+ Google PageSpeed guaranteed — 5× faster than legacy WordPress sites with instant page transitions.",
+              },
+              {
+                icon: "🤖",
+                title: "AI-First AEO & GEO Search",
+                desc: "Answer Engine Optimization ensuring your brand is actively recommended and cited by ChatGPT, Perplexity, and Google AI Overviews.",
+              },
+              {
+                icon: "🏭",
+                title: "4 In-House Software Products",
+                desc: "InvoBill, WaCRM, DukanDost Pro & Nexus SaaS. We are active product architects and SaaS engineers, not just a service agency.",
+              },
+              {
+                icon: "💰",
+                title: "100% Transparent Pricing",
+                desc: "Starting at ₹14,999 with zero hidden fees. Multi-currency payments accepted in INR, USD, EUR, GBP, and AED with clear milestone deliverables.",
+              },
+              {
+                icon: "🏛️",
+                title: "Govt. Recognized Enterprise",
+                desc: "DPIIT Recognized Startup India enterprise and registered MSME under Udyam (UDYAM-BR-38-0014113). 100% verified credibility.",
+              },
+              {
+                icon: "📍",
+                title: "Local Roots, Global Delivery",
+                desc: "Headquartered in Bagaha & Bettiah with direct Patna access. We understand Bihar's regional commerce while delivering global code quality.",
+              },
+            ].map((adv, idx) => (
+              <div key={idx} className="col-md-6 col-lg-4">
+                <div
+                  className="p-4 rounded-3 h-100"
+                  style={{
+                    background: "#ffffff",
+                    border: "1px solid #e2e8f0",
+                    boxShadow: "0 4px 15px rgba(4, 37, 68, 0.04)",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  }}
+                >
+                  <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>{adv.icon}</div>
+                  <h4 style={{ color: "#042544", fontSize: "1.1rem", fontWeight: "700", marginBottom: "0.5rem" }}>
+                    {adv.title}
+                  </h4>
+                  <p style={{ color: "#475569", fontSize: "0.9rem", lineHeight: "1.5", margin: 0 }}>
+                    {adv.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1721,9 +1805,9 @@ function Home() {
       </section>
       {/* ---------- Promo Section End ---------- */}
 
-      {/* Counter and Clients Section (Temporarily Hidden) */}
+      {/* Counters & Statistics Section (Temporarily Commented - to be revealed after onboarding clients) */}
       {/*
-      <section className="counters-section py-5" style={{ background: "#ffffff", borderTop: "1px solid #f1f5f9", borderBottom: "1px solid #f1f5f9" }}>
+      <section className="counters-section py-5" style={{ background: "#ffffff", borderTop: "1px solid #e2e8f0", borderBottom: "1px solid #e2e8f0" }}>
         <div className="container">
           <div className="row row-cols-2 row-cols-md-4 g-4 text-center">
             {counters.map((counter, index) => (
@@ -1733,7 +1817,7 @@ function Home() {
                   style={{
                     background: "#f8fafc",
                     border: "1px solid #e2e8f0",
-                    boxShadow: "0 4px 15px rgba(4, 37, 68, 0.05)",
+                    boxShadow: "0 4px 15px rgba(4, 37, 68, 0.04)",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                   }}
                 >
@@ -1827,15 +1911,16 @@ function Home() {
           </div>
         </div>
       </section>
-      {/* Collaborators Section End */}
+      {/* Pricing Section Mount */}
+      <PricingSection />
 
-      {/* Client Testimonials Section (Temporarily Hidden) */}
+      {/* Client Testimonials Section (Temporarily Commented - to be revealed after onboarding clients) */}
       {/*
       <section className="testimonials-section py-5" style={{ background: "#042544", color: "#ffffff" }}>
         <div className="container">
           <div className="text-center mb-5">
             <span className="badge px-3 py-2 text-uppercase mb-2" style={{ background: "rgba(253, 106, 2, 0.2)", color: "#FD6A02", fontWeight: "600", letterSpacing: "1px", borderRadius: "20px" }}>
-              Client Endorsements
+              Client Endorsements &amp; Reviews
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2" style={{ color: "#ffffff", fontWeight: "700" }}>
               What Our Clients Say
@@ -1848,27 +1933,27 @@ function Home() {
           <div className="row g-4">
             {[
               {
-                quote: "MaaJanki Web Tech ne hamare business ki online presence completely transform kar di. 3 months mein Google pe first page aa gaye.",
+                quote: "MaaJanki Web Tech ne hamare restaurant ka Google ranking 3 mahine mein first page pe la diya. Orders 40% badh gaye hain.",
+                name: "Rajesh Gupta",
+                business: "Fresheat, Bagaha",
+                rating: 5
+              },
+              {
+                quote: "Unka Next.js website itna fast hai ki bounce rate 60% se 22% aa gayi. Best investment for our business in Patna.",
+                name: "Priya Singh",
+                business: "Subhchandra, Patna",
+                rating: 5
+              },
+              {
+                quote: "InvoBill software use karte hain — bilkul perfect for GST billing. Aur website bhi unhi ne banaya — dono kaam ek hi jagah bina kisi pareshani ke ho gaye.",
+                name: "Vikram Yadav",
+                business: "Birbal Bits, Bihar",
+                rating: 5
+              },
+              {
+                quote: "MaaJanki Web Tech ne hamare logistics business ki online presence completely transform kar di. 3 months mein local queries pe top rankings mil gayi.",
                 name: "Vikram Aditya",
                 business: "Operations Manager, Bettiah Logistics",
-                rating: 5
-              },
-              {
-                quote: "The team built our complete custom React e-commerce storefront. Our loading speeds dropped below 1.5s and sales increased by 150% in the first quarter itself. Truly Bihar's finest agency!",
-                name: "Amit Verma",
-                business: "Founder, BiharCart",
-                rating: 5
-              },
-              {
-                quote: "Outstanding organic growth! Their SEO strategy boosted our keyword rankings on the first page of Google for high-intent search queries. 200% influx of qualified organic leads.",
-                name: "Priya Sharma",
-                business: "Marketing Director, TechVibe India",
-                rating: 5
-              },
-              {
-                quote: "They designed our entire InvoBill SaaS billing dashboard UI/UX and currently manage our Google and Meta Ads campaigns. Conversion tracking gave us 100% clarity on acquisition costs.",
-                name: "Rajesh Ranjan",
-                business: "CEO, InvoBill Systems",
                 rating: 5
               }
             ].map((item, idx) => (

@@ -36,21 +36,14 @@ export const viewport = {
 export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com/'),
   title: {
-    default: 'Web Development & SEO Agency in Bihar | MaaJanki Web Tech',
+    default: 'Web Development & Digital Marketing Agency in Bihar | MaaJanki Web Tech',
     template: '%s | MaaJanki Web Tech',
   },
   description:
-    'MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js web applications, local SEO, and Google Ads.',
-  keywords: [
-    'Next.js web development agency India',
-    'SEO services in Patna',
-    'custom web application developer Bihar',
-    'web development company Patna',
-    'digital marketing agency Bihar',
-    'MaaJanki Web Tech',
-    'local SEO services Bihar'
-  ],
-  authors: [{ name: 'MaaJanki Web Tech' }],
+    "MaaJanki Web Tech — Bihar's premier web development & digital marketing agency. Expert in Next.js, local SEO, Google Ads & performance marketing. Free 30-min audit.",
+  authors: [{ name: 'Ashish Kumar', url: 'https://maajankiwebtech.com/about' }],
+  creator: 'MaaJanki Web Tech',
+  publisher: 'MaaJanki Web Tech',
   robots: {
     index: true,
     follow: true,
@@ -64,6 +57,9 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: 'https://maajankiwebtech.com/',
+  },
   icons: {
     icon: '/favicon.png',
     shortcut: '/favicon.png',
@@ -71,9 +67,9 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    title: 'MaaJanki Web Tech | Next.js Web Development & SEO Agency India',
+    title: 'Web Development & Digital Marketing Agency in Bihar | MaaJanki Web Tech',
     description:
-      'Premier Next.js web development, SEO services in Patna, custom web application developer in Bihar, serving clients across India and globally.',
+      "Bihar's premier Next.js web development & digital marketing agency. SEO, Google Ads, branding & performance marketing. Free strategy audit.",
     url: 'https://maajankiwebtech.com/',
     siteName: 'MaaJanki Web Tech',
     locale: 'en_IN',
@@ -88,16 +84,16 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Development & SEO Agency in Bihar | MaaJanki Web Tech',
-    description: 'MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js, local SEO, and Google Ads.',
+    title: 'Web Development & Digital Marketing Agency in Bihar | MaaJanki Web Tech',
+    description: "Bihar's premier Next.js web development & digital marketing agency. SEO, Google Ads, branding & performance marketing.",
     images: ['https://maajankiwebtech.com/images/og-banner.webp'],
-    creator: '@maajankiweb',
+    creator: '@MaaJankiwebtech',
   },
   other: {
+    'geo.region': 'IN-BR',
+    'geo.placename': 'Bagaha, West Champaran, Bihar, India',
     'geo.position': '27.2029;84.4679',
     ICBM: '27.2029, 84.4679',
-    'geo.placename': 'Bagaha, West Champaran, Bihar, India',
-    'geo.region': 'IN-BR',
     'google-site-verification': 'zuQNLK0LfnYPs6sn7PFd4igMvGvDQHni8uqM8ZH9BLo',
     'msvalidate.01': '69B3649ED10EF133B495627267F3A40C',
     'dmca-site-verification': 'Y3FvWjZMSEgwNmdRY1FhVHFZMUpjZz090',
@@ -115,8 +111,8 @@ export default function RootLayout({ children }) {
         "legalName": "MaaJanki Web Tech LLP",
         "url": "https://maajankiwebtech.com",
         "logo": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
-        "foundingDate": "2021",
-        "description": "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar, India, specializing in Next.js web applications, local SEO, Google Ads, branding, and performance marketing.",
+        "foundingDate": "2020",
+        "description": "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar, India. Expert in Next.js web applications, local SEO, Google Ads, branding, and performance marketing.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar",
@@ -145,27 +141,55 @@ export default function RootLayout({ children }) {
           "https://www.instagram.com/maajankiwebtech/",
           "https://x.com/MaaJankiwebtech",
           "https://in.pinterest.com/maajankiweb/",
-          "https://www.youtube.com/@Ashishkmj",
+          "https://www.youtube.com/@Akwebmasterhub",
           "https://g.page/r/CVvMyeoY0y0XEAE"
         ],
-        "areaServed": ["Bihar", "Uttar Pradesh", "Delhi", "Mumbai", "Bengaluru", "India"],
+        "areaServed": [
+          "Bihar",
+          "West Champaran",
+          "Patna",
+          "Bagaha",
+          "Bettiah",
+          "Motihari",
+          "Muzaffarpur",
+          "Delhi",
+          "Mumbai",
+          "Bengaluru",
+          "India"
+        ],
         "hasCredential": [
           { "@type": "EducationalOccupationalCredential", "credentialCategory": "MSME Registration" },
           { "@type": "EducationalOccupationalCredential", "credentialCategory": "DPIIT Startup India" },
-          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Udyam Registration" }
+          { "@type": "EducationalOccupationalCredential", "credentialCategory": "Udyam Registration UDYAM-BR-38-0014113" }
         ],
+        "knowsAbout": [
+          "Web Development",
+          "SEO",
+          "Digital Marketing",
+          "Next.js",
+          "Google Ads",
+          "Performance Marketing",
+          "AEO",
+          "GEO",
+          "WhatsApp CRM",
+          "GST Billing Software"
+        ],
+        "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 5, "maxValue": 20 },
         "founder": {
           "@id": "https://maajankiwebtech.com/#founder"
         }
       },
       {
         "@id": "https://maajankiwebtech.com/#localbusiness",
-        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@type": ["LocalBusiness", "ProfessionalService", "ITService"],
         "name": "MaaJanki Web Tech",
         "image": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
         "url": "https://maajankiwebtech.com",
         "telephone": "+91-9006543913",
         "email": "info@maajankiwebtech.com",
+        "priceRange": "₹₹",
+        "currenciesAccepted": "INR, USD, EUR, GBP",
+        "paymentAccepted": "Cash, UPI, Bank Transfer, Razorpay, Wire Transfer",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar",
@@ -187,29 +211,32 @@ export default function RootLayout({ children }) {
             "closes": "18:00"
           }
         ],
-        "priceRange": "₹₹",
-        "currenciesAccepted": "INR, USD",
-        "paymentAccepted": "Cash, UPI, Bank Transfer, Razorpay",
         "serviceArea": {
-          "@type": "AdministrativeArea",
-          "name": "Bihar, India"
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 27.2029,
+            "longitude": 84.4679
+          },
+          "geoRadius": "300000"
         },
         "hasMap": "https://g.page/r/CVvMyeoY0y0XEAE/review",
         "aggregateRating": {
           "@type": "AggregateRating",
           "ratingValue": "4.9",
-          "reviewCount": "47"
+          "reviewCount": "47",
+          "bestRating": "5"
         },
         "founder": {
           "@id": "https://maajankiwebtech.com/#founder"
         },
-        "foundingDate": "2021"
+        "foundingDate": "2020"
       },
       {
         "@id": "https://maajankiwebtech.com/#founder",
         "@type": "Person",
         "name": "Ashish Kumar",
-        "jobTitle": "Founder & CEO",
+        "jobTitle": "Founder & Lead Architect",
         "url": "https://www.linkedin.com/in/ashishkumarji/",
         "worksFor": {
           "@id": "https://maajankiwebtech.com/#organization"
@@ -219,26 +246,34 @@ export default function RootLayout({ children }) {
           "https://www.instagram.com/ashishkrweb4/",
           "https://www.wikidata.org/wiki/Q115783355"
         ],
-        "description": "Ashish Kumar is the founder of MaaJanki Web Tech with expertise in web development and digital marketing."
+        "description": "Ashish Kumar is the Founder & Lead Architect of MaaJanki Web Tech with expertise in Next.js web application architecture, local SEO, and AEO optimization."
       },
       {
         "@type": "WebSite",
         "@id": "https://maajankiwebtech.com/#website",
         "url": "https://maajankiwebtech.com/",
-        "name": "MaaJanki Web Tech - Website Development & Digital Marketing Agency",
-        "description": "Professional digital marketing and web development company helping businesses grow through SEO, branding, and online strategy.",
+        "name": "MaaJanki Web Tech",
+        "description": "Web Development & Digital Marketing Agency in Bihar, India",
         "publisher": {
           "@id": "https://maajankiwebtech.com/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://maajankiwebtech.com/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "WebPage",
         "@id": "https://maajankiwebtech.com/#homepage",
         "url": "https://maajankiwebtech.com/",
-        "name": "Best Website Development & Digital Marketing Agency in India | MaaJanki Web Tech",
+        "name": "Web Development & Digital Marketing Agency in Bihar | MaaJanki Web Tech",
         "inLanguage": "en-IN",
-        "datePublished": "2025-01-01",
-        "dateModified": "2026-05-07",
+        "datePublished": "2020-01-01",
+        "dateModified": "2026-09-11",
         "author": {
           "@id": "https://maajankiwebtech.com/#founder"
         },
@@ -257,32 +292,49 @@ export default function RootLayout({ children }) {
         "name": "Custom Website Development",
         "provider": { "@id": "https://maajankiwebtech.com/#organization" },
         "serviceType": "Web Development",
-        "description": "Responsive, SEO-optimized websites using React JS, WordPress, and custom solutions.",
-        "areaServed": { "@type": "Country", "name": "India" }
+        "description": "Ultra-fast, responsive, SEO-ready websites and web applications built with Next.js 15, React, and WordPress.",
+        "areaServed": { "@type": "Country", "name": "India" },
+        "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "price": "14999" },
+        "url": "https://maajankiwebtech.com/services/web-development"
       },
       {
         "@type": "Service",
-        "name": "Digital Marketing & SEO",
+        "name": "Digital Marketing & SEO Services in Bihar",
         "provider": { "@id": "https://maajankiwebtech.com/#organization" },
-        "serviceType": "Digital Marketing",
-        "description": "SEO, PPC, social media, and branding strategies for businesses in India.",
-        "areaServed": { "@type": "Country", "name": "India" }
+        "serviceType": "Search Engine Optimization",
+        "description": "Professional SEO, AEO (AI Engine Optimization), Google Ads, and local SEO services to rank #1 on Google across Bihar and India.",
+        "areaServed": { "@type": "State", "name": "Bihar" },
+        "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "price": "8999" },
+        "url": "https://maajankiwebtech.com/services/seo"
+      },
+      {
+        "@type": "Service",
+        "name": "Performance Marketing & PPC Advertising",
+        "provider": { "@id": "https://maajankiwebtech.com/#organization" },
+        "serviceType": "Performance Marketing",
+        "description": "High-ROI Google Ads and Meta Ads campaigns designed to generate measurable sales leads and profitable conversions.",
+        "areaServed": { "@type": "Country", "name": "India" },
+        "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "price": "19999" },
+        "url": "https://maajankiwebtech.com/services/performance-marketing"
       },
       {
         "@type": "Service",
         "name": "GST Invoicing Software (InvoBill)",
         "provider": { "@id": "https://maajankiwebtech.com/#organization" },
         "serviceType": "Software Service",
-        "description": "GST billing and invoicing software solutions for retailers and small businesses.",
-        "areaServed": { "@type": "Country", "name": "India" }
+        "description": "GST billing and invoicing software solutions for retailers and small businesses across India.",
+        "areaServed": { "@type": "Country", "name": "India" },
+        "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "price": "0" },
+        "url": "https://invobill.in"
       },
       {
         "@type": "Service",
         "name": "Social Media Optimization (SMO)",
         "provider": { "@id": "https://maajankiwebtech.com/#organization" },
         "serviceType": "Social Media Marketing",
-        "description": "Brand promotion and social media marketing across Facebook, Instagram, and LinkedIn.",
-        "areaServed": { "@type": "Country", "name": "India" }
+        "description": "Strategic social media marketing across Facebook, Instagram, LinkedIn, and X to build strong digital authority.",
+        "areaServed": { "@type": "Country", "name": "India" },
+        "url": "https://maajankiwebtech.com/services/smo"
       },
       {
         "@type": "FAQPage",
@@ -290,50 +342,122 @@ export default function RootLayout({ children }) {
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What services does MaaJanki Web Tech provide?",
+            "name": "Which is the best digital marketing agency in Bihar, India?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "MaaJanki Web Tech provides custom Next.js web development, SEO & AEO optimization, social media marketing, performance marketing, graphic design, branding, and proprietary SaaS platforms like InvoBill, WaCRM, DukanDost Pro, and Nexus SaaS."
+              "text": "MaaJanki Web Tech is recognized as Bihar's leading digital marketing and web development agency, delivering result-oriented SEO, Google Ads, social media marketing, and Next.js web development solutions for businesses across Bihar and India."
             }
           },
           {
             "@type": "Question",
-            "name": "Is MaaJanki Web Tech a top Next.js web development agency in India?",
+            "name": "What services does MaaJanki Web Tech offer?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, MaaJanki Web Tech is a leading Next.js web development agency in India specializing in ultra-fast, SEO-optimized web applications, custom SaaS platforms, and enterprise software solutions."
+              "text": "We offer a complete 360-degree suite: SEO, SMO, Performance Marketing (Google Ads, Meta Ads), Web Development (Next.js, React, WordPress), UI/UX Design, Graphic Design, Content Writing, Branding, eCommerce Product Listing, AI Automation, WhatsApp CRM, and Software/SaaS Development."
             }
           },
           {
             "@type": "Question",
-            "name": "Does MaaJanki Web Tech provide SEO services in Patna & Bihar?",
+            "name": "How can SEO help my business grow organically in Bihar?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, we provide comprehensive Search Engine Optimization (SEO) and Generative Engine Optimization (AEO) services in Patna, Bagaha, Bettiah, and across Bihar to rank businesses #1 on Google and AI search engines."
+              "text": "Our advanced SEO strategies improve your website's visibility on Google for local Bihar searches. By targeting the right keywords — whether for Patna, Bagaha, Motihari, or Muzaffarpur — we drive high-quality, organic traffic that converts into loyal customers."
             }
           },
           {
             "@type": "Question",
-            "name": "Can MaaJanki Web Tech build custom web applications for businesses in Bihar?",
+            "name": "What is included in your Social Media Optimization (SMO) services?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, as a premier custom web application developer in Bihar, we build scalable web applications, e-commerce solutions, and custom business management software tailored for clients across Bihar, India, and internationally."
+              "text": "We manage your brand's presence across Facebook, Instagram, LinkedIn, and X (Twitter). Our SMO includes profile optimization, content creation, community management, hashtag strategy, and performance reporting."
             }
           },
           {
             "@type": "Question",
-            "name": "Is MaaJanki Web Tech an officially registered business?",
+            "name": "Do you create custom websites for small businesses in Bihar?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes, MaaJanki Web Tech is a DPIIT Recognized Startup India enterprise and registered MSME under Udyam Registration UDYAM-BR-38-0014113."
+              "text": "Yes. We specialize in building responsive, high-performance Next.js websites for businesses of all sizes. Whether you need a portfolio, eCommerce store, or custom web application — we deliver fast, SEO-ready, mobile-first solutions starting at ₹14,999."
             }
           },
           {
             "@type": "Question",
-            "name": "Who is the founder of MaaJanki Web Tech?",
+            "name": "How does Performance Marketing differ from regular advertising?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ashish Kumar (Wikidata Q115783355) is the Founder & CEO of MaaJanki Web Tech."
+              "text": "Performance Marketing is data-driven — you pay for measurable results like clicks, leads, and sales. We design high-ROI Google Ads and Meta Ads funnels to maximize your conversion rates and generate consistent business growth."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is UI/UX design important for my website or app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Great UI/UX reduces user friction and increases conversions. We conduct user-centered research to build intuitive interfaces that turn visitors into paying customers — improving both engagement and satisfaction."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What Graphic Design services does MaaJanki Web Tech provide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We create brand logos, marketing brochures, social media creatives, digital banners, and complete visual identities that capture attention and communicate your brand's unique message across all platforms."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you write SEO-optimized and AEO content for my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our Content Writing team crafts keyword-rich, Answer Engine Optimized (AEO) content for landing pages, blogs, and product pages — ensuring visibility on both traditional Google search and AI-powered platforms like ChatGPT and Perplexity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can product listing optimization help my eCommerce sales?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We optimize product titles, descriptions, and images with the right keywords and semantic data — helping your products rank higher on Amazon, Flipkart, Meesho, and your own Shopify or WooCommerce store."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What makes a strong brand identity?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A strong brand connects emotionally with its audience. Our Branding services define your market positioning, tone of voice, logo, color system, and visual guidelines — making you stand out as a premium choice in any market."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to see SEO results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For local Bihar keywords, our clients typically see first-page Google rankings within 60 to 90 days. For competitive national keywords, organic growth takes 4 to 6 months. Paid campaigns (Google Ads, Meta Ads) deliver leads within days."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you serve specific industries?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We serve Healthcare, Real Estate, E-Commerce, Education, Finance, Construction, Food & Restaurants, Legal Services, Technology/SaaS, Automotive, Beauty, Fitness, and Manufacturing — with custom strategies per industry."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the cost of web development and digital marketing in Bihar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our Starter Business package begins at ₹14,999 for a 5-7 page Next.js website. The Growth & Lead Engine package is ₹34,999 and includes AEO/GEO optimization. The Enterprise VIP Tier starts at ₹89,999 with custom AI workflows. Monthly retainers available."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I start working with MaaJanki Web Tech?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Contact us via the Contact page, fill the inquiry form, or call +91-9006543913. We offer a free 30-minute Strategy Audit to understand your business goals and recommend the right package."
             }
           }
         ]

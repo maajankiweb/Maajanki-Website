@@ -106,8 +106,64 @@ export default function ProductsPage() {
     }
   ];
 
+  const softwareApplicationsSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "InvoBill",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Windows, Web Browser",
+        "description": "InvoBill is a hybrid GST billing and invoicing platform for Indian businesses. Create tax-compliant GST invoices in 60 seconds — works online and offline.",
+        "url": "https://invobill.in",
+        "screenshot": "https://maajankiwebtech.com/images/products/invobill.webp",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
+        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "23", "bestRating": "5" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "WaCRM",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Self-hosted",
+        "description": "WaCRM is a fully self-hostable WhatsApp Business API CRM with multi-agent shared inbox and AI chat routing for Indian businesses.",
+        "url": "https://github.com/Ashishkrji/WaCRM",
+        "screenshot": "https://maajankiwebtech.com/images/products/wacrm.webp",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
+        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "19", "bestRating": "5" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "DukanDost Pro",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Android, Web, Desktop",
+        "description": "A full-stack Business Operating System engineered for modern retail stores with AI invoicing, Digital Khata, and instant online storefront builder.",
+        "url": "https://github.com/Ashishkrji/DukanDost-Pro-Website-Mobile-App",
+        "screenshot": "https://maajankiwebtech.com/images/products/dukandost-pro.webp",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
+        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Nexus SaaS",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web Browser",
+        "description": "AI-driven local reputation management system connecting directly with Google Business Profile APIs for automated review responses.",
+        "url": "https://github.com/Ashishkrji/Nexus-SaaS",
+        "screenshot": "https://maajankiwebtech.com/images/products/nexus-saas.webp",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
+        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com" }
+      }
+    ]
+  };
+
   return (
     <div className="products-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationsSchema) }}
+      />
       {/* Hero Section */}
       <section className="products-hero">
         <div className="products-hero-inner">

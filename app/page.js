@@ -1,8 +1,8 @@
 import ClientPage from "./ClientPage";
 
 export const metadata = {
-  title: "Web Development & SEO Agency in Bihar | MaaJanki Web Tech",
-  description: "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js web applications, local SEO, and Google Ads.",
+  title: "Web Development & Digital Marketing Agency in Bihar | MaaJanki Web Tech",
+  description: "MaaJanki Web Tech — Bihar's premier web development & digital marketing agency. Expert in Next.js, local SEO, Google Ads & performance marketing. Free 30-min audit.",
   robots: {
     index: true,
     follow: true,
@@ -17,8 +17,8 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Web Development & SEO Agency in Bihar | MaaJanki Web Tech",
-    description: "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js web applications, local SEO, and Google Ads.",
+    title: "Web Development & Digital Marketing Agency in Bihar | MaaJanki Web Tech",
+    description: "Bihar's premier Next.js web development & digital marketing agency. SEO, Google Ads, branding & performance marketing. Free strategy audit.",
     url: "https://maajankiwebtech.com/",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -34,8 +34,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development & SEO Agency in Bihar | MaaJanki Web Tech",
-    description: "MaaJanki Web Tech is a premier web development and digital marketing agency in Bihar. Expert in Next.js, local SEO, and Google Ads.",
+    title: "Web Development & Digital Marketing Agency in Bihar | MaaJanki Web Tech",
+    description: "Bihar's premier Next.js web development & digital marketing agency. SEO, Google Ads, branding & performance marketing.",
     images: ["https://maajankiwebtech.com/images/og-banner.webp"],
   },
 };
@@ -47,26 +47,26 @@ export default function Page() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Which is the best digital marketing agency in India?",
+        "name": "Which is the best digital marketing agency in Bihar, India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "MaaJanki Web Tech is recognized as one of the best digital marketing agencies in India, delivering result-oriented SEO, social media marketing, PPC, and website growth solutions for businesses across industries."
+          "text": "MaaJanki Web Tech is recognized as Bihar's leading digital marketing and web development agency, delivering result-oriented SEO, Google Ads, social media marketing, and Next.js web development solutions for businesses across Bihar and India."
         }
       },
       {
         "@type": "Question",
-        "name": "What complete digital services does MaaJanki Web Tech offer?",
+        "name": "What services does MaaJanki Web Tech offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We offer a full 360-degree suite of digital services including Search Engine Optimization (SEO), Social Media Optimization (SMO), Performance Marketing, Web Development, UI/UX Design, Graphic Design, Content Writing, Branding, and eCommerce Product Listing."
+          "text": "We offer a complete 360-degree suite: SEO, SMO, Performance Marketing (Google Ads, Meta Ads), Web Development (Next.js, React, WordPress), UI/UX Design, Graphic Design, Content Writing, Branding, eCommerce Product Listing, AI Automation, WhatsApp CRM, and Software/SaaS Development."
         }
       },
       {
         "@type": "Question",
-        "name": "How can SEO help my business grow organically?",
+        "name": "How can SEO help my business grow organically in Bihar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our advanced SEO strategies improve your website's visibility on search engines like Google. By targeting the right keywords and optimizing technical performance, we drive high-quality, organic traffic that converts into loyal customers."
+          "text": "Our advanced SEO strategies improve your website's visibility on Google for local Bihar searches. By targeting the right keywords — whether for Patna, Bagaha, Motihari, or Muzaffarpur — we drive high-quality, organic traffic that converts into loyal customers."
         }
       },
       {
@@ -74,15 +74,15 @@ export default function Page() {
         "name": "What is included in your Social Media Optimization (SMO) services?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We manage your brand's presence across platforms like Facebook, Instagram, LinkedIn, and Twitter. Our SMO services include profile optimization, engaging content creation, community management, and trending hashtag strategies to build market authority."
+          "text": "We manage your brand's presence across Facebook, Instagram, LinkedIn, and X (Twitter). Our SMO includes profile optimization, content creation, community management, hashtag strategy, and performance reporting."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you create custom websites for small businesses and enterprises?",
+        "name": "Do you create custom websites for small businesses in Bihar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Absolutely. Our Web Development team specializes in building responsive, high-performance, and SEO-friendly websites. Whether you need a corporate portfolio, an eCommerce platform, or a custom web application, we deliver scalable solutions."
+          "text": "Yes. We specialize in building responsive, high-performance Next.js websites for businesses of all sizes. Whether you need a portfolio, eCommerce store, or custom web application — we deliver fast, SEO-ready, mobile-first solutions starting at ₹14,999."
         }
       },
       {
@@ -90,79 +90,79 @@ export default function Page() {
         "name": "How does Performance Marketing differ from regular advertising?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Performance Marketing is highly data-driven. Instead of paying for mere exposure, you pay for measurable results like clicks, leads, and sales. We design high-ROI Meta Ads and Google Ads funnels to maximize your conversion rates."
+          "text": "Performance Marketing is data-driven — you pay for measurable results like clicks, leads, and sales. We design high-ROI Google Ads and Meta Ads funnels to maximize your conversion rates and generate consistent business growth."
         }
       },
       {
         "@type": "Question",
-        "name": "Why is UI/UX design crucial for my application or website?",
+        "name": "Why is UI/UX design important for my website or app?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A great UI/UX design reduces user friction and increases engagement. We conduct user-centered research to build intuitive sitemaps, wireframes, and custom interfaces that provide a seamless experience, turning visitors into paying customers."
+          "text": "Great UI/UX reduces user friction and increases conversions. We conduct user-centered research to build intuitive interfaces that turn visitors into paying customers — improving both engagement and satisfaction."
         }
       },
       {
         "@type": "Question",
-        "name": "What kind of Graphic Design services do you provide?",
+        "name": "What Graphic Design services does MaaJanki Web Tech provide?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We create visually stunning and premium assets, including brand logos, marketing brochures, social media creatives, digital banners, and complete visual identities that capture attention and communicate your brand's unique message."
+          "text": "We create brand logos, marketing brochures, social media creatives, digital banners, and complete visual identities that capture attention and communicate your brand's unique message across all platforms."
         }
       },
       {
         "@type": "Question",
-        "name": "Can you write SEO-optimized content for my blog or website?",
+        "name": "Can you write SEO-optimized and AEO content for my website?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, our expert Content Writing team crafts compelling, keyword-rich, and Answer Engine Optimized (AEO) content. From landing pages to informative blogs, we ensure your message resonates with your audience and search engine algorithms."
+          "text": "Yes. Our Content Writing team crafts keyword-rich, Answer Engine Optimized (AEO) content for landing pages, blogs, and product pages — ensuring visibility on both traditional Google search and AI-powered platforms like ChatGPT and Perplexity."
         }
       },
       {
         "@type": "Question",
-        "name": "How can Product Listing optimization help my eCommerce sales?",
+        "name": "How can product listing optimization help my eCommerce sales?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We optimize your product titles, descriptions, and images with the right keywords and semantic data. This ensures your products rank higher on platforms like Amazon, Flipkart, or your own site, driving more visibility and sales."
+          "text": "We optimize product titles, descriptions, and images with the right keywords and semantic data — helping your products rank higher on Amazon, Flipkart, Meesho, and your own Shopify or WooCommerce store."
         }
       },
       {
         "@type": "Question",
-        "name": "What makes a strong brand identity, and how can you help?",
+        "name": "What makes a strong brand identity?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A strong brand connects emotionally with its target audience. Our Branding services define your market positioning, tone of voice, and visual aesthetics, ensuring you stand out as a premium leader in a crowded market."
+          "text": "A strong brand connects emotionally with its audience. Our Branding services define your market positioning, tone of voice, logo, color system, and visual guidelines — making you stand out as a premium choice in any market."
         }
       },
       {
         "@type": "Question",
-        "name": "How long does it take to see results from SEO and digital marketing?",
+        "name": "How long does it take to see SEO results?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "While paid Performance Marketing can generate immediate leads, organic strategies like SEO and Content Writing typically take 3 to 6 months to show significant, long-lasting growth. We focus on building sustainable digital authority."
+          "text": "For local Bihar keywords, our clients typically see first-page Google rankings within 60 to 90 days. For competitive national keywords, organic growth takes 4 to 6 months. Paid campaigns (Google Ads, Meta Ads) deliver leads within days."
         }
       },
       {
         "@type": "Question",
-        "name": "Are your digital marketing strategies tailored for specific industries?",
+        "name": "Do you serve specific industries?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. We cater to diverse industries including Healthcare, Real Estate, E-Commerce, Education, Technology, and more. Every campaign is custom-designed based on deep competitor analysis and your specific target audience."
+          "text": "Yes. We serve Healthcare, Real Estate, E-Commerce, Education, Finance, Construction, Food & Restaurants, Legal Services, Technology/SaaS, Automotive, Beauty, Fitness, and Manufacturing — with custom strategies per industry."
         }
       },
       {
         "@type": "Question",
-        "name": "What is the cost of your web development and digital marketing services?",
+        "name": "What is the cost of web development and digital marketing in Bihar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Costs depend on your specific business goals and the scope of the project. MaaJanki Web Tech offers flexible, scalable, and highly affordable packages designed to provide maximum ROI regardless of your business size. Starter packages begin at ₹14,999."
+          "text": "Our Starter Business package begins at ₹14,999 for a 5-7 page Next.js website. The Growth & Lead Engine package is ₹34,999 and includes AEO/GEO optimization. The Enterprise VIP Tier starts at ₹89,999 with custom AI workflows. Monthly retainers available."
         }
       },
       {
         "@type": "Question",
-        "name": "How can I start working with MaaJanki Web Tech?",
+        "name": "How do I start working with MaaJanki Web Tech?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Starting is easy. Reach out via the Contact page, fill out the inquiry form, or call +91-9006543913 directly. Our experts will analyze your requirements and provide a customized growth strategy for your business."
+          "text": "Contact us via the Contact page, fill the inquiry form, or call +91-9006543913. We offer a free 30-minute Strategy Audit to understand your business goals and recommend the right package."
         }
       }
     ]
