@@ -31,6 +31,16 @@ const pages = [
   { path: '/reviews', changefreq: 'daily', priority: '0.85' },
   { path: '/contact', changefreq: 'daily', priority: '0.85' },
   { path: '/locations', changefreq: 'daily', priority: '0.85' },
+  { path: '/blog', changefreq: 'daily', priority: '0.9' },
+  { path: '/blog/nextjs-15-seo-guide-for-business-websites', changefreq: 'weekly', priority: '0.8' },
+  { path: '/blog/local-seo-strategies-for-bihar-businesses', changefreq: 'weekly', priority: '0.8' },
+  { path: '/blog/why-performance-marketing-beats-traditional-ads', changefreq: 'weekly', priority: '0.8' },
+  { path: '/blog/gst-invoicing-compliance-guide-indian-retailers', changefreq: 'weekly', priority: '0.8' },
+  { path: '/tools', changefreq: 'daily', priority: '0.85' },
+  { path: '/tools/meta-tag-generator', changefreq: 'weekly', priority: '0.8' },
+  { path: '/tools/gst-invoice-helper', changefreq: 'weekly', priority: '0.8' },
+  { path: '/tools/json-formatter', changefreq: 'weekly', priority: '0.8' },
+  { path: '/tools/webp-converter', changefreq: 'weekly', priority: '0.8' },
 
   // Legal Pages
   { path: '/privacy-policy', changefreq: 'monthly', priority: '0.3' },

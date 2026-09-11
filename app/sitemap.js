@@ -88,6 +88,20 @@ export default async function sitemap() {
     // Location Landing Index Page
     { path: '/locations', changeFrequency: 'daily', priority: 0.85 },
 
+    // Blog & Articles
+    { path: '/blog', changeFrequency: 'daily', priority: 0.9 },
+    { path: '/blog/nextjs-15-seo-guide-for-business-websites', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/blog/local-seo-strategies-for-bihar-businesses', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/blog/why-performance-marketing-beats-traditional-ads', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/blog/gst-invoicing-compliance-guide-indian-retailers', changeFrequency: 'weekly', priority: 0.8 },
+
+    // Free Online Tools
+    { path: '/tools', changeFrequency: 'daily', priority: 0.85 },
+    { path: '/tools/meta-tag-generator', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/tools/gst-invoice-helper', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/tools/json-formatter', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/tools/webp-converter', changeFrequency: 'weekly', priority: 0.8 },
+
     // Policy & Legal Pages
     { path: '/privacy-policy', changeFrequency: 'monthly', priority: 0.3 },
     { path: '/terms-conditions', changeFrequency: 'monthly', priority: 0.3 },

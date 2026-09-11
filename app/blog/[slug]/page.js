@@ -3,6 +3,12 @@ import { notFound } from 'next/navigation';
 import { FaCalendarAlt, FaUser, FaClock, FaArrowLeft, FaShareAlt } from 'react-icons/fa';
 import { blogPosts } from '../page';
 
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
