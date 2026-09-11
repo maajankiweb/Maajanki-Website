@@ -500,7 +500,7 @@ export default function OurTeamClient() {
             <span className="ot-explore-arrow">Get In Touch →</span>
           </Link>
 
-          <Link href="/careers#faq" className="ot-explore-card">
+          <Link href="/faqs" className="ot-explore-card">
             <span className="ot-explore-icon" aria-hidden="true">
               <FaQuestionCircle />
             </span>

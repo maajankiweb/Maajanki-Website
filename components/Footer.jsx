@@ -170,6 +170,9 @@ const Footer = () => {
             <li>
               <Link href="/tools">Free Tools</Link>
             </li>
+            <li>
+              <Link href="/faqs">FAQs</Link>
+            </li>
           </ul>
         </div>
 

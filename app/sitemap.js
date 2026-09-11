@@ -86,6 +86,7 @@ export default async function sitemap() {
     { path: '/products', changeFrequency: 'daily', priority: 0.85 },
     { path: '/reviews', changeFrequency: 'daily', priority: 0.85 },
     { path: '/contact', changeFrequency: 'daily', priority: 0.85 },
+    { path: '/faqs', changeFrequency: 'weekly', priority: 0.85 },
 
     // Location Landing Index Page
     { path: '/locations', changeFrequency: 'daily', priority: 0.85 },
