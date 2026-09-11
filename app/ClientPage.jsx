@@ -1721,7 +1721,8 @@ function Home() {
       </section>
       {/* ---------- Promo Section End ---------- */}
 
-      {/* Counter and Clients Section */}
+      {/* Counter and Clients Section (Temporarily Hidden) */}
+      {/*
       <section className="counters-section py-5" style={{ background: "#ffffff", borderTop: "1px solid #f1f5f9", borderBottom: "1px solid #f1f5f9" }}>
         <div className="container">
           <div className="row row-cols-2 row-cols-md-4 g-4 text-center">
@@ -1748,6 +1749,7 @@ function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Clients Section */}
       <section className="clients-section">
@@ -1827,7 +1829,8 @@ function Home() {
       </section>
       {/* Collaborators Section End */}
 
-      {/* Client Testimonials Section */}
+      {/* Client Testimonials Section (Temporarily Hidden) */}
+      {/*
       <section className="testimonials-section py-5" style={{ background: "#042544", color: "#ffffff" }}>
         <div className="container">
           <div className="text-center mb-5">
@@ -1900,6 +1903,7 @@ function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Faq Section Start */}
       <section className="faq-section">
