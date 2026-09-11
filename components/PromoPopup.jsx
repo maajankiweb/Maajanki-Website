@@ -287,7 +287,7 @@ const PromoPopup = () => {
                 Get My Free Audit
               </button>
               <a
-                href="https://wa.me/919931818816?text=Hi%20MaaJanki%20Web%20Tech,%20I%20want%20to%20talk%20to%20an%20expert%20about%20building%20a%20website"
+                href="https://wa.me/919006543913?text=Hi%20MaaJanki%20Web%20Tech,%20I%20want%20to%20talk%20to%20an%20expert%20about%20building%20a%20website"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="promo-expert-btn"
