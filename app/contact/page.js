@@ -228,7 +228,7 @@ export default function Page() {
 
                 <div className="d-flex flex-column gap-2">
                   <a
-                    href="https://share.google/zrfW98LBlFTL6ZzPe"
+                    href="https://maps.app.goo.gl/j6om2qk6tSgYHBnk9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-block"
@@ -359,7 +359,7 @@ export default function Page() {
         <div className="google-map-container">
           <iframe
             title="MaaJanki Web Tech Location in Bagaha, Bihar"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.077602258112!2d84.50572527522043!3d26.80565757671114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39936f24a2f8dd1f%3A0x172dd318eac9cc5b!2sMAAJANKI%20WEB%20TECH!5e0!3m2!1sen!2sin!4v1763971778984!5m2!1sen!2sin"
+            src="https://maps.app.goo.gl/j6om2qk6tSgYHBnk9"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

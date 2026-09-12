@@ -77,22 +77,28 @@ export default function FounderSection() {
 
           <p className="founder-about">{Founder.about}</p>
 
-          <a
-            href="https://wa.me/919006543913?text=Hi%20Ashish,%20I%20would%20like%20to%20connect%20regarding%20your%20digital%20services.%20(Source:%20Founder%20Section%20CTA)"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="founder-btn"
-            onClick={() => {
-              if (typeof window !== "undefined" && window.gtag) {
-                window.gtag("event", "click", {
-                  event_category: "Contact",
-                  event_label: "Founder Section WhatsApp CTA",
-                });
-              }
-            }}
-          >
-            <FaWhatsapp style={{ marginRight: "8px", verticalAlign: "middle" }} /> Contact Founder
-          </a>
+          <div className="founder-btn-box">
+            <a
+              href="https://wa.me/919006543913?text=Hi%20Ashish,%20I%20would%20like%20to%20connect%20regarding%20your%20digital%20services.%20(Source:%20Founder%20Section%20CTA)"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="founder-btn"
+              onClick={() => {
+                if (typeof window !== "undefined" && window.gtag) {
+                  window.gtag("event", "click", {
+                    event_category: "Contact",
+                    event_label: "Founder Section WhatsApp CTA",
+                  });
+                }
+              }}
+            >
+              <span className="founder-btn-icon" aria-hidden="true">
+                <FaWhatsapp />
+              </span>
+              <span>Contact Founder</span>
+              <span className="founder-btn-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

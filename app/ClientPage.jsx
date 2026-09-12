@@ -66,20 +66,28 @@ function Home() {
 
   const counters = [
     {
-      number: "60+",
-      title: "Happy Clients",
+      // number: "500+",
+      img: "/images/happy-clients.png",
+      title: "Client Happiness",
+      alt: "Happy clients served by MaaJanki Web Tech",
     },
     {
-      number: "100+",
-      title: "Projects Completed",
+      // number: "250+",
+      img: "/images/project-complete.png",
+      title: "Top-Rated Projects",
+      alt: "Successful digital marketing and web projects",
     },
     {
-      number: "50+",
-      title: "Designs Delivered",
+      // number: "150+",
+      img: "/images/design-complete.png",
+      title: "Creative Masterpieces",
+      alt: "Creative design and branding projects",
     },
     {
-      number: "4+",
-      title: "Years Experience",
+      // number: "10+",
+      img: "/images/experience.png",
+      title: "Team of Experts",
+      alt: "Experienced digital marketing professionals",
     },
   ];
 
@@ -1800,35 +1808,36 @@ function Home() {
       </section>
       {/* ---------- Promo Section End ---------- */}
 
-      {/* Counters & Statistics Section (Temporarily Commented - to be revealed after onboarding clients) */}
-      {/*
-      <section className="counters-section py-5" style={{ background: "#ffffff", borderTop: "1px solid #e2e8f0", borderBottom: "1px solid #e2e8f0" }}>
+      {/* Counter and Clients Section */}
+      <section className="counters-section wow animate__fadeIn">
         <div className="container">
-          <div className="row row-cols-2 row-cols-md-4 g-4 text-center">
+          <div className="row row-cols-2 row-cols-md-4 g-4">
             {counters.map((counter, index) => (
-              <div key={index} className="col counter-item">
-                <div
-                  className="counter-box-wrapper p-4 rounded-3 h-100 d-flex flex-column justify-content-center"
-                  style={{
-                    background: "#f8fafc",
-                    border: "1px solid #e2e8f0",
-                    boxShadow: "0 4px 15px rgba(4, 37, 68, 0.04)",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  }}
-                >
-                  <p className="text-3xl md:text-4xl font-extrabold mb-1" style={{ color: "#042544", fontSize: "2.2rem", fontWeight: "800", lineHeight: "1.2" }}>
-                    {counter.number}
-                  </p>
-                  <p className="text-sm font-semibold mb-0 text-uppercase tracking-wider" style={{ color: "#FD6A02", fontSize: "0.85rem", letterSpacing: "0.8px" }}>
-                    {counter.title}
-                  </p>
+              <div
+                key={index}
+                className="col text-center counter-item wow animate__fadeInUp"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <div className="counter-box-wrapper">
+                  <div className="counter-icon-container">
+                    <Image
+                      loading="lazy"
+                      src={counter.img}
+                      alt={counter.title}
+                      title={counter.title}
+                      className="counter-img"
+                      width={80}
+                      height={80}
+                    />
+                  </div>
+                  {/* {counter.number && <h3 className="counter-number">{counter.number}</h3>} */}
+                  <h6 className="counter-title">{counter.title}</h6>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      */}
 
       {/* Clients Section */}
       <section className="clients-section">

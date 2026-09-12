@@ -17,6 +17,12 @@ export async function GET() {
         },
       }));
       await TeamMember.bulkWrite(ops);
+    } else {
+      // Ensure Ashish Kumar photo points to valid asset if previously set to missing file
+      await TeamMember.updateOne(
+        { name: 'Ashish Kumar', photo: { $in: ['/images/Ashish-Kumar.webp', '', null] } },
+        { $set: { photo: '/images/founder.png' } }
+      );
     }
 
     const members = await TeamMember.find({ isActive: true }).sort({ order: 1, createdAt: 1 }).lean();

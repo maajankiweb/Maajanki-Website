@@ -177,7 +177,11 @@ export default function OurTeamClient() {
         <div className="ot-leadership-grid" role="list" aria-label="Leadership profiles">
           {leaders.map((leader, index) => {
             const key = leader._id || leader.id || `leader-${index}`;
-            const isDataUrl = Boolean(leader.photo && leader.photo.startsWith('data:'));
+            const photoSrc =
+              leader.name === 'Ashish Kumar' && (!leader.photo || leader.photo.includes('Ashish-Kumar.webp'))
+                ? '/images/founder.png'
+                : leader.photo || '/images/founder.png';
+            const isDataUrl = Boolean(photoSrc && photoSrc.startsWith('data:'));
             return (
               <div key={key} className="ot-leader-card" role="listitem">
                 <div className="ot-leader-circle">
@@ -185,7 +189,7 @@ export default function OurTeamClient() {
                   <div className="ot-ring-inner" aria-hidden="true"></div>
                   <div className="ot-img-wrap">
                     <Image
-                      src={leader.photo}
+                      src={photoSrc}
                       alt={`${leader.name} - ${leader.role} at MaaJanki Web Tech`}
                       width={250}
                       height={250}
@@ -554,13 +558,22 @@ export default function OurTeamClient() {
 
             <div className="ot-modal-head">
               <div className="ot-modal-avi">
-                <Image
-                  src={activeMember.photo}
-                  alt={`${activeMember.name} portrait`}
-                  width={96}
-                  height={96}
-                  unoptimized={Boolean(activeMember.photo && activeMember.photo.startsWith('data:'))}
-                />
+                {(() => {
+                  const modalPhotoSrc =
+                    activeMember.name === 'Ashish Kumar' &&
+                    (!activeMember.photo || activeMember.photo.includes('Ashish-Kumar.webp'))
+                      ? '/images/founder.png'
+                      : activeMember.photo || '/images/founder.png';
+                  return (
+                    <Image
+                      src={modalPhotoSrc}
+                      alt={`${activeMember.name} portrait`}
+                      width={96}
+                      height={96}
+                      unoptimized={Boolean(modalPhotoSrc && modalPhotoSrc.startsWith('data:'))}
+                    />
+                  );
+                })()}
               </div>
               <div>
                 <div className="ot-modal-name" id="modal-member-name">

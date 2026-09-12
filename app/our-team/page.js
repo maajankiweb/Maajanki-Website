@@ -87,7 +87,7 @@ const jsonLd = {
       },
       description:
         'Founder and CEO of MaaJanki Web Tech, specializing in custom Next.js web application architecture, enterprise SEO strategy, and scalable digital solutions.',
-      image: 'https://maajankiwebtech.com/images/Ashish-Kumar.webp',
+      image: 'https://maajankiwebtech.com/images/founder.png',
       url: 'https://maajankiwebtech.com/our-team',
       sameAs: [
         'https://www.linkedin.com/in/ashishkumarji/',
