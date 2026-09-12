@@ -15,6 +15,7 @@ const Reviews = () => {
       rating: 5,
       avatar: "SS",
       source: "Google Verified",
+      datePublished: "2025-02-14",
       text: "Maajanki Web Tech Digital Agency delivers impressive web development and digital marketing services with a modern and professional approach. Their website design is clean, user-friendly, and visually appealing. The agency offers a wide range of services including web development, SEO, app development, AI solutions, and digital marketing, making it a complete digital partner for businesses. Their pricing plans are affordable and suitable for startups as well as growing brands. Overall, a reliable agency for anyone looking to build a strong online presence.",
     },
     {
@@ -25,6 +26,7 @@ const Reviews = () => {
       rating: 5,
       avatar: "SK",
       source: "Google Verified",
+      datePublished: "2025-02-10",
       text: "Maajanki Web Tech Digital Agency and Ashish Kumar have delivered an outstanding portfolio website with a modern, visually appealing, and highly professional design. The smooth animations, clean layout, and intuitive UI/UX create an engaging user experience throughout the site. The project showcases strong full-stack development expertise, excellent attention to detail, and a well-structured presentation of skills and projects. Every section feels thoughtfully crafted, reflecting both creativity and technical proficiency. This portfolio leaves a strong impression on recruiters, clients, and collaborators alike. Truly impressive work — highly recommended for anyone looking for quality web development and digital solutions! 🚀",
     },
     {
@@ -35,6 +37,7 @@ const Reviews = () => {
       rating: 5,
       avatar: "AR",
       source: "Google Verified",
+      datePublished: "2025-02-05",
       text: "On behalf of Maajanki Web Tech Digital Agency and Ashish Kumar: This is a clean and professionally designed portfolio with an impressive modern UI/UX. The smooth animations, well-structured project showcase, and strong full-stack presentation reflect great development skills and attention to detail. Overall, it creates a strong impression for both recruiters and potential clients. Excellent work and highly recommended! 🚀",
     },
     {
@@ -45,6 +48,7 @@ const Reviews = () => {
       rating: 5,
       avatar: "AV",
       source: "Google Verified",
+      datePublished: "2025-01-28",
       text: "The team at MaaJanki Web Tech built our complete custom React e-commerce storefront and listed over 2,000 product SKUs across Amazon and Flipkart. Our loading speeds dropped below 1.5s and sales increased by 150% in the first quarter itself. Truly Bihar's finest agency!",
     },
     {
@@ -55,6 +59,7 @@ const Reviews = () => {
       rating: 5,
       avatar: "PS",
       source: "Google Verified",
+      datePublished: "2025-01-20",
       text: "Outstanding organic growth! Their SEO strategy boosted our keyword rankings on the first page of Google for high-intent search queries. We have seen a 200% influx of qualified organic leads. Their transparency in reporting is top-notch.",
     },
     {
@@ -65,6 +70,7 @@ const Reviews = () => {
       rating: 5,
       avatar: "RR",
       source: "Trustpilot Verified",
+      datePublished: "2025-01-12",
       text: "They designed our entire InvoBill SaaS billing dashboard UI/UX and currently manage our Google and Meta Ads campaigns. The developers are highly skilled, and their conversion tracking setups gave us 100% clarity on our acquisition costs.",
     },
     {
@@ -75,6 +81,7 @@ const Reviews = () => {
       rating: 5,
       avatar: "SG",
       source: "Google Verified",
+      datePublished: "2024-12-18",
       text: "MaaJanki Web Tech created our brand identity, logos, packaging, and Instagram social media design system from scratch. Beautiful premium glassmorphic aesthetics and quick feedback turnaround. Our brand feels premium and trustworthy now.",
     },
     {
@@ -85,6 +92,7 @@ const Reviews = () => {
       rating: 5,
       avatar: "VA",
       source: "Google Verified",
+      datePublished: "2024-12-05",
       text: "MaaJanki optimized our Google Business Profile and built a responsive local service site. We now consistently rank in the Bettiah/West Champaran Maps 3-Pack. Our phone inquiries for shipping queries have grown exponentially.",
     },
     {
@@ -95,6 +103,7 @@ const Reviews = () => {
       rating: 5,
       avatar: "RK",
       source: "Trustpilot Verified",
+      datePublished: "2024-11-22",
       text: "Their content writing team created high-authority clinical guides that rank perfectly on Google and align with medical guidelines. The social media campaign runs smoothly with zero supervision required from our end.",
     },
   ];
@@ -111,56 +120,36 @@ const Reviews = () => {
 
   return (
     <>
-      {/* Helmet Meta Tags & Schema */}
-      {
-/* JSON-LD Schema */
-}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "LocalBusiness",
-                "@id": "https://maajankiwebtech.com/#localbusiness",
-                "name": "MaaJanki Web Tech",
-                "url": "https://maajankiwebtech.com/",
-                "logo": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png",
-                "image": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png",
-                "telephone": "+91-9006543913",
-                "priceRange": "$",
-                "sameAs": [
-                  "https://share.google/sfG7HXx0jHaeRi8Tb",
-                  "https://jsdl.in/DT-99EMZMSLY37",
-                  "https://www.ambitionbox.com/maajankiwebtech"
-                ],
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar",
-                  "addressLocality": "Bagaha",
-                  "addressRegion": "Bihar",
-                  "postalCode": "845101",
-                  "addressCountry": "IN"
+                "@type": "WebPage",
+                "@id": "https://maajankiwebtech.com/reviews#webpage",
+                "url": "https://maajankiwebtech.com/reviews",
+                "name": "Client Reviews & Testimonials | MaaJanki Web Tech",
+                "description": "Read verified client reviews and ratings for MaaJanki Web Tech. See why businesses trust our Next.js web development and digital marketing services.",
+                "isPartOf": {
+                  "@id": "https://maajankiwebtech.com/#website"
                 },
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "5.0",
-                  "reviewCount": "5",
-                  "bestRating": "5",
-                  "worstRating": "1"
+                "about": {
+                  "@id": "https://maajankiwebtech.com/#organization"
                 },
-                "founder": {
-                  "@type": "Person",
-                  "name": "Ashish Kumar",
-                  "sameAs": [
-                    "https://www.linkedin.com/in/ashishkumarji/",
-                    "https://www.wikidata.org/wiki/Q115783355"
-                  ]
+                "mainEntity": {
+                  "@id": "https://maajankiwebtech.com/#localbusiness"
                 }
               },
               ...reviewsData.map((rev) => ({
                 "@type": "Review",
                 "itemReviewed": {
                   "@type": "LocalBusiness",
+                  "@id": "https://maajankiwebtech.com/#localbusiness",
                   "name": "MaaJanki Web Tech",
-                  "image": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png"
+                  "url": "https://maajankiwebtech.com/"
                 },
                 "author": {
                   "@type": "Person",
@@ -172,10 +161,13 @@ const Reviews = () => {
                   "bestRating": "5",
                   "worstRating": "1"
                 },
-                "reviewBody": rev.text
+                "reviewBody": rev.text,
+                "datePublished": rev.datePublished
               }))
             ]
-          }) }} />
+          })
+        }}
+      />
 
 
       {/* Main Content */}

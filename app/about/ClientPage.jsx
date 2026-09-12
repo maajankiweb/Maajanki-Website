@@ -22,89 +22,19 @@ const About = () => {
           "@context": "https://schema.org",
           "@graph": [
             {
-              "@type": "Organization",
-              "@id": "https://maajankiwebtech.com/#organization",
-              "name": "MaaJanki Web Tech",
-              "url": "https://maajankiwebtech.com/",
-              "logo": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png",
-              "description": "MaaJanki Web Tech is a DPIIT Startup India and Udyam MSME recognized website development and digital marketing agency in India, specializing in SEO, AEO, GEO, branding, and custom web development.",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+91-9006543913",
-                "contactType": "customer service"
-              },
-              "sameAs": [
-                "https://www.facebook.com/profile.php?id=61577526895580",
-                "https://www.instagram.com/maajankiwebtech/",
-                "https://www.linkedin.com/company/maajanki-web-tech-company/",
-                "https://x.com/MaaJankweb",
-                "https://www.wikidata.org/wiki/Q804153",
-                "https://www.wikidata.org/wiki/Q1162"
-              ],
-              "founder": {
-                "@id": "https://maajankiwebtech.com/#founder"
-              }
-            },
-            {
-              "@id": "https://maajankiwebtech.com/#founder",
-              "@type": "Person",
-              "name": "Ashish Kumar",
-              "jobTitle": "Founder & CEO",
-              "url": "https://www.linkedin.com/in/ashishkumarji/",
-              "worksFor": {
-                "@id": "https://maajankiwebtech.com/#organization"
-              },
-              "sameAs": [
-                "https://www.linkedin.com/in/ashishkumarji/",
-                "https://www.instagram.com/ashishkrweb4/",
-                "https://www.wikidata.org/wiki/Q115783355"
-              ],
-              "description": "Ashish Kumar is the founder of MaaJanki Web Tech, an expert in custom web development, SEO strategy, and digital marketing."
-            },
-            {
-              "@id": "https://maajankiwebtech.com/#localbusiness",
-              "@type": "LocalBusiness",
-              "name": "MaaJanki Web Tech",
-              "image": "/images/icons/MaaJanki-Web-Tech-Logo-Color.png",
-              "url": "https://maajankiwebtech.com/",
-              "telephone": "+91-9006543913",
-              "description": "Professional website development and digital marketing agency in Bagaha, Bihar, serving clients across India.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar",
-                "addressLocality": "Bagaha, West Champaran",
-                "addressRegion": "Bihar",
-                "postalCode": "845101",
-                "addressCountry": "IN"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 27.0984,
-                "longitude": 84.2625
-              },
-              "priceRange": "$$",
-              "hasMap": "https://share.google/sfG7HXx0jHaeRi8Tb",
-              "sameAs": [
-                "https://share.google/sfG7HXx0jHaeRi8Tb"
-              ],
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "5",
-                "bestRating": "5",
-                "worstRating": "1"
-              }
-            },
-            {
-              "@type": "WebPage",
+              "@type": "AboutPage",
               "@id": "https://maajankiwebtech.com/about#webpage",
               "url": "https://maajankiwebtech.com/about",
-              "name": "About MaaJanki Web Tech | Global Web Development & Digital Marketing Agency",
+              "name": "About MaaJanki Web Tech | Leading Web Development & Digital Marketing Agency in India",
+              "description": "Learn about MaaJanki Web Tech, an MSME registered & DPIIT recognized web development & digital marketing agency in India. Founded by Ashish Kumar.",
               "isPartOf": {
                 "@id": "https://maajankiwebtech.com/#website"
               },
               "about": {
                 "@id": "https://maajankiwebtech.com/#organization"
+              },
+              "mainEntity": {
+                "@id": "https://maajankiwebtech.com/#localbusiness"
               }
             },
             {
@@ -134,6 +64,7 @@ const About = () => {
         `,
         }}
       />
+
 
       {/* Hero Section */}
       <section className="custom-banner">
