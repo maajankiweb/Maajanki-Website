@@ -1,21 +1,29 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Industries We Serve | Web Agency Bihar | Maajanki Web Tech",
-  description: "We provide custom web design & digital marketing agency services for retail, B2B, healthcare, & education in Bihar. Contact us today for a free audit!",
-  keywords: ["digital marketing agency Bihar","web design agency Bagaha","eCommerce web development Bihar"],
+  title: "Industries We Serve | Web & Digital Solutions | MaaJanki Web Tech",
+  description: "Explore industry-specific web development, AI automation, and SEO marketing solutions for Retail, Real Estate, Healthcare, Education, and eCommerce by MaaJanki Web Tech.",
+  keywords: [
+    "Industries We Serve",
+    "real estate website development",
+    "retail business automation",
+    "healthcare SEO marketing",
+    "eCommerce development India",
+    "B2B digital marketing agency",
+    "MaaJanki Web Tech industries"
+  ],
   openGraph: {
-    title: "Industries We Serve | Web Agency Bihar | Maajanki Web Tech",
-    description: "We provide custom web design & digital marketing agency services for retail, B2B, healthcare, & education in Bihar. Contact us today for a free audit!",
+    title: "Industries We Serve | Web & Digital Solutions | MaaJanki Web Tech",
+    description: "Explore industry-specific web development, AI automation, and SEO marketing solutions for Retail, Real Estate, Healthcare, Education, and eCommerce.",
     url: "https://maajankiwebtech.com/industries",
-    siteName: "Maajanki Web Tech",
+    siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industries We Serve | Web Agency Bihar | Maajanki Web Tech",
-    description: "We provide custom web design & digital marketing agency services for retail, B2B, healthcare, & education in Bihar. Contact us today for a free audit!",
+    title: "Industries We Serve | Web & Digital Solutions | MaaJanki Web Tech",
+    description: "Explore industry-specific web development, AI automation, and SEO marketing solutions by MaaJanki Web Tech.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/industries",

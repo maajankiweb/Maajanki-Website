@@ -1,24 +1,21 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Website Development Company in Bihar & India | Next.js Agency | MaaJanki Web Tech",
-  description: "High-speed Next.js & WordPress website development company in Patna, Bettiah, Bagaha & Bihar. We build custom business websites, SaaS apps, and eCommerce portals.",
+  title: "Website Development Company in India | Next.js Agency | MaaJanki Web Tech",
+  description: "High-speed Next.js & WordPress website development company in India. We build custom business websites, SaaS apps, and high-converting eCommerce portals.",
   keywords: [
-    "Website Development Company in Bihar",
-    "Website Development Agency in Patna",
-    "Website Development Company in Bettiah",
-    "Website Development Company in Bagaha",
-    "WordPress Website Development Company in Bihar",
+    "Website Development Company in India",
+    "Website Development Agency India",
+    "Next.js web development agency India",
+    "WordPress Website Development Company India",
     "Custom Website Development Company in India",
     "Small Business Website Development Services",
-    "Next.js web development agency India",
-    "custom web application developer Bihar",
-    "web development company Patna",
+    "custom web application developer India",
     "MaaJanki Web Tech web dev"
   ],
   openGraph: {
-    title: "Website Development Company in Bihar & India | MaaJanki Web Tech",
-    description: "High-speed Next.js & WordPress website development company in Bettiah, Bagaha, Motihari, Muzaffarpur, Patna, Bihar, and across India.",
+    title: "Website Development Company in India | Next.js Agency | MaaJanki Web Tech",
+    description: "High-speed Next.js & WordPress website development company in India. Custom business websites, SaaS apps, and eCommerce portals.",
     url: "https://maajankiwebtech.com/services/web-development",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -26,8 +23,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Company in Bihar & India | MaaJanki Web Tech",
-    description: "High-speed Next.js & WordPress website development company in Bettiah, Bagaha, Patna, Bihar, and across India.",
+    title: "Website Development Company in India | Next.js Agency | MaaJanki Web Tech",
+    description: "High-speed Next.js & WordPress website development company in India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/web-development",

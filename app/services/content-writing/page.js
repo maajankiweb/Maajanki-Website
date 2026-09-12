@@ -1,20 +1,20 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "SEO Content Writing & Copywriting Services in Bihar | MaaJanki Web Tech",
-  description: "Hire expert SEO content writers and copywriters in Patna, Bihar, and India. High-converting website content, technical blog posts, and AEO copy.",
+  title: "SEO Content Writing & Copywriting Services in India | MaaJanki Web Tech",
+  description: "Hire expert SEO content writers and copywriters in India. High-converting website content, technical blog posts, and Answer Engine Optimized (AEO) copy.",
   keywords: [
-    "SEO Content Writing Bihar",
-    "SEO content writing Patna",
-    "copywriters Bihar",
+    "SEO Content Writing India",
+    "copywriting services India",
     "website content writing India",
-    "technical content writing Bihar",
-    "blog writing agency Patna",
+    "technical content writing India",
+    "blog writing agency India",
+    "AEO content writing services",
     "MaaJanki Web Tech content"
   ],
   openGraph: {
-    title: "SEO Content Writing & Copywriting Services in Bihar | MaaJanki Web Tech",
-    description: "Hire expert SEO content writers and copywriters in Patna, Bihar, and India.",
+    title: "SEO Content Writing & Copywriting Services in India | MaaJanki Web Tech",
+    description: "Hire expert SEO content writers and copywriters in India for scalable content marketing.",
     url: "https://maajankiwebtech.com/services/content-writing",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -22,8 +22,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Content Writing & Copywriting Services in Bihar | MaaJanki Web Tech",
-    description: "Hire expert SEO content writers and copywriters in Patna, Bihar, and India.",
+    title: "SEO Content Writing & Copywriting Services in India | MaaJanki Web Tech",
+    description: "Hire expert SEO content writers and copywriters in India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/content-writing",

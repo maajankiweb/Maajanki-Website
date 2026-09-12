@@ -16,6 +16,7 @@ export default async function sitemap() {
     'belgium',
     'bengaluru',
     'bettiah',
+    'bihar-sharif',
     'brazil',
     'canada',
     'chile',

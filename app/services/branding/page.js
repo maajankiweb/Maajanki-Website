@@ -1,19 +1,19 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Logo Design & Corporate Branding Services in Patna, Bihar, India & Global | MaaJanki Web Tech",
-  description: "Build a world-class brand identity with expert logo design, brand guidelines, and corporate branding services in Patna, Bihar, India, USA, UK, and UAE.",
+  title: "Logo Design & Corporate Branding Services in India & Global | MaaJanki Web Tech",
+  description: "Build a world-class brand identity with expert logo design, brand guidelines, and corporate branding services in India, USA, UK, and UAE.",
   keywords: [
-    "logo design Patna",
-    "corporate branding Bihar",
+    "logo design services India",
+    "corporate branding agency India",
     "brand identity design India",
-    "logo design agency USA UK UAE",
-    "branding company Patna",
+    "logo design company India",
+    "branding agency USA UK UAE",
     "MaaJanki Web Tech branding"
   ],
   openGraph: {
-    title: "Logo Design & Corporate Branding Services in Patna, Bihar, India & Global",
-    description: "Build a world-class brand identity with expert logo design and corporate branding services in Patna, Bihar, India, and internationally.",
+    title: "Logo Design & Corporate Branding Services in India & Global | MaaJanki Web Tech",
+    description: "Build a world-class brand identity with expert logo design and corporate branding services in India and internationally.",
     url: "https://maajankiwebtech.com/services/branding",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logo Design & Corporate Branding Services in Patna, Bihar, India & Global",
+    title: "Logo Design & Corporate Branding Services in India & Global | MaaJanki Web Tech",
     description: "Build a world-class brand identity with expert logo design and corporate branding services.",
   },
   alternates: {

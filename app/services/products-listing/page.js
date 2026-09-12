@@ -2,12 +2,12 @@ import ClientPage from './ClientPage';
 
 export const metadata = {
   title: "eCommerce Product Listing Services in India | Amazon & Flipkart Agency | MaaJanki Web Tech",
-  description: "Professional eCommerce product listing, cataloging, A+ content, and store management for Amazon, Flipkart, Meesho & Shopify sellers in Bihar & India.",
+  description: "Professional eCommerce product listing, cataloging, A+ content, and store management for Amazon, Flipkart, Meesho & Shopify sellers across India.",
   keywords: [
     "Product listing services in India",
-    "eCommerce cataloging Bihar",
+    "eCommerce cataloging India",
     "Amazon Flipkart product listing services",
-    "Amazon product listing Patna",
+    "Amazon product listing agency India",
     "Flipkart product listing agency India",
     "eCommerce product upload and listing services",
     "MaaJanki Web Tech eCommerce"

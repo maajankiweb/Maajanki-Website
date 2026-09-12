@@ -4,13 +4,31 @@ import Link from 'next/link';
 import '../styles/Products.css';
 
 export const metadata = {
-  title: "SaaS Products & Digital Assets | MaaJanki Web Tech",
-  description: "Explore ready-to-use SaaS solutions, developer templates, and digital assets engineered by MaaJanki Web Tech.",
+  title: "SaaS Products & Automation Tools | MaaJanki Web Tech",
+  description: "Explore ready-to-use SaaS solutions, developer templates, and business automation platforms engineered by MaaJanki Web Tech: InvoBill, WaCRM, and Nexus SaaS.",
+  keywords: [
+    "SaaS Products India",
+    "business automation tools",
+    "InvoBill GST billing software",
+    "WaCRM WhatsApp CRM",
+    "Nexus SaaS reputation management",
+    "Tailwind templates",
+    "MaaJanki Web Tech products"
+  ],
   openGraph: {
-    title: "SaaS Products & Digital Assets | MaaJanki Web Tech",
-    description: "Explore ready-to-use SaaS solutions, developer templates, and digital assets engineered by MaaJanki Web Tech.",
+    title: "SaaS Products & Automation Tools | MaaJanki Web Tech",
+    description: "Explore ready-to-use SaaS solutions, developer templates, and business automation platforms engineered by MaaJanki Web Tech.",
     url: "https://maajankiwebtech.com/products",
-    images: [{ url: "https://maajankiwebtech.com/assets/og-image.jpg" }],
+    images: [{ url: "https://maajankiwebtech.com/images/og-banner.webp" }],
+    siteName: "MaaJanki Web Tech",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SaaS Products & Automation Tools | MaaJanki Web Tech",
+    description: "Explore ready-to-use SaaS solutions and business automation platforms engineered by MaaJanki Web Tech.",
+    images: ["https://maajankiwebtech.com/images/og-banner.webp"],
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/products",

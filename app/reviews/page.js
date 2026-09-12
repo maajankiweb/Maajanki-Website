@@ -1,21 +1,27 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Client Reviews Web Agency Bagaha | Maajanki Web Tech",
-  description: "Read verified reviews for Maajanki Web Tech. See why we are the top-rated website developer in West Champaran and digital marketing agency in Bihar.",
-  keywords: ["digital marketing agency Bihar","website developer West Champaran","client reviews Bagaha"],
+  title: "Client Reviews & Testimonials | MaaJanki Web Tech",
+  description: "Read verified client reviews and ratings for MaaJanki Web Tech. See why businesses trust our Next.js web development and digital marketing services.",
+  keywords: [
+    "MaaJanki Web Tech reviews",
+    "web development agency reviews India",
+    "digital marketing client testimonials",
+    "top rated website developer India",
+    "SEO agency client results India"
+  ],
   openGraph: {
-    title: "Client Reviews Web Agency Bagaha | Maajanki Web Tech",
-    description: "Read verified reviews for Maajanki Web Tech. See why we are the top-rated website developer in West Champaran and digital marketing agency in Bihar.",
+    title: "Client Reviews & Testimonials | MaaJanki Web Tech",
+    description: "Read verified client reviews and ratings for MaaJanki Web Tech. See why businesses trust our Next.js web development and digital marketing services.",
     url: "https://maajankiwebtech.com/reviews",
-    siteName: "Maajanki Web Tech",
+    siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Client Reviews Web Agency Bagaha | Maajanki Web Tech",
-    description: "Read verified reviews for Maajanki Web Tech. See why we are the top-rated website developer in West Champaran and digital marketing agency in Bihar.",
+    title: "Client Reviews & Testimonials | MaaJanki Web Tech",
+    description: "Read verified client reviews and ratings for MaaJanki Web Tech.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/reviews",

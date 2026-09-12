@@ -8,12 +8,18 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in Bihar",
-  description: "Contact MaaJanki Web Tech in Bagaha, West Champaran, Bihar. Call +91-9006543913 or email info@maajankiwebtech.com for web development & SEO inquiries.",
-  keywords: "website developer West Champaran, web design agency Bagaha, contact MaaJanki Web Tech, Bettiah Bihar, Patna web developer",
+  title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in India",
+  description: "Contact MaaJanki Web Tech in India. Call +91-9006543913 or email info@maajankiwebtech.com for Next.js web development, SEO, and performance marketing inquiries.",
+  keywords: [
+    "Contact MaaJanki Web Tech",
+    "web development agency India",
+    "digital marketing consultation India",
+    "hire Next.js developers India",
+    "SEO audit India"
+  ],
   openGraph: {
-    title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in Bihar",
-    description: "Contact MaaJanki Web Tech in Bagaha, West Champaran, Bihar. Call +91-9006543913 or email info@maajankiwebtech.com for web development & SEO inquiries.",
+    title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in India",
+    description: "Contact MaaJanki Web Tech in India. Call +91-9006543913 or email info@maajankiwebtech.com for web development and SEO inquiries.",
     url: "https://maajankiwebtech.com/contact",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -21,8 +27,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in Bihar",
-    description: "Contact MaaJanki Web Tech in Bagaha, West Champaran, Bihar. Call +91-9006543913 or email info@maajankiwebtech.com for web development & SEO inquiries.",
+    title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in India",
+    description: "Contact MaaJanki Web Tech in India. Call +91-9006543913 or email info@maajankiwebtech.com for web development and SEO inquiries.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/contact",

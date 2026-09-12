@@ -4,6 +4,14 @@ import { FaCode, FaFileInvoiceDollar, FaImage, FaTags, FaArrowRight, FaTools } f
 export const metadata = {
   title: 'Free Web & Business Tools | MaaJanki Web Tech',
   description: 'Free developer and business utility tools by MaaJanki Web Tech: Meta Tag Generator, GST Invoice Helper, JSON Formatter, and WebP Converter.',
+  keywords: [
+    'Free Web Tools',
+    'Meta Tag Generator',
+    'GST Invoice Helper',
+    'JSON Formatter',
+    'WebP Converter online',
+    'MaaJanki Web Tech tools'
+  ],
   alternates: {
     canonical: 'https://maajankiwebtech.com/tools',
   },
@@ -14,6 +22,11 @@ export const metadata = {
     siteName: 'MaaJanki Web Tech',
     locale: 'en_IN',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Web & Business Tools | MaaJanki Web Tech',
+    description: 'Free developer and business utility tools by MaaJanki Web Tech.',
   },
 };
 

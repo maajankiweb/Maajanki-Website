@@ -12,6 +12,9 @@ export const metadata = {
     url: "https://maajankiwebtech.com/products/invobill",
     images: [{ url: "https://maajankiwebtech.com/images/products/invobill.webp" }],
   },
+  alternates: {
+    canonical: "https://maajankiwebtech.com/products/invobill",
+  },
 };
 
 export default function InvoBillPage() {

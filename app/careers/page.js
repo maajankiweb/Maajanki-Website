@@ -6,11 +6,11 @@ export const metadata = {
     'Explore exciting careers and internship opportunities at MaaJanki Web Tech. Hiring for SEO interns, Next.js web developers, UI/UX designers, and marketing executives.',
   keywords: [
     'MaaJanki Web Tech careers',
-    'digital marketing jobs Bihar',
+    'digital marketing jobs India',
     'SEO internship India',
-    'web developer jobs Patna',
+    'web developer jobs India',
     'fresher digital marketing internship',
-    'remote marketing jobs',
+    'remote marketing jobs India',
     'graphic designer hiring'
   ],
   authors: [{ name: 'MaaJanki Web Tech' }],

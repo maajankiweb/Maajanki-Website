@@ -7,9 +7,9 @@ export const metadata = {
   keywords: [
     'MaaJanki Web Tech team',
     'Ashish Kumar founder MaaJanki',
-    'web development experts Bihar',
+    'web development experts India',
     'SEO specialist India',
-    'digital marketing team',
+    'digital marketing team India',
     'Next.js web developers India',
     'UI/UX design experts'
   ],

@@ -9,7 +9,7 @@ export const metadata = {
     'MaaJanki Web Tech FAQs',
     'web development agency questions',
     'SEO services FAQs India',
-    'digital marketing agency Bihar',
+    'digital marketing agency India',
     'performance marketing FAQs',
     'website redesign cost India',
     'Next.js developer FAQs'

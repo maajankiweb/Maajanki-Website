@@ -1,19 +1,19 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Social Media Optimization (SMO) Services Patna, Bihar, India & Global | MaaJanki Web Tech",
-  description: "Grow your organic brand reach with social media optimization (SMO) and social media marketing across Facebook, Instagram, LinkedIn, and YouTube in Patna, Bihar, India, USA, UK, and UAE.",
+  title: "Social Media Optimization (SMO) Services in India & Global | MaaJanki Web Tech",
+  description: "Grow your organic brand reach with social media optimization (SMO) and social media marketing across Facebook, Instagram, LinkedIn, and YouTube in India, USA, UK, and UAE.",
   keywords: [
-    "SMO services Patna",
-    "social media marketing Bihar",
+    "SMO services India",
+    "social media marketing India",
     "Instagram growth agency India",
-    "SMO agency USA UK UAE",
-    "social media optimization Patna",
+    "LinkedIn B2B marketing India",
+    "social media optimization agency",
     "MaaJanki Web Tech SMO"
   ],
   openGraph: {
-    title: "Social Media Optimization (SMO) Services Patna, Bihar, India & Global",
-    description: "Grow organic brand reach with social media optimization across Facebook, Instagram, LinkedIn, and YouTube in Patna, Bihar, India, and globally.",
+    title: "Social Media Optimization (SMO) Services in India & Global | MaaJanki Web Tech",
+    description: "Grow organic brand reach with social media optimization across Facebook, Instagram, LinkedIn, and YouTube in India and globally.",
     url: "https://maajankiwebtech.com/services/smo",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -21,8 +21,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Social Media Optimization (SMO) Services Patna, Bihar, India & Global",
-    description: "Grow organic brand reach with social media optimization services.",
+    title: "Social Media Optimization (SMO) Services in India & Global | MaaJanki Web Tech",
+    description: "Grow organic brand reach with social media optimization services in India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/smo",

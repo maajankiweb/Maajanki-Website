@@ -1,21 +1,21 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Google Ads & PPC Agency in Bihar & India | Performance Marketing | MaaJanki Web Tech",
-  description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in Patna, Bihar, and India. Certified PPC agency for local & global growth.",
+  title: "Google Ads & PPC Agency in India | Performance Marketing | MaaJanki Web Tech",
+  description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in India. Certified PPC and performance marketing agency for scalable growth.",
   keywords: [
-    "Google Ads agency Patna",
-    "Google Ads Management Services in Bihar",
-    "PPC agency Bihar",
-    "performance marketing Bihar",
-    "Facebook Ads management agency Bihar",
-    "Google Ads for small businesses",
+    "Google Ads agency India",
+    "PPC agency India",
+    "performance marketing India",
+    "Google Ads Management Services India",
+    "Facebook Ads management agency India",
+    "Google Ads for small businesses India",
     "paid advertising services India",
     "MaaJanki Web Tech PPC"
   ],
   openGraph: {
-    title: "Google Ads & PPC Agency in Bihar & India | Performance Marketing | MaaJanki Web Tech",
-    description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in Patna, Bihar, and India.",
+    title: "Google Ads & PPC Agency in India | Performance Marketing | MaaJanki Web Tech",
+    description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in India.",
     url: "https://maajankiwebtech.com/services/performance-marketing",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -23,8 +23,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Google Ads & PPC Agency in Bihar & India | Performance Marketing | MaaJanki Web Tech",
-    description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in Patna, Bihar, and India.",
+    title: "Google Ads & PPC Agency in India | Performance Marketing | MaaJanki Web Tech",
+    description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/performance-marketing",

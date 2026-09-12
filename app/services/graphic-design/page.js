@@ -1,19 +1,19 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Graphic Design & Social Media Creatives Agency Patna, Bihar, India & Global | MaaJanki Web Tech",
-  description: "Professional graphic design, banner creation, social media post design, and UI graphics in Patna, Bihar, India, serving clients in USA, UK, and UAE.",
+  title: "Graphic Design & Social Media Creatives Agency in India & Global | MaaJanki Web Tech",
+  description: "Professional graphic design, marketing creatives, social media post designs, and branding assets in India, serving enterprises across USA, UK, and UAE.",
   keywords: [
-    "graphic design Patna",
-    "social media post designer Bihar",
-    "creative agency India",
-    "graphic design company USA UK UAE",
-    "banner design Patna",
+    "graphic design agency India",
+    "social media post designer India",
+    "creative branding agency India",
+    "digital creatives company India",
+    "marketing banner design India",
     "MaaJanki Web Tech graphics"
   ],
   openGraph: {
-    title: "Graphic Design & Social Media Creatives Agency Patna, Bihar, India & Global",
-    description: "Professional graphic design, banner creation, and social media post design in Patna, Bihar, India, and globally.",
+    title: "Graphic Design & Social Media Creatives Agency in India & Global | MaaJanki Web Tech",
+    description: "Professional graphic design, banner creation, and social media post design in India and globally.",
     url: "https://maajankiwebtech.com/services/graphic-design",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -21,8 +21,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Graphic Design & Social Media Creatives Agency Patna, Bihar, India & Global",
-    description: "Professional graphic design and social media post design.",
+    title: "Graphic Design & Social Media Creatives Agency in India & Global | MaaJanki Web Tech",
+    description: "Professional graphic design and social media creative services.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/graphic-design",

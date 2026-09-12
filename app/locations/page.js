@@ -3,17 +3,30 @@ import Image from 'next/image';
 import { FaMapMarkerAlt, FaGlobe, FaBuilding, FaArrowRight, FaRocket, FaSearch, FaLaptopCode, FaBullhorn } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Our Service Locations | Web Development & Digital Marketing Agency',
-  description: 'Explore all cities, states, and countries served by MaaJanki Web Tech. Professional web development, SEO, SMO, and digital marketing services globally.',
+  title: 'Our Service Locations | Web Development & Digital Marketing Agency | MaaJanki Web Tech',
+  description: 'Explore all cities, states, and global locations served by MaaJanki Web Tech. Professional Next.js website development, local SEO, Google Ads, and digital growth services.',
+  keywords: [
+    'Service locations MaaJanki Web Tech',
+    'web development agency India',
+    'digital marketing agency India',
+    'SEO services India',
+    'global web design agency'
+  ],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations',
   },
   openGraph: {
-    title: 'Our Service Locations | MaaJanki Web Tech',
-    description: 'Explore all local and global locations served by MaaJanki Web Tech for website development and digital marketing.',
+    title: 'Our Service Locations | Web Development & Digital Marketing Agency | MaaJanki Web Tech',
+    description: 'Explore all local and global locations served by MaaJanki Web Tech for Next.js website development and digital marketing.',
     url: 'https://maajankiwebtech.com/locations',
     siteName: 'MaaJanki Web Tech',
+    locale: 'en_IN',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Our Service Locations | MaaJanki Web Tech',
+    description: 'Explore all cities and countries served by MaaJanki Web Tech.',
   },
 };
 

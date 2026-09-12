@@ -7,7 +7,7 @@ const currentDate = new Date().toISOString().split('T')[0];
 
 const locations = [
   'argentina', 'australia', 'austria', 'bagaha', 'bahrain', 'bangladesh',
-  'belgium', 'bengaluru', 'bettiah', 'brazil', 'canada', 'chile',
+  'belgium', 'bengaluru', 'bettiah', 'bihar-sharif', 'brazil', 'canada', 'chile',
   'delhi', 'denmark', 'finland', 'france', 'gaya', 'germany',
   'hyderabad', 'india', 'ireland', 'italy', 'jaipur', 'japan',
   'kenya', 'kolkata', 'kuwait', 'lucknow', 'malaysia', 'mexico',

@@ -12,6 +12,9 @@ export const metadata = {
     url: "https://maajankiwebtech.com/products/tailwind-templates",
     images: [{ url: "https://maajankiwebtech.com/images/products/tailwind-templates.webp" }],
   },
+  alternates: {
+    canonical: "https://maajankiwebtech.com/products/tailwind-templates",
+  },
 };
 
 export default function TailwindTemplatesPage() {

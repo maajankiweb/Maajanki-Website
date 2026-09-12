@@ -1,19 +1,19 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Web & Mobile App UI UX Design Services Bihar, Patna, India & Global | MaaJanki Web Tech",
-  description: "Create intuitive, user-centered website and mobile application UI/UX designs in Patna, Bihar, India, serving clients in USA, UK, Canada, and UAE.",
+  title: "Web & Mobile App UI UX Design Services in India & Global | MaaJanki Web Tech",
+  description: "Create intuitive, user-centered website and mobile application UI/UX designs in India, serving startups and enterprises in USA, UK, Canada, and UAE.",
   keywords: [
-    "UI UX design Patna",
-    "mobile app designer Bihar",
+    "UI UX design services India",
+    "mobile app designer India",
     "Figma UI UX agency India",
-    "UI UX design company USA UK UAE",
-    "web app design Patna",
+    "web application design company India",
+    "UI UX design agency USA UK UAE",
     "MaaJanki Web Tech UI UX"
   ],
   openGraph: {
-    title: "Web & Mobile App UI UX Design Services Bihar, Patna, India & Global",
-    description: "Create intuitive, user-centered website and mobile application UI/UX designs in Patna, Bihar, India, and globally.",
+    title: "Web & Mobile App UI UX Design Services in India & Global | MaaJanki Web Tech",
+    description: "Create intuitive, user-centered website and mobile application UI/UX designs in India and globally.",
     url: "https://maajankiwebtech.com/services/ui-ux-design",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -21,7 +21,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web & Mobile App UI UX Design Services Bihar, Patna, India & Global",
+    title: "Web & Mobile App UI UX Design Services in India & Global | MaaJanki Web Tech",
     description: "Create intuitive, user-centered website and mobile application UI/UX designs.",
   },
   alternates: {

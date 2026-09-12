@@ -2,11 +2,17 @@ import ClientPage from './ClientPage';
 
 export const metadata = {
   title: "Web Development & Digital Marketing Portfolio | MaaJanki Web Tech",
-  description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across Bihar & India.",
-  keywords: ["website development portfolio", "SEO case studies Bihar", "web design projects Bettiah Bagaha Patna", "MaaJanki Web Tech portfolio"],
+  description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across India.",
+  keywords: [
+    "website development portfolio",
+    "SEO case studies India",
+    "custom SaaS client projects",
+    "Next.js web design portfolio",
+    "MaaJanki Web Tech portfolio"
+  ],
   openGraph: {
     title: "Web Development & Digital Marketing Portfolio | MaaJanki Web Tech",
-    description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across Bihar & India.",
+    description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across India.",
     url: "https://maajankiwebtech.com/portfolio",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -15,7 +21,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Web Development & Digital Marketing Portfolio | MaaJanki Web Tech",
-    description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across Bihar & India.",
+    description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/portfolio",
