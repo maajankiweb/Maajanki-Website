@@ -214,6 +214,12 @@ const nextConfig = {
       },
       // 301 Redirect deprecated 3rd-party product
       { source: '/products/elementor-pro', destination: '/products', permanent: true },
+      // 301 Canonical Redirect for singular /service/* to plural /services/* (Fixes GSC duplicate URL issue)
+      { source: '/service/:path*', destination: '/services/:path*', permanent: true },
+      { source: '/service', destination: '/services', permanent: true },
+      // Brand & Product Aliases
+      { source: '/dukandost', destination: '/products/dukandost-pro', permanent: true },
+      { source: '/products/dukandost', destination: '/products/dukandost-pro', permanent: true },
       // Aliases / Canonical Redirects
       { source: '/career', destination: '/careers', permanent: true },
       { source: '/team', destination: '/our-team', permanent: true },

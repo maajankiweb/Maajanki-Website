@@ -156,10 +156,13 @@ const Footer = () => {
           <h3>QUICK LINKS</h3>
           <ul>
             <li>
+              <Link href="/locations/bettiah">Bettiah Office</Link>
+            </li>
+            <li>
               <Link href="/reviews">Reviews</Link>
             </li>
             <li>
-              <Link href="/locations">Locations</Link>
+              <Link href="/locations">All Locations</Link>
             </li>
             <li>
               <Link href="/contact">Contact Us</Link>
@@ -181,19 +184,22 @@ const Footer = () => {
           <h3>OUR SERVICES</h3>
           <ul>
             <li>
-              <Link href="/services/web-development">Website Development</Link>
+              <Link href="/services/web-development">Web Development</Link>
             </li>
             <li>
-              <Link href="/services/seo">SEO</Link>
+              <Link href="/services/mobile-app-development">Mobile App Development</Link>
             </li>
             <li>
-              <Link href="/services/smo">SMO</Link>
+              <Link href="/services/products-listing">eCommerce Product Listing</Link>
+            </li>
+            <li>
+              <Link href="/services/seo">SEO &amp; AEO</Link>
+            </li>
+            <li>
+              <Link href="/services/performance-marketing">Performance Marketing</Link>
             </li>
             <li>
               <Link href="/services/branding">Branding</Link>
-            </li>
-            <li>
-              <Link href="/services/graphic-design">Graphic Design</Link>
             </li>
             <li>
               <Link href="/services/ui-ux-design">UI/UX Design</Link>

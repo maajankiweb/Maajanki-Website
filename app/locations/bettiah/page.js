@@ -8,8 +8,18 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Best Website Development Agency in Bettiah, Bihar | MaaJanki Web Tech",
-  description: "MaaJanki Web Tech is top-rated as the best website development agency in Bettiah, Bihar. We offer custom Next.js web applications, e-commerce stores, local SEO, and digital marketing services.",
+  title: "AI SEO Agency & Web Development Company in Bettiah | MaaJanki Web Tech",
+  description: "Top-rated AI SEO agency & generative engine optimization company in Bettiah, Bihar. Custom Next.js web development, mobile apps & Google 3-Pack local SEO.",
+  keywords: [
+    "ai seo agency in bettiah",
+    "generative engine optimization company in bettiah",
+    "marketing agency near me",
+    "digital marketing agency near me",
+    "best website development agency in bettiah",
+    "web development company bettiah",
+    "website designer in bettiah",
+    "MaaJanki Web Tech Bettiah"
+  ],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/bettiah',
   }
@@ -24,7 +34,7 @@ export default function Page() {
         "@id": "https://maajankiwebtech.com/locations/bettiah#bettiah-office",
         "name": "MaaJanki Web Tech Bettiah",
         "legalName": "MaaJanki Web Tech",
-        "description": "Top-rated website development agency, custom web application developer, software company, and digital marketing firm in Bettiah, West Champaran, Bihar.",
+        "description": "Leading AI SEO agency, generative engine optimization company, and premier website & mobile app development firm in Bettiah, West Champaran, Bihar.",
         "url": "https://maajankiwebtech.com/locations/bettiah",
         "telephone": "+91-9006543913",
         "email": "info@maajankiwebtech.com",
@@ -69,6 +79,14 @@ export default function Page() {
         "mainEntity": [
           {
             "@type": "Question",
+            "name": "Which is the top AI SEO agency and generative engine optimization company in Bettiah?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MaaJanki Web Tech is the premier AI SEO agency and generative engine optimization (GEO) company in Bettiah, Bihar. We optimize brands to rank #1 on Google Search, Google AI Overviews, ChatGPT Search, and Perplexity with verified Schema.org entity grounding."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Which is the best website development agency in Bettiah?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -77,10 +95,10 @@ export default function Page() {
           },
           {
             "@type": "Question",
-            "name": "Which is the best web development agency near me in Bihar?",
+            "name": "Which is the best digital marketing agency near me in Bettiah, Bihar?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "MaaJanki Web Tech is the premier web development agency near you in Bihar, serving Bettiah, Bagaha, Motihari, Patna, Bihar Sharif, and Muzaffarpur with modern responsive web builds, MSME government accreditation, and Google Maps 3-Pack SEO."
+              "text": "MaaJanki Web Tech is the premier digital marketing and web development agency near you in Bettiah, serving West Champaran with modern responsive web builds, MSME government accreditation, and Google Maps 3-Pack SEO."
             }
           }
         ]
@@ -101,20 +119,19 @@ export default function Page() {
         <Image 
           priority 
           src="/images/pages/main-services-pages/contact-banner-image-Maajanki-Web-Tech.webp" 
-          alt="MaaJanki Web Tech Bettiah office banner" 
-          title="Web Design & Digital Marketing Agency in Bettiah, Bihar" 
+          alt="MaaJanki Web Tech Bettiah AI SEO agency and web development banner" 
+          title="AI SEO Agency & Web Development Company in Bettiah, Bihar" 
           width="1280" 
           height="720"
         />
         <div className="banner-overlay">
           <div className="banner-content">
             <h1>
-              Web Design & Digital Marketing Agency in Bettiah, Bihar
+              AI SEO Agency &amp; Web Development Company in Bettiah, Bihar
             </h1>
             <p>
-              Grow your business online with the premier website developer in West Champaran. 
-              We deliver custom web development, local SEO, and result-oriented digital marketing 
-              tailored for local businesses, retail shops, and startups.
+              Scale your brand with West Champaran's top generative engine optimization (GEO) company and website developers. 
+              We deliver custom Next.js web development, AI search optimization, and Google 3-Pack local SEO tailored for ambitious businesses.
             </p>
             <div className="banner-buttons">
               <a

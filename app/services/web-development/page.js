@@ -1,10 +1,16 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Website Development Company in India | Next.js Agency | MaaJanki Web Tech",
-  description: "High-speed Next.js & WordPress website development company in India. We build custom business websites, SaaS apps, and high-converting eCommerce portals.",
+  title: "Web Development Company in India | Next.js & Custom Web Solutions | MaaJanki Web Tech",
+  description: "Premier web development company in India. We engineer high-speed Next.js web applications, corporate websites, SaaS platforms, and eCommerce portals. Get a free quote!",
   keywords: [
-    "Website Development Company in India",
+    "web development",
+    "web development company",
+    "website developer",
+    "website design",
+    "web designer",
+    "website maker",
+    "Web Development Company in India",
     "Website Development Agency India",
     "Next.js web development agency India",
     "WordPress Website Development Company India",
@@ -14,8 +20,8 @@ export const metadata = {
     "MaaJanki Web Tech web dev"
   ],
   openGraph: {
-    title: "Website Development Company in India | Next.js Agency | MaaJanki Web Tech",
-    description: "High-speed Next.js & WordPress website development company in India. Custom business websites, SaaS apps, and eCommerce portals.",
+    title: "Web Development Company in India | Next.js & Custom Web Solutions | MaaJanki Web Tech",
+    description: "Premier web development company in India. High-speed Next.js web applications, corporate websites, SaaS platforms, and eCommerce portals.",
     url: "https://maajankiwebtech.com/services/web-development",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -23,8 +29,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Website Development Company in India | Next.js Agency | MaaJanki Web Tech",
-    description: "High-speed Next.js & WordPress website development company in India.",
+    title: "Web Development Company in India | Next.js & Custom Web Solutions | MaaJanki Web Tech",
+    description: "Premier web development company in India. High-speed Next.js & WordPress web applications.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/web-development",
@@ -56,6 +62,31 @@ export default function Page() {
       { "@type": "State", "name": "Madhya Pradesh" },
       { "@type": "State", "name": "West Bengal" },
       { "@type": "Country", "name": "India" }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://maajankiwebtech.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://maajankiwebtech.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Web Development",
+        "item": "https://maajankiwebtech.com/services/web-development"
+      }
     ]
   };
 
@@ -96,6 +127,10 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"

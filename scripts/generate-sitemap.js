@@ -57,6 +57,7 @@ const pages = [
 
   // Service Detail Pages
   { path: '/services/web-development', changefreq: 'daily', priority: '0.95' },
+  { path: '/services/mobile-app-development', changefreq: 'daily', priority: '0.95' },
   { path: '/services/seo', changefreq: 'daily', priority: '0.95' },
   { path: '/services/smo', changefreq: 'daily', priority: '0.95' },
   { path: '/services/performance-marketing', changefreq: 'daily', priority: '0.95' },

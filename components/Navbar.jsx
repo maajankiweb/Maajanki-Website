@@ -229,7 +229,7 @@ const Navbar = () => {
                   {/* Web & Content Solutions */}
                   <div className="col-md-4">
                     <h6 className="fw-bold text-pink mb-2">
-                      Web & Content Solutions
+                      Web & App Engineering
                     </h6>
                     <Link
                       href="/services/web-development"
@@ -237,6 +237,13 @@ const Navbar = () => {
                       onClick={handleLinkClick}
                     >
                       Web Development
+                    </Link>
+                    <Link
+                      href="/services/mobile-app-development"
+                      className="dropdown-item"
+                      onClick={handleLinkClick}
+                    >
+                      Mobile App Development
                     </Link>
                     <Link
                       href="/services/content-writing"
@@ -250,7 +257,7 @@ const Navbar = () => {
                       className="dropdown-item"
                       onClick={handleLinkClick}
                     >
-                      Products Listing
+                      eCommerce Product Listing
                     </Link>
                   </div>
 

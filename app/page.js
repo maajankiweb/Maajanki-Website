@@ -6,13 +6,15 @@ export const metadata = {
   keywords: [
     "Web Development Agency in India",
     "Digital Marketing Agency in India",
+    "web development",
+    "mobile app development",
     "Next.js Web Development India",
     "Best SEO Company India",
+    "AI SEO Agency in Bettiah",
+    "Generative Engine Optimization Company",
+    "eCommerce Product Listing Services",
     "Performance Marketing Agency India",
     "Google Ads Management India",
-    "AI Engine Optimization AEO India",
-    "WhatsApp CRM Software India",
-    "GST Invoicing Software India",
     "MaaJanki Web Tech"
   ],
   alternates: {
@@ -33,7 +35,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Web Development & Digital Marketing Agency in India | MaaJanki Web Tech",
-    description: "India's premier Next.js web development & digital marketing agency. SEO, Google Ads, branding & performance marketing. Free strategy audit.",
+    description: "MaaJanki Web Tech — India's premier web development & digital marketing agency. Expert in Next.js, SEO, Google Ads & performance marketing. Free 30-min audit.",
     url: "https://maajankiwebtech.com/",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -50,7 +52,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Web Development & Digital Marketing Agency in India | MaaJanki Web Tech",
-    description: "India's premier Next.js web development & digital marketing agency. SEO, Google Ads, branding & performance marketing.",
+    description: "MaaJanki Web Tech — India's premier web development & digital marketing agency. Expert in Next.js, SEO, Google Ads & performance marketing. Free 30-min audit.",
     images: ["https://maajankiwebtech.com/images/og-banner.webp"],
   },
 };
@@ -191,7 +193,7 @@ export default function Page() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://maajankiwebtech.com"
+        "item": "https://maajankiwebtech.com/"
       }
     ]
   };

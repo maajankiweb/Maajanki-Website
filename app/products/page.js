@@ -136,7 +136,7 @@ export default function ProductsPage() {
         "url": "https://invobill.in",
         "screenshot": "https://maajankiwebtech.com/images/products/invobill.webp",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
-        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com" },
+        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com/" },
         "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "23", "bestRating": "5" }
       },
       {
@@ -148,7 +148,7 @@ export default function ProductsPage() {
         "url": "https://github.com/Ashishkrji/WaCRM",
         "screenshot": "https://maajankiwebtech.com/images/products/wacrm.webp",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
-        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com" },
+        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com/" },
         "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "19", "bestRating": "5" }
       },
       {
@@ -160,7 +160,7 @@ export default function ProductsPage() {
         "url": "https://github.com/Ashishkrji/DukanDost-Pro-Website-Mobile-App",
         "screenshot": "https://maajankiwebtech.com/images/products/dukandost-pro.webp",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
-        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com" }
+        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com/" }
       },
       {
         "@type": "SoftwareApplication",
@@ -171,7 +171,7 @@ export default function ProductsPage() {
         "url": "https://github.com/Ashishkrji/Nexus-SaaS",
         "screenshot": "https://maajankiwebtech.com/images/products/nexus-saas.webp",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR", "availability": "https://schema.org/InStock" },
-        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com" }
+        "author": { "@type": "Organization", "name": "MaaJanki Web Tech", "url": "https://maajankiwebtech.com/" }
       }
     ]
   };

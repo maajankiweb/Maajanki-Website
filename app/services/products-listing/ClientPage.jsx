@@ -955,6 +955,54 @@ const ProductsListing = () => {
         </div>
       </section>
 
+      {/* High-Converting CTA Banner */}
+      <section style={{ 
+        background: "linear-gradient(135deg, #FD6A02 0%, #FF8533 100%)", 
+        padding: "60px 20px", 
+        color: "#ffffff" 
+      }}>
+        <div className="container" style={{ maxWidth: "1100px", margin: "0 auto", textAlign: "center" }}>
+          <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)", fontWeight: "800", fontFamily: '"Outfit", sans-serif', marginBottom: "16px" }}>
+            Outsource Your E-commerce Product Listing Today – Get Free Sample Listings
+          </h2>
+          <p style={{ fontSize: "1.1rem", maxWidth: "800px", margin: "0 auto 30px", color: "#fff5ee" }}>
+            Experience the difference with 3 complimentary sample product listings optimized for Amazon, Flipkart, Magento, or Shopify. Boost your catalog discoverability with zero upfront commitment.
+          </p>
+          <div style={{ display: "flex", justifyContent: "center", gap: "15px", flexWrap: "wrap" }}>
+            <Link 
+              href="/contact" 
+              style={{ 
+                background: "#042544", 
+                color: "#ffffff", 
+                padding: "14px 32px", 
+                borderRadius: "30px", 
+                fontWeight: "700", 
+                fontSize: "16px", 
+                textDecoration: "none" 
+              }}
+            >
+              Claim Free Sample Listings
+            </Link>
+            <a 
+              href="https://wa.me/919006543913?text=Hello%20MaaJanki%20Web%20Tech!%20I%20want%20to%20outsource%20e-commerce%20product%20listing."
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ 
+                background: "#ffffff", 
+                color: "#042544", 
+                padding: "14px 32px", 
+                borderRadius: "30px", 
+                fontWeight: "700", 
+                fontSize: "16px", 
+                textDecoration: "none" 
+              }}
+            >
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* GEO Section */}
       <section className="service-gradient-black-section" style={{ background: "linear-gradient(135deg, #042544 0%, #021224 100%)", padding: "85px 20px", position: "relative", overflow: "hidden", borderTop: "3px solid #FD6A02" }}>
         <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
@@ -968,7 +1016,7 @@ const ProductsListing = () => {
               {[
                 { q: "What is Product Listing Optimization?", a: "Product listing optimization is the process of crafting keyword-rich titles, bullet points, and descriptions to improve product visibility and conversion rates on marketplaces like Amazon, Flipkart, and Shopify." },
                 { q: "Why are keyword-optimized titles important?", a: "Marketplace search algorithms rank products based on keyword relevance in titles. An optimized title directly boosts impressions, clicks, and sales rank." },
-                { q: "What marketplaces do you list products on?", a: "We list products on Amazon, Flipkart, Meesho, Shopify, WooCommerce, BigCommerce, eBay, Google Merchant Center, and other platforms." },
+                { q: "What marketplaces do you list products on?", a: "We list products on Amazon, Flipkart, Meesho, Shopify, Magento, WooCommerce, BigCommerce, eBay, Google Merchant Center, and other platforms." },
                 { q: "How does GEO help product listings?", a: "GEO formats your product copy so AI shopping assistants like Google Gemini and ChatGPT can understand, cite, and recommend your products to shoppers searching online." },
               ].map((item, idx) => (
                 <div key={idx} style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
@@ -988,7 +1036,9 @@ const ProductsListing = () => {
         </div>
         <div className="faq-grid">
           {[
-            { id: "faq1", question: "What platforms do you list products on?", answer: "We list products on Amazon, Flipkart, Meesho, Shopify, WooCommerce, BigCommerce, eBay, Etsy, Wix eCommerce, and Google Merchant Center." },
+            { id: "faq0a", question: "Do you offer Magento product listing and cataloging services?", answer: "Yes, we specialize in Magento (Adobe Commerce) product listing services, including configurable product setups, bundle variations, attribute sets, SKU taxonomy, and bulk CSV integrations." },
+            { id: "faq0b", question: "What is included in eCommerce product listing design services?", answer: "Our product listing design services include Amazon A+ Content creation, Enhanced Brand Content (EBC), infographic lifestyle images, dimension callout graphics, comparison tables, and custom storefront layouts." },
+            { id: "faq1", question: "What platforms do you list products on?", answer: "We list products on Amazon, Flipkart, Meesho, Shopify, Magento, WooCommerce, BigCommerce, eBay, Etsy, Wix eCommerce, and Google Merchant Center." },
             { id: "faq2", question: "How do you write product titles?", answer: "We research high-volume, high-intent keywords using tools like Helium 10, Jungle Scout, and Google Keyword Planner, then craft keyword-rich titles within marketplace character limits." },
             { id: "faq3", question: "Do you handle Amazon A+ Content?", answer: "Yes. We create Enhanced Brand Content (EBC) and A+ Content for Amazon brand-registered sellers, using rich visuals and structured comparison tables." },
             { id: "faq4", question: "What image formats do you prepare?", answer: "We prepare marketplace-compliant images: white background main images (2000x2000 minimum), lifestyle shots, and infographic images per Amazon, Flipkart, and Shopify standards." },

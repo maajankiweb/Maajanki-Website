@@ -73,7 +73,7 @@ export default function FaqsPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://maajankiwebtech.com'
+        item: 'https://maajankiwebtech.com/'
       },
       {
         '@type': 'ListItem',

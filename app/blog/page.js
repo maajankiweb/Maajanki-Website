@@ -89,7 +89,7 @@ export default function BlogIndexPage() {
     "publisher": {
       "@type": "Organization",
       "name": "MaaJanki Web Tech",
-      "url": "https://maajankiwebtech.com",
+      "url": "https://maajankiwebtech.com/",
       "logo": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp"
     },
     "blogPost": blogPosts.map((post) => ({

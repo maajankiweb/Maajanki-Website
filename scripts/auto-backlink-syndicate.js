@@ -63,7 +63,7 @@ function generateRssFeed() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${SITE_TITLE}</title>
-    <link>${DOMAIN}</link>
+    <link>${DOMAIN}/</link>
     <description>${SITE_DESC}</description>
     <language>en-IN</language>
     <lastBuildDate>${now}</lastBuildDate>

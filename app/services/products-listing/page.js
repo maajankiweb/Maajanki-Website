@@ -1,9 +1,12 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "eCommerce Product Listing Services in India | Amazon & Flipkart Agency | MaaJanki Web Tech",
-  description: "Professional eCommerce product listing, cataloging, A+ content, and store management for Amazon, Flipkart, Meesho & Shopify sellers across India.",
+  title: "eCommerce Product Listing Design & Magento Services India | MaaJanki Web Tech",
+  description: "Professional eCommerce product listing design services, Magento cataloging, Amazon A+ content & multi-marketplace store management across India. Get free sample listings!",
   keywords: [
+    "ecommerce product listing design services",
+    "magento product listing services",
+    "business listing websites in india",
     "Product listing services in India",
     "eCommerce cataloging India",
     "Amazon Flipkart product listing services",
@@ -13,8 +16,8 @@ export const metadata = {
     "MaaJanki Web Tech eCommerce"
   ],
   openGraph: {
-    title: "eCommerce Product Listing Services in India | Amazon & Flipkart Agency | MaaJanki Web Tech",
-    description: "Professional eCommerce product listing, cataloging, and account management for Amazon, Flipkart, Meesho, Shopify, and IndiaMART.",
+    title: "eCommerce Product Listing Design & Magento Services India | MaaJanki Web Tech",
+    description: "Professional eCommerce product listing design services, Magento cataloging, and account management for Amazon, Flipkart, Meesho, Shopify, and IndiaMART.",
     url: "https://maajankiwebtech.com/services/products-listing",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -22,8 +25,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "eCommerce Product Listing Services in India | Amazon & Flipkart Agency | MaaJanki Web Tech",
-    description: "Professional eCommerce product listing and cataloging services for sellers in India.",
+    title: "eCommerce Product Listing Design & Magento Services India | MaaJanki Web Tech",
+    description: "Professional eCommerce product listing design and Magento cataloging services for sellers in India.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/products-listing",
@@ -53,6 +56,31 @@ export default function Page() {
     ]
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://maajankiwebtech.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://maajankiwebtech.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Products Listing",
+        "item": "https://maajankiwebtech.com/services/products-listing"
+      }
+    ]
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -60,18 +88,26 @@ export default function Page() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Which eCommerce marketplaces do you support?",
+        "name": "Do you offer Magento product listing and cataloging services?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We support Amazon, Flipkart, Meesho, IndiaMART, Shopify, WooCommerce, eBay, Etsy, and Walmart Marketplace."
+          "text": "Yes, we specialize in Magento (Adobe Commerce) product listing services, including configurable and bundle product setups, attribute set mapping, SKU taxonomy, and bulk CSV integrations."
         }
       },
       {
         "@type": "Question",
-        "name": "What is included in product listing optimization?",
+        "name": "What is included in eCommerce product listing design services?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We craft SEO-optimized product titles, keyword-rich bullet points, backend search terms, high-converting descriptions, and A+ Enhanced Brand Content (EBC)."
+          "text": "Our product listing design services include Amazon A+ Content creation, Enhanced Brand Content (EBC), infographic lifestyle image editing, comparison tables, and branded storefront design."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which eCommerce marketplaces do you support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We support Amazon, Flipkart, Meesho, IndiaMART, Shopify, Magento, WooCommerce, eBay, Etsy, and Walmart Marketplace."
         }
       },
       {
@@ -90,6 +126,10 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"

@@ -117,8 +117,9 @@ export default async function sitemap() {
     { path: '/products/invobill', changeFrequency: 'daily', priority: 0.9 },
     { path: '/products/tailwind-templates', changeFrequency: 'daily', priority: 0.9 },
 
-    // 9 Specialized Services Sub-Pages
+    // 10 Specialized Services Sub-Pages
     { path: '/services/web-development', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/mobile-app-development', changeFrequency: 'daily', priority: 0.95 },
     { path: '/services/seo', changeFrequency: 'daily', priority: 0.95 },
     { path: '/services/smo', changeFrequency: 'daily', priority: 0.95 },
     { path: '/services/performance-marketing', changeFrequency: 'daily', priority: 0.95 },
