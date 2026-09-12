@@ -41,6 +41,7 @@ const AdminHeader = ({
   onToggleMobileSidebar = () => {},
   onToggleTheme = () => {},
   onLockSession = () => {},
+  onSignOut = () => {},
   theme = 'light'
 }) => {
   const pathname = usePathname();
@@ -599,7 +600,29 @@ const AdminHeader = ({
                   </button>
                 )}
                 <div style={{ height: '1px', backgroundColor: 'var(--border-color, #e5e7eb)', margin: 'var(--spacing-1, 4px) 0' }}></div>
-                <Link href="/sign-in" onClick={() => setIsUserDropdownOpen(false)} className="dropdown-item" style={{ color: 'var(--color-danger, #ef4444)', textDecoration: 'none' }}><LogOut size={16} /> Sign Out</Link>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsUserDropdownOpen(false);
+                    if (onSignOut) onSignOut();
+                  }}
+                  className="dropdown-item"
+                  style={{
+                    color: 'var(--color-danger, #ef4444)',
+                    background: 'none',
+                    border: 'none',
+                    width: '100%',
+                    cursor: 'pointer',
+                    textAlign: 'left',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 'var(--spacing-2, 8px)',
+                    padding: 'var(--spacing-2, 8px)',
+                    fontSize: 'var(--text-sm, 14px)'
+                  }}
+                >
+                  <LogOut size={16} /> Sign Out
+                </button>
               </div>
             </div>
           )}

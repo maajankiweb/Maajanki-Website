@@ -104,7 +104,16 @@ export default function LeadsTable({ statusFilter }) {
       const res = await fetch(url);
       if (res.ok) {
         const data = await res.json();
-        setLeads(data.leads || []);
+        const rawLeads = data.leads || [];
+        const normalizedLeads = rawLeads.map(l => {
+          const leadId = String(l._id || l.id || '');
+          return {
+            ...l,
+            id: leadId,
+            _id: leadId,
+          };
+        });
+        setLeads(normalizedLeads);
       } else {
         setLeads([]);
       }
@@ -170,32 +179,75 @@ export default function LeadsTable({ statusFilter }) {
   };
 
   const updateLeadStatus = async (id, newStatus) => {
+    if (!id) return;
     try {
-      setLeads(prev => prev.map(l => l.id === id ? { ...l, status: newStatus } : l));
-      toast.success('Status updated');
+      setLeads(prev => prev.map(l => (l.id === id || l._id === id ? { ...l, status: newStatus } : l)));
       
-      await fetch('/api/admin/leads', {
+      const res = await fetch('/api/admin/leads', {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ id, status: newStatus })
       });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Failed to update status');
+      }
+      toast.success('Status updated');
     } catch (err) {
-      toast.error('Failed to update status');
+      toast.error(err.message || 'Failed to update status');
       fetchLeads(); // Revert on failure
     }
   };
 
   const deleteLead = async (id) => {
+    if (!id) return;
     if (!window.confirm('Are you sure? This cannot be undone.')) return;
     
     try {
-      setLeads(prev => prev.filter(l => l.id !== id));
-      toast.success('Lead deleted');
+      // Optimistically remove from state
+      setLeads(prev => prev.filter(l => l.id !== id && l._id !== id));
       
-      await fetch(`/api/admin/leads?id=${id}`, { method: 'DELETE' });
+      const res = await fetch(`/api/admin/leads?id=${encodeURIComponent(id)}`, { method: 'DELETE' });
+      const data = await res.json();
+      
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Failed to delete lead from server');
+      }
+      
+      toast.success('Lead deleted successfully');
     } catch (err) {
-      toast.error('Failed to delete lead');
+      console.error('Delete error:', err);
+      toast.error(err.message || 'Failed to delete lead');
       fetchLeads(); // Revert on failure
+    }
+  };
+
+  const handleBulkDelete = async () => {
+    if (selectedLeads.size === 0) return;
+    const count = selectedLeads.size;
+    if (!window.confirm(`Delete ${count} selected lead(s)? This cannot be undone.`)) return;
+    
+    const idsToDelete = Array.from(selectedLeads);
+    try {
+      setLeads(prev => prev.filter(l => !selectedLeads.has(l.id) && !selectedLeads.has(l._id)));
+      setSelectedLeads(new Set());
+      
+      const res = await fetch('/api/admin/leads', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ids: idsToDelete })
+      });
+      const data = await res.json();
+      
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Failed to delete selected leads');
+      }
+      
+      toast.success(`${count} lead(s) deleted successfully`);
+    } catch (err) {
+      console.error('Bulk delete error:', err);
+      toast.error(err.message || 'Failed to delete leads');
+      fetchLeads();
     }
   };
 
@@ -326,7 +378,7 @@ export default function LeadsTable({ statusFilter }) {
             {selectedLeads.size} items selected
           </span>
           <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
-            <button className="admin-btn admin-btn-sm admin-btn-danger" onClick={() => toast.info('Bulk delete coming soon')}>Delete Selected</button>
+            <button className="admin-btn admin-btn-sm admin-btn-danger" onClick={handleBulkDelete}>Delete Selected</button>
             <button className="admin-btn admin-btn-sm admin-btn-outline" onClick={() => setSelectedLeads(new Set())}>Cancel</button>
           </div>
         </div>

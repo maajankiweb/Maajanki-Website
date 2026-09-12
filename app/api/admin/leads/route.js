@@ -82,8 +82,29 @@ export async function DELETE(request) {
   try {
     await connectDB();
     const { searchParams } = new URL(request.url);
-    const rawId = searchParams.get('id');
-    const id = sanitizeString(rawId);
+    let id = sanitizeString(searchParams.get('id'));
+    let ids = [];
+
+    // Also check JSON body if provided
+    try {
+      const body = await request.json();
+      if (body?.id) id = sanitizeString(body.id);
+      if (Array.isArray(body?.ids)) ids = body.ids.map(sanitizeString).filter(Boolean);
+    } catch {
+      // Body may not be JSON or absent
+    }
+
+    if (ids.length > 0) {
+      const result = await Lead.deleteMany({ _id: { $in: ids } });
+      recordSecurityEvent({
+        action: 'LEAD_BULK_DELETE',
+        status: 'SUCCESS',
+        actor: authCheck.userEmail,
+        ip: authCheck.clientIp,
+        details: `Deleted ${result.deletedCount || ids.length} leads in bulk`,
+      });
+      return NextResponse.json({ success: true, message: `${result.deletedCount} lead(s) deleted` }, { status: 200 });
+    }
 
     if (!id) {
       return NextResponse.json({ success: false, error: 'Lead ID required' }, { status: 400 });

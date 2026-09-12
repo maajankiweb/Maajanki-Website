@@ -4,6 +4,7 @@ import { useState, useEffect, createContext, useContext, useCallback, useRef } f
 import AdminSidebar from './AdminSidebar';
 import AdminHeader from './AdminHeader';
 import AdminLockScreen from './AdminLockScreen';
+import LogoutModal from './LogoutModal';
 
 /**
  * Admin Dashboard Context
@@ -29,6 +30,7 @@ export default function AdminShell({ children }) {
   const [theme, setTheme] = useState('light');
   const [mounted, setMounted] = useState(false);
   const [isLocked, setIsLocked] = useState(false);
+  const [logoutModalOpen, setLogoutModalOpen] = useState(false);
   const [leads, setLeads] = useState([]);
   const [leadsLoading, setLeadsLoading] = useState(true);
   const inactivityTimerRef = useRef(null);
@@ -187,7 +189,7 @@ export default function AdminShell({ children }) {
   const handleNavigate = useCallback((action) => {
     setMobileOpen(false);
     if (action === 'signout') {
-      window.location.href = '/sign-in';
+      setLogoutModalOpen(true);
     } else if (action === 'lock') {
       lockSession();
     }
@@ -237,6 +239,12 @@ export default function AdminShell({ children }) {
         {/* Session Security Lock Overlay */}
         {isLocked && <AdminLockScreen onUnlock={unlockSession} />}
 
+        {/* Confirmation Logout Modal */}
+        <LogoutModal
+          isOpen={logoutModalOpen}
+          onClose={() => setLogoutModalOpen(false)}
+        />
+
         {/* Mobile Overlay */}
         <div
           className={`admin-sidebar-overlay ${mobileOpen ? 'visible' : ''}`}
@@ -259,6 +267,7 @@ export default function AdminShell({ children }) {
           onToggleMobileSidebar={toggleMobileSidebar}
           onToggleTheme={toggleTheme}
           onLockSession={lockSession}
+          onSignOut={() => setLogoutModalOpen(true)}
           theme={theme}
         />
 
