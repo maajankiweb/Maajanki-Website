@@ -369,7 +369,7 @@ function Home() {
             <div className="col-lg-7 hero-left-content">
               {/* Trust Badges */}
               <div className="hero-trust-badges d-flex flex-wrap gap-2 mb-3">
-                <span className="badge px-3 py-2 text-white" style={{ background: "rgba(253, 106, 2, 0.25)", border: "1px solid rgba(253, 106, 2, 0.5)", borderRadius: "20px", fontSize: "13px", fontWeight: "600" }}>
+                {/* <span className="badge px-3 py-2 text-white" style={{ background: "rgba(253, 106, 2, 0.25)", border: "1px solid rgba(253, 106, 2, 0.5)", borderRadius: "20px", fontSize: "13px", fontWeight: "600" }}>
                   ⭐ 4.9/5 Google Rating
                 </span>
                 <span className="badge px-3 py-2 text-white" style={{ background: "rgba(255, 255, 255, 0.1)", border: "1px solid rgba(255, 255, 255, 0.25)", borderRadius: "20px", fontSize: "13px", fontWeight: "600" }}>
@@ -377,7 +377,7 @@ function Home() {
                 </span>
                 <span className="badge px-3 py-2 text-white" style={{ background: "rgba(255, 255, 255, 0.1)", border: "1px solid rgba(255, 255, 255, 0.25)", borderRadius: "20px", fontSize: "13px", fontWeight: "600" }}>
                   ✅ MSME Registered
-                </span>
+                </span> */}
                 {/* 
                 <span className="badge px-3 py-2 text-white" style={{ background: "rgba(253, 106, 2, 0.25)", border: "1px solid rgba(253, 106, 2, 0.5)", borderRadius: "20px", fontSize: "13px", fontWeight: "600" }}>
                   🚀 60+ Happy Clients
@@ -396,11 +396,6 @@ function Home() {
                   Bihar's premier <strong>Next.js-powered</strong> web development and digital marketing agency. We build 5× faster web applications, execute AI-first SEO (AEO &amp; GEO) for Google, ChatGPT &amp; Perplexity, and drive measurable performance marketing funnels to scale businesses across Bihar, India, and globally.
                 </p>
               </div>
-
-              {/* Direct Founder Access Note */}
-              <p className="hero-founder-note my-2" style={{ color: "rgba(255, 255, 255, 0.85)", fontSize: "14px" }}>
-                Direct founder access — <strong>Ashish Kumar</strong>, Founder &amp; Lead Architect
-              </p>
 
               {/* Action Buttons with Interactive WebGL Specular Reflection */}
               <div className="hero-cta-buttons mt-3">
