@@ -1906,9 +1906,6 @@ function Home() {
           </div>
         </div>
       </section>
-      {/* Pricing Section Mount */}
-      <PricingSection />
-
       {/* Client Testimonials Section (Temporarily Commented - to be revealed after onboarding clients) */}
       {/*
       <section className="testimonials-section py-5" style={{ background: "#042544", color: "#ffffff" }}>
