@@ -55,8 +55,8 @@ Detailed Service-Wise Packages & Pricing:
    - Brand Growth: ₹14,999 / Month (Manage 4 social channels, 24 custom posts & 4 reels, commenting, analytics, bi-weekly check-ins)
    - Enterprise SMO: Custom Pricing (Daily posts, custom video editing, Dedicated account manager)
 4. Performance Marketing (Paid Ads):
-   - Starter Ads Management: ₹15,000 / Month (Meta OR Google Ads setup, custom audience & pixel setup, ad budgets up to ₹1L/month managed, ad budget paid directly to platforms by client)
-   - Sales Scale Pro: ₹35,000 / Month (Meta + Google Ads, retargeting & lookalikes, ad design consulting, budgets up to ₹5L/mo managed)
+   - Starter Ads Management: ₹14,999 / Month (Meta OR Google Ads setup, custom audience & pixel setup, ad budgets up to ₹1L/month managed, ad budget paid directly to platforms by client)
+   - Sales Scale Pro: ₹34,999 / Month (Meta + Google Ads, retargeting & lookalikes, ad design consulting, budgets up to ₹5L/mo managed)
    - Omnichannel Growth: Custom Pricing (Multi-channel ads like Meta, Google, YouTube, LinkedIn, CRM synchronization)
 5. eCommerce Cataloging & Listing:
    - Startup Catalog Kit: ₹9,999 / One-time (Up to 50 product listings, title & bullet optimization, 1 marketplace upload, 4-6 days delivery)

@@ -242,7 +242,7 @@ const PromoPopup = () => {
                 <span className="pricing-features">Custom-built • Mobile-ready • Business-focused</span>
               </div>
               <div className="promo-pricing-value">
-                ₹15,000
+                ₹14,999
               </div>
             </div>
 
