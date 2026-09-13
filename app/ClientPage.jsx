@@ -7,7 +7,6 @@ import Link from 'next/link';
 import LogoLoop from '@/components/LogoLoop/LogoLoop';
 import Magnet from '@/components/Magnet/Magnet';
 import SpecularButton from '@/components/SpecularButton';
-import PricingSection from '@/components/PricingSection';
 import '@/app/styles/Home.css';
 
 // Import icons from react-icons
@@ -431,7 +430,7 @@ function Home() {
                 <Magnet padding={30} magnetStrength={10}>
                   <SpecularButton
                     as="a"
-                    href="#pricing"
+                    href="/contact"
                     size="lg"
                     radius={28}
                     lineColor="#ffffff"
@@ -448,7 +447,7 @@ function Home() {
                     proximity={250}
                     className="hero-specular-btn-secondary"
                   >
-                    View Pricing Plans
+                    Get Custom Quote
                   </SpecularButton>
                 </Magnet>
               </div>
@@ -1035,8 +1034,6 @@ function Home() {
         </div>
       </section>
 
-      {/* 3-Tier Value-Based Pricing Section */}
-      <PricingSection />
 
       {/* Products Section */}
       <section
@@ -1559,8 +1556,8 @@ function Home() {
               },
               {
                 icon: "💰",
-                title: "100% Transparent Pricing",
-                desc: "Starting at ₹9,999 with zero hidden fees. Multi-currency payments accepted in INR, USD, EUR, GBP, and AED with clear milestone deliverables.",
+                title: "Custom Project-Based Pricing",
+                desc: "100% tailored proposals based on your project requirements, tech stack, and roadmap with zero hidden fees and clear milestone deliverables.",
               },
               {
                 icon: "🏛️",

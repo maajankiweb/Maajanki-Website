@@ -973,116 +973,7 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
 
-      {/* Pricing Section - Dual Brand Color Redesign */}
-      <section
-        className="branding-pricing-section"
-        style={{
-          background: "#FD6A02",
-          padding: "85px 20px",
-          position: "relative",
-          overflow: "hidden",
-        }}
-      >
-        <div className="container" style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <div
-            style={{
-              background: "#042544",
-              border: "3px solid #ffffff",
-              borderRadius: "24px",
-              padding: "50px 40px",
-              boxShadow: "0 25px 60px rgba(4, 36, 66, 0.5)",
-            }}
-          >
-            <div className="branding-pricing-header" style={{ textAlign: "center", marginBottom: "40px" }}>
-              <span
-                style={{
-                  display: "inline-block",
-                  background: "#FD6A02",
-                  color: "#ffffff",
-                  padding: "8px 24px",
-                  borderRadius: "50px",
-                  fontSize: "13px",
-                  fontWeight: "800",
-                  letterSpacing: "2px",
-                  textTransform: "uppercase",
-                  marginBottom: "16px",
-                  border: "2px solid #ffffff",
-                }}
-              >
-                Pricing Plans
-              </span>
-              <h2 style={{ color: "#ffffff", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: "800", fontFamily: '"Outfit", sans-serif' }}>
-                Transparent Mobile App Development Pricing
-              </h2>
-              <p style={{ color: "#e2e8f0", fontSize: "16px" }}>
-                Complete 100% source code ownership, zero monthly licensing fees, full Play Store &amp; App Store deployment included.
-              </p>
-            </div>
 
-            <div className="branding-pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
-              {/* Starter MVP */}
-              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
-                <div>
-                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Starter MVP App</h3>
-                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
-                    ₹9,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ One-time</span>
-                  </div>
-                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
-                    <li>Flutter / React Native single codebase</li>
-                    <li>Up to 6 core interactive screens</li>
-                    <li>User authentication &amp; profile setup</li>
-                    <li>Play Store submission assistance</li>
-                    <li>30 days post-launch support</li>
-                  </ul>
-                </div>
-                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
-                  Get Started
-                </Link>
-              </div>
-
-              {/* Business Scaler */}
-              <div className="branding-pricing-card featured" style={{ background: "#042544", border: "3px solid #FD6A02", borderRadius: "20px", padding: "35px 25px", position: "relative", color: "#ffffff", boxShadow: "0 15px 35px rgba(253, 106, 2, 0.4)" }}>
-                <span className="branding-pricing-badge" style={{ background: "#FD6A02", color: "#ffffff", fontWeight: "800" }}>⭐ Recommended</span>
-                <div>
-                  <h3 style={{ color: "#ffffff", fontWeight: "800" }}>Business Scaler</h3>
-                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2.2rem" }}>
-                    ₹64,999 <span style={{ color: "#cbd5e1", fontSize: "1rem" }}>/ One-time</span>
-                  </div>
-                  <ul className="branding-pricing-list" style={{ color: "#e2e8f0" }}>
-                    <li>iOS + Android simultaneous dual launch</li>
-                    <li>Up to 15 custom screens &amp; workflows</li>
-                    <li>Payment gateway (UPI, Stripe, Cards)</li>
-                    <li>Push notifications &amp; admin web panel</li>
-                    <li>Full App Store &amp; Play Store launch</li>
-                    <li>60 days warranty &amp; updates</li>
-                  </ul>
-                </div>
-                <Link href="/contact" className="btn-primary-mj" style={{ background: "#FD6A02", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
-                  Launch Your App
-                </Link>
-              </div>
-
-              {/* Enterprise & AI App */}
-              <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
-                <div>
-                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Enterprise &amp; AI App</h3>
-                  <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>₹1,49,999+</div>
-                  <ul className="branding-pricing-list" style={{ color: "#334155" }}>
-                    <li>Unlimited custom screens &amp; microservices</li>
-                    <li>Generative AI &amp; Voice copilot integration</li>
-                    <li>Real-time GPS tracking &amp; WebSocket chat</li>
-                    <li>Dedicated account technical architect</li>
-                    <li>90 days SLA-backed premium support</li>
-                  </ul>
-                </div>
-                <Link href="/contact" className="btn-primary-mj" style={{ background: "#042544", color: "#ffffff", display: "block", textAlign: "center", borderRadius: "30px", padding: "12px", marginTop: "24px", fontWeight: "700" }}>
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* AI Search Optimization Section (GEO) */}
       <section
@@ -1228,7 +1119,7 @@ const MobileAppDevelopment = () => {
             {
               id: "faq4",
               question: "How much does mobile app development cost in India?",
-              answer: "Our Starter MVP app package starts at ₹9,999. Our Business Scaler dual-platform package is ₹64,999, and custom Enterprise & AI applications range from ₹1,49,999+ based on scope."
+              answer: "Mobile app development pricing is 100% customized based on your unique project scope, supported operating systems (iOS, Android, or cross-platform Flutter), backend database integrations, and custom AI feature requirements. We provide a milestone-based proposal after an initial technical discovery consultation."
             },
             {
               id: "faq5",

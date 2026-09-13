@@ -108,7 +108,7 @@ export default function Page() {
         "name": "How much does custom mobile app development cost in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our Starter App packages begin at ₹9,999 for MVP mobile apps. Advanced business applications with payment gateways, real-time tracking, and multi-user roles range from ₹65,000 to ₹1,50,000."
+          "text": "Mobile app development pricing is 100% customized based on your unique project scope, supported operating systems (iOS, Android, or cross-platform Flutter), backend database integrations, and custom AI feature requirements. We provide a milestone-based proposal after an initial technical discovery consultation."
         }
       },
       {
