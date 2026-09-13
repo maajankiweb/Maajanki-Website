@@ -1201,7 +1201,7 @@ width={150} height={50} />
                 <div>
                   <h3 style={{ color: "#042544", fontWeight: "800" }}>Starter Ads Management</h3>
                   <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
-                    ₹15,000 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ Month</span>
+                    ₹9,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ Month</span>
                   </div>
                   <ul className="branding-pricing-list" style={{ color: "#334155" }}>
                     <li>Ad Spend Scope Up to ₹1L/Month</li>

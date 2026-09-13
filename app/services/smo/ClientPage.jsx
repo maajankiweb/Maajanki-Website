@@ -952,7 +952,7 @@ const SMO = () => {
                 <div>
                   <h3 style={{ color: "#042544", fontWeight: "800" }}>Starter SMO</h3>
                   <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
-                    ₹7,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ Month</span>
+                    ₹9,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ Month</span>
                   </div>
                   <ul className="branding-pricing-list" style={{ color: "#334155" }}>
                     <li>Manage 2 Social Channels</li>

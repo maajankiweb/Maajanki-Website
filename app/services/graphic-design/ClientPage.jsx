@@ -804,9 +804,9 @@ const GraphicDesign = () => {
             <div className="branding-pricing-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "30px" }}>
               <div className="branding-pricing-card" style={{ background: "#ffffff", border: "2px solid #042544", borderRadius: "20px", padding: "35px 25px", color: "#042544" }}>
                 <div>
-                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Startup Identity Kit</h3>
+                  <h3 style={{ color: "#042544", fontWeight: "800" }}>Starter Brand Kit</h3>
                   <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
-                    ₹7,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ One-time</span>
+                    ₹9,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ One-time</span>
                   </div>
                   <ul className="branding-pricing-list" style={{ color: "#334155" }}>
                     <li>Custom Logo Design Concept</li>

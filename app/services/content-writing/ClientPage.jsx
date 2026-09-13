@@ -1183,10 +1183,10 @@ const ContentWriting = () => {
                 <div>
                   <h3 style={{ color: "#042544", fontWeight: "800" }}>Starter Content Plan</h3>
                   <div className="branding-pricing-amount" style={{ color: "#FD6A02", fontWeight: "800", fontSize: "2rem" }}>
-                    ₹5,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ Month</span>
+                    ₹9,999 <span style={{ color: "#64748b", fontSize: "1rem" }}>/ Month</span>
                   </div>
                   <ul className="branding-pricing-list" style={{ color: "#334155" }}>
-                    <li>4 Blog Posts (1000+ words)</li>
+                    <li>8 Blog Posts (1000+ words)</li>
                     <li>Intent-Based Keyword Research</li>
                     <li>Basic On-Page SEO &amp; Meta Tags</li>
                     <li>Copyscape &amp; Grammarly Check</li>

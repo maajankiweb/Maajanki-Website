@@ -390,7 +390,7 @@ export default function RootLayout({ children }) {
             "name": "Do you create custom websites for small businesses in Bihar?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. We specialize in building responsive, high-performance Next.js websites for businesses of all sizes. Whether you need a portfolio, eCommerce store, or custom web application — we deliver fast, SEO-ready, mobile-first solutions starting at ₹14,999."
+              "text": "Yes. We specialize in building responsive, high-performance Next.js websites for businesses of all sizes. Whether you need a portfolio, eCommerce store, or custom web application — we deliver fast, SEO-ready, mobile-first solutions starting at ₹9,999."
             }
           },
           {
@@ -462,7 +462,7 @@ export default function RootLayout({ children }) {
             "name": "What is the cost of web development and digital marketing in Bihar?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Our Starter Business package begins at ₹14,999 for a 5-7 page Next.js website. The Growth & Lead Engine package is ₹34,999 and includes AEO/GEO optimization. The Enterprise VIP Tier starts at ₹89,999 with custom AI workflows. Monthly retainers available."
+              "text": "Our Starter Business package begins at ₹9,999 for a 5-7 page Next.js website. The Growth & Lead Engine package is ₹34,999 and includes AEO/GEO optimization. The Enterprise VIP Tier starts at ₹89,999 with custom AI workflows. Monthly retainers available."
             }
           },
           {

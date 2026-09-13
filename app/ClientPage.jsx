@@ -1560,7 +1560,7 @@ function Home() {
               {
                 icon: "💰",
                 title: "100% Transparent Pricing",
-                desc: "Starting at ₹14,999 with zero hidden fees. Multi-currency payments accepted in INR, USD, EUR, GBP, and AED with clear milestone deliverables.",
+                desc: "Starting at ₹9,999 with zero hidden fees. Multi-currency payments accepted in INR, USD, EUR, GBP, and AED with clear milestone deliverables.",
               },
               {
                 icon: "🏛️",
