@@ -9,7 +9,7 @@ import {
   FileText, Send, Megaphone, Gift, MessageSquare, BookOpen, Mail, PhoneCall,
   Bot, Brain, Globe, UsersRound, Briefcase, KanbanSquare, CalendarDays, BarChart3,
   Trophy, Settings, LogOut, ChevronRight, ChevronDown, PanelLeftClose, PanelLeft,
-  Activity, SlidersHorizontal, Sparkles
+  Activity, SlidersHorizontal, Sparkles, GraduationCap
 } from 'lucide-react';
 
 const MENU_ITEMS = [
@@ -63,6 +63,7 @@ const MENU_ITEMS = [
     items: [
       { label: 'Team Members', icon: Users, href: '/admin/team' },
       { label: 'Portfolio Manager', icon: Briefcase, href: '/admin/portfolio' },
+      { label: 'Careers & Hiring', icon: GraduationCap, href: '/admin/careers' },
       { label: 'Tasks & Kanban', icon: KanbanSquare, href: '/admin/tasks-kanban' },
       { label: 'Calendar & Follow-ups', icon: CalendarDays, href: '/admin/calendar-followups' },
       { label: 'Reports & Exports', icon: BarChart3, href: '/admin/reports-exports' },

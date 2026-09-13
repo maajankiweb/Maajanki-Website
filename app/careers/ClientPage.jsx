@@ -263,7 +263,38 @@ export default function CareersClient() {
     }
   };
 
-  const filteredOpenings = openingsData.filter((job) => {
+  const [openingsList, setOpeningsList] = useState(openingsData);
+
+  useEffect(() => {
+    async function fetchLiveJobs() {
+      try {
+        const res = await fetch('/api/jobs');
+        const data = await res.json();
+        if (data.success && Array.isArray(data.jobs) && data.jobs.length > 0) {
+          const formatted = data.jobs.map((j, idx) => ({
+            id: j._id || `job-${idx}`,
+            num: String(idx + 1).padStart(2, '0'),
+            title: j.title,
+            category: j.category || 'fulltime',
+            badges: j.badges && j.badges.length > 0 ? j.badges : [
+              { text: j.category === 'intern' ? 'Internship' : 'Full-Time', type: j.category || 'fulltime' },
+              { text: j.experience || '0–1 Yr', type: 'exp' }
+            ],
+            skills: j.skills || 'Relevant domain skills.',
+            qualification: j.qualification || 'Relevant degree or equivalent experience.',
+            experience: j.experience || '0–1 Years',
+            duration: j.duration || (j.category === 'intern' ? '3 to 6 Months' : 'Full-Time position.')
+          }));
+          setOpeningsList(formatted);
+        }
+      } catch (err) {
+        console.warn('Could not fetch dynamic jobs, using static defaults:', err);
+      }
+    }
+    fetchLiveJobs();
+  }, []);
+
+  const filteredOpenings = openingsList.filter((job) => {
     if (filter === 'all') return true;
     return job.category === filter;
   });
@@ -465,7 +496,7 @@ export default function CareersClient() {
             className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
             onClick={() => setFilter('all')}
           >
-            All Roles ({openingsData.length})
+            All Roles ({openingsList.length})
           </button>
           <button
             type="button"
@@ -636,7 +667,7 @@ export default function CareersClient() {
                   <option value="" disabled>
                     Select Position *
                   </option>
-                  {openingsData.map((op) => (
+                  {openingsList.map((op) => (
                     <option key={op.id} value={op.title}>
                       {op.title}
                     </option>
