@@ -3,21 +3,22 @@ import Image from 'next/image';
 import { FaMapMarkerAlt, FaGlobe, FaBuilding, FaArrowRight, FaRocket, FaSearch, FaLaptopCode, FaBullhorn } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Our Service Locations | Web Development & Digital Marketing Agency | MaaJanki Web Tech',
-  description: 'Explore all cities, states, and global locations served by MaaJanki Web Tech. Professional Next.js website development, local SEO, Google Ads, and digital growth services.',
+  title: 'Our Service Locations | Web Design & SEO Agency | MaaJanki Web Tech',
+  description: 'Explore all 59 cities, states, and global locations served by MaaJanki Web Tech. Professional Next.js website design, local SEO, Google Ads, and custom web apps.',
   keywords: [
     'Service locations MaaJanki Web Tech',
+    'website designer near me',
+    'web development company near me',
+    'local SEO services near me',
     'web development agency India',
-    'digital marketing agency India',
-    'SEO services India',
     'global web design agency'
   ],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations',
   },
   openGraph: {
-    title: 'Our Service Locations | Web Development & Digital Marketing Agency | MaaJanki Web Tech',
-    description: 'Explore all local and global locations served by MaaJanki Web Tech for Next.js website development and digital marketing.',
+    title: 'Our Service Locations | Web Design & SEO Agency | MaaJanki Web Tech',
+    description: 'Explore all 59 local and global locations served by MaaJanki Web Tech for Next.js website design, local SEO, and digital marketing.',
     url: 'https://maajankiwebtech.com/locations',
     siteName: 'MaaJanki Web Tech',
     locale: 'en_IN',
@@ -26,21 +27,21 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Our Service Locations | MaaJanki Web Tech',
-    description: 'Explore all cities and countries served by MaaJanki Web Tech.',
+    description: 'Explore all 59 cities and countries served by MaaJanki Web Tech.',
   },
 };
 
 const locationsData = {
   bihar: [
-    { name: 'Bettiah', path: '/locations/bettiah', desc: 'Headquarters & local hub for SEO, web design, and digital growth in West Champaran.' },
+    { name: 'Bagaha (HQ)', path: '/locations/bagaha', desc: 'Registered headquarters & web design hub for West Champaran local enterprises.' },
+    { name: 'Bettiah', path: '/locations/bettiah', desc: 'Regional web development, local SEO, and digital growth in West Champaran.' },
     { name: 'Motihari', path: '/locations/motihari', desc: 'Custom website development and local SEO services for East Champaran businesses.' },
-    { name: 'Bagaha', path: '/locations/bagaha', desc: 'Dedicated digital marketing and website solutions for Bagaha local enterprises.' },
     { name: 'Patna', path: '/locations/patna', desc: 'Capital city digital agency solutions, eCommerce development, and lead generation.' },
     { name: 'Muzaffarpur', path: '/locations/muzaffarpur', desc: 'Search engine optimization and performance marketing for North Bihar businesses.' },
     { name: 'Gaya', path: '/locations/gaya', desc: 'Web design, branding, and local search visibility for Gaya startups & retailers.' },
+    { name: 'Bihar Sharif', path: '/locations/bihar-sharif', desc: 'Leading website designer and custom web development across Nalanda district.' },
     { name: 'Raxaul', path: '/locations/raxaul', desc: 'Border trade and business website development & online marketing services.' },
     { name: 'Narkatiaganj', path: '/locations/narkatiaganj', desc: 'Affordable web design and social media promotion for local growing brands.' },
-    { name: 'Nepal', path: '/locations/nepal', desc: 'Cross-border digital solutions and multi-language web services for Nepal businesses.' },
   ],
   indiaMetros: [
     { name: 'Delhi NCR', path: '/locations/delhi', desc: 'High-performance web architecture, corporate SEO, and PPC campaigns in Delhi.' },
@@ -77,8 +78,24 @@ const locationsData = {
     { name: 'Mexico', path: '/locations/mexico', desc: 'North American market website design, local SEO, and digital growth.' },
     { name: 'Japan', path: '/locations/japan', desc: 'Asia-Pacific web engineering, performance marketing, and digital solutions.' },
     { name: 'South Korea', path: '/locations/south-korea', desc: 'High-tech web app development, UI/UX design, and online search strategies.' },
-    { name: 'India', path: '/locations/india', desc: 'Full-spectrum digital agency services, enterprise web apps, and national SEO.' },
+    { name: 'India (National)', path: '/locations/india', desc: 'Full-spectrum digital agency services, enterprise web apps, and national SEO.' },
     { name: 'South Africa', path: '/locations/south-africa', desc: 'African market e-commerce platforms, lead generation, and digital marketing.' },
+    { name: 'Argentina', path: '/locations/argentina', desc: 'South American digital solutions, custom web portals, and international SEO.' },
+    { name: 'Austria', path: '/locations/austria', desc: 'Central European business web engineering and search optimization services.' },
+    { name: 'Bahrain', path: '/locations/bahrain', desc: 'GCC digital enterprise solutions, e-commerce, and performance marketing.' },
+    { name: 'Bangladesh', path: '/locations/bangladesh', desc: 'Regional commerce, high-speed corporate websites, and Google SEO.' },
+    { name: 'Brazil', path: '/locations/brazil', desc: 'Custom web platforms, e-commerce stores, and multi-channel digital growth.' },
+    { name: 'Chile', path: '/locations/chile', desc: 'Latin American corporate web development and search visibility campaigns.' },
+    { name: 'Finland', path: '/locations/finland', desc: 'Nordic precision web engineering, modern UI/UX, and cloud performance.' },
+    { name: 'Italy', path: '/locations/italy', desc: 'Creative website design, brand identity, and European search marketing.' },
+    { name: 'Kenya', path: '/locations/kenya', desc: 'East African digital transformation, e-commerce platforms, and SEO.' },
+    { name: 'Malaysia', path: '/locations/malaysia', desc: 'Southeast Asia enterprise web development and paid advertising services.' },
+    { name: 'Nigeria', path: '/locations/nigeria', desc: 'West African fintech & commerce web solutions with search optimization.' },
+    { name: 'Oman', path: '/locations/oman', desc: 'Middle East digital solutions, high-converting landing pages, and SEO.' },
+    { name: 'Poland', path: '/locations/poland', desc: 'Central European software engineering, web portals, and digital strategy.' },
+    { name: 'Portugal', path: '/locations/portugal', desc: 'European tech hub custom websites, e-commerce, and search growth.' },
+    { name: 'Spain', path: '/locations/spain', desc: 'Modern responsive web development, corporate branding, and multilingual SEO.' },
+    { name: 'Sri Lanka', path: '/locations/sri-lanka', desc: 'South Asian regional business websites, tourism portals, and digital ads.' },
   ],
 };
 

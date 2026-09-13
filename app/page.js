@@ -6,13 +6,13 @@ export const metadata = {
   keywords: [
     "Web Development Agency in India",
     "Digital Marketing Agency in India",
-    "web development",
-    "mobile app development",
+    "Website Designer Near Me",
+    "Web Development Company Near Me",
     "Next.js Web Development India",
     "Best SEO Company India",
     "AI SEO Agency in Bettiah",
     "Generative Engine Optimization Company",
-    "eCommerce Product Listing Services",
+    "Website Designer in Bihar",
     "Performance Marketing Agency India",
     "Google Ads Management India",
     "MaaJanki Web Tech"

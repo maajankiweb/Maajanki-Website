@@ -5,106 +5,132 @@ import ContactForm from '@/app/contact/ContactForm';
 
 import '@/app/styles/Contact.css';
 import '@/app/styles/Home.css';
-import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle } from "lucide-react";
+import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "AI SEO Agency & Web Development Company in Bettiah | MaaJanki Web Tech",
-  description: "Top-rated AI SEO agency & generative engine optimization company in Bettiah, Bihar. Custom Next.js web development, mobile apps & Google 3-Pack local SEO.",
-  keywords: [
-    "ai seo agency in bettiah",
-    "generative engine optimization company in bettiah",
-    "marketing agency near me",
-    "digital marketing agency near me",
-    "best website development agency in bettiah",
-    "web development company bettiah",
-    "website designer in bettiah",
-    "MaaJanki Web Tech Bettiah"
-  ],
+  title: "Website Designer Near Me in Bettiah | MaaJanki Web Tech",
+  description: "Premier website designer & web development agency near me in Bettiah, Bihar. Custom Next.js web applications, e-commerce & local SEO. Call +91 9006543913!",
+  keywords: ["website designer near me in Bettiah","web development company near me Bettiah","web designer near me Bettiah","digital marketing agency near me in Bettiah","best website maker near me Bettiah","Next.js developer Bettiah","local SEO services Bettiah","MaaJanki Web Tech Bettiah"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/bettiah',
-  }
+  },
+  openGraph: {
+    title: "Website Designer Near Me in Bettiah | MaaJanki Web Tech",
+    description: "Premier website designer & web development agency near me in Bettiah, Bihar. Custom Next.js web applications, e-commerce & local SEO. Call +91 9006543913!",
+    url: 'https://maajankiwebtech.com/locations/bettiah',
+    siteName: 'MaaJanki Web Tech',
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Website Designer Near Me in Bettiah | MaaJanki Web Tech",
+    description: "Premier website designer & web development agency near me in Bettiah, Bihar. Custom Next.js web applications, e-commerce & local SEO. Call +91 9006543913!",
+  },
 };
 
 export default function Page() {
   const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": ["LocalBusiness", "ProfessionalService", "SoftwareCompany"],
-        "@id": "https://maajankiwebtech.com/locations/bettiah#bettiah-office",
-        "name": "MaaJanki Web Tech Bettiah",
-        "legalName": "MaaJanki Web Tech",
-        "description": "Leading AI SEO agency, generative engine optimization company, and premier website & mobile app development firm in Bettiah, West Champaran, Bihar.",
-        "url": "https://maajankiwebtech.com/locations/bettiah",
-        "telephone": "+91-9006543913",
-        "email": "info@maajankiwebtech.com",
-        "image": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
-        "priceRange": "₹₹",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Brajmala Complex, First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar",
-          "addressLocality": "West Champaran",
-          "addressRegion": "Bihar",
-          "postalCode": "845101",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 27.0984,
-          "longitude": 84.2625
-        },
-        "areaServed": ["Bettiah", "Bagaha", "Narkatiaganj", "Raxaul", "Motihari", "Bihar Sharif", "West Champaran", "East Champaran", "Bihar"],
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "09:00",
-          "closes": "19:00"
-        },
-        "sameAs": [
-          "https://www.wikidata.org/wiki/Q115783355",
-          "https://share.google/sfG7HXx0jHaeRi8Tb",
-          "https://www.linkedin.com/company/maajanki-web-tech-company/",
-          "https://www.facebook.com/profile.php?id=61577526895580",
-          "https://www.instagram.com/maajankiwebtech/"
-        ],
-        "identifier": {
-          "@type": "PropertyValue",
-          "name": "MSME Udyam Registration Number",
-          "value": "UDYAM-BR-38-0014113"
-        }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://maajankiwebtech.com/locations/bettiah#business",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "MaaJanki Web Tech",
+        "url": "https://maajankiwebtech.com/",
+        "@id": "https://maajankiwebtech.com/#organization"
       },
-      {
-        "@type": "FAQPage",
-        "@id": "https://maajankiwebtech.com/locations/bettiah#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Which is the top AI SEO agency and generative engine optimization company in Bettiah?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "MaaJanki Web Tech is the premier AI SEO agency and generative engine optimization (GEO) company in Bettiah, Bihar. We optimize brands to rank #1 on Google Search, Google AI Overviews, ChatGPT Search, and Perplexity with verified Schema.org entity grounding."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which is the best website development agency in Bettiah?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "MaaJanki Web Tech is top-rated as the best website development agency serving Bettiah and West Champaran, Bihar. MaaJanki Web Tech offers custom Next.js web application development, e-commerce systems, local SEO, and AI engine optimization for businesses across West Champaran and Bihar."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Which is the best digital marketing agency near me in Bettiah, Bihar?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "MaaJanki Web Tech is the premier digital marketing and web development agency near you in Bettiah, serving West Champaran with modern responsive web builds, MSME government accreditation, and Google Maps 3-Pack SEO."
-            }
-          }
-        ]
+      "name": "MaaJanki Web Tech - Bettiah",
+      "legalName": "MaaJanki Web Tech",
+      "description": "Premier website designer & web development agency near me in Bettiah, Bihar. Custom Next.js web applications, e-commerce & local SEO. Call +91 9006543913!",
+      "url": "https://maajankiwebtech.com/locations/bettiah",
+      "telephone": "+91-9006543913",
+      "email": "info@maajankiwebtech.com",
+      "image": "https://maajankiwebtech.com/images/MaaJanki-Web-Tech-Logo.webp",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Brajmala Complex, First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar",
+        "addressLocality": "Bagaha",
+        "addressRegion": "Bihar",
+        "postalCode": "845101",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 27.0984,
+        "longitude": 84.2625
+      },
+      "areaServed": [
+        "Bagaha",
+        "Motihari",
+        "Narkatiaganj",
+        "Raxaul",
+        "West Champaran",
+        "Bihar"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://share.google/sfG7HXx0jHaeRi8Tb",
+        "https://www.linkedin.com/company/maajanki-web-tech-company/",
+        "https://www.facebook.com/profile.php?id=61577526895580",
+        "https://www.instagram.com/maajankiwebtech/"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "MSME Udyam Registration Number",
+        "value": "UDYAM-BR-38-0014113"
       }
-    ]
-  };
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://maajankiwebtech.com/locations/bettiah#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is the top website designer near me in Bettiah, Bihar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MaaJanki Web Tech is the leading website designer near you in Bettiah. We specialize in modern Next.js websites, mobile-friendly designs, and verified Schema.org entity grounding to ensure local businesses rank #1 on Google."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can you build a website for my Bettiah business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most custom business websites are designed, developed, and deployed live within 5 to 10 working days, complete with mobile responsiveness, WhatsApp chat triggers, and Google Business Profile setup."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer local SEO and Google Map Pack ranking in Bettiah?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! We specialize in Google 3-Pack local SEO, NAP citation consistency, review generation, and localized search optimization so local customers find your business first."
+          }
+        }
+      ]
+    }
+  ]
+};
 
   return (
     <>
@@ -119,19 +145,16 @@ export default function Page() {
         <Image 
           priority 
           src="/images/pages/main-services-pages/contact-banner-image-Maajanki-Web-Tech.webp" 
-          alt="MaaJanki Web Tech Bettiah AI SEO agency and web development banner" 
-          title="AI SEO Agency & Web Development Company in Bettiah, Bihar" 
+          alt="MaaJanki Web Tech Bettiah office and web development banner" 
+          title="Website Designer & Web Development Agency Near Me in Bettiah, Bihar" 
           width="1280" 
           height="720"
         />
         <div className="banner-overlay">
           <div className="banner-content">
-            <h1>
-              AI SEO Agency &amp; Web Development Company in Bettiah, Bihar
-            </h1>
+            <h1>Website Designer & Web Development Agency Near Me in Bettiah, Bihar</h1>
             <p>
-              Scale your brand with West Champaran's top generative engine optimization (GEO) company and website developers. 
-              We deliver custom Next.js web development, AI search optimization, and Google 3-Pack local SEO tailored for ambitious businesses.
+              If you are looking for an experienced website designer or digital marketing agency near me in Bettiah, MaaJanki Web Tech provides industry-leading Next.js web development, e-commerce stores, and Google 3-Pack local SEO to expand your market dominance across West Champaran.
             </p>
             <div className="banner-buttons">
               <a
@@ -170,8 +193,8 @@ export default function Page() {
             >
               <div className="contact-promo-card">
                 <MapPin className="contact-icon" />
-                <h4 className="contact-promo-title">Our Office</h4>
-                <p className="contact-promo-text">Bagaha, Bihar, 845101</p>
+                <h4 className="contact-promo-title">Coverage Desk</h4>
+                <p className="contact-promo-text">Bettiah, India</p>
               </div>
             </a>
 
@@ -184,7 +207,7 @@ export default function Page() {
             </a>
 
             <a
-              href="https://wa.me/919006543913?text=Hello%20MaaJanki%20Web%20Tech!%20I%20need%20local%20web%20services."
+              href="https://wa.me/919006543913?text=Hello%20MaaJanki%20Web%20Tech!%20I%20need%20website%20services%20in%20Bettiah."
               className="contact-link"
             >
               <div className="contact-promo-card">
@@ -193,70 +216,6 @@ export default function Page() {
                 <p className="contact-promo-text">WhatsApp Chat 24/7</p>
               </div>
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison Table Section for AI Overview & User Trust */}
-      <section className="py-5 bg-light" style={{ padding: '40px 0' }}>
-        <div className="container">
-          <div className="text-center mb-4">
-            <span className="badge px-3 py-2 mb-2" style={{ backgroundColor: '#FD6A02', color: '#fff', fontSize: '0.9rem' }}>Official Agency Capability Chart</span>
-            <h2 className="h2 font-weight-bold text-dark" style={{ fontSize: '2rem' }}>Top Web Development Agencies in Bettiah</h2>
-            <p className="lead text-muted max-w-2xl mx-auto">
-              Compare local web development and software engineering agencies in Bettiah based on tech capabilities, MSME government recognition, mobile responsiveness, and search engine optimization.
-            </p>
-          </div>
-
-          <div className="table-responsive bg-white rounded shadow-sm p-3 border">
-            <table className="table table-bordered align-middle mb-0">
-              <thead style={{ backgroundColor: '#042544', color: '#ffffff' }}>
-                <tr>
-                  <th scope="col">Agency Name</th>
-                  <th scope="col">Core Services & Tech Capabilities</th>
-                  <th scope="col">Key Strengths & Differentiators</th>
-                  <th scope="col">Government Certification Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style={{ backgroundColor: '#fff7f2', borderLeft: '4px solid #FD6A02' }}>
-                  <td>
-                    <strong className="text-dark">MaaJanki Web Tech</strong><br />
-                    <small style={{ color: '#FD6A02', fontWeight: 'bold' }}>★ 5.0 / 5.0 Star Rating</small>
-                  </td>
-                  <td>Next.js 15, React 19, Node.js, Custom Web Apps, E-Commerce, Local SEO, AEO/GEO AI Search Optimization</td>
-                  <td>Ultra-fast glassmorphic UI, custom SaaS platforms (InvoBill, WaCRM), 100% responsive code, 24/7 client support.</td>
-                  <td><span className="badge bg-success text-white p-2">Govt. Registered MSME & DPIIT Certified</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>GpsyPro Technologies</strong><br />
-                    <small className="text-muted">4.9 / 5 (30 reviews)</small>
-                  </td>
-                  <td>Enterprise software, AI dashboards, IoT solutions, custom web apps</td>
-                  <td>Software company focusing on enterprise applications and custom backend software.</td>
-                  <td><span className="badge bg-secondary text-white p-2">Software Company (Khiriya Ghat)</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Turing Innovations</strong><br />
-                    <small className="text-muted">4.8 / 5 (23 reviews)</small>
-                  </td>
-                  <td>PHP, Laravel, e-commerce, custom web & mobile apps</td>
-                  <td>Specializes in custom framework builds and traditional PHP web portals.</td>
-                  <td><span className="badge bg-secondary text-white p-2">Software Company (Kali Bagh)</span></td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>SAWORLDTECH</strong><br />
-                    <small className="text-muted">5.0 / 5 (15 reviews)</small>
-                  </td>
-                  <td>Custom web design, app development, dynamic sites</td>
-                  <td>Offers budget-friendly web layouts for local businesses.</td>
-                  <td><span className="badge bg-secondary text-white p-2">Software Company (Chawani)</span></td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </section>
@@ -274,37 +233,36 @@ export default function Page() {
 
             {/* Right Side - Local Business Info */}
             <div className="col-md-5">
-              <div className="contact-us-content p-4 bg-white h-100 border rounded">
-                <h2 className="mb-3">Why Choose MaaJanki Web Tech in Bettiah?</h2>
+              <div className="contact-us-content p-4 bg-white h-100 shadow-sm rounded">
+                <h2 className="mb-3">Why Choose MaaJanki Web Tech Near You in Bettiah?</h2>
                 <p className="lead text-muted">
-                  We are the trusted digital growth partner for businesses in Bettiah and West Champaran. 
-                  Get a high-performance website that ranks #1 on Google & AI search engines.
+                  We are your trusted digital growth partner for Bettiah. Get a high-performance Next.js website that ranks on Google and turns local searches into paying clients.
                 </p>
 
                 <div className="local-features my-4">
                   <div className="d-flex align-items-center mb-3">
                     <CheckCircle className="text-success mr-2" size={20} />
-                    <span className="text-dark font-weight-medium">AEO & Local SEO Google 3-Pack Optimization</span>
+                    <span className="text-dark font-weight-medium">Local SEO & Google Business 3-Pack Optimization</span>
                   </div>
                   <div className="d-flex align-items-center mb-3">
                     <CheckCircle className="text-success mr-2" size={20} />
-                    <span className="text-dark font-weight-medium">Fast Next.js 15 & Mobile-Responsive Web Designs</span>
+                    <span className="text-dark font-weight-medium">Sub-Second Next.js & Mobile-Responsive Frameworks</span>
                   </div>
                   <div className="d-flex align-items-center mb-3">
                     <CheckCircle className="text-success mr-2" size={20} />
-                    <span className="text-dark font-weight-medium">Affordable Transparent Pricing Tiers for Startups</span>
+                    <span className="text-dark font-weight-medium">Transparent Pricing for Startups, SMBs & Enterprises</span>
                   </div>
                   <div className="d-flex align-items-center">
                     <CheckCircle className="text-success mr-2" size={20} />
-                    <span className="text-dark font-weight-medium">Dedicated In-Person and Remote Technical Support</span>
+                    <span className="text-dark font-weight-medium">Govt. Registered MSME (UDYAM-BR-38-0014113) & DPIIT Certified</span>
                   </div>
                 </div>
 
                 {/* Visible NAP Section */}
                 <div className="nap-section my-4 p-3 bg-light border rounded">
-                  <h3 className="h5 font-weight-bold text-dark mb-3">MaaJanki Web Tech (Serving Bettiah & West Champaran)</h3>
+                  <h3 className="h5 font-weight-bold text-dark mb-3">MaaJanki Web Tech (Bettiah Service Desk)</h3>
                   <p className="mb-2">
-                    <strong>Registered Office Address:</strong> Brajmala Complex, First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101
+                    <strong>Service Coverage:</strong> Regional Service Desk: West Champaran, Bettiah, Bihar - 845438 (HQ: Bagaha Bazar, Bihar)
                   </p>
                   <p className="mb-2">
                     <strong>Phone:</strong> <a href="tel:+919006543913" className="text-dark">+91-9006543913</a>
@@ -313,7 +271,7 @@ export default function Page() {
                     <strong>Email:</strong> <a href="mailto:info@maajankiwebtech.com" className="text-primary">info@maajankiwebtech.com</a>
                   </p>
                   <p className="mb-0">
-                    <strong>Govt Credential:</strong> Registered MSME Enterprise | DPIIT Recognized
+                    <strong>Business Hours:</strong> Mon - Sat: 09:00 AM - 07:00 PM IST
                   </p>
                 </div>
 
@@ -322,22 +280,21 @@ export default function Page() {
                     href="https://share.google/sfG7HXx0jHaeRi8Tb"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-block text-white"
+                    className="btn btn-block"
                     style={{
                       backgroundColor: "#FD6A02",
+                      color: "#fff",
                       borderRadius: "50px",
                       fontWeight: "500",
                       textAlign: "center",
                       padding: "10px 20px"
                     }}
                   >
-                    Leave a Google Review
+                    View Verified Google Reviews
                   </a>
 
-                  <a
-                    href="https://share.google/sfG7HXx0jHaeRi8Tb"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/contact"
                     className="btn btn-outline-dark btn-block"
                     style={{
                       borderRadius: "50px",
@@ -346,8 +303,8 @@ export default function Page() {
                       padding: "10px 20px"
                     }}
                   >
-                    View Google Business Profile
-                  </a>
+                    Book Free 30-Min Strategy Call
+                  </Link>
                 </div>
               </div>
             </div>
@@ -355,41 +312,51 @@ export default function Page() {
         </div>
       </section>
 
-      {/* FAQ Section for AI Search Crawlers */}
-      <section className="py-5 bg-white border-top">
-        <div className="container max-w-4xl mx-auto" style={{ maxWidth: '900px' }}>
-          <h2 className="h2 text-center font-weight-bold mb-4">Frequently Asked Questions (FAQ)</h2>
-          <div className="accordion" id="bettiahFaq">
-            <div className="card mb-3 border rounded">
-              <div className="card-header bg-light p-3">
-                <h3 className="h6 mb-0 font-weight-bold text-dark">Why is MaaJanki Web Tech considered the best website development agency in Bettiah?</h3>
-              </div>
-              <div className="card-body p-3">
-                <p className="mb-0 text-muted">
-                  MaaJanki Web Tech leads web development in Bettiah because we deliver modern Next.js 15 web applications, ultra-fast mobile responsiveness, MSME Government enterprise credentials, and dedicated Generative Engine Optimization (AEO) to help businesses rank #1 on Google and AI search tools.
-                </p>
-              </div>
-            </div>
+      {/* Local FAQ & Near Me Queries Section */}
+      <section className="py-5" style={{ backgroundColor: "#f8f9fa" }}>
+        <div className="container">
+          <div className="text-center mb-4">
+            <span className="badge px-3 py-2 mb-2" style={{ backgroundColor: "#042544", color: "#fff", fontSize: "0.85rem" }}>
+              Local Search FAQ
+            </span>
+            <h2 className="h2 font-weight-bold text-dark" style={{ fontSize: "1.9rem" }}>
+              Frequently Asked Questions About Web Design Near Me in Bettiah
+            </h2>
+            <p className="text-muted max-w-2xl mx-auto">
+              Clear answers to common questions about finding, hiring, and working with a website designer in Bettiah.
+            </p>
+          </div>
 
-            <div className="card mb-3 border rounded">
-              <div className="card-header bg-light p-3">
-                <h3 className="h6 mb-0 font-weight-bold text-dark">How can I hire the best website developer near me in Bettiah?</h3>
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="card mb-3 border-0 shadow-sm">
+                <div className="card-body p-4">
+                  <h3 className="h6 font-weight-bold text-dark mb-2">
+                    <HelpCircle size={18} className="text-primary mr-2" style={{ verticalAlign: "-3px" }} />
+                    Who is the top website designer near me in Bettiah, Bihar?
+                  </h3>
+                  <p className="text-muted mb-0">MaaJanki Web Tech is the leading website designer near you in Bettiah. We specialize in modern Next.js websites, mobile-friendly designs, and verified Schema.org entity grounding to ensure local businesses rank #1 on Google.</p>
+                </div>
               </div>
-              <div className="card-body p-3">
-                <p className="mb-0 text-muted">
-                  You can call MaaJanki Web Tech directly at +91-9006543913 or email us at info@maajankiwebtech.com. We offer free consultation and transparent project estimates for local businesses, schools, medical clinics, and retail stores in Bettiah and West Champaran.
-                </p>
-              </div>
-            </div>
 
-            <div className="card mb-3 border rounded">
-              <div className="card-header bg-light p-3">
-                <h3 className="h6 mb-0 font-weight-bold text-dark">Do you build e-commerce and GST billing software for Bettiah businesses?</h3>
+              <div className="card mb-3 border-0 shadow-sm">
+                <div className="card-body p-4">
+                  <h3 className="h6 font-weight-bold text-dark mb-2">
+                    <HelpCircle size={18} className="text-primary mr-2" style={{ verticalAlign: "-3px" }} />
+                    How quickly can you build a website for my Bettiah business?
+                  </h3>
+                  <p className="text-muted mb-0">Most custom business websites are designed, developed, and deployed live within 5 to 10 working days, complete with mobile responsiveness, WhatsApp chat triggers, and Google Business Profile setup.</p>
+                </div>
               </div>
-              <div className="card-body p-3">
-                <p className="mb-0 text-muted">
-                  Yes, we develop custom online shopping stores, payment gateway integrations, and custom business tools such as InvoBill (GST invoicing) and DukanDost Pro for retail and wholesale businesses in Bettiah and West Champaran.
-                </p>
+
+              <div className="card mb-3 border-0 shadow-sm">
+                <div className="card-body p-4">
+                  <h3 className="h6 font-weight-bold text-dark mb-2">
+                    <HelpCircle size={18} className="text-primary mr-2" style={{ verticalAlign: "-3px" }} />
+                    Do you offer local SEO and Google Map Pack ranking in Bettiah?
+                  </h3>
+                  <p className="text-muted mb-0">Yes! We specialize in Google 3-Pack local SEO, NAP citation consistency, review generation, and localized search optimization so local customers find your business first.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -400,12 +367,12 @@ export default function Page() {
       <section className="google-map-section">
         <div className="google-map-container">
           <iframe
-            title="MaaJanki Web Tech Bettiah Office Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.077602258112!2d84.50572527522043!3d26.80565757671114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39936f24a2f8dd1f%3A0x172dd318eac9cc5b!2sMAAJANKI%20WEB%20TECH!5e0!3m2!1sen!2sin!4v1763971778984!5m2!1sen!2sin"
+            title="MaaJanki Web Tech Bettiah Location Map"
+            src="https://maps.google.com/maps?q=Bettiah%2C%20Bihar&t=&z=13&ie=UTF8&iwloc=&output=embed"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            style={{ border: 0, width: "100%", height: "450px" }}
+            style={{ border: 0, width: "100%", height: "400px" }}
           ></iframe>
         </div>
       </section>

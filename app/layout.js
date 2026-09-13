@@ -37,21 +37,22 @@ export const metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com/'),
   title: {
     default: 'Web Development & Digital Marketing Agency in India | MaaJanki Web Tech',
-    template: '%s | MaaJanki Web Tech',
+    template: '%s',
   },
   description:
     "MaaJanki Web Tech — India's premier web development & digital marketing agency. Expert in Next.js, SEO, Google Ads & performance marketing. Free 30-min audit.",
   keywords: [
     "Web Development Agency in India",
     "Digital Marketing Agency in India",
-    "web development",
-    "mobile app development",
+    "Website Designer Near Me",
+    "Web Development Company Near Me",
+    "Digital Marketing Agency Near Me",
     "Next.js Web Development India",
     "Best SEO Company India",
     "Performance Marketing Agency India",
     "Google Ads Management India",
     "AI SEO Agency in Bettiah",
-    "eCommerce Product Listing Services",
+    "Website Designer in Bihar",
     "MaaJanki Web Tech"
   ],
   authors: [{ name: 'Ashish Kumar', url: 'https://maajankiwebtech.com/about' }],

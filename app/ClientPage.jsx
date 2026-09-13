@@ -394,7 +394,7 @@ function Home() {
 
               {/* Main Headline */}
               <h1 className="hero-title">
-                Website Development &amp; Digital Marketing Agency in Bihar, India | MaaJanki Web Tech
+                Website Design, Custom Web Development &amp; Digital Marketing Agency
               </h1>
 
               {/* Description Subtext */}

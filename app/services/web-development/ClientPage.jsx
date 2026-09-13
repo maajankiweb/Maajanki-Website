@@ -94,7 +94,7 @@ const WebDevelopment = () => {
         <div className="banner-overlay">
           <div className="banner-content">
             <h1>
-              Website Development Services in Bihar &amp; India | Custom Next.js &amp; WordPress Agency
+              Website Design &amp; Custom Web Development Services in India
             </h1>
             <div className="aeo-definition-box">
               <p>
@@ -252,22 +252,19 @@ const WebDevelopment = () => {
                 <h2 className="main-heading">1. Custom Website Development</h2>
                 <h3 className="sub-heading">Tailored Web Design Engineering Grounded in Brand Strategy</h3>
                 <p className="content-text">
-                  <strong>Custom Website Development</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized web development is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  <strong>Custom Website Development</strong> by MaaJanki Web Tech transforms your digital presence from a generic template into a high-converting business asset. In saturated digital markets, standard site builders cannot deliver the tailored customer journeys, distinct visual identity, and brand positioning required to capture qualified commercial leads.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>custom web applications and websites that highlight your product offerings with speed and security.</strong> By leveraging responsive layout architectures and full-stack database configurations, we ensure your web development aligns with the algorithms and search behavior of modern web browsers and search engines.
+                  Our development engineers craft clean, component-driven web architectures from scratch using Next.js 15, React 19, and modern CSS. Every layout, typography hierarchy, and interactive element is designed specifically for your target audience, ensuring optimal user engagement and frictionless navigation.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
+                  From corporate brand portals and B2B showcase websites to interactive product catalogs, our custom codebases are free from bloated plugins, ensuring peak performance, zero unnecessary scripts, and rapid indexing across Google and Bing.
                 </p>
                 <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-coded website platform</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  With MaaJanki Web Tech, <strong>your custom website</strong> acts as a 24/7 sales engine that builds immediate buyer trust, articulates your unique value proposition, and delivers measurable inbound ROI.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build a custom web platform that commands authority in your industry.</strong>
                 </span>
               </div>
             </div>
@@ -294,22 +291,19 @@ const WebDevelopment = () => {
                 <h2 className="main-heading">2. Mobile-Responsive Frameworks</h2>
                 <h3 className="sub-heading">Cross-Platform Compatibility Built for Mobile-First Indexing</h3>
                 <p className="content-text">
-                  <strong>Mobile-Responsive Frameworks</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized web development is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  With more than 75% of global web traffic and local searches originating on mobile devices, <strong>Mobile-Responsive Frameworks</strong> are no longer an afterthought—they are the core of modern web engineering. Google strictly assesses and indexes websites through its mobile smartphone crawler.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>custom web applications and websites that highlight your product offerings with speed and security.</strong> By leveraging responsive layout architectures and full-stack database configurations, we ensure your web development aligns with the algorithms and search behavior of modern web browsers and search engines.
+                  We engineer fluid, adaptive layouts using responsive CSS Grid, Flexbox, and mobile-optimized breakpoints. Your website automatically recalibrates to look immaculate on compact smartphones, foldable displays, tablets, laptops, and ultra-wide desktop monitors.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
+                  Beyond aesthetic layout shifts, we optimize touch targets, simplify mobile navigation drawers, implement responsive picture element sizing, and eliminate horizontal layout shifts to maximize convenience for users on 4G and 5G cellular networks.
                 </p>
                 <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-coded website platform</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  The result is seamless interaction, reduced bounce rates, and superior mobile ranking power that converts on-the-go searchers into active customers.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Deliver flawless user experiences across every device screen size.</strong>
                 </span>
               </div>
             </div>
@@ -360,24 +354,21 @@ const WebDevelopment = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">3. Full-Stack JavaScript Web Applications</h2>
-                <h3 className="sub-heading">Scalable MERN Stack (MongoDB, Express, React, Node.js) Architectures</h3>
+                <h3 className="sub-heading">Scalable MERN Stack & Next.js Serverless Architectures</h3>
                 <p className="content-text">
-                  <strong>Full-Stack JavaScript Web Applications</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized web development is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  For companies requiring sophisticated business automation, client portals, SaaS applications, and interactive dashboards, our <strong>Full-Stack JavaScript Web Applications</strong> provide institutional-grade reliability, data security, and unmatched speed.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>custom web applications and websites that highlight your product offerings with speed and security.</strong> By leveraging responsive layout architectures and full-stack database configurations, we ensure your web development aligns with the algorithms and search behavior of modern web browsers and search engines.
+                  We specialize in the complete modern JavaScript ecosystem: Next.js App Router for server-rendered interfaces, Node.js and Express for resilient backend microservices, and MongoDB Atlas or PostgreSQL for scalable relational and document data storage.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
+                  Our engineering team implements secure JWT/OAuth authentication protocols, role-based access controls (RBAC), transactional email webhooks, and RESTful/GraphQL APIs that easily connect to third-party CRMs, ERPs, and cloud infrastructure.
                 </p>
                 <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-coded website platform</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Whether building an internal workflow tool or a public-facing cloud platform, MaaJanki Web Tech develops scalable software architectures engineered to process millions of requests effortlessly.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Deploy enterprise-ready cloud applications built on modern JavaScript.</strong>
                 </span>
               </div>
             </div>
@@ -422,25 +413,22 @@ const WebDevelopment = () => {
                 </div>
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
-                <h2 className="main-heading">4. E-Commerce Development (Shopify & WooCommerce)</h2>
-                <h3 className="sub-heading">Conversion-Focused Online Stores Built to Turn Traffic into Revenue</h3>
+                <h2 className="main-heading">4. E-Commerce Development (Shopify & Custom Stores)</h2>
+                <h3 className="sub-heading">High-Conversion Online Stores Engineered to Maximize Sales</h3>
                 <p className="content-text">
-                  <strong>E-Commerce Development (Shopify & WooCommerce)</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized web development is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Online retail requires lightning-fast load times, effortless product discovery, and friction-free checkouts. Our <strong>E-Commerce Development</strong> solutions empower D2C brands, wholesalers, and multi-vendor marketplaces to scale revenues without technical roadblocks.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>custom web applications and websites that highlight your product offerings with speed and security.</strong> By leveraging responsive layout architectures and full-stack database configurations, we ensure your web development aligns with the algorithms and search behavior of modern web browsers and search engines.
+                  We build custom Shopify themes, WooCommerce platforms, and custom Next.js headless storefronts that load in under a second. Every store features structured catalog taxonomy, instant faceted search filters, smart cross-sell modules, and high-conversion one-page checkout experiences.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
+                  We seamlessly integrate reliable payment gateways including Razorpay, UPI QR, Stripe, Cashfree, and PayPal, alongside automated courier logistics (Shiprocket, Delhivery) and real-time WhatsApp order tracking triggers.
                 </p>
                 <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-coded website platform</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  With deep Schema.org Product markup and automated Google Merchant Center feeds, your products dominate Google Shopping and organic search rankings from day one.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Turn store visitors into repeat paying customers with optimized e-commerce.</strong>
                 </span>
               </div>
             </div>
@@ -491,24 +479,21 @@ const WebDevelopment = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">5. WordPress & CMS Development</h2>
-                <h3 className="sub-heading">Self-Manageable Websites with Custom Theme Engineering</h3>
+                <h3 className="sub-heading">Self-Manageable Websites with Custom Gutenberg Block Themes</h3>
                 <p className="content-text">
-                  <strong>WordPress & CMS Development</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized web development is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Empower your marketing and operational teams to publish content without depending on developers. Our <strong>WordPress & CMS Development</strong> builds custom, enterprise-grade publishing platforms without the bloat of generic marketplace themes.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>custom web applications and websites that highlight your product offerings with speed and security.</strong> By leveraging responsive layout architectures and full-stack database configurations, we ensure your web development aligns with the algorithms and search behavior of modern web browsers and search engines.
+                  We build custom block themes using Advanced Custom Fields (ACF Pro) and Gutenberg components. Your editors receive intuitive, drag-and-drop page-building capabilities while code remains clean, secure, and performant under the hood.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
+                  For high-security or multi-channel organizations, we also engineer Headless CMS setups with Next.js frontend rendering paired with Strapi or Sanity.io backends, delivering ironclad security and sub-second page delivery across every channel.
                 </p>
                 <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-coded website platform</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Take full control over your blog articles, case studies, client testimonials, and product listings with an intuitive admin dashboard tailored to your daily operations.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Manage and scale your digital content with total publishing freedom.</strong>
                 </span>
               </div>
             </div>
@@ -554,22 +539,19 @@ const WebDevelopment = () => {
                 <h2 className="main-heading">6. Core Web Vitals & Speed Optimization</h2>
                 <h3 className="sub-heading">Engineering Sub-Second Loading Speeds for Top Search Rankings</h3>
                 <p className="content-text">
-                  <strong>Core Web Vitals & Speed Optimization</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized web development is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Page load speed directly determines organic search rank, user retention, and ad conversion costs. Our <strong>Core Web Vitals & Speed Optimization</strong> protocols guarantee that your platform complies with Google's strictest performance standards: LCP under 2.5s, INP under 200ms, and CLS under 0.1.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>custom web applications and websites that highlight your product offerings with speed and security.</strong> By leveraging responsive layout architectures and full-stack database configurations, we ensure your web development aligns with the algorithms and search behavior of modern web browsers and search engines.
+                  We deploy cutting-edge asset optimization: automated WebP and AVIF image compression with responsive srcset generation, CSS code-splitting, critical CSS inlining, font subsetting, and dead code tree-shaking across every JavaScript bundle.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
+                  By configuring Cloudflare edge caching, CDN distributed delivery, and browser cache control headers (1-year immutable caching on static assets), your pages load instantly regardless of the user's geographic location.
                 </p>
                 <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-coded website platform</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Eliminate user drop-offs and provide the blazing-fast experience that keeps visitors engaged and propels your pages to the top of Google Search.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Achieve 95+ PageSpeed scores and capture peak search positions.</strong>
                 </span>
               </div>
             </div>
@@ -614,24 +596,21 @@ const WebDevelopment = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">7. Technical SEO & Schema Markup Integration</h2>
-                <h3 className="sub-heading">Structured Data Architecture for Generative AI Discovery</h3>
+                <h3 className="sub-heading">Structured Data Architecture for Google & Generative AI Engines</h3>
                 <p className="content-text">
-                  <strong>Technical SEO & Schema Markup Integration</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized web development is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Search engines and AI answer engines (Google Overviews, ChatGPT Search, Perplexity) rely on structured machine-readable code to understand and cite business entities. Our <strong>Technical SEO & Schema Markup Integration</strong> ensures your website is indexed with authoritative clarity.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>custom web applications and websites that highlight your product offerings with speed and security.</strong> By leveraging responsive layout architectures and full-stack database configurations, we ensure your web development aligns with the algorithms and search behavior of modern web browsers and search engines.
+                  We program semantic JSON-LD graph structures across every page: Organization, LocalBusiness, Service, BreadcrumbList, FAQPage, and Product schemas. These structured entities directly link your business credentials to Wikidata, Google Knowledge Graph, and official business registers.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
+                  Furthermore, we configure dynamic XML sitemaps, robots.txt crawl directives, self-referencing canonical URLs, Open Graph and Twitter cards, and automated IndexNow API notifications so search engines crawl your latest updates within hours instead of weeks.
                 </p>
                 <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-coded website platform</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Establish total topical dominance and secure prominent Rich Snippets and AI citations across search engine result pages.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Ground your brand in Google Knowledge Graph and Generative AI engines.</strong>
                 </span>
               </div>
             </div>
@@ -674,24 +653,21 @@ const WebDevelopment = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">8. Web Security & SSL Protections</h2>
-                <h3 className="sub-heading">Securing Customer Data and Preserving Domain Authority</h3>
+                <h3 className="sub-heading">Securing Customer Data and Preserving Enterprise Domain Authority</h3>
                 <p className="content-text">
-                  <strong>Web Security & SSL Protections</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized web development is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Website security and customer data privacy are critical trust signals for both site visitors and search engines. Our <strong>Web Security & SSL Protections</strong> safeguard your digital infrastructure against unauthorized intrusions, malware, and data vulnerabilities.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>custom web applications and websites that highlight your product offerings with speed and security.</strong> By leveraging responsive layout architectures and full-stack database configurations, we ensure your web development aligns with the algorithms and search behavior of modern web browsers and search engines.
+                  We enforce end-to-end TLS/HTTPS encryption with HTTP Strict Transport Security (HSTS), cross-site scripting (XSS) defense, and CSRF token verification. Every input form is rigorously sanitized server-side before persisting data to databases.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
+                  To protect business operations against malicious traffic, we configure Web Application Firewalls (WAF), rate limiting on authentication routes, automated vulnerability scanning, and daily automated encrypted database backups with one-click restoration.
                 </p>
                 <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-coded website platform</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Keep your digital assets protected 24/7 and demonstrate verifiable enterprise security to your customers and partners.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Safeguard your website with enterprise-grade cybersecurity standards.</strong>
                 </span>
               </div>
             </div>

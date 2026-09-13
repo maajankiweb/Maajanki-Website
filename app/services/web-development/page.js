@@ -1,10 +1,11 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Web Development Company in India | Next.js & Custom Web Solutions | MaaJanki Web Tech",
-  description: "Premier web development company in India. We engineer high-speed Next.js web applications, corporate websites, SaaS platforms, and eCommerce portals. Get a free quote!",
+  title: "Web Development Company & Website Designer | MaaJanki Web Tech",
+  description: "Premier web development company & website designer in India. High-speed Next.js web apps, corporate portals, e-commerce, and local SEO. Get a free quote!",
   keywords: [
-    "web development",
+    "website designer near me",
+    "web development company near me",
     "web development company",
     "website developer",
     "website design",
