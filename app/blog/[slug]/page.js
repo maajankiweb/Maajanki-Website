@@ -146,42 +146,69 @@ export default async function BlogPostPage({ params }) {
             className="article-content"
             style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#cbd5e1' }}
           >
-            <p className="lead fw-normal mb-4" style={{ color: '#e2e8f0' }}>
+            <p className="lead fw-normal mb-4" style={{ color: '#e2e8f0', fontSize: '1.2rem', lineHeight: '1.7' }}>
               {post.excerpt}
             </p>
 
-            <h2 className="h3 fw-bold text-white mt-5 mb-3">
-              1. The Modern Paradigm Shift in Digital Growth
-            </h2>
-            <p>
-              In today's hyper-competitive digital landscape, relying on cookie-cutter templates or superficial marketing campaigns no longer delivers consistent results. Modern search engines like Google — powered by AI Overviews and Helpful Content systems — prioritize technical excellence, verified structured data, and authentic expertise (E-E-A-T).
-            </p>
-            <p>
-              Whether you operate a local business in Bihar or an enterprise technology company competing globally, achieving dominance requires a coordinated architecture encompassing server-side rendering, sub-second Core Web Vitals, and intent-driven content clusters.
-            </p>
+            {post.serviceLink && (
+              <div
+                className="p-4 rounded-3 my-4 d-flex justify-content-between align-items-center flex-wrap gap-3"
+                style={{ background: 'rgba(253, 106, 2, 0.08)', borderLeft: '4px solid #FD6A02', borderRadius: '12px' }}
+              >
+                <div>
+                  <div style={{ color: '#FD6A02', fontWeight: '700', fontSize: '14px', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                    Recommended Service Solution
+                  </div>
+                  <div style={{ color: '#ffffff', fontWeight: '600', fontSize: '16px' }}>
+                    Need expert implementation for your business?
+                  </div>
+                </div>
+                <Link
+                  href={post.serviceLink}
+                  className="btn text-white fw-bold px-4 py-2"
+                  style={{ background: '#FD6A02', borderRadius: '25px', textDecoration: 'none' }}
+                >
+                  Explore {post.serviceLinkText} →
+                </Link>
+              </div>
+            )}
 
-            <h2 className="h3 fw-bold text-white mt-5 mb-3">
-              2. Technical Execution & Core Web Vitals
-            </h2>
-            <p>
-              Search performance begins with page speed. By adopting Next.js 15 App Router and React Server Components, our team at MaaJanki Web Tech achieves 95+ Google PageSpeed scores, reducing Largest Contentful Paint (LCP) to under 1.5 seconds and Interaction to Next Paint (INP) to below 50ms.
-            </p>
+            {post.content && post.content.length > 0 ? (
+              post.content.map((sec, sIdx) => (
+                <div key={sIdx} className="mb-4">
+                  <h2 className="h3 fw-bold text-white mt-5 mb-3" style={{ fontFamily: '"Outfit", sans-serif' }}>
+                    {sec.heading}
+                  </h2>
+                  {sec.paragraphs.map((p, pIdx) => (
+                    <p key={pIdx} className="mb-3">
+                      {p}
+                    </p>
+                  ))}
+                </div>
+              ))
+            ) : (
+              <div>
+                <h2 className="h3 fw-bold text-white mt-5 mb-3">
+                  1. The Modern Paradigm Shift in Digital Growth
+                </h2>
+                <p>
+                  In today's hyper-competitive digital landscape, relying on cookie-cutter templates or superficial marketing campaigns no longer delivers consistent results. Modern search engines like Google — powered by AI Overviews and Helpful Content systems — prioritize technical excellence, verified structured data, and authentic expertise (E-E-A-T).
+                </p>
+                <p>
+                  Whether you operate a local business in Bihar or an enterprise technology company competing globally, achieving dominance requires a coordinated architecture encompassing server-side rendering, sub-second Core Web Vitals, and intent-driven content clusters.
+                </p>
+              </div>
+            )}
+
             <div
               className="p-4 rounded-3 my-4"
               style={{ background: 'rgba(253, 106, 2, 0.08)', borderLeft: '4px solid #FD6A02' }}
             >
-              <h4 className="h6 fw-bold mb-2" style={{ color: '#FD6A02' }}>Pro Tip from MaaJanki Web Tech:</h4>
+              <h4 className="h6 fw-bold mb-2" style={{ color: '#FD6A02' }}>Pro Architecture Tip from MaaJanki Web Tech:</h4>
               <p className="mb-0" style={{ fontSize: '15px' }}>
-                Always inject complete Schema.org JSON-LD structured data (Organization, LocalBusiness, FAQPage, BreadcrumbList) directly into server-rendered markup so crawler bots can index entities instantly without executing expensive client-side JavaScript.
+                Always inject complete Schema.org JSON-LD structured data (Organization, LocalBusiness, FAQPage, BreadcrumbList) directly into server-rendered markup so crawler bots and AI search models can verify your entities without executing expensive client-side scripts.
               </p>
             </div>
-
-            <h2 className="h3 fw-bold text-white mt-5 mb-3">
-              3. Taking Your Next Step
-            </h2>
-            <p>
-              Ready to scale your business with custom web development, high-converting SEO, and data-backed performance marketing? Contact the MaaJanki Web Tech engineering team today for a comprehensive digital audit.
-            </p>
 
             <div className="mt-5 p-4 rounded-4 text-center" style={{ background: '#042544', border: '1px solid #FD6A02' }}>
               <h3 className="h4 fw-bold text-white mb-2">Grow Your Business with MaaJanki Web Tech</h3>

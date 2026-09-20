@@ -18,22 +18,52 @@ export const metadata = {
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://maajankiwebtech.com/images/pages/main-services-pages/branding-banner-image-Maajanki-Web-Tech.webp",
+        width: 1200,
+        height: 630,
+        alt: "Logo Design & Corporate Branding Services in India | MaaJanki Web Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Logo Design & Corporate Branding Services in India & Global | MaaJanki Web Tech",
     description: "Build a world-class brand identity with expert logo design and corporate branding services.",
+    images: ["https://maajankiwebtech.com/images/pages/main-services-pages/branding-banner-image-Maajanki-Web-Tech.webp"],
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/branding",
+    languages: {
+      "en-IN": "https://maajankiwebtech.com/services/branding",
+      "x-default": "https://maajankiwebtech.com/services/branding",
+    },
   },
 };
 
 export default function Page() {
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://maajankiwebtech.com/services/branding#webpage",
+    "url": "https://maajankiwebtech.com/services/branding",
+    "name": "Logo Design & Corporate Branding Services in India & Global | MaaJanki Web Tech",
+    "description": "Build a world-class brand identity with expert logo design, corporate branding, visual guidelines, and brand strategy.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://maajankiwebtech.com/#website",
+      "name": "MaaJanki Web Tech",
+      "url": "https://maajankiwebtech.com/"
+    },
+    "inLanguage": "en-IN"
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://maajankiwebtech.com/services/branding/#service",
+    "@id": "https://maajankiwebtech.com/services/branding#service",
+    "url": "https://maajankiwebtech.com/services/branding",
     "name": "Logo Design & Corporate Branding Services",
     "provider": {
       "@id": "https://maajankiwebtech.com/#organization"
@@ -88,6 +118,10 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

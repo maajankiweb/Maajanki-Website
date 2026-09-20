@@ -26,6 +26,13 @@ export default clerkMiddleware(async (auth, req) => {
     return blockedRes;
   }
 
+  // 0.1 Clean legacy spam scraping query params (e.g. ?shopdetail/...) to canonical clean URLs
+  if (req.nextUrl.search && req.nextUrl.search.includes('shopdetail')) {
+    const cleanUrl = new URL(pathname, req.url);
+    cleanUrl.search = '';
+    return NextResponse.redirect(cleanUrl, 301);
+  }
+
   // 1. Guard all /admin routes
   if (pathname.startsWith('/admin')) {
     try {

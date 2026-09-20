@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Google Ads & PPC Agency in India | Performance Marketing | MaaJanki Web Tech",
+  title: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
   description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in India. Certified PPC and performance marketing agency for scalable growth.",
   keywords: [
     "Google Ads agency India",
@@ -14,17 +14,26 @@ export const metadata = {
     "MaaJanki Web Tech PPC"
   ],
   openGraph: {
-    title: "Google Ads & PPC Agency in India | Performance Marketing | MaaJanki Web Tech",
+    title: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
     description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in India.",
     url: "https://maajankiwebtech.com/services/performance-marketing",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://maajankiwebtech.com/images/pages/main-services-pages/performance-marketing-banner-image-Maajanki-Web-Tech.webp",
+        width: 1200,
+        height: 630,
+        alt: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Google Ads & PPC Agency in India | Performance Marketing | MaaJanki Web Tech",
+    title: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
     description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in India.",
+    images: ["https://maajankiwebtech.com/images/pages/main-services-pages/performance-marketing-banner-image-Maajanki-Web-Tech.webp"],
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/performance-marketing",
@@ -35,7 +44,8 @@ export default function Page() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://maajankiwebtech.com/services/performance-marketing/#service",
+    "@id": "https://maajankiwebtech.com/services/performance-marketing#service",
+    "url": "https://maajankiwebtech.com/services/performance-marketing",
     "name": "Performance Marketing & PPC Advertising Services",
     "provider": {
       "@id": "https://maajankiwebtech.com/#organization"
@@ -87,8 +97,31 @@ export default function Page() {
     ]
   };
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://maajankiwebtech.com/services/performance-marketing#webpage",
+    "url": "https://maajankiwebtech.com/services/performance-marketing",
+    "name": "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
+    "inLanguage": "en-IN",
+    "dateModified": "2026-09-20",
+    "isPartOf": {
+      "@id": "https://maajankiwebtech.com/#website"
+    },
+    "about": {
+      "@id": "https://maajankiwebtech.com/#organization"
+    },
+    "mainEntity": {
+      "@id": "https://maajankiwebtech.com/services/performance-marketing#service"
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

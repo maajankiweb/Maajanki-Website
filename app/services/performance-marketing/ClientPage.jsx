@@ -28,7 +28,7 @@ const PerformanceMarketing = () => {
           "description": "ROI-focused performance marketing services including Google Ads PPC, Meta paid social, conversion tracking, retargeting, and landing page optimization.",
           "url": "https://maajankiwebtech.com/services/performance-marketing",
           "image": "https://maajankiwebtech.com/assets/og-image-performance.jpg",
-          "priceRange": "$",
+          "priceRange": "₹₹",
           "areaServed": [
             { "@type": "Country", "name": "India" },
             { "@type": "Country", "name": "United States" },
@@ -66,7 +66,7 @@ const PerformanceMarketing = () => {
         <div className="banner-overlay">
           <div className="banner-content">
             <h1>
-              Google Ads &amp; PPC Management Services in Bihar &amp; India | Performance Marketing Agency
+              Google Ads &amp; Performance Marketing Agency in Bihar &amp; India
             </h1>
             <div className="aeo-definition-box">
               <p>
@@ -193,7 +193,7 @@ const PerformanceMarketing = () => {
                     margin: 0,
                   }}
                 >
-                  We conduct detailed customer persona audits, configure advanced tracking tags, write compelling ad copies, and perform A/B tests to optimize Return on Ad Spend (ROAS) and capture ready-to-buy consumers efficiently.
+                  We conduct detailed customer persona audits, configure advanced tracking tags, write compelling ad copies, and perform A/B tests to optimize Return on Ad Spend (ROAS) and capture ready-to-buy consumers efficiently. Complement paid campaigns with <Link href="/services/seo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>organic SEO services</Link> to achieve sustainable, full-funnel market dominance.
                 </p>
               </div>
             </div>
@@ -232,28 +232,19 @@ const PerformanceMarketing = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">
-                  1. Google Ads & Search Engine Marketing (SEM)
+                  1. Google Ads &amp; Search Engine Marketing (SEM)
                 </h2>
                 <h3 className="sub-heading">
                   Targeting High-Intent Search Queries to Capture Active Buyers
                 </h3>
                 <p className="content-text">
-                  <strong>Google Ads & Search Engine Marketing (SEM)</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized performance marketing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Google Search Ads connect your business to users actively searching for what you offer — reaching buyers at the exact moment of purchase intent. We build campaigns with tightly themed ad groups, structured keyword match types (exact match for control, broad match with smart bidding for scale), and Responsive Search Ads with 10–15 tested headline combinations.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>high-ROI paid advertising campaigns that highlight your products and drive direct conversions.</strong> By leveraging strategic audience targeting and ad creative testing, we ensure your performance marketing aligns with the algorithms and search behavior of advertising networks and search engines.
-                </p>
-                <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your data-driven ad campaigns</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Every campaign targets a verified ROAS goal, tracked through GA4 conversion events and Google Tag Manager. We build negative keyword lists from search term reports to eliminate wasteful spend and continuously refine bid strategies (Target CPA, Target ROAS, Maximize Conversions) based on live campaign data.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Drive measurable leads and scalable ROAS with data-backed paid advertising. Reach buyers the moment they search with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -288,28 +279,19 @@ const PerformanceMarketing = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">
-                  2. Meta Ads (Facebook & Instagram Advertising Agency)
+                  2. Meta Ads (Facebook &amp; Instagram Advertising Agency)
                 </h2>
                 <h3 className="sub-heading">
                   Utilizing Behavioral Demographics to Build Paid Social Funnels
                 </h3>
                 <p className="content-text">
-                  <strong>Meta Ads (Facebook & Instagram Advertising Agency)</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized performance marketing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Meta Ads reach buyers during awareness and consideration phases using behavioral and demographic targeting. Our approach builds a complete paid social funnel: cold audience campaigns using interest-based and Lookalike Audiences; mid-funnel engagement retargeting (website visitors, video viewers, lead form openers); and bottom-funnel conversion campaigns optimized for form submissions or purchases.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>high-ROI paid advertising campaigns that highlight your products and drive direct conversions.</strong> By leveraging strategic audience targeting and ad creative testing, we ensure your performance marketing aligns with the algorithms and search behavior of advertising networks and search engines.
-                </p>
-                <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your data-driven ad campaigns</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  We test 3–5 creative variations per audience — image vs video, single image vs carousel, different headlines — and scale ad sets where cost-per-lead meets target. All campaigns use the Meta Conversions API alongside Pixel for reliable attribution in a cookieless environment.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Meet your buyers where they scroll — build a Meta Ads funnel that converts.</strong>
                 </span>
               </div>
             </div>
@@ -344,29 +326,16 @@ const PerformanceMarketing = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">
-                  3. Conversion Rate Optimization (CRO) & Funnel Auditing
+                  3. CRO — Conversion Rate Optimization
                 </h2>
                 <h3 className="sub-heading">
-                  Designing High-Performing User Journeys to Maximize
-                  Click-to-Lead Rates
+                  Designing High-Performing User Journeys to Maximize Click-to-Lead Rates
                 </h3>
                 <p className="content-text">
-                  <strong>Conversion Rate Optimization (CRO) & Funnel Auditing</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized performance marketing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
-                </p>
-                <p className="content-text">
-                  We specialize in <strong>high-ROI paid advertising campaigns that highlight your products and drive direct conversions.</strong> By leveraging strategic audience targeting and ad creative testing, we ensure your performance marketing aligns with the algorithms and search behavior of advertising networks and search engines.
-                </p>
-                <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your data-driven ad campaigns</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  CRO maximizes the value of your existing traffic by improving the percentage of visitors who take a desired action. Our CRO process: heatmap and session recording analysis (Microsoft Clarity) to identify drop-off points; A/B tests for headlines, button colors, and form layouts; form optimization (reduce fields, add social proof near CTA); page speed audit (LCP &lt; 2.5s, INP &lt; 200ms, CLS &lt; 0.1); and GA4 funnel analysis to identify conversion bottlenecks across your full acquisition flow.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>More leads without more ad spend — unlock your conversion rate potential.</strong>
                 </span>
               </div>
             </div>
@@ -407,22 +376,16 @@ const PerformanceMarketing = () => {
                   Re-Engaging Website Visitors to Recapture Warm Audiences
                 </h3>
                 <p className="content-text">
-                  <strong>Precision Retargeting & Remarketing Campaigns</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized performance marketing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Retargeting re-engages visitors who have already shown interest in your business — the warm audience most likely to convert — by serving them targeted ads across Google Display Network, YouTube, and Meta platforms. Research shows retargeted visitors convert <strong>70% more often</strong> than cold audiences, making remarketing one of the highest-ROAS activities in any paid media mix.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>high-ROI paid advertising campaigns that highlight your products and drive direct conversions.</strong> By leveraging strategic audience targeting and ad creative testing, we ensure your performance marketing aligns with the algorithms and search behavior of advertising networks and search engines.
+                  We build segmented retargeting audiences by behavior: visitors who viewed a specific service page (serve ads for that exact service), visitors who reached the contact page but did not submit (serve a friction-reduction offer), and past customers (serve <strong>cross-sell or renewal ads</strong> with time-based triggers).
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your data-driven ad campaigns</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Retargeting frequency is managed with <strong>ad frequency caps</strong> to prevent audience fatigue — ensuring your ads feel helpful rather than intrusive. Campaign duration is set based on your sales cycle length, from 7-day quick-buy cycles to 90-day enterprise decision timelines.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Re-engage the 97% who left without converting — set up your retargeting funnel.</strong>
                 </span>
               </div>
             </div>
@@ -463,22 +426,16 @@ const PerformanceMarketing = () => {
                   Connecting Your Brand with Key Corporate Decision-Makers
                 </h3>
                 <p className="content-text">
-                  <strong>B2B Lead Generation & LinkedIn Ads</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized performance marketing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  LinkedIn Ads are the most effective paid channel for B2B lead generation — reaching decision-makers by job title, seniority, company size, and industry with precision no other platform offers. We build <strong>LinkedIn campaign funnels</strong> covering awareness (Thought Leadership ads, Document Ads), consideration (Video Ads, Conversation Ads), and conversion (Lead Gen Form Ads with native in-platform submission).
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>high-ROI paid advertising campaigns that highlight your products and drive direct conversions.</strong> By leveraging strategic audience targeting and ad creative testing, we ensure your performance marketing aligns with the algorithms and search behavior of advertising networks and search engines.
+                  For B2B lead generation across all channels, we combine Google Search Ads for active query intent, Meta Ads for retargeting decision-makers who visited your website, and email nurture sequences triggered by lead magnet downloads — creating a <strong>coordinated multi-channel acquisition system</strong> that builds your sales pipeline consistently.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your data-driven ad campaigns</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Every B2B lead captured is routed to your CRM with full <strong>attribution data</strong> — platform, campaign, ad creative, landing page, and form — so your sales team knows exactly what triggered the inquiry and can personalize their outreach accordingly.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Reach the decision-makers who buy — launch your B2B LinkedIn campaign today.</strong>
                 </span>
               </div>
             </div>
@@ -520,22 +477,16 @@ const PerformanceMarketing = () => {
                   ROAS
                 </h3>
                 <p className="content-text">
-                  <strong>eCommerce Product Advertising (Google Shopping & PMax)</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized performance marketing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Google Shopping Ads place your products directly in front of buyers searching for them — with product image, price, and store name visible before they click. We build and optimize your <strong>Google Merchant Center product feed</strong>: accurate titles with primary keywords, detailed descriptions, correct GTINs, high-resolution images, and competitive pricing signals that determine ad placement and CPC.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>high-ROI paid advertising campaigns that highlight your products and drive direct conversions.</strong> By leveraging strategic audience targeting and ad creative testing, we ensure your performance marketing aligns with the algorithms and search behavior of advertising networks and search engines.
+                  <strong>Performance Max (PMax) campaigns</strong> extend your product ads across all Google channels — Search, Shopping, Display, YouTube, Gmail, and Maps — using Google&apos;s AI to allocate budget to the highest-converting placements. We structure PMax asset groups by product category, audience signal, and creative variation to give the algorithm the clearest optimization signal.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your data-driven ad campaigns</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  ROAS tracking is configured end-to-end: <strong>GA4 e-commerce purchase events &rarr; Google Ads conversion import &rarr; automated bid strategy</strong> set to target ROAS — ensuring every product category bids efficiently for its own margin profile, not a one-size-fits-all campaign structure.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Put your products in front of ready-to-buy shoppers — optimize your Shopping campaigns.</strong>
                 </span>
               </div>
             </div>
@@ -577,22 +528,16 @@ const PerformanceMarketing = () => {
                   Direct-Response Action
                 </h3>
                 <p className="content-text">
-                  <strong>YouTube Video Ads & Interactive Display Advertising</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized performance marketing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  YouTube Video Ads are the most powerful tool for building brand trust at scale — with 2.7 billion active users and the ability to target by search history, channel subscriptions, and demographic profiles. We produce and manage <strong>TrueView in-stream ads</strong> (skippable after 5 seconds), non-skippable bumper ads (6-second, 100% completion), and Discovery ads appearing in YouTube search results alongside organic videos.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>high-ROI paid advertising campaigns that highlight your products and drive direct conversions.</strong> By leveraging strategic audience targeting and ad creative testing, we ensure your performance marketing aligns with the algorithms and search behavior of advertising networks and search engines.
+                  Google Display Network (GDN) ads reach your audience across 35 million websites and apps with visual banner and responsive display ads. We design <strong>responsive creatives</strong> in all standard IAB sizes, test multiple visual and copy variations, and use placements targeting, contextual targeting, and audience targeting simultaneously to minimize wasted impressions.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your data-driven ad campaigns</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  <strong>View-through conversion tracking</strong> measures the impact of display and video ads on users who saw your ad but converted later through a different channel — giving you a complete attribution picture of how upper-funnel awareness campaigns contribute to bottom-funnel conversions over 7 and 30-day windows.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build brand recall and demand at scale — launch your video advertising campaign.</strong>
                 </span>
               </div>
             </div>
@@ -633,22 +578,16 @@ const PerformanceMarketing = () => {
                   Tracking Conversion Events to Measure Exact Marketing ROI
                 </h3>
                 <p className="content-text">
-                  <strong>Analytics Setup & GA4 Attribution Mapping</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized performance marketing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Accurate analytics is the foundation of every performance marketing decision. We configure <strong>Google Analytics 4</strong> with a complete event taxonomy: page views, scroll depth, outbound link clicks, form starts, form submissions, phone number clicks, video plays, and e-commerce purchase events — giving you a conversion-attributed view of every user interaction on your website.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>high-ROI paid advertising campaigns that highlight your products and drive direct conversions.</strong> By leveraging strategic audience targeting and ad creative testing, we ensure your performance marketing aligns with the algorithms and search behavior of advertising networks and search engines.
+                  We implement <strong>Google Tag Manager</strong> containers to manage all tracking tags without requiring developer code changes for each update. GTM enables rapid deployment of GA4 events, Google Ads conversion tags, Meta Pixel, LinkedIn Insight Tag, and Microsoft Clarity — all from a single interface with version control and rollback capability.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your data-driven ad campaigns</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  For multi-channel campaigns, we configure <strong>GA4 data-driven attribution modeling</strong> — moving beyond last-click to understand the full contribution of awareness (YouTube, Display), consideration (Meta, remarketing), and conversion (Search, Shopping) touchpoints. This ensures budget is allocated to the campaigns that actually drive business, not just those that get the last click.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>You can&apos;t optimize what you can&apos;t measure — get your analytics stack built right.</strong>
                 </span>
               </div>
             </div>
@@ -685,22 +624,59 @@ const PerformanceMarketing = () => {
                 <h2 className="main-heading">9. GEO & AEO for Landing Pages</h2>
                 <h3 className="sub-heading">Formatting Ad Content to Be Indexed and Cited by AI Answer Engines</h3>
                 <p className="content-text">
-                  <strong>GEO & AEO for Landing Pages</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized performance marketing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Every paid media campaign landing page benefits from GEO and AEO structuring — ensuring the page content is not only optimized for Google Ads Quality Score but also <strong>readable and citation-worthy</strong> for AI engines like Perplexity, ChatGPT Search, and Google AI Overviews that increasingly surface service recommendations.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>high-ROI paid advertising campaigns that highlight your products and drive direct conversions.</strong> By leveraging strategic audience targeting and ad creative testing, we ensure your performance marketing aligns with the algorithms and search behavior of advertising networks and search engines.
+                  We apply <strong>direct-answer content formatting</strong> to landing pages: placing the core value proposition in the first paragraph, using FAQ schema for common buyer questions, and structuring benefit lists as semantic HTML so AI crawlers extract accurate claims about your service. This simultaneously improves organic CTR and strengthens AI citation eligibility.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your data-driven ad campaigns</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Landing pages built for performance campaigns also receive <strong>structured data markup</strong> — Service schema, FAQPage schema, and BreadcrumbList — ensuring that even paid-traffic destination pages contribute to your brand&apos;s overall entity authority and are discoverable through non-paid AI search channels.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Make every landing page work harder — optimized for paid traffic and AI discovery.</strong>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Section 10 */}
+        <div
+          style={{
+            width: "100%",
+            background: "linear-gradient(315deg, #042544 0%, #FD6A02 100%)",
+            }}
+        >
+          <div className="showcase-container">
+            <div className="showcase-grid" style={{ direction: "rtl" }}>
+              <div className="visual-area" style={{ justifyContent: "flex-start" }} data-aos="fade-up-right">
+                <div className="image-container">
+                  <div className="main-image">
+                    <Image
+                      src="/images/all-pages-section-image/performance-marketing/why-choose-us-performance-marketing-maajanki.webp"
+                      alt="Landing page development and conversion optimization by MaaJanki Web Tech"
+                      title="Landing Page Development & Optimization"
+                      loading="lazy"
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        borderRadius: "12px",
+                      }}
+                     width={600} height={400} />
+                  </div>
+                </div>
+              </div>
+              <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
+                <h2 className="main-heading">10. Landing Page Design &amp; Optimization</h2>
+                <h3 className="sub-heading">Engineering Sub-Second Direct-Response Landing Pages to Maximize Google &amp; Meta Quality Scores</h3>
+                <p className="content-text">
+                  Every ad campaign needs a dedicated landing page — not your homepage. Sending paid traffic to a generic page destroys Quality Score and wastes budget. Through our high-performance <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>dedicated landing pages</Link>, we design conversion-optimized landing pages with a single clear CTA, above-the-fold trust signals (client logos, review scores, credentials), minimal form fields, and page-specific GA4 conversion tracking.
+                </p>
+                <p className="content-text">
+                  Our landing pages are built in Next.js for sub-1-second mobile load times — a direct Google Ads Quality Score factor — and are A/B tested for headlines, CTA text, and form length to continuously improve conversion rate.
+                </p>
+                <span className="content-cta">
+                  <strong>Transform paid clicks into profitable customers — build custom performance landing pages with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>

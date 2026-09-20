@@ -608,33 +608,17 @@ function Home() {
               </h2>
 
               <p className="content-text">
-                <strong>MaaJanki Web Tech</strong> is a premier digital
-                marketing and website development company, headquartered in
-                Bihar, India, serving clients across India and globally. We help businesses,
-                startups, SMEs, and established brands build a powerful online presence
-                through remote collaboration, time-zone aligned communication, and expert SEO,
-                web design, social media marketing, Google Ads, branding, and graphic design.
+                <strong>MaaJanki Web Tech</strong> is the top-rated <strong>digital marketing agency in Bihar</strong> and premier <strong>web development company in Bihar</strong>, headquartered in Bagaha and serving clients across Patna, Bettiah, all of India, and globally. If you are searching for a trusted <strong>web designer near me</strong>, a dedicated <strong>web designer near Bagaha, Bettiah</strong>, or the leading <strong>web tech company in Bihar</strong>, we build high-performance, conversion-engineered digital systems.
               </p>
 
               <div className="services-highlight">
                 <p className="content-text">
-                  From custom website development services to complete digital
-                  marketing services SEO, PPC/Google Ads, social media marketing
-                  (SMO), content writing, performance marketing and branding our
-                  expert team in Bihar works closely with you to rank on Google,
-                  attract high-quality leads, and drive real business growth
-                  across India.
+                  From custom Next.js <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>website development services</Link> and WordPress solutions to full-funnel digital marketing services—including AI-first SEO (AEO &amp; GEO), Google Ads PPC, Meta ads, social media optimization (SMO), and high-converting landing page engineering—our multidisciplinary team works closely with you to rank #1 on Google, capture high-value buyer intent, and scale revenue.
                 </p>
               </div>
 
               <p className="content-text">
-                Whether you are a startup in Bihar, an SME across India, or a
-                brand looking to expand globally,{" "}
-                <strong>MaaJanki Web Tech</strong> is your trusted digital
-                growth partner. If you need the best website development company
-                or digital marketing agency in Bihar, India get a{" "}
-                <strong>free consultation today</strong> and let's grow your
-                business together.
+                Whether you need a specialized <strong>website designer in Bettiah</strong>, an enterprise-grade <strong>website designer in Patna</strong>, or the <strong>best digital marketing agency in Bihar</strong> for pan-India and international business expansion, <strong>MaaJanki Web Tech</strong> is your verified growth partner. Contact us today for a <strong>free 30-minute consultation</strong> and let us accelerate your digital presence.
               </p>
 
               <div style={{ textAlign: "center" }}>
@@ -952,9 +936,7 @@ function Home() {
                   What We Can Do for Your Business
                 </h2>
                 <p className="lead" style={{ color: "#fff" }}>
-                  <strong>MaaJanki Web Tech</strong> offers complete website
-                  development and digital marketing services designed to help
-                  brands grow online.
+                  <strong>MaaJanki Web Tech</strong> offers complete <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>website development services</Link>, high-ranking <Link href="/services/seo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>SEO and AEO services</Link>, data-backed <Link href="/services/performance-marketing" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>performance marketing services</Link>, and scalable <Link href="/services/smo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>social media marketing</Link> designed to help brands grow online.
                 </p>
               </div>
             </div>

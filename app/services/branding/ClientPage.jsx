@@ -28,7 +28,7 @@ const Branding = () => {
           "description": "Professional brand identity design, logo design, brand positioning strategies, corporate copywriting, and rebranding solutions for startups and corporate entities.",
           "url": "https://maajankiwebtech.com/services/branding",
           "image": "https://maajankiwebtech.com/assets/og-image-branding.jpg",
-          "priceRange": "$",
+          "priceRange": "₹₹",
           "areaServed": [
             { "@type": "Country", "name": "India" },
             { "@type": "State", "name": "Bihar" }
@@ -203,24 +203,20 @@ const Branding = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">1. Detailed Brand Discovery & Strategy</h2>
-                <h3 className="sub-heading">Defining Brand Vision, Target Audience, and Market Positioning</h3>
+                <h3 className="sub-heading">
+                  Defining Brand Vision, Target Audience, and Market Positioning
+                </h3>
                 <p className="content-text">
-                  Establishing a cohesive brand identity for <strong>Detailed Brand Discovery & Strategy</strong> is a vital corporate framework that connects your business with target clients and builds market authority. In a competitive digital environment, standing out with a well-optimized strategy is necessary to attract high-value leads.
+                  Strategic brand discovery sets the foundational narrative for your business. We analyze your industry landscape, core value proposition, customer personas, and competitive differentiation to establish a sustainable brand strategy that resonates with enterprise and retail buyers.
                 </p>
                 <p className="content-text">
-                  We specialize in creating professional, <strong>visual assets and identity structures that highlight your products and services.</strong> From category placements to font guides, we ensure that your branding is aligned with buyer search behaviors, utilizing tools like Adobe Illustrator, Photoshop, and Figma.
+                  We define tone of voice, visual positioning, brand archetypes, and messaging pillars. Every asset aligns with commercial search behavior and market perceptions, ensuring consistent recall across digital and physical touchpoints.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to promote your discovery visibility. We focus on naturalness and accuracy to build credibility, establish brand trust, and encourage inquiries from prospective clients.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, MaaJanki Web Tech helps you create a conversion-centered digital appearance. We make sure that your company profile and services pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your visual brand identity becomes a lead-generation tool, which helps you expand the access of your B2B business</strong> We coordinate directly with your teams to customize visual materials, standardize templates, and moni
+                  Grounded in cognitive recall and clarity, our strategy equips your leadership team with actionable frameworks that guide future marketing, product launches, and investor presentations.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build a distinctive brand identity that commands market trust with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -240,24 +236,20 @@ const Branding = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">2. Custom Logo Design & Typography</h2>
-                <h3 className="sub-heading">Crafting Visual Marks Built for High Recall and Memorability</h3>
+                <h3 className="sub-heading">
+                  Crafting Visual Marks Built for High Recall and Memorability
+                </h3>
                 <p className="content-text">
-                  Establishing a cohesive brand identity for <strong>Custom Logo Design & Typography</strong> is a vital corporate framework that connects your business with target clients and builds market authority. In a competitive digital environment, standing out with a well-optimized strategy is necessary to attract high-value leads.
+                  A distinctive logo is the anchor of brand authority. We design bespoke logomarks, wordmarks, and responsive brand symbols that scale seamlessly from a 16px favicon to expansive outdoor billboards and corporate signage.
                 </p>
                 <p className="content-text">
-                  We specialize in creating professional, <strong>visual assets and identity structures that highlight your products and services.</strong> From category placements to font guides, we ensure that your branding is aligned with buyer search behaviors, utilizing tools like Adobe Illustrator, Photoshop, and Figma.
+                  We curate custom typography pairings—primary display fonts, body typography, and accent lettering—balancing legibility, modern aesthetics, and emotional resonance across both web and mobile screens.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to promote your discovery visibility. We focus on naturalness and accuracy to build credibility, establish brand trust, and encourage inquiries from prospective clients.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, MaaJanki Web Tech helps you create a conversion-centered digital appearance. We make sure that your company profile and services pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your visual brand identity becomes a lead-generation tool, which helps you expand the access of your B2B business</strong> We coordinate directly with your teams to customize visual materials, standardize templates, and monitor
+                  Delivered with complete vector packages (SVG, EPS, PDF, high-res PNG) and strict clear-space specifications to safeguard your identity across every application.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build a distinctive brand identity that commands market trust with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -277,24 +269,20 @@ const Branding = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">3. Comprehensive Brand Guidelines</h2>
-                <h3 className="sub-heading">Maintaining Design Consistency Across All Platforms</h3>
+                <h3 className="sub-heading">
+                  Standardizing Brand Rules, Color Palettes, and Asset Usage
+                </h3>
                 <p className="content-text">
-                  Establishing a cohesive brand identity for <strong>Comprehensive Brand Guidelines</strong> is a vital corporate framework that connects your business with target clients and builds market authority. In a competitive digital environment, standing out with a well-optimized strategy is necessary to attract high-value leads.
+                  Brand consistency across channels builds consumer trust. We produce comprehensive corporate brand books that define exact CMYK, RGB, HEX, and Pantone color codes, iconography rules, grid systems, and imagery guidelines.
                 </p>
                 <p className="content-text">
-                  We specialize in creating professional, <strong>visual assets and identity structures that highlight your products and services.</strong> From category placements to font guides, we ensure that your branding is aligned with buyer search behaviors, utilizing tools like Adobe Illustrator, Photoshop, and Figma.
+                  Your internal designers, marketing agencies, and external vendors receive unambiguous rules on logo misuse, minimum sizing, background contrasts, and typography hierarchies.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to promote your discovery visibility. We focus on naturalness and accuracy to build credibility, establish brand trust, and encourage inquiries from prospective clients.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, MaaJanki Web Tech helps you create a conversion-centered digital appearance. We make sure that your company profile and services pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your visual brand identity becomes a lead-generation tool, which helps you expand the access of your B2B business</strong> We coordinate directly with your teams to customize visual materials, standardize templates, and monitor o
+                  Maintain brand integrity across social media, pitch decks, corporate documents, and digital advertising without deviation.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build a distinctive brand identity that commands market trust with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -314,24 +302,20 @@ const Branding = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">4. Corporate Stationery & Print Design</h2>
-                <h3 className="sub-heading">Designing Professional Collaterals for Physical Touchpoints</h3>
+                <h3 className="sub-heading">
+                  Tangible Marketing Collateral Engineered for Executive Impact
+                </h3>
                 <p className="content-text">
-                  Establishing a cohesive brand identity for <strong>Corporate Stationery & Print Design</strong> is a vital corporate framework that connects your business with target clients and builds market authority. In a competitive digital environment, standing out with a well-optimized strategy is necessary to attract high-value leads.
+                  Professional stationery reinforces corporate legitimacy during high-stakes business meetings. We design premium business cards, letterheads, invoice templates, corporate presentation folders, and email signatures.
                 </p>
                 <p className="content-text">
-                  We specialize in creating professional, <strong>visual assets and identity structures that highlight your products and services.</strong> From category placements to font guides, we ensure that your branding is aligned with buyer search behaviors, utilizing tools like Adobe Illustrator, Photoshop, and Figma.
+                  Every physical asset is designed with print-ready precision—including bleed margins, crop marks, and spot UV or embossing specifications tailored for luxury paper stocks.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to promote your discovery visibility. We focus on naturalness and accuracy to build credibility, establish brand trust, and encourage inquiries from prospective clients.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, MaaJanki Web Tech helps you create a conversion-centered digital appearance. We make sure that your company profile and services pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your visual brand identity becomes a lead-generation tool, which helps you expand the access of your B2B business</strong> We coordinate directly with your teams to customize visual materials, standardize templates, and moni
+                  Leave a lasting impression on clients, partners, and stakeholders with cohesive tactile branding.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build a distinctive brand identity that commands market trust with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -351,24 +335,20 @@ const Branding = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">5. Naming & Tagline Development</h2>
-                <h3 className="sub-heading">Creating Catchy Names Built to Resonate with Customers</h3>
+                <h3 className="sub-heading">
+                  Memorable Brand Nomenclature and Punchy Value Statements
+                </h3>
                 <p className="content-text">
-                  Establishing a cohesive brand identity for <strong>Naming & Tagline Development</strong> is a vital corporate framework that connects your business with target clients and builds market authority. In a competitive digital environment, standing out with a well-optimized strategy is necessary to attract high-value leads.
+                  Developing a compelling brand name requires linguistic ingenuity, trademark feasibility research, and digital domain availability. We ideate brand names that are pronounceable, culturally positive, and memorable.
                 </p>
                 <p className="content-text">
-                  We specialize in creating professional, <strong>visual assets and identity structures that highlight your products and services.</strong> From category placements to font guides, we ensure that your branding is aligned with buyer search behaviors, utilizing tools like Adobe Illustrator, Photoshop, and Figma.
+                  Alongside name development, we craft punchy taglines and positioning statements that communicate your primary differentiator in three to six impactful words.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to promote your discovery visibility. We focus on naturalness and accuracy to build credibility, establish brand trust, and encourage inquiries from prospective clients.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, MaaJanki Web Tech helps you create a conversion-centered digital appearance. We make sure that your company profile and services pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your visual brand identity becomes a lead-generation tool, which helps you expand the access of your B2B business</strong> We coordinate directly with your teams to customize visual materials, standardize templates, and monitor org
+                  We verify domain name availability across global and Indian TLDs (.com, .in) and assess preliminary trademark registers to protect your brand equity.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build a distinctive brand identity that commands market trust with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -388,24 +368,20 @@ const Branding = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">6. Brand Storytelling & Copywriting</h2>
-                <h3 className="sub-heading">Drafting Brand Narratives that Engage and Convert Users</h3>
+                <h3 className="sub-heading">
+                  Articulating Brand Purpose and Emotional Resonance
+                </h3>
                 <p className="content-text">
-                  Establishing a cohesive brand identity for <strong>Brand Storytelling & Copywriting</strong> is a vital corporate framework that connects your business with target clients and builds market authority. In a competitive digital environment, standing out with a well-optimized strategy is necessary to attract high-value leads.
+                  Compelling narratives transform passive audiences into passionate brand advocates. We articulate your company origin, mission, core values, and customer commitment into persuasive brand stories.
                 </p>
                 <p className="content-text">
-                  We specialize in creating professional, <strong>visual assets and identity structures that highlight your products and services.</strong> From category placements to font guides, we ensure that your branding is aligned with buyer search behaviors, utilizing tools like Adobe Illustrator, Photoshop, and Figma.
+                  From "About Us" narratives and founder manifestos to executive bios and corporate mission statements, we craft authentic copy that highlights your genuine industry expertise.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to promote your discovery visibility. We focus on naturalness and accuracy to build credibility, establish brand trust, and encourage inquiries from prospective clients.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, MaaJanki Web Tech helps you create a conversion-centered digital appearance. We make sure that your company profile and services pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your visual brand identity becomes a lead-generation tool, which helps you expand the access of your B2B business</strong> We coordinate directly with your teams to customize visual materials, standardize templates, and monitor
+                  Differentiate your organization on human connection, ethical values, and technological innovation.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build a distinctive brand identity that commands market trust with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -425,24 +401,20 @@ const Branding = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">7. Rebranding & Visual Upgrades</h2>
-                <h3 className="sub-heading">Modernizing Outdated Corporate Identities for Modern Markets</h3>
+                <h3 className="sub-heading">
+                  Modernizing Legacy Brands for Digital-First Generations
+                </h3>
                 <p className="content-text">
-                  Establishing a cohesive brand identity for <strong>Rebranding & Visual Upgrades</strong> is a vital corporate framework that connects your business with target clients and builds market authority. In a competitive digital environment, standing out with a well-optimized strategy is necessary to attract high-value leads.
+                  When legacy companies evolve, their visual identity must reflect modern market leadership. We manage phased rebranding programs that modernize outdated logos, color schemes, and digital interfaces.
                 </p>
                 <p className="content-text">
-                  We specialize in creating professional, <strong>visual assets and identity structures that highlight your products and services.</strong> From category placements to font guides, we ensure that your branding is aligned with buyer search behaviors, utilizing tools like Adobe Illustrator, Photoshop, and Figma.
+                  Our rebranding roadmap safeguards existing brand equity and customer recognition while eliminating visual fatigue and repositioning your brand for premium market tiers.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to promote your discovery visibility. We focus on naturalness and accuracy to build credibility, establish brand trust, and encourage inquiries from prospective clients.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, MaaJanki Web Tech helps you create a conversion-centered digital appearance. We make sure that your company profile and services pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your visual brand identity becomes a lead-generation tool, which helps you expand the access of your B2B business</strong> We coordinate directly with your teams to customize visual materials, standardize templates, and monitor org
+                  We coordinate asset migration across web platforms, packaging, social profiles, and partner ecosystems with zero downtime or customer confusion.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build a distinctive brand identity that commands market trust with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -462,24 +434,20 @@ const Branding = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">8. GEO Integration for Corporate Brands</h2>
-                <h3 className="sub-heading">Helping AI Search Engines Verify Your Business Authority</h3>
+                <h3 className="sub-heading">
+                  Grounding Brand Entities in AI Answer Engines & Knowledge Graphs
+                </h3>
                 <p className="content-text">
-                  Establishing a cohesive brand identity for <strong>GEO Integration for Corporate Brands</strong> is a vital corporate framework that connects your business with target clients and builds market authority. In a competitive digital environment, standing out with a well-optimized strategy is necessary to attract high-value leads.
+                  Modern brand authority requires recognition by generative AI systems like ChatGPT, Claude, and Perplexity. We structure your corporate brand schema using Schema.org Organization markup, Wikidata entity linking, and verified Knowledge Graph references.
                 </p>
                 <p className="content-text">
-                  We specialize in creating professional, <strong>visual assets and identity structures that highlight your products and services.</strong> From category placements to font guides, we ensure that your branding is aligned with buyer search behaviors, utilizing tools like Adobe Illustrator, Photoshop, and Figma.
+                  We align brand descriptions, leadership credentials, registered trademarks, and official certifications (MSME, DPIIT) so AI engines cite your brand accurately as the authoritative industry leader.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to promote your discovery visibility. We focus on naturalness and accuracy to build credibility, establish brand trust, and encourage inquiries from prospective clients.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, MaaJanki Web Tech helps you create a conversion-centered digital appearance. We make sure that your company profile and services pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your visual brand identity becomes a lead-generation tool, which helps you expand the access of your B2B business</strong> We coordinate directly with your teams to customize visual materials, standardize templates, and mon
+                  Ensure your corporate identity dominates both traditional search engine rankings and conversational AI queries.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build a distinctive brand identity that commands market trust with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>

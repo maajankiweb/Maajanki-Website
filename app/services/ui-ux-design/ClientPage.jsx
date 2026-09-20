@@ -27,7 +27,7 @@ const UIUXDesign = () => {
           "description": "Professional user interface and user experience design including user research, wireframing, interactive prototyping, and usability audits.",
           "url": "https://maajankiwebtech.com/services/ui-ux-design",
           "image": "https://maajankiwebtech.com/assets/og-image-uiux.jpg",
-          "priceRange": "$",
+          "priceRange": "₹₹",
           "areaServed": [
             { "@type": "Country", "name": "India" },
             { "@type": "State", "name": "Bihar" }
@@ -212,25 +212,19 @@ const UIUXDesign = () => {
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">1. User-Centered UX Research</h2>
                 <h3 className="sub-heading" style={{ color: "#f5c518" }}>
-                  Analyzing Target Audience Needs, Pain Points, and Behaviors
+                  Uncovering Real User Pain Points Through Behavioral Auditing
                 </h3>
                 <p className="content-text">
-                  <strong>User-Centered UX Research</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized UI/UX design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  User experience begins with empirical discovery. We conduct user interviews, survey analytics, customer journey mapping, and competitor usability audits to identify behavioral friction points in your current digital flows.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>user-centric web layouts and mobile interfaces that highlight your products with premium usability.</strong> By leveraging interactive prototype building and user persona mapping, we ensure your UI/UX design aligns with the algorithms and search behavior of modern web browsers, apps, and user interaction standards.
+                  By translating customer motivations and drop-off patterns into actionable UX personas, we design interfaces that guide visitors seamlessly toward key conversion actions.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your streamlined user interface designs</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Eliminate guesswork with evidence-based user research that anchors every design decision in measurable customer needs.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Deliver intuitive digital journeys that delight users and boost conversions with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -261,25 +255,19 @@ const UIUXDesign = () => {
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">2. Low-Fidelity Wireframing</h2>
                 <h3 className="sub-heading" style={{ color: "#f5c518" }}>
-                  Structuring Information Hierarchy and Page Flows Cleanly
+                  Information Architecture and Layout Blueprints Grounded in Conversion Science
                 </h3>
                 <p className="content-text">
-                  <strong>Low-Fidelity Wireframing</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized UI/UX design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Before introducing colors or typography, we construct low-fidelity structural blueprints. These wireframes define content hierarchy, visual weighting, navigation systems, and CTA placement across screen sizes.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>user-centric web layouts and mobile interfaces that highlight your products with premium usability.</strong> By leveraging interactive prototype building and user persona mapping, we ensure your UI/UX design aligns with the algorithms and search behavior of modern web browsers, apps, and user interaction standards.
+                  Rapid wireframing allows your stakeholders to test layout logic, page flow, and user pathways without visual bias, ensuring total alignment on architectural priorities.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your streamlined user interface designs</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Build a solid architectural foundation that guarantees effortless user navigation.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Deliver intuitive digital journeys that delight users and boost conversions with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -312,25 +300,19 @@ const UIUXDesign = () => {
                   3. High-Fidelity Interactive Prototyping
                 </h2>
                 <h3 className="sub-heading" style={{ color: "#f5c518" }}>
-                  Building Clickable Mockups to Verify User Interaction Flows
+                  Clickable Figma Prototypes Simulating Exact Production Interactions
                 </h3>
                 <p className="content-text">
-                  <strong>High-Fidelity Interactive Prototyping</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized UI/UX design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  We transform structural blueprints into interactive, clickable prototypes in Figma. These prototypes faithfully replicate production hover states, micro-interactions, modal popups, and multi-step form journeys.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>user-centric web layouts and mobile interfaces that highlight your products with premium usability.</strong> By leveraging interactive prototype building and user persona mapping, we ensure your UI/UX design aligns with the algorithms and search behavior of modern web browsers, apps, and user interaction standards.
+                  Stakeholders and test users experience the full product flow before a single line of frontend code is written, drastically reducing development revisions and accelerating time-to-market.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your streamlined user interface designs</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Validate user journeys and interactive logic with high-fidelity production prototypes.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Deliver intuitive digital journeys that delight users and boost conversions with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -363,25 +345,19 @@ const UIUXDesign = () => {
                   4. Visual User Interface Design
                 </h2>
                 <h3 className="sub-heading" style={{ color: "#f5c518" }}>
-                  Designing Beautiful Visual Elements Aligned with Brand Guidelines
+                  Modern Design Systems Built with Accessibility and Brand Harmony
                 </h3>
                 <p className="content-text">
-                  <strong>Visual User Interface Design</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized UI/UX design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Our UI design delivers state-of-the-art aesthetic excellence: curated color palettes, elegant typography, glassmorphism cards, and atomic component libraries adhering to WCAG 2.1 AA accessibility standards.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>user-centric web layouts and mobile interfaces that highlight your products with premium usability.</strong> By leveraging interactive prototype building and user persona mapping, we ensure your UI/UX design aligns with the algorithms and search behavior of modern web browsers, apps, and user interaction standards.
+                  We build comprehensive design systems—including tokens for spacing, elevation, button variants, form states, and dark/light modes—that scale effortlessly across multi-page web applications.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your streamlined user interface designs</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Provide users with a visually stunning, premium digital environment that commands brand authority.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Deliver intuitive digital journeys that delight users and boost conversions with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -412,25 +388,19 @@ const UIUXDesign = () => {
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">5. Responsive UI/UX Layouts</h2>
                 <h3 className="sub-heading" style={{ color: "#f5c518" }}>
-                  Ensuring Cross-Device Consistency for Seamless Mobile Usability
+                  Cross-Device Fluidity Built for Mobile-First Experiences
                 </h3>
                 <p className="content-text">
-                  <strong>Responsive UI/UX Layouts</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized UI/UX design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Over 70% of digital interactions occur on mobile screens. We design mobile-first interfaces with thumb-friendly touch targets, sticky bottom navigation bars, and fluid layout scaling for tablets, laptops, and ultra-wide desktops.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>user-centric web layouts and mobile interfaces that highlight your products with premium usability.</strong> By leveraging interactive prototype building and user persona mapping, we ensure your UI/UX design aligns with the algorithms and search behavior of modern web browsers, apps, and user interaction standards.
+                  Every breakpoint is tested to prevent horizontal shifts, awkward line breaks, or cluttered input fields on compact viewports.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your streamlined user interface designs</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Ensure a consistent, frictionless brand experience on any device.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Deliver intuitive digital journeys that delight users and boost conversions with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -463,25 +433,19 @@ const UIUXDesign = () => {
                   6. Micro-Interactions & Animations
                 </h2>
                 <h3 className="sub-heading" style={{ color: "#f5c518" }}>
-                  Enhancing Navigation with Purposeful Transition Animations
+                  Subtle Interactive Feedback That Enhances Perceived Performance
                 </h3>
                 <p className="content-text">
-                  <strong>Micro-Interactions & Animations</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized UI/UX design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Micro-interactions make digital interfaces feel alive and responsive. We design subtle hover cues, smooth button feedback, progress bars, skeleton loaders, and page transition effects.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>user-centric web layouts and mobile interfaces that highlight your products with premium usability.</strong> By leveraging interactive prototype building and user persona mapping, we ensure your UI/UX design aligns with the algorithms and search behavior of modern web browsers, apps, and user interaction standards.
+                  Carefully timed animations provide visual confirmation for user actions, reduce perceived loading latency, and guide attention toward primary conversion buttons.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your streamlined user interface designs</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Delight users and elevate engagement with purposeful micro-animations.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Deliver intuitive digital journeys that delight users and boost conversions with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -514,25 +478,19 @@ const UIUXDesign = () => {
                   7. Usability Audits & Optimizations
                 </h2>
                 <h3 className="sub-heading" style={{ color: "#f5c518" }}>
-                  Reducing Interface Friction to Boost Customer Conversion Rates
+                  Heatmap Analysis and Drop-Off Diagnostics to Maximize Conversion Rates
                 </h3>
                 <p className="content-text">
-                  <strong>Usability Audits & Optimizations</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized UI/UX design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  For existing web applications and landing pages, we conduct comprehensive usability audits using heatmaps, scroll maps, and session recording analytics from Microsoft Clarity.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>user-centric web layouts and mobile interfaces that highlight your products with premium usability.</strong> By leveraging interactive prototype building and user persona mapping, we ensure your UI/UX design aligns with the algorithms and search behavior of modern web browsers, apps, and user interaction standards.
+                  We diagnose navigation bottlenecks, confusing form fields, and abandoned checkout steps, providing a prioritized remediation roadmap to increase completion rates.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your streamlined user interface designs</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Turn lost visitors into paying customers by fixing high-impact usability friction.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Deliver intuitive digital journeys that delight users and boost conversions with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -562,24 +520,20 @@ const UIUXDesign = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">8. GEO & AI Search Optimization for UX</h2>
-                <h3 className="sub-heading">Structuring Interface Layouts for AI Crawler Discovery and Citation</h3>
+                <h3 className="sub-heading">
+                  Semantic Content Layouts Optimized for Human Users and AI Engines
+                </h3>
                 <p className="content-text">
-                  <strong>GEO & AI Search Optimization for UX</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized UI/UX design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Modern UI/UX design must cater to both human visitors and AI answer engines. We design semantic HTML layouts, clear heading hierarchies (H1 to H4), and structured definition boxes that AI crawlers easily parse and cite.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>user-centric web layouts and mobile interfaces that highlight your products with premium usability.</strong> By leveraging interactive prototype building and user persona mapping, we ensure your UI/UX design aligns with the algorithms and search behavior of modern web browsers, apps, and user interaction standards.
+                  Direct-answer layout patterns guarantee that users find instant answers while AI engines extract clear brand citations for generative search queries.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your streamlined user interface designs</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Future-proof your web design for the era of conversational search and AI discovery.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Deliver intuitive digital journeys that delight users and boost conversions with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>

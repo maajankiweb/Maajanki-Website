@@ -18,22 +18,52 @@ export const metadata = {
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://maajankiwebtech.com/images/pages/main-services-pages/graphic-design-banner-image-Maajanki-Web-Tech.webp",
+        width: 1200,
+        height: 630,
+        alt: "Graphic Design & Social Media Creatives Agency in India | MaaJanki Web Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Graphic Design & Social Media Creatives Agency in India & Global | MaaJanki Web Tech",
     description: "Professional graphic design and social media creative services.",
+    images: ["https://maajankiwebtech.com/images/pages/main-services-pages/graphic-design-banner-image-Maajanki-Web-Tech.webp"],
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/graphic-design",
+    languages: {
+      "en-IN": "https://maajankiwebtech.com/services/graphic-design",
+      "x-default": "https://maajankiwebtech.com/services/graphic-design",
+    },
   },
 };
 
 export default function Page() {
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://maajankiwebtech.com/services/graphic-design#webpage",
+    "url": "https://maajankiwebtech.com/services/graphic-design",
+    "name": "Graphic Design & Social Media Creatives Agency in India & Global | MaaJanki Web Tech",
+    "description": "Professional graphic design and social media creative services. Marketing banners, brochures, and visual brand assets.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://maajankiwebtech.com/#website",
+      "name": "MaaJanki Web Tech",
+      "url": "https://maajankiwebtech.com/"
+    },
+    "inLanguage": "en-IN"
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://maajankiwebtech.com/services/graphic-design/#service",
+    "@id": "https://maajankiwebtech.com/services/graphic-design#service",
+    "url": "https://maajankiwebtech.com/services/graphic-design",
     "name": "Graphic Design & Social Media Creatives Services",
     "provider": {
       "@id": "https://maajankiwebtech.com/#organization"
@@ -86,6 +116,10 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

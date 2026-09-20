@@ -27,7 +27,7 @@ const ProductsListing = () => {
           "description": "Professional eCommerce product listing and catalog management services for Amazon, Flipkart, Myntra, Meesho, and IndiaMART.",
           "url": "https://maajankiwebtech.com/services/products-listing",
           "image": "https://maajankiwebtech.com/assets/og-image-products.jpg",
-          "priceRange": "$",
+          "priceRange": "₹₹",
           "areaServed": [
             { "@type": "Country", "name": "India" },
             { "@type": "State", "name": "Bihar" }
@@ -208,22 +208,16 @@ const ProductsListing = () => {
                   Targeting Amazon's A9 Search Algorithm to Increase Product Discoverability
                 </h3>
                 <p className="content-text">
-                  <strong>Amazon Product Listing Optimization</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized product listing optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Amazon product optimization connects your catalog with millions of active, ready-to-buy shoppers. We optimize titles, bullet points, backend search terms, and A+ Enhanced Brand Content to align with Amazon's A9 ranking algorithm.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>optimized e-commerce product listings that highlight your product features and specs.</strong> By leveraging SEO-friendly product titles and high-resolution image alt texts, we ensure your product listing optimization aligns with the algorithms and search behavior of e-commerce marketplaces and search engines.
+                  By analyzing buyer search volume and competitor review themes, we embed high-intent search terms that maximize organic product impressions and lower sponsored ad costs.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your optimized product catalog pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Increase your organic search rankings on Amazon and convert browsing shoppers into paying buyers.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Allow your products to speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -251,25 +245,19 @@ const ProductsListing = () => {
                   2. Flipkart Catalog Upload & Design
                 </h2>
                 <h3 className="sub-heading">
-                  Creating Clear Descriptions to Build Purchase Confidence
+                  Complete Flipkart Catalog Mapping and Listing Quality Enhancement
                 </h3>
                 <p className="content-text">
-                  <strong>Flipkart Catalog Upload & Design</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized product listing optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Flipkart is India's premier retail marketplace. We manage complete product listing workflows—from mandatory attribute mapping and high-resolution image uploads to categorization and brand approvals.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>optimized e-commerce product listings that highlight your product features and specs.</strong> By leveraging SEO-friendly product titles and high-resolution image alt texts, we ensure your product listing optimization aligns with the algorithms and search behavior of e-commerce marketplaces and search engines.
+                  We optimize your Flipkart Listing Quality Score (LQS) to ensure your products earn prominent placement in search results and category recommendations.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your optimized product catalog pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Expand your pan-India retail footprint with professionally managed Flipkart listings.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Allow your products to speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -295,25 +283,19 @@ const ProductsListing = () => {
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">3. Meesho Product Cataloging</h2>
                 <h3 className="sub-heading">
-                  Structuring Listings for Resellers and Mobile Shoppers
+                  Optimizing Product Feeds for High-Volume Reseller and Consumer Sales
                 </h3>
                 <p className="content-text">
-                  <strong>Meesho Product Cataloging</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized product listing optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Meesho offers unmatched reach in Tier-2 and Tier-3 Indian markets. We configure optimized product catalogs tailored for price-sensitive reseller and direct consumer discovery.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>optimized e-commerce product listings that highlight your product features and specs.</strong> By leveraging SEO-friendly product titles and high-resolution image alt texts, we ensure your product listing optimization aligns with the algorithms and search behavior of e-commerce marketplaces and search engines.
+                  We structure competitive price slabs, clear size variants, attractive visual thumbnails, and concise descriptions that encourage instant bulk orders.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your optimized product catalog pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Tap into India's fastest-growing social commerce marketplace with optimized product catalogs.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Allow your products to speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -337,27 +319,21 @@ const ProductsListing = () => {
                 </div>
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
-                <h2 className="main-heading">4. Myntra Fashion Cataloging</h2>
+                <h2 className="main-heading">4. Shopify &amp; D2C Store Product Cataloging</h2>
                 <h3 className="sub-heading">
-                  Following Fashion Visual and Copy Guidelines for High Engagement
+                  Shopify Product Uploads, Automated Collections, Custom Variant Tagging &amp; High-Conversion Copy
                 </h3>
                 <p className="content-text">
-                  <strong>Myntra Fashion Cataloging</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized product listing optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Direct-to-consumer (D2C) brands require structured catalog architectures that guide shoppers smoothly to checkout. We manage complete Shopify and WooCommerce store cataloging—from high-resolution gallery uploads and variant mapping (size, color, material) to automated smart collections and custom metafield configurations.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>optimized e-commerce product listings that highlight your product features and specs.</strong> By leveraging SEO-friendly product titles and high-resolution image alt texts, we ensure your product listing optimization aligns with the algorithms and search behavior of e-commerce marketplaces and search engines.
+                  Our team writes benefit-driven, SEO-optimized product descriptions, structures customer reviews, and tags inventory for Google Merchant Center and Meta Shop catalogs—ensuring frictionless multi-channel selling and elevated average order values.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your optimized product catalog pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Launch and scale your independent online storefront with flawless product cataloging tailored for maximum conversions.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Allow your products to speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -385,25 +361,19 @@ const ProductsListing = () => {
                   5. IndiaMART B2B Listing Optimization
                 </h2>
                 <h3 className="sub-heading">
-                  Targeting Business Keywords to Generate Quality Inquiries
+                  Generating High-Volume Wholesale and Manufacturing Inquiries
                 </h3>
                 <p className="content-text">
-                  <strong>IndiaMART B2B Listing Optimization</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized product listing optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  For manufacturers, wholesalers, and exporters, IndiaMART is the cornerstone of B2B lead generation. We create comprehensive TrustSEAL-ready company catalogs and product showcase pages.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>optimized e-commerce product listings that highlight your product features and specs.</strong> By leveraging SEO-friendly product titles and high-resolution image alt texts, we ensure your product listing optimization aligns with the algorithms and search behavior of e-commerce marketplaces and search engines.
+                  We configure detailed minimum order quantities (MOQ), technical spec sheets, and instant inquiry response channels to capture high-value commercial buyers.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your optimized product catalog pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Transform your IndiaMART catalog into a consistent B2B wholesale inquiry generator.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Allow your products to speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -429,25 +399,19 @@ const ProductsListing = () => {
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">6. Bulk CSV Catalog Uploading</h2>
                 <h3 className="sub-heading">
-                  Managing Large Inventory Lists Quickly and Accurately
+                  Efficient Bulk SKU Uploading Across Multiple Marketplaces
                 </h3>
                 <p className="content-text">
-                  <strong>Bulk CSV Catalog Uploading</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized product listing optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Managing hundreds or thousands of SKUs manually leads to listing errors and wasted hours. We engineer automated CSV and Excel flat files tailored to each marketplace's exact taxonomy specifications.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>optimized e-commerce product listings that highlight your product features and specs.</strong> By leveraging SEO-friendly product titles and high-resolution image alt texts, we ensure your product listing optimization aligns with the algorithms and search behavior of e-commerce marketplaces and search engines.
+                  Our rigorous pre-upload validation eliminates rejected feeds, inventory mismatches, and broken image links, bringing your full catalog online swiftly.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your optimized product catalog pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Save time and launch massive product collections with error-free bulk uploads.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Allow your products to speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -473,25 +437,19 @@ const ProductsListing = () => {
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">7. Product Schema Integration</h2>
                 <h3 className="sub-heading">
-                  Integrating JSON-LD Schema to Rank in Google Shopping Search
+                  Structured JSON-LD Data for Google Shopping and Rich Search Snippets
                 </h3>
                 <p className="content-text">
-                  <strong>Product Schema Integration</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized product listing optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  E-commerce products need structured machine-readable code to display price, in-stock availability, and customer star ratings directly in Google Search results.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>optimized e-commerce product listings that highlight your product features and specs.</strong> By leveraging SEO-friendly product titles and high-resolution image alt texts, we ensure your product listing optimization aligns with the algorithms and search behavior of e-commerce marketplaces and search engines.
+                  We program comprehensive Schema.org Product, Offer, AggregateRating, and Brand markup across your online store product pages, qualifying your listings for rich search snippets.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your optimized product catalog pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Dominate organic search results with high-CTR rich product snippets and Google Shopping feeds.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Allow your products to speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -519,25 +477,19 @@ const ProductsListing = () => {
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">8. Multi-Marketplace Catalog Management</h2>
                 <h3 className="sub-heading">
-                  Centralized Bulk Uploads & Multi-Channel Feed Syncing
+                  Unified Catalog Updates and Price Parity Monitoring Across Platforms
                 </h3>
                 <p className="content-text">
-                  <strong>Multi-Marketplace Catalog Management</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized product listing optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Selling across Amazon, Flipkart, Meesho, and your own website requires unified catalog management. We synchronize product information, image updates, and promotional price changes across all sales channels.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>optimized e-commerce product listings that highlight your product features and specs.</strong> By leveraging SEO-friendly product titles and high-resolution image alt texts, we ensure your product listing optimization aligns with the algorithms and search behavior of e-commerce marketplaces and search engines.
+                  We monitor price parity and stock availability to prevent policy violations and ensure a cohesive brand experience everywhere your customers shop.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your optimized product catalog pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Scale your omnichannel e-commerce operations with centralized catalog management.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Allow your products to speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>

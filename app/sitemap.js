@@ -70,24 +70,27 @@ export default async function sitemap() {
 
   const locationPages = locations.map((loc) => ({
     path: `/locations/${loc}`,
-    changeFrequency: 'daily',
-    priority: 0.85
+    changeFrequency: 'weekly',
+    priority: 0.80
   }));
 
   // Core Pages + Products, Services Sub-pages & Policy Pages
   const staticPages = [
     // Core Pages
     { path: '', changeFrequency: 'daily', priority: 1.0 },
-    { path: '/about', changeFrequency: 'daily', priority: 0.8 },
-    { path: '/our-team', changeFrequency: 'daily', priority: 0.85 },
-    { path: '/careers', changeFrequency: 'daily', priority: 0.85 },
+    { path: '/about', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/our-team', changeFrequency: 'monthly', priority: 0.70 },
+    { path: '/careers', changeFrequency: 'monthly', priority: 0.70 },
     { path: '/services', changeFrequency: 'daily', priority: 0.95 },
     { path: '/portfolio', changeFrequency: 'daily', priority: 0.85 },
     { path: '/industries', changeFrequency: 'daily', priority: 0.85 },
     { path: '/products', changeFrequency: 'daily', priority: 0.85 },
-    { path: '/reviews', changeFrequency: 'daily', priority: 0.85 },
+    { path: '/reviews', changeFrequency: 'weekly', priority: 0.75 },
     { path: '/contact', changeFrequency: 'daily', priority: 0.85 },
     { path: '/faqs', changeFrequency: 'weekly', priority: 0.85 },
+
+    // Sitemap Index Hub
+    { path: '/sitemap', changeFrequency: 'daily', priority: 0.85 },
 
     // Location Landing Index Page
     { path: '/locations', changeFrequency: 'daily', priority: 0.85 },
@@ -98,6 +101,11 @@ export default async function sitemap() {
     { path: '/blog/local-seo-strategies-for-bihar-businesses', changeFrequency: 'weekly', priority: 0.8 },
     { path: '/blog/why-performance-marketing-beats-traditional-ads', changeFrequency: 'weekly', priority: 0.8 },
     { path: '/blog/gst-invoicing-compliance-guide-indian-retailers', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/blog/aeo-geo-ai-search-optimization-guide-2026', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/blog/wordpress-development-guide-business-websites', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/blog/high-converting-landing-page-design-guide', changeFrequency: 'weekly', priority: 0.8 },
+    { path: '/blog/what-is-aeo', changeFrequency: 'weekly', priority: 0.85 },
+    { path: '/blog/seo-for-small-businesses-bihar', changeFrequency: 'weekly', priority: 0.85 },
 
     // Free Online Tools
     { path: '/tools', changeFrequency: 'daily', priority: 0.85 },
@@ -117,8 +125,10 @@ export default async function sitemap() {
     { path: '/products/invobill', changeFrequency: 'daily', priority: 0.9 },
     { path: '/products/tailwind-templates', changeFrequency: 'daily', priority: 0.9 },
 
-    // 10 Specialized Services Sub-Pages
+    // 12 Specialized Services Sub-Pages
     { path: '/services/web-development', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/wordpress-development', changeFrequency: 'daily', priority: 0.95 },
+    { path: '/services/landing-page', changeFrequency: 'daily', priority: 0.95 },
     { path: '/services/mobile-app-development', changeFrequency: 'daily', priority: 0.95 },
     { path: '/services/seo', changeFrequency: 'daily', priority: 0.95 },
     { path: '/services/smo', changeFrequency: 'daily', priority: 0.95 },
@@ -129,19 +139,13 @@ export default async function sitemap() {
     { path: '/services/ui-ux-design', changeFrequency: 'daily', priority: 0.95 },
     { path: '/services/branding', changeFrequency: 'daily', priority: 0.95 },
 
-    // All 58 Location Sub-Pages
+    // All 59 Location Sub-Pages
     ...locationPages,
   ];
 
-  // AI Discovery & Meta files
-  const aiDiscoveryFiles = [
-    { path: '/llms.txt', changeFrequency: 'daily', priority: 0.6 },
-    { path: '/llms-full.txt', changeFrequency: 'daily', priority: 0.6 },
-    { path: '/mcp-actions.json', changeFrequency: 'monthly', priority: 0.4 },
-    { path: '/robots.txt', changeFrequency: 'monthly', priority: 0.3 },
-  ];
-
-  return [...staticPages, ...aiDiscoveryFiles].map((page) => ({
+  // Note: robots.txt, llms.txt, etc. are machine discovery files and must NOT be in XML <urlset> sitemaps,
+  // as Google Search Console flags non-HTML files as "Crawled - currently not indexed" or "Excluded by noindex".
+  return staticPages.map((page) => ({
     url: page.path === '' || page.path === '/' ? `${baseUrl}/` : `${baseUrl}${page.path}`,
     lastModified: new Date(),
     changeFrequency: page.changeFrequency,

@@ -26,7 +26,7 @@ const SMO = () => {
           "description": "Professional social media optimization services including profile audits, brand consistency, hashtag strategies, and organic community building.",
           "url": "https://maajankiwebtech.com/services/smo",
           "image": "https://maajankiwebtech.com/assets/og-image-smo.jpg",
-          "priceRange": "$",
+          "priceRange": "₹₹",
           "areaServed": [
             { "@type": "Country", "name": "India" },
             { "@type": "State", "name": "Bihar" }
@@ -48,8 +48,7 @@ const SMO = () => {
         <div className="banner-overlay">
           <div className="banner-content">
             <h1>
-              Best SMO Services in India | Build Brand Loyalty & Maximize
-              Organic Engagement
+              Social Media Marketing Services for Bihar &amp; India
             </h1>
             <div className="aeo-definition-box">
               <p>
@@ -203,28 +202,22 @@ const SMO = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">
-                  1. Detailed Social Media Profile Audits
+                  1. Instagram Growth, Reels & Visual Marketing
                 </h2>
                 <h3 className="sub-heading">
-                  Analyzing Competitor Positioning and Branding Alignment
+                  Viral Reel Scripting, Aesthetic Grid Curation, and Organic Engagement Acceleration
                 </h3>
                 <p className="content-text">
-                  <strong>Detailed Social Media Profile Audits</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized social media optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Instagram is the premier visual discovery platform for modern brands. We engineer high-velocity Instagram growth strategies—from trending audio selection and story sequence storytelling to thumb-stopping Reels designed to retain attention beyond the critical 3-second mark.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>cohesive social media profiles and content that highlights your organic brand presence.</strong> By leveraging trending hashtag research and daily community engagement, we ensure your social media optimization aligns with the algorithms and search behavior of social networks and organic discovery algorithms.
+                  Our team designs cohesive visual aesthetics, creates interactive carousel posts that drive saves and shares, and deploys story engagement stickers (polls, questions, quizzes) to activate the Instagram algorithm and broaden your non-follower reach on the Explore page.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your social media channels</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Turn casual scrollers into loyal brand advocates and active direct-message inquiries with data-driven Instagram marketing.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Scale your Instagram followers, reel reach, and client direct inquiries with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -240,8 +233,8 @@ const SMO = () => {
                   <div className="main-image">
                     <Image
                       src="/images/all-pages-section-image/Smo/Why-smo-is-important-for-your-business-maajanki.webp"
-                      alt="Consistent social branding across channels"
-                      title="Profile Optimization Services"
+                      alt="LinkedIn B2B Thought Leadership and Executive Branding"
+                      title="LinkedIn B2B Marketing Services"
                       loading="lazy"
                      width={600} height={400} />
                   </div>
@@ -249,29 +242,22 @@ const SMO = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">
-                  2. Professional Profile Optimization
+                  2. LinkedIn B2B Thought Leadership & Executive Branding
                 </h2>
                 <h3 className="sub-heading">
-                  Establishing Brand Trust and Consistency Across Social
-                  Networks
+                  Positioning Founders and Companies in Front of Corporate Decision-Makers
                 </h3>
                 <p className="content-text">
-                  <strong>Professional Profile Optimization</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized social media optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  LinkedIn is the global hub for B2B relationship building and enterprise client acquisition. We transform company pages and executive profiles into authoritative industry publications that earn trust among CXOs, founders, and corporate procurement heads.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>cohesive social media profiles and content that highlights your organic brand presence.</strong> By leveraging trending hashtag research and daily community engagement, we ensure your social media optimization aligns with the algorithms and search behavior of social networks and organic discovery algorithms.
+                  We ghostwrite insightful thought-leadership articles, design document slide decks (PDF carousels) that generate massive organic impressions, and formulate authentic commentary strategies across relevant industry discussions.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your social media channels</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Build a high-authority B2B brand pipeline that attracts corporate contracts, speaking invitations, and enterprise partnerships.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Establish undisputed industry authority and attract enterprise B2B inquiries on LinkedIn.</strong>
                 </span>
               </div>
             </div>
@@ -287,8 +273,8 @@ const SMO = () => {
                   <div className="main-image">
                     <Image
                       src="/images/all-pages-section-image/Smo/why-choose-us-for-smo-maajanki.webp"
-                      alt="Custom Content Strategy by MaaJanki Web Tech"
-                      title="Content Strategy"
+                      alt="Facebook Business Pages and Community Building"
+                      title="Facebook Community Marketing"
                       loading="lazy"
                      width={600} height={400} />
                   </div>
@@ -296,28 +282,22 @@ const SMO = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">
-                  3. Custom Content Strategy & Calendars
+                  3. Facebook Business Page & Community Management
                 </h2>
                 <h3 className="sub-heading">
-                  Scheduling Value-Driven Posts to Maximize Audience Reach
+                  Nurturing Interactive Communities, Local Brand Awareness, and Social Proof
                 </h3>
                 <p className="content-text">
-                  <strong>Custom Content Strategy & Calendars</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized social media optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  With unmatched demographic reach across India and global markets, Facebook remains essential for local community trust and broad consumer engagement. We optimize your official business page with verified badges, complete service menus, and review generation funnels.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>cohesive social media profiles and content that highlights your organic brand presence.</strong> By leveraging trending hashtag research and daily community engagement, we ensure your social media optimization aligns with the algorithms and search behavior of social networks and organic discovery algorithms.
+                  We manage community interactions, moderate comments, publish timely business updates and customer testimonial spotlights, and nurture niche Facebook Groups to build a dedicated, organic word-of-mouth referral engine.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your social media channels</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Foster authentic brand loyalty and drive predictable repeat business across India&apos;s most widely used social network.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Build an engaged Facebook community that advocates for your brand and drives repeat sales.</strong>
                 </span>
               </div>
             </div>
@@ -333,8 +313,8 @@ const SMO = () => {
                   <div className="main-image">
                     <Image
                       src="/images/all-pages-section-image/Smo/what-is-social-media-optimization-maajanki.webp"
-                      alt="High-Quality Graphic Post Design by MaaJanki Web Tech"
-                      title="Graphic Post Design"
+                      alt="YouTube Video SEO and Shorts Channel Optimization"
+                      title="YouTube Channel Growth Services"
                       loading="lazy"
                      width={600} height={400} />
                   </div>
@@ -342,28 +322,22 @@ const SMO = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">
-                  4. High-Quality Graphic Post Design
+                  4. YouTube Video SEO & Shorts Channel Optimization
                 </h2>
                 <h3 className="sub-heading">
-                  Creating Custom Visual Assets Built to Drive User Engagement
+                  Ranking Long-Form Video and YouTube Shorts for High Search Discoverability
                 </h3>
                 <p className="content-text">
-                  <strong>High-Quality Graphic Post Design</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized social media optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  YouTube is the world&apos;s second-largest search engine. We optimize your video channel from top to bottom: keyword-rich video titles, comprehensive timestamped descriptions, custom high-contrast thumbnails, and targeted playlist architecture.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>cohesive social media profiles and content that highlights your organic brand presence.</strong> By leveraging trending hashtag research and daily community engagement, we ensure your social media optimization aligns with the algorithms and search behavior of social networks and organic discovery algorithms.
+                  We formulate YouTube Shorts distribution strategies to capture mobile viewers quickly while optimizing long-form educational videos and tutorials to rank on both YouTube search and Google SERP video carousels.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your social media channels</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Convert viewers into long-term subscribers and qualified inbound leads through evergreen video assets.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Rank your videos at the top of YouTube and Google search results with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -389,26 +363,19 @@ const SMO = () => {
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">5. Hashtag & Keyword Research</h2>
                 <h3 className="sub-heading">
-                  Targeting platform search parameters to boost organic
-                  visibility
+                  Optimizing Post Discoverability for Native Platform Algorithms
                 </h3>
                 <p className="content-text">
-                  <strong>Hashtag & Keyword Research</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized social media optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Social algorithms rely on keywords and niche hashtags to categorize and recommend content to interested users. We conduct rigorous research to identify trending, moderate-competition, and niche-specific tags.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>cohesive social media profiles and content that highlights your organic brand presence.</strong> By leveraging trending hashtag research and daily community engagement, we ensure your social media optimization aligns with the algorithms and search behavior of social networks and organic discovery algorithms.
+                  We optimize post captions with semantic search terms so your content ranks on Instagram Explore, TikTok Search, and LinkedIn topical feeds.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your social media channels</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Expand your organic reach beyond current followers to attract genuinely interested prospective clients.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Grow your audience, amplify engagement, and convert followers with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -436,26 +403,19 @@ const SMO = () => {
                   6. Active Engagement & Community Management
                 </h2>
                 <h3 className="sub-heading">
-                  Building Strong Customer Relationships Through Social
-                  Interaction
+                  Building Authentic Client Relationships and Fostering Conversations
                 </h3>
                 <p className="content-text">
-                  <strong>Active Engagement & Community Management</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized social media optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Social media is a two-way conversation. We manage daily community interactions—promptly replying to comments, addressing direct messages, and engaging with relevant industry leaders and potential partners.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>cohesive social media profiles and content that highlights your organic brand presence.</strong> By leveraging trending hashtag research and daily community engagement, we ensure your social media optimization aligns with the algorithms and search behavior of social networks and organic discovery algorithms.
+                  Timely response times improve algorithmic distribution and build trust with warm prospects who inquire about your services.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your social media channels</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Turn passive followers into an active, loyal brand community that advocates for your business.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Grow your audience, amplify engagement, and convert followers with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -483,25 +443,19 @@ const SMO = () => {
                   7. Social Media Analytics & Optimization
                 </h2>
                 <h3 className="sub-heading">
-                  Refining Campaign Strategies Based on Data Insights
+                  Data-Driven Reporting on Impressions, Engagement, and Inbound Leads
                 </h3>
                 <p className="content-text">
-                  <strong>Social Media Analytics & Optimization</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized social media optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  We deliver transparent monthly performance reports tracking key metrics: net audience growth, impressions, reach, engagement rate, website referral traffic, and direct lead inquiries.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>cohesive social media profiles and content that highlights your organic brand presence.</strong> By leveraging trending hashtag research and daily community engagement, we ensure your social media optimization aligns with the algorithms and search behavior of social networks and organic discovery algorithms.
+                  Insights from performance data inform continuous iteration of creative formats, messaging angles, and posting schedules to ensure sustained month-over-month growth.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your social media channels</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Measure real business impact rather than vanity metrics.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Grow your audience, amplify engagement, and convert followers with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -526,24 +480,20 @@ const SMO = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">8. GEO Integration for Social Media</h2>
-                <h3 className="sub-heading">Helping AI search bots index your social trust signals</h3>
+                <h3 className="sub-heading">
+                  Enhancing Social Entity Authority for AI Recommendations
+                </h3>
                 <p className="content-text">
-                  <strong>GEO Integration for Social Media</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized social media optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Search engines and AI answer engines increasingly index public social media content and profiles to evaluate brand credibility. We structure your social presence with consistent NAP (Name, Address, Phone) data, official website backlinks, and verified entity tags.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>cohesive social media profiles and content that highlights your organic brand presence.</strong> By leveraging trending hashtag research and daily community engagement, we ensure your social media optimization aligns with the algorithms and search behavior of social networks and organic discovery algorithms.
+                  Grounding your social profiles in Google Knowledge Graph and conversational AI indexes ensures that inquiries like "best agency in Bihar" surface your brand as a recognized entity.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your social media channels</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Bridge the gap between social engagement and generative AI search discoverability.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Grow your audience, amplify engagement, and convert followers with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>

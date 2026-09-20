@@ -87,7 +87,7 @@ export default function Page() {
       "sameAs": [
         "https://share.google/sfG7HXx0jHaeRi8Tb",
         "https://www.linkedin.com/company/maajanki-web-tech-company/",
-        "https://www.facebook.com/profile.php?id=61577526895580",
+        "https://www.facebook.com/maajankiwebtech",
         "https://www.instagram.com/maajankiwebtech/"
       ],
       "identifier": {

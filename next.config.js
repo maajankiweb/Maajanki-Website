@@ -216,7 +216,12 @@ const nextConfig = {
       { source: '/products/elementor-pro', destination: '/products', permanent: true },
       // 301 Canonical Redirect for singular /service/* to plural /services/* (Fixes GSC duplicate URL issue)
       { source: '/service/:path*', destination: '/services/:path*', permanent: true },
-      { source: '/service', destination: '/services', permanent: true },
+      // 301 Redirect legacy /pages/ (Fixes GSC 404 for /pages/)
+      { source: '/pages', destination: '/services', permanent: true },
+      { source: '/pages/:path*', destination: '/services', permanent: true },
+      // 301 Redirect legacy WordPress category archives (Fixes GSC /category/uncategorized/)
+      { source: '/category', destination: '/blog', permanent: true },
+      { source: '/category/:path*', destination: '/blog', permanent: true },
       // Brand & Product Aliases
       { source: '/dukandost', destination: '/products/dukandost-pro', permanent: true },
       { source: '/products/dukandost', destination: '/products/dukandost-pro', permanent: true },

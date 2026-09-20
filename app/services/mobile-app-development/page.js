@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Mobile App Development Company in India | iOS & Android Apps | MaaJanki Web Tech",
+  title: "Mobile App Development Services in India | MaaJanki Web Tech",
   description: "Premier mobile app development company in India. We engineer high-performance Flutter, React Native, iOS & Android apps with AI capabilities. Get a free quote!",
   keywords: [
     "mobile app development",
@@ -16,28 +16,58 @@ export const metadata = {
     "MaaJanki Web Tech mobile app"
   ],
   openGraph: {
-    title: "Mobile App Development Company in India | iOS & Android Apps | MaaJanki Web Tech",
+    title: "Mobile App Development Services in India | MaaJanki Web Tech",
     description: "Premier mobile app development company in India. High-performance Flutter, React Native, iOS & Android mobile applications with AI integration.",
     url: "https://maajankiwebtech.com/services/mobile-app-development",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://maajankiwebtech.com/images/pages/main-services-pages/our-service-banner-image-Maajanki-Web-Tech.webp",
+        width: 1200,
+        height: 630,
+        alt: "Mobile App Development Services in India | MaaJanki Web Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mobile App Development Company in India | iOS & Android Apps | MaaJanki Web Tech",
+    title: "Mobile App Development Services in India | MaaJanki Web Tech",
     description: "Premier mobile app development company in India. High-performance Flutter, React Native, iOS & Android apps.",
+    images: ["https://maajankiwebtech.com/images/pages/main-services-pages/our-service-banner-image-Maajanki-Web-Tech.webp"],
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/mobile-app-development",
+    languages: {
+      "en-IN": "https://maajankiwebtech.com/services/mobile-app-development",
+      "x-default": "https://maajankiwebtech.com/services/mobile-app-development",
+    },
   },
 };
 
 export default function Page() {
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://maajankiwebtech.com/services/mobile-app-development#webpage",
+    "url": "https://maajankiwebtech.com/services/mobile-app-development",
+    "name": "Mobile App Development Services in India | MaaJanki Web Tech",
+    "description": "Premier mobile app development company in India. High-performance Flutter, React Native, iOS & Android mobile applications with AI integration.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://maajankiwebtech.com/#website",
+      "name": "MaaJanki Web Tech",
+      "url": "https://maajankiwebtech.com/"
+    },
+    "inLanguage": "en-IN"
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://maajankiwebtech.com/services/mobile-app-development/#service",
+    "@id": "https://maajankiwebtech.com/services/mobile-app-development#service",
+    "url": "https://maajankiwebtech.com/services/mobile-app-development",
     "name": "Mobile App Development & AI-Powered Application Engineering",
     "provider": {
       "@id": "https://maajankiwebtech.com/#organization"
@@ -124,6 +154,10 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

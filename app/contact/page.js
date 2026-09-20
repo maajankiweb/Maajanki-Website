@@ -8,18 +8,18 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in India",
-  description: "Contact MaaJanki Web Tech in India. Call +91-9006543913 or email info@maajankiwebtech.com for Next.js web development, SEO, and performance marketing inquiries.",
+  title: "Contact MaaJanki Web Tech | Free 30-Min Strategy Audit",
+  description: "Contact MaaJanki Web Tech for a free 30-minute strategy audit. Call +91-9006543913 or fill the form. Web development & digital marketing agency in Bihar.",
   keywords: [
     "Contact MaaJanki Web Tech",
-    "web development agency India",
-    "digital marketing consultation India",
-    "hire Next.js developers India",
-    "SEO audit India"
+    "web development agency Bihar",
+    "digital marketing consultation Bihar",
+    "hire Next.js developers Bihar",
+    "SEO audit Bihar"
   ],
   openGraph: {
-    title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in India",
-    description: "Contact MaaJanki Web Tech in India. Call +91-9006543913 or email info@maajankiwebtech.com for web development and SEO inquiries.",
+    title: "Contact MaaJanki Web Tech | Free 30-Min Strategy Audit",
+    description: "Contact MaaJanki Web Tech for a free 30-minute strategy audit. Call +91-9006543913 or fill the form. Web development & digital marketing agency in Bihar.",
     url: "https://maajankiwebtech.com/contact",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -27,8 +27,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact MaaJanki Web Tech | Web Development & Digital Marketing Agency in India",
-    description: "Contact MaaJanki Web Tech in India. Call +91-9006543913 or email info@maajankiwebtech.com for web development and SEO inquiries.",
+    title: "Contact MaaJanki Web Tech | Free 30-Min Strategy Audit",
+    description: "Contact MaaJanki Web Tech for a free 30-minute strategy audit. Call +91-9006543913 or fill the form. Web development & digital marketing agency in Bihar.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/contact",
@@ -276,7 +276,7 @@ export default function Page() {
         <div className="service-areas-container">
           <h2 className="service-areas-title">Our Service Areas</h2>
           <p className="service-areas-subtitle">
-            We proudly provide high-performance web development, SEO, and digital marketing services across domestic and global markets:
+            We proudly provide high-performance web development, SEO, and digital marketing services across domestic and global markets. Ready to scale? You can <Link href="/services" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>explore our services</Link> or connect with our team directly:
           </p>
           
           <div className="service-tiers-container">

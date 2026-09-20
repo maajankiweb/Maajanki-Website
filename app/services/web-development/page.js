@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Web Development Company & Website Designer | MaaJanki Web Tech",
+  title: "Web Development Services in India | MaaJanki Web Tech",
   description: "Premier web development company & website designer in India. High-speed Next.js web apps, corporate portals, e-commerce, and local SEO. Get a free quote!",
   keywords: [
     "website designer near me",
@@ -21,28 +21,58 @@ export const metadata = {
     "MaaJanki Web Tech web dev"
   ],
   openGraph: {
-    title: "Web Development Company in India | Next.js & Custom Web Solutions | MaaJanki Web Tech",
+    title: "Web Development Services in India | MaaJanki Web Tech",
     description: "Premier web development company in India. High-speed Next.js web applications, corporate websites, SaaS platforms, and eCommerce portals.",
     url: "https://maajankiwebtech.com/services/web-development",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://maajankiwebtech.com/images/pages/main-services-pages/web-development-banner-image-Maajanki-Web-Tech.webp",
+        width: 1200,
+        height: 630,
+        alt: "Web Development Services in India | MaaJanki Web Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development Company in India | Next.js & Custom Web Solutions | MaaJanki Web Tech",
+    title: "Web Development Services in India | MaaJanki Web Tech",
     description: "Premier web development company in India. High-speed Next.js & WordPress web applications.",
+    images: ["https://maajankiwebtech.com/images/pages/main-services-pages/web-development-banner-image-Maajanki-Web-Tech.webp"],
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/web-development",
+    languages: {
+      "en-IN": "https://maajankiwebtech.com/services/web-development",
+      "x-default": "https://maajankiwebtech.com/services/web-development",
+    },
   },
 };
 
 export default function Page() {
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://maajankiwebtech.com/services/web-development#webpage",
+    "url": "https://maajankiwebtech.com/services/web-development",
+    "name": "Web Development Services in India | MaaJanki Web Tech",
+    "description": "Premier web development company & website designer in India. High-speed Next.js web apps, corporate portals, e-commerce, and local SEO.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://maajankiwebtech.com/#website",
+      "name": "MaaJanki Web Tech",
+      "url": "https://maajankiwebtech.com/"
+    },
+    "inLanguage": "en-IN"
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://maajankiwebtech.com/services/web-development/#service",
+    "@id": "https://maajankiwebtech.com/services/web-development#service",
+    "url": "https://maajankiwebtech.com/services/web-development",
     "name": "Next.js Web Development & Custom Web Application Development",
     "provider": {
       "@id": "https://maajankiwebtech.com/#organization"
@@ -119,12 +149,32 @@ export default function Page() {
           "@type": "Answer",
           "text": "We utilize Next.js 15, React, Node.js, MongoDB Atlas, Tailwind CSS, Bootstrap 5, and WordPress to deliver robust, high-security digital products."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does custom WordPress development cost in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Custom WordPress website development typically ranges from ₹15,000 to ₹60,000 depending on custom Gutenberg block theme requirements, dynamic custom post types, WooCommerce store setup, and bespoke design complexity."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the turnaround time and cost for high-converting landing page development?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "High-converting landing pages are custom designed and launched within 3 to 7 business days, with pricing starting from ₹8,000 including responsive web design, conversion-focused copywriting, GA4 event tracking, and 95+ Core Web Vitals speed optimization."
+        }
       }
     ]
   };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

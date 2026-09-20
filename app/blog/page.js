@@ -32,52 +32,8 @@ export const metadata = {
   },
 };
 
-export const blogPosts = [
-  {
-    slug: 'nextjs-15-seo-guide-for-business-websites',
-    title: 'Next.js 15 SEO Guide: How to Rank Your Business Website #1 on Google in 2026',
-    excerpt: 'Discover how Next.js 15 App Router, Server Components, Schema.org JSON-LD, and Core Web Vitals optimization drive unmatched organic search visibility.',
-    category: 'Web Development',
-    date: 'March 10, 2026',
-    readTime: '6 min read',
-    author: 'Ashish Kumar',
-    authorRole: 'Founder & Lead Architect',
-    featured: true,
-  },
-  {
-    slug: 'local-seo-strategies-for-bihar-businesses',
-    title: 'Local SEO in Bihar: The Ultimate Step-by-Step Guide for Small Businesses & Retailers',
-    excerpt: 'Learn how to dominate the Google Maps 3-Pack, optimize your Google Business Profile (GBP), and win high-intent customers in Bagaha, Bettiah, Motihari, and Patna.',
-    category: 'SEO & Growth',
-    date: 'March 05, 2026',
-    readTime: '8 min read',
-    author: 'Ashish Kumar',
-    authorRole: 'Founder & Lead Architect',
-    featured: false,
-  },
-  {
-    slug: 'why-performance-marketing-beats-traditional-ads',
-    title: 'Why Performance Marketing (Google & Meta Ads) Beats Traditional Advertising',
-    excerpt: 'Stop wasting marketing budgets on unmeasured prints. Discover how ROAS-driven funnel architectures turn every rupee into measurable inquiries and revenue.',
-    category: 'Performance Marketing',
-    date: 'February 26, 2026',
-    readTime: '5 min read',
-    author: 'Ashish Kumar',
-    authorRole: 'Founder & Lead Architect',
-    featured: false,
-  },
-  {
-    slug: 'gst-invoicing-compliance-guide-indian-retailers',
-    title: 'GST Invoicing Compliance Guide: How InvoBill Simplifies Indian Business Billing',
-    excerpt: 'Understanding mandatory GST B2B e-invoicing rules, HSN tax breakdowns, and offline desktop billing for hardware stores, retailers, and distributors in India.',
-    category: 'Business & SaaS',
-    date: 'February 18, 2026',
-    readTime: '7 min read',
-    author: 'Ashish Kumar',
-    authorRole: 'Founder & Lead Architect',
-    featured: false,
-  },
-];
+import { blogPosts } from './data';
+export { blogPosts };
 
 export default function BlogIndexPage() {
   const blogListSchema = {

@@ -29,7 +29,7 @@ const GraphicDesign = () => {
           "description": "Professional graphic design services including logo design, brand identity kits, social media graphics, print layouts, and visual ads.",
           "url": "https://maajankiwebtech.com/services/graphic-design",
           "image": "https://maajankiwebtech.com/assets/og-image-graphic.jpg",
-          "priceRange": "$",
+          "priceRange": "₹₹",
           "areaServed": [
             { "@type": "Country", "name": "India" },
             { "@type": "State", "name": "Bihar" }
@@ -199,24 +199,20 @@ const GraphicDesign = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">1. Custom Logo & Brand Design</h2>
-                <h3 className="sub-heading">Establishing Brand Identity Through Memorable Visual Marks</h3>
+                <h3 className="sub-heading">
+                  Iconic Brand Marks and Visual Identity Systems
+                </h3>
                 <p className="content-text">
-                  <strong>Custom Logo & Brand Design</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized graphic design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Your visual mark is the cornerstone of company recognition. We create custom logos, brand badges, and typography combinations engineered for immediate clarity and memorable recall across both print and digital touchpoints.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>visually stunning vector designs and marketing collaterals that highlight your product aesthetics.</strong> By leveraging custom color palette selection and typography hierarchy, we ensure your graphic design aligns with the algorithms and search behavior of modern visual platforms and search engines.
+                  We test every design across light and dark backgrounds, small icon sizes, and massive display prints to ensure flawless visual rendering.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-designed marketing assets</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Establish a commanding market presence with a professionally crafted visual mark.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Transform your marketing visuals into high-converting brand assets with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -241,24 +237,20 @@ const GraphicDesign = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">2. Social Media Creative Design</h2>
-                <h3 className="sub-heading">Designing Engaging Graphics Optimized for Feed Scroll-Throughs</h3>
+                <h3 className="sub-heading">
+                  High-Impact Creatives Engineered to Stop the Infinite Scroll
+                </h3>
                 <p className="content-text">
-                  <strong>Social Media Creative Design</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized graphic design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Social feeds demand vibrant, attention-grabbing visuals. Our design team creates high-conversion social media banners, carousel infographics, story layouts, and promotional post templates.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>visually stunning vector designs and marketing collaterals that highlight your product aesthetics.</strong> By leveraging custom color palette selection and typography hierarchy, we ensure your graphic design aligns with the algorithms and search behavior of modern visual platforms and search engines.
+                  Every graphic is customized to match your brand color tokens and typography, maintaining aesthetic consistency across Instagram, LinkedIn, Facebook, and Twitter/X.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-designed marketing assets</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Drive higher click-through rates and viral sharing with scroll-stopping social visuals.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Transform your marketing visuals into high-converting brand assets with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -283,24 +275,20 @@ const GraphicDesign = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">3. Print & Marketing Material Design</h2>
-                <h3 className="sub-heading">Designing Brochures, Flyers, and Stationery for Business Growth</h3>
+                <h3 className="sub-heading">
+                  Executive Tangible Collateral Prepared for High-Resolution Printing
+                </h3>
                 <p className="content-text">
-                  <strong>Print & Marketing Material Design</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized graphic design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Physical marketing materials remain indispensable for corporate sales and industry trade shows. We design corporate brochures, product flyers, roll-up banners, catalog booklets, and presentation folders.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>visually stunning vector designs and marketing collaterals that highlight your product aesthetics.</strong> By leveraging custom color palette selection and typography hierarchy, we ensure your graphic design aligns with the algorithms and search behavior of modern visual platforms and search engines.
+                  Our files are delivered in press-ready CMYK formats with exact bleed dimensions, trim lines, and vector typography suitable for luxury commercial printing.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-designed marketing assets</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Leave an unforgettable physical impression at conferences, client meetings, and sales presentations.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Transform your marketing visuals into high-converting brand assets with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -325,24 +313,20 @@ const GraphicDesign = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">4. Custom Infographics & Visual Data</h2>
-                <h3 className="sub-heading">Translating Complex Data into Easy-to-Understand Graphics</h3>
+                <h3 className="sub-heading">
+                  Transforming Complex Industry Data into Compelling Visual Stories
+                </h3>
                 <p className="content-text">
-                  <strong>Custom Infographics & Visual Data</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized graphic design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Data-dense reports and whitepapers often fail to engage readers without visual clarity. We transform complex workflows, statistical data, and market research into crisp, engaging visual infographics.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>visually stunning vector designs and marketing collaterals that highlight your product aesthetics.</strong> By leveraging custom color palette selection and typography hierarchy, we ensure your graphic design aligns with the algorithms and search behavior of modern visual platforms and search engines.
+                  Designed for maximum shareability, our infographics earn natural organic backlinks from reputable industry publications and drive viral social engagement.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-designed marketing assets</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Communicate complex value propositions in seconds through elegant data visualization.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Transform your marketing visuals into high-converting brand assets with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -367,24 +351,20 @@ const GraphicDesign = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">5. Motion Graphics & Video Creatives</h2>
-                <h3 className="sub-heading">Animated Banners and Promotional Video Layouts for Feeds</h3>
+                <h3 className="sub-heading">
+                  Dynamic Visual Assets for Modern Ad Campaigns and Web Headers
+                </h3>
                 <p className="content-text">
-                  <strong>Motion Graphics & Video Creatives</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized graphic design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Video content drives the highest engagement across digital advertising channels. We design dynamic animated logo reveals, kinetic typography promo videos, UI explainer reels, and social media video ads.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>visually stunning vector designs and marketing collaterals that highlight your product aesthetics.</strong> By leveraging custom color palette selection and typography hierarchy, we ensure your graphic design aligns with the algorithms and search behavior of modern visual platforms and search engines.
+                  Using smooth easing curves and professional sound design, our motion assets increase viewer watch time and boost advertising conversion rates.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-designed marketing assets</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Energize your marketing campaigns with premium motion graphics.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Transform your marketing visuals into high-converting brand assets with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -409,24 +389,20 @@ const GraphicDesign = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">6. Packaging & Product Label Graphics</h2>
-                <h3 className="sub-heading">Designing Product Boxes and Labels to Stand Out on Shelves</h3>
+                <h3 className="sub-heading">
+                  Retail-Ready Packaging Designs That Command Shelf Attention
+                </h3>
                 <p className="content-text">
-                  <strong>Packaging & Product Label Graphics</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized graphic design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Consumer packaging must capture buyer interest in milliseconds while communicating legal specifications. We craft custom product boxes, label stickers, pouches, and bottle wraps.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>visually stunning vector designs and marketing collaterals that highlight your product aesthetics.</strong> By leveraging custom color palette selection and typography hierarchy, we ensure your graphic design aligns with the algorithms and search behavior of modern visual platforms and search engines.
+                  We incorporate regulatory requirements, barcode placements, nutritional or spec panels, and premium finishes like foil stamping and UV embossing.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-designed marketing assets</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Make your physical products stand out on retail shelves and e-commerce listings.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Transform your marketing visuals into high-converting brand assets with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -451,24 +427,20 @@ const GraphicDesign = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">7. Rebranding & Visual Identity Refresh</h2>
-                <h3 className="sub-heading">Modernizing Outdated Corporate Graphics for Current Markets</h3>
+                <h3 className="sub-heading">
+                  Modernizing Outdated Marketing Collateral for Modern Digital Standards
+                </h3>
                 <p className="content-text">
-                  <strong>Rebranding & Visual Identity Refresh</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized graphic design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Outdated graphics erode buyer confidence. We modernize your legacy marketing collateral, updating color schemes, typography hierarchies, and imagery to match current design aesthetics.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>visually stunning vector designs and marketing collaterals that highlight your product aesthetics.</strong> By leveraging custom color palette selection and typography hierarchy, we ensure your graphic design aligns with the algorithms and search behavior of modern visual platforms and search engines.
+                  We provide complete vector libraries and editable design templates in Figma, Illustrator, or Canva so your in-house teams can easily create consistent on-brand assets.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-designed marketing assets</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Breathe new life into your brand with a synchronized visual refresh.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Transform your marketing visuals into high-converting brand assets with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -493,24 +465,20 @@ const GraphicDesign = () => {
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
                 <h2 className="main-heading">8. GEO Optimization for Image Data</h2>
-                <h3 className="sub-heading">Optimizing Alt Text and Image Metadata for AI Search Tools</h3>
+                <h3 className="sub-heading">
+                  Embedding Rich Metadata for Google Image Search and AI Vision Models
+                </h3>
                 <p className="content-text">
-                  <strong>GEO Optimization for Image Data</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized graphic design is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Modern visual design extends beyond aesthetics into machine-readable asset optimization. We export images in next-gen WebP and AVIF formats, embed IPTC copyright metadata, and craft descriptive alt attributes.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>visually stunning vector designs and marketing collaterals that highlight your product aesthetics.</strong> By leveraging custom color palette selection and typography hierarchy, we ensure your graphic design aligns with the algorithms and search behavior of modern visual platforms and search engines.
+                  This ensures search engines and AI vision models (Google Lens, ChatGPT Vision) accurately index, understand, and rank your visual assets in image search results.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your custom-designed marketing assets</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Unlock organic visual search traffic and amplify your brand discoverability.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Transform your marketing visuals into high-converting brand assets with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>

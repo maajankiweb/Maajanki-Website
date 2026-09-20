@@ -141,7 +141,7 @@ const About = () => {
                 digital marketing agency and website development company
                 dedicated to helping Indian startups, MSMEs, and enterprises build a commanding online
                 presence. Our mission is to improve search engine rankings, capture high-intent commercial traffic, and convert website visitors into long-term
-                customers through strategic, data-driven digital solutions.
+                customers through our <Link href="/services" style={{ color: "#ffffff", fontWeight: 700, textDecoration: "underline" }}>full service portfolio</Link> of strategic, data-driven digital solutions.
               </p>
 
               <p style={{ color: "rgba(255, 255, 255, 0.95)", fontSize: "16px", lineHeight: "1.8" }}>

@@ -60,6 +60,8 @@ const paths = [
   '/services/graphic-design',
   '/services/ui-ux-design',
   '/services/web-development',
+  '/services/wordpress-development',
+  '/services/landing-page',
   '/services/content-writing',
   '/services/products-listing',
   '/services/seo',

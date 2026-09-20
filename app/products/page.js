@@ -44,9 +44,9 @@ export default function ProductsPage() {
       badgeText: "Popular GST Tool",
       description: "A hybrid billing & invoicing platform tailored for Indian enterprises & MSMEs. Generate 100% tax-compliant GST invoices in under 60 seconds with live real-time PDF generation or native desktop app.",
       image: "/images/products/invobill.webp",
-      link: "https://invobill.in/",
-      external: true,
-      buttonText: "Launch InvoBill",
+      link: "/products/invobill",
+      external: false,
+      buttonText: "Explore InvoBill",
       features: [
         "Instant GST Compliance & e-Way Bill Ready",
         "Multi-currency & Custom Taxation Rules",

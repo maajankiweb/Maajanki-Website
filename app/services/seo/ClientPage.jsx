@@ -27,7 +27,7 @@ const SEO = () => {
           "description": "Professional search engine optimization services including keyword research, on-page technical fixes, link building, and GEO solutions to drive organic rankings.",
           "url": "https://maajankiwebtech.com/services/seo",
           "image": "https://maajankiwebtech.com/assets/og-image-seo.jpg",
-          "priceRange": "$",
+          "priceRange": "₹₹",
           "areaServed": [
             { "@type": "Country", "name": "India" },
             { "@type": "Country", "name": "United States" },
@@ -59,7 +59,7 @@ const SEO = () => {
         <div className="banner-overlay">
           <div className="banner-content">
             <h1>
-              SEO Services in Patna, Bihar &amp; India | Local SEO &amp; AI Engine Optimization (AEO) Agency
+              SEO Services in Bihar &amp; India — Local SEO, Technical SEO &amp; AEO
             </h1>
             <div className="aeo-definition-box">
               <p>
@@ -223,25 +223,16 @@ const SEO = () => {
                   1. Strategic Keyword Research & Mapping
                 </h2>
                 <h3 className="sub-heading">
-                  Discovering Commercial and Informational Query Intent Pathways
+                  Discovering Commercial, Informational, and Transactional Query Pathways
                 </h3>
                 <p className="content-text">
-                  <strong>Strategic Keyword Research & Mapping</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized search engine optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Our keyword research process begins with <strong>Google Search Console analysis</strong> — extracting existing impressions, clicks, and average positions to identify what your audience already searches for. We group queries by intent: commercial (ready to hire), informational (researching), local (near-me), and transactional (ready to buy).
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>comprehensive SEO strategies that highlight your business visibility and domain authority.</strong> By leveraging on-page tag optimization and technical site auditing, we ensure your search engine optimization aligns with the algorithms and search behavior of Google search crawlers and AI search engines.
-                </p>
-                <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your highly-ranked web pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  We then build <strong>semantic keyword clusters</strong> — topic groups where your primary page becomes the authoritative answer, with supporting content reinforcing it. This intent-to-page mapping ensures every piece of your website content earns topical authority rather than generic keyword presence. When synchronized with targeted <Link href="/services/performance-marketing" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>paid search campaigns</Link>, your brand achieves total search dominance across both organic and paid SERP channels.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Turn search intent into qualified traffic — book your free keyword strategy audit today.</strong>
                 </span>
               </div>
             </div>
@@ -274,25 +265,16 @@ const SEO = () => {
                   2. Advanced On-Page SEO Optimization
                 </h2>
                 <h3 className="sub-heading">
-                  Structuring Web Code and Copy to Satisfy Core Search Algorithms
+                  Structuring Web Code, Metadata, and Semantic Schema for Search Engines
                 </h3>
                 <p className="content-text">
-                  <strong>Advanced On-Page SEO Optimization</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized search engine optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  On-page optimization covers every element within your direct control. Title tags are optimized to 50–60 characters with the primary keyword first. Meta descriptions are written at 150–160 characters with a clear CTA. H1 tags are unique per page and semantically aligned to search intent. H2/H3 headings build topical structure.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>comprehensive SEO strategies that highlight your business visibility and domain authority.</strong> By leveraging on-page tag optimization and technical site auditing, we ensure your search engine optimization aligns with the algorithms and search behavior of Google search crawlers and AI search engines.
-                </p>
-                <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your highly-ranked web pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  We fix canonical URLs, remove duplicate content, diversify internal anchor text, optimize image alt text, and inject Schema.org JSON-LD structured data to help both traditional search engines and AI engines (ChatGPT, Perplexity, Gemini) understand and cite your content.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Every page should earn its traffic — let us audit and optimize yours.</strong>
                 </span>
               </div>
             </div>
@@ -328,22 +310,16 @@ const SEO = () => {
                   Resolving Crawling, Indexing, and Core Web Vitals Issues
                 </h3>
                 <p className="content-text">
-                  <strong>High-Performance Technical SEO Auditing</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized search engine optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Technical SEO ensures Google can efficiently crawl, render, and index every page on your website. Our audit covers <strong>Core Web Vitals compliance</strong> (LCP &lt; 2.5s, INP &lt; 200ms, CLS &lt; 0.1), crawl budget efficiency, XML sitemap completeness, robots.txt directives, HTTPS integrity, and canonical redirect chains.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>comprehensive SEO strategies that highlight your business visibility and domain authority.</strong> By leveraging on-page tag optimization and technical site auditing, we ensure your search engine optimization aligns with the algorithms and search behavior of Google search crawlers and AI search engines.
+                  We identify and fix <strong>crawl errors</strong>, broken internal links, orphaned pages, slow server response times (TTFB &gt; 800ms), render-blocking resources, and uncompressed asset delivery — backed by clean, <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>SEO-friendly web development</Link> to ensure rapid sub-second delivery on all devices.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your highly-ranked web pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Post-fix, we configure <strong>Google Search Console alerts</strong> and submit updated sitemaps so Google re-crawls corrected pages within days rather than waiting for the next organic discovery cycle.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Technical issues silently suppress your rankings — find and fix them now.</strong>
                 </span>
               </div>
             </div>
@@ -379,22 +355,16 @@ const SEO = () => {
                   Acquiring High-Authority Backlinks to Build Domain Authority
                 </h3>
                 <p className="content-text">
-                  <strong>Ethical White-Hat Link Building</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized search engine optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Domain authority is built through the quality and relevance of external websites that link back to yours. Our white-hat link building program focuses exclusively on <strong>editorial mentions</strong> — links earned through genuine content value, not purchased or exchanged — which carry lasting trust signals with Google&apos;s Penguin algorithm.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>comprehensive SEO strategies that highlight your business visibility and domain authority.</strong> By leveraging on-page tag optimization and technical site auditing, we ensure your search engine optimization aligns with the algorithms and search behavior of Google search crawlers and AI search engines.
+                  We execute <strong>content-led outreach campaigns</strong>: creating data-driven articles, industry guides, and local business resources that naturally attract links from news portals, industry directories, and government listings. We also build brand citations on Justdial, Sulekha, and IndiaMart to reinforce your local authority across Bihar and India.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your highly-ranked web pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Every acquired backlink is logged with its domain authority, anchor text, referring page URL, and acquisition date in a <strong>live backlink report</strong> — so you can track the domain authority growth of your website month over month.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Authority is earned, not bought — build yours with ethical link acquisition.</strong>
                 </span>
               </div>
             </div>
@@ -424,28 +394,19 @@ const SEO = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">
-                  5. Local SEO & Google Business Profile Optimization
+                  5. Local SEO Services for Bagaha, Bettiah, Patna &amp; Bihar
                 </h2>
                 <h3 className="sub-heading">
-                  Dominating 'Near Me' Searches and Local Google Map Packs
+                  Dominating 'Near Me' Searches, Google Maps 3-Pack, and Geo-Targeted Queries
                 </h3>
                 <p className="content-text">
-                  <strong>Local SEO & Google Business Profile Optimization</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized search engine optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Local SEO connects your business to customers actively searching for services in your city. We optimize your Google Business Profile with accurate NAP, service categories, geotagged photos, and review management. We build local citations on Justdial, Sulekha, and IndiaMart.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>comprehensive SEO strategies that highlight your business visibility and domain authority.</strong> By leveraging on-page tag optimization and technical site auditing, we ensure your search engine optimization aligns with the algorithms and search behavior of Google search crawlers and AI search engines.
-                </p>
-                <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your highly-ranked web pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  On your website, we add LocalBusiness and Service schema with correct geo coordinates and areaServed fields targeting Bagaha, Bettiah, Motihari, Muzaffarpur, and Patna. The goal: appear in the Google 3-Pack map results for queries like &ldquo;web designer in Bettiah&rdquo; and &ldquo;SEO agency in Patna&rdquo; — the highest-converting local search positions.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Rank in the top 3 of Google Maps for &ldquo;near me&rdquo; searches — claim your local market dominance today.</strong>
                 </span>
               </div>
             </div>
@@ -481,22 +442,16 @@ const SEO = () => {
                   Aligning Technical SEO with Core User Experience Goals
                 </h3>
                 <p className="content-text">
-                  <strong>Search Experience Optimization (SXO)</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized search engine optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Search Experience Optimization (SXO) merges traditional SEO with user experience design — because Google&apos;s ranking algorithms now reward pages that users engage with positively. High dwell time, low bounce rate, and low pogo-sticking are <strong>behavioral signals Google uses to validate relevance</strong> long after a page is indexed.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>comprehensive SEO strategies that highlight your business visibility and domain authority.</strong> By leveraging on-page tag optimization and technical site auditing, we ensure your search engine optimization aligns with the algorithms and search behavior of Google search crawlers and AI search engines.
+                  We audit your <strong>page layout, content structure, CTA placement, and mobile usability</strong> to reduce friction at every interaction point. Above-the-fold content is structured to immediately answer the search query that brought the user to the page — satisfying both search intent and user expectation simultaneously.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your highly-ranked web pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Performance profiling with <strong>Lighthouse, GTmetrix, and Microsoft Clarity heatmaps</strong> identifies exactly where users drop off — enabling precision UX fixes that improve both engagement metrics and Core Web Vitals scores together.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Better user experience means better rankings — audit your SXO gaps today.</strong>
                 </span>
               </div>
             </div>
@@ -526,28 +481,19 @@ const SEO = () => {
               </div>
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">
-                  7. Generative Engine Optimization (GEO) & AI Search Optimization
+                  7. GEO — Generative Engine Optimization
                 </h2>
                 <h3 className="sub-heading">
-                  Optimizing Your Content to Be Cited by AI Search Bots
+                  Structuring Authoritative Content for LLM Citation Graphs &amp; AI Search Engines
                 </h3>
                 <p className="content-text">
-                  <strong>Generative Engine Optimization (GEO) & AI Search Optimization</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized search engine optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Generative Engine Optimization (GEO) makes your content trustworthy, readable, and citation-worthy for LLM search engines. We maintain clean semantic HTML5 structure; build topical authority through deep, accurate content; link your brand entity to authoritative external references (Wikidata, LinkedIn, government registers); and use structured data to help LLMs extract factual answers about your business.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>comprehensive SEO strategies that highlight your business visibility and domain authority.</strong> By leveraging on-page tag optimization and technical site auditing, we ensure your search engine optimization aligns with the algorithms and search behavior of Google search crawlers and AI search engines.
-                </p>
-                <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your highly-ranked web pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Result: your agency name appears more frequently in AI-generated answers and recommendations across ChatGPT, Perplexity, and Google AI Overviews.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>The future of search belongs to generative AI — ensure your brand is cited, not bypassed.</strong>
                 </span>
               </div>
             </div>
@@ -568,33 +514,28 @@ const SEO = () => {
                   <div className="main-image">
                     <Image
                       src="/images/all-pages-section-image/Seo/competitor-gap-roi-maajanki.webp"
-                      alt="Competitor SEO gap analysis and ROI strategy"
-                      title="Competitor Analysis & ROI"
+                      alt="AEO AI Engine Optimization by MaaJanki Web Tech"
+                      title="AEO Answer Engine Optimization"
                       loading="lazy"
                      width={600} height={400} />
                   </div>
                 </div>
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
-                <h2 className="main-heading">8. Organic Local & International SEO</h2>
-                <h3 className="seo-service-heading">Keyword Research & Strategy</h3>
+                <h2 className="main-heading">
+                  8. AEO — Answer Engine Optimization
+                </h2>
+                <h3 className="sub-heading">
+                  Optimizing Conversational Search, FAQ Schema, and Recommendation Citations
+                </h3>
                 <p className="content-text">
-                  <strong>How We Work</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized search engine optimization is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Answer Engine Optimization (AEO) structures your website content so AI assistants — ChatGPT, Google Gemini, Perplexity, and Claude — cite your business when users ask recommendation questions.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>comprehensive SEO strategies that highlight your business visibility and domain authority.</strong> By leveraging on-page tag optimization and technical site auditing, we ensure your search engine optimization aligns with the algorithms and search behavior of Google search crawlers and AI search engines.
-                </p>
-                <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your highly-ranked web pages</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  AEO requires: FAQPage schema with genuine, concise Q&amp;A pairs; content in direct-answer format (question &rarr; definitive answer &rarr; supporting context); entity optimization (brand, founder, and services linked to Wikidata and LinkedIn); and machine-readable discovery files (/llms.txt, /llms-full.txt). When implemented correctly, your business appears in AI-generated overviews for queries like &ldquo;best digital marketing agency in Bihar&rdquo;.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Capture zero-click searches and voice queries with precision AI Engine Optimization.</strong>
                 </span>
               </div>
             </div>
@@ -700,6 +641,26 @@ const SEO = () => {
             <p>
               Analyze competitors' search positions, backlinks, and content to
               find growth opportunities.
+            </p>
+          </div>
+
+          <div className="seo-service-box">
+            <div className="seo-service-icon">
+              <i className="fas fa-robot"></i>
+            </div>
+            <h3 className="seo-service-heading">AI Engine Optimization (AEO)</h3>
+            <p>
+              Structure content for conversational voice bots, ChatGPT answers, and zero-click featured snippets.
+            </p>
+          </div>
+
+          <div className="seo-service-box">
+            <div className="seo-service-icon">
+              <i className="fas fa-brain"></i>
+            </div>
+            <h3 className="seo-service-heading">Generative Engine Optimization (GEO)</h3>
+            <p>
+              Optimize machine-readable /llms.txt manifests and entity graphs to win citations in Google AI Overviews and Perplexity.
             </p>
           </div>
 
@@ -1095,52 +1056,70 @@ const SEO = () => {
                   boxShadow: "0 4px 15px rgba(253, 106, 2, 0.4)",
                 }}
               >
-                AI Search Optimization (GEO)
+                AEO, GEO &amp; Local SEO Insights
               </span>
               <h2
                 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", color: "#ffffff", fontWeight: "800", fontFamily: '"Outfit", sans-serif', margin: "0 0 15px" }}
               >
-                Quick Answers: Search Engine Optimization
+                AEO, GEO &amp; Local SEO: Direct Answers for AI &amp; Searchers
               </h2>
-              <p style={{ color: "#cbd5e1", fontSize: "16px", maxWidth: "800px", margin: "0 auto" }}>
-                Whether you're looking for fast facts or optimizing for AI search tools like ChatGPT and Gemini, here is a clear breakdown of our SEO services.
+              <p style={{ color: "#cbd5e1", fontSize: "16px", maxWidth: "850px", margin: "0 auto" }}>
+                Whether you are optimizing for traditional Google SERPs, Google Maps 3-Pack, or AI search engines like ChatGPT, Perplexity, and Google AI Overviews — here are clear, factual direct answers to core optimization questions.
               </p>
             </div>
 
-            <div className="geo-questions-grid">
-              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+            <div className="geo-questions-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
                 <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
-                  What is Search Engine Optimization (SEO)?
+                  What is AI Engine Optimization (AEO)?
                 </h4>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
-                  SEO improves website performance and content relevance, ensuring pages rank higher organically in search engines.
+                  AEO is the practice of optimizing content to be selected as the direct, zero-click answer by AI systems, voice assistants (Siri, Alexa, Google Assistant), and conversational bots like ChatGPT and Microsoft Copilot.
                 </p>
               </div>
 
-              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
-                  Why are backlinks important for SEO?
-                </h4>
-                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
-                  Backlinks serve as trust signals from external sites, signaling search engine algorithms that your content is authoritative.
-                </p>
-              </div>
-
-              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
-                  How does local SEO benefit regional brands?
-                </h4>
-                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
-                  Local SEO optimizes location-based citations and Google Maps profiles, driving local search traffic and customer inquiries.
-                </p>
-              </div>
-
-              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
                 <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Generative Engine Optimization (GEO)?
                 </h4>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
-                  GEO structures site data and direct answers so AI engines like ChatGPT and Gemini can read, process, and cite your brand.
+                  GEO structures your digital presence through machine-readable manifest files (/llms.txt), entity authority, and high-density factual copy so AI synthesis engines (Google AI Overviews, Perplexity) cite your brand as a source.
+                </p>
+              </div>
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  How does Local SEO dominate 'Near Me' searches?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Local SEO pairs Google Business Profile optimization with 100% NAP citation consistency and LocalBusiness Schema markup, allowing local stores and B2B providers in Bihar and India to capture the top 3 Google Maps positions.
+                </p>
+              </div>
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  How do Google AI Overviews decide which sites to cite?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Google AI Overviews prioritize pages that display strong E-E-A-T signals, direct factual answers in the opening 100 words, Schema.org verification, and validated entity connections in the Google Knowledge Graph.
+                </p>
+              </div>
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  What is the difference between SEO, AEO, and GEO?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  SEO targets traditional 10-blue-link search rankings; AEO targets immediate conversational and voice answers; GEO targets citations and source attributions within AI-generated multi-paragraph syntheses.
+                </p>
+              </div>
+
+              <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
+                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                  Why is Schema.org structured data critical for modern SEO?
+                </h4>
+                <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
+                  Structured data provides search crawlers and LLMs with explicit context about your business type, services, pricing, FAQs, and geographical coordinates without requiring ambiguous page text parsing.
                 </p>
               </div>
             </div>
@@ -1245,6 +1224,18 @@ const SEO = () => {
               question: "What is Generative Engine Optimization (GEO)?",
               answer:
                 "GEO optimizes content for conversational AI engines, ensuring search bots can easily extract and cite your data.",
+            },
+            {
+              id: "faq16",
+              question: "What is Answer Engine Optimization (AEO) and how does it help rank on AI search?",
+              answer:
+                "AEO (Answer Engine Optimization) structures website copy into direct-answer formats and Schema.org FAQPage blocks, allowing conversational AI search engines (like ChatGPT, Perplexity, and Google Gemini) to cite your brand directly.",
+            },
+            {
+              id: "faq17",
+              question: "How long does Local SEO take to rank in Google Maps for Bihar businesses?",
+              answer:
+                "Most local businesses begin seeing noticeable rank improvements in Google Maps 3-Pack and localized 'near me' queries within 4 to 8 weeks as NAP citations, Google Business Profile optimizations, and local schema are validated.",
             },
           ].map((faq, index) => (
             <div className="faq-item" key={faq.id}>

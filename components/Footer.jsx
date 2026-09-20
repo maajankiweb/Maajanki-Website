@@ -56,7 +56,7 @@ const Footer = () => {
               <FaLinkedinIn />
             </a>
             <a
-              href="https://www.facebook.com/profile.php?id=61577526895580"
+              href="https://www.facebook.com/maajankiwebtech"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -143,6 +143,9 @@ const Footer = () => {
               <Link href="/services">Our Services</Link>
             </li>
             <li>
+              <Link href="/products">Our Products</Link>
+            </li>
+            <li>
               <Link href="/industries">Industries</Link>
             </li>
             <li>
@@ -176,6 +179,9 @@ const Footer = () => {
             <li>
               <Link href="/faqs">FAQs</Link>
             </li>
+            <li>
+              <Link href="/sitemap">HTML Sitemap</Link>
+            </li>
           </ul>
         </div>
 
@@ -185,6 +191,12 @@ const Footer = () => {
           <ul>
             <li>
               <Link href="/services/web-development">Web Development</Link>
+            </li>
+            <li>
+              <Link href="/services/wordpress-development">WordPress Development</Link>
+            </li>
+            <li>
+              <Link href="/services/landing-page">Landing Page Design</Link>
             </li>
             <li>
               <Link href="/services/mobile-app-development">Mobile App Development</Link>
@@ -211,9 +223,12 @@ const Footer = () => {
         <div className="footer-col">
           <h3>GET IN TOUCH</h3>
           <ul>
-            <li>
+            <li className="footer-nap-details">
               <FaMapMarkerAlt className="footer-icon" />
-              <span>Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101</span>
+              <span>
+                <strong>MaaJanki Web Tech</strong><br />
+                Brajmala Complex, First Floor, Near Cinema House, Building of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101
+              </span>
             </li>
             <li>
               <FaEnvelope className="footer-icon" />
@@ -306,6 +321,9 @@ const Footer = () => {
           </li>
           <li>
             <Link href="/terms-conditions">Terms & Conditions</Link>
+          </li>
+          <li>
+            <Link href="/sitemap">Sitemap</Link>
           </li>
         </ul>
       </div>

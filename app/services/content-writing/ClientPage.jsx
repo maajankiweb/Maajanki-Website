@@ -27,7 +27,7 @@ const ContentWriting = () => {
           "description": "Professional content writing services including website copywriting, blog posting, article writing, and marketing copy aligned with SEO best practices.",
           "url": "https://maajankiwebtech.com/services/content-writing",
           "image": "https://maajankiwebtech.com/assets/og-image-content-writing.jpg",
-          "priceRange": "$",
+          "priceRange": "₹₹",
           "areaServed": [
             { "@type": "Country", "name": "India" },
             { "@type": "State", "name": "Bihar" }
@@ -213,22 +213,16 @@ const ContentWriting = () => {
                   Mapping Content and Keywords to Solve User Questions
                 </h3>
                 <p className="content-text">
-                  <strong>Intent-Based Keyword Research</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized content writing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Effective content writing starts with query intent classification. We analyze Google Search Console and search query data to map what your potential customers actively search for across informational, commercial, and transactional stages.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>keyword-rich search content that highlights your products and services with clarity and impact.</strong> By leveraging semantic search terms and long-tail query mapping, we ensure your content writing aligns with the algorithms and search behavior of Google and other search engines.
+                  By grouping related queries into semantic topical clusters, we ensure each article or page establishes topical authority rather than targeting isolated, low-volume keywords.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your search-optimized written copy</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Build a strategic content roadmap that answers real buyer questions and captures search traffic. In tandem with our proven <Link href="/services/seo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>SEO content strategy</Link>, our writers ensure maximum organic visibility and E-E-A-T relevance across Google and AI search engines.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Publish authoritative, search-optimized content that drives inbound leads with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -256,25 +250,19 @@ const ContentWriting = () => {
                   2. High-Performance Website Copywriting
                 </h2>
                 <h3 className="sub-heading">
-                  Writing Landing Page Copy Aligned with Customer Conversion Pathways
+                  Crafting High-Converting Sales Copy for Service and Product Pages
                 </h3>
                 <p className="content-text">
-                  <strong>High-Performance Website Copywriting</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized content writing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Your website copy is your primary 24/7 salesperson. We write punchy, persuasive copy for homepage heroes, service landing pages, and product pages that articulates your unique value proposition clearly.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>keyword-rich search content that highlights your products and services with clarity and impact.</strong> By leveraging semantic search terms and long-tail query mapping, we ensure your content writing aligns with the algorithms and search behavior of Google and other search engines.
+                  We structure copy using proven direct-response frameworks: hook the visitor with their core pain point, present your solution with clarity, back claims with social proof, and drive action with focused CTAs.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your search-optimized written copy</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Turn passive website visitors into qualified inbound business inquiries.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Publish authoritative, search-optimized content that drives inbound leads with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -328,25 +316,19 @@ const ContentWriting = () => {
                   3. Authority-Building Blog Posting
                 </h2>
                 <h3 className="sub-heading">
-                  Earning Topical Authority Through High-Quality Educational Content
+                  In-Depth Educational Articles That Command Industry Thought Leadership
                 </h3>
                 <p className="content-text">
-                  <strong>Authority-Building Blog Posting</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized content writing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Publishing comprehensive, original articles is the most reliable strategy to build long-term domain authority. We research and write 1,500+ word pillar guides that thoroughly explore complex industry questions.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>keyword-rich search content that highlights your products and services with clarity and impact.</strong> By leveraging semantic search terms and long-tail query mapping, we ensure your content writing aligns with the algorithms and search behavior of Google and other search engines.
+                  Every article incorporates custom data summaries, actionable takeaways, semantic H2/H3 subheadings, and internal link pathways pointing to your commercial service pages.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your search-optimized written copy</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Earn organic backlinks, boost search rankings, and establish genuine thought leadership.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Publish authoritative, search-optimized content that drives inbound leads with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -393,25 +375,19 @@ const ContentWriting = () => {
                   4. Persuasive Product Description Writing
                 </h2>
                 <h3 className="sub-heading">
-                  Optimizing Product Details to Maximize Online Sales
+                  Benefit-Driven E-Commerce Copy That Answers Buyer Objections and Converts
                 </h3>
                 <p className="content-text">
-                  <strong>Persuasive Product Description Writing</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized content writing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Generic product descriptions kill e-commerce sales. We craft persuasive product copy that focuses on real-world benefits, technical specifications, and emotional triggers that drive purchases.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>keyword-rich search content that highlights your products and services with clarity and impact.</strong> By leveraging semantic search terms and long-tail query mapping, we ensure your content writing aligns with the algorithms and search behavior of Google and other search engines.
+                  Our descriptions seamlessly integrate primary keywords into bullet points and narrative copy, improving search visibility on Google and marketplace search engines without sounding repetitive.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your search-optimized written copy</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Overcome buyer hesitation and increase average order value with compelling product copy.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Publish authoritative, search-optimized content that drives inbound leads with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -456,25 +432,19 @@ const ContentWriting = () => {
                   5. Corporate Profiles & Copywriting
                 </h2>
                 <h3 className="sub-heading">
-                  Establishing Business Credibility with Professional Documentation
+                  Professional Company Profiles and Capability Statements for B2B Success
                 </h3>
                 <p className="content-text">
-                  <strong>Corporate Profiles & Copywriting</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized content writing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Enterprise clients and government procurement teams evaluate corporate documentation rigorously. We craft executive company profiles, annual reports, capability statements, and founder bios that communicate corporate reliability.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>keyword-rich search content that highlights your products and services with clarity and impact.</strong> By leveraging semantic search terms and long-tail query mapping, we ensure your content writing aligns with the algorithms and search behavior of Google and other search engines.
+                  We highlight your MSME, DPIIT, and quality certifications alongside case studies and operational metrics that demonstrate proven delivery capability.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your search-optimized written copy</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Equip your business development team with authoritative corporate presentations.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Publish authoritative, search-optimized content that drives inbound leads with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -522,25 +492,19 @@ const ContentWriting = () => {
                   6. Technical Copywriting & B2B Content
                 </h2>
                 <h3 className="sub-heading">
-                  Structuring Complex Data into Easy-to-Understand Content
+                  Precise, In-Depth Content for Software, Engineering, and SaaS Platforms
                 </h3>
                 <p className="content-text">
-                  <strong>Technical Copywriting & B2B Content</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized content writing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Technical audiences demand factual precision and deep domain comprehension. Our technical copywriters produce whitepapers, API guides, software feature release notes, and SaaS case studies.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>keyword-rich search content that highlights your products and services with clarity and impact.</strong> By leveraging semantic search terms and long-tail query mapping, we ensure your content writing aligns with the algorithms and search behavior of Google and other search engines.
+                  We distill complex technical workflows into clear, readable prose that resonates with CTOs, engineering leads, and technical decision-makers.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your search-optimized written copy</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Establish technical credibility with thoroughly researched, accurate documentation.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Publish authoritative, search-optimized content that drives inbound leads with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -579,25 +543,19 @@ const ContentWriting = () => {
               <div className="content-area" data-aos="fade-up-left">
                 <h2 className="main-heading">7. E-E-A-T Quality Auditing</h2>
                 <h3 className="sub-heading">
-                  Optimizing Content Relevancy Under Google's Search Guidelines
+                  Aligning Content with Google Experience, Expertise, Authoritativeness, and Trust
                 </h3>
                 <p className="content-text">
-                  <strong>E-E-A-T Quality Auditing</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized content writing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Google's search quality guidelines heavily penalize superficial or unverified content. We audit existing content to ensure compliance with E-E-A-T principles: transparent author bios, cited primary sources, and verified credentials.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>keyword-rich search content that highlights your products and services with clarity and impact.</strong> By leveraging semantic search terms and long-tail query mapping, we ensure your content writing aligns with the algorithms and search behavior of Google and other search engines.
+                  We incorporate verifiable trust badges (such as Udyam MSME and DPIIT Startup India) and real project metrics to reinforce content trustworthiness.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your search-optimized written copy</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Protect your domain from algorithmic updates with verified E-E-A-T content standards.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Publish authoritative, search-optimized content that drives inbound leads with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>
@@ -641,27 +599,21 @@ const ContentWriting = () => {
                 </div>
               </div>
               <div className="content-area" style={{ direction: "ltr" }} data-aos="fade-up-left">
-                <h2 className="main-heading">8. GEO AI Content Search Optimization</h2>
+                <h2 className="main-heading">8. AEO &amp; GEO Content Writing (Answer Engine Optimization)</h2>
                 <h3 className="sub-heading">
-                  Optimizing Brand Copy for AI Engines & Generative Search
+                  Engineering Direct Answers, Definition Snippets &amp; Structured Citations for ChatGPT, Perplexity &amp; Google AI Overviews
                 </h3>
                 <p className="content-text">
-                  <strong>GEO AI Content Search Optimization</strong> connects your business with target clients and builds market authority. In competitive markets, standing out with optimized content writing is essential to attract qualified leads. This is where MaaJanki Web Tech comes.
+                  Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) represent the cutting edge of digital search. We engineer content into concise direct-answer blocks, clear 40–60 word definition snippets, semantic comparison tables, bulleted takeaway lists, and nested FAQ schemas that conversational AI models cite as primary authoritative references.
                 </p>
                 <p className="content-text">
-                  We specialize in <strong>keyword-rich search content that highlights your products and services with clarity and impact.</strong> By leveraging semantic search terms and long-tail query mapping, we ensure your content writing aligns with the algorithms and search behavior of Google and other search engines.
+                  When potential buyers ask natural-language questions to ChatGPT, Perplexity, Gemini, or Google AI Overviews—such as &ldquo;which company offers the best Next.js web development in India?&rdquo;—our AEO-structured copy ensures your brand is extracted and recommended as the definitive answer.
                 </p>
                 <p className="content-text">
-                  Our experts use keywords, AEO (Answer Engine Optimization) strategies, and clear formatting to boost visibility and engagement. We focus on naturalness, accuracy, and professionalism to build credibility and encourage direct inquiries.
-                </p>
-                <p className="content-text">
-                  Whether you are a manufacturer, exporter, or service provider, we help you build a conversion-centered digital presence. We ensure your profiles and product pages look reliable, informative, and ready to convert visitors into customers.
-                </p>
-                <p className="content-text">
-                  With MaaJanki Web Tech, <strong>your search-optimized written copy</strong> becomes a powerful lead-generation tool that expands your business reach, builds buyer trust, and drives continuous B2B market growth.
+                  Future-proof your organic search footprint and capture high-converting zero-click conversational discovery.
                 </p>
                 <span className="content-cta">
-                  <strong>Allow your products speak loudly, rank high, and sell with MaaJanki Web Tech.</strong>
+                  <strong>Publish authoritative, AEO-optimized content that commands citations in AI search engines with MaaJanki Web Tech.</strong>
                 </span>
               </div>
             </div>

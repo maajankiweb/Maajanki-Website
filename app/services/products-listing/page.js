@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "eCommerce Product Listing Design & Magento Services India | MaaJanki Web Tech",
+  title: "eCommerce Product Listing Services India | MaaJanki Web Tech",
   description: "Professional eCommerce product listing design services, Magento cataloging, Amazon A+ content & multi-marketplace store management across India. Get free sample listings!",
   keywords: [
     "ecommerce product listing design services",
@@ -16,28 +16,58 @@ export const metadata = {
     "MaaJanki Web Tech eCommerce"
   ],
   openGraph: {
-    title: "eCommerce Product Listing Design & Magento Services India | MaaJanki Web Tech",
+    title: "eCommerce Product Listing Services India | MaaJanki Web Tech",
     description: "Professional eCommerce product listing design services, Magento cataloging, and account management for Amazon, Flipkart, Meesho, Shopify, and IndiaMART.",
     url: "https://maajankiwebtech.com/services/products-listing",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://maajankiwebtech.com/images/pages/main-services-pages/Products-Listing-banner-Maajanki.webp",
+        width: 1200,
+        height: 630,
+        alt: "eCommerce Product Listing Services India | MaaJanki Web Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "eCommerce Product Listing Design & Magento Services India | MaaJanki Web Tech",
+    title: "eCommerce Product Listing Services India | MaaJanki Web Tech",
     description: "Professional eCommerce product listing design and Magento cataloging services for sellers in India.",
+    images: ["https://maajankiwebtech.com/images/pages/main-services-pages/Products-Listing-banner-Maajanki.webp"],
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/products-listing",
+    languages: {
+      "en-IN": "https://maajankiwebtech.com/services/products-listing",
+      "x-default": "https://maajankiwebtech.com/services/products-listing",
+    },
   },
 };
 
 export default function Page() {
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://maajankiwebtech.com/services/products-listing#webpage",
+    "url": "https://maajankiwebtech.com/services/products-listing",
+    "name": "eCommerce Product Listing Services India | MaaJanki Web Tech",
+    "description": "Professional eCommerce product listing design services, cataloging, and account management for Amazon, Flipkart, Meesho, Shopify, and IndiaMART.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://maajankiwebtech.com/#website",
+      "name": "MaaJanki Web Tech",
+      "url": "https://maajankiwebtech.com/"
+    },
+    "inLanguage": "en-IN"
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://maajankiwebtech.com/services/products-listing/#service",
+    "@id": "https://maajankiwebtech.com/services/products-listing#service",
+    "url": "https://maajankiwebtech.com/services/products-listing",
     "name": "eCommerce Product Listing & Cataloging Services",
     "provider": {
       "@id": "https://maajankiwebtech.com/#organization"
@@ -123,6 +153,10 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

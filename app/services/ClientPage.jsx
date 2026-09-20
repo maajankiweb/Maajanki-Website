@@ -183,6 +183,18 @@ const Services = () => {
       link: "/services/web-development",
     },
     {
+      title: "WordPress Development",
+      desc: "High-speed custom WordPress themes, WooCommerce stores, security hardening, and SEO-ready content management architectures.",
+      icon: <FaLaptopCode />,
+      link: "/services/wordpress-development",
+    },
+    {
+      title: "Landing Page Design",
+      desc: "High-converting CRO landing pages engineered with 1:1 attention ratios to maximize Google Ads Quality Score and paid ad ROI.",
+      icon: <FaBullhorn />,
+      link: "/services/landing-page",
+    },
+    {
       title: "Branding",
       desc: "Create a memorable brand identity with professional logo design, brand strategy, visual assets, and consistent messaging across all platforms.",
       icon: <FaPalette />,

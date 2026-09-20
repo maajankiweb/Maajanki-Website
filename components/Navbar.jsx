@@ -239,6 +239,20 @@ const Navbar = () => {
                       Web Development
                     </Link>
                     <Link
+                      href="/services/wordpress-development"
+                      className="dropdown-item"
+                      onClick={handleLinkClick}
+                    >
+                      WordPress Development
+                    </Link>
+                    <Link
+                      href="/services/landing-page"
+                      className="dropdown-item"
+                      onClick={handleLinkClick}
+                    >
+                      Landing Page Design
+                    </Link>
+                    <Link
                       href="/services/mobile-app-development"
                       className="dropdown-item"
                       onClick={handleLinkClick}

@@ -18,22 +18,52 @@ export const metadata = {
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://maajankiwebtech.com/images/pages/main-services-pages/ui-ux-design-banner-image-Maajanki-Web-Tech.webp",
+        width: 1200,
+        height: 630,
+        alt: "Web & Mobile App UI UX Design Services in India | MaaJanki Web Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Web & Mobile App UI UX Design Services in India & Global | MaaJanki Web Tech",
     description: "Create intuitive, user-centered website and mobile application UI/UX designs.",
+    images: ["https://maajankiwebtech.com/images/pages/main-services-pages/ui-ux-design-banner-image-Maajanki-Web-Tech.webp"],
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/ui-ux-design",
+    languages: {
+      "en-IN": "https://maajankiwebtech.com/services/ui-ux-design",
+      "x-default": "https://maajankiwebtech.com/services/ui-ux-design",
+    },
   },
 };
 
 export default function Page() {
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://maajankiwebtech.com/services/ui-ux-design#webpage",
+    "url": "https://maajankiwebtech.com/services/ui-ux-design",
+    "name": "Web & Mobile App UI UX Design Services in India & Global | MaaJanki Web Tech",
+    "description": "Create intuitive, user-centered website and mobile application UI/UX designs. User research, wireframing, and interactive Figma prototypes.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://maajankiwebtech.com/#website",
+      "name": "MaaJanki Web Tech",
+      "url": "https://maajankiwebtech.com/"
+    },
+    "inLanguage": "en-IN"
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://maajankiwebtech.com/services/ui-ux-design/#service",
+    "@id": "https://maajankiwebtech.com/services/ui-ux-design#service",
+    "url": "https://maajankiwebtech.com/services/ui-ux-design",
     "name": "Web & Mobile App UI/UX Design Services",
     "provider": {
       "@id": "https://maajankiwebtech.com/#organization"
@@ -87,6 +117,10 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

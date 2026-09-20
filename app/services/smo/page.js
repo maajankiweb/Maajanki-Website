@@ -1,8 +1,8 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Social Media Optimization (SMO) Services in India & Global | MaaJanki Web Tech",
-  description: "Grow your organic brand reach with social media optimization (SMO) and social media marketing across Facebook, Instagram, LinkedIn, and YouTube in India, USA, UK, and UAE.",
+  title: "Social Media Marketing (SMO) Services | MaaJanki Web Tech",
+  description: "Build brand authority with social media marketing on Facebook, Instagram, LinkedIn & X. SMO agency in Bihar, India — measurable reach and lead generation.",
   keywords: [
     "SMO services India",
     "social media marketing India",
@@ -12,28 +12,58 @@ export const metadata = {
     "MaaJanki Web Tech SMO"
   ],
   openGraph: {
-    title: "Social Media Optimization (SMO) Services in India & Global | MaaJanki Web Tech",
-    description: "Grow organic brand reach with social media optimization across Facebook, Instagram, LinkedIn, and YouTube in India and globally.",
+    title: "Social Media Marketing (SMO) Services | MaaJanki Web Tech",
+    description: "Build brand authority with social media marketing on Facebook, Instagram, LinkedIn & X. SMO agency in Bihar, India — measurable reach and lead generation.",
     url: "https://maajankiwebtech.com/services/smo",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://maajankiwebtech.com/images/pages/main-services-pages/smo-banner-image-Maajanki-Web-Tech.webp",
+        width: 1200,
+        height: 630,
+        alt: "Social Media Marketing (SMO) Services | MaaJanki Web Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Social Media Optimization (SMO) Services in India & Global | MaaJanki Web Tech",
-    description: "Grow organic brand reach with social media optimization services in India.",
+    title: "Social Media Marketing (SMO) Services | MaaJanki Web Tech",
+    description: "Build brand authority with social media marketing on Facebook, Instagram, LinkedIn & X. SMO agency in Bihar, India — measurable reach and lead generation.",
+    images: ["https://maajankiwebtech.com/images/pages/main-services-pages/smo-banner-image-Maajanki-Web-Tech.webp"],
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/smo",
+    languages: {
+      "en-IN": "https://maajankiwebtech.com/services/smo",
+      "x-default": "https://maajankiwebtech.com/services/smo",
+    },
   },
 };
 
 export default function Page() {
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://maajankiwebtech.com/services/smo#webpage",
+    "url": "https://maajankiwebtech.com/services/smo",
+    "name": "Social Media Marketing (SMO) Services | MaaJanki Web Tech",
+    "description": "Grow your organic brand reach with social media optimization (SMO) and social media marketing across Facebook, Instagram, LinkedIn, and YouTube.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://maajankiwebtech.com/#website",
+      "name": "MaaJanki Web Tech",
+      "url": "https://maajankiwebtech.com/"
+    },
+    "inLanguage": "en-IN"
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://maajankiwebtech.com/services/smo/#service",
+    "@id": "https://maajankiwebtech.com/services/smo#service",
+    "url": "https://maajankiwebtech.com/services/smo",
     "name": "Social Media Optimization (SMO) & Organic Marketing",
     "provider": {
       "@id": "https://maajankiwebtech.com/#organization"
@@ -86,6 +116,10 @@ export default function Page() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}

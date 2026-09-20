@@ -1,8 +1,8 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "SEO Services in India | Local SEO & AI Engine Optimization (AEO) Agency | MaaJanki Web Tech",
-  description: "Rank #1 on Google and AI search engines with expert SEO services in India. Technical SEO, local SEO, AI Engine Optimization (AEO), and Google Business Profile growth.",
+  title: "SEO Services in Bihar & India | AEO Agency | MaaJanki Web Tech",
+  description: "Rank #1 on Google with expert SEO in Bihar & India. Local SEO, Technical SEO, AEO optimization & Google Business Profile growth. Get a free audit.",
   keywords: [
     "SEO Services in India",
     "Best SEO Company India",
@@ -14,20 +14,32 @@ export const metadata = {
     "MaaJanki Web Tech SEO"
   ],
   openGraph: {
-    title: "SEO Services in India | Local SEO & AEO Agency | MaaJanki Web Tech",
-    description: "Rank #1 on Google and AI search engines with expert SEO services in India. Local SEO, AEO, and Google Business Profile growth.",
+    title: "SEO Services in Bihar & India | AEO Agency | MaaJanki Web Tech",
+    description: "Rank #1 on Google with expert SEO in Bihar & India. Local SEO, Technical SEO, AEO optimization & Google Business Profile growth. Get a free audit.",
     url: "https://maajankiwebtech.com/services/seo",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "https://maajankiwebtech.com/images/pages/main-services-pages/seo-banner-image-Maajanki-Web-Tech.webp",
+        width: 1200,
+        height: 630,
+        alt: "SEO Services in Bihar & India | AEO Agency | MaaJanki Web Tech",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Services in India | Local SEO & AEO Agency | MaaJanki Web Tech",
-    description: "Rank #1 on Google and AI search engines with expert SEO services in India.",
+    title: "SEO Services in Bihar & India | AEO Agency | MaaJanki Web Tech",
+    description: "Rank #1 on Google with expert SEO in Bihar & India. Local SEO, Technical SEO, AEO optimization & Google Business Profile growth. Get a free audit.",
   },
   alternates: {
     canonical: "https://maajankiwebtech.com/services/seo",
+    languages: {
+      "en-IN": "https://maajankiwebtech.com/services/seo",
+      "x-default": "https://maajankiwebtech.com/services/seo",
+    },
   },
 };
 
@@ -35,7 +47,8 @@ export default function Page() {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://maajankiwebtech.com/services/seo/#service",
+    "@id": "https://maajankiwebtech.com/services/seo#service",
+    "url": "https://maajankiwebtech.com/services/seo",
     "name": "SEO Services & AI Engine Optimization (AEO)",
     "provider": {
       "@id": "https://maajankiwebtech.com/#organization"
@@ -58,28 +71,50 @@ export default function Page() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Local SEO & Map Pack Optimization",
-            "description": "Google Business Profile setup, local citation building, and map pack ranking in Patna & Bihar."
+            "name": "Local SEO & Google Business Profile Optimization"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Generative Engine Optimization (AEO/GEO)",
-            "description": "Structuring content for ChatGPT, Perplexity, Google Gemini, and Claude AI citations."
+            "name": "Technical SEO & Core Web Vitals Optimization"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Technical SEO & Schema Injection",
-            "description": "Meta tag optimization, Schema.org JSON-LD injection, site speed optimization, and IndexNow pings."
+            "name": "Generative Engine Optimization (GEO) & AI Answer Engine Optimization (AEO)"
           }
         }
       ]
     }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://maajankiwebtech.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://maajankiwebtech.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SEO Services",
+        "item": "https://maajankiwebtech.com/services/seo"
+      }
+    ]
   };
 
   const faqSchema = {
@@ -105,6 +140,22 @@ export default function Page() {
       },
       {
         "@type": "Question",
+        "name": "How does Local SEO help businesses in Bihar capture 'near me' searches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Local SEO optimizes your Google Business Profile (GBP), geo-targeted landing pages, and localized Schema.org markup to rank in the Google Maps 3-Pack for high-intent searches like 'web designer near me' across Patna, Bettiah, Bagaha, and Muzaffarpur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Generative Engine Optimization (GEO) for AI search engines?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "GEO optimizes your brand's digital presence with structured entities, /llms.txt manifests, and authoritative content formatting so AI engines like Perplexity, ChatGPT Search, and Google AI Overviews cite your business as the definitive recommendation."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "How quickly can my business rank on Google in Bihar?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -114,11 +165,55 @@ export default function Page() {
     ]
   };
 
+  const localSeoServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://maajankiwebtech.com/services/seo#local-seo",
+    "name": "Local SEO Services in Bihar",
+    "serviceType": "Local Search Engine Optimization",
+    "url": "https://maajankiwebtech.com/services/seo",
+    "provider": { "@id": "https://maajankiwebtech.com/#organization" },
+    "areaServed": [
+      { "@type": "City", "name": "Bagaha" },
+      { "@type": "City", "name": "Bettiah" },
+      { "@type": "City", "name": "Motihari" },
+      { "@type": "City", "name": "Patna" },
+      { "@type": "State", "name": "Bihar" }
+    ]
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://maajankiwebtech.com/services/seo#webpage",
+    "url": "https://maajankiwebtech.com/services/seo",
+    "name": "SEO Services in Bihar & India | AEO Agency | MaaJanki Web Tech",
+    "inLanguage": "en-IN",
+    "dateModified": "2026-09-20",
+    "isPartOf": {
+      "@id": "https://maajankiwebtech.com/#website"
+    },
+    "about": {
+      "@id": "https://maajankiwebtech.com/#organization"
+    },
+    "mainEntity": {
+      "@id": "https://maajankiwebtech.com/services/seo#service"
+    }
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localSeoServiceSchema) }}
       />
       <script
         type="application/ld+json"
