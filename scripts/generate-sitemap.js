@@ -19,8 +19,8 @@ const locations = [
 ];
 
 const pages = [
-  // Homepage (with trailing slash)
-  { path: '/', changefreq: 'daily', priority: '1.0' },
+  // Homepage (Matches exact canonical URL without trailing slash)
+  { path: '', changefreq: 'daily', priority: '1.0' },
 
   // Core Pages
   { path: '/about', changefreq: 'daily', priority: '0.8' },
@@ -86,7 +86,7 @@ const pages = [
 
 function buildXmlSitemap() {
   const xmlEntries = pages.map((page) => {
-    const url = page.path === '/' ? `${baseUrl}/` : `${baseUrl}${page.path}`;
+    const url = page.path === '/' || page.path === '' ? `${baseUrl}` : `${baseUrl}${page.path}`;
     return `  <url>
     <loc>${url}</loc>
     <lastmod>${currentDate}</lastmod>

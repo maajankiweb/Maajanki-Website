@@ -133,7 +133,7 @@ const PortfolioSection = () => {
             </p>
             <p>
               From first-time founders finding their voice to established
-              companies expanding their digital reach, our custom <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>web development services</Link>, SEO campaigns, and branding deliver
+              companies expanding their digital reach, our custom <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>web development services</Link>, SEO campaigns, and branding deliver
               the same level of craft across every engagement whether it’s a
               startup brand identity or a complex multi-channel campaign.
             </p>

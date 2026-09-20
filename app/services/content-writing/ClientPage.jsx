@@ -219,7 +219,7 @@ const ContentWriting = () => {
                   By grouping related queries into semantic topical clusters, we ensure each article or page establishes topical authority rather than targeting isolated, low-volume keywords.
                 </p>
                 <p className="content-text">
-                  Build a strategic content roadmap that answers real buyer questions and captures search traffic. In tandem with our proven <Link href="/services/seo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>SEO content strategy</Link>, our writers ensure maximum organic visibility and E-E-A-T relevance across Google and AI search engines.
+                  Build a strategic content roadmap that answers real buyer questions and captures search traffic. In tandem with our proven <Link href="/services/seo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>SEO content strategy</Link>, our writers ensure maximum organic visibility and E-E-A-T relevance across Google and AI search engines.
                 </p>
                 <span className="content-cta">
                   <strong>Publish authoritative, search-optimized content that drives inbound leads with MaaJanki Web Tech.</strong>

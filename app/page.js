@@ -18,15 +18,15 @@ export const metadata = {
     "MaaJanki Web Tech"
   ],
   alternates: {
-    canonical: "https://maajankiwebtech.com/",
+    canonical: "https://maajankiwebtech.com",
     languages: {
-      "en-IN": "https://maajankiwebtech.com/",
+      "en-IN": "https://maajankiwebtech.com",
       "en-US": "https://maajankiwebtech.com/locations/united-states",
       "en-GB": "https://maajankiwebtech.com/locations/united-kingdom",
       "en-CA": "https://maajankiwebtech.com/locations/canada",
       "en-AU": "https://maajankiwebtech.com/locations/australia",
       "en-AE": "https://maajankiwebtech.com/locations/united-arab-emirates",
-      "x-default": "https://maajankiwebtech.com/",
+      "x-default": "https://maajankiwebtech.com",
     },
   },
   robots: {
@@ -45,7 +45,7 @@ export const metadata = {
   openGraph: {
     title: "Web Development & Digital Marketing Agency in India | MaaJanki Web Tech",
     description: "MaaJanki Web Tech — India's premier web development & digital marketing agency. Expert in Next.js, SEO, Google Ads & performance marketing. Free 30-min audit.",
-    url: "https://maajankiwebtech.com/",
+    url: "https://maajankiwebtech.com",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
     type: "website",

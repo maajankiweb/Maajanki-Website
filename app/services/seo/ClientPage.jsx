@@ -229,7 +229,7 @@ const SEO = () => {
                   Our keyword research process begins with <strong>Google Search Console analysis</strong> — extracting existing impressions, clicks, and average positions to identify what your audience already searches for. We group queries by intent: commercial (ready to hire), informational (researching), local (near-me), and transactional (ready to buy).
                 </p>
                 <p className="content-text">
-                  We then build <strong>semantic keyword clusters</strong> — topic groups where your primary page becomes the authoritative answer, with supporting content reinforcing it. This intent-to-page mapping ensures every piece of your website content earns topical authority rather than generic keyword presence. When synchronized with targeted <Link href="/services/performance-marketing" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>paid search campaigns</Link>, your brand achieves total search dominance across both organic and paid SERP channels.
+                  We then build <strong>semantic keyword clusters</strong> — topic groups where your primary page becomes the authoritative answer, with supporting content reinforcing it. This intent-to-page mapping ensures every piece of your website content earns topical authority rather than generic keyword presence. When synchronized with targeted <Link href="/services/performance-marketing" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>paid search campaigns</Link>, your brand achieves total search dominance across both organic and paid SERP channels.
                 </p>
                 <span className="content-cta">
                   <strong>Turn search intent into qualified traffic — book your free keyword strategy audit today.</strong>
@@ -313,7 +313,7 @@ const SEO = () => {
                   Technical SEO ensures Google can efficiently crawl, render, and index every page on your website. Our audit covers <strong>Core Web Vitals compliance</strong> (LCP &lt; 2.5s, INP &lt; 200ms, CLS &lt; 0.1), crawl budget efficiency, XML sitemap completeness, robots.txt directives, HTTPS integrity, and canonical redirect chains.
                 </p>
                 <p className="content-text">
-                  We identify and fix <strong>crawl errors</strong>, broken internal links, orphaned pages, slow server response times (TTFB &gt; 800ms), render-blocking resources, and uncompressed asset delivery — backed by clean, <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>SEO-friendly web development</Link> to ensure rapid sub-second delivery on all devices.
+                  We identify and fix <strong>crawl errors</strong>, broken internal links, orphaned pages, slow server response times (TTFB &gt; 800ms), render-blocking resources, and uncompressed asset delivery — backed by clean, <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>SEO-friendly web development</Link> to ensure rapid sub-second delivery on all devices.
                 </p>
                 <p className="content-text">
                   Post-fix, we configure <strong>Google Search Console alerts</strong> and submit updated sitemaps so Google re-crawls corrected pages within days rather than waiting for the next organic discovery cycle.

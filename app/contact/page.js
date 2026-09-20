@@ -276,7 +276,7 @@ export default function Page() {
         <div className="service-areas-container">
           <h2 className="service-areas-title">Our Service Areas</h2>
           <p className="service-areas-subtitle">
-            We proudly provide high-performance web development, SEO, and digital marketing services across domestic and global markets. Ready to scale? You can <Link href="/services" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>explore our services</Link> or connect with our team directly:
+            We proudly provide high-performance web development, SEO, and digital marketing services across domestic and global markets. Ready to scale? You can <Link href="/services" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>explore our services</Link> or connect with our team directly:
           </p>
           
           <div className="service-tiers-container">

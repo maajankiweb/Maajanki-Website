@@ -34,7 +34,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com/'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://maajankiwebtech.com'),
   title: {
     default: 'Web Development & Digital Marketing Agency in India | MaaJanki Web Tech',
     template: '%s',
@@ -81,7 +81,7 @@ export const metadata = {
     title: 'Web Development & Digital Marketing Agency in India | MaaJanki Web Tech',
     description:
       "MaaJanki Web Tech — India's premier web development & digital marketing agency. Expert in Next.js, SEO, Google Ads & performance marketing. Free 30-min audit.",
-    url: 'https://maajankiwebtech.com/',
+    url: 'https://maajankiwebtech.com',
     siteName: 'MaaJanki Web Tech',
     locale: 'en_IN',
     images: [

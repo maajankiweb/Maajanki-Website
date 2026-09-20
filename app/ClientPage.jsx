@@ -613,7 +613,7 @@ function Home() {
 
               <div className="services-highlight">
                 <p className="content-text">
-                  From custom Next.js <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>website development services</Link> and WordPress solutions to full-funnel digital marketing services—including AI-first SEO (AEO &amp; GEO), Google Ads PPC, Meta ads, social media optimization (SMO), and high-converting landing page engineering—our multidisciplinary team works closely with you to rank #1 on Google, capture high-value buyer intent, and scale revenue.
+                  From custom Next.js <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>website development services</Link> and WordPress solutions to full-funnel digital marketing services—including AI-first SEO (AEO &amp; GEO), Google Ads PPC, Meta ads, social media optimization (SMO), and high-converting landing page engineering—our multidisciplinary team works closely with you to rank #1 on Google, capture high-value buyer intent, and scale revenue.
                 </p>
               </div>
 
@@ -936,7 +936,7 @@ function Home() {
                   What We Can Do for Your Business
                 </h2>
                 <p className="lead" style={{ color: "#fff" }}>
-                  <strong>MaaJanki Web Tech</strong> offers complete <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>website development services</Link>, high-ranking <Link href="/services/seo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>SEO and AEO services</Link>, data-backed <Link href="/services/performance-marketing" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>performance marketing services</Link>, and scalable <Link href="/services/smo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>social media marketing</Link> designed to help brands grow online.
+                  <strong>MaaJanki Web Tech</strong> offers complete <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>website development services</Link>, high-ranking <Link href="/services/seo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>SEO and AEO services</Link>, data-backed <Link href="/services/performance-marketing" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>performance marketing services</Link>, and scalable <Link href="/services/smo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>social media marketing</Link> designed to help brands grow online.
                 </p>
               </div>
             </div>

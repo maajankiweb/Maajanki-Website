@@ -146,7 +146,7 @@ export default async function sitemap() {
   // Note: robots.txt, llms.txt, etc. are machine discovery files and must NOT be in XML <urlset> sitemaps,
   // as Google Search Console flags non-HTML files as "Crawled - currently not indexed" or "Excluded by noindex".
   return staticPages.map((page) => ({
-    url: page.path === '' || page.path === '/' ? `${baseUrl}/` : `${baseUrl}${page.path}`,
+    url: page.path === '' || page.path === '/' ? `${baseUrl}` : `${baseUrl}${page.path}`,
     lastModified: new Date(),
     changeFrequency: page.changeFrequency,
     priority: page.priority,

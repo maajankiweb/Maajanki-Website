@@ -193,7 +193,7 @@ const PerformanceMarketing = () => {
                     margin: 0,
                   }}
                 >
-                  We conduct detailed customer persona audits, configure advanced tracking tags, write compelling ad copies, and perform A/B tests to optimize Return on Ad Spend (ROAS) and capture ready-to-buy consumers efficiently. Complement paid campaigns with <Link href="/services/seo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>organic SEO services</Link> to achieve sustainable, full-funnel market dominance.
+                  We conduct detailed customer persona audits, configure advanced tracking tags, write compelling ad copies, and perform A/B tests to optimize Return on Ad Spend (ROAS) and capture ready-to-buy consumers efficiently. Complement paid campaigns with <Link href="/services/seo" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>organic SEO services</Link> to achieve sustainable, full-funnel market dominance.
                 </p>
               </div>
             </div>
@@ -670,7 +670,7 @@ const PerformanceMarketing = () => {
                 <h2 className="main-heading">10. Landing Page Design &amp; Optimization</h2>
                 <h3 className="sub-heading">Engineering Sub-Second Direct-Response Landing Pages to Maximize Google &amp; Meta Quality Scores</h3>
                 <p className="content-text">
-                  Every ad campaign needs a dedicated landing page — not your homepage. Sending paid traffic to a generic page destroys Quality Score and wastes budget. Through our high-performance <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "underline" }}>dedicated landing pages</Link>, we design conversion-optimized landing pages with a single clear CTA, above-the-fold trust signals (client logos, review scores, credentials), minimal form fields, and page-specific GA4 conversion tracking.
+                  Every ad campaign needs a dedicated landing page — not your homepage. Sending paid traffic to a generic page destroys Quality Score and wastes budget. Through our high-performance <Link href="/services/web-development" style={{ color: "#FD6A02", fontWeight: 600, textDecoration: "none" }}>dedicated landing pages</Link>, we design conversion-optimized landing pages with a single clear CTA, above-the-fold trust signals (client logos, review scores, credentials), minimal form fields, and page-specific GA4 conversion tracking.
                 </p>
                 <p className="content-text">
                   Our landing pages are built in Next.js for sub-1-second mobile load times — a direct Google Ads Quality Score factor — and are A/B tested for headlines, CTA text, and form length to continuously improve conversion rate.
