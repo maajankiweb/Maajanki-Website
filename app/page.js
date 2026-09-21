@@ -18,15 +18,14 @@ export const metadata = {
     "MaaJanki Web Tech"
   ],
   alternates: {
-    canonical: "https://maajankiwebtech.com",
     languages: {
-      "en-IN": "https://maajankiwebtech.com",
+      "en-IN": "https://maajankiwebtech.com/",
       "en-US": "https://maajankiwebtech.com/locations/united-states",
       "en-GB": "https://maajankiwebtech.com/locations/united-kingdom",
       "en-CA": "https://maajankiwebtech.com/locations/canada",
       "en-AU": "https://maajankiwebtech.com/locations/australia",
       "en-AE": "https://maajankiwebtech.com/locations/united-arab-emirates",
-      "x-default": "https://maajankiwebtech.com",
+      "x-default": "https://maajankiwebtech.com/",
     },
   },
   robots: {
@@ -194,6 +193,7 @@ export default function Page() {
 
   return (
     <>
+      <link rel="canonical" href="https://maajankiwebtech.com/" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
