@@ -1342,9 +1342,10 @@
 
 .tech-card ul li {
     font-size    : 1rem;
-    padding      : 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transition   : color 0.3s;
+    padding      : 8px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    transition   : all 0.25s ease;
 }
 
 .tech-card ul li:last-child {
@@ -1352,8 +1353,11 @@
 }
 
 .tech-card ul li:hover {
-    color      : #FD6A02;
-    font-weight: 600;
+    color           : #042442;
+    background-color: #ffffff;
+    font-weight     : 700;
+    transform       : scale(1.03);
+    box-shadow      : 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Issue #14: Unified glassmorphism card aesthetic — replaced jarring solid gradients */

@@ -371,7 +371,7 @@ const Navbar = () => {
                   />
                 </Link>
               </div>
-              <ul className={`dropdown-menu p-3 ${isAboutMenuOpen ? "show" : ""}`} style={{ minWidth: "180px" }}>
+              <ul className={`dropdown-menu about-dropdown p-2 ${isAboutMenuOpen ? "show" : ""}`}>
                 <li>
                   <Link href="/about" className="dropdown-item" onClick={handleLinkClick}>
                     About Us
