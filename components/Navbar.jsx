@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Image from 'next/image';
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -18,9 +19,19 @@ import {
 import "./Navbar.css";
 
 const Navbar = () => {
+  const pathname = usePathname();
   const [isMegaMenuOpen, setMegaMenuOpen] = useState(false);
+  const [isAboutMenuOpen, setAboutMenuOpen] = useState(false); /* Issue #15: About Us dropdown */
   const [isMenuOpen, setMenuOpen] = useState(false);
   const navbarRef = useRef(null);
+
+  const isActive = (path) => {
+    if (!pathname) return false;
+    if (path === "/") return pathname === "/";
+    if (path === "/services") return pathname === "/services" || pathname.startsWith("/services/");
+    if (path === "/about") return pathname === "/about" || pathname === "/our-team" || pathname === "/careers";
+    return pathname === path || pathname.startsWith(path + "/");
+  };
 
   useEffect(() => {
     if (!navbarRef.current) return;
@@ -52,6 +63,7 @@ const Navbar = () => {
   const handleLinkClick = () => {
     setMenuOpen(false);
     setMegaMenuOpen(false);
+    setAboutMenuOpen(false);
   };
 
   return (
@@ -152,7 +164,7 @@ const Navbar = () => {
 
           <ul className={`nav-links ${isMenuOpen ? "show" : ""}`}>
             <li>
-              <Link href="/" onClick={handleLinkClick}>
+              <Link href="/" className={isActive("/") ? "active" : ""} aria-current={isActive("/") ? "page" : undefined} onClick={handleLinkClick}>
                 HOME
               </Link>
             </li>
@@ -170,7 +182,8 @@ const Navbar = () => {
               <div className="services-link-wrapper">
                 <Link
                   href="/services"
-                  className="nav-link"
+                  className={`nav-link ${isActive("/services") ? "active" : ""}`}
+                  aria-current={isActive("/services") ? "page" : undefined}
                   onClick={(e) => {
                     if (window.innerWidth <= 991) {
                       e.preventDefault();
@@ -307,38 +320,77 @@ const Navbar = () => {
             </li>
 
             <li>
-              <Link href="/products" onClick={handleLinkClick}>
+              <Link href="/products" className={isActive("/products") ? "active" : ""} aria-current={isActive("/products") ? "page" : undefined} onClick={handleLinkClick}>
                 PRODUCTS
               </Link>
             </li>
 
             <li>
-              <Link href="/industries" onClick={handleLinkClick}>
+              <Link href="/industries" className={isActive("/industries") ? "active" : ""} aria-current={isActive("/industries") ? "page" : undefined} onClick={handleLinkClick}>
                 INDUSTRIES
               </Link>
             </li>
             <li>
-              <Link href="/portfolio" onClick={handleLinkClick}>
+              <Link href="/portfolio" className={isActive("/portfolio") ? "active" : ""} aria-current={isActive("/portfolio") ? "page" : undefined} onClick={handleLinkClick}>
                 PORTFOLIO
               </Link>
             </li>
-            <li>
-              <Link href="/about" onClick={handleLinkClick}>
-                ABOUT US
-              </Link>
+            {/* Issue #15: Consolidated About Us dropdown (was 3 separate items) */}
+            <li
+              className={`nav-item dropdown ${isAboutMenuOpen ? "open" : ""}`}
+              onMouseEnter={() => {
+                if (window.innerWidth > 991) setAboutMenuOpen(true);
+              }}
+              onMouseLeave={() => {
+                if (window.innerWidth > 991) setAboutMenuOpen(false);
+              }}
+            >
+              <div className="services-link-wrapper">
+                <Link
+                  href="/about"
+                  className={`nav-link ${isActive("/about") ? "active" : ""}`}
+                  aria-current={isActive("/about") ? "page" : undefined}
+                  onClick={(e) => {
+                    if (window.innerWidth <= 991) {
+                      e.preventDefault();
+                      setAboutMenuOpen(!isAboutMenuOpen);
+                    } else {
+                      handleLinkClick();
+                    }
+                  }}
+                  style={{ display: "inline-flex", alignItems: "center" }}
+                >
+                  ABOUT US{" "}
+                  <FaChevronDown
+                    style={{
+                      fontSize: "10px",
+                      marginLeft: "6px",
+                      transition: "transform 0.2s ease",
+                      transform: isAboutMenuOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
+                  />
+                </Link>
+              </div>
+              <ul className={`dropdown-menu p-3 ${isAboutMenuOpen ? "show" : ""}`} style={{ minWidth: "180px" }}>
+                <li>
+                  <Link href="/about" className="dropdown-item" onClick={handleLinkClick}>
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/our-team" className="dropdown-item" onClick={handleLinkClick}>
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/careers" className="dropdown-item" onClick={handleLinkClick}>
+                    Careers
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
-              <Link href="/our-team" onClick={handleLinkClick}>
-                OUR TEAM
-              </Link>
-            </li>
-            <li>
-              <Link href="/careers" onClick={handleLinkClick}>
-                CAREERS
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" onClick={handleLinkClick}>
+              <Link href="/contact" className={isActive("/contact") ? "active" : ""} aria-current={isActive("/contact") ? "page" : undefined} onClick={handleLinkClick}>
                 CONTACT US
               </Link>
             </li>

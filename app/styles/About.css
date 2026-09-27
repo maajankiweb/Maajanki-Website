@@ -12,8 +12,8 @@
   border-radius: 30px;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-transform: none;
   margin-bottom: 10px;
   backdrop-filter: blur(10px);
 }
@@ -76,6 +76,7 @@
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
+  text-align: left;
 }
 
 .promo-single-wrap::before {
@@ -106,8 +107,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 90px;
-  height: 90px;
+  width: 86px;
+  height: 86px;
   border-radius: 50%;
   background: rgba(253, 106, 2, 0.12);
   margin-bottom: 25px;
@@ -115,15 +116,15 @@
 }
 
 .promo-icon img {
-  width: 50px;
-  height: 50px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
 }
 
 .number-bg {
   position: absolute;
-  top: -6px;
-  right: -6px;
+  top: -4px;
+  right: -4px;
   background: #FD6A02;
   color: #ffffff;
   font-size: 12px;
@@ -160,6 +161,24 @@
   font-size: 15px;
   line-height: 1.7;
   margin: 0;
+  text-align: left;
+}
+
+.promo-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #FD6A02;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 14px;
+  text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.promo-cta-link:hover {
+  gap: 10px;
+  color: #ff8c33;
 }
 
 /* ---------- About Company Section ---------- */
@@ -448,10 +467,10 @@
 }
 
 .faq-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -462,7 +481,7 @@
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -480,31 +499,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 20px;
-  gap: 14px;
+  padding: 18px 24px;
+  gap: 20px;
   cursor: pointer;
   user-select: none;
   background: #ffffff;
-  min-height: 90px;
+  min-height: auto;
 }
 
 .faq-number {
-  background: #FD6A02;
-  color: #ffffff;
-  font-size: 16px;
+  background: rgba(253, 106, 2, 0.12);
+  color: #FD6A02;
+  font-size: 15px;
   font-weight: 700;
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(253, 106, 2, 0.35);
+  box-shadow: none;
 }
 
 .faq-question-text {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #111111;
   line-height: 1.45;

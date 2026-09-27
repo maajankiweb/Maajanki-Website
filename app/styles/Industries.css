@@ -98,10 +98,10 @@
 }
 
 .badge-text {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.3px;
 }
 
 .services-hero-text-box {
@@ -204,23 +204,24 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: #042442;
+  background: #FD6A02 !important;
   color: #ffffff !important;
   font-weight: 700;
   font-size: 15px;
-  padding: 14px 34px;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 13px 32px;
+  border-radius: var(--radius-pill, 9999px);
+  border: 1px solid #FD6A02;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.35s ease;
-  box-shadow: 0 8px 25px rgba(4, 36, 66, 0.4);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(253, 106, 2, 0.4);
 }
 
 .services-hero-text-box .cta-primary-btn:hover {
-  background: #063158;
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  background: #e05b00 !important;
+  border-color: #e05b00;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(253, 106, 2, 0.55);
 }
 
 .services-hero-text-box .cta-primary-btn i {
@@ -355,6 +356,8 @@
   transform: scale(1.1);
 }
 
+h3.business-tier-title,
+h4.business-tier-title,
 .business-tier-title {
   font-size: 19px;
   font-weight: 700;
@@ -570,16 +573,16 @@
 }
 
 .services-alt-content h2 {
-  font-size: 14px;
-  font-weight: 800;
-  color: #042442 !important;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #FD6A02 !important;
+  text-transform: none;
+  letter-spacing: 0.5px;
   margin-bottom: 12px;
-  background: rgba(4, 36, 66, 0.25);
-  border: 1px solid rgba(4, 36, 66, 0.4);
+  background: rgba(253, 106, 2, 0.15);
+  border: 1px solid rgba(253, 106, 2, 0.3);
   padding: 6px 18px;
-  border-radius: 20px;
+  border-radius: var(--radius-pill, 9999px);
   width: fit-content;
 }
 
@@ -604,22 +607,23 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 34px;
-  background: #042442;
+  padding: 13px 32px;
+  background: #FD6A02 !important;
   color: #ffffff !important;
-  border-radius: 50px;
+  border-radius: var(--radius-pill, 9999px);
   text-decoration: none;
   font-weight: 700;
   font-size: 15px;
-  transition: all 0.35s ease;
-  box-shadow: 0 8px 25px rgba(4, 36, 66, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(253, 106, 2, 0.4);
+  border: 1px solid #FD6A02;
 }
 
 .services-alt-content .cta-button:hover {
-  background: #063158;
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  background: #e05b00 !important;
+  border-color: #e05b00;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(253, 106, 2, 0.55);
 }
 
 .services-alt-image {
@@ -814,6 +818,7 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+.dm-service-card h3,
 .dm-service-card h4 {
   font-size: 20px;
   font-weight: 700;

@@ -54,12 +54,14 @@
 }
 
 /* HEADINGS */
-.footer-col h3 {
+.footer-col h3,
+.footer-subheading {
   color        : #FD6A02;
   font-size    : 15px;
   font-weight  : 700;
   margin-bottom: 10px;
   white-space  : nowrap;
+  text-transform: uppercase;
 }
 
 /* LISTS */
@@ -133,18 +135,20 @@
 .badge-list {
   display       : flex;
   flex-direction: column;
-  gap           : 10px;
+  gap           : 12px;
 }
 
 .badge-item {
   display    : flex;
   align-items: center;
-  gap        : 10px;
+  gap        : 12px;
+  min-height : 36px;
 }
 
 .badge-item img {
-  width        : 55px;
-  height       : auto;
+  width        : 80px;
+  height       : 32px;
+  object-fit   : contain;
   border-radius: 6px;
 }
 
@@ -163,46 +167,34 @@
 }
 
 /* =====================================
-   FLOATING BUTTONS (WhatsApp + Call - LEFT CORNER)
+   FLOATING BUTTONS (WhatsApp + Call - RIGHT CORNER STACKED)
 ===================================== */
 .floating-buttons {
   position   : fixed;
-  bottom     : 20px;
-  left       : 20px;
-  z-index    : 9999;
+  bottom     : 88px;
+  right      : 20px;
+  left       : auto;
+  z-index    : 9998;
   display    : flex;
   flex-direction: column;
-  gap        : 12px;
+  gap        : 10px;
   align-items: center;
-}
-
-/* Glow Behind */
-.floating-buttons::before {
-  content      : "";
-  position     : absolute;
-  inset        : -16px;
-  border-radius: 999px;
-  background   :
-    radial-gradient(circle at 50% 20%, rgba(37, 211, 102, 0.45), transparent 60%),
-    radial-gradient(circle at 50% 80%, rgba(253, 106, 2, 0.45), transparent 60%);
-  filter : blur(7px);
-  z-index: -1;
 }
 
 /* Circle Buttons */
 .float-btn {
-  width          : 56px;
-  height         : 56px;
+  width          : 46px;
+  height         : 46px;
   border-radius  : 50%;
   display        : flex;
   justify-content: center;
   align-items    : center;
   color          : #fff;
-  font-size      : 24px;
+  font-size      : 20px;
   cursor         : pointer;
   border         : none;
   text-decoration: none;
-  box-shadow     : 0 8px 20px rgba(0, 0, 0, 0.55);
+  box-shadow     : 0 4px 14px rgba(0, 0, 0, 0.45);
   transition     : 0.2s ease;
 }
 
@@ -339,12 +331,13 @@
 .review-badges a {
   display: inline-flex;
   align-items: center;
+  height: 38px;
 }
 
 .review-badges img {
-  width        : 130px;
-  height       : auto;
-  max-width    : 100%;
+  height       : 36px;
+  width        : auto;
+  max-width    : 125px;
   object-fit   : contain;
   border-radius: 6px;
   transition   : transform 0.3s ease;
@@ -386,6 +379,18 @@
   font-size      : 15px;
   font-weight    : 600;
   transition     : color 0.3s ease;
+  position       : relative;
+  padding-left   : 14px;
+}
+
+.footer-links li a::before {
+  content    : "›";
+  position   : absolute;
+  left       : 0;
+  color      : #FD6A02;
+  font-weight: 700;
+  font-size  : 16px;
+  line-height: 1;
 }
 
 .footer-links li a:hover {

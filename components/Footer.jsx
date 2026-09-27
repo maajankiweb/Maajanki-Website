@@ -44,7 +44,7 @@ const Footer = () => {
         {/* LOGO + SOCIAL */}
         <div className="footer-col">
           <h2 className="footer-logo">MaaJanki Web Tech</h2>
-          <p>Follow us on</p>
+          <h3 className="footer-subheading">FOLLOW US ON</h3>
 
           <div className="footer-social">
             <a
@@ -277,15 +277,15 @@ const Footer = () => {
 
         {/* VERIFIED BADGES */}
         <div className="footer-col footer-badges">
-          <h3>Official Verified Badges</h3>
+          <h3>OFFICIAL VERIFIED BADGES</h3>
           <div className="badge-list">
             <div className="badge-item">
               <Image
                 src="/images/msme-certificate.png"
                 alt="MSME Registration Certificate - MaaJanki Web Tech"
                 title="MSME Registered Company – MaaJanki Web Tech"
-                width={55}
-                height={20}
+                width={80}
+                height={29}
               />
               <span>MSME Registered</span>
             </div>
@@ -294,8 +294,8 @@ const Footer = () => {
                 src="/images/startup-india.webp"
                 alt="Startup India DPIIT Certificate - MaaJanki Web Tech"
                 title="Startup India Certified – MaaJanki Web Tech"
-                width={55}
-                height={41}
+                width={80}
+                height={60}
               />
               <span>Startup India Certified</span>
             </div>
@@ -304,8 +304,8 @@ const Footer = () => {
                 src="/images/udyam-certificate.png"
                 alt="Udyam Registration Certificate - MaaJanki Web Tech"
                 title="Udyam Registered MSME – MaaJanki Web Tech"
-                width={55}
-                height={43}
+                width={80}
+                height={63}
               />
               <span>Udyam Certificate</span>
             </div>

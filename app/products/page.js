@@ -185,18 +185,28 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <section className="products-hero">
         <div className="products-hero-inner">
-          <div className="products-label-badge">
-            <i className="fas fa-rocket"></i> Proprietary SaaS &amp; Software Suite
+          <div className="products-label-badge" role="status">
+            <i className="fas fa-rocket" aria-hidden="true"></i> Proprietary SaaS &amp; Software Suite
           </div>
           <h1>Software Built to Scale Your Business</h1>
           <p className="products-hero-desc">
             From automated GST billing and WhatsApp CRMs to AI reputation management—explore production-ready platforms engineered by MaaJanki Web Tech.
           </p>
+          <div className="products-hero-cta-group">
+            <a href="#products-showcase" className="products-hero-btn-primary">
+              <span>Explore Products</span>
+              <i className="fas fa-arrow-down" aria-hidden="true"></i>
+            </a>
+            <Link href="/contact" className="products-hero-btn-secondary">
+              <span>Request Custom Demo</span>
+              <i className="fas fa-calendar-check" aria-hidden="true"></i>
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* Grid Showcase */}
-      <section className="products-grid-section">
+      <section id="products-showcase" className="products-grid-section">
         <div className="products-grid-inner">
           <div className="row g-4">
             {productsList.map((product, idx) => (

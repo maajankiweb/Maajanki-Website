@@ -881,13 +881,14 @@
 /* ===== Card / Mockup ===== */
 .site-mockup {
     --mockup-height: 360px;
-    /* base height, we change this in media queries */
+    /* Issue #12: constrain to 16:9 aspect-ratio for clean visual rhythm */
+    aspect-ratio   : 16 / 9;
     background     : #ffffff;
-    border-radius  : 18px;
+    border-radius  : var(--radius-lg, 18px);
     box-shadow     : 0 12px 30px rgba(0, 0, 0, 0.18);
     overflow       : hidden;
     position       : relative;
-    height         : var(--mockup-height);
+    height         : auto;
     cursor         : pointer;
     transition     : box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -1355,22 +1356,20 @@
     font-weight: 600;
 }
 
-/* Different gradient for each section */
-.frontend-section {
-    background: linear-gradient(135deg, #ff758c, #ff7eb3);
-}
-
-.backend-section {
-    background: linear-gradient(135deg, #000, #2575fc);
-}
-
-.database-section {
-    background: linear-gradient(135deg, #43cea2, #185a9d);
-}
-
+/* Issue #14: Unified glassmorphism card aesthetic — replaced jarring solid gradients */
+.frontend-section,
+.backend-section,
+.database-section,
 .versioncontrol-section {
-    background: linear-gradient(135deg, #f7971e, #ffd200);
+    background     : rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    border         : 1px solid rgba(255, 255, 255, 0.15);
 }
+
+.frontend-section  { border-top: 3px solid #ff758c; }
+.backend-section   { border-top: 3px solid #2575fc; }
+.database-section  { border-top: 3px solid #43cea2; }
+.versioncontrol-section { border-top: 3px solid #ffd200; }
 
 /* Responsive */
 @media (max-width: 1200px) {
@@ -2597,12 +2596,12 @@
   background: #FD6A02 !important;
   color: #ffffff !important;
   padding: 12px 38px !important;
-  border-radius: 50px !important;
+  border-radius: var(--radius-pill, 50px) !important;
   font-weight: 800 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 2px !important;
+  text-transform: none !important; /* Issue #6: was uppercase (26 chars), sentence case is more readable */
+  letter-spacing: 1px !important;
   font-size: 1.4rem !important;
-  font-family: "Outfit", sans-serif !important;
+  font-family: var(--font-outfit, "Outfit", sans-serif) !important;
   border: 2px solid #ffffff !important;
   box-shadow: 0 8px 25px rgba(253, 115, 14, 0.4) !important;
   margin: 0 !important;

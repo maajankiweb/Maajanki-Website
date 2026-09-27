@@ -128,17 +128,17 @@ export default function Page() {
               online with result-driven strategies.
             </p>
             <div className="banner-buttons">
+              <Link href="/about" className="btn1">
+                Know More
+              </Link>
               <a
                 href="https://share.google/sfG7HXx0jHaeRi8Tb"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn1"
+                className="btn2"
               >
                 Review Us on Google
               </a>
-              <Link href="/about" className="btn2">
-                Know More
-              </Link>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function Page() {
             <a href="tel:+919006543913" className="contact-link">
               <div className="contact-promo-card">
                 <Phone className="contact-icon" />
-                <h4 className="contact-promo-title">Call Us</h4>
+                <h2 className="contact-promo-title">Call Us</h2>
                 <p className="contact-promo-text">+91 9006543913</p>
               </div>
             </a>
@@ -164,7 +164,7 @@ export default function Page() {
             >
               <div className="contact-promo-card">
                 <MapPin className="contact-icon" />
-                <h4 className="contact-promo-title">Visit Us</h4>
+                <h2 className="contact-promo-title">Visit Us</h2>
                 <p className="contact-promo-text">Bagaha, Bihar, India</p>
               </div>
             </a>
@@ -172,7 +172,7 @@ export default function Page() {
             <a href="mailto:info@maajankiwebtech.com" className="contact-link">
               <div className="contact-promo-card">
                 <Mail className="contact-icon" />
-                <h4 className="contact-promo-title">Mail Us</h4>
+                <h2 className="contact-promo-title">Mail Us</h2>
                 <p className="contact-promo-text">info@maajankiwebtech.com</p>
               </div>
             </a>
@@ -183,7 +183,7 @@ export default function Page() {
             >
               <div className="contact-promo-card">
                 <MessageCircle className="contact-icon" />
-                <h4 className="contact-promo-title">Live Chat</h4>
+                <h2 className="contact-promo-title">Live Chat</h2>
                 <p className="contact-promo-text">Chat with Us 24/7</p>
               </div>
             </a>

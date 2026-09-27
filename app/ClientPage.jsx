@@ -44,6 +44,7 @@ import { MdDesignServices } from "react-icons/md";
 
 function Home() {
   const [livePortfolio, setLivePortfolio] = React.useState([]);
+  const [showAllIndustries, setShowAllIndustries] = React.useState(false); /* Issue #13: Hick's Law — show 6 initially */
 
   React.useEffect(() => {
     fetch('/api/portfolio')
@@ -500,7 +501,7 @@ function Home() {
                   <strong className="promo-subtitle">
                     Speed. Structure. Search Ready.
                   </strong>
-                  <h3 className="promo-title">Website Optimization Services</h3>
+                  <h2 className="promo-title">Website Optimization Services</h2>
                   <p>
                     As a professional website development agency, we optimize
                     website speed, mobile usability, and technical SEO to
@@ -836,7 +837,7 @@ function Home() {
                             type="submit"
                             value="Get Free Audit"
                             className="btn btn-primary text-center"
-                            style={{ width: "150px" }}
+                            style={{ width: "100%", minWidth: "150px" }}
                           />
                         </Magnet>
                       </div>
@@ -979,9 +980,9 @@ function Home() {
       <section className="tech-loop-section ptb-100" style={{ backgroundColor: "#FD6A02", overflow: "hidden", borderBottom: "1px solid #eaeaea", padding: "60px 0" }}>
         <div className="container">
           <div className="section-heading text-center mb-5" style={{ maxWidth: "700px", margin: "0 auto" }}>
-            <h5 className="h6 text-uppercase" style={{ color: "#ffffff", letterSpacing: "1.5px", fontWeight: "600", marginBottom: "12px", opacity: 0.9 }}>
+            <h4 className="h6" style={{ color: "#ffffff", letterSpacing: "1.5px", fontWeight: "600", marginBottom: "12px", opacity: 0.9, textTransform: "uppercase" }}>
               OUR TECH STACK
-            </h5>
+            </h4>
             <h2 style={{ color: "#ffffff", fontWeight: "700", fontSize: "36px", marginBottom: "16px" }}>
               Platforms & Tools We Work With
             </h2>
@@ -1394,7 +1395,7 @@ function Home() {
               title: "Travel & Tourism",
               desc: "Website optimization and digital marketing strategies that help travel businesses increase bookings and destination visibility.",
             },
-          ].map((industry, index) => (
+          ].slice(0, showAllIndustries ? undefined : 6).map((industry, index) => (
             <article key={index} className="industry-card" tabIndex="0">
               <header className="card-header">
                 <div className="industry-icon">{industry.icon}</div>
@@ -1408,6 +1409,19 @@ function Home() {
               </div>
             </article>
           ))}
+        </div>
+
+        {/* Issue #13: Show More / Show Less toggle */}
+        <div className="text-center" style={{ marginTop: "32px" }}>
+          <button
+            type="button"
+            onClick={() => setShowAllIndustries(prev => !prev)}
+            className="btn-primary-mj"
+            style={{ background: "transparent", border: "2px solid rgba(255,255,255,0.5)", color: "#fff" }}
+            aria-expanded={showAllIndustries}
+          >
+            {showAllIndustries ? "Show Less" : "Show All 15 Industries"}
+          </button>
         </div>
       </section>
       {/* Industries We Transform Section End */}
@@ -1810,7 +1824,7 @@ function Home() {
                     />
                   </div>
                   {/* {counter.number && <h3 className="counter-number">{counter.number}</h3>} */}
-                  <h6 className="counter-title">{counter.title}</h6>
+                  <h4 className="counter-title">{counter.title}</h4>
                 </div>
               </div>
             ))}

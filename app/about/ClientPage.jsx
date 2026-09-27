@@ -166,8 +166,14 @@ const About = () => {
       {/* SEO Content Section End */}
 
       {/* Promo Section Start - Deep Navy */}
-      <section className="promo-section ptb-100">
+      <section className="promo-section ptb-100" aria-labelledby="about-services-title">
         <div className="container">
+          <div className="text-center mb-5">
+            <span className="about-hero-badge">WHAT WE DELIVER</span>
+            <h2 id="about-services-title" className="about-heading-primary text-white" style={{ fontSize: "36px", marginTop: "10px" }}>
+              Core Digital Growth &amp; Website Solutions
+            </h2>
+          </div>
           <div className="row justify-content-center">
             {/* Service 1: Website Optimization */}
             <div className="col-md-6 col-lg-4">
@@ -193,6 +199,9 @@ const About = () => {
                     improve user experience, engagement, and search engine
                     rankings.
                   </p>
+                  <Link href="/services/web-development" className="promo-cta-link" aria-label="Learn more about website optimization services">
+                    Learn More <span aria-hidden="true">&rarr;</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -221,6 +230,9 @@ const About = () => {
                     attracting users who are actively searching for your
                     services.
                   </p>
+                  <Link href="/services/seo" className="promo-cta-link" aria-label="Learn more about website traffic growth services">
+                    Learn More <span aria-hidden="true">&rarr;</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -249,6 +261,9 @@ const About = () => {
                     performance marketing to increase brand visibility, leads,
                     and measurable business growth.
                   </p>
+                  <Link href="/services/performance-marketing" className="promo-cta-link" aria-label="Learn more about digital marketing services">
+                    Learn More <span aria-hidden="true">&rarr;</span>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -357,19 +372,19 @@ const About = () => {
 
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginTop: "20px" }}>
                 <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.08)", padding: "18px", borderRadius: "14px" }}>
-                  <h4 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>⚡ Technical SEO & Speed</h4>
+                  <h3 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>⚡ Technical SEO &amp; Speed</h3>
                   <p style={{ color: "#cbd5e1", fontSize: "13px", margin: "0", lineHeight: "1.6" }}>Building 100% custom Next.js architecture for instant loading, Core Web Vitals compliance, and clean indexability.</p>
                 </div>
                 <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.08)", padding: "18px", borderRadius: "14px" }}>
-                  <h4 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>🎯 High-Intent Keywords</h4>
-                  <p style={{ color: "#cbd5e1", fontSize: "13px", margin: "0", lineHeight: "1.6" }}>Mapping commercial & transactional search queries to build relevant, high-converting service landing pages.</p>
+                  <h3 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>🎯 High-Intent Keywords</h3>
+                  <p style={{ color: "#cbd5e1", fontSize: "13px", margin: "0", lineHeight: "1.6" }}>Mapping commercial &amp; transactional search queries to build relevant, high-converting service landing pages.</p>
                 </div>
                 <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.08)", padding: "18px", borderRadius: "14px" }}>
-                  <h4 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>🤖 AEO & AI Authority</h4>
+                  <h3 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>🤖 AEO &amp; AI Authority</h3>
                   <p style={{ color: "#cbd5e1", fontSize: "13px", margin: "0", lineHeight: "1.6" }}>Injecting Schema.org JSON-LD and structured data so brands earn citations across ChatGPT, Perplexity, and Google AI.</p>
                 </div>
                 <div style={{ background: "rgba(255, 255, 255, 0.04)", border: "1px solid rgba(255, 255, 255, 0.08)", padding: "18px", borderRadius: "14px" }}>
-                  <h4 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>📊 CRO & Organic ROI</h4>
+                  <h3 style={{ color: "#FD6A02", fontSize: "15px", fontWeight: "700", marginBottom: "6px" }}>📊 CRO &amp; Organic ROI</h3>
                   <p style={{ color: "#cbd5e1", fontSize: "13px", margin: "0", lineHeight: "1.6" }}>Focusing on lead conversion tracking, user experience optimizations, and sustainable long-term revenue growth.</p>
                 </div>
               </div>

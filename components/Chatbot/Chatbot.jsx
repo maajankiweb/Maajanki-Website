@@ -107,8 +107,13 @@ const Chatbot = () => {
   const hasUserInteraction = chatHistory.filter(msg => msg.role !== "system").length > 0;
 
   return (
-    <div className={`chatbot-container ${showChatbot ? 'show-chatbot' : ""}`}>
-      <button onClick={() => setShowChatbot(prev => !prev)} id="chatbot-toggler" aria-label="Toggle chatbot">
+    <div className={`chatbot-container ${showChatbot ? 'show-chatbot' : ""}`} aria-expanded={showChatbot}>
+      <button 
+        onClick={() => setShowChatbot(prev => !prev)} 
+        id="chatbot-toggler" 
+        aria-label={showChatbot ? "Close chatbot" : "Open AI live chat"}
+        aria-expanded={showChatbot}
+      >
         <span><FaCommentDots /></span>
         <span><FaTimes /></span>
       </button>

@@ -409,8 +409,8 @@ textarea.form-control {
 }
 
 .service-areas-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Issue #8: structured 2-col grid instead of ragged flex-wrap */
   gap: 10px;
 }
 

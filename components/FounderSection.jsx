@@ -71,7 +71,7 @@ export default function FounderSection() {
 
           <h2 className="founder-name">{Founder.name}</h2>
 
-          <h4 className="founder-role">{Founder.role}</h4>
+          <h3 className="founder-role">{Founder.role}</h3>
 
           <p className="founder-tagline">{Founder.tagline}</p>
 

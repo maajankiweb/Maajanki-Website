@@ -254,7 +254,7 @@ const Industries = () => {
                     <i className="fas fa-store"></i>
                   </div>
                   <div>
-                    <h4 className="business-tier-title">Small Business</h4>
+                    <h3 className="business-tier-title">Small Business</h3>
                     <p className="business-tier-desc">
                       Ideal for startups and small businesses aiming to build a strong online presence and attract their first set of customers. We help you with Local SEO, GBP Setup, basic web development, and cost-effective campaigns.
                     </p>
@@ -267,7 +267,7 @@ const Industries = () => {
                     <i className="fas fa-building"></i>
                   </div>
                   <div>
-                    <h4 className="business-tier-title">Medium Business</h4>
+                    <h3 className="business-tier-title">Medium Business</h3>
                     <p className="business-tier-desc">
                       Complete digital marketing solutions for growing businesses ready to scale traffic, leads, and conversions. Includes advanced SEO, e-commerce platforms, content marketing, and automation.
                     </p>
@@ -280,7 +280,7 @@ const Industries = () => {
                     <i className="fas fa-city"></i>
                   </div>
                   <div>
-                    <h4 className="business-tier-title">Enterprise Business</h4>
+                    <h3 className="business-tier-title">Enterprise Business</h3>
                     <p className="business-tier-desc">
                       Enterprise-grade digital marketing and web solutions for large organizations. Includes custom CRM integrations, multi-location campaigns, dedicated support, and custom dashboards.
                     </p>
@@ -498,7 +498,7 @@ const Industries = () => {
           <div className="dm-services-grid">
             {services.map((service, index) => (
               <div className="dm-service-card" key={index}>
-                <h4>{service.title}</h4>
+                <h3>{service.title}</h3>
                 <p>
                   Our {service.title.toLowerCase()} services are tailored to
                   help businesses improve search rankings, engagement, and
