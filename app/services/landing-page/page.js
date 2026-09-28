@@ -151,7 +151,7 @@ export default function Page() {
         "name": "What makes your landing pages convert higher than standard website pages?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Unlike regular web pages that offer distracting multi-level menus, our landing pages feature a single 1:1 attention ratio, razor-sharp value propositions, verified trust badges, friction-free forms, and sub-second load speeds."
+          "text": "Unlike standard website pages that offer distracting multi-level menus and exit links, our landing pages feature a strict 1:1 attention ratio, razor-sharp value propositions, verified trust badges, friction-free forms, and sub-second load speeds."
         }
       },
       {
@@ -159,7 +159,7 @@ export default function Page() {
         "name": "How does landing page speed impact Google Ads Quality Score and CAC?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Google Ads rewards fast, highly relevant landing pages with higher Quality Scores (8-10/10), reducing Cost Per Click (CPC) by up to 50% and improving ad auction rank."
+          "text": "Google Ads rewards fast, highly relevant landing pages with higher Quality Scores (8-10/10), reducing your Cost Per Click (CPC) by up to 50% and improving ad auction rank without increasing your ad spend."
         }
       },
       {
@@ -167,15 +167,103 @@ export default function Page() {
         "name": "Do you integrate CRM and WhatsApp lead automation into landing pages?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, all submitted leads can automatically flow instantly into WhatsApp, Zoho, HubSpot, Google Sheets, or your email inbox via Webhook APIs within seconds of submission."
+          "text": "Yes. All submitted leads automatically sync in real-time with WhatsApp, Zoho, HubSpot, Salesforce, Google Sheets, or your email inbox via Webhook APIs within seconds of submission."
         }
       },
       {
         "@type": "Question",
-        "name": "What technology do you use to build landing pages?",
+        "name": "What technology stack do you use to build high-converting landing pages?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We develop landing pages using ultra-fast Next.js 15 Server Components, Tailwind CSS, or custom WordPress Gutenberg templates, ensuring 95+ PageSpeed performance scores."
+          "text": "We develop custom landing pages using Next.js 15 Server Components, Tailwind CSS, or custom WordPress Gutenberg templates, ensuring 95+ Google PageSpeed performance scores and zero layout shifts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you design landing pages tailored specifically for Google Ads and Meta Ads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We ensure strict message-matching between your ad copy and the page hero section. Google Ads visitors see high-intent search answers, while Meta Ads visitors receive high-visual storytelling and direct WhatsApp triggers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to design and launch a custom landing page?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our typical turnaround time for a custom, conversion-optimized landing page is 3 to 7 business days, including copywriting, responsive design, tracking pixels, and QA testing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you perform A/B split testing on landing pages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We configure server-side A/B split testing and user behavioral heatmaps via Microsoft Clarity to continuously test headlines, CTA button colors, copy angles, and form lengths to maximize conversion rates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What elements are included in your landing page design packages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every landing page includes custom direct-response copywriting, mobile-first responsive UI, trust badge integration (DPIIT/MSME/SSL), lead capture forms with instant validation, Google Tag Manager & GA4 event tracking, and speed optimization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you redesign our existing low-converting landing page?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We conduct an in-depth CRO (Conversion Rate Optimization) audit of your current page to identify drop-off points, friction areas, and load bottlenecks, followed by a redesigned layout engineered to double or triple your conversion rates."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your landing pages fully responsive on mobile devices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Over 75% of ad traffic comes from mobile devices. We design with a mobile-first philosophy, using thumb-friendly touch targets, sticky call-to-action bars, and auto-filling form inputs for effortless conversion on smartphones."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you set up conversion tracking pixels and event triggers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We configure Google Tag Manager (GTM), Google Analytics 4 (GA4) custom conversion events, Meta Pixel, LinkedIn Insight Tag, and server-side tracking to accurately record form submissions, clicks, and phone calls."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries do you build landing pages for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We have extensive experience building high-ROI landing pages for Real Estate, Healthcare & Clinics, Education & EdTech, B2B SaaS, Professional Services, Home Services, and Financial Advisory firms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will I own the landing page design, copy, and source code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You retain 100% intellectual property ownership of all custom design assets, copywriting, code, and tracking configurations with zero ongoing licensing fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the cost of high-converting landing page design in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Landing page pricing is transparent and based on project scope, custom interactive features (like multi-step calculators or quizzes), and A/B test variations. We provide clear, fixed-price proposals with no hidden charges."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do we get started with MaaJanki Web Tech for a landing page?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Getting started is quick and easy. Contact us via our online form, call us at +91-9006543913, or reach out on WhatsApp. We will analyze your campaign goals and provide an actionable wireframe and timeline within 24 hours."
         }
       }
     ]

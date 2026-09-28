@@ -20,11 +20,6 @@ import '@/app/styles/Home.css';
 import '@/app/styles/PerformanceMarketing.css';
 
 export default function ClientPage() {
-  const [activeFaq, setActiveFaq] = useState(null);
-
-  const toggleFaq = (idx) => {
-    setActiveFaq(activeFaq === idx ? null : idx);
-  };
 
   const pillars = [
     {
@@ -95,28 +90,6 @@ export default function ClientPage() {
     }
   ];
 
-  const faqs = [
-    {
-      q: "What makes your landing pages convert higher than standard website pages?",
-      a: "Unlike regular web pages that offer distracting multi-level menus, our landing pages feature a single 1:1 attention ratio, razor-sharp value propositions, verified trust badges, friction-free forms, and sub-second load speeds."
-    },
-    {
-      q: "How does landing page speed impact Google Ads Quality Score and CAC?",
-      a: "Google Ads rewards fast, highly relevant landing pages with higher Quality Scores (8-10/10), reducing Cost Per Click (CPC) by up to 50% and improving ad auction rank."
-    },
-    {
-      q: "Do you integrate CRM and WhatsApp lead automation into landing pages?",
-      a: "Yes, all submitted leads can automatically flow instantly into WhatsApp, Zoho, HubSpot, Google Sheets, or your email inbox via Webhook APIs within seconds of submission."
-    },
-    {
-      q: "What technology do you use to build landing pages?",
-      a: "We develop landing pages using ultra-fast Next.js 15 Server Components, Tailwind CSS, or custom WordPress Gutenberg templates, ensuring 95+ PageSpeed performance scores."
-    },
-    {
-      q: "Can you design landing pages for specific marketing campaigns like Google Ads and Meta Ads?",
-      a: "Yes, we tailor message-matching specifically to your ad creatives — ensuring keyword scent and visual continuity from the ad copy directly through to the thank-you confirmation."
-    }
-  ];
 
   return (
     <div style={{ background: '#020617', color: '#f8fafc', minHeight: '100vh' }}>
@@ -325,63 +298,117 @@ export default function ClientPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section style={{ padding: '90px 20px', background: '#020617' }}>
-        <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span
-              style={{
-                display: 'inline-block',
-                background: 'rgba(253, 106, 2, 0.15)',
-                color: '#FD6A02',
-                padding: '6px 20px',
-                borderRadius: '30px',
-                fontSize: '13px',
-                fontWeight: '700',
-                letterSpacing: '2px',
-                textTransform: 'uppercase',
-                marginBottom: '15px'
-              }}
-            >
-              Questions &amp; Answers
-            </span>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: '800', fontFamily: '"Outfit", sans-serif', color: '#ffffff' }}>
-              Frequently Asked Questions
-            </h2>
-          </div>
+      {/* Faq Section Start */}
+      <section className="faq-section">
+        <div className="faq-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {faqs.map((faq, idx) => (
-              <div
-                key={idx}
-                style={{
-                  background: 'rgba(255, 255, 255, 0.03)',
-                  border: activeFaq === idx ? '1px solid #FD6A02' : '1px solid rgba(255, 255, 255, 0.1)',
-                  borderRadius: '16px',
-                  padding: '24px',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease'
-                }}
-                onClick={() => toggleFaq(idx)}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: activeFaq === idx ? '#FD6A02' : '#ffffff', margin: 0 }}>
-                    {faq.q}
-                  </h3>
-                  <span style={{ color: '#FD6A02', fontSize: '20px', marginLeft: '15px' }}>
-                    {activeFaq === idx ? '−' : '+'}
-                  </span>
-                </div>
-                {activeFaq === idx && (
-                  <p style={{ marginTop: '16px', color: '#cbd5e1', fontSize: '0.98rem', lineHeight: '1.7', borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '16px', margin: 0 }}>
-                    {faq.a}
-                  </p>
-                )}
+        <div className="faq-grid">
+          {[
+            {
+              id: "lp-faq1",
+              question: "What makes your landing pages convert higher than standard website pages?",
+              answer: "Unlike standard website pages that offer distracting multi-level menus and exit links, our landing pages feature a strict 1:1 attention ratio, razor-sharp value propositions, verified trust badges, friction-free forms, and sub-second load speeds."
+            },
+            {
+              id: "lp-faq2",
+              question: "How does landing page speed impact Google Ads Quality Score and CAC?",
+              answer: "Google Ads rewards fast, highly relevant landing pages with higher Quality Scores (8-10/10), reducing your Cost Per Click (CPC) by up to 50% and improving ad auction rank without increasing your ad spend."
+            },
+            {
+              id: "lp-faq3",
+              question: "Do you integrate CRM and WhatsApp lead automation into landing pages?",
+              answer: "Yes. All submitted leads automatically sync in real-time with WhatsApp, Zoho, HubSpot, Salesforce, Google Sheets, or your email inbox via Webhook APIs within seconds of submission."
+            },
+            {
+              id: "lp-faq4",
+              question: "What technology stack do you use to build high-converting landing pages?",
+              answer: "We develop custom landing pages using Next.js 15 Server Components, Tailwind CSS, or custom WordPress Gutenberg templates, ensuring 95+ Google PageSpeed performance scores and zero layout shifts."
+            },
+            {
+              id: "lp-faq5",
+              question: "Can you design landing pages tailored specifically for Google Ads and Meta Ads?",
+              answer: "Yes. We ensure strict message-matching between your ad copy and the page hero section. Google Ads visitors see high-intent search answers, while Meta Ads visitors receive high-visual storytelling and direct WhatsApp triggers."
+            },
+            {
+              id: "lp-faq6",
+              question: "How long does it take to design and launch a custom landing page?",
+              answer: "Our typical turnaround time for a custom, conversion-optimized landing page is 3 to 7 business days, including copywriting, responsive design, tracking pixels, and QA testing."
+            },
+            {
+              id: "lp-faq7",
+              question: "Do you perform A/B split testing on landing pages?",
+              answer: "Yes. We configure server-side A/B split testing and user behavioral heatmaps via Microsoft Clarity to continuously test headlines, CTA button colors, copy angles, and form lengths to maximize conversion rates."
+            },
+            {
+              id: "lp-faq8",
+              question: "What elements are included in your landing page design packages?",
+              answer: "Every landing page includes custom direct-response copywriting, mobile-first responsive UI, trust badge integration (DPIIT/MSME/SSL), lead capture forms with instant validation, Google Tag Manager & GA4 event tracking, and speed optimization."
+            },
+            {
+              id: "lp-faq9",
+              question: "Can you redesign our existing low-converting landing page?",
+              answer: "Yes. We conduct an in-depth CRO (Conversion Rate Optimization) audit of your current page to identify drop-off points, friction areas, and load bottlenecks, followed by a redesigned layout engineered to double or triple your conversion rates."
+            },
+            {
+              id: "lp-faq10",
+              question: "Are your landing pages fully responsive on mobile devices?",
+              answer: "Yes. Over 75% of ad traffic comes from mobile devices. We design with a mobile-first philosophy, using thumb-friendly touch targets, sticky call-to-action bars, and auto-filling form inputs for effortless conversion on smartphones."
+            },
+            {
+              id: "lp-faq11",
+              question: "Do you set up conversion tracking pixels and event triggers?",
+              answer: "Yes. We configure Google Tag Manager (GTM), Google Analytics 4 (GA4) custom conversion events, Meta Pixel, LinkedIn Insight Tag, and server-side tracking to accurately record form submissions, clicks, and phone calls."
+            },
+            {
+              id: "lp-faq12",
+              question: "What industries do you build landing pages for?",
+              answer: "We have extensive experience building high-ROI landing pages for Real Estate, Healthcare & Clinics, Education & EdTech, B2B SaaS, Professional Services, Home Services, and Financial Advisory firms."
+            },
+            {
+              id: "lp-faq13",
+              question: "Will I own the landing page design, copy, and source code?",
+              answer: "Yes. You retain 100% intellectual property ownership of all custom design assets, copywriting, code, and tracking configurations with zero ongoing licensing fees."
+            },
+            {
+              id: "lp-faq14",
+              question: "What is the cost of high-converting landing page design in India?",
+              answer: "Landing page pricing is transparent and based on project scope, custom interactive features (like multi-step calculators or quizzes), and A/B test variations. We provide clear, fixed-price proposals with no hidden charges."
+            },
+            {
+              id: "lp-faq15",
+              question: "How do we get started with MaaJanki Web Tech for a landing page?",
+              answer: "Getting started is quick and easy. Contact us via our online form, call us at +91-9006543913, or reach out on WhatsApp. We will analyze your campaign goals and provide an actionable wireframe and timeline within 24 hours."
+            }
+          ].map((faq, index) => (
+            <div className="faq-item" key={faq.id}>
+              <input type="checkbox" id={faq.id} className="faq-toggle" />
+              <label htmlFor={faq.id} className="faq-question">
+                <span className="faq-number">{index + 1}</span>
+                <span className="faq-question-text">{faq.question}</span>
+                <svg
+                  className="faq-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </label>
+              <div className="faq-content">
+                <div className="faq-body">{faq.answer}</div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
+      {/* Faq Section End */}
 
       {/* CTA Section */}
       <section

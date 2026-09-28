@@ -1096,83 +1096,83 @@ const MobileAppDevelopment = () => {
       {/* Faq Section Start */}
       <section className="faq-section">
         <div className="faq-header">
-          <h2>Frequently Asked Questions About Mobile App Development</h2>
+          <h2>Frequently Asked Questions</h2>
         </div>
 
         <div className="faq-grid">
           {[
             {
-              id: "faq1",
+              id: "mob-faq1",
               question: "Which mobile development technologies and frameworks do you specialize in?",
               answer: "We specialize in Flutter (Dart), React Native, Swift (iOS native), Kotlin (Android native), Next.js Progressive Web Apps (PWA), Node.js, Express, MongoDB Atlas, Firebase, and cloud microservices."
             },
             {
-              id: "faq2",
+              id: "mob-faq2",
               question: "Will my app be published on both Apple App Store and Google Play Store?",
               answer: "Yes. We handle end-to-end publishing on both platforms, including developer account configuration, signing certificates, privacy disclosures, screenshot generation, and store approval."
             },
             {
-              id: "faq3",
+              id: "mob-faq3",
               question: "How long does it take to develop a custom mobile application?",
               answer: "A standard MVP mobile app typically takes 4 to 8 weeks from wireframe to store launch. Complex business or enterprise applications with multi-role dashboards and AI copilots range from 10 to 16 weeks."
             },
             {
-              id: "faq4",
+              id: "mob-faq4",
               question: "How much does mobile app development cost in India?",
               answer: "Mobile app development pricing is 100% customized based on your unique project scope, supported operating systems (iOS, Android, or cross-platform Flutter), backend database integrations, and custom AI feature requirements. We provide a milestone-based proposal after an initial technical discovery consultation."
             },
             {
-              id: "faq5",
+              id: "mob-faq5",
               question: "Do you build AI-powered mobile apps?",
               answer: "Yes. We integrate OpenAI, Gemini, voice agents, camera OCR, and predictive algorithms directly into mobile apps with secure token streaming and on-device machine learning."
             },
             {
-              id: "faq6",
+              id: "mob-faq6",
               question: "Will I own 100% of the source code and intellectual property?",
               answer: "Yes. Upon project milestone completion, we hand over full GitHub repository access, documentation, and 100% intellectual property ownership to you with zero hidden licensing fees."
             },
             {
-              id: "faq7",
+              id: "mob-faq7",
               question: "Can you update or redesign our existing mobile application?",
               answer: "Yes. We perform code audits, refactor legacy codebases to Flutter or React Native, update deprecated SDKs, improve UI/UX aesthetics, and optimize app load performance."
             },
             {
-              id: "faq8",
+              id: "mob-faq8",
               question: "Do you integrate Indian and international payment gateways?",
               answer: "Yes. We integrate Razorpay, PhonePe, Paytm, Cashfree, Stripe, PayPal, Apple Pay, and Google Pay with compliant end-to-end encryption."
             },
             {
-              id: "faq9",
+              id: "mob-faq9",
               question: "What post-launch support and warranty do you provide?",
               answer: "Every app includes 30 to 90 days of free post-launch support covering bug fixes, OS compatibility updates, performance tuning, and server monitoring. Optional annual AMC plans are available."
             },
             {
-              id: "faq10",
+              id: "mob-faq10",
               question: "How do you ensure user data security and privacy compliance?",
               answer: "We enforce HTTPS/TLS 1.3 encryption, biometric authentication (Face ID / Fingerprint), tokenized session tokens, and compliance with DPDP India and GDPR guidelines."
             },
             {
-              id: "faq11",
+              id: "mob-faq11",
               question: "What is App Store Optimization (ASO) and do you provide it?",
               answer: "ASO is search engine optimization for mobile app stores. We write keyword-rich titles, descriptions, and tag structures to ensure your app ranks high for relevant commercial searches."
             },
             {
-              id: "faq12",
+              id: "mob-faq12",
               question: "Do you develop web admin dashboards to manage app content?",
               answer: "Yes. Most mobile apps include a responsive web admin dashboard (built on Next.js/React) to manage users, track orders, send push notifications, and monitor live analytics."
             },
             {
-              id: "faq13",
+              id: "mob-faq13",
               question: "Will the app work when the user has poor or no internet connection?",
               answer: "Yes. We design apps with offline-first caching via SQLite/Room or Hive, allowing core features to function offline and auto-sync when connectivity returns."
             },
             {
-              id: "faq14",
+              id: "mob-faq14",
               question: "How do we start a mobile app project with MaaJanki Web Tech?",
               answer: "You can click 'Get a Free Consultation' or email info@maajankiwebtech.com. Our senior technical leads will evaluate your requirements and provide an architecture roadmap within 24 hours."
             },
             {
-              id: "faq15",
+              id: "mob-faq15",
               question: "Are there any hidden recurring platform fees?",
               answer: "No. MaaJanki Web Tech operates on a clear, milestone-based one-time development model with zero platform commission fees."
             }

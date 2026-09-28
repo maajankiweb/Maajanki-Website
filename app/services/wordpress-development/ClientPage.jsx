@@ -21,11 +21,6 @@ import '@/app/styles/Home.css';
 import '@/app/styles/WebDevelopment.css';
 
 export default function ClientPage() {
-  const [activeFaq, setActiveFaq] = useState(null);
-
-  const toggleFaq = (idx) => {
-    setActiveFaq(activeFaq === idx ? null : idx);
-  };
 
   const services = [
     {
@@ -93,29 +88,6 @@ export default function ClientPage() {
         "Next.js App Router frontend with static generation (SSG & ISR)",
         "Zero vulnerability surface area for the public web application"
       ]
-    }
-  ];
-
-  const faqs = [
-    {
-      q: "Why should I choose custom WordPress development over pre-made templates?",
-      a: "Pre-made templates are loaded with thousands of lines of unused scripts, unoptimized plugins, and security vulnerabilities. Custom WordPress development delivers clean, bespoke code engineered for 95+ PageSpeed scores, tailored brand aesthetics, and scalable modular functionality."
-    },
-    {
-      q: "How do you ensure our WordPress website achieves fast loading speeds?",
-      a: "We implement advanced server-side Redis object caching, asset minification, WebP/AVIF media delivery, database query optimization, and Cloudflare enterprise edge caching to guarantee sub-second load times."
-    },
-    {
-      q: "Can you build high-converting WooCommerce stores in India?",
-      a: "Yes, we architect end-to-end WooCommerce eCommerce platforms with Razorpay, PhonePe, and Cashfree payment gateways, automated GST billing, inventory synchronization, and high-converting checkout flows."
-    },
-    {
-      q: "Do you provide WordPress maintenance and security hardening?",
-      a: "We provide automated weekly offsite backups, two-factor authentication (2FA), firewall configurations, core/plugin vulnerability patches, and real-time uptime monitoring."
-    },
-    {
-      q: "Can you migrate our existing website to WordPress without losing Google rankings?",
-      a: "Absolutely. We execute seamless zero-downtime migrations with rigorous 1-to-1 301 redirect mapping, preserving your existing backlink equity, URL hierarchy, and organic keyword positions."
     }
   ];
 
@@ -325,63 +297,117 @@ export default function ClientPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section style={{ padding: '90px 20px', background: '#020617' }}>
-        <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-            <span
-              style={{
-                display: 'inline-block',
-                background: 'rgba(253, 106, 2, 0.15)',
-                color: '#FD6A02',
-                padding: '6px 20px',
-                borderRadius: '30px',
-                fontSize: '13px',
-                fontWeight: '700',
-                letterSpacing: '2px',
-                textTransform: 'uppercase',
-                marginBottom: '15px'
-              }}
-            >
-              Help &amp; Answers
-            </span>
-            <h2 style={{ fontSize: 'clamp(1.8rem, 3.5vw, 2.5rem)', fontWeight: '800', fontFamily: '"Outfit", sans-serif', color: '#ffffff' }}>
-              Frequently Asked Questions
-            </h2>
-          </div>
+      {/* Faq Section Start */}
+      <section className="faq-section">
+        <div className="faq-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            {faqs.map((faq, idx) => (
-              <div
-                key={idx}
-                style={{
-                  background: 'rgba(255, 255, 255, 0.03)',
-                  border: activeFaq === idx ? '1px solid #FD6A02' : '1px solid rgba(255, 255, 255, 0.1)',
-                  borderRadius: '16px',
-                  padding: '24px',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s ease'
-                }}
-                onClick={() => toggleFaq(idx)}
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: activeFaq === idx ? '#FD6A02' : '#ffffff', margin: 0 }}>
-                    {faq.q}
-                  </h3>
-                  <span style={{ color: '#FD6A02', fontSize: '20px', marginLeft: '15px' }}>
-                    {activeFaq === idx ? '−' : '+'}
-                  </span>
-                </div>
-                {activeFaq === idx && (
-                  <p style={{ marginTop: '16px', color: '#cbd5e1', fontSize: '0.98rem', lineHeight: '1.7', borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '16px', margin: 0 }}>
-                    {faq.a}
-                  </p>
-                )}
+        <div className="faq-grid">
+          {[
+            {
+              id: "wp-faq1",
+              question: "Why should I choose custom WordPress development over pre-made templates?",
+              answer: "Pre-made templates are bloated with unused scripts, slow load times, and security vulnerabilities. Custom WordPress development delivers clean, bespoke code engineered for 95+ PageSpeed scores, tailored brand aesthetics, and scalable modular functionality."
+            },
+            {
+              id: "wp-faq2",
+              question: "How do you ensure our WordPress website achieves fast loading speeds?",
+              answer: "We implement advanced server-side Redis object caching, asset minification, WebP/AVIF media delivery, database query optimization, and Cloudflare enterprise edge caching to guarantee sub-second load times."
+            },
+            {
+              id: "wp-faq3",
+              question: "Can you build high-converting WooCommerce stores in India?",
+              answer: "Yes, we architect end-to-end WooCommerce eCommerce platforms with Razorpay, PhonePe, and Cashfree payment gateways, automated GST billing, inventory synchronization, and high-converting checkout flows."
+            },
+            {
+              id: "wp-faq4",
+              question: "Do you provide WordPress maintenance and security hardening?",
+              answer: "We provide automated weekly offsite backups, two-factor authentication (2FA), firewall configurations, core/plugin vulnerability patches, and real-time uptime monitoring."
+            },
+            {
+              id: "wp-faq5",
+              question: "Can you migrate our existing website to WordPress without losing Google rankings?",
+              answer: "Absolutely. We execute seamless zero-downtime migrations with rigorous 1-to-1 301 redirect mapping, preserving your existing backlink equity, URL hierarchy, and organic keyword positions."
+            },
+            {
+              id: "wp-faq6",
+              question: "Will I be able to edit and update content easily on my WordPress website?",
+              answer: "Yes. We build using the intuitive WordPress Block Editor (Gutenberg) or custom Advanced Custom Fields (ACF), allowing your non-technical team to easily edit text, images, blogs, and products without touching code."
+            },
+            {
+              id: "wp-faq7",
+              question: "Is WordPress good for SEO and Google search rankings?",
+              answer: "WordPress is exceptionally SEO-friendly when developed correctly. We configure clean semantic HTML5, XML sitemaps, Schema.org structured data, fast Core Web Vitals, and integrations with Rank Math or Yoast SEO for rapid ranking."
+            },
+            {
+              id: "wp-faq8",
+              question: "How much does a custom WordPress website cost in India?",
+              answer: "Custom WordPress website costs depend on page count, bespoke UI design requirements, custom integrations (APIs, CRM, payment systems), and eCommerce features. We offer scalable packages tailored to both startups and established enterprises."
+            },
+            {
+              id: "wp-faq9",
+              question: "How long does it take to develop a custom WordPress website?",
+              answer: "A standard corporate or portfolio WordPress site typically takes 2 to 3 weeks, while complex custom WooCommerce stores or membership portals take 4 to 6 weeks from initial design mockups to production deployment."
+            },
+            {
+              id: "wp-faq10",
+              question: "Do you build custom WordPress plugins and themes?",
+              answer: "Yes. When standard plugins don't meet your business logic or add unnecessary bloat, our senior PHP and React engineers develop lightweight, secure, and custom-coded WordPress plugins and themes from scratch."
+            },
+            {
+              id: "wp-faq11",
+              question: "Can you integrate third-party APIs and CRM tools into WordPress?",
+              answer: "Yes. We seamlessly connect WordPress with external CRMs (HubSpot, Zoho, Salesforce), ERP software, WhatsApp Business APIs, shipping logistics (Shiprocket, Delhivery), and marketing automation platforms."
+            },
+            {
+              id: "wp-faq12",
+              question: "What security measures do you implement to protect WordPress from hackers?",
+              answer: "We enforce zero-trust security: custom login URLs, brute-force attack prevention, Web Application Firewall (WAF), database prefix changes, file execution restrictions, SSL/TLS encryption, and continuous malware scanning."
+            },
+            {
+              id: "wp-faq13",
+              question: "Can you redesign our outdated WordPress site to modern UI/UX standards?",
+              answer: "Yes. We transform slow, outdated WordPress websites into modern, sleek, mobile-first digital experiences with custom animations, dark/light themes, and conversion-optimized user journeys."
+            },
+            {
+              id: "wp-faq14",
+              question: "What kind of post-launch support and training do you provide?",
+              answer: "Every WordPress project includes 30 to 60 days of complimentary post-launch support, video walkthrough training for your team, and optional monthly maintenance retainers covering security audits and content updates."
+            },
+            {
+              id: "wp-faq15",
+              question: "How do we start our WordPress project with MaaJanki Web Tech?",
+              answer: "You can schedule a free consultation through our contact page or call us directly at +91-9006543913. Our lead WordPress architect will review your project scope, provide technical recommendations, and deliver a detailed roadmap within 24 hours."
+            }
+          ].map((faq, index) => (
+            <div className="faq-item" key={faq.id}>
+              <input type="checkbox" id={faq.id} className="faq-toggle" />
+              <label htmlFor={faq.id} className="faq-question">
+                <span className="faq-number">{index + 1}</span>
+                <span className="faq-question-text">{faq.question}</span>
+                <svg
+                  className="faq-arrow"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </label>
+              <div className="faq-content">
+                <div className="faq-body">{faq.answer}</div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
+      {/* Faq Section End */}
 
       {/* CTA Section */}
       <section

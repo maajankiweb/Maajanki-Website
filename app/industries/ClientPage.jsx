@@ -174,7 +174,7 @@ const Industries = () => {
             <div className="services-hero-text-box">
               <span className="section-badge">About MaaJanki Web Tech</span>
               <h2 className="hero-redesign-title">
-                Bihar's #1 Digital Marketing Agency <span className="highlight-text">for Every Industry</span>
+                Bihar's #1 Digital Marketing Agency for Every Industry
               </h2>
 
               <p className="hero-lead-text">
