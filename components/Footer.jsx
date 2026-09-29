@@ -97,12 +97,13 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Review Badges */}
+          {/* Review & Listing Badges */}
           <div className="review-badges">
             <a
               href="https://share.google/sfG7HXx0jHaeRi8Tb"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Google Reviews - MaaJanki Web Tech"
             >
               <Image
                 src="/images/google-review.webp"
@@ -115,12 +116,26 @@ const Footer = () => {
               href="https://www.trustpilot.com/review/maajankiwebtech.com"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Trustpilot Reviews - MaaJanki Web Tech"
             >
               <Image
                 src="/images/trustpilot.png"
                 alt="Trustpilot Reviews - MaaJanki Web Tech"
                 width={180}
                 height={37}
+              />
+            </a>
+            <a
+              href="https://sellwithboost.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Listed on Sell With boost"
+              className="swb-badge-link"
+            >
+              <img
+                src="https://sellwithboost.com/badge/listing.svg"
+                alt="Listed on Sell With boost"
+                style={{ height: "40px", width: "auto" }}
               />
             </a>
           </div>
