@@ -20,7 +20,7 @@
     "leaflet": "^1.9.4",
     "lucide-react": "^0.553.0",
     "mongoose": "^9.9.1",
-    "next": "^15.5.22",
+    "next": "15.5.26",
     "ogl": "^1.0.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -47,8 +47,8 @@
     "hostinger:build": "next build",
     "hostinger:start": "node server.js",
     "lint": "next lint",
-    "deploy": "vercel",
-    "deploy:prod": "vercel --prod"
+    "deploy": "npx -y vercel",
+    "deploy:prod": "npx -y vercel --prod"
   },
   "eslintConfig": {
     "extends": "next/core-web-vitals",
@@ -65,16 +65,16 @@
   ],
   "devDependencies": {
     "eslint": "^8.57.1",
-    "eslint-config-next": "^15.5.22",
-    "vercel": "^58.9.4"
+    "eslint-config-next": "15.5.26"
   },
   "overrides": {
     "postcss": "^8.5.18",
-    "sharp": "^0.35.0",
+    "sharp": "^0.35.5",
     "tar": "^7.5.21",
     "nanoid": "^3.3.18",
     "minimatch": "^10.2.3",
-    "undici": "^6.27.1"
+    "undici": "^6.29.0",
+    "qs": "^6.16.0"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
