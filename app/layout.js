@@ -318,8 +318,10 @@ export default function RootLayout({ children }) {
   };
 
   let clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  // Clerk production keys (pk_live_*) are restricted to domain "maajankiwebtech.com".
+  // On localhost in development, only use Clerk if a dev test key is provided to prevent console Origin errors.
   if (process.env.NODE_ENV === 'development' && clerkPublishableKey?.startsWith('pk_live_')) {
-    clerkPublishableKey = process.env.NEXT_PUBLIC_DEV_CLERK_KEY || clerkPublishableKey;
+    clerkPublishableKey = process.env.NEXT_PUBLIC_DEV_CLERK_KEY || null;
   }
 
   const content = (
