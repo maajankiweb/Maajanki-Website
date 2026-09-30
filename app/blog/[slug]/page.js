@@ -86,13 +86,13 @@ export default async function BlogPostPage({ params }) {
   };
 
   return (
-    <article style={{ background: '#020617', color: '#f8fafc', minHeight: '100vh', paddingTop: '100px', paddingBottom: '80px' }}>
+    <article style={{ background: '#020617', color: '#f8fafc', minHeight: '100vh', paddingTop: '30px', paddingBottom: '80px' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
-      <div className="container py-5">
+      <div className="container py-4">
         <div className="max-w-3xl mx-auto">
           {/* Breadcrumb / Back */}
           <div className="mb-4">

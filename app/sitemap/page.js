@@ -144,7 +144,7 @@ export default function SitemapPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <main style={{ background: "linear-gradient(180deg, #020617 0%, #042544 50%, #020617 100%)", color: "#ffffff", padding: "120px 20px 80px", minHeight: "100vh" }}>
+      <div className="sitemap-page-wrapper" style={{ background: "linear-gradient(180deg, #020617 0%, #042544 50%, #020617 100%)", color: "#ffffff", padding: "40px 20px 80px", minHeight: "100vh" }}>
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           
           <header style={{ textAlign: "center", marginBottom: "60px" }}>
@@ -271,7 +271,7 @@ export default function SitemapPage() {
           </div>
 
         </div>
-      </main>
+      </div>
     </>
   );
 }

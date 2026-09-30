@@ -62,13 +62,13 @@ export default function BlogIndexPage() {
   };
 
   return (
-    <div style={{ background: '#020617', color: '#f8fafc', minHeight: '100vh', paddingTop: '100px', paddingBottom: '80px' }}>
+    <div style={{ background: '#020617', color: '#f8fafc', minHeight: '100vh', paddingTop: '30px', paddingBottom: '80px' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }}
       />
 
-      <div className="container py-5">
+      <div className="container py-4">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-5">
           <span

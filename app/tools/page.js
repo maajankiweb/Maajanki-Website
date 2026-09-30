@@ -63,8 +63,8 @@ const toolsList = [
 
 export default function ToolsHubPage() {
   return (
-    <div style={{ background: '#020617', color: '#f8fafc', minHeight: '100vh', paddingTop: '100px', paddingBottom: '80px' }}>
-      <div className="container py-5">
+    <div style={{ background: '#020617', color: '#f8fafc', minHeight: '100vh', paddingTop: '30px', paddingBottom: '80px' }}>
+      <div className="container py-4">
         <div className="text-center max-w-3xl mx-auto mb-5">
           <span
             className="badge px-3 py-2 text-uppercase mb-3"
