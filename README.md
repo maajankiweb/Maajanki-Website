@@ -177,7 +177,7 @@ npm start
 ## 🏢 Business & Trust Verification (E-E-A-T)
 
 - **Legal Entity**: MaaJanki Web Tech
-- **Founder & CEO**: Ashish Kumar ([Wikidata: Q115783355](https://www.wikidata.org/wiki/Q115783355))
+- **Founder & CEO**: Ashish Kumar 
 - **Udyam MSME Registration**: `UDYAM-BR-38-0014113`
 - **DPIIT Startup India**: Accredited Digital & Web Tech Agency
 - **Registered Headquarters**: Brajmala Complex, First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101, India
