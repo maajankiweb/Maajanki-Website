@@ -77,7 +77,7 @@
 | Credential | Verification Details |
 | :--- | :--- |
 | **Enterprise Name** | MaaJanki Web Tech |
-| **Founder & CEO** | Ashish Kumar ([Wikidata: Q115783355](https://www.wikidata.org/wiki/Q115783355)) |
+| **Founder & CEO** | Ashish Kumar |
 | **MSME Registration** | `UDYAM-BR-38-0014113` |
 | **Startup India** | DPIIT Recognized Digital Agency |
 | **Official Website** | [https://maajankiwebtech.com](https://maajankiwebtech.com) |
