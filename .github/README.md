@@ -21,5 +21,5 @@
 ## 🏢 Business Information
 - **Founder & CEO:** Ashish Kumar ([Wikidata: Q115783355](https://www.wikidata.org/wiki/Q115783355))
 - **Email:** [info@maajankiwebtech.com](mailto:info@maajankiwebtech.com)
-- **Phone:** +91-9006543913 / +91-9110037380
+- **Phone:** +91-9006543913
 - **Headquarters:** Brajmala Complex, First Floor, Near Cinema House, Front of UCO Bank, Bagaha Bazar, West Champaran, Bihar - 845101, India.
