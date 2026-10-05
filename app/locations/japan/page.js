@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Japan | MaaJanki",
+  title: "Web Design & Development Agency in Japan | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Japan. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Japan","web development company near me Japan","web designer near me Japan","digital marketing agency near me in Japan","best website maker near me Japan","Next.js developer Japan","local SEO services Japan","MaaJanki Web Tech Japan"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/japan',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Japan | MaaJanki",
+    title: "Web Design & Development Agency in Japan | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Japan. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/japan',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Japan | MaaJanki",
+    title: "Web Design & Development Agency in Japan | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Japan. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

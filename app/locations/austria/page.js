@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Austria | MaaJanki",
+  title: "Web Design & Development Agency in Austria | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Austria. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Austria","web development company near me Austria","web designer near me Austria","digital marketing agency near me in Austria","best website maker near me Austria","Next.js developer Austria","local SEO services Austria","MaaJanki Web Tech Austria"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/austria',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Austria | MaaJanki",
+    title: "Web Design & Development Agency in Austria | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Austria. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/austria',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Austria | MaaJanki",
+    title: "Web Design & Development Agency in Austria | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Austria. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

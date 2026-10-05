@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in South Korea | MaaJanki",
+  title: "Web Design & Development Agency in South Korea | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in South Korea. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in South Korea","web development company near me South Korea","web designer near me South Korea","digital marketing agency near me in South Korea","best website maker near me South Korea","Next.js developer South Korea","local SEO services South Korea","MaaJanki Web Tech South Korea"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/south-korea',
   },
   openGraph: {
-    title: "Web Design & Development Agency in South Korea | MaaJanki",
+    title: "Web Design & Development Agency in South Korea | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in South Korea. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/south-korea',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in South Korea | MaaJanki",
+    title: "Web Design & Development Agency in South Korea | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in South Korea. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

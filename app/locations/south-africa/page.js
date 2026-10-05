@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in South Africa | MaaJanki",
+  title: "Web Design & Development Agency in South Africa | MaaJanki Web Tech",
   description: "Top web design and development agency near you in South Africa. Custom Next.js web apps, eCommerce & global SEO. Request your free 30-min strategy audit now!",
   keywords: ["website designer near me in South Africa","web development company near me South Africa","web designer near me South Africa","digital marketing agency near me in South Africa","best website maker near me South Africa","Next.js developer South Africa","local SEO services South Africa","MaaJanki Web Tech South Africa"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/south-africa',
   },
   openGraph: {
-    title: "Web Design & Development Agency in South Africa | MaaJanki",
+    title: "Web Design & Development Agency in South Africa | MaaJanki Web Tech",
     description: "Top web design and development agency near you in South Africa. Custom Next.js web apps, eCommerce & global SEO. Request your free 30-min strategy audit now!",
     url: 'https://maajankiwebtech.com/locations/south-africa',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in South Africa | MaaJanki",
+    title: "Web Design & Development Agency in South Africa | MaaJanki Web Tech",
     description: "Top web design and development agency near you in South Africa. Custom Next.js web apps, eCommerce & global SEO. Request your free 30-min strategy audit now!",
   },
 };

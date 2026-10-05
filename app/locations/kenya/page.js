@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Kenya | MaaJanki",
+  title: "Web Design & Development Agency in Kenya | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Kenya. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Kenya","web development company near me Kenya","web designer near me Kenya","digital marketing agency near me in Kenya","best website maker near me Kenya","Next.js developer Kenya","local SEO services Kenya","MaaJanki Web Tech Kenya"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/kenya',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Kenya | MaaJanki",
+    title: "Web Design & Development Agency in Kenya | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Kenya. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/kenya',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Kenya | MaaJanki",
+    title: "Web Design & Development Agency in Kenya | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Kenya. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

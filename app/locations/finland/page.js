@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Finland | MaaJanki",
+  title: "Web Design & Development Agency in Finland | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Finland. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Finland","web development company near me Finland","web designer near me Finland","digital marketing agency near me in Finland","best website maker near me Finland","Next.js developer Finland","local SEO services Finland","MaaJanki Web Tech Finland"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/finland',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Finland | MaaJanki",
+    title: "Web Design & Development Agency in Finland | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Finland. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/finland',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Finland | MaaJanki",
+    title: "Web Design & Development Agency in Finland | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Finland. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

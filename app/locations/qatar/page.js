@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Qatar | MaaJanki",
+  title: "Web Design & Development Agency in Qatar | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Qatar. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Qatar","web development company near me Qatar","web designer near me Qatar","digital marketing agency near me in Qatar","best website maker near me Qatar","Next.js developer Qatar","local SEO services Qatar","MaaJanki Web Tech Qatar"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/qatar',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Qatar | MaaJanki",
+    title: "Web Design & Development Agency in Qatar | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Qatar. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/qatar',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Qatar | MaaJanki",
+    title: "Web Design & Development Agency in Qatar | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Qatar. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

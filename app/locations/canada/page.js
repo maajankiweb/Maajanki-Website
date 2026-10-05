@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Canada | MaaJanki",
+  title: "Web Design & Development Agency in Canada | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Canada. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Canada","web development company near me Canada","web designer near me Canada","digital marketing agency near me in Canada","best website maker near me Canada","Next.js developer Canada","local SEO services Canada","MaaJanki Web Tech Canada"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/canada',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Canada | MaaJanki",
+    title: "Web Design & Development Agency in Canada | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Canada. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/canada',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Canada | MaaJanki",
+    title: "Web Design & Development Agency in Canada | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Canada. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Spain | MaaJanki",
+  title: "Web Design & Development Agency in Spain | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Spain. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Spain","web development company near me Spain","web designer near me Spain","digital marketing agency near me in Spain","best website maker near me Spain","Next.js developer Spain","local SEO services Spain","MaaJanki Web Tech Spain"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/spain',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Spain | MaaJanki",
+    title: "Web Design & Development Agency in Spain | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Spain. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/spain',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Spain | MaaJanki",
+    title: "Web Design & Development Agency in Spain | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Spain. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

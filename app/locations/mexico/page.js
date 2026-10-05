@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Mexico | MaaJanki",
+  title: "Web Design & Development Agency in Mexico | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Mexico. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Mexico","web development company near me Mexico","web designer near me Mexico","digital marketing agency near me in Mexico","best website maker near me Mexico","Next.js developer Mexico","local SEO services Mexico","MaaJanki Web Tech Mexico"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/mexico',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Mexico | MaaJanki",
+    title: "Web Design & Development Agency in Mexico | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Mexico. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/mexico',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Mexico | MaaJanki",
+    title: "Web Design & Development Agency in Mexico | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Mexico. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

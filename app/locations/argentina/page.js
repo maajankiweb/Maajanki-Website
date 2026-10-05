@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Argentina | MaaJanki",
+  title: "Web Design & Development Agency in Argentina | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Argentina. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Argentina","web development company near me Argentina","web designer near me Argentina","digital marketing agency near me in Argentina","best website maker near me Argentina","Next.js developer Argentina","local SEO services Argentina","MaaJanki Web Tech Argentina"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/argentina',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Argentina | MaaJanki",
+    title: "Web Design & Development Agency in Argentina | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Argentina. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/argentina',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Argentina | MaaJanki",
+    title: "Web Design & Development Agency in Argentina | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Argentina. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

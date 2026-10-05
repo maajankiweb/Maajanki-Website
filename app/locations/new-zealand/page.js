@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in New Zealand | MaaJanki",
+  title: "Web Design & Development Agency in New Zealand | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in New Zealand. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in New Zealand","web development company near me New Zealand","web designer near me New Zealand","digital marketing agency near me in New Zealand","best website maker near me New Zealand","Next.js developer New Zealand","local SEO services New Zealand","MaaJanki Web Tech New Zealand"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/new-zealand',
   },
   openGraph: {
-    title: "Web Design & Development Agency in New Zealand | MaaJanki",
+    title: "Web Design & Development Agency in New Zealand | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in New Zealand. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/new-zealand',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in New Zealand | MaaJanki",
+    title: "Web Design & Development Agency in New Zealand | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in New Zealand. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

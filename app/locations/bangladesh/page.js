@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Bangladesh | MaaJanki",
+  title: "Web Design & Development Agency in Bangladesh | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Bangladesh. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Bangladesh","web development company near me Bangladesh","web designer near me Bangladesh","digital marketing agency near me in Bangladesh","best website maker near me Bangladesh","Next.js developer Bangladesh","local SEO services Bangladesh","MaaJanki Web Tech Bangladesh"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/bangladesh',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Bangladesh | MaaJanki",
+    title: "Web Design & Development Agency in Bangladesh | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Bangladesh. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/bangladesh',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Bangladesh | MaaJanki",
+    title: "Web Design & Development Agency in Bangladesh | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Bangladesh. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

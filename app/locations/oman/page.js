@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Oman | MaaJanki",
+  title: "Web Design & Development Agency in Oman | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Oman. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Oman","web development company near me Oman","web designer near me Oman","digital marketing agency near me in Oman","best website maker near me Oman","Next.js developer Oman","local SEO services Oman","MaaJanki Web Tech Oman"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/oman',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Oman | MaaJanki",
+    title: "Web Design & Development Agency in Oman | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Oman. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/oman',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Oman | MaaJanki",
+    title: "Web Design & Development Agency in Oman | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Oman. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

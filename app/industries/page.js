@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Industries We Serve | Web & Digital Solutions | MaaJanki",
+  title: "Industries We Serve | Web & Digital Solutions | MaaJanki Web Tech",
   description: "Explore industry-specific web development, AI automation, and SEO solutions for Retail, Real Estate, Healthcare, and eCommerce by MaaJanki Web Tech.",
   keywords: [
     "Industries We Serve",
@@ -13,7 +13,7 @@ export const metadata = {
     "MaaJanki Web Tech industries"
   ],
   openGraph: {
-    title: "Industries We Serve | Web & Digital Solutions | MaaJanki",
+    title: "Industries We Serve | Web & Digital Solutions | MaaJanki Web Tech",
     description: "Explore industry-specific web development, AI automation, and SEO solutions for Retail, Real Estate, Healthcare, and eCommerce.",
     url: "https://maajankiwebtech.com/industries",
     siteName: "MaaJanki Web Tech",
@@ -22,7 +22,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Industries We Serve | Web & Digital Solutions | MaaJanki",
+    title: "Industries We Serve | Web & Digital Solutions | MaaJanki Web Tech",
     description: "Explore industry-specific web development, AI automation, and SEO marketing solutions by MaaJanki Web Tech.",
   },
   alternates: {

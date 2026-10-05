@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Australia | MaaJanki",
+  title: "Web Design & Development Agency in Australia | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Australia. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Australia","web development company near me Australia","web designer near me Australia","digital marketing agency near me in Australia","best website maker near me Australia","Next.js developer Australia","local SEO services Australia","MaaJanki Web Tech Australia"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/australia',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Australia | MaaJanki",
+    title: "Web Design & Development Agency in Australia | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Australia. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/australia',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Australia | MaaJanki",
+    title: "Web Design & Development Agency in Australia | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Australia. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

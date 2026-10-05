@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Performance Marketing & Google Ads Agency | MaaJanki",
+  title: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
   description: "Drive high-converting leads with ROI-focused Google Ads & Meta Ads in India. Certified PPC & performance marketing agency for fast, scalable growth.",
   keywords: [
     "Google Ads agency India",
@@ -14,7 +14,7 @@ export const metadata = {
     "MaaJanki Web Tech PPC"
   ],
   openGraph: {
-    title: "Performance Marketing & Google Ads Agency | MaaJanki",
+    title: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
     description: "Drive high-converting leads with ROI-focused Google Ads & Meta Ads in India. Certified PPC & performance marketing agency for fast, scalable growth.",
     url: "https://maajankiwebtech.com/services/performance-marketing",
     siteName: "MaaJanki Web Tech",
@@ -25,13 +25,13 @@ export const metadata = {
         url: "https://maajankiwebtech.com/images/pages/main-services-pages/performance-marketing-banner-image-Maajanki-Web-Tech.webp",
         width: 1200,
         height: 630,
-        alt: "Performance Marketing & Google Ads Agency | MaaJanki",
+        alt: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Performance Marketing & Google Ads Agency | MaaJanki",
+    title: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
     description: "Drive high-converting leads with ROI-focused Google Ads & Meta Ads in India.",
     images: ["https://maajankiwebtech.com/images/pages/main-services-pages/performance-marketing-banner-image-Maajanki-Web-Tech.webp"],
   },

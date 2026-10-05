@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Singapore | MaaJanki",
+  title: "Web Design & Development Agency in Singapore | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Singapore. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Singapore","web development company near me Singapore","web designer near me Singapore","digital marketing agency near me in Singapore","best website maker near me Singapore","Next.js developer Singapore","local SEO services Singapore","MaaJanki Web Tech Singapore"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/singapore',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Singapore | MaaJanki",
+    title: "Web Design & Development Agency in Singapore | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Singapore. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/singapore',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Singapore | MaaJanki",
+    title: "Web Design & Development Agency in Singapore | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Singapore. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

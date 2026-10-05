@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Malaysia | MaaJanki",
+  title: "Web Design & Development Agency in Malaysia | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Malaysia. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Malaysia","web development company near me Malaysia","web designer near me Malaysia","digital marketing agency near me in Malaysia","best website maker near me Malaysia","Next.js developer Malaysia","local SEO services Malaysia","MaaJanki Web Tech Malaysia"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/malaysia',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Malaysia | MaaJanki",
+    title: "Web Design & Development Agency in Malaysia | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Malaysia. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/malaysia',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Malaysia | MaaJanki",
+    title: "Web Design & Development Agency in Malaysia | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Malaysia. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

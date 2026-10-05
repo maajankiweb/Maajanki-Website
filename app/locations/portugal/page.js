@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Portugal | MaaJanki",
+  title: "Web Design & Development Agency in Portugal | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Portugal. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Portugal","web development company near me Portugal","web designer near me Portugal","digital marketing agency near me in Portugal","best website maker near me Portugal","Next.js developer Portugal","local SEO services Portugal","MaaJanki Web Tech Portugal"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/portugal',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Portugal | MaaJanki",
+    title: "Web Design & Development Agency in Portugal | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Portugal. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/portugal',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Portugal | MaaJanki",
+    title: "Web Design & Development Agency in Portugal | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Portugal. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

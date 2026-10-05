@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Switzerland | MaaJanki",
+  title: "Web Design & Development Agency in Switzerland | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Switzerland. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Switzerland","web development company near me Switzerland","web designer near me Switzerland","digital marketing agency near me in Switzerland","best website maker near me Switzerland","Next.js developer Switzerland","local SEO services Switzerland","MaaJanki Web Tech Switzerland"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/switzerland',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Switzerland | MaaJanki",
+    title: "Web Design & Development Agency in Switzerland | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Switzerland. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/switzerland',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Switzerland | MaaJanki",
+    title: "Web Design & Development Agency in Switzerland | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Switzerland. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

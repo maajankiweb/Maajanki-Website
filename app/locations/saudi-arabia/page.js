@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Saudi Arabia | MaaJanki",
+  title: "Web Design & Development Agency in Saudi Arabia | MaaJanki Web Tech",
   description: "Top web design and development agency near you in Saudi Arabia. Custom Next.js web apps, eCommerce & global SEO. Request your free 30-min strategy audit now!",
   keywords: ["website designer near me in Saudi Arabia","web development company near me Saudi Arabia","web designer near me Saudi Arabia","digital marketing agency near me in Saudi Arabia","best website maker near me Saudi Arabia","Next.js developer Saudi Arabia","local SEO services Saudi Arabia","MaaJanki Web Tech Saudi Arabia"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/saudi-arabia',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Saudi Arabia | MaaJanki",
+    title: "Web Design & Development Agency in Saudi Arabia | MaaJanki Web Tech",
     description: "Top web design and development agency near you in Saudi Arabia. Custom Next.js web apps, eCommerce & global SEO. Request your free 30-min strategy audit now!",
     url: 'https://maajankiwebtech.com/locations/saudi-arabia',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Saudi Arabia | MaaJanki",
+    title: "Web Design & Development Agency in Saudi Arabia | MaaJanki Web Tech",
     description: "Top web design and development agency near you in Saudi Arabia. Custom Next.js web apps, eCommerce & global SEO. Request your free 30-min strategy audit now!",
   },
 };

@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Belgium | MaaJanki",
+  title: "Web Design & Development Agency in Belgium | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Belgium. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Belgium","web development company near me Belgium","web designer near me Belgium","digital marketing agency near me in Belgium","best website maker near me Belgium","Next.js developer Belgium","local SEO services Belgium","MaaJanki Web Tech Belgium"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/belgium',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Belgium | MaaJanki",
+    title: "Web Design & Development Agency in Belgium | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Belgium. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/belgium',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Belgium | MaaJanki",
+    title: "Web Design & Development Agency in Belgium | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Belgium. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

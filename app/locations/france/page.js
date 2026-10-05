@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in France | MaaJanki",
+  title: "Web Design & Development Agency in France | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in France. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in France","web development company near me France","web designer near me France","digital marketing agency near me in France","best website maker near me France","Next.js developer France","local SEO services France","MaaJanki Web Tech France"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/france',
   },
   openGraph: {
-    title: "Web Design & Development Agency in France | MaaJanki",
+    title: "Web Design & Development Agency in France | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in France. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/france',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in France | MaaJanki",
+    title: "Web Design & Development Agency in France | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in France. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

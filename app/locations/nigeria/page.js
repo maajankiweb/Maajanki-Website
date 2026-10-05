@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Nigeria | MaaJanki",
+  title: "Web Design & Development Agency in Nigeria | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Nigeria. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Nigeria","web development company near me Nigeria","web designer near me Nigeria","digital marketing agency near me in Nigeria","best website maker near me Nigeria","Next.js developer Nigeria","local SEO services Nigeria","MaaJanki Web Tech Nigeria"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/nigeria',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Nigeria | MaaJanki",
+    title: "Web Design & Development Agency in Nigeria | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Nigeria. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/nigeria',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Nigeria | MaaJanki",
+    title: "Web Design & Development Agency in Nigeria | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Nigeria. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

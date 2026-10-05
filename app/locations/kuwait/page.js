@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Kuwait | MaaJanki",
+  title: "Web Design & Development Agency in Kuwait | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Kuwait. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Kuwait","web development company near me Kuwait","web designer near me Kuwait","digital marketing agency near me in Kuwait","best website maker near me Kuwait","Next.js developer Kuwait","local SEO services Kuwait","MaaJanki Web Tech Kuwait"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/kuwait',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Kuwait | MaaJanki",
+    title: "Web Design & Development Agency in Kuwait | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Kuwait. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/kuwait',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Kuwait | MaaJanki",
+    title: "Web Design & Development Agency in Kuwait | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Kuwait. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

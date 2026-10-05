@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Web & Mobile App UI/UX Design Services | MaaJanki",
+  title: "Web & Mobile App UI/UX Design Services | MaaJanki Web Tech",
   description: "Create intuitive, user-centered website and mobile application UI/UX designs in India, serving startups and enterprises in USA, UK, Canada, and UAE.",
   keywords: [
     "UI UX design services India",
@@ -12,7 +12,7 @@ export const metadata = {
     "MaaJanki Web Tech UI UX"
   ],
   openGraph: {
-    title: "Web & Mobile App UI/UX Design Services | MaaJanki",
+    title: "Web & Mobile App UI/UX Design Services | MaaJanki Web Tech",
     description: "Create intuitive, user-centered website and mobile application UI/UX designs in India and globally.",
     url: "https://maajankiwebtech.com/services/ui-ux-design",
     siteName: "MaaJanki Web Tech",
@@ -23,13 +23,13 @@ export const metadata = {
         url: "https://maajankiwebtech.com/images/pages/main-services-pages/ui-ux-design-banner-image-Maajanki-Web-Tech.webp",
         width: 1200,
         height: 630,
-        alt: "Web & Mobile App UI/UX Design Services | MaaJanki",
+        alt: "Web & Mobile App UI/UX Design Services | MaaJanki Web Tech",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web & Mobile App UI/UX Design Services | MaaJanki",
+    title: "Web & Mobile App UI/UX Design Services | MaaJanki Web Tech",
     description: "Create intuitive, user-centered website and mobile application UI/UX designs.",
     images: ["https://maajankiwebtech.com/images/pages/main-services-pages/ui-ux-design-banner-image-Maajanki-Web-Tech.webp"],
   },

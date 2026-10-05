@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Bahrain | MaaJanki",
+  title: "Web Design & Development Agency in Bahrain | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Bahrain. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Bahrain","web development company near me Bahrain","web designer near me Bahrain","digital marketing agency near me in Bahrain","best website maker near me Bahrain","Next.js developer Bahrain","local SEO services Bahrain","MaaJanki Web Tech Bahrain"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/bahrain',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Bahrain | MaaJanki",
+    title: "Web Design & Development Agency in Bahrain | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Bahrain. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/bahrain',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Bahrain | MaaJanki",
+    title: "Web Design & Development Agency in Bahrain | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Bahrain. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

@@ -1,7 +1,7 @@
 import ClientPage from "./ClientPage";
 
 export const metadata = {
-  title: "Web Development & Digital Marketing Agency | MaaJanki",
+  title: "Web Development & Digital Marketing Agency | MaaJanki Web Tech",
   description: "MaaJanki Web Tech is India's leading web development & digital marketing agency. Experts in Next.js, SEO, Google Ads & performance marketing. Free audit!",
   keywords: [
     "Web Development Agency in India",
@@ -42,7 +42,7 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Web Development & Digital Marketing Agency | MaaJanki",
+    title: "Web Development & Digital Marketing Agency | MaaJanki Web Tech",
     description: "MaaJanki Web Tech is India's leading web development & digital marketing agency. Experts in Next.js, SEO, Google Ads & performance marketing. Free audit!",
     url: "https://maajankiwebtech.com",
     siteName: "MaaJanki Web Tech",
@@ -59,7 +59,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development & Digital Marketing Agency | MaaJanki",
+    title: "Web Development & Digital Marketing Agency | MaaJanki Web Tech",
     description: "MaaJanki Web Tech is India's leading web development & digital marketing agency. Experts in Next.js, SEO, Google Ads & performance marketing. Free audit!",
     images: ["https://maajankiwebtech.com/images/og-banner.webp"],
   },

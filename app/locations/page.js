@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { FaMapMarkerAlt, FaGlobe, FaBuilding, FaArrowRight, FaRocket, FaSearch, FaLaptopCode, FaBullhorn } from 'react-icons/fa';
 
 export const metadata = {
-  title: 'Our Service Locations | Web Design & SEO | MaaJanki',
+  title: 'Our Service Locations | Web Design & SEO | MaaJanki Web Tech',
   description: 'Explore 59 cities and global locations served by MaaJanki Web Tech. Professional Next.js web design, local SEO, Google Ads, and custom web apps.',
   keywords: [
     'Service locations MaaJanki Web Tech',
@@ -17,7 +17,7 @@ export const metadata = {
     canonical: 'https://maajankiwebtech.com/locations',
   },
   openGraph: {
-    title: 'Our Service Locations | Web Design & SEO | MaaJanki',
+    title: 'Our Service Locations | Web Design & SEO | MaaJanki Web Tech',
     description: 'Explore 59 cities and global locations served by MaaJanki Web Tech. Professional Next.js web design, local SEO, Google Ads, and custom web apps.',
     url: 'https://maajankiwebtech.com/locations',
     siteName: 'MaaJanki Web Tech',

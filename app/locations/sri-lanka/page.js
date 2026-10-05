@@ -8,14 +8,14 @@ import '@/app/styles/Home.css';
 import { Phone, MapPin, Mail, MessageCircle, Clock, CheckCircle, HelpCircle } from "lucide-react";
 
 export const metadata = {
-  title: "Web Design & Development Agency in Sri Lanka | MaaJanki",
+  title: "Web Design & Development Agency in Sri Lanka | MaaJanki Web Tech",
   description: "Premier web design and development company serving businesses near you in Sri Lanka. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   keywords: ["website designer near me in Sri Lanka","web development company near me Sri Lanka","web designer near me Sri Lanka","digital marketing agency near me in Sri Lanka","best website maker near me Sri Lanka","Next.js developer Sri Lanka","local SEO services Sri Lanka","MaaJanki Web Tech Sri Lanka"],
   alternates: {
     canonical: 'https://maajankiwebtech.com/locations/sri-lanka',
   },
   openGraph: {
-    title: "Web Design & Development Agency in Sri Lanka | MaaJanki",
+    title: "Web Design & Development Agency in Sri Lanka | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Sri Lanka. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
     url: 'https://maajankiwebtech.com/locations/sri-lanka',
     siteName: 'MaaJanki Web Tech',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Agency in Sri Lanka | MaaJanki",
+    title: "Web Design & Development Agency in Sri Lanka | MaaJanki Web Tech",
     description: "Premier web design and development company serving businesses near you in Sri Lanka. Custom Next.js web applications & SEO. Request a free 30-min audit today!",
   },
 };

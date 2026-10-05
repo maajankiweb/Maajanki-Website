@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "SEO Services in India & Bihar | AEO Agency | MaaJanki",
+  title: "SEO Services in India & Bihar | AEO Agency | MaaJanki Web Tech",
   description: "Rank #1 on Google with expert SEO in Bihar & India. Local SEO, Technical SEO, AEO optimization & Google Business Profile growth. Get a free audit.",
   keywords: [
     "SEO Services in India",
@@ -14,7 +14,7 @@ export const metadata = {
     "MaaJanki Web Tech SEO"
   ],
   openGraph: {
-    title: "SEO Services in India & Bihar | AEO Agency | MaaJanki",
+    title: "SEO Services in India & Bihar | AEO Agency | MaaJanki Web Tech",
     description: "Rank #1 on Google with expert SEO in Bihar & India. Local SEO, Technical SEO, AEO optimization & Google Business Profile growth. Get a free audit.",
     url: "https://maajankiwebtech.com/services/seo",
     siteName: "MaaJanki Web Tech",
@@ -25,13 +25,13 @@ export const metadata = {
         url: "https://maajankiwebtech.com/images/pages/main-services-pages/seo-banner-image-Maajanki-Web-Tech.webp",
         width: 1200,
         height: 630,
-        alt: "SEO Services in India & Bihar | AEO Agency | MaaJanki",
+        alt: "SEO Services in India & Bihar | AEO Agency | MaaJanki Web Tech",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SEO Services in India & Bihar | AEO Agency | MaaJanki",
+    title: "SEO Services in India & Bihar | AEO Agency | MaaJanki Web Tech",
     description: "Rank #1 on Google with expert SEO in Bihar & India. Local SEO, Technical SEO, AEO optimization & Google Business Profile growth. Get a free audit.",
   },
   alternates: {

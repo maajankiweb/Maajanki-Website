@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: 'Meet Our Team | Web & Digital Experts | MaaJanki',
+  title: 'Meet Our Team | Web & Digital Experts | MaaJanki Web Tech',
   description:
     'Meet the team behind MaaJanki Web Tech — Next.js developers, SEO specialists, UI/UX designers, and growth marketing strategists dedicated to your success.',
   keywords: [

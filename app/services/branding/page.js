@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Logo Design & Corporate Branding Services | MaaJanki",
+  title: "Logo Design & Corporate Branding Services | MaaJanki Web Tech",
   description: "Build a world-class brand identity with expert logo design, brand guidelines, and corporate branding services in India, USA, UK, and UAE.",
   keywords: [
     "logo design services India",
@@ -12,7 +12,7 @@ export const metadata = {
     "MaaJanki Web Tech branding"
   ],
   openGraph: {
-    title: "Logo Design & Corporate Branding Services | MaaJanki",
+    title: "Logo Design & Corporate Branding Services | MaaJanki Web Tech",
     description: "Build a world-class brand identity with expert logo design and corporate branding services in India and internationally.",
     url: "https://maajankiwebtech.com/services/branding",
     siteName: "MaaJanki Web Tech",
@@ -23,13 +23,13 @@ export const metadata = {
         url: "https://maajankiwebtech.com/images/pages/main-services-pages/branding-banner-image-Maajanki-Web-Tech.webp",
         width: 1200,
         height: 630,
-        alt: "Logo Design & Corporate Branding Services | MaaJanki",
+        alt: "Logo Design & Corporate Branding Services | MaaJanki Web Tech",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logo Design & Corporate Branding Services | MaaJanki",
+    title: "Logo Design & Corporate Branding Services | MaaJanki Web Tech",
     description: "Build a world-class brand identity with expert logo design and corporate branding services.",
     images: ["https://maajankiwebtech.com/images/pages/main-services-pages/branding-banner-image-Maajanki-Web-Tech.webp"],
   },
