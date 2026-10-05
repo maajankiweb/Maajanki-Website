@@ -43,7 +43,44 @@ import { SiTailwindcss, SiWoocommerce } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
 
 function Home() {
-  const [livePortfolio, setLivePortfolio] = React.useState([]);
+  const [livePortfolio, setLivePortfolio] = React.useState([
+    {
+      title: "Apex Tutorial Bettiah",
+      img: "/images/project/Apex Tutorial Full Page.jpg",
+      link: "https://apex-tutorial-gray.vercel.app/",
+      imgTitle: "Apex Tutorial Bettiah Science Coaching Website – MaaJanki Web Tech",
+    },
+    {
+      title: "InvoBill – Free GST Billing",
+      img: "/images/project/Invobill Full Page.jpg",
+      link: "https://invobill.in/",
+      imgTitle: "InvoBill Free GST Invoice Generator Web App – MaaJanki Web Tech",
+    },
+    {
+      title: "MaaJanki Digital Blog",
+      img: "/images/project/Maajanki Blog Full Page.jpg",
+      link: "https://blog.maajankiwebtech.com/",
+      imgTitle: "MaaJanki Web Tech Tech & Digital Growth Blog",
+    },
+    {
+      title: "Style Beauty Studio",
+      img: "/images/project/Beauty Studio Full Page.jpg",
+      link: "https://style-beauty-studio.vercel.app/",
+      imgTitle: "Style Beauty Studio Luxury Bridal Makeup Website",
+    },
+    {
+      title: "Shivam Kumar Portfolio",
+      img: "/images/project/Shivam Full Page.jpg",
+      link: "https://shivam-kumar-portfolio-snowy.vercel.app/",
+      imgTitle: "Shivam Kumar HR Specialist & MBA Portfolio Website",
+    },
+    {
+      title: "HareRam Ray Portfolio",
+      img: "/images/project/Hareram Full Page.jpg",
+      link: "https://hareram-ray-portfolio.vercel.app/",
+      imgTitle: "HareRam Ray MBA HR Portfolio Website",
+    },
+  ]);
   const [showAllIndustries, setShowAllIndustries] = React.useState(false); /* Issue #13: Hick's Law — show 6 initially */
 
   React.useEffect(() => {
@@ -700,6 +737,7 @@ function Home() {
                   alt="Digital Marketing Agency Services in India"
                   title="Maajanki Web Tech – Website Development & Digital Marketing Agency in India"
                   className="img-fluid about-single-img"
+                  style={{ width: "auto", height: "auto" }}
                 />
               </div>
             </div>
@@ -980,9 +1018,9 @@ function Home() {
       <section className="tech-loop-section ptb-100" style={{ backgroundColor: "#FD6A02", overflow: "hidden", borderBottom: "1px solid #eaeaea", padding: "60px 0" }}>
         <div className="container">
           <div className="section-heading text-center mb-5" style={{ maxWidth: "700px", margin: "0 auto" }}>
-            <h4 className="h6" style={{ color: "#ffffff", letterSpacing: "1.5px", fontWeight: "600", marginBottom: "12px", opacity: 0.9, textTransform: "uppercase" }}>
+            <span className="h6 d-block" style={{ color: "#ffffff", letterSpacing: "1.5px", fontWeight: "600", marginBottom: "12px", opacity: 0.9, textTransform: "uppercase" }}>
               OUR TECH STACK
-            </h4>
+            </span>
             <h2 style={{ color: "#ffffff", fontWeight: "700", fontSize: "36px", marginBottom: "16px" }}>
               Platforms & Tools We Work With
             </h2>
@@ -1824,7 +1862,7 @@ function Home() {
                     />
                   </div>
                   {/* {counter.number && <h3 className="counter-number">{counter.number}</h3>} */}
-                  <h4 className="counter-title">{counter.title}</h4>
+                  <p className="counter-title">{counter.title}</p>
                 </div>
               </div>
             ))}
@@ -1835,7 +1873,7 @@ function Home() {
       {/* Clients Section */}
       <section className="clients-section">
         <div className="clients-title-wrapper">
-          <h5 className="clients-title">Our Clients</h5>
+          <h2 className="clients-title">Our Clients</h2>
         </div>
 
         {/* First Line: Right → Left */}
@@ -1885,7 +1923,7 @@ function Home() {
       {/* Collaborators Section */}
       <section className="collaborators-section">
         <div className="collaborators-title-wrapper">
-          <h5 className="collaborators-title">Our Official Collaborators</h5>
+          <h2 className="collaborators-title">Our Official Collaborators</h2>
         </div>
 
         <div className="slider-container">
@@ -1973,7 +2011,7 @@ function Home() {
                     </p>
                   </div>
                   <div className="pt-3 border-top" style={{ borderColor: "rgba(255, 255, 255, 0.1)" }}>
-                    <h6 className="mb-0 fw-bold text-white" style={{ fontSize: "15px" }}>{item.name}</h6>
+                    <h3 className="mb-0 fw-bold text-white" style={{ fontSize: "15px" }}>{item.name}</h3>
                     <small style={{ color: "#FD6A02", fontSize: "12px", fontWeight: "500" }}>{item.business}</small>
                   </div>
                 </div>

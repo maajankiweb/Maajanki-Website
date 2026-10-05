@@ -156,11 +156,11 @@ const Products = () => {
                 </div>
 
                 <div className="product-content">
-                  <h3 className="product-title">{product.title}</h3>
+                  <h2 className="product-title">{product.title}</h2>
                   <p className="product-desc">{product.description}</p>
                   
                   <div className="product-highlights-box">
-                    <h5 className="highlights-title">Key Highlights:</h5>
+                    <div className="highlights-title fw-bold" style={{ fontSize: "1rem", color: "#042544", marginBottom: "8px" }}>Key Highlights:</div>
                     <ul className="product-highlights">
                       {product.highlights.map((h, index) => (
                         <li key={index}>

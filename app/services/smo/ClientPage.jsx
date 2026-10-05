@@ -904,36 +904,36 @@ const SMO = () => {
 
             <div className="geo-questions-grid">
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Social Media Optimization (SMO)?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   SMO involves optimizing business profiles and content across platforms like Facebook, Instagram, and LinkedIn to build organic reach.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why is organic SMO important?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Organic SMO builds authentic customer trust, drives free referral traffic, and signals brand credibility to search algorithms.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How does SMO differ from SEO?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   SEO targets web page search rankings, while SMO optimizes social channels and posts to maximize audience reach on social networks.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How does community management help?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Community management responds to comments and DMs, boosting profile activity levels which social algorithms prioritize.
                 </p>

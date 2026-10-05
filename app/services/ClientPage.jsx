@@ -591,7 +591,7 @@ const Services = () => {
                     />
                   </div>
                   {/* {counter.number && <h3 className="counter-number">{counter.number}</h3>} */}
-                  <h6 className="counter-title">{counter.title}</h6>
+                  <p className="counter-title">{counter.title}</p>
                 </div>
               </div>
             ))}
@@ -602,7 +602,7 @@ const Services = () => {
       {/* Clients Section */}
       <section className="clients-section">
         <div className="clients-title-wrapper">
-          <h5 className="clients-title">Our Clients</h5>
+          <h2 className="clients-title">Our Clients</h2>
         </div>
 
         {/* First Line: Right → Left */}
@@ -652,7 +652,7 @@ const Services = () => {
       {/* Collaborators Section */}
       <section className="collaborators-section">
         <div className="collaborators-title-wrapper">
-          <h5 className="collaborators-title">Our Official Collaborators</h5>
+          <h2 className="collaborators-title">Our Official Collaborators</h2>
         </div>
 
         <div className="slider-container">

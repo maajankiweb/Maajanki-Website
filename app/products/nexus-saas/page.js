@@ -4,8 +4,8 @@ import Link from 'next/link';
 import '../../styles/Products.css';
 
 export const metadata = {
-  title: "Nexus SaaS – AI Local Reputation & Google Map Pack OS | MaaJanki Web Tech",
-  description: "Nexus SaaS is an AI-powered local reputation management system connecting directly with official Google Business Profile APIs for automated review retrieval, sentiment analytics, and AI auto-responses.",
+  title: "Nexus SaaS – AI Local Reputation OS | MaaJanki Web Tech",
+  description: "Nexus SaaS connects directly with Google Business Profile APIs for automated review retrieval, sentiment analytics, and AI-powered responses.",
   openGraph: {
     title: "Nexus SaaS – AI Local Reputation & Google Map Pack OS",
     description: "Official Google Business Profile API integration with AI review auto-responder and local SEO rank tracking.",

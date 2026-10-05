@@ -2,9 +2,9 @@ import ClientPage from './ClientPage';
 import { FAQ_SECTIONS } from './data';
 
 export const metadata = {
-  title: 'Frequently Asked Questions (FAQs) | Digital Marketing & Web Agency | MaaJanki Web Tech',
+  title: 'Frequently Asked Questions (FAQs) | MaaJanki Web Tech',
   description:
-    'Find clear, authoritative answers to common questions about MaaJanki Web Tech services — Next.js web development, technical SEO, performance ads, branding, and e-commerce solutions.',
+    'Find clear answers to questions about MaaJanki Web Tech services: Next.js web development, technical SEO, performance ads, branding, and eCommerce.',
   keywords: [
     'MaaJanki Web Tech FAQs',
     'web development agency questions',

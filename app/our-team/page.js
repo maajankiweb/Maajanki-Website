@@ -1,9 +1,9 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: 'Meet Our Team | Digital Marketing & Web Experts at MaaJanki Web Tech',
+  title: 'Meet Our Team | Web & Digital Experts | MaaJanki',
   description:
-    'Meet the passionate team behind MaaJanki Web Tech — Next.js developers, SEO specialists, UI/UX designers, and growth marketing strategists dedicated to scaling your business.',
+    'Meet the team behind MaaJanki Web Tech — Next.js developers, SEO specialists, UI/UX designers, and growth marketing strategists dedicated to your success.',
   keywords: [
     'MaaJanki Web Tech team',
     'Ashish Kumar founder MaaJanki',

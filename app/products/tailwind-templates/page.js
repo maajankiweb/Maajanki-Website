@@ -4,8 +4,8 @@ import Link from 'next/link';
 import '../../styles/Products.css';
 
 export const metadata = {
-  title: "Tailwind Templates – 50+ Responsive Landing Page Templates | MaaJanki Web Tech",
-  description: "An ultimate bundle of 50+ modern, fully responsive landing page templates built with HTML5 & Tailwind CSS. Designed for rapid deployment and high-converting marketing campaigns.",
+  title: "Tailwind Templates – 50+ Landing Pages | MaaJanki Web Tech",
+  description: "An ultimate bundle of 50+ modern responsive landing page templates built with HTML5 & Tailwind CSS for high-converting marketing campaigns.",
   openGraph: {
     title: "Tailwind Templates – 50+ Responsive Landing Page Templates",
     description: "Developer-friendly HTML5 & Tailwind CSS v3 template bundle with dark/light themes and 95+ Core Web Vitals.",

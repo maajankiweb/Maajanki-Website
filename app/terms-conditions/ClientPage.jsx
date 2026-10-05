@@ -116,7 +116,7 @@ const Terms = () => {
         <div className="terms-layout-grid">
           {/* Desktop Sticky Sidebar */}
           <aside className="terms-sidebar" data-aos="fade-right">
-            <h4><FileText size={18} /> Quick Links</h4>
+            <div className="terms-sidebar-title"><FileText size={18} /> Quick Links</div>
             <ul className="terms-sidebar-links">
               <li>
                 <a href="#proposals" className={activeSection === "proposals" ? "active" : ""}><Compass size={16} /> 1. Proposals & Scope</a>

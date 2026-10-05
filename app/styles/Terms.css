@@ -160,7 +160,8 @@
   border-radius: 4px;
 }
 
-.terms-sidebar h4 {
+.terms-sidebar h4,
+.terms-sidebar .terms-sidebar-title {
   font-family: var(--font-outfit), sans-serif;
   font-size: 1.05rem;
   font-weight: 700;

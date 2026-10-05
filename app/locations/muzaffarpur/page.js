@@ -181,7 +181,7 @@ export default function Page() {
             <a href="tel:+919006543913" className="contact-link">
               <div className="contact-promo-card">
                 <Phone className="contact-icon" />
-                <h4 className="contact-promo-title">Call Us</h4>
+                <div className="contact-promo-title">Call Us</div>
                 <p className="contact-promo-text">+91 9006543913</p>
               </div>
             </a>
@@ -194,7 +194,7 @@ export default function Page() {
             >
               <div className="contact-promo-card">
                 <MapPin className="contact-icon" />
-                <h4 className="contact-promo-title">Coverage Desk</h4>
+                <div className="contact-promo-title">Coverage Desk</div>
                 <p className="contact-promo-text">Muzaffarpur, India</p>
               </div>
             </a>
@@ -202,7 +202,7 @@ export default function Page() {
             <a href="mailto:info@maajankiwebtech.com" className="contact-link">
               <div className="contact-promo-card">
                 <Mail className="contact-icon" />
-                <h4 className="contact-promo-title">Mail Us</h4>
+                <div className="contact-promo-title">Mail Us</div>
                 <p className="contact-promo-text">info@maajankiwebtech.com</p>
               </div>
             </a>
@@ -213,7 +213,7 @@ export default function Page() {
             >
               <div className="contact-promo-card">
                 <MessageCircle className="contact-icon" />
-                <h4 className="contact-promo-title">Live Chat</h4>
+                <div className="contact-promo-title">Live Chat</div>
                 <p className="contact-promo-text">WhatsApp Chat 24/7</p>
               </div>
             </a>

@@ -1,8 +1,8 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
-  description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in India. Certified PPC and performance marketing agency for scalable growth.",
+  title: "Performance Marketing & Google Ads Agency | MaaJanki",
+  description: "Drive high-converting leads with ROI-focused Google Ads & Meta Ads in India. Certified PPC & performance marketing agency for fast, scalable growth.",
   keywords: [
     "Google Ads agency India",
     "PPC agency India",
@@ -14,8 +14,8 @@ export const metadata = {
     "MaaJanki Web Tech PPC"
   ],
   openGraph: {
-    title: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
-    description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in India.",
+    title: "Performance Marketing & Google Ads Agency | MaaJanki",
+    description: "Drive high-converting leads with ROI-focused Google Ads & Meta Ads in India. Certified PPC & performance marketing agency for fast, scalable growth.",
     url: "https://maajankiwebtech.com/services/performance-marketing",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -25,14 +25,14 @@ export const metadata = {
         url: "https://maajankiwebtech.com/images/pages/main-services-pages/performance-marketing-banner-image-Maajanki-Web-Tech.webp",
         width: 1200,
         height: 630,
-        alt: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
+        alt: "Performance Marketing & Google Ads Agency | MaaJanki",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Performance Marketing & Google Ads Agency | MaaJanki Web Tech",
-    description: "Drive high-converting leads with ROI-focused Google Ads and Meta Ads management in India.",
+    title: "Performance Marketing & Google Ads Agency | MaaJanki",
+    description: "Drive high-converting leads with ROI-focused Google Ads & Meta Ads in India.",
     images: ["https://maajankiwebtech.com/images/pages/main-services-pages/performance-marketing-banner-image-Maajanki-Web-Tech.webp"],
   },
   alternates: {

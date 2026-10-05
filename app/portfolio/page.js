@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Web Development & Digital Marketing Portfolio | MaaJanki Web Tech",
+  title: "Web Development & Marketing Portfolio | MaaJanki",
   description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across India.",
   keywords: [
     "website development portfolio",
@@ -11,7 +11,7 @@ export const metadata = {
     "MaaJanki Web Tech portfolio"
   ],
   openGraph: {
-    title: "Web Development & Digital Marketing Portfolio | MaaJanki Web Tech",
+    title: "Web Development & Marketing Portfolio | MaaJanki",
     description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across India.",
     url: "https://maajankiwebtech.com/portfolio",
     siteName: "MaaJanki Web Tech",
@@ -20,7 +20,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Web Development & Digital Marketing Portfolio | MaaJanki Web Tech",
+    title: "Web Development & Marketing Portfolio | MaaJanki",
     description: "Explore real web development client projects, custom SaaS applications, and SEO case studies delivered by MaaJanki Web Tech across India.",
   },
   alternates: {

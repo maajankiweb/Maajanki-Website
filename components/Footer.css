@@ -307,11 +307,12 @@
   }
 
   .scroll-top {
-    bottom   : 136px;
-    right    : 20px;
-    width    : 46px;
-    height   : 46px;
-    font-size: 20px;
+    bottom   : calc(76px + env(safe-area-inset-bottom, 0px));
+    left     : 16px;
+    right    : auto;
+    width    : 44px;
+    height   : 44px;
+    font-size: 18px;
   }
 }
 

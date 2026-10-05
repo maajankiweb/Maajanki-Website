@@ -1,9 +1,9 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: 'Digital Marketing & Web Development Jobs | Careers at MaaJanki Web Tech',
+  title: 'Careers & Web Development Jobs | MaaJanki Web Tech',
   description:
-    'Explore exciting careers and internship opportunities at MaaJanki Web Tech. Hiring for SEO interns, Next.js web developers, UI/UX designers, and marketing executives.',
+    'Explore career and internship openings at MaaJanki Web Tech. Hiring SEO interns, Next.js developers, UI/UX designers, and growth marketers. Apply today!',
   keywords: [
     'MaaJanki Web Tech careers',
     'digital marketing jobs India',

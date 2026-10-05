@@ -107,13 +107,13 @@ export default function ToolsHubPage() {
                   </span>
                 </div>
 
-                <h3 className="h4 fw-bold mb-2">
+                <h2 className="h4 fw-bold mb-2">
                   <Link href={`/tools/${tool.slug}`} className="text-decoration-none text-white">
                     {tool.title}
                   </Link>
-                </h3>
+                </h2>
 
-                <p className="text-secondary mb-4 flex-grow-1" style={{ color: '#94a3b8', lineHeight: '1.6' }}>
+                <p className="text-secondary mb-4 grow" style={{ color: '#94a3b8', lineHeight: '1.6', flexGrow: 1 }}>
                   {tool.desc}
                 </p>
 

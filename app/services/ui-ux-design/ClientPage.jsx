@@ -985,36 +985,36 @@ const UIUXDesign = () => {
 
             <div className="geo-questions-grid">
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is UI/UX Design?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   UI/UX design plans user-friendly digital products—UI handles visual styling while UX maps seamless navigation.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why is custom UI/UX design important?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Custom UI/UX reduces interaction friction, improves mobile responsiveness, builds buyer trust, and raises conversion rates.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is a clickable prototype?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   A prototype is an interactive visual model simulating user flows, allowing test navigation before full frontend development.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How does UX design support conversion rates?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   UX aligns page layouts with user habits, making information discovery effortless and increasing sales transactions.
                 </p>

@@ -58,7 +58,7 @@ export default function MetaTagGeneratorPage() {
         <div className="row g-4">
           <div className="col-lg-6">
             <div className="p-4 rounded-4" style={{ background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <h3 className="h5 fw-bold text-white mb-3">Input Metadata</h3>
+              <h2 className="h5 fw-bold text-white mb-3">Input Metadata</h2>
 
               <div className="mb-3">
                 <label className="form-label text-light small fw-bold">Page Title (50–60 characters recommended)</label>
@@ -113,7 +113,7 @@ export default function MetaTagGeneratorPage() {
           <div className="col-lg-6">
             <div className="p-4 rounded-4 h-100 d-flex flex-column" style={{ background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <div className="d-flex justify-content-between align-items-center mb-3">
-                <h3 className="h5 fw-bold text-white mb-0">Generated Meta Tags</h3>
+                <h2 className="h5 fw-bold text-white mb-0">Generated Meta Tags</h2>
                 <button
                   onClick={copyToClipboard}
                   className="btn btn-sm text-white fw-bold d-inline-flex align-items-center gap-1"
@@ -124,8 +124,8 @@ export default function MetaTagGeneratorPage() {
               </div>
 
               <pre
-                className="p-3 rounded-3 flex-grow-1 overflow-auto"
-                style={{ background: '#020617', color: '#38bdf8', fontSize: '13px', lineHeight: '1.5', border: '1px solid #1e293b' }}
+                className="p-3 rounded-3 grow overflow-auto"
+                style={{ background: '#020617', color: '#38bdf8', fontSize: '13px', lineHeight: '1.5', border: '1px solid #1e293b', flexGrow: 1 }}
               >
                 <code>{generatedTags}</code>
               </pre>

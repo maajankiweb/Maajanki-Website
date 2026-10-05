@@ -785,9 +785,9 @@ const GraphicDesign = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Graphic Design?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Graphic design is the practice of projecting ideas and messages with visual and textual content. It involves logo design, color selection, and typography to build visual assets.
                 </p>
@@ -801,9 +801,9 @@ const GraphicDesign = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why is custom Logo Design important?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Custom logo design is important because it reflects unique business values, establishes visual brand recall, and helps differentiate the brand from competitors.
                 </p>
@@ -817,9 +817,9 @@ const GraphicDesign = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What are scalable vector files?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Vector files (AI, EPS, SVG) use mathematical formulas to scale designs to any size (from business cards to billboards) without losing resolution quality.
                 </p>
@@ -833,9 +833,9 @@ const GraphicDesign = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How do you optimize image data for AI search?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   We optimize image file names and write descriptive alt text to help AI crawlers index visual assets, supporting brand search visibility.
                 </p>

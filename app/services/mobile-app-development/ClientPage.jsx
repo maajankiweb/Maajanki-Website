@@ -1033,9 +1033,9 @@ const MobileAppDevelopment = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Mobile App Development?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Mobile app development is the practice of designing, coding, testing, and deploying mobile software for iOS and Android devices using native (Swift, Kotlin) or cross-platform (Flutter, React Native) technologies.
                 </p>
@@ -1049,9 +1049,9 @@ const MobileAppDevelopment = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why choose Flutter or React Native?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Cross-platform frameworks allow a single codebase to compile into native apps for both iOS and Android, saving up to 40% in development costs while delivering 60fps native performance.
                 </p>
@@ -1065,9 +1065,9 @@ const MobileAppDevelopment = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How do you integrate AI into mobile apps?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   We integrate OpenAI, Gemini, and on-device CoreML/TensorFlow Lite models via secure REST/WebSocket streaming for real-time voice, vision, automated OCR, and intelligent conversational copilots.
                 </p>
@@ -1081,9 +1081,9 @@ const MobileAppDevelopment = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Do you guarantee App Store &amp; Play Store approval?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Yes. We handle 100% of the submission process, certificate signing, screenshots, privacy declarations, and developer policy reviews to ensure smooth approval.
                 </p>

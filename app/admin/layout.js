@@ -92,9 +92,9 @@ export default async function AdminLayout({ children }) {
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
         }}>
           <h1 style={{ fontSize: '42px', marginBottom: '12px' }}>🚫 Access Restricted</h1>
-          <h3 style={{ color: '#f87171', fontSize: '18px', marginBottom: '16px', wordBreak: 'break-all' }}>
+          <h2 style={{ color: '#f87171', fontSize: '18px', marginBottom: '16px', wordBreak: 'break-all' }}>
             Unauthorized Account: {primaryEmail}
-          </h3>
+          </h2>
           <p style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.6', marginBottom: '24px' }}>
             Access to the MaaJanki Web Tech Admin Control Center is strictly restricted to verified administrative email accounts.
           </p>

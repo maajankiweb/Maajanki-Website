@@ -1137,36 +1137,36 @@ const ContentWriting = () => {
 
             <div className="geo-questions-grid">
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Content Writing?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Content writing is the strategic practice of planning, drafting, and editing web copy—such as blogs, articles, and product descriptions—to inform audiences and boost organic search rankings.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why is SEO Copywriting important?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   SEO copywriting integrates targeted keywords into compelling narratives, helping search engines understand your page relevance while persuading visitors to take action.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Google E-E-A-T in content?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. It is Google's quality framework ensuring written content provides reliable facts.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How do you write copy for AI Search Engines (GEO)?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   GEO formats content with direct answers, conversational headings, and structured data, making it effortless for AI tools like ChatGPT to cite your brand.
                 </p>

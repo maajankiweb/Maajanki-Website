@@ -1,8 +1,8 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "eCommerce Product Listing Services India | MaaJanki Web Tech",
-  description: "Professional eCommerce product listing design services, Magento cataloging, Amazon A+ content & multi-marketplace store management across India. Get free sample listings!",
+  title: "eCommerce Product Listing Services India | MaaJanki",
+  description: "Professional eCommerce product listing, cataloging, Amazon A+ content, and multi-marketplace store management across India. Get free sample listings!",
   keywords: [
     "ecommerce product listing design services",
     "magento product listing services",
@@ -16,8 +16,8 @@ export const metadata = {
     "MaaJanki Web Tech eCommerce"
   ],
   openGraph: {
-    title: "eCommerce Product Listing Services India | MaaJanki Web Tech",
-    description: "Professional eCommerce product listing design services, Magento cataloging, and account management for Amazon, Flipkart, Meesho, Shopify, and IndiaMART.",
+    title: "eCommerce Product Listing Services India | MaaJanki",
+    description: "Professional eCommerce product listing, cataloging, Amazon A+ content, and multi-marketplace store management across India. Get free sample listings!",
     url: "https://maajankiwebtech.com/services/products-listing",
     siteName: "MaaJanki Web Tech",
     locale: "en_IN",
@@ -27,13 +27,13 @@ export const metadata = {
         url: "https://maajankiwebtech.com/images/pages/main-services-pages/Products-Listing-banner-Maajanki.webp",
         width: 1200,
         height: 630,
-        alt: "eCommerce Product Listing Services India | MaaJanki Web Tech",
+        alt: "eCommerce Product Listing Services India | MaaJanki",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "eCommerce Product Listing Services India | MaaJanki Web Tech",
+    title: "eCommerce Product Listing Services India | MaaJanki",
     description: "Professional eCommerce product listing design and Magento cataloging services for sellers in India.",
     images: ["https://maajankiwebtech.com/images/pages/main-services-pages/Products-Listing-banner-Maajanki.webp"],
   },

@@ -271,25 +271,25 @@ export default function ClientPage() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
             <div style={{ background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '16px', padding: '24px', textAlign: 'left' }}>
-              <h4 style={{ color: '#FD6A02', fontWeight: '800', marginBottom: '10px' }}>Google Search Ads</h4>
+              <h3 style={{ color: '#FD6A02', fontWeight: '800', marginBottom: '10px', fontSize: '1.15rem' }}>Google Search Ads</h3>
               <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
                 Keyword-scented headline matching, 10/10 quality score architecture, and fast-loading direct quote forms that capture commercial search intent.
               </p>
             </div>
             <div style={{ background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '16px', padding: '24px', textAlign: 'left' }}>
-              <h4 style={{ color: '#FD6A02', fontWeight: '800', marginBottom: '10px' }}>Meta &amp; Instagram Ads</h4>
+              <h3 style={{ color: '#FD6A02', fontWeight: '800', marginBottom: '10px', fontSize: '1.15rem' }}>Meta &amp; Instagram Ads</h3>
               <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
                 Visual continuity matching feed video/image creatives, mobile-first thumb-friendly interactions, and direct WhatsApp lead triggers.
               </p>
             </div>
             <div style={{ background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '16px', padding: '24px', textAlign: 'left' }}>
-              <h4 style={{ color: '#FD6A02', fontWeight: '800', marginBottom: '10px' }}>LinkedIn B2B Ads</h4>
+              <h3 style={{ color: '#FD6A02', fontWeight: '800', marginBottom: '10px', fontSize: '1.15rem' }}>LinkedIn B2B Ads</h3>
               <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
                 Authoritative executive summaries, verified enterprise case studies, and Calendly / CRM booking widgets for B2B decision-makers.
               </p>
             </div>
             <div style={{ background: 'rgba(255, 255, 255, 0.04)', border: '1px solid rgba(255, 255, 255, 0.12)', borderRadius: '16px', padding: '24px', textAlign: 'left' }}>
-              <h4 style={{ color: '#FD6A02', fontWeight: '800', marginBottom: '10px' }}>YouTube Ad Funnels</h4>
+              <h3 style={{ color: '#FD6A02', fontWeight: '800', marginBottom: '10px', fontSize: '1.15rem' }}>YouTube Ad Funnels</h3>
               <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6', margin: 0 }}>
                 Video Sales Letter (VSL) embeds with delayed CTA reveals, social proof popups, and micro-conversion quiz funnels.
               </p>

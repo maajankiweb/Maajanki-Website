@@ -93,14 +93,14 @@ export default function WebPConverterPage() {
               className="d-none"
             />
             <FaUpload className="text-4xl mb-3" style={{ color: '#FD6A02' }} />
-            <h3 className="h5 fw-bold text-white">Click or drag images here to convert</h3>
+            <h2 className="h5 fw-bold text-white">Click or drag images here to convert</h2>
             <p className="text-muted small mb-0">Supports PNG, JPG, JPEG — instant WebP output</p>
           </div>
 
           {/* Converted Files List */}
           {convertedImages.length > 0 && (
             <div className="p-4 rounded-4" style={{ background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <h4 className="h6 fw-bold text-white mb-3">Converted WebP Images ({convertedImages.length})</h4>
+              <h2 className="h6 fw-bold text-white mb-3">Converted WebP Images ({convertedImages.length})</h2>
 
               <div className="d-flex flex-column gap-3">
                 {convertedImages.map((img) => {

@@ -418,9 +418,9 @@ Provide comprehensive, high-quality, actionable solutions and strategic recommen
                   </div>
 
                   {/* Title & Description */}
-                  <h3 style={{ fontSize: '15px', fontWeight: '700', margin: '0 0 6px 0', color: 'var(--color-text)' }}>
+                  <h2 style={{ fontSize: '15px', fontWeight: '700', margin: '0 0 6px 0', color: 'var(--color-text)' }}>
                     {agent.name}
-                  </h3>
+                  </h2>
                   <p style={{ fontSize: '12px', color: 'var(--color-text-secondary)', lineHeight: '1.5', margin: '0 0 12px 0' }}>
                     {agent.description}
                   </p>

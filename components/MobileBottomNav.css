@@ -1,0 +1,588 @@
+/* ==========================================================================
+   MAAJANKI WEB TECH - MODERN MOBILE APP BOTTOM NAVIGATION SYSTEM
+   - Mobile-First Native App Experience
+   - Fixed Bottom Nav with Active Indicator & Glassmorphism
+   - Smooth Slide-Up Offcanvas Menu Drawer
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------- */
+/* 1. DESKTOP DEFAULT: Hidden on Screens >= 992px                             */
+/* -------------------------------------------------------------------------- */
+.mobile-bottom-nav,
+.mobile-drawer-overlay,
+.mobile-drawer-sheet {
+  display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/* 2. TABLETS & PHONES (<= 991px): Show App Navigation                        */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  /* Prevent page bottom content from being obstructed by the fixed bottom bar */
+  body {
+    padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* Elevate floating Chatbot above mobile bottom nav */
+  #chatbot-toggler {
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 16px !important;
+    width: 46px !important;
+    height: 46px !important;
+    z-index: 1040 !important;
+  }
+
+  /* Stacking Floating Action Buttons (Call & WhatsApp) above Chatbot with clear gap */
+  .floating-buttons {
+    bottom: calc(134px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 16px !important;
+    left: auto !important;
+    z-index: 1040 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .floating-buttons .float-btn {
+    width: 46px !important;
+    height: 46px !important;
+    font-size: 19px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45) !important;
+  }
+
+  /* Move scroll-to-top to bottom-left on mobile to prevent overlapping */
+  .scroll-top {
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    left: 16px !important;
+    right: auto !important;
+    width: 44px !important;
+    height: 44px !important;
+    z-index: 1040 !important;
+  }
+
+  .chatbot-popup {
+    bottom: calc(134px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 16px !important;
+    width: calc(100vw - 32px) !important;
+    max-width: 380px !important;
+    z-index: 1060 !important;
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /* FIXED BOTTOM NAVIGATION BAR                                              */
+  /* ------------------------------------------------------------------------ */
+  .mobile-bottom-nav {
+    display: flex !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(64px + env(safe-area-inset-bottom, 0px));
+    padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
+    background: rgba(3, 19, 36, 0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(253, 106, 2, 0.25);
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.55), 0 -1px 0 rgba(255, 255, 255, 0.05);
+    z-index: 1050;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Bottom Nav Tab */
+  .mobile-nav-tab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    color: #8fa3b8;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 4px 2px;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.22s cubic-bezier(0.2, 0, 0, 1);
+    -webkit-tap-highlight-color: transparent;
+    max-width: 80px;
+    height: 100%;
+  }
+
+  .mobile-nav-tab:active {
+    transform: scale(0.92);
+  }
+
+  /* Tab Icon Container */
+  .mobile-nav-icon {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.22s ease, color 0.22s ease;
+    color: inherit;
+  }
+
+  .mobile-nav-icon svg {
+    display: block;
+    transition: all 0.22s ease;
+  }
+
+  /* Tab Label */
+  .mobile-nav-label {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 3px;
+    letter-spacing: 0.2px;
+    font-family: var(--font-outfit), 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: inherit;
+    transition: color 0.22s ease, font-weight 0.22s ease;
+  }
+
+  /* Active Tab State */
+  .mobile-nav-tab.active {
+    color: #FD6A02;
+  }
+
+  .mobile-nav-tab.active .mobile-nav-icon {
+    transform: translateY(-2px);
+  }
+
+  .mobile-nav-tab.active .mobile-nav-label {
+    color: #FD6A02;
+    font-weight: 700;
+  }
+
+  /* Glowing Top Notch on Active Tab */
+  .mobile-nav-tab.active::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 3px;
+    background: #FD6A02;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 10px rgba(253, 106, 2, 0.9), 0 0 16px rgba(253, 106, 2, 0.5);
+    animation: tabNotchGlow 0.3s ease-out;
+  }
+
+  @keyframes tabNotchGlow {
+    from {
+      opacity: 0;
+      width: 0;
+    }
+    to {
+      opacity: 1;
+      width: 22px;
+    }
+  }
+
+  /* ------------------------------------------------------------------------ */
+  /* SLIDE-UP APP DRAWER (SHEET)                                              */
+  /* ------------------------------------------------------------------------ */
+  .mobile-drawer-overlay {
+    display: block !important;
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 10, 20, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1060;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .mobile-drawer-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .mobile-drawer-sheet {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 86vh;
+    background: linear-gradient(180deg, #041f38 0%, #031424 100%);
+    border-top: 2px solid #FD6A02;
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.75);
+    z-index: 1070;
+    transform: translateY(105%);
+    transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+    overflow: hidden;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-drawer-sheet.open {
+    transform: translateY(0);
+  }
+
+  /* Drawer Drag Handle Pill */
+  .drawer-handle-bar {
+    width: 44px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 4px;
+    margin: 12px auto 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, width 0.2s ease;
+  }
+
+  .drawer-handle-bar:hover {
+    background: #FD6A02;
+    width: 52px;
+  }
+
+  /* Drawer Header */
+  .drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .drawer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .drawer-badge {
+    font-size: 11px;
+    font-weight: 700;
+    color: #FD6A02;
+    background: rgba(253, 106, 2, 0.12);
+    border: 1px solid rgba(253, 106, 2, 0.3);
+    border-radius: 12px;
+    padding: 3px 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .drawer-close-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e2e8f0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .drawer-close-btn:hover,
+  .drawer-close-btn:active {
+    background: #FD6A02;
+    color: #ffffff;
+    border-color: #FD6A02;
+    transform: rotate(90deg);
+  }
+
+  /* Quick CTAs Row */
+  .drawer-quick-ctas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 14px 20px 12px;
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .drawer-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 8px;
+    border-radius: 12px;
+    font-size: 12.5px;
+    font-weight: 700;
+    text-decoration: none !important;
+    text-align: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .drawer-cta-btn:active {
+    transform: scale(0.96);
+  }
+
+  .cta-call {
+    background: rgba(37, 99, 235, 0.18);
+    color: #60a5fa !important;
+    border: 1px solid rgba(59, 130, 246, 0.35);
+  }
+
+  .cta-whatsapp {
+    background: rgba(34, 197, 94, 0.18);
+    color: #4ade80 !important;
+    border: 1px solid rgba(34, 197, 94, 0.35);
+  }
+
+  .cta-quote {
+    background: linear-gradient(135deg, #FD6A02 0%, #ff832b 100%);
+    color: #ffffff !important;
+    border: 1px solid #FD6A02;
+  }
+
+  /* Scrollable Content Container */
+  .drawer-content-scroll {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(253, 106, 2, 0.4) transparent;
+  }
+
+  .drawer-content-scroll::-webkit-scrollbar {
+    width: 4px;
+  }
+  .drawer-content-scroll::-webkit-scrollbar-thumb {
+    background: rgba(253, 106, 2, 0.4);
+    border-radius: 4px;
+  }
+
+  /* Drawer Group Section */
+  .drawer-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .drawer-group-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #cbd5e1;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .drawer-group-title .group-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #FD6A02;
+    box-shadow: 0 0 6px #FD6A02;
+  }
+
+  .drawer-group-title .group-view-all {
+    margin-left: auto;
+    font-size: 11px;
+    color: #FD6A02;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: none;
+  }
+
+  /* 2-Column Product & Portfolio Cards */
+  .drawer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .drawer-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+    transition: all 0.22s ease;
+  }
+
+  .drawer-card:active {
+    background: rgba(253, 106, 2, 0.12);
+    border-color: #FD6A02;
+    transform: scale(0.97);
+  }
+
+  .drawer-card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+  }
+
+  .drawer-card-info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .drawer-card-info strong {
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .drawer-card-info small {
+    font-size: 10.5px;
+    color: #94a3b8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Service / Resource List */
+  .drawer-links-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .drawer-link-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    color: #e2e8f0 !important;
+    text-decoration: none !important;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+
+  .drawer-link-item i {
+    color: #FD6A02;
+    font-size: 13px;
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .drawer-link-item span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .drawer-link-item:active {
+    background: rgba(253, 106, 2, 0.15);
+    color: #FD6A02 !important;
+    border-color: rgba(253, 106, 2, 0.4);
+    transform: scale(0.97);
+  }
+
+  /* Drawer Footer */
+  .drawer-footer {
+    padding: 12px 20px 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: rgba(2, 10, 20, 0.4);
+  }
+
+  .drawer-socials {
+    display: flex;
+    gap: 14px;
+  }
+
+  .drawer-socials a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cbd5e1;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .drawer-socials a:hover,
+  .drawer-socials a:active {
+    background: #FD6A02;
+    color: #ffffff;
+    border-color: #FD6A02;
+    transform: translateY(-2px);
+  }
+
+  .drawer-copy {
+    font-size: 10.5px;
+    color: #64748b;
+    margin: 0;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Small Phones adjustments (<= 480px)                                        */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .mobile-bottom-nav {
+    height: calc(60px + env(safe-area-inset-bottom, 0px));
+    padding: 4px 4px calc(4px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-nav-label {
+    font-size: 10px;
+    margin-top: 2px;
+  }
+
+  .drawer-grid,
+  .drawer-links-list {
+    grid-template-columns: 1fr;
+  }
+
+  .drawer-quick-ctas {
+    gap: 8px;
+    padding: 10px 14px 10px;
+  }
+
+  .drawer-cta-btn {
+    font-size: 11.5px;
+    padding: 8px 4px;
+    gap: 6px;
+  }
+}

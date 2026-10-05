@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FooterWithPopup from '@/components/FooterWithPopup';
 import Footer from '@/components/Footer';
+import MobileBottomNav from '@/components/MobileBottomNav';
 
 const PromoPopup = dynamic(() => import('@/components/PromoPopup'), { ssr: false });
 const ChatbotLoader = dynamic(() => import('@/components/Chatbot/ChatbotLoader'), { ssr: false });
@@ -34,6 +35,7 @@ export default function LayoutContent({ children }) {
       </main>
       <FooterWithPopup />
       <Footer />
+      <MobileBottomNav />
     </>
   );
 }

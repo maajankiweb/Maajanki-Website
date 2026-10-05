@@ -1182,9 +1182,9 @@ const WebDevelopment = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Website Development?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Website development is the practice of coding, scripting, and configuring web apps using frontend (React, Next.js) and backend (Node, PHP, MySQL) frameworks to create reliable digital platforms.
                 </p>
@@ -1198,9 +1198,9 @@ const WebDevelopment = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why is Custom Web Development important?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Custom development removes redundant bloat, boosts loading speeds, secures transactions, and scales custom database logic seamlessly for business growth.
                 </p>
@@ -1214,9 +1214,9 @@ const WebDevelopment = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "700", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "700", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How does MaaJanki Web Tech build websites?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   We follow a 6-step process: Consultation, Wireframing, Custom UI/UX Design, Clean Coding, SEO Tuning, and SSL Hosting Deployment.
                 </p>
@@ -1230,9 +1230,9 @@ const WebDevelopment = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Who needs custom web development?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Startups, enterprises, eCommerce portals, and SaaS brands needing high performance, fast search indexing, and custom backend APIs need professional web development.
                 </p>

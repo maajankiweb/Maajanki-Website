@@ -96,7 +96,8 @@
   font-weight: 600;
 }
 
-.summary-text-card h3 {
+.summary-text-card h3,
+.summary-text-card h2 {
   font-size: 22px;
   font-weight: 700;
   font-family: "Outfit", sans-serif;
@@ -190,7 +191,8 @@
 
 }
 
-.review-author-details h4 {
+.review-author-details h4,
+.review-author-details h3 {
   font-size: 16px;
   font-weight: 700;
   color: #042442 !important;
@@ -216,7 +218,8 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
-.reviews-cta-block h3 {
+.reviews-cta-block h3,
+.reviews-cta-block h2 {
   font-size: 28px;
   font-weight: 800;
   font-family: "Outfit", sans-serif;

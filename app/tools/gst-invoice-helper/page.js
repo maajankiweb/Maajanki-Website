@@ -41,7 +41,7 @@ export default function GSTInvoiceHelperPage() {
         <div className="row g-4 justify-content-center">
           <div className="col-lg-5">
             <div className="p-4 rounded-4" style={{ background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <h3 className="h5 fw-bold text-white mb-3">Invoice Input</h3>
+              <h2 className="h5 fw-bold text-white mb-3">Invoice Input</h2>
 
               <div className="mb-3">
                 <label className="form-label text-light small fw-bold">Taxable Base Amount (₹)</label>
@@ -98,7 +98,7 @@ export default function GSTInvoiceHelperPage() {
 
           <div className="col-lg-5">
             <div className="p-4 rounded-4" style={{ background: 'rgba(15, 23, 42, 0.8)', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <h3 className="h5 fw-bold text-white mb-3">Tax Summary Slip</h3>
+              <h2 className="h5 fw-bold text-white mb-3">Tax Summary Slip</h2>
 
               <div className="p-3 rounded-3 mb-3" style={{ background: '#020617', border: '1px solid #1e293b' }}>
                 <div className="d-flex justify-content-between py-2 border-bottom border-secondary">

@@ -1207,7 +1207,8 @@
   background: rgba(253, 106, 2, 0.05);
 }
 
-.ot-modal-expertise-box h4 {
+.ot-modal-expertise-box h4,
+.ot-modal-expertise-box h3 {
   font-family: var(--font-outfit, 'Outfit', sans-serif);
   font-size: 0.8rem;
   font-weight: 800;

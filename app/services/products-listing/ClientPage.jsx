@@ -916,7 +916,7 @@ const ProductsListing = () => {
                 { q: "How does GEO help product listings?", a: "GEO formats your product copy so AI shopping assistants like Google Gemini and ChatGPT can understand, cite, and recommend your products to shoppers searching online." },
               ].map((item, idx) => (
                 <div key={idx} style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.3)", padding: "28px", borderRadius: "18px" }}>
-                  <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>{item.q}</h4>
+                  <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>{item.q}</h3>
                   <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>{item.a}</p>
                 </div>
               ))}

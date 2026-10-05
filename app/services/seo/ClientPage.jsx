@@ -1070,54 +1070,54 @@ const SEO = () => {
 
             <div className="geo-questions-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "24px" }}>
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is AI Engine Optimization (AEO)?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   AEO is the practice of optimizing content to be selected as the direct, zero-click answer by AI systems, voice assistants (Siri, Alexa, Google Assistant), and conversational bots like ChatGPT and Microsoft Copilot.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Generative Engine Optimization (GEO)?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   GEO structures your digital presence through machine-readable manifest files (/llms.txt), entity authority, and high-density factual copy so AI synthesis engines (Google AI Overviews, Perplexity) cite your brand as a source.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How does Local SEO dominate 'Near Me' searches?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Local SEO pairs Google Business Profile optimization with 100% NAP citation consistency and LocalBusiness Schema markup, allowing local stores and B2B providers in Bihar and India to capture the top 3 Google Maps positions.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How do Google AI Overviews decide which sites to cite?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Google AI Overviews prioritize pages that display strong E-E-A-T signals, direct factual answers in the opening 100 words, Schema.org verification, and validated entity connections in the Google Knowledge Graph.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is the difference between SEO, AEO, and GEO?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   SEO targets traditional 10-blue-link search rankings; AEO targets immediate conversational and voice answers; GEO targets citations and source attributions within AI-generated multi-paragraph syntheses.
                 </p>
               </div>
 
               <div style={{ background: "#042544", border: "1px solid rgba(253, 106, 2, 0.35)", padding: "28px", borderRadius: "18px" }}>
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why is Schema.org structured data critical for modern SEO?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Structured data provides search crawlers and LLMs with explicit context about your business type, services, pricing, FAQs, and geographical coordinates without requiring ambiguous page text parsing.
                 </p>

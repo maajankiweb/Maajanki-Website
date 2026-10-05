@@ -605,7 +605,7 @@ export default function OurTeamClient() {
 
               {activeMember.coreExpertise && activeMember.coreExpertise.length > 0 && (
                 <div className="ot-modal-expertise-box">
-                  <h4>Core Expertise</h4>
+                  <h3>Core Expertise</h3>
                   <ul className="ot-modal-expertise-list">
                     {activeMember.coreExpertise.map((item, index) => (
                       <li key={index}>{item}</li>

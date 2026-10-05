@@ -4,10 +4,10 @@ import Link from 'next/link';
 import '../../styles/Products.css';
 
 export const metadata = {
-  title: "InvoBill – Hybrid GST Billing & Invoicing SaaS | MaaJanki Web Tech",
-  description: "InvoBill is a hybrid billing & invoicing SaaS platform for Indian enterprises & MSMEs. Generate 100% GST-compliant invoices in under 60 seconds online or offline.",
+  title: "InvoBill – Hybrid GST Billing SaaS | MaaJanki",
+  description: "InvoBill is a hybrid GST billing & invoicing SaaS for Indian MSMEs. Generate 100% GST-compliant invoices in under 60 seconds online or offline.",
   openGraph: {
-    title: "InvoBill – Hybrid GST Billing & Invoicing SaaS",
+    title: "InvoBill – Hybrid GST Billing SaaS | MaaJanki",
     description: "Tax-compliant GST invoicing, offline desktop app, e-Way bills, and multi-currency billing.",
     url: "https://maajankiwebtech.com/products/invobill",
     images: [{ url: "https://maajankiwebtech.com/images/products/invobill.webp" }],

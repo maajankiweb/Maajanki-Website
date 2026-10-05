@@ -3,7 +3,7 @@ import { blogPosts } from '@/app/blog/data';
 
 export const metadata = {
   title: "HTML Sitemap | MaaJanki Web Tech Directory",
-  description: "Browse the complete site architecture and directory of MaaJanki Web Tech — including all web development services, SEO solutions, SaaS products, free tools, blog guides, and regional locations.",
+  description: "Browse the complete site architecture and directory of MaaJanki Web Tech — web development, SEO services, SaaS products, free tools, and location hubs.",
   alternates: {
     canonical: "https://maajankiwebtech.com/sitemap",
   },

@@ -8,7 +8,89 @@ import '@/app/styles/Portfolio.css';
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState("All");
-  const [liveProjects, setLiveProjects] = useState([]);
+  const [liveProjects, setLiveProjects] = useState([
+    {
+      title: "Apex Tutorial Bettiah",
+      category: "Education",
+      featured: true,
+      description: "Premier Bihar Board (BSEB) 11th & 12th Science coaching portal in Bettiah with Smart Board classrooms and course programs.",
+      image: "/images/project/Apex Tutorial Full Page.jpg",
+      altText: "Apex Tutorial Bettiah Science Coaching Website – MaaJanki Web Tech",
+      link: "https://apex-tutorial-gray.vercel.app/",
+    },
+    {
+      title: "InvoBill – Free GST Billing",
+      category: "SaaS / Application",
+      featured: true,
+      description: "Instant 100% free GST billing & invoice generator for Indian small businesses with auto CGST/SGST/IGST calculations and PDF export.",
+      image: "/images/project/Invobill Full Page.jpg",
+      altText: "InvoBill Free GST Invoice Generator Web App – MaaJanki Web Tech",
+      link: "https://invobill.in/",
+    },
+    {
+      title: "MaaJanki Digital Blog",
+      category: "Technology / AI",
+      featured: true,
+      description: "Practical insights on SEO strategies, web development frameworks, digital marketing automation, and business growth.",
+      image: "/images/project/Maajanki Blog Full Page.jpg",
+      altText: "MaaJanki Web Tech Tech & Digital Growth Blog",
+      link: "https://blog.maajankiwebtech.com/",
+    },
+    {
+      title: "Style Beauty Studio",
+      category: "Web Design",
+      featured: true,
+      description: "Luxury bridal makeup and beauty salon website showcasing bridal packages, hair styling gallery, and online appointments.",
+      image: "/images/project/Beauty Studio Full Page.jpg",
+      altText: "Style Beauty Studio Luxury Bridal Makeup Website",
+      link: "https://style-beauty-studio.vercel.app/",
+    },
+    {
+      title: "Shivam Kumar Portfolio",
+      category: "Web Development",
+      featured: true,
+      description: "Personal portfolio for an MBA student and HR Specialist featuring recruitment services, education roadmap, and skills timeline.",
+      image: "/images/project/Shivam Full Page.jpg",
+      altText: "Shivam Kumar HR Specialist & MBA Portfolio Website",
+      link: "https://shivam-kumar-portfolio-snowy.vercel.app/",
+    },
+    {
+      title: "HareRam Ray Portfolio",
+      category: "Web Development",
+      featured: true,
+      description: "Professional portfolio for an MBA candidate specializing in HR & Marketing, featuring AI recruitment research & leadership.",
+      image: "/images/project/Hareram Full Page.jpg",
+      altText: "HareRam Ray MBA HR Portfolio Website",
+      link: "https://hareram-ray-portfolio.vercel.app/",
+    },
+    {
+      title: "Avnish Kumar Portfolio",
+      category: "Web Development",
+      featured: true,
+      description: "Portfolio for an MBA candidate specializing in Business Analytics & Finance, highlighting MS Excel & R data modeling.",
+      image: "/images/project/Avnish Full Page.jpg",
+      altText: "Avnish Kumar Ray Business Analytics Portfolio",
+      link: "https://avnish-kumar-portfolio.vercel.app/",
+    },
+    {
+      title: "Saurav Kumar Portfolio",
+      category: "Web Development",
+      featured: true,
+      description: "Modern portfolio for an MBA student in Finance & Marketing, featuring retail operations experience and financial analysis.",
+      image: "/images/project/Saurav Full page.jpg",
+      altText: "Saurav Kumar Finance & Marketing Portfolio",
+      link: "https://saurav-kumar-portfolio-eight.vercel.app/",
+    },
+    {
+      title: "S Yasmin Fitness Coaching",
+      category: "Web Design",
+      featured: true,
+      description: "Dynamic health and fitness coaching website featuring custom workout programs, transformation plans, and client booking.",
+      image: "/images/project/Fitnesh Full Page.jpg",
+      altText: "S Yasmin Fitness Coaching Platform",
+      link: "https://fitness-coach-three-lemon.vercel.app/",
+    },
+  ]);
 
   React.useEffect(() => {
     fetch('/api/portfolio')

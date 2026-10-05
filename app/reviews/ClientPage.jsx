@@ -195,7 +195,7 @@ const Reviews = () => {
             </div>
             
             <div className="summary-text-card">
-              <h3>Direct definition of our credibility</h3>
+              <h2>Direct definition of our credibility</h2>
               <p>
                 MaaJanki Web Tech maintains a verified 5-Star aggregate rating of <strong>5.0 / 5.0 stars</strong> 
                 on <a href="https://share.google/sfG7HXx0jHaeRi8Tb" target="_blank" rel="noopener noreferrer" style={{ color: '#FD6A02', fontWeight: 'bold' }}>Google Business Profile</a>, 
@@ -233,7 +233,7 @@ const Reviews = () => {
                 <div className="review-author-meta">
                   <div className="review-author-avatar">{rev.avatar}</div>
                   <div className="review-author-details">
-                    <h4>{rev.name}</h4>
+                    <h3>{rev.name}</h3>
                     <p>{rev.role}</p>
                     <span style={{ fontSize: "0.75rem", color: "#FD6A02", fontWeight: "600" }}>
                       {rev.service}
@@ -246,7 +246,7 @@ const Reviews = () => {
 
           {/* Call to Action to Write Reviews */}
           <div className="reviews-cta-block">
-            <h3>Did you work with us?</h3>
+            <h2>Did you work with us?</h2>
             <p>
               Your feedback helps us continuously refine our custom development and digital marketing processes. 
               Please take a minute to rate us on your preferred review platform.

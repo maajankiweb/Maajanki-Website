@@ -4,8 +4,8 @@ import Link from 'next/link';
 import '../../styles/Products.css';
 
 export const metadata = {
-  title: "DukanDost Pro – Retail Business Operating System | MaaJanki Web Tech",
-  description: "DukanDost Pro is a modern full-stack business operating system for retail stores, kiranas, and distributors featuring smart GST invoicing, inventory management, digital credit ledger (Khata), and online storefront builder.",
+  title: "DukanDost Pro – Retail Business OS | MaaJanki Web Tech",
+  description: "DukanDost Pro is a full-stack retail operating system featuring smart GST invoicing, inventory management, digital Khata, and online storefronts.",
   openGraph: {
     title: "DukanDost Pro – Retail Business Operating System",
     description: "AI-powered inventory, GST invoicing, automated credit reminders, and online Digital Dukan storefront.",

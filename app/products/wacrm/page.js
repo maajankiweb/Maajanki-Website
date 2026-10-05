@@ -4,11 +4,11 @@ import Link from 'next/link';
 import '../../styles/Products.css';
 
 export const metadata = {
-  title: "WaCRM – Self-Hostable WhatsApp® Business API CRM | MaaJanki Web Tech",
-  description: "WaCRM is a self-hostable WhatsApp® Business API CRM empowering sales & support teams with a multi-agent shared inbox, automated tag segmentation, sales Kanban pipelines, and no-code AI chatbot router.",
+  title: "WaCRM – WhatsApp Business API CRM | MaaJanki Web Tech",
+  description: "WaCRM is a self-hostable WhatsApp Business API CRM with a multi-agent shared inbox, sales Kanban pipelines, and automated AI chatbot routing.",
   openGraph: {
-    title: "WaCRM – Self-Hostable WhatsApp® Business API CRM",
-    description: "Self-hostable WhatsApp® Business API CRM with multi-agent team inbox, sales Kanban, and AI chatbot router.",
+    title: "WaCRM – WhatsApp Business API CRM",
+    description: "Self-hostable WhatsApp Business API CRM with multi-agent team inbox, sales Kanban, and AI chatbot router.",
     url: "https://maajankiwebtech.com/products/wacrm",
     images: [{ url: "https://maajankiwebtech.com/images/products/wacrm.webp" }],
   },

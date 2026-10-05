@@ -152,7 +152,8 @@
   border-radius: 4px;
 }
 
-.policy-sidebar h4 {
+.policy-sidebar h4,
+.policy-sidebar .policy-sidebar-title {
   font-family: var(--font-outfit), sans-serif;
   font-size: 1.05rem;
   font-weight: 700;
@@ -165,7 +166,8 @@
   border-bottom: 2px solid #f1f5f9;
 }
 
-.policy-sidebar h4 svg {
+.policy-sidebar h4 svg,
+.policy-sidebar .policy-sidebar-title svg {
   color: #FD6A02;
 }
 

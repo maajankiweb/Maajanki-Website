@@ -169,7 +169,7 @@ export default function BlogIndexPage() {
                   </Link>
                 </h3>
 
-                <p className="text-secondary mb-4 flex-grow-1" style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.6' }}>
+                <p className="text-secondary mb-4 grow" style={{ color: '#94a3b8', fontSize: '14px', lineHeight: '1.6', flexGrow: 1 }}>
                   {post.excerpt}
                 </p>
 

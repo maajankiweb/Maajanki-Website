@@ -151,15 +151,23 @@ const Navbar = () => {
         </div>
 
         <div className="nav-right">
-          {/* Mobile Menu Toggle */}
+          {/* Quick CTA on Mobile Top Bar */}
+          <Link href="/contact" className="mobile-top-cta" onClick={handleLinkClick}>
+            Free Audit
+          </Link>
+
+          {/* Mobile Menu Toggle - Triggers Mobile App Drawer */}
           <button
             type="button"
             className="menu-toggle"
             aria-label="Toggle navigation menu"
-            aria-expanded={isMenuOpen}
-            onClick={() => setMenuOpen(!isMenuOpen)}
+            onClick={() => {
+              if (typeof window !== "undefined") {
+                window.dispatchEvent(new CustomEvent("toggle-mobile-drawer"));
+              }
+            }}
           >
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
+            <FaBars />
           </button>
 
           <ul className={`nav-links ${isMenuOpen ? "show" : ""}`}>

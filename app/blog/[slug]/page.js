@@ -204,7 +204,7 @@ export default async function BlogPostPage({ params }) {
               className="p-4 rounded-3 my-4"
               style={{ background: 'rgba(253, 106, 2, 0.08)', borderLeft: '4px solid #FD6A02' }}
             >
-              <h4 className="h6 fw-bold mb-2" style={{ color: '#FD6A02' }}>Pro Architecture Tip from MaaJanki Web Tech:</h4>
+              <p className="h6 fw-bold mb-2" style={{ color: '#FD6A02' }}>Pro Architecture Tip from MaaJanki Web Tech:</p>
               <p className="mb-0" style={{ fontSize: '15px' }}>
                 Always inject complete Schema.org JSON-LD structured data (Organization, LocalBusiness, FAQPage, BreadcrumbList) directly into server-rendered markup so crawler bots and AI search models can verify your entities without executing expensive client-side scripts.
               </p>

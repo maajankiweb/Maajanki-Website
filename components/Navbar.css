@@ -402,35 +402,51 @@
   }
 }
 
-/* Tablets & Mobile (991px and down): Mobile Dropdown Drawer */
+.mobile-top-cta {
+  display: none;
+}
+
+/* Tablets & Mobile (991px and down): Clean App Header (Logo only) */
 @media (max-width: 991px) {
+  /* Hide orange top bar on mobile - only top logo is shown */
+  .top-bar {
+    display: none !important;
+  }
+
+  .main-nav {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 10px 16px !important;
+  }
+
+  .logo {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    margin: 0 !important;
+  }
+
+  .logo img {
+    margin: 0 !important;
+  }
+
+  /* Hide Free Audit button, hamburger toggle, and desktop links in top navbar */
+  .nav-right {
+    display: none !important;
+  }
+
+  .mobile-top-cta {
+    display: none !important;
+  }
+
   .menu-toggle {
-    display: flex;
+    display: none !important;
   }
 
+  /* All mobile navigation is handled by the dedicated mobile bottom nav & app drawer */
   .nav-right .nav-links {
-    flex-direction: column;
-    width: 100%;
-    display: none;
-    background: rgba(4, 37, 68, 0.98);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    padding: 16px 0 24px 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 998;
-    border-bottom: 3px solid #fd6a02;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-    max-height: calc(100vh - var(--navbar-height, 75px));
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .nav-right .nav-links.show {
-    display: flex;
-    animation: mobileNavSlide 0.3s ease forwards;
+    display: none !important;
   }
 
   @keyframes mobileNavSlide {
@@ -510,19 +526,10 @@
   }
 }
 
-/* Phones (767px and down): Single line top bar */
+/* Phones (767px and down): Clean App Header */
 @media (max-width: 767px) {
   .top-bar {
-    padding: 6px 12px;
-    font-size: 12px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .top-bar::-webkit-scrollbar {
-    display: none;
+    display: none !important;
   }
 
   .contact-info {
@@ -566,25 +573,25 @@
 /* Small phones (480px and down) */
 @media (max-width: 480px) {
   .top-bar {
-    padding: 6px 10px;
-    font-size: 11px;
-  }
-
-  .contact-link {
-    font-size: 11px;
-    padding: 1px 2px;
-  }
-
-  .contact-info .divider {
-    margin: 0 2px;
-    font-size: 11px;
+    display: none !important;
   }
 
   .main-nav {
-    padding: 10px 12px;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: 10px 14px !important;
+  }
+
+  .logo {
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    margin: 0 !important;
   }
 
   .logo img {
+    margin: 0 !important;
     width: 160px;
     height: 32px;
   }

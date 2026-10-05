@@ -922,9 +922,9 @@ const Branding = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is Branding?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Branding is the practice of designing a distinct brand identity, visual style, and tagline to differentiate a business from competitors, establishing visual recognition and customer trust.
                 </p>
@@ -938,9 +938,9 @@ const Branding = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   Why does a company need a logo design?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   A custom logo acts as the primary visual mark for a business. It creates instant brand recall across website platforms, social media headers, and offline packaging.
                 </p>
@@ -954,9 +954,9 @@ const Branding = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "700", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "700", fontSize: "1.15rem", marginBottom: "12px" }}>
                   What is included in a Brand Guidelines Manual?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   A brand guide outlines rules for logo usage, primary &amp; secondary color palettes, font choices, typography scales, and imagery styles to maintain visual consistency.
                 </p>
@@ -970,9 +970,9 @@ const Branding = () => {
                   borderRadius: "18px",
                 }}
               >
-                <h4 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
+                <h3 style={{ color: "#FD6A02", fontWeight: "800", fontSize: "1.15rem", marginBottom: "12px" }}>
                   How does branding help with AI search visibility (GEO)?
-                </h4>
+                </h3>
                 <p style={{ color: "#e2e8f0", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
                   Consistent brand naming, verified entity details, and structured schema data allow generative AI tools like ChatGPT and Gemini to verify and cite your business as an industry authority.
                 </p>

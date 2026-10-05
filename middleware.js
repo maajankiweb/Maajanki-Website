@@ -26,6 +26,14 @@ export default clerkMiddleware(async (auth, req) => {
     return blockedRes;
   }
 
+  // 0.0 Enforce canonical apex domain: 301 redirect www to non-www
+  const hostname = req.headers.get('host') || '';
+  if (hostname.startsWith('www.')) {
+    const nonWwwHost = hostname.replace(/^www\./, '');
+    const cleanUrl = new URL(pathname + req.nextUrl.search, `https://${nonWwwHost}`);
+    return NextResponse.redirect(cleanUrl, 301);
+  }
+
   // 0.1 Clean legacy spam scraping query params (e.g. ?shopdetail/...) to canonical clean URLs
   if (req.nextUrl.search && req.nextUrl.search.includes('shopdetail')) {
     const cleanUrl = new URL(pathname, req.url);

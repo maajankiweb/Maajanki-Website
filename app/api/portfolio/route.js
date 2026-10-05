@@ -124,7 +124,12 @@ export async function GET() {
     const projects = await Portfolio.find({}).sort({ order: 1, createdAt: -1 }).lean();
     return NextResponse.json({ success: true, count: projects.length, projects });
   } catch (error) {
-    console.error('API /api/portfolio GET Error:', error);
-    return NextResponse.json({ success: false, projects: [], error: error.message }, { status: 500 });
+    console.error('API /api/portfolio GET Error (falling back to INITIAL_PROJECTS):', error.message || error);
+    return NextResponse.json({
+      success: true,
+      count: INITIAL_PROJECTS.length,
+      projects: INITIAL_PROJECTS,
+      fallback: true
+    });
   }
 }

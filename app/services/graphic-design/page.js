@@ -1,7 +1,7 @@
 import ClientPage from './ClientPage';
 
 export const metadata = {
-  title: "Graphic Design & Social Media Creatives Agency in India & Global | MaaJanki Web Tech",
+  title: "Graphic Design & Creatives Agency in India | MaaJanki",
   description: "Professional graphic design, marketing creatives, social media post designs, and branding assets in India, serving enterprises across USA, UK, and UAE.",
   keywords: [
     "graphic design agency India",
@@ -12,7 +12,7 @@ export const metadata = {
     "MaaJanki Web Tech graphics"
   ],
   openGraph: {
-    title: "Graphic Design & Social Media Creatives Agency in India & Global | MaaJanki Web Tech",
+    title: "Graphic Design & Creatives Agency in India | MaaJanki",
     description: "Professional graphic design, banner creation, and social media post design in India and globally.",
     url: "https://maajankiwebtech.com/services/graphic-design",
     siteName: "MaaJanki Web Tech",
@@ -23,13 +23,13 @@ export const metadata = {
         url: "https://maajankiwebtech.com/images/pages/main-services-pages/graphic-design-banner-image-Maajanki-Web-Tech.webp",
         width: 1200,
         height: 630,
-        alt: "Graphic Design & Social Media Creatives Agency in India | MaaJanki Web Tech",
+        alt: "Graphic Design & Creatives Agency in India | MaaJanki",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Graphic Design & Social Media Creatives Agency in India & Global | MaaJanki Web Tech",
+    title: "Graphic Design & Creatives Agency in India | MaaJanki",
     description: "Professional graphic design and social media creative services.",
     images: ["https://maajankiwebtech.com/images/pages/main-services-pages/graphic-design-banner-image-Maajanki-Web-Tech.webp"],
   },

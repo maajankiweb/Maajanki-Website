@@ -110,7 +110,7 @@ const PrivacyPolicy = () => {
         <div className="policy-layout-grid">
           {/* 2. Desktop Sticky Sidebar Card */}
           <aside className="policy-sidebar" data-aos="fade-right">
-            <h4><Shield size={18} /> Quick Links</h4>
+            <div className="policy-sidebar-title"><Shield size={18} /> Quick Links</div>
             <ul className="policy-sidebar-links">
               <li>
                 <a href="#collect" className={activeSection === "collect" ? "active" : ""}><Database size={16} /> 1. Data Collected</a>
